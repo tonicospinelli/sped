@@ -35,7 +35,7 @@ namespace Sped\Types;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class String extends AbstractType {
+class StringHelper extends AbstractType {
 
     const _EMPTY = '';
 
@@ -72,7 +72,7 @@ class String extends AbstractType {
      *
      * @param mixed $value
      * @param string $glue The array of strings to implode.
-     * @return \Sped\Types\String 
+     * @return \Sped\Types\StringHelper 
      */
     public function setValue($value, $glue = '') {
         if (is_array($value))
@@ -80,7 +80,7 @@ class String extends AbstractType {
 
         elseif (is_bool($value))
             $value = $value ? 'true' : 'false';
-        elseif ($value instanceof \Sped\Types\String)
+        elseif ($value instanceof \Sped\Types\StringHelper)
             $value = $value->getValue();
 
         $this->value = (string) $value;
@@ -90,7 +90,7 @@ class String extends AbstractType {
 
     /**
      * Limpar o valor.
-     * @return \Sped\Types\String 
+     * @return \Sped\Types\StringHelper 
      */
     public function clear() {
         $this->setValue(self::_EMPTY);
@@ -101,7 +101,7 @@ class String extends AbstractType {
      * Pad Left a string to a certain length with another string.
      * @param string $char The char may be truncated if the required number of padding characters can't be evenly divided by the char's length.
      * @param int $length If the value of length is negative, less than, or equal to the length of the input string, no padding takes place.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function padLeft($char, $length) {
         $this->setValue(str_pad($this->getValue(), $length, $char, STR_PAD_LEFT));
@@ -112,7 +112,7 @@ class String extends AbstractType {
      * Pad Right a string to a certain length with another string.
      * @param string $char The char may be truncated if the required number of padding characters can't be evenly divided by the char's length.
      * @param int $length If the value of length is negative, less than, or equal to the length of the input string, no padding takes place.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function padRight($char, $length) {
         $this->setValue(str_pad($this->getValue(), $length, $char, STR_PAD_RIGHT));
@@ -123,7 +123,7 @@ class String extends AbstractType {
      * Pad Both a string to a certain length with another string.
      * @param string $char The char may be truncated if the required number of padding characters can't be evenly divided by the char's length.
      * @param int $length If the value of length is negative, less than, or equal to the length of the input string, no padding takes place.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function padBoth($char, $length) {
         $this->setValue(str_pad($this->getValue(), $length, $char, STR_PAD_BOTH));
@@ -134,7 +134,7 @@ class String extends AbstractType {
      * Convert string to requested character encoding
      * @param string $in
      * @param string $out
-     * @return \Sped\Types\String 
+     * @return \Sped\Types\StringHelper 
      */
     public function normalize($in = 'UTF-8', $out = 'ASCII') {
         setlocale(LC_CTYPE, 'en_US');
@@ -163,7 +163,7 @@ class String extends AbstractType {
      * Replace all occurrences of the search string with the replacement string
      * @param mixed $search The value being searched for, otherwise known as the needle.<br/>An array may be used to designate multiple needles.
      * @param mixed $replace The replacement value that replaces found search values.<br/>An array may be used to designate multiple replacements.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function replace($search, $replace) {
         $this->setValue(str_replace($search, $replace, $this->getValue()));
@@ -174,7 +174,7 @@ class String extends AbstractType {
      * Replace all occurrences of the search string with the replacement string
      * @param mixed $search The value being searched for, otherwise known as the needle.<br/>An array may be used to designate multiple needles.
      * @param mixed $replace The replacement value that replaces found search values.<br/>An array may be used to designate multiple replacements.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function replaceRegExp($search, $replace) {
         $this->setValue(preg_replace($search, $replace, $this->getValue()));
@@ -183,7 +183,7 @@ class String extends AbstractType {
 
     /**
      * Strip whitespace from the beginning and end of a string.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function trim() {
         $this->setValue(trim($this->getValue()));
@@ -192,7 +192,7 @@ class String extends AbstractType {
 
     /**
      * Strip whitespace from the beginning of a string.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function trimStart() {
         $this->setValue(preg_replace("/^[\s]+/", '', $this->getValue()));
@@ -201,7 +201,7 @@ class String extends AbstractType {
 
     /**
      * Strip whitespace from the end of a string.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function trimEnd() {
         $this->setValue(preg_replace("/[\s]+$/", '', $this->getValue()));
@@ -217,7 +217,7 @@ class String extends AbstractType {
      * Repeat a string.
      * @param string $char The string to be repeated.
      * @param int $length Number of time the input string should be repeated. Length has to be greater than or equal to 0. If the length is set to 0, the function will return an empty string.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function repeat($char, $length) {
         $this->setValue(str_repeat($char, $length));
@@ -239,7 +239,7 @@ class String extends AbstractType {
      * Get left part of string
      * @param int $start Position of first character to use from string.
      * @param int $offset [optional]<br/>Maximum number of characters to use from str.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function left($start, $offset = null) {
         return $this->substring($start, $offset);
@@ -249,7 +249,7 @@ class String extends AbstractType {
      * Get right part of a string
      * @param int $start Position of first character to use from string.
      * @param int $offset [optional]<br/>Maximum number of characters to use from str.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function right($start, $offset = null) {
         return $this->substring(($start * -1), $offset);
@@ -259,16 +259,16 @@ class String extends AbstractType {
      * Get middle part of a string
      * @param int $start Position of first character to use from string.
      * @param int $offset Maximum number of characters to use from str.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function substring($start, $offset = null) {
-        $value = new \Sped\Types\String(mb_substr($this->getValue(), $start, $offset));
+        $value = new \Sped\Types\StringHelper(mb_substr($this->getValue(), $start, $offset));
         return $value;
     }
 
     /**
      * Convert a string to an array.
-     * @param string|boolean $delimiter If delimiter is false, split by letters.
+     * @param StringHelper|boolean $delimiter If delimiter is false, split by letters.
      * @return array
      */
     public function split($delimiter = false) {
@@ -289,7 +289,7 @@ class String extends AbstractType {
      * Join array elements with a string
      * @param array $pieces Defaults to an empty string. This is not the preferred usage of implode as glue would be the second parameter and thus, the bad prototype would be used.
      * @param string $glue The array of strings to implode.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function join(array $pieces, $glue = '') {
         $this->setValue($pieces, $glue);
@@ -302,7 +302,7 @@ class String extends AbstractType {
      * @return boolean true if var is null or empty, false otherwise.
      */
     static public function isNullOrEmpty($value = null) {
-        if ($value instanceof \Sped\Types\String)
+        if ($value instanceof \Sped\Types\StringHelper)
             $value = $value->getValue();
         return is_null($value) OR empty($value);
     }
@@ -310,15 +310,15 @@ class String extends AbstractType {
     /**
      * Creates the string representation of a specified object.
      * @param mixed $args Many args to concatenate.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function concat($args) {
         $args = func_get_args();
 
         foreach ($args as $key => $value) {
-            $args[$key] = new \Sped\Types\String($value);
+            $args[$key] = new \Sped\Types\StringHelper($value);
         }
-        $str = new \Sped\Types\String($args);
+        $str = new \Sped\Types\StringHelper($args);
         $this->setValue("{$this}{$str}");
         return $this;
     }
@@ -384,10 +384,10 @@ class String extends AbstractType {
      * @return boolean
      */
     static public function equals($firstString, $secondString) {
-        if (!$firstString instanceof \Sped\Types\String)
-            $firstString = new \Sped\Types\String($firstString);
-        if (!$secondString instanceof \Sped\Types\String)
-            $secondString = new \Sped\Types\String($secondString);
+        if (!$firstString instanceof \Sped\Types\StringHelper)
+            $firstString = new \Sped\Types\StringHelper($firstString);
+        if (!$secondString instanceof \Sped\Types\StringHelper)
+            $secondString = new \Sped\Types\StringHelper($secondString);
         return $firstString->getValue() === $secondString->getValue();
     }
 
@@ -397,8 +397,8 @@ class String extends AbstractType {
      * @return boolean
      */
     public function equalsTo($string) {
-        if (!$string instanceof \Sped\Types\String)
-            $strSecond = new \Sped\Types\String($string);
+        if (!$string instanceof \Sped\Types\StringHelper)
+            $strSecond = new \Sped\Types\StringHelper($string);
         return $this->getValue() === $strSecond->getValue();
     }
 
@@ -413,7 +413,7 @@ class String extends AbstractType {
 
     /**
      * Make a string lowercase.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function toLower() {
         $this->setValue(strtolower($this->getValue()));
@@ -422,7 +422,7 @@ class String extends AbstractType {
 
     /**
      * Make a string uppercase.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function toUpper() {
         $this->setValue(strtoupper($this->getValue()));
@@ -431,7 +431,7 @@ class String extends AbstractType {
 
     /**
      * Uppercase the first character of each word in a string.
-     * @return \Sped\Types\String
+     * @return \Sped\Types\StringHelper
      */
     public function toUpperFirstCharWords() {
         $this->setValue(ucwords($this->getValue()));
@@ -447,8 +447,46 @@ class String extends AbstractType {
         return $this->split($delimiter);
     }
 
+    /**
+     *
+     *
+     * @return \Sped\Types\StringHelper
+     */
     public function reverse() {
         return $this->setValue(strrev($this->getValue()));
+    }
+
+    /**
+     *
+     * @param mixed $var
+     * @return \Sped\Types\StringHelper 
+     */
+    public static function isNumeric($var) {
+        if ($var instanceof StringHelper)
+            $var = $var->getValue();
+        return is_numeric($var);
+    }
+
+    /**
+     *
+     * @param mixed $var
+     * @return \Sped\Types\StringHelper 
+     */
+    public static function isInteger($var) {
+        if ($var instanceof StringHelper)
+            $var = $var->getValue();
+        return is_int($var);
+    }
+
+    /**
+     *
+     * @param mixed $var
+     * @return \Sped\Types\StringHelper 
+     */
+    public static function isFloat($var) {
+        if ($var instanceof StringHelper)
+            $var = $var->getValue();
+        return is_float($var);
     }
 
 }
