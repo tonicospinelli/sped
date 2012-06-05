@@ -28,7 +28,7 @@
 
 namespace Sped\Validation;
 
-use Sped\Types\String;
+use Sped\Types\StringHelper;
 
 /**
  * @category   Sped
@@ -58,14 +58,14 @@ class Cean extends AbstractValidate {
    * @return boolean
    */
   public function validate($input) {
-    $input = new String($input);
+    $input = new StringHelper($input);
 
     $digitoCean = 0;
     $indiceInicial = 0;
     $digitoCalculo = 0;
     $digitoCalculado = 0;
     $tamCean = $input->length;
-    $ceanSemDigito = new String();
+    $ceanSemDigito = new StringHelper();
 
     if (!in_array($tamCean, array(8, 12, 13, 14, 18)))
       return false;
