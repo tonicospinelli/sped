@@ -35,7 +35,7 @@ namespace Sped\Validation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Cnpj extends Sped_Validation_Modulo11 {
+class Cnpj extends Modulo11 {
 
   /**
    * Validação do CNPJ. 
@@ -47,12 +47,12 @@ class Cnpj extends Sped_Validation_Modulo11 {
 
   /**
    * Valida se o CNPJ está correto.
-   * @param string|int|Sped_Types_Cnpj $value
+   * @param string|int|\Sped\Types\Cnpj $value
    * @return boolean 
    */
   public function validate($value) {
-    if (!$value instanceof Cnpj)
-      $value = new Cnpj($value);
+    if (!$value instanceof \Sped\Types\Cnpj)
+      $value = new \Sped\Types\Cnpj($value);
     return parent::validate($value);
   }
 
