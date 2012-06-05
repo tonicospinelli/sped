@@ -1,7 +1,5 @@
 <?php
 
-namespace Sped;
-
 /**
  * Sped
  *
@@ -27,6 +25,9 @@ namespace Sped;
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
+
+namespace Sped;
+
 \Sped\Autoloader::register();
 
 /**
@@ -38,32 +39,32 @@ namespace Sped;
  */
 class Autoloader {
 
-  /**
-   * Register the Autoloader with SPL
-   *
-   */
-  public static function register() {
-    if (function_exists('__autoload'))
-      spl_autoload_register('__autoload');
+    /**
+     * Register the Autoloader with SPL
+     *
+     */
+    public static function register() {
+        if (function_exists('__autoload'))
+            spl_autoload_register('__autoload');
 
-    return spl_autoload_register(array('\\Sped\\Autoloader', 'load'));
-  }
+        return spl_autoload_register(array('\\Sped\\Autoloader', 'load'));
+    }
 
-  /**
-   * Autoload a class identified by name
-   *
-   * @param string $className Name of the object to load
-   */
-  public static function load($className) {
-    if ((class_exists($className)) || (strpos($className, 'Sped') !== 0))
-      return FALSE;
+    /**
+     * Autoload a class identified by name
+     *
+     * @param string $className Name of the object to load
+     */
+    public static function load($className) {
+        if ((class_exists($className)) || (strpos($className, 'Sped') !== 0))
+            return FALSE;
 
-    $filePath = realpath(SPED_ROOT . str_replace(array('_', '\\'), DIRECTORY_SEPARATOR, $className) . '.php');
+        $filePath = realpath(SPED_ROOT . str_replace(array('_', '\\'), DIRECTORY_SEPARATOR, $className) . '.php');
 
-    if ((file_exists($filePath) === false) || (is_readable($filePath) === false))
-      return FALSE;
+        if ((file_exists($filePath) === false) || (is_readable($filePath) === false))
+            return FALSE;
 
-    require($filePath);
-  }
+        require($filePath);
+    }
 
 }
