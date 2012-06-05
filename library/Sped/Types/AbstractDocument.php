@@ -39,7 +39,7 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
 
     /**
      *
-     * @var \Sped\Types\String
+     * @var \Sped\Types\StringHelper
      */
     protected $value;
 
@@ -53,11 +53,11 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
 
     /**
      * Define o número do documento.
-     * @param \Sped\Types\String $value
-     * @return AbstractDocument
+     * @param string $value
+     * @return \Sped\Types\AbstractDocument
      */
     public function setValue($value) {
-        $value = new \Sped\Types\String($value);
+        $value = new \Sped\Types\StringHelper($value);
         return parent::setValue($value->replaceRegExp('/[^\d]/', ''));
     }
 
@@ -66,18 +66,18 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
      * @return string
      */
     public function getValue() {
-        $value = new \Sped\Types\String();
+        $value = new \Sped\Types\StringHelper();
         $value->concat($this->getBaseNumber(), $this->getDv());
         return $value->getValue();
     }
 
     /**
      *
-     * @param AbstractDocument|string $numero
-     * @return \Sped\Types\String 
+     * @param \Sped\Types\AbstractDocument|string $numero
+     * @return \Sped\Types\StringHelper 
      */
     public function getUnMasked() {
-        $numero = new \Sped\Types\String($this->getValue());
+        $numero = new \Sped\Types\StringHelper($this->getValue());
         return $numero->replaceRegExp('/[^\d]/', '');
     }
 
@@ -107,7 +107,6 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
 
     /**
      * Retorna o número base.
-     * @param string $input
      * @return string
      */
     public function getBaseNumber() {
@@ -119,7 +118,7 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
      * @return string
      */
     public function getDv() {
-        $base = new \Sped\Types\String($this->getBaseNumber());
+        $base = new \Sped\Types\StringHelper($this->getBaseNumber());
 
         for ($n = 1; $n <= $this->getDigitsCount(); $n++) {
             $soma = 0;
