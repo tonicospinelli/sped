@@ -35,26 +35,19 @@ namespace Sped\Types;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Cpf extends AbstractDocument {
+interface InterfaceDocument {
 
-    public function getMaxMultiplier() {
-        return 12;
-    }
+    public function setValue($value);
 
-    public function getDigitsCount() {
-        return 2;
-    }
+    public function getValue();
 
-    /**
-     * 
-     * @return string
-     */
-    public function getMasked() {
-        return \Sped\Commons\Mask::exec($this->getUnMasked(), '000.000.000-00');
-    }
+    public function getUnMasked();
 
-    public function defaultDocumentLength() {
-        return 11;
-    }
+    public function getDvPositions();
 
+    public function getDvPosition($index);
+
+    public function getBaseNumber();
+
+    public function getDv();
 }

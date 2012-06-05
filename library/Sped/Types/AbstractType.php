@@ -35,26 +35,32 @@ namespace Sped\Types;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Cpf extends AbstractDocument {
+abstract class AbstractType {
 
-    public function getMaxMultiplier() {
-        return 12;
-    }
+    protected $value = null;
 
-    public function getDigitsCount() {
-        return 2;
+    public function __construct($value = null) {
+        if (!is_null($value))
+            $this->setValue($value);
     }
 
     /**
-     * 
-     * @return string
+     * Retorna o valor
+     * @return mixed
      */
-    public function getMasked() {
-        return \Sped\Commons\Mask::exec($this->getUnMasked(), '000.000.000-00');
+    public function getValue() {
+        return $this->value;
     }
 
-    public function defaultDocumentLength() {
-        return 11;
+    /**
+     * Define o valor
+     *
+     * @param mixed $value
+     * @return AbstractType
+     */
+    public function setValue($value) {
+        $this->value = $value;
+        return $this;
     }
 
 }
