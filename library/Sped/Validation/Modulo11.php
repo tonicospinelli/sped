@@ -1,15 +1,41 @@
 <?php
 
 /**
- * //TODO: adicionar descrição da classe Modulo11
- * @name Modulo11
- * @package //TODO: adicionar package
- * @subpackage //TODO: adicionar subpackage
- * @author Antonio Spinelli <antonio.spinelli@grupobem.com.br>
- * @since 24/05/2012
+ * Sped
+ *
+ * Copyright (c) 2012 Sped
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ *
+ * @category   Sped
+ * @package    Sped
+ * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
+ * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
+ * @version    ##VERSION##, ##DATE##
  */
-abstract class Sped_Validation_Modulo11 extends Sped_Validation_AValidation
-{
+
+namespace Sped\Validation;
+
+/**
+ * @category   Sped
+ * @package    Sped\Validation
+ * @copyright  Copyright (c) 2012
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+ */
+abstract class Modulo11 extends AbstractValidate {
 
     /**
      * Número de dígitos verificadores.
@@ -25,15 +51,14 @@ abstract class Sped_Validation_Modulo11 extends Sped_Validation_AValidation
 
     /**
      *
-     * @var Sped_Types_ADocument
+     * @var \Sped\Types\AbstractDocument
      */
     protected $document;
 
     /**
      * Validador de Código de Barras  
      */
-    function __construct($numeroDigitos, $limiteMultiplicador)
-    {
+    function __construct($numeroDigitos, $limiteMultiplicador) {
         $this->digitsCount = $numeroDigitos;
         $this->maxMultiplier = $limiteMultiplicador;
     }
@@ -42,8 +67,7 @@ abstract class Sped_Validation_Modulo11 extends Sped_Validation_AValidation
      *
      * @return int
      */
-    public function getDigitsCount()
-    {
+    public function getDigitsCount() {
         return (int) $this->digitsCount;
     }
 
@@ -51,26 +75,23 @@ abstract class Sped_Validation_Modulo11 extends Sped_Validation_AValidation
      *
      * @return int
      */
-    public function getMaxMultiplier()
-    {
+    public function getMaxMultiplier() {
         return (int) $this->maxMultiplier;
     }
 
     /**
      * 
-     * @return Sped_Types_ADocument
+     * @return AbstractDocument
      */
-    public function getDocument()
-    {
+    public function getDocument() {
         return $this->document;
     }
 
     /**
      * 
-     * @param Sped_Types_ADocument $document 
+     * @param AbstractDocument $document 
      */
-    public function setDocument($document)
-    {
+    public function setDocument($document) {
         $this->document = $document;
         $this->digitsCount = $document->getDigitsCount();
         $this->maxMultiplier = $document->getMaxMultiplier();
@@ -78,16 +99,15 @@ abstract class Sped_Validation_Modulo11 extends Sped_Validation_AValidation
 
     /**
      * Validação genérica de vários tipos de números. Dentre eles: CPF, CNPJ, PIS.
-     * @param \Sped_Types_ADocument $value Valor a ser validado.
+     * @param \AbstractDocument $value Valor a ser validado.
      * @return boolean 
      */
-    public function validate($value)
-    {
-        if (!$value instanceof Sped_Types_ADocument)
+    public function validate($value) {
+        if (!$value instanceof AbstractDocument)
             throw new Exception('Não é possível validar o documento');
 
         $this->setDocument($value);
-        $base = new Sped_Types_String($this->getDocument()->getBaseNumber());
+        $base = new String($this->getDocument()->getBaseNumber());
 
         for ($n = 1; $n <= $this->document->getDigitsCount(); $n++) {
             $soma = 0;

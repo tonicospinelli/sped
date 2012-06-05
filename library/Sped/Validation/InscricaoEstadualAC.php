@@ -8,7 +8,7 @@
  * @author Antonio Spinelli <antonio.spinelli@grupobem.com.br>
  * @since 25/05/2012
  */
-class Sped_Validation_InscricaoEstadualAC extends Sped_Validation_InscricaoEstadual
+class Sped_Validation_InscricaoEstadualAC extends InscricaoEstadual
 {
 
     function __construct()
