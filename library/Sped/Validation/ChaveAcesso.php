@@ -35,7 +35,7 @@ namespace Sped\Validation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class ChaveAcesso extends Sped_Validation_Modulo11 {
+class ChaveAcesso extends Modulo11 {
 
   function __construct() {
     $this->numeroDigitos = 1;
