@@ -35,26 +35,23 @@ namespace Sped\Validation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class ChaveAcesso extends Sped_Validation_Modulo11 {
+abstract class AbstractValidate implements InterfaceValidate {
 
-  function __construct() {
-    $this->numeroDigitos = 1;
-    $this->limiteMultiplicador = 9;
+  public function __construct() {
+    //a constructor is required for ReflectionClass::newInstance()
   }
 
-  /**
-   * Valida se o Chave de Acesso está correta.
-   * @param string $value
-   * @return boolean 
-   */
-  public function validate($value) {
-    if ($value instanceof ChaveAcesso)
-      $value = new ChaveAcesso($value);
-    return parent::validate($value);
+  public function __invoke($input) {
+    return $this->validate($input);
   }
 
-  public function defaultDigitCount() {
-    return 44;
+  public function assert($input) {
+    return $this->validate($input);
+  }
+
+  public function check($input) {
+    return $this->assert($input);
   }
 
 }
+
