@@ -489,4 +489,8 @@ class StringHelper extends AbstractType {
         return is_float($var);
     }
 
+    public static function splitCamel($string) {
+        return preg_split('/(?<=\\w)(?=[A-Z])/', $string);
+    }
+
 }
