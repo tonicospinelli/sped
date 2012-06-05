@@ -1,38 +1,69 @@
 <?php
 
 /**
- * Sped_Types_String works.
- * @name Sped_Types_String
- * @package Bem
- * @subpackage Sistema
- * @author Antonio O. Spinelli <antonio.spinelli@grupobem.com.br>
- * @since 06/03/2012
- * @property protected $value String value.
- * @property public $length String Length.
+ * Sped
+ *
+ * Copyright (c) 2012 Sped
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ *
+ * @category   Sped
+ * @package    Sped
+ * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
+ * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
+ * @version    ##VERSION##, ##DATE##
  */
-class Sped_Types_String extends Sped_Types_ATypes
-{
+
+namespace Sped\Types;
+
+/**
+ * @category   Sped
+ * @package    Sped\Types
+ * @copyright  Copyright (c) 2012
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+ */
+class String extends AbstractType {
 
     const _EMPTY = '';
 
+    /**
+     * String value.
+     * @var string
+     */
+    protected $value;
+
+    /**
+     * String length.
+     * @var int
+     */
     public $length;
 
     /**
-     * Construct the String Object.
+     * Construct the \Sped\Types\String Object.
      * @param mixed $value 
      */
-    public function __construct($value = null)
-    {
+    public function __construct($value = null) {
         $this->setValue($value);
     }
 
-    public function __toString()
-    {
+    public function __toString() {
         return $this->getValue();
     }
 
-    public function __invoke()
-    {
+    public function __invoke() {
         return $this->getValue();
     }
 
@@ -41,16 +72,15 @@ class Sped_Types_String extends Sped_Types_ATypes
      *
      * @param mixed $value
      * @param string $glue The array of strings to implode.
-     * @return Sped_Types_String 
+     * @return \Sped\Types\String 
      */
-    public function setValue($value, $glue = '')
-    {
+    public function setValue($value, $glue = '') {
         if (is_array($value))
             $value = implode($glue, $value);
 
         elseif (is_bool($value))
             $value = $value ? 'true' : 'false';
-        elseif ($value instanceof Sped_Types_String)
+        elseif ($value instanceof \Sped\Types\String)
             $value = $value->getValue();
 
         $this->value = (string) $value;
@@ -60,10 +90,9 @@ class Sped_Types_String extends Sped_Types_ATypes
 
     /**
      * Limpar o valor.
-     * @return Sped_Types_String 
+     * @return \Sped\Types\String 
      */
-    public function clear()
-    {
+    public function clear() {
         $this->setValue(self::_EMPTY);
         return $this;
     }
@@ -72,10 +101,9 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Pad Left a string to a certain length with another string.
      * @param string $char The char may be truncated if the required number of padding characters can't be evenly divided by the char's length.
      * @param int $length If the value of length is negative, less than, or equal to the length of the input string, no padding takes place.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function padLeft($char, $length)
-    {
+    public function padLeft($char, $length) {
         $this->setValue(str_pad($this->getValue(), $length, $char, STR_PAD_LEFT));
         return $this;
     }
@@ -84,10 +112,9 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Pad Right a string to a certain length with another string.
      * @param string $char The char may be truncated if the required number of padding characters can't be evenly divided by the char's length.
      * @param int $length If the value of length is negative, less than, or equal to the length of the input string, no padding takes place.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function padRight($char, $length)
-    {
+    public function padRight($char, $length) {
         $this->setValue(str_pad($this->getValue(), $length, $char, STR_PAD_RIGHT));
         return $this;
     }
@@ -96,10 +123,9 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Pad Both a string to a certain length with another string.
      * @param string $char The char may be truncated if the required number of padding characters can't be evenly divided by the char's length.
      * @param int $length If the value of length is negative, less than, or equal to the length of the input string, no padding takes place.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function padBoth($char, $length)
-    {
+    public function padBoth($char, $length) {
         $this->setValue(str_pad($this->getValue(), $length, $char, STR_PAD_BOTH));
         return $this;
     }
@@ -108,10 +134,9 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Convert string to requested character encoding
      * @param string $in
      * @param string $out
-     * @return Sped_Types_String 
+     * @return \Sped\Types\String 
      */
-    public function normalize($in = 'UTF-8', $out = 'ASCII')
-    {
+    public function normalize($in = 'UTF-8', $out = 'ASCII') {
         setlocale(LC_CTYPE, 'en_US');
         $value = iconv($in, $out . '//TRANSLIT', $this->getValue());
         $value = preg_replace("/[^\w\s\(\)\/\"\-\+\_\[\]]/i", '', $value);
@@ -125,8 +150,7 @@ class Sped_Types_String extends Sped_Types_ATypes
      * @param int $occurrences [optional]<br/>The optional number occurrences parameter allows you to specify which character in haystack to start searching.
      * @return int|boolean the position as an integer. If needle is not found, strpos will return boolean false.
      */
-    public function getPosition($needle, $occurrences = 1)
-    {
+    public function getPosition($needle, $occurrences = 1) {
         $lastPosisition = mb_strpos($this->getValue(), $needle);
 
         while (--$occurrences > 0)
@@ -139,10 +163,9 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Replace all occurrences of the search string with the replacement string
      * @param mixed $search The value being searched for, otherwise known as the needle.<br/>An array may be used to designate multiple needles.
      * @param mixed $replace The replacement value that replaces found search values.<br/>An array may be used to designate multiple replacements.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function replace($search, $replace)
-    {
+    public function replace($search, $replace) {
         $this->setValue(str_replace($search, $replace, $this->getValue()));
         return $this;
     }
@@ -151,46 +174,41 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Replace all occurrences of the search string with the replacement string
      * @param mixed $search The value being searched for, otherwise known as the needle.<br/>An array may be used to designate multiple needles.
      * @param mixed $replace The replacement value that replaces found search values.<br/>An array may be used to designate multiple replacements.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function replaceRegExp($search, $replace)
-    {
+    public function replaceRegExp($search, $replace) {
         $this->setValue(preg_replace($search, $replace, $this->getValue()));
         return $this;
     }
 
     /**
      * Strip whitespace from the beginning and end of a string.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function trim()
-    {
+    public function trim() {
         $this->setValue(trim($this->getValue()));
         return $this;
     }
 
     /**
      * Strip whitespace from the beginning of a string.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function trimStart()
-    {
+    public function trimStart() {
         $this->setValue(preg_replace("/^[\s]+/", '', $this->getValue()));
         return $this;
     }
 
     /**
      * Strip whitespace from the end of a string.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function trimEnd()
-    {
+    public function trimEnd() {
         $this->setValue(preg_replace("/[\s]+$/", '', $this->getValue()));
         return $this;
     }
 
-    public function trimExtraSpaces()
-    {
+    public function trimExtraSpaces() {
         $this->setValue(preg_replace("/\s[\s]+/", '', $this->getValue()));
         return $this;
     }
@@ -199,21 +217,19 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Repeat a string.
      * @param string $char The string to be repeated.
      * @param int $length Number of time the input string should be repeated. Length has to be greater than or equal to 0. If the length is set to 0, the function will return an empty string.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function repeat($char, $length)
-    {
+    public function repeat($char, $length) {
         $this->setValue(str_repeat($char, $length));
         return $this;
     }
 
     /**
      * Calculate the similarity between the current value and param string.
-     * @param string $toCompare Sped_Types_String to compare.
+     * @param string $toCompare \Sped\Types\String to compare.
      * @return float Returns the percent similarity for you.
      */
-    public function getSimilarity($toCompare)
-    {
+    public function getSimilarity($toCompare) {
         $percents = (float) 0;
         similar_text($this->getValue(), $toCompare, $percents);
         return $percents;
@@ -223,10 +239,9 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Get left part of string
      * @param int $start Position of first character to use from string.
      * @param int $offset [optional]<br/>Maximum number of characters to use from str.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function left($start, $offset = null)
-    {
+    public function left($start, $offset = null) {
         return $this->substring($start, $offset);
     }
 
@@ -234,10 +249,9 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Get right part of a string
      * @param int $start Position of first character to use from string.
      * @param int $offset [optional]<br/>Maximum number of characters to use from str.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function right($start, $offset = null)
-    {
+    public function right($start, $offset = null) {
         return $this->substring(($start * -1), $offset);
     }
 
@@ -245,11 +259,10 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Get middle part of a string
      * @param int $start Position of first character to use from string.
      * @param int $offset Maximum number of characters to use from str.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function substring($start, $offset = null)
-    {
-        $value = new Sped_Types_String(mb_substr($this->getValue(), $start, $offset));
+    public function substring($start, $offset = null) {
+        $value = new \Sped\Types\String(mb_substr($this->getValue(), $start, $offset));
         return $value;
     }
 
@@ -258,8 +271,7 @@ class Sped_Types_String extends Sped_Types_ATypes
      * @param string|boolean $delimiter If delimiter is false, split by letters.
      * @return array
      */
-    public function split($delimiter = false)
-    {
+    public function split($delimiter = false) {
         if ($delimiter !== false)
             return explode($delimiter, $this->getValue());
         return str_split($this->getValue());
@@ -269,8 +281,7 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Convert a string to an words array.
      * @return array
      */
-    public function splitWords()
-    {
+    public function splitWords() {
         return $this->split(' ');
     }
 
@@ -278,10 +289,9 @@ class Sped_Types_String extends Sped_Types_ATypes
      * Join array elements with a string
      * @param array $pieces Defaults to an empty string. This is not the preferred usage of implode as glue would be the second parameter and thus, the bad prototype would be used.
      * @param string $glue The array of strings to implode.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function join(array $pieces, $glue = '')
-    {
+    public function join(array $pieces, $glue = '') {
         $this->setValue($pieces, $glue);
         return $this;
     }
@@ -291,9 +301,8 @@ class Sped_Types_String extends Sped_Types_ATypes
      * @param string $value The variable being evaluated.
      * @return boolean true if var is null or empty, false otherwise.
      */
-    static public function isNullOrEmpty($value = null)
-    {
-        if ($value instanceof Sped_Types_String)
+    static public function isNullOrEmpty($value = null) {
+        if ($value instanceof \Sped\Types\String)
             $value = $value->getValue();
         return is_null($value) OR empty($value);
     }
@@ -301,47 +310,43 @@ class Sped_Types_String extends Sped_Types_ATypes
     /**
      * Creates the string representation of a specified object.
      * @param mixed $args Many args to concatenate.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function concat($args)
-    {
+    public function concat($args) {
         $args = func_get_args();
 
         foreach ($args as $key => $value) {
-            $args[$key] = new Sped_Types_String($value);
+            $args[$key] = new \Sped\Types\String($value);
         }
-        $str = new Sped_Types_String($args);
+        $str = new \Sped\Types\String($args);
         $this->setValue("{$this}{$str}");
         return $this;
     }
 
     /**
-     * Indicating whether the specified Sped_Types_String object occurs within this string.
+     * Indicating whether the specified \Sped\Types\String object occurs within this string.
      * @param string $needle
      * @return boolean
      */
-    public function contains($needle)
-    {
+    public function contains($needle) {
         return $this->getPosition($needle) !== false;
     }
 
     /**
-     * Indicating whether the specified Sped_Types_String object occurs within this string.
+     * Indicating whether the specified \Sped\Types\String object occurs within this string.
      * @param string $needle Regular Expression
      * @return boolean
      */
-    public function containsRegExp($needle)
-    {
+    public function containsRegExp($needle) {
         return preg_match($needle, $this->getValue()) ? true : false;
     }
 
     /**
-     * Indicating whether the specified Sped_Types_String object end occurs within this string.
+     * Indicating whether the specified \Sped\Types\String object end occurs within this string.
      * @param string $needle
      * @return boolean 
      */
-    public function endsWith($needle)
-    {
+    public function endsWith($needle) {
         $normalize = array(
             '(' => '\(', ')' => '\)',
             '[' => '\[', ']' => '\]',
@@ -355,12 +360,11 @@ class Sped_Types_String extends Sped_Types_ATypes
     }
 
     /**
-     * Indicating whether the specified Sped_Types_String object start occurs within this string.
+     * Indicating whether the specified \Sped\Types\String object start occurs within this string.
      * @param string $needle
      * @return boolean 
      */
-    public function startsWith($needle)
-    {
+    public function startsWith($needle) {
         $normalize = array(
             '(' => '\(', ')' => '\)',
             '[' => '\[', ']' => '\]',
@@ -375,17 +379,16 @@ class Sped_Types_String extends Sped_Types_ATypes
 
     /**
      * Finds whether a variable is equals.
-     * @param mixed $firsSped_Types_String First string to compare.
+     * @param mixed $firstString First string to compare.
      * @param mixed $secondString Second string to compare.
      * @return boolean
      */
-    static public function equals($firsSped_Types_String, $secondString)
-    {
-        if (!$firsSped_Types_String instanceof Sped_Types_String)
-            $firsSped_Types_String = new Sped_Types_String($firsSped_Types_String);
-        if (!$secondString instanceof Sped_Types_String)
-            $secondString = new Sped_Types_String($secondString);
-        return $firsSped_Types_String->getValue() === $secondString->getValue();
+    static public function equals($firstString, $secondString) {
+        if (!$firstString instanceof \Sped\Types\String)
+            $firstString = new \Sped\Types\String($firstString);
+        if (!$secondString instanceof \Sped\Types\String)
+            $secondString = new \Sped\Types\String($secondString);
+        return $firstString->getValue() === $secondString->getValue();
     }
 
     /**
@@ -393,10 +396,9 @@ class Sped_Types_String extends Sped_Types_ATypes
      * @param mixed $string
      * @return boolean
      */
-    public function equalsTo($string)
-    {
-        if (!$string instanceof Sped_Types_String)
-            $strSecond = new Sped_Types_String($string);
+    public function equalsTo($string) {
+        if (!$string instanceof \Sped\Types\String)
+            $strSecond = new \Sped\Types\String($string);
         return $this->getValue() === $strSecond->getValue();
     }
 
@@ -405,37 +407,33 @@ class Sped_Types_String extends Sped_Types_ATypes
      * @param string $needle
      * @return int
      */
-    public function indexOf($needle)
-    {
+    public function indexOf($needle) {
         return $this->getPosition($needle);
     }
 
     /**
      * Make a string lowercase.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function toLower()
-    {
+    public function toLower() {
         $this->setValue(strtolower($this->getValue()));
         return $this;
     }
 
     /**
      * Make a string uppercase.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function toUpper()
-    {
+    public function toUpper() {
         $this->setValue(strtoupper($this->getValue()));
         return $this;
     }
 
     /**
      * Uppercase the first character of each word in a string.
-     * @return Sped_Types_String
+     * @return \Sped\Types\String
      */
-    public function toUpperFirstCharWords()
-    {
+    public function toUpperFirstCharWords() {
         $this->setValue(ucwords($this->getValue()));
         return $this;
     }
@@ -445,13 +443,11 @@ class Sped_Types_String extends Sped_Types_ATypes
      * string|boolean $delimiter If delimiter is false, split by letters.
      * @return array 
      */
-    public function toArray($delimiter = false)
-    {
+    public function toArray($delimiter = false) {
         return $this->split($delimiter);
     }
 
-    public function reverse()
-    {
+    public function reverse() {
         return $this->setValue(strrev($this->getValue()));
     }
 
