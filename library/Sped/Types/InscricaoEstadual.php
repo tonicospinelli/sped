@@ -1,59 +1,59 @@
 <?php
 
 /**
- * Este arquivo é parte do projeto NFePHP - Nota Fiscal eletrônica em PHP.
+ * Sped
  *
- * Este programa é um software livre: você pode redistribuir e/ou modificá-lo
- * sob os termos da Licença Pública Geral GNU como é publicada pela Fundação 
- * para o Software Livre, na versão 3 da licença, ou qualquer versão posterior.
+ * Copyright (c) 2012 Sped
  *
- * Este programa é distribuído na esperança que será útil, mas SEM NENHUMA
- * GARANTIA; sem mesmo a garantia explícita do VALOR COMERCIAL ou ADEQUAÇÃO PARA
- * UM PROPÓSITO EM PARTICULAR, veja a Licença Pública Geral GNU para mais
- * detalhes.
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
  *
- * Você deve ter recebido uma cópia da Licença Publica GNU junto com este
- * programa. Caso contrário consulte <http://www.fsfla.org/svnwiki/trad/GPLv3>.
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
  * @category   Sped
- * @package    Sped_Types
- * @copyright  Copyright (c) 2012 Antonio Spinelli
- * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
- * @link       https://bitbucket.org/tonicospinelli/Sped.git
+ * @package    Sped
+ * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
+ * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
+ * @version    ##VERSION##, ##DATE##
  */
+
+namespace Sped\Types;
 
 /**
  * @category   Sped
- * @package    Sped_Types
- * @copyright  Copyright (c) 2012 Antonio Spinelli
+ * @package    Sped\Types
+ * @copyright  Copyright (c) 2012
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Sped_Type_InscricaoEstadual extends Sped_Types_ATypes implements Sped_Types_IDocument
-{
+class InscricaoEstadual extends AbstractType implements InterfaceDocument {
 
-    public function getBaseNumber()
-    {
+    public function getBaseNumber() {
         
     }
 
-    public function getDv()
-    {
+    public function getDv() {
         
     }
 
-    public function getDvPosition($index)
-    {
+    public function getDvPosition($index) {
         
     }
 
-    public function getDvPositions()
-    {
+    public function getDvPositions() {
         
     }
 
-    public function getUnMasked()
-    {
+    public function getUnMasked() {
         
     }
 
