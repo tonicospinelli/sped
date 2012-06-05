@@ -56,7 +56,7 @@ abstract class AbstractType {
      * Define o valor
      *
      * @param mixed $value
-     * @return AbstractType
+     * @return \Sped\Types\AbstractType
      */
     public function setValue($value) {
         $this->value = $value;
