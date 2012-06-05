@@ -12,191 +12,193 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
  */
 class Ide extends \DOMElement {
 
-  public function __construct() {
-    parent::__construct('ide', null, 'http://www.portalfiscal.inf.br/nfe');
-  }
+    protected $defaultNamespace = 'Sped\\Schemas\\V200\\TNFe\\InfNFe\\';
 
-  public function getCUF() {
-    return $this->getElementsByTagName('cUF')->item(0);
-  }
+    public function __construct() {
+        parent::__construct('ide', null, 'http://www.portalfiscal.inf.br/nfe');
+    }
 
-  public function setCUF($paramcUF) {
-    $this->cUF = $cUF;
-    $cUF = $this->getCUF();
-    if ($cUF == null)
-      $this->appendChild($paramcUF);
-    else
-      $this->replaceChild($paramcUF, $cUF);
+    public function getCUF() {
+        return $this->getElementsByTagName('cUF')->item(0);
+    }
 
-    return $this;
-  }
+    public function setCUF($paramcUF) {
+        $this->cUF = $cUF;
+        $cUF = $this->getCUF();
+        if ($cUF == null)
+            $this->appendChild($paramcUF);
+        else
+            $this->replaceChild($paramcUF, $cUF);
 
-  public function getCNF() {
-    return $this->getElementsByTagName('cNF')->item(0);
-  }
+        return $this;
+    }
 
-  public function setCNF($cNF) {
-    $this->cNF = $cNF;
-  }
+    public function getCNF() {
+        return $this->getElementsByTagName('cNF')->item(0);
+    }
 
-  public function getNatOp() {
-    return $this->getElementsByTagName('natOp')->item(0);
-  }
+    public function setCNF($cNF) {
+        $this->cNF = $cNF;
+    }
 
-  public function setNatOp($natOp) {
-    $this->natOp = $natOp;
-  }
+    public function getNatOp() {
+        return $this->getElementsByTagName('natOp')->item(0);
+    }
 
-  public function getIndPag() {
-    return $this->getElementsByTagName('indPag')->item(0);
-  }
+    public function setNatOp($natOp) {
+        $this->natOp = $natOp;
+    }
 
-  public function setIndPag($indPag) {
-    $this->indPag = $indPag;
-  }
+    public function getIndPag() {
+        return $this->getElementsByTagName('indPag')->item(0);
+    }
 
-  public function getMod() {
-    return $this->getElementsByTagName('mod')->item(0);
-  }
+    public function setIndPag($indPag) {
+        $this->indPag = $indPag;
+    }
 
-  public function setMod($mod) {
-    $this->mod = $mod;
-  }
+    public function getMod() {
+        return $this->getElementsByTagName('mod')->item(0);
+    }
 
-  public function getSerie() {
-    return $this->getElementsByTagName('serie')->item(0);
-  }
+    public function setMod($mod) {
+        $this->mod = $mod;
+    }
 
-  public function setSerie($serie) {
-    $this->serie = $serie;
-  }
+    public function getSerie() {
+        return $this->getElementsByTagName('serie')->item(0);
+    }
 
-  public function getNNF() {
-    return $this->getElementsByTagName('nNF')->item(0);
-  }
+    public function setSerie($serie) {
+        $this->serie = $serie;
+    }
 
-  public function setNNF($nNF) {
-    $this->nNF = $nNF;
-  }
+    public function getNNF() {
+        return $this->getElementsByTagName('nNF')->item(0);
+    }
 
-  public function getDEmi() {
-    return $this->getElementsByTagName('dEmi')->item(0);
-  }
+    public function setNNF($nNF) {
+        $this->nNF = $nNF;
+    }
 
-  public function setDEmi($dEmi) {
-    $this->dEmi = $dEmi;
-  }
+    public function getDEmi() {
+        return $this->getElementsByTagName('dEmi')->item(0);
+    }
 
-  public function getDSaiEnt() {
-    return $this->getElementsByTagName('dSaiEnt')->item(0);
-  }
+    public function setDEmi($dEmi) {
+        $this->dEmi = $dEmi;
+    }
 
-  public function setDSaiEnt($dSaiEnt) {
-    $this->dSaiEnt = $dSaiEnt;
-  }
+    public function getDSaiEnt() {
+        return $this->getElementsByTagName('dSaiEnt')->item(0);
+    }
 
-  public function getHSaiEnt() {
-    return $this->getElementsByTagName('hSaiEnt')->item(0);
-  }
+    public function setDSaiEnt($dSaiEnt) {
+        $this->dSaiEnt = $dSaiEnt;
+    }
 
-  public function setHSaiEnt($hSaiEnt) {
-    $this->hSaiEnt = $hSaiEnt;
-  }
+    public function getHSaiEnt() {
+        return $this->getElementsByTagName('hSaiEnt')->item(0);
+    }
 
-  public function getTpNF() {
-    return $this->getElementsByTagName('tpNF')->item(0);
-  }
+    public function setHSaiEnt($hSaiEnt) {
+        $this->hSaiEnt = $hSaiEnt;
+    }
 
-  public function setTpNF($tpNF) {
-    $this->tpNF = $tpNF;
-  }
+    public function getTpNF() {
+        return $this->getElementsByTagName('tpNF')->item(0);
+    }
 
-  public function getCMunFG() {
-    return $this->getElementsByTagName('cMunFG')->item(0);
-  }
+    public function setTpNF($tpNF) {
+        $this->tpNF = $tpNF;
+    }
 
-  public function setCMunFG($cMunFG) {
-    $this->cMunFG = $cMunFG;
-  }
+    public function getCMunFG() {
+        return $this->getElementsByTagName('cMunFG')->item(0);
+    }
 
-  public function getNFref() {
-    return $this->getElementsByTagName('NFref')->item(0);
-  }
+    public function setCMunFG($cMunFG) {
+        $this->cMunFG = $cMunFG;
+    }
 
-  public function setNFref($NFref) {
-    $this->NFref = $NFref;
-  }
+    public function getNFref() {
+        return $this->getElementsByTagName('NFref')->item(0);
+    }
 
-  public function getTpImp() {
-    return $this->getElementsByTagName('tpImp')->item(0);
-  }
+    public function setNFref($NFref) {
+        $this->NFref = $NFref;
+    }
 
-  public function setTpImp($tpImp) {
-    $this->tpImp = $tpImp;
-  }
+    public function getTpImp() {
+        return $this->getElementsByTagName('tpImp')->item(0);
+    }
 
-  public function getTpEmis() {
-    return $this->getElementsByTagName('tpEmis')->item(0);
-  }
+    public function setTpImp($tpImp) {
+        $this->tpImp = $tpImp;
+    }
 
-  public function setTpEmis($tpEmis) {
-    $this->tpEmis = $tpEmis;
-  }
+    public function getTpEmis() {
+        return $this->getElementsByTagName('tpEmis')->item(0);
+    }
 
-  public function getCDV() {
-    return $this->getElementsByTagName('cDV')->item(0);
-  }
+    public function setTpEmis($tpEmis) {
+        $this->tpEmis = $tpEmis;
+    }
 
-  public function setCDV($cDV) {
-    $this->cDV = $cDV;
-  }
+    public function getCDV() {
+        return $this->getElementsByTagName('cDV')->item(0);
+    }
 
-  public function getTpAmb() {
-    return $this->getElementsByTagName('tpAmb')->item(0);
-  }
+    public function setCDV($cDV) {
+        $this->cDV = $cDV;
+    }
 
-  public function setTpAmb($tpAmb) {
-    $this->tpAmb = $tpAmb;
-  }
+    public function getTpAmb() {
+        return $this->getElementsByTagName('tpAmb')->item(0);
+    }
 
-  public function getFinNFe() {
-    return $this->getElementsByTagName('finNFe')->item(0);
-  }
+    public function setTpAmb($tpAmb) {
+        $this->tpAmb = $tpAmb;
+    }
 
-  public function setFinNFe($finNFe) {
-    $this->finNFe = $finNFe;
-  }
+    public function getFinNFe() {
+        return $this->getElementsByTagName('finNFe')->item(0);
+    }
 
-  public function getProcEmi() {
-    return $this->getElementsByTagName('procEmi')->item(0);
-  }
+    public function setFinNFe($finNFe) {
+        $this->finNFe = $finNFe;
+    }
 
-  public function setProcEmi($procEmi) {
-    $this->procEmi = $procEmi;
-  }
+    public function getProcEmi() {
+        return $this->getElementsByTagName('procEmi')->item(0);
+    }
 
-  public function getVerProc() {
-    return $this->getElementsByTagName('verProc')->item(0);
-  }
+    public function setProcEmi($procEmi) {
+        $this->procEmi = $procEmi;
+    }
 
-  public function setVerProc($verProc) {
-    $this->verProc = $verProc;
-  }
+    public function getVerProc() {
+        return $this->getElementsByTagName('verProc')->item(0);
+    }
 
-  public function getDhCont() {
-    return $this->getElementsByTagName('dhCont')->item(0);
-  }
+    public function setVerProc($verProc) {
+        $this->verProc = $verProc;
+    }
 
-  public function setDhCont($dhCont) {
-    $this->dhCont = $dhCont;
-  }
+    public function getDhCont() {
+        return $this->getElementsByTagName('dhCont')->item(0);
+    }
 
-  public function getXJust() {
-    return $this->getElementsByTagName('xJust')->item(0);
-  }
+    public function setDhCont($dhCont) {
+        $this->dhCont = $dhCont;
+    }
 
-  public function setXJust($xJust) {
-    $this->xJust = $xJust;
-  }
+    public function getXJust() {
+        return $this->getElementsByTagName('xJust')->item(0);
+    }
+
+    public function setXJust($xJust) {
+        $this->xJust = $xJust;
+    }
 
 }
