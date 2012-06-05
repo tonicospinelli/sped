@@ -1,35 +1,59 @@
 <?php
 
 /**
- * //TODO: adicionar descrição da classe Cpf
- * @name Cpf
- * @package //TODO: adicionar package
- * @subpackage //TODO: adicionar subpackage
- * @author Antonio Spinelli <antonio.spinelli@grupobem.com.br>
- * @since 24/05/2012
+ * Sped
+ *
+ * Copyright (c) 2012 Sped
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ *
+ * @category   Sped
+ * @package    Sped
+ * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
+ * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
+ * @version    ##VERSION##, ##DATE##
  */
-class Sped_Validation_Cnpj extends Sped_Validation_Modulo11
-{
 
-    /**
-     * Validação do CNPJ. 
-     */
-    function __construct()
-    {
-        $this->digitsCount = 2;
-        $this->maxMultiplier = 9;
-    }
+namespace Sped\Validation;
 
-    /**
-     * Valida se o CNPJ está correto.
-     * @param string|int|Sped_Types_Cnpj $value
-     * @return boolean 
-     */
-    public function validate($value)
-    {
-        if (!$value instanceof Sped_Types_Cnpj)
-            $value = new Sped_Types_Cnpj($value);
-        return parent::validate($value);
-    }
+/**
+ * @category   Sped
+ * @package    Sped\Validation
+ * @copyright  Copyright (c) 2012
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+ */
+class Cnpj extends Sped_Validation_Modulo11 {
+
+  /**
+   * Validação do CNPJ. 
+   */
+  function __construct() {
+    $this->digitsCount = 2;
+    $this->maxMultiplier = 9;
+  }
+
+  /**
+   * Valida se o CNPJ está correto.
+   * @param string|int|Sped_Types_Cnpj $value
+   * @return boolean 
+   */
+  public function validate($value) {
+    if (!$value instanceof Cnpj)
+      $value = new Cnpj($value);
+    return parent::validate($value);
+  }
 
 }
