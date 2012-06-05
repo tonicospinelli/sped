@@ -47,12 +47,12 @@ class InscricaoEstadual {
 
   /**
    * Valida se o CNPJ está correto.
-   * @param string|int|Sped_Types_Cnpj $value
+   * @param string|int|\Sped\Types\InscricaoEstadual $value
    * @return boolean 
    */
   public function validate($value) {
-    if (!$value instanceof InscricaoEstadual)
-      $value = new InscricaoEstadual($value);
+    if (!$value instanceof \Sped\Types\InscricaoEstadual)
+      $value = new \Sped\Types\InscricaoEstadual($value);
 
     return parent::validate($value);
   }

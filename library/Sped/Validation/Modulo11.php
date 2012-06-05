@@ -99,11 +99,11 @@ abstract class Modulo11 extends AbstractValidate {
 
     /**
      * Validação genérica de vários tipos de números. Dentre eles: CPF, CNPJ, PIS.
-     * @param \AbstractDocument $value Valor a ser validado.
+     * @param \Sped\Types\AbstractDocument $value Valor a ser validado.
      * @return boolean 
      */
     public function validate($value) {
-        if (!$value instanceof AbstractDocument)
+        if (!$value instanceof \Sped\Types\AbstractDocument)
             throw new Exception('Não é possível validar o documento');
 
         $this->setDocument($value);
