@@ -70,11 +70,7 @@ class X509Data extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\KeyInfo\X509Data 
      */
     public function setX509Data($paramX509Certificate) {
-        $x509Certificate = $this->getX509Certificate();
-        if ($x509Certificate == null)
-            $this->appendChild($paramX509Certificate);
-        else
-            $this->replaceChild($paramX509Certificate, $x509Certificate);
+        $this->appendChild($paramX509Certificate, true);
         return $this;
     }
 
