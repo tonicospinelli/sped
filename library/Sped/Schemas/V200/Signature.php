@@ -98,10 +98,11 @@ class Signature extends \Sped\Components\Xml\Element {
 
     /**
      *
-     * @return \Sped\Schemas\V200\Signature\SignatureValue
+     * @param string $value
+     * @return \Sped\Schemas\V200\Signature\SignatureValue 
      */
-    public function addSignatureValue() {
-        return $this->appendChild(new SignatureValue());
+    public function addSignatureValue($value = null) {
+        return $this->appendChild(new SignatureValue($value));
     }
 
     /**
