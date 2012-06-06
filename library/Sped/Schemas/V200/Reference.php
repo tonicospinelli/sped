@@ -42,8 +42,10 @@ use Sped\Schemas\V200\Reference\DigestMethod,
  */
 class Reference extends \Sped\Components\Xml\Element {
 
+    const NAME = 'Reference';
+
     public function __construct() {
-        parent::__construct('Reference', null, 'http://www.w3.org/2000/09/xmldsig#');
+        parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
     public function loadChildren() {
@@ -60,7 +62,7 @@ class Reference extends \Sped\Components\Xml\Element {
      */
     public function getTransforms() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\Transforms');
-        return $this->getElementsByTagName('Transforms')->item(0);
+        return $this->getElementsByTagName(Transforms::NAME)->item(0);
     }
 
     /**
@@ -91,7 +93,7 @@ class Reference extends \Sped\Components\Xml\Element {
      */
     public function getDigestMethod() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\DigestMethod');
-        return $this->getElementsByTagName('DigestMethod')->item(0);
+        return $this->getElementsByTagName(DigestMethod::NAME)->item(0);
     }
 
     /**
@@ -122,7 +124,7 @@ class Reference extends \Sped\Components\Xml\Element {
      */
     public function getDigestValue() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\DigestValue');
-        return $this->getElementsByTagName('DigestValue')->item(0);
+        return $this->getElementsByTagName(DigestValue::NAME)->item(0);
     }
 
     /**

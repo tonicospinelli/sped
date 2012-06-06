@@ -37,9 +37,10 @@ namespace Sped\Schemas\V200\Reference;
  */
 class DigestMethod extends \Sped\Components\Xml\Element {
 
+    const NAME = 'DigestMethod';
+
     public function __construct() {
-        parent::__construct('DigestMethod', null, 'http://www.w3.org/2000/09/xmldsig#');
-//        $this->setAlgorithm('http://www.w3.org/2000/09/xmldsig#sha1');
+        parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
     /**
