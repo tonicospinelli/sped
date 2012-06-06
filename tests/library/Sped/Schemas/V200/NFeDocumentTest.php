@@ -47,7 +47,7 @@ class NFeDocumentTest extends \PHPUnit_Framework_TestCase {
      */
     public function testAddNFe() {
         $this->object->addNFe();
-        $this->object->getNFe()->addInfNFe()->loadChildren();
+        $this->object->getNFe()->addInfNFe();
         $this->object->getNFe()->getInfNFe()->getIde()->addCodigoUF();
         $this->object->getNFe()->getInfNFe()->getIde()->addCodigoNF(123);
         $this->object->getNFe()->getInfNFe()->addDet();
@@ -58,8 +58,16 @@ class NFeDocumentTest extends \PHPUnit_Framework_TestCase {
         $this->object->getNFe()->getInfNFe()->addDet();
         $this->object->getNFe()->getInfNFe()->removeDet(0);
         $this->object->getNFe()->getInfNFe()->organizeDets();
-        
-        $this->object->getNFe()->addSignature()->loadChildren();
+        $this->object->getNFe()->getInfNFe()->addAvulsa();
+        $this->object->getNFe()->getInfNFe()->addCana();
+        $this->object->getNFe()->getInfNFe()->addCobr();
+        $this->object->getNFe()->getInfNFe()->addCompra();
+        $this->object->getNFe()->getInfNFe()->addEntrega();
+        $this->object->getNFe()->getInfNFe()->addExporta();
+        $this->object->getNFe()->getInfNFe()->addInfAdic();
+        $this->object->getNFe()->getInfNFe()->addRetirada();
+
+        $this->object->getNFe()->addSignature();
         $this->object->getNFe()->getSignature()->getSignedInfo()->getReference()->getDigestValue()->setValue('123');
         $this->object->getNFe()->getSignature()->getKeyInfo()->getX509Data()->getX509Certificate()->setValue(base64_encode('123'));
 
@@ -67,16 +75,4 @@ class NFeDocumentTest extends \PHPUnit_Framework_TestCase {
         $this->assertTrue(true);
     }
 
-    /**
-     * @todo Implement testSetNFe().
-     */
-    public function testSetNFe() {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
-
 }
-
-?>
