@@ -32,12 +32,12 @@ use Sped\Components\Xml\Document;
 
 /**
  * @category   Sped
- * @package    Sped\Commons\XmlDocument
+ * @package    Sped\Components\Xml
  * @copyright  Copyright (c) 2012
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Schema extends XmlDocument {
+class Schema extends Document {
 
     public $loadedImportFiles = array();
     public $fileName = null;
