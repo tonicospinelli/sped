@@ -56,7 +56,7 @@ class Element extends \DOMElement {
         if ($unique) {
             $node = $this->getElementsByTagName($newNode->localName)->item(0);
             if ($node !== null)
-                return $node;
+                return $this->replaceChild($newNode, $node);
         }
         $node = parent::appendChild($newNode);
         if (method_exists($node, 'loadDefaults'))
