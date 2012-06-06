@@ -47,22 +47,22 @@ class NFeDocumentTest extends \PHPUnit_Framework_TestCase {
      */
     public function testAddNFe() {
         $this->object->addNFe();
-//        $ref = new \ReflectionClass($this->object->getNFe());
-//        var_dump($ref->getNamespaceName());
-        $this->object->getNFe()->addInfNFe()->addIde();
+        $this->object->getNFe()->addInfNFe()->loadChildren();
+        $this->object->getNFe()->getInfNFe()->getIde()->addCodigoUF();
+        $this->object->getNFe()->getInfNFe()->getIde()->addCodigoNF(123);
+        $this->object->getNFe()->getInfNFe()->addDet();
+        $this->object->getNFe()->getInfNFe()->addDet();
+        $this->object->getNFe()->getInfNFe()->addDet();
+        $this->object->getNFe()->getInfNFe()->addDet();
+        $this->object->getNFe()->getInfNFe()->addDet();
+        $this->object->getNFe()->getInfNFe()->addDet();
+        $this->object->getNFe()->getInfNFe()->removeDet(0);
+        $this->object->getNFe()->getInfNFe()->organizeDets();
+        
         $this->object->getNFe()->addSignature()->loadChildren();
         $this->object->getNFe()->getSignature()->getSignedInfo()->getReference()->getDigestValue()->setValue('123');
         $this->object->getNFe()->getSignature()->getKeyInfo()->getX509Data()->getX509Certificate()->setValue(base64_encode('123'));
-//        $this->object->getNFe()->addSignature();
-//        $this->object->getNFe()->addSignature();
-//        $infNFe->setVersao('2.0')->setId('NFe123123123123123123123123')->addIde();
-//        $nfe->addSignature()->loadChildren();
-//        $sig = $nfe->getSignature();
-//        var_dump($sig);
-//        $sig->getKeyInfo()
-//                ->getX509Data()
-//                ->getX509Certificate()
-//                ->setValue(base64_encode('123'));
+
         echo $this->object->saveXML();
         $this->assertTrue(true);
     }
