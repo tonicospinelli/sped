@@ -39,8 +39,8 @@ class SignatureValue extends \Sped\Components\Xml\Element {
 
     const NAME = 'SignatureValue';
 
-    public function __construct() {
-        parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
+    public function __construct($value = null) {
+        parent::__construct(self::NAME, $value, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
     public function getValue() {
