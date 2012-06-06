@@ -95,6 +95,29 @@ class Document extends \DOMDocument {
     }
 
     /**
+     * (PHP 5)<br/>
+     * Replaces a child
+     * @link http://php.net/manual/en/domnode.replacechild.php
+     * @param DOMNode $newnode <p>
+     * The new node. It must be a member of the target document, i.e.
+     * created by one of the DOMDocument->createXXX() methods or imported in
+     * the document by .
+     * </p>
+     * @param DOMNode $oldnode <p>
+     * The old node.
+     * </p>
+     * @return DOMNode The old node or false if an error occur.
+     */
+    public function replaceChild(\DOMNode $newnode, \DOMNode $oldnode) {
+        $newNode = parent::replaceChild($newnode, $oldnode);
+
+        if (method_exists($newNode, 'loadDefaults'))
+            $newNode->loadDefaults();
+
+        return $newNode;
+    }
+
+    /**
      * Return array of namespaces of the document
      * @return array
      */
