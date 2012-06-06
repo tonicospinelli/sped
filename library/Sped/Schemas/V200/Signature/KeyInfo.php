@@ -37,13 +37,12 @@ use Sped\Schemas\V200\Signature\KeyInfo\X509Data;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class KeyInfo extends \DOMElement {
+class KeyInfo extends \Sped\Components\Xml\Element {
 
     public function __construct() {
         parent::__construct('KeyInfo', null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
-//<X509Data> <X509Certificate>MIIFazCCBFOgAwIBAgIQaHEfNaxSeOEvZGlVDANB ... </X509Certificate> </X509Data>
     public function loadChildren() {
         $this->addX509Data()->loadChildren();
     }
@@ -53,6 +52,7 @@ class KeyInfo extends \DOMElement {
      * @return \Sped\Schemas\V200\Signature\KeyInfo\X509Data
      */
     public function getX509Data() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\KeyInfo\X509Data');
         return $this->getElementsByTagName('X509Data')->item(0);
     }
 

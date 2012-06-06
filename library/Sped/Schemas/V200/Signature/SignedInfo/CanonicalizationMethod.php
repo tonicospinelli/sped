@@ -35,11 +35,10 @@ namespace Sped\Schemas\V200\Signature\SignedInfo;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class CanonicalizationMethod extends \DOMElement {
+class CanonicalizationMethod extends \Sped\Components\Xml\Element {
 
     public function __construct() {
         parent::__construct('CanonicalizationMethod', null, 'http://www.w3.org/2000/09/xmldsig#');
-//        $this->setAlgorithm('http://www.w3.org/TR/2001/REC-xml-c14n-20010315');
     }
 
     /**
