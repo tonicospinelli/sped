@@ -52,7 +52,7 @@ class TNFe extends \Sped\Components\Xml\Element {
      */
     public function getInfNFe() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe');
-        return $this->getElementsByTagName('infNFe')->item(0);
+        return $this->getElementsByTagName(InfNFe::NAME)->item(0);
     }
 
     /**
@@ -83,7 +83,7 @@ class TNFe extends \Sped\Components\Xml\Element {
      */
     public function getSignature() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature');
-        return $this->getElementsByTagName('Signature')->item(0);
+        return $this->getElementsByTagName(Signature::NAME)->item(0);
     }
 
     /**
