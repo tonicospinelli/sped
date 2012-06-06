@@ -35,7 +35,7 @@ namespace Sped\Schemas\V200\Reference;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Transforms extends \DOMElement {
+class Transforms extends \Sped\Components\Xml\Element {
 
     public function __construct() {
         parent::__construct('Transforms', null, 'http://www.w3.org/2000/09/xmldsig#');
@@ -46,6 +46,7 @@ class Transforms extends \DOMElement {
      * @return \DOMNodeList
      */
     public function getTransforms() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\Transform');
         return $this->getElementsByTagName('Transform');
     }
 
@@ -55,6 +56,7 @@ class Transforms extends \DOMElement {
      * @return \Sped\Schemas\V200\Reference\Transform
      */
     public function getTransform($index) {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\Transform');
         return $this->getElementsByTagName('Transform')->item($index);
     }
 

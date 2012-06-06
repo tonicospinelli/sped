@@ -35,7 +35,7 @@ namespace Sped\Schemas\V200\Reference;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class DigestValue extends \DOMElement {
+class DigestValue extends \Sped\Components\Xml\Element {
 
     public function __construct() {
         parent::__construct('DigestValue', null, 'http://www.w3.org/2000/09/xmldsig#');
