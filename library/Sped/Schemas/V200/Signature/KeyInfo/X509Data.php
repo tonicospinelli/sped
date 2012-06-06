@@ -35,7 +35,7 @@ namespace Sped\Schemas\V200\Signature\KeyInfo;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class X509Data extends \DOMElement {
+class X509Data extends \Sped\Components\Xml\Element {
 
     public function __construct() {
         parent::__construct('X509Data', null, 'http://www.w3.org/2000/09/xmldsig#');
@@ -50,6 +50,7 @@ class X509Data extends \DOMElement {
      * @return \Sped\Schemas\V200\Signature\KeyInfo\X509Certificate
      */
     public function getX509Certificate() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\KeyInfo\X509Certificate');
         return $this->getElementsByTagName('X509Certificate')->item(0);
     }
 
