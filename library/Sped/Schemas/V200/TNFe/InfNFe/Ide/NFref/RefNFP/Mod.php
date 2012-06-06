@@ -26,51 +26,43 @@
  * @version    ##VERSION##, ##DATE##
  */
 
-namespace Sped\Schemas\V200;
+namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFRef\RefNFP;
 
 /**
+ * Modelo do Documento Fiscal.<br>
+ * Informar um dos códigos:
+ * <ul>
+ * <li>04 – NF de Produtor</li>
+ * <li>01 - para NF avulsa</li>
+ * </ul>
+ * 
  * @category   Sped
- * @package    Sped\Schemas\V200
+ * @package    Sped\Schemas\V200\TNFe\InfNFe\Ide\NFRef\RefNFP
  * @copyright  Copyright (c) 2012
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class NFeDocument extends \Sped\Components\Xml\Document {
+class Mod extends \Sped\Components\Xml\Element {
+
+    const NAME = 'mod';
+    const PRODUTOR = 4;
+    const AVULSA = 1;
 
     /**
      *
-     * @param string $versao
-     * @param string $encoding 
+     * @param int $value Use Mod::AVULSA ou Mod::PRODUTOR
      */
-    function __construct() {
-        parent::__construct('1.0', 'UTF-8');
+    public function __construct($value = null) {
+
+        parent::__construct(self::NAME, $value, 'http://www.portalfiscal.inf.br/nfe');
     }
 
-    /**
-     * 
-     * @return \Sped\Schemas\V200\TNFe 
-     */
-    public function getNFe() {
-        $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
-        return $this->getElementsByTagName(TNFe::NAME)->item(0);
+    public function setAvulsa() {
+        $this->nodeValue = str_pad(self::AVULSA, 2, 0, STR_PAD_LEFT);
     }
 
-    /**
-     *
-     * @return \Sped\Schemas\V200\TNFe
-     */
-    public function addNFe() {
-        return $this->appendChild(new TNFe(), true);
-    }
-
-    /**
-     *
-     * @param Sped\Schemas\V200\TNFe $paramTNFe
-     * @return \Sped\Schemas\V200\NFeDocument 
-     */
-    public function setNFe($paramTNFe) {
-        $this->appendChild($paramTNFe, true);
-        return $this;
+    public function setProdutor() {
+        $this->nodeValue = str_pad(self::PRODUTOR, 2, 0, STR_PAD_LEFT);
     }
 
 }

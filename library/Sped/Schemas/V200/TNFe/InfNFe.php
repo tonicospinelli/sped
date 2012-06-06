@@ -28,9 +28,20 @@
 
 namespace Sped\Schemas\V200\TNFe;
 
-use Sped\Schemas\V200\TNFe\InfNFe\Ide,
+use Sped\Schemas\V200\TNFe\InfNFe\Avulsa,
+    Sped\Schemas\V200\TNFe\InfNFe\Cana,
+    Sped\Schemas\V200\TNFe\InfNFe\Cobr,
+    Sped\Schemas\V200\TNFe\InfNFe\Compra,
+    Sped\Schemas\V200\TNFe\InfNFe\Dest,
     Sped\Schemas\V200\TNFe\InfNFe\Det,
-    Sped\Schemas\V200\TNFe\InfNFe\Emit;
+    Sped\Schemas\V200\TNFe\InfNFe\Emit,
+    Sped\Schemas\V200\TNFe\InfNFe\Entrega,
+    Sped\Schemas\V200\TNFe\InfNFe\Exporta,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide,
+    Sped\Schemas\V200\TNFe\InfNFe\InfAdic,
+    Sped\Schemas\V200\TNFe\InfNFe\Retirada,
+    Sped\Schemas\V200\TNFe\InfNFe\Total,
+    Sped\Schemas\V200\TNFe\InfNFe\Transp;
 
 /**
  * @category   Sped
@@ -47,6 +58,14 @@ class InfNFe extends \Sped\Components\Xml\Element {
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
+    public function loadDefaults() {
+        $this->addIde();
+        $this->addEmit();
+        $this->addDest();
+        $this->addTotal();
+        $this->addTransp();
+    }
+
     public function getVersao() {
         return $this->getAttribute('versao');
     }
@@ -61,7 +80,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
     }
 
     public function setId($chaveNFe) {
-        $this->setAttribute('Id', $chaveNFe);
+        $this->setAttribute('Id', 'NFe' . $chaveNFe);
         return $this;
     }
 
@@ -79,7 +98,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide
      */
     public function addIde() {
-        return $this->appendChild(new Ide());
+        return $this->appendChild(new Ide(), true);
     }
 
     /**
@@ -88,12 +107,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\NFeDocument\TNFe\InfNFe 
      */
     public function setIde($paramIde) {
-        $ide = $this->getIde();
-        if ($ide == null)
-            $this->appendChild($paramIde);
-        else
-            $this->replaceChild($paramIde, $ide);
-
+        $this->appendChild($paramIde, true);
         return $this;
     }
 
@@ -111,7 +125,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function addEmit() {
-        return $this->appendChild(new Emit());
+        return $this->appendChild(new Emit(), true);
     }
 
     /**
@@ -120,12 +134,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function setEmit($paramEmit) {
-        $emit = $this->getIde();
-        if ($emit == null)
-            $this->appendChild($paramEmit);
-        else
-            $this->replaceChild($paramEmit, $emit);
-
+        $this->appendChild($paramEmit, true);
         return $this;
     }
 
@@ -143,7 +152,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
     public function addAvulsa() {
-        return $this->appendChild(new Avulsa());
+        return $this->insertBefore(new Avulsa(), $this->getDest());
     }
 
     /**
@@ -153,8 +162,9 @@ class InfNFe extends \Sped\Components\Xml\Element {
      */
     public function setAvulsa($paramAvulsa) {
         $avulsa = $this->getAvulsa();
-        if ($avulsa == null)
-            $this->appendChild($paramAvulsa);
+        if ($avulsa == null) {
+            $this->insertBefore($paramAvulsa, $this->getDest());
+        }
         else
             $this->replaceChild($paramAvulsa, $avulsa);
 
@@ -166,13 +176,14 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return bool
      */
     public function isSetAvulsa() {
-        return $this->getElementsByTagName('avulsa')->length > 0;
+        return $this->getAvulsa() !== null;
     }
 
     public function removeAvulsa() {
         $avulsa = $this->getAvulsa();
-        if ($avulsa instanceof \DOMNode)
+        if ($avulsa !== null)
             $this->removeChild($avulsa);
+        return true;
     }
 
     /**
@@ -189,21 +200,16 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest 
      */
     public function addDest() {
-        return $this->appendChild(new Dest());
+        return $this->appendChild(new Dest(), true);
     }
 
     /**
      *
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Dest $paramDest
-     * @return \Sped\Schemas\V200\TNFe\InfNFe 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest
      */
     public function setDest($paramDest) {
-        $dest = $this->getDest();
-        if ($dest == null)
-            $this->appendChild($paramDest);
-        else
-            $this->replaceChild($paramDest, $dest);
-
+        $this->appendChild($paramDest, true);
         return $this;
     }
 
@@ -221,7 +227,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Retirada
      */
     public function addRetirada() {
-        return $this->appendChild(new Retirada());
+        return $this->appendChild(new Retirada(), true);
     }
 
     /**
@@ -230,12 +236,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function setRetirada($paramRetirada) {
-        $retirada = $this->getRetirada();
-        if ($retirada == null)
-            $this->appendChild($paramRetirada);
-        else
-            $this->replaceChild($paramRetirada, $retirada);
-
+        $this->appendChild($paramRetirada, true);
         return $this;
     }
 
@@ -244,12 +245,12 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return bool
      */
     public function isSetRetirada() {
-        return $this->getElementsByTagName('retirada')->length > 0;
+        return $this->getRetirada() !== null;
     }
 
     public function removeRetirada() {
         $retirada = $this->getRetirada();
-        if ($retirada instanceof \DOMNode)
+        if ($retirada !== NULL)
             $this->removeChild($retirada);
     }
 
@@ -259,7 +260,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      */
     public function getEntrega() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Entrega');
-        return $this->getElementsByTagName('entrega')->item(0);
+        return $this->getElementsByTagName(Entrega::NAME)->item(0);
     }
 
     /**
@@ -267,7 +268,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Entrega 
      */
     public function addEntrega() {
-        return $this->appendChild(new Entrega());
+        return $this->appendChild(new Entrega(), true);
     }
 
     /**
@@ -276,12 +277,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function setEntrega($paramEntrega) {
-        $entrega = $this->getEntrega();
-        if ($entrega == null)
-            $this->appendChild($paramEntrega);
-        else
-            $this->replaceChild($paramEntrega, $entrega);
-
+        $this->appendChild($paramEntrega, true);
         return $this;
     }
 
@@ -290,12 +286,12 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return bool
      */
     public function isSetEntrega() {
-        return $this->getElementsByTagName('entrega')->length > 0;
+        return $this->getEntrega() !== null;
     }
 
     public function removeEntrega() {
         $entrega = $this->getEntrega();
-        if ($entrega instanceof \DOMNode)
+        if ($entrega !== NULL)
             $this->removeChild($entrega);
     }
 
@@ -305,7 +301,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      */
     public function getDets() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det');
-        return $this->getElementsByTagName('det');
+        return $this->getElementsByTagName(Det::NAME);
     }
 
     /**
@@ -325,8 +321,8 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det
      */
     public function addDet() {
-        $det = $this->appendChild(new Det());
-        $det->setNItem($this->childNodes->length);
+        $det = $this->insertBefore(new Det(), $this->getTotal());
+        $det->setNItem($this->getDets()->length);
         return $det;
     }
 
@@ -336,11 +332,8 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @param int $index
      * @return \Sped\Schemas\V200\NFeDocument\TNFe\InfNFe 
      */
-    public function setDets($paramDets, $index = null) {
-        if ($index == null) {
-            $this->removeDets();
-            $index = 0;
-        }
+    public function setDets($paramDets) {
+        $this->removeDets();
         foreach ($paramDets as $paramDet) {
             $this->setDet($paramDet);
         }
@@ -359,7 +352,8 @@ class InfNFe extends \Sped\Components\Xml\Element {
         }
 
         if ($det == null) {
-            $this->insertDet($paramDet);
+            $paramDet->setNItem($this->getDets()->length);
+            $this->insertBefore($paramDet, $this->getTotal());
         } else {
             $this->replaceChild($paramDet, $det);
             $paramDet->setNItem($det->getNItem());
@@ -377,10 +371,10 @@ class InfNFe extends \Sped\Components\Xml\Element {
         if ($index === null)
             return $this->getDets()->length > 0;
         else
-            return $this->getDet($index) instanceof Det;
+            return ($this->getDet($index) !== null);
     }
 
-    public function orderDets() {
+    public function organizeDets() {
         $dets = $this->getDets();
         $i = 1;
         foreach ($dets as $det) {
@@ -395,7 +389,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      */
     public function removeDet($index) {
         $det = $this->getDet($index);
-        if ($det->hasChildNodes())
+        if ($det !== null)
             $this->removeChild($det);
         return true;
     }
@@ -417,7 +411,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      */
     public function getTotal() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total');
-        return $this->getElementsByTagName('total')->item(0);
+        return $this->getElementsByTagName(Total::NAME)->item(0);
     }
 
     /**
@@ -425,7 +419,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total 
      */
     public function addTotal() {
-        return $this->appendChild(new Total());
+        return $this->appendChild(new Total(), true);
     }
 
     /**
@@ -434,12 +428,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function setTotal($paramTotal) {
-        $total = $this->getEntrega();
-        if ($total == null)
-            $this->appendChild($paramTotal);
-        else
-            $this->replaceChild($paramTotal, $total);
-
+        $this->appendChild($paramTotal);
         return $this;
     }
 
@@ -449,7 +438,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      */
     public function getTransp() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp');
-        return $this->getElementsByTagName('transp')->item(0);
+        return $this->getElementsByTagName(Transp::NAME)->item(0);
     }
 
     /**
@@ -457,7 +446,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp
      */
     public function addTransp() {
-        return $this->appendChild(new Transp());
+        return $this->appendChild(new Transp(), true);
     }
 
     /**
@@ -466,12 +455,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function setTransp($paramTransp) {
-        $transp = $this->getEntrega();
-        if ($transp == null)
-            $this->appendChild($paramTransp);
-        else
-            $this->replaceChild($paramTransp, $transp);
-
+        $this->appendChild($paramTransp, true);
         return $this;
     }
 
@@ -481,7 +465,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      */
     public function getCobr() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr');
-        return $this->getElementsByTagName('cobr')->item(0);
+        return $this->getElementsByTagName(Cobr::NAME)->item(0);
     }
 
     /**
@@ -489,126 +473,117 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      */
     public function addCobr() {
-        return $this->appendChild('cobr')->item(0);
+        return $this->appendChild(new Cobr());
     }
 
     public function setCobr($paramCobr) {
-        $cobr = $this->getCobr();
-        if ($cobr == null)
-            $this->appendChild($paramCobr);
-        else
-            $this->replaceChild($paramCobr, $cobr);
-
+        $this->appendChild($paramCobr, true);
         return $this;
     }
 
     public function isSetCobr() {
-        return $this->getElementsByTagName('entrega')->length > 0;
+        return $this->getCobr() !== null;
     }
 
     public function removeCobr() {
         $cobr = $this->getCobr();
-        if ($cobr instanceof \DOMNode)
+        if ($cobr !== null)
             $this->removeChild($cobr);
     }
 
     public function getInfAdic() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\DigestValue');
-        return $this->getElementsByTagName('infAdic')->item(0);
+        $this->ownerDocument->registerNodeClass('\DOMElement', 'Sped\Schemas\V200\TNFe\InfNFe\InfAdic');
+        return $this->getElementsByTagName(InfAdic::NAME)->item(0);
+    }
+
+    public function addInfAdic() {
+        return $this->appendChild(new InfAdic(), true);
     }
 
     public function setInfAdic($paramInfAdic) {
-        $infAdic = $this->getInfAdic();
-        if ($infAdic == null)
-            $this->appendChild($paramInfAdic);
-        else
-            $this->replaceChild($paramInfAdic, $infAdic);
-
+        $this->appendChild($paramInfAdic, true);
         return $this;
     }
 
     public function isSetInfAdic() {
-        return $this->getElementsByTagName('infAdic')->length > 0;
+        return $this->getInfAdic() !== null;
     }
 
     public function removeInfAdic() {
         $infAdic = $this->getInfAdic();
-        if ($infAdic instanceof \DOMNode)
+        if ($infAdic !== null)
             $this->removeChild($infAdic);
     }
 
     public function getExporta() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\DigestValue');
-        return $this->getElementsByTagName('exporta')->item(0);
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Exporta');
+        return $this->getElementsByTagName(Exporta::NAME)->item(0);
+    }
+
+    public function addExporta() {
+        return $this->appendChild(new Exporta(), true);
     }
 
     public function setExporta($paramExporta) {
-        $exporta = $this->getInfAdic();
-        if ($exporta == null)
-            $this->appendChild($paramExporta);
-        else
-            $this->replaceChild($paramExporta, $exporta);
-
+        $this->appendChild($paramExporta, true);
         return $this;
     }
 
     public function isSetExporta() {
-        return $this->getElementsByTagName('exporta')->length > 0;
+        return $this->getExporta() !== null;
     }
 
     public function removeExporta() {
         $exporta = $this->getInfAdic();
-        if ($exporta instanceof \DOMNode)
+        if ($exporta !== null)
             $this->removeChild($exporta);
     }
 
     public function getCompra() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\DigestValue');
-        return $this->getElementsByTagName('compra')->item(0);
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra');
+        return $this->getElementsByTagName(Compra::NAME)->item(0);
+    }
+
+    public function addCompra() {
+        return $this->appendChild(new Compra(), true);
     }
 
     public function setCompra($paramCompra) {
-        $compra = $this->getInfAdic();
-        if ($compra == null)
-            $this->appendChild($paramCompra);
-        else
-            $this->replaceChild($paramCompra, $compra);
-
+        $this->appendChild($paramCompra);
         return $this;
     }
 
     public function isSetCompra() {
-        return $this->getElementsByTagName('compra')->length > 0;
+        return $this->getCompra() !== null;
     }
 
     public function removeCompra() {
         $compra = $this->getInfAdic();
-        if ($compra instanceof \DOMNode)
+        if ($compra !== null)
             $this->removeChild($compra);
     }
 
     public function getCana() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\DigestValue');
-        return $this->getElementsByTagName('cana')->item(0);
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana');
+        return $this->getElementsByTagName(Cana::NAME)->item(0);
+    }
+
+    public function addCana() {
+        return $this->appendChild(new Cana(), true);
     }
 
     public function setCana($paramCana) {
-        $cana = $this->getInfAdic();
-        if ($cana == null)
-            $this->appendChild($paramCana);
-        else
-            $this->replaceChild($paramCana, $cana);
-
+        $this->appendChild($paramCana, true);
         return $this;
     }
 
     public function isSetCana() {
-        return $this->getElementsByTagName('cana')->length > 0;
+        return $this->getCana() !== null;
     }
 
     public function removeCana() {
         $cana = $this->getInfAdic();
-        if ($cana instanceof \DOMNode)
+        if ($cana !== null)
             $this->removeChild($cana);
     }
 

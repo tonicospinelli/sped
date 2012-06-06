@@ -56,16 +56,12 @@ class TNFe extends \Sped\Components\Xml\Element {
     }
 
     /**
-     * 
-     * @param \Sped\Schemas\V200\TNFe\InfNFe $paramInfNFe
+     *
+     *  @param \Sped\Schemas\V200\TNFe\InfNFe $paramInfNFe
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function setInfNFe($paramInfNFe) {
-        $infNFe = $this->getInfNFe();
-        if ($infNFe == null)
-            $this->appendChild($paramInfNFe);
-        else
-            $this->replaceChild($paramInfNFe, $infNFe);
+        $this->appendChild($paramInfNFe, true);
         return $this;
     }
 
@@ -74,7 +70,7 @@ class TNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe
      */
     public function addInfNFe() {
-        return $this->appendChild(new InfNFe());
+        return $this->appendChild(new InfNFe(), true);
     }
 
     /**
@@ -92,20 +88,16 @@ class TNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function setSignature($paramSignature) {
-        $signature = $this->getSignature();
-        if ($signature == null)
-            $this->appendChild($paramSignature);
-        else
-            $this->replaceChild($paramSignature, $signature);
-        return $this;
+        return $this->appendChild($paramSignature, true);
     }
 
     /**
      *
-     * @return \Sped\Schemas\V200\Signature
+     * @return \Sped\Schemas\V200\TNFe 
      */
     public function addSignature() {
-        return $this->appendChild(new Signature());
+        $this->appendChild(new Signature(), true);
+        return $this;
     }
 
 }

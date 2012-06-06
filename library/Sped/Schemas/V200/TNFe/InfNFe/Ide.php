@@ -28,6 +28,29 @@
 
 namespace Sped\Schemas\V200\TNFe\InfNFe;
 
+use Sped\Schemas\V200\TNFe\InfNFe\Ide\CodigoDV,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\CodigoMunFG,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\CodigoNF,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\CodigoUF,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\DataEmi,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\DataHoraCont,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\DataSaiEnt,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\FinNFe,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\HoraSaiEnt,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\Justificativa,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\Mod,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\NFRef,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\NumeroNF,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\ProcEmi,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\Serie,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\TpAmb,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNf,
+    Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc;
+
 /**
  * @category   Sped
  * @package    Sped\Schemas\V200
@@ -43,23 +66,43 @@ class Ide extends \Sped\Components\Xml\Element {
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
-    public function getCUF() {
-        return $this->getElementsByTagName('cUF')->item(0);
+    /**
+     *
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CodigoUF
+     */
+    public function getCodigoUF() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\CodigoUF');
+        return $this->getElementsByTagName(CodigoUF::NAME)->item(0);
     }
 
-    public function setCUF($paramcUF) {
-        $this->cUF = $cUF;
-        $cUF = $this->getCUF();
-        if ($cUF == null)
-            $this->appendChild($paramcUF);
-        else
-            $this->replaceChild($paramcUF, $cUF);
+    /**
+     *
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CodigoUF
+     */
+    public function addCodigoUF() {
+        return $this->appendChild(new CodigoUF(), true);
+    }
 
+    /**
+     *
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\CodigoUF $paramcUF
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+     */
+    public function setCodigoUF($paramcUF) {
+        $this->appendChild($paramcUF, true);
         return $this;
     }
 
-    public function getCNF() {
-        return $this->getElementsByTagName('cNF')->item(0);
+    public function getCodigoNF() {
+        return $this->getElementsByTagName(CodigoNF::NAME)->item(0);
+    }
+
+    /**
+     *
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CodigoNF
+     */
+    public function addCodigoNF($value = null) {
+        return $this->appendChild(new CodigoNF($value), true);
     }
 
     public function setCNF($cNF) {
