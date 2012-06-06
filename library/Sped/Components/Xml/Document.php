@@ -73,6 +73,28 @@ class Document extends \DOMDocument {
     }
 
     /**
+     * (PHP 5)<br/>
+     * Adds a new child before a reference node
+     * @link http://php.net/manual/en/domnode.insertbefore.php
+     * @param DOMNode $newnode <p>
+     * The new node.
+     * </p>
+     * @param DOMNode $refnode [optional] <p>
+     * The reference node. If not supplied, <i>newnode</i> is
+     * appended to the children.
+     * </p>
+     * @return DOMNode The inserted node.
+     */
+    public function insertBefore(DOMNode $newnode, DOMNode $refnode = null) {
+        $newNode = parent::insertBefore($newnode, $refnode);
+
+        if (method_exists($newNode, 'loadDefaults'))
+            $newNode->loadDefaults();
+
+        return $newNode;
+    }
+
+    /**
      * Return array of namespaces of the document
      * @return array
      */
