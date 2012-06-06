@@ -40,21 +40,13 @@ use Sped\Schemas\V200\Reference\DigestMethod,
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Reference extends \DOMElement {
+class Reference extends \Sped\Components\Xml\Element {
 
     public function __construct() {
         parent::__construct('Reference', null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
     public function loadChildren() {
-        //<Reference URI="#NFe31060243816719000108550000000010001234567897"> 
-        //  <Transforms> 
-        //   <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/> 
-        //   <Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/> 
-        //  </Transforms> 
-        //  <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
-        //  <DigestValue>vFL68WETQ+mvj1aJAMDx+oVi928=</DigestValue> 
-        //</Reference>
         $trans = $this->addTransforms();
         $trans->insertTransform()->setAlgorithm('http://www.w3.org/2000/09/xmldsig#enveloped-signature');
         $trans->insertTransform()->setAlgorithm('http://www.w3.org/TR/2001/REC-xml-c14n-20010315');
@@ -67,6 +59,7 @@ class Reference extends \DOMElement {
      * @return \Sped\Schemas\V200\Reference\Transform
      */
     public function getTransforms() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\Transforms');
         return $this->getElementsByTagName('Transforms')->item(0);
     }
 
@@ -97,6 +90,7 @@ class Reference extends \DOMElement {
      * @return \Sped\Schemas\V200\Reference\DigestMethod
      */
     public function getDigestMethod() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\DigestMethod');
         return $this->getElementsByTagName('DigestMethod')->item(0);
     }
 
@@ -127,6 +121,7 @@ class Reference extends \DOMElement {
      * @return Sped\Schemas\V200\Reference\DigestValue
      */
     public function getDigestValue() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\DigestValue');
         return $this->getElementsByTagName('DigestValue')->item(0);
     }
 
