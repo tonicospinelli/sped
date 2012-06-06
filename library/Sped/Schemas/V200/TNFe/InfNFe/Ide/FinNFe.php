@@ -26,51 +26,52 @@
  * @version    ##VERSION##, ##DATE##
  */
 
-namespace Sped\Schemas\V200;
+namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
 
 /**
+ * Finalidade de emissão da NF-e.
+ * <ul>
+ * <li>1- NF-e normal</li>
+ * <li>2-NF-e complementar</li>
+ * <li>3 – NF-e de ajuste</li>
+ * </ul>
+ * 
  * @category   Sped
- * @package    Sped\Schemas\V200
+ * @package    Sped\Schemas\V200\TNFe\InfNFe\Ide
  * @copyright  Copyright (c) 2012
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class NFeDocument extends \Sped\Components\Xml\Document {
+class FinNFe extends \Sped\Components\Xml\Element {
 
+    const NAME = 'finNFe';
     /**
-     *
-     * @param string $versao
-     * @param string $encoding 
+     * NF-e Normal. 
      */
-    function __construct() {
-        parent::__construct('1.0', 'UTF-8');
+    const NORMAL = 1;
+    /**
+     * NF-e Complementar. 
+     */
+    const COMPLEMETAR = 2;
+    /**
+     * NF-e de Ajuste.
+     */
+    const AJUSTE = 3;
+
+    public function __construct($value = null) {
+        parent::__construct(self::NAME, $value, 'http://www.portalfiscal.inf.br/nfe');
     }
 
-    /**
-     * 
-     * @return \Sped\Schemas\V200\TNFe 
-     */
-    public function getNFe() {
-        $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
-        return $this->getElementsByTagName(TNFe::NAME)->item(0);
+    public function setNormal() {
+        $this->nodeValue = self::NORMAL;
     }
 
-    /**
-     *
-     * @return \Sped\Schemas\V200\TNFe
-     */
-    public function addNFe() {
-        return $this->appendChild(new TNFe(), true);
+    public function setComplementar() {
+        $this->nodeValue = self::COMPLEMETAR;
     }
 
-    /**
-     *
-     * @param Sped\Schemas\V200\TNFe $paramTNFe
-     * @return \Sped\Schemas\V200\NFeDocument 
-     */
-    public function setNFe($paramTNFe) {
-        $this->appendChild($paramTNFe, true);
-        return $this;
+    public function setAjuste() {
+        $this->nodeValue = self::AJUSTE;
     }
 
 }

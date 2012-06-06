@@ -50,10 +50,10 @@ class Signature extends \Sped\Components\Xml\Element {
     /**
      * 
      */
-    public function loadChildren() {
-        $this->addSignedInfo()->loadChildren();
+    public function loadDefaults() {
+        $this->addSignedInfo();
         $this->addSignatureValue();
-        $this->addKeyInfo()->loadChildren();
+        $this->addKeyInfo();
     }
 
     /**
@@ -70,7 +70,7 @@ class Signature extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\SignedInfo
      */
     public function addSignedInfo() {
-        return $this->appendChild(new SignedInfo());
+        return $this->appendChild(new SignedInfo(), true);
     }
 
     /**
@@ -79,11 +79,7 @@ class Signature extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature 
      */
     public function setSignedInfo($paramSignedInfo) {
-        $signedInfo = $this->getSignedInfo();
-        if ($signedInfo == null)
-            $this->appendChild($paramSignedInfo);
-        else
-            $this->replaceChild($paramSignedInfo, $signedInfo);
+        $this->appendChild($paramSignedInfo, true);
         return $this;
     }
 
@@ -102,7 +98,7 @@ class Signature extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\SignatureValue 
      */
     public function addSignatureValue($value = null) {
-        return $this->appendChild(new SignatureValue($value));
+        return $this->appendChild(new SignatureValue($value), true);
     }
 
     /**
@@ -111,11 +107,7 @@ class Signature extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature 
      */
     public function setSignatureValue($paramSignatureValue) {
-        $signatureValue = $this->getSignedInfo();
-        if ($signatureValue == null)
-            $this->appendChild($paramSignatureValue);
-        else
-            $this->replaceChild($paramSignatureValue, $signatureValue);
+        $this->appendChild($paramSignatureValue, true);
         return $this;
     }
 
@@ -133,7 +125,7 @@ class Signature extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\KeyInfo 
      */
     public function addKeyInfo() {
-        return $this->appendChild(new KeyInfo());
+        return $this->appendChild(new KeyInfo(), true);
     }
 
     /**
@@ -142,11 +134,7 @@ class Signature extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature 
      */
     public function setKeyInfo($paramKeyInfo) {
-        $keyInfo = $this->getKeyInfo();
-        if ($keyInfo == null)
-            $this->appendChild($paramKeyInfo);
-        else
-            $this->replaceChild($paramKeyInfo, $keyInfo);
+        $this->appendChild($paramKeyInfo, true);
         return $this;
     }
 

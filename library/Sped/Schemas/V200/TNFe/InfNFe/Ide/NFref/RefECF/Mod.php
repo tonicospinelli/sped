@@ -26,51 +26,61 @@
  * @version    ##VERSION##, ##DATE##
  */
 
-namespace Sped\Schemas\V200;
+namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFRef\RefECF;
 
 /**
+ * Modelo do Documento Fiscal.<br>
+ * Informar um dos códigos:
+ * <ul>
+ * <li><b>2B</b>: Cupom Fiscal emitido por máquina registradora (não ECF)</li>
+ * <li><b>2C</b>: Cupom Fiscal PDV</li> 
+ * <li><b>2D</b>: Cupom Fiscal (emitido por ECF)</li> 
+ * </ul>
+ * 
  * @category   Sped
- * @package    Sped\Schemas\V200
+ * @package    Sped\Schemas\V200\TNFe\InfNFe\Ide\NFRef\RefECF
  * @copyright  Copyright (c) 2012
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class NFeDocument extends \Sped\Components\Xml\Document {
+class Mod extends \Sped\Components\Xml\Element {
+
+    /**
+     * Nome do elemento 
+     */
+    const NAME = 'mod';
+    /**
+     * Cupom Fiscal emitido por máquina registradora (não ECF).
+     */
+    const MAQUINA = '2B';
+    /**
+     * Cupom Fiscal PDV 
+     */
+    const PDV = '2C';
+    /**
+     * Cupom Fiscal (emitido por ECF) 
+     */
+    const ECF = '2D';
 
     /**
      *
-     * @param string $versao
-     * @param string $encoding 
+     * @param int $value Use Mod::MAQUINA ou Mod::PDV ou Mod::ECF
      */
-    function __construct() {
-        parent::__construct('1.0', 'UTF-8');
+    public function __construct($value = null) {
+
+        parent::__construct(self::NAME, $value, 'http://www.portalfiscal.inf.br/nfe');
     }
 
-    /**
-     * 
-     * @return \Sped\Schemas\V200\TNFe 
-     */
-    public function getNFe() {
-        $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
-        return $this->getElementsByTagName(TNFe::NAME)->item(0);
+    public function setMarquinaRegistradora() {
+        $this->nodeValue = self::MAQUINA;
     }
 
-    /**
-     *
-     * @return \Sped\Schemas\V200\TNFe
-     */
-    public function addNFe() {
-        return $this->appendChild(new TNFe(), true);
+    public function setPDV() {
+        $this->nodeValue = self::PDV;
     }
 
-    /**
-     *
-     * @param Sped\Schemas\V200\TNFe $paramTNFe
-     * @return \Sped\Schemas\V200\NFeDocument 
-     */
-    public function setNFe($paramTNFe) {
-        $this->appendChild($paramTNFe, true);
-        return $this;
+    public function setECF() {
+        $this->nodeValue = self::ECF;
     }
 
 }
