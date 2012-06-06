@@ -39,7 +39,7 @@ use Sped\Schemas\V200\Signature\SignedInfo,
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Signature extends \DOMElement {
+class Signature extends \Sped\Components\Xml\Element {
 
     public function __construct() {
         parent::__construct('Signature', null, 'http://www.w3.org/2000/09/xmldsig#');
@@ -59,6 +59,7 @@ class Signature extends \DOMElement {
      * @return \Sped\Schemas\V200\Signature\SignedInfo
      */
     public function getSignedInfo() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\SignedInfo');
         return $this->getElementsByTagName('SignedInfo')->item(0);
     }
 
@@ -89,6 +90,7 @@ class Signature extends \DOMElement {
      * @return \Sped\Schemas\V200\Signature\SignatureValue
      */
     public function getSignatureValue() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\SignatureValue');
         return $this->getElementsByTagName('SignatureValue')->item(0);
     }
 
@@ -119,6 +121,7 @@ class Signature extends \DOMElement {
      * @return \Sped\Schemas\V200\Signature\KeyInfo
      */
     public function getKeyInfo() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\KeyInfo');
         return $this->getElementsByTagName('KeyInfo')->item(0);
     }
 

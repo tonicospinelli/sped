@@ -35,7 +35,7 @@ namespace Sped\Schemas\V200;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class NFeDocument extends \DOMDocument {
+class NFeDocument extends \Sped\Components\Xml\Document {
 
     /**
      *
@@ -44,20 +44,20 @@ class NFeDocument extends \DOMDocument {
      */
     function __construct() {
         parent::__construct('1.0', 'UTF-8');
-        $this->registerNodeClass('\\DOMElement','\\Sped\\Commons\\XmlElement');
     }
 
     /**
      * 
-     * @return Sped\Schemas\V200\TNFe 
+     * @return \Sped\Schemas\V200\TNFe 
      */
     public function getNFe() {
+        $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
         return $this->getElementsByTagName('NFe')->item(0);
     }
 
     /**
      *
-     * @return Sped\Schemas\V200\TNFe
+     * @return \Sped\Schemas\V200\TNFe
      */
     public function addNFe() {
         return $this->appendChild(new TNFe());
