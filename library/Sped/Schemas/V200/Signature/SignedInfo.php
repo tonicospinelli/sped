@@ -67,7 +67,7 @@ class SignedInfo extends \Sped\Components\Xml\Element {
      * @return Sped\Schemas\V200\Signature\SignedInfo\CanonicalizationMethod
      */
     public function addCanonicalizationMethod() {
-        return $this->appendChild(new CanonicalizationMethod());
+        return $this->appendChild(new CanonicalizationMethod(), true);
     }
 
     /**
@@ -76,11 +76,7 @@ class SignedInfo extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\SignedInfo 
      */
     public function setCanonicalizationMethod($paramCanonicalizationMethod) {
-        $canonicalizationMethod = $this->getCanonicalizationMethod();
-        if ($canonicalizationMethod == null)
-            $this->appendChild($paramCanonicalizationMethod);
-        else
-            $this->replaceChild($paramCanonicalizationMethod, $canonicalizationMethod);
+        $this->appendChild($paramCanonicalizationMethod, true);
         return $this;
     }
 
@@ -98,7 +94,7 @@ class SignedInfo extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\SignedInfo\SignatureMethod
      */
     public function addSignatureMethod() {
-        return $this->appendChild(new SignatureMethod());
+        return $this->appendChild(new SignatureMethod(), true);
     }
 
     /**
@@ -107,11 +103,7 @@ class SignedInfo extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\SignedInfo
      */
     public function setSignatureMethod($paramSignatureMethod) {
-        $signatureMethod = $this->getSignatureMethod();
-        if ($signatureMethod == null)
-            $this->appendChild($paramSignatureMethod);
-        else
-            $this->replaceChild($paramSignatureMethod, $signatureMethod);
+        $this->appendChild($paramSignatureMethod, true);
         return $this;
     }
 
@@ -129,7 +121,7 @@ class SignedInfo extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Reference
      */
     public function addReference() {
-        return $this->appendChild(new Reference());
+        return $this->appendChild(new Reference(), true);
     }
 
     /**
@@ -138,11 +130,7 @@ class SignedInfo extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\SignedInfo
      */
     public function setReference($paramReference) {
-        $reference = $this->getReference();
-        if ($reference == null)
-            $this->appendChild($paramReference);
-        else
-            $this->replaceChild($paramReference, $reference);
+        $this->appendChild($paramReference, true);
         return $this;
     }
 

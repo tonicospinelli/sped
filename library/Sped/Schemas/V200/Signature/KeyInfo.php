@@ -63,7 +63,7 @@ class KeyInfo extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\KeyInfo\X509Data
      */
     public function addX509Data() {
-        return $this->appendChild(new X509Data());
+        return $this->appendChild(new X509Data(), true);
     }
 
     /**
@@ -72,11 +72,7 @@ class KeyInfo extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\SignedInfo 
      */
     public function setX509Data($paramX509Data) {
-        $x509Data = $this->getX509Data();
-        if ($x509Data == null)
-            $this->appendChild($paramX509Data);
-        else
-            $this->replaceChild($paramX509Data, $x509Data);
+        $this->appendChild($paramX509Data, true);
         return $this;
     }
 
