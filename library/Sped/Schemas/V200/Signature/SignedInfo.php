@@ -41,21 +41,25 @@ use Sped\Schemas\V200\Signature\SignedInfo\CanonicalizationMethod,
  */
 class SignedInfo extends \Sped\Components\Xml\Element {
 
+    const NAME = 'SignedInfo';
+
     public function __construct() {
-        parent::__construct('SignedInfo', null, 'http://www.w3.org/2000/09/xmldsig#');
+        parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
+
     public function loadChildren() {
         $this->addCanonicalizationMethod()->setAlgorithm('http://www.w3.org/TR/2001/REC-xml-c14n-20010315');
         $this->addSignatureMethod()->setAlgorithm('http://www.w3.org/2000/09/xmldsig#rsa-sha1');
         $this->addReference()->loadChildren();
     }
+
     /**
      *
      * @return Sped\Schemas\V200\Signature\SignedInfo\CanonicalizationMethod
      */
     public function getCanonicalizationMethod() {
         $this->ownerDocument->registerNodeClass('\DOMElement', 'Sped\Schemas\V200\Signature\SignedInfo\CanonicalizationMethod');
-        return $this->getElementsByTagName('CanonicalizationMethod')->item(0);
+        return $this->getElementsByTagName(CanonicalizationMethod::NAME)->item(0);
     }
 
     /**
@@ -86,7 +90,7 @@ class SignedInfo extends \Sped\Components\Xml\Element {
      */
     public function getSignatureMethod() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\SignedInfo\SignatureMethod');
-        return $this->getElementsByTagName('SignatureMethod')->item(0);
+        return $this->getElementsByTagName(SignatureMethod::NAME)->item(0);
     }
 
     /**
@@ -117,7 +121,7 @@ class SignedInfo extends \Sped\Components\Xml\Element {
      */
     public function getReference() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference');
-        return $this->getElementsByTagName('Reference')->item(0);
+        return $this->getElementsByTagName(Reference::NAME)->item(0);
     }
 
     /**
