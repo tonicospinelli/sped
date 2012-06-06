@@ -26,51 +26,45 @@
  * @version    ##VERSION##, ##DATE##
  */
 
-namespace Sped\Schemas\V200;
+namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
 
 /**
+ * Tipo de Operação.
  * @category   Sped
- * @package    Sped\Schemas\V200
+ * @package    Sped\Schemas\V200\TNFe\InfNFe\Ide
  * @copyright  Copyright (c) 2012
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class NFeDocument extends \Sped\Components\Xml\Document {
+class TpNf extends \Sped\Components\Xml\Element {
+
+    const NAME = 'tpNF';
+    const ENTRADA = 0;
+    const SAIDA = 1;
 
     /**
-     *
-     * @param string $versao
-     * @param string $encoding 
+     * Tipo de Operação.
+     * @param null|int $tipo Use as constantes TpNf::ENTRADA ou TpNf::SAIDA para definir a operação.
      */
-    function __construct() {
-        parent::__construct('1.0', 'UTF-8');
+    public function __construct($tipo = null) {
+
+        parent::__construct(self::NAME, $tipo, 'http://www.portalfiscal.inf.br/nfe');
     }
 
-    /**
-     * 
-     * @return \Sped\Schemas\V200\TNFe 
-     */
-    public function getNFe() {
-        $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
-        return $this->getElementsByTagName(TNFe::NAME)->item(0);
+    public function setEntrada() {
+        $this->nodeValue = self::ENTRADA;
     }
 
-    /**
-     *
-     * @return \Sped\Schemas\V200\TNFe
-     */
-    public function addNFe() {
-        return $this->appendChild(new TNFe(), true);
+    public function isEntrada() {
+        return $this->nodeValue === self::ENTRADA;
     }
 
-    /**
-     *
-     * @param Sped\Schemas\V200\TNFe $paramTNFe
-     * @return \Sped\Schemas\V200\NFeDocument 
-     */
-    public function setNFe($paramTNFe) {
-        $this->appendChild($paramTNFe, true);
-        return $this;
+    public function setSaida() {
+        $this->nodeValue = self::SAIDA;
+    }
+
+    public function isSaida() {
+        return $this->nodeValue === self::SAIDA;
     }
 
 }

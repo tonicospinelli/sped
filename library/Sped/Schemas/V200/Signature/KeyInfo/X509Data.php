@@ -43,7 +43,7 @@ class X509Data extends \Sped\Components\Xml\Element {
         parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
-    public function loadChildren() {
+    public function loadDefaults() {
         $this->addX509Certificate();
     }
 
@@ -61,7 +61,7 @@ class X509Data extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Signature\KeyInfo\X509Certificate
      */
     public function addX509Certificate($value = null) {
-        return $this->appendChild(new X509Certificate($value));
+        return $this->appendChild(new X509Certificate($value), true);
     }
 
     /**
