@@ -52,6 +52,22 @@ class Document extends \DOMDocument {
     }
 
     /**
+     * Adds new child at the end of the children.
+     * @param \DOMNode $newNode The appended child.
+     * @param boolean $unique If sets TRUE, search if exists the same node.
+     * @return DOMNode The node added or if is unique, returns the node found.
+     */
+    public function appendChild(\DOMNode $newNode, $unique = false) {
+
+        if ($unique) {
+            $node = $this->getElementsByTagName($newNode->localName)->item(0);
+            if ($node !== null)
+                return $node;
+        }
+        return parent::appendChild($newNode);
+    }
+
+    /**
      * Return array of namespaces of the document
      * @return array
      */
