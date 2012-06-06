@@ -37,8 +37,10 @@ namespace Sped\Schemas\V200\Reference;
  */
 class Transforms extends \Sped\Components\Xml\Element {
 
+    const NAME = 'Transforms';
+
     public function __construct() {
-        parent::__construct('Transforms', null, 'http://www.w3.org/2000/09/xmldsig#');
+        parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
     /**
@@ -47,7 +49,7 @@ class Transforms extends \Sped\Components\Xml\Element {
      */
     public function getTransforms() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\Transform');
-        return $this->getElementsByTagName('Transform');
+        return $this->getElementsByTagName(Transform::NAME);
     }
 
     /**
@@ -57,7 +59,7 @@ class Transforms extends \Sped\Components\Xml\Element {
      */
     public function getTransform($index) {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference\Transform');
-        return $this->getElementsByTagName('Transform')->item($index);
+        return $this->getElementsByTagName(Transform::NAME)->item($index);
     }
 
     /**

@@ -38,8 +38,10 @@ namespace Sped\Schemas\V200\Signature\KeyInfo;
  */
 class X509Certificate extends \Sped\Components\Xml\Element {
 
+    const NAME = 'X509Certificate';
+
     public function __construct() {
-        parent::__construct('X509Certificate', null, 'http://www.w3.org/2000/09/xmldsig#');
+        parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
     /**

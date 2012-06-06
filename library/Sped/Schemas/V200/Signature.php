@@ -41,8 +41,10 @@ use Sped\Schemas\V200\Signature\SignedInfo,
  */
 class Signature extends \Sped\Components\Xml\Element {
 
+    const NAME = 'Signature';
+
     public function __construct() {
-        parent::__construct('Signature', null, 'http://www.w3.org/2000/09/xmldsig#');
+        parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
     /**
@@ -60,7 +62,7 @@ class Signature extends \Sped\Components\Xml\Element {
      */
     public function getSignedInfo() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\SignedInfo');
-        return $this->getElementsByTagName('SignedInfo')->item(0);
+        return $this->getElementsByTagName(SignedInfo::NAME)->item(0);
     }
 
     /**
@@ -91,7 +93,7 @@ class Signature extends \Sped\Components\Xml\Element {
      */
     public function getSignatureValue() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\SignatureValue');
-        return $this->getElementsByTagName('SignatureValue')->item(0);
+        return $this->getElementsByTagName(SignatureValue::NAME)->item(0);
     }
 
     /**
@@ -122,7 +124,7 @@ class Signature extends \Sped\Components\Xml\Element {
      */
     public function getKeyInfo() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\KeyInfo');
-        return $this->getElementsByTagName('KeyInfo')->item(0);
+        return $this->getElementsByTagName(KeyInfo::NAME)->item(0);
     }
 
     /**

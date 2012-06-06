@@ -40,8 +40,10 @@ use Sped\Schemas\V200\TNFe\InfNFe,
  */
 class TNFe extends \Sped\Components\Xml\Element {
 
+    const NAME = 'NFe';
+
     public function __construct() {
-        parent::__construct('NFe', null, 'http://www.portalfiscal.inf.br/nfe');
+        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
@@ -105,4 +107,5 @@ class TNFe extends \Sped\Components\Xml\Element {
     public function addSignature() {
         return $this->appendChild(new Signature());
     }
+
 }
