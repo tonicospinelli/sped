@@ -52,7 +52,7 @@ class NFeDocument extends \Sped\Components\Xml\Document {
      */
     public function getNFe() {
         $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
-        return $this->getElementsByTagName('NFe')->item(0);
+        return $this->getElementsByTagName(TNFe::NAME)->item(0);
     }
 
     /**

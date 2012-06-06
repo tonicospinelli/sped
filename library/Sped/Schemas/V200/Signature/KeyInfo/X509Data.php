@@ -37,8 +37,10 @@ namespace Sped\Schemas\V200\Signature\KeyInfo;
  */
 class X509Data extends \Sped\Components\Xml\Element {
 
+    const NAME = 'X509Data';
+
     public function __construct() {
-        parent::__construct('X509Data', null, 'http://www.w3.org/2000/09/xmldsig#');
+        parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
     public function loadChildren() {
@@ -51,7 +53,7 @@ class X509Data extends \Sped\Components\Xml\Element {
      */
     public function getX509Certificate() {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\KeyInfo\X509Certificate');
-        return $this->getElementsByTagName('X509Certificate')->item(0);
+        return $this->getElementsByTagName(X509Certificate::NAME)->item(0);
     }
 
     /**
