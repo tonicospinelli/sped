@@ -47,10 +47,10 @@ class SignedInfo extends \Sped\Components\Xml\Element {
         parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
-    public function loadChildren() {
+    public function loadDefaults() {
         $this->addCanonicalizationMethod()->setAlgorithm('http://www.w3.org/TR/2001/REC-xml-c14n-20010315');
         $this->addSignatureMethod()->setAlgorithm('http://www.w3.org/2000/09/xmldsig#rsa-sha1');
-        $this->addReference()->loadChildren();
+        $this->addReference();
     }
 
     /**

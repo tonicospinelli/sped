@@ -45,8 +45,8 @@ class KeyInfo extends \Sped\Components\Xml\Element {
         parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
-    public function loadChildren() {
-        $this->addX509Data()->loadChildren();
+    public function loadDefaults() {
+        $this->addX509Data();
     }
 
     /**

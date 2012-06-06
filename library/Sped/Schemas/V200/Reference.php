@@ -48,7 +48,7 @@ class Reference extends \Sped\Components\Xml\Element {
         parent::__construct(self::NAME, null, 'http://www.w3.org/2000/09/xmldsig#');
     }
 
-    public function loadChildren() {
+    public function loadDefaults() {
         $trans = $this->addTransforms();
         $trans->insertTransform()->setAlgorithm('http://www.w3.org/2000/09/xmldsig#enveloped-signature');
         $trans->insertTransform()->setAlgorithm('http://www.w3.org/TR/2001/REC-xml-c14n-20010315');
@@ -70,7 +70,7 @@ class Reference extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Reference\Transforms
      */
     public function addTransforms() {
-        return $this->appendChild(new Transforms());
+        return $this->appendChild(new Transforms(), true);
     }
 
     /**
@@ -79,11 +79,7 @@ class Reference extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Reference 
      */
     public function setTransforms($paramTransforms) {
-        $transforms = $this->getTransforms();
-        if ($transforms == null)
-            $this->appendChild($paramTransforms);
-        else
-            $this->replaceChild($paramTransforms, $transforms);
+        $this->appendChild($paramTransforms, true);
         return $this;
     }
 
@@ -101,7 +97,7 @@ class Reference extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Reference\DigestMethod
      */
     public function addDigestMethod() {
-        return $this->appendChild(new DigestMethod());
+        return $this->appendChild(new DigestMethod(), true);
     }
 
     /**
@@ -110,11 +106,7 @@ class Reference extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Reference 
      */
     public function setDigestMethod($paramDigestMethod) {
-        $digestMethod = $this->getDigestMethod();
-        if ($digestMethod == null)
-            $this->appendChild($paramDigestMethod);
-        else
-            $this->replaceChild($paramDigestMethod, $digestMethod);
+        $this->appendChild($paramDigestMethod, true);
         return $this;
     }
 
@@ -132,7 +124,7 @@ class Reference extends \Sped\Components\Xml\Element {
      * @return Sped\Schemas\V200\Reference\DigestValue
      */
     public function addDigestValue() {
-        return $this->appendChild(new DigestValue());
+        return $this->appendChild(new DigestValue(), true);
     }
 
     /**
@@ -141,11 +133,7 @@ class Reference extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Reference 
      */
     public function setDigestValue($paramDigestValue) {
-        $digestValue = $this->getDigestValue();
-        if ($digestValue == null)
-            $this->appendChild($paramDigestValue);
-        else
-            $this->replaceChild($paramDigestValue, $digestValue);
+        $this->appendChild($paramDigestValue, true);
         return $this;
     }
 

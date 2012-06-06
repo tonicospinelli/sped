@@ -26,51 +26,27 @@
  * @version    ##VERSION##, ##DATE##
  */
 
-namespace Sped\Schemas\V200;
+namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
 
 /**
+ * Série do Documento Fiscal.<br>
+ * Série do Documento Fiscal, preencher com zeros na hipótese de a NF-e não possuir série. (v2.0).<br>
+ * Série 890-899 de uso exclusivo para emissão de NF-e avulsa, 
+ * pelo contribuinte com seu certificado digital, através do site do Fisco (procEmi=2). (v2.0)<br>
+ * Serie 900-999 – uso exclusivo de NF-e emitidas no SCAN. (v2.0)
+ * 
  * @category   Sped
- * @package    Sped\Schemas\V200
+ * @package    Sped\Schemas\V200\TNFe\InfNFe\Ide
  * @copyright  Copyright (c) 2012
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class NFeDocument extends \Sped\Components\Xml\Document {
+class Serie extends \Sped\Components\Xml\Element {
 
-    /**
-     *
-     * @param string $versao
-     * @param string $encoding 
-     */
-    function __construct() {
-        parent::__construct('1.0', 'UTF-8');
-    }
+    const NAME = 'serie';
 
-    /**
-     * 
-     * @return \Sped\Schemas\V200\TNFe 
-     */
-    public function getNFe() {
-        $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
-        return $this->getElementsByTagName(TNFe::NAME)->item(0);
-    }
-
-    /**
-     *
-     * @return \Sped\Schemas\V200\TNFe
-     */
-    public function addNFe() {
-        return $this->appendChild(new TNFe(), true);
-    }
-
-    /**
-     *
-     * @param Sped\Schemas\V200\TNFe $paramTNFe
-     * @return \Sped\Schemas\V200\NFeDocument 
-     */
-    public function setNFe($paramTNFe) {
-        $this->appendChild($paramTNFe, true);
-        return $this;
+    public function __construct($value = null) {
+        parent::__construct(self::NAME, $value, 'http://www.portalfiscal.inf.br/nfe');
     }
 
 }
