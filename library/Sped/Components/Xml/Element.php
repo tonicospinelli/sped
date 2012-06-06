@@ -59,11 +59,12 @@ class Element extends \DOMElement {
 
         if ($node !== null)
             $newNode = parent::replaceChild($newNode, $node);
-        else
+        else {
             $newNode = parent::appendChild($newNode);
 
-        if (method_exists($newNode, 'loadDefaults'))
-            $newNode->loadDefaults();
+            if (method_exists($newNode, 'loadDefaults'))
+                $newNode->loadDefaults();
+        }
 
         return $newNode;
     }
@@ -82,6 +83,29 @@ class Element extends \DOMElement {
      */
     public function insertBefore(\DOMNode $newnode, \DOMNode $refnode = null) {
         $newNode = parent::insertBefore($newnode, $refnode);
+
+        if (method_exists($newNode, 'loadDefaults'))
+            $newNode->loadDefaults();
+
+        return $newNode;
+    }
+
+    /**
+     * (PHP 5)<br/>
+     * Replaces a child
+     * @link http://php.net/manual/en/domnode.replacechild.php
+     * @param DOMNode $newnode <p>
+     * The new node. It must be a member of the target document, i.e.
+     * created by one of the DOMDocument->createXXX() methods or imported in
+     * the document by .
+     * </p>
+     * @param DOMNode $oldnode <p>
+     * The old node.
+     * </p>
+     * @return DOMNode The old node or false if an error occur.
+     */
+    public function replaceChild(\DOMNode $newnode, \DOMNode $oldnode) {
+        $newNode = parent::replaceChild($newnode, $oldnode);
 
         if (method_exists($newNode, 'loadDefaults'))
             $newNode->loadDefaults();
