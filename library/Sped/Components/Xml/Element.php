@@ -47,8 +47,10 @@ class Element extends \DOMElement {
 
     /**
      * Adds new child at the end of the children.
-     * @param \DOMNode $newNode The appended child.
-     * @param boolean $unique If sets TRUE, search if exists the same node.
+     * @param \DOMNode $newNode <p>The appended child.</p>
+     * @param boolean $unique [optional]<p>
+     * If sets TRUE, search if exists the same node.
+     * </p>
      * @return DOMNode The node added or if is unique, returns the node found.
      */
     public function appendChild(\DOMNode $newNode, $unique = false) {
@@ -59,6 +61,27 @@ class Element extends \DOMElement {
             $newNode = parent::replaceChild($newNode, $node);
         else
             $newNode = parent::appendChild($newNode);
+
+        if (method_exists($newNode, 'loadDefaults'))
+            $newNode->loadDefaults();
+
+        return $newNode;
+    }
+
+    /**
+     * Adds a new child before a reference node
+     * @link http://php.net/manual/en/domnode.insertbefore.php
+     * @param DOMNode $newnode <p>
+     * The new node.
+     * </p>
+     * @param DOMNode $refnode [optional] <p>
+     * The reference node. If not supplied, <i>newnode</i> is
+     * appended to the children.
+     * </p>
+     * @return DOMNode The inserted node.
+     */
+    public function insertBefore(\DOMNode $newnode, \DOMNode $refnode = null) {
+        $newNode = parent::insertBefore($newnode, $refnode);
 
         if (method_exists($newNode, 'loadDefaults'))
             $newNode->loadDefaults();
