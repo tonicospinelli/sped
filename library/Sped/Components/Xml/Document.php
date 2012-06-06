@@ -58,13 +58,18 @@ class Document extends \DOMDocument {
      * @return DOMNode The node added or if is unique, returns the node found.
      */
     public function appendChild(\DOMNode $newNode, $unique = false) {
+        if ($unique)
+            $node = parent::getElementsByTagName($newNode->localName)->item(0);
 
-        if ($unique) {
-            $node = $this->getElementsByTagName($newNode->localName)->item(0);
-            if ($node !== null)
-                return $node;
-        }
-        return parent::appendChild($newNode);
+        if ($node !== null)
+            $newNode = parent::replaceChild($newNode, $node);
+        else
+            $newNode = parent::appendChild($newNode);
+
+        if (method_exists($newNode, 'loadDefaults'))
+            $newNode->loadDefaults();
+
+        return $newNode;
     }
 
     /**
