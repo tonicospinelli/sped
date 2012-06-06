@@ -35,10 +35,19 @@ namespace Sped\Schemas\V200\Signature;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class SignatureValue extends \DOMElement {
+class SignatureValue extends \Sped\Components\Xml\Element {
 
     public function __construct() {
         parent::__construct('SignatureValue', null, 'http://www.w3.org/2000/09/xmldsig#');
+    }
+
+    public function getValue() {
+        return $this->nodeValue;
+    }
+
+    public function setValue($paramSigantureValue) {
+        $this->nodeValue = $paramSigantureValue;
+        return $this;
     }
 
 }

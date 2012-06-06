@@ -39,7 +39,7 @@ use Sped\Schemas\V200\Signature\SignedInfo\CanonicalizationMethod,
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class SignedInfo extends \DOMElement {
+class SignedInfo extends \Sped\Components\Xml\Element {
 
     public function __construct() {
         parent::__construct('SignedInfo', null, 'http://www.w3.org/2000/09/xmldsig#');
@@ -54,6 +54,7 @@ class SignedInfo extends \DOMElement {
      * @return Sped\Schemas\V200\Signature\SignedInfo\CanonicalizationMethod
      */
     public function getCanonicalizationMethod() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', 'Sped\Schemas\V200\Signature\SignedInfo\CanonicalizationMethod');
         return $this->getElementsByTagName('CanonicalizationMethod')->item(0);
     }
 
@@ -84,6 +85,7 @@ class SignedInfo extends \DOMElement {
      * @return \Sped\Schemas\V200\Signature\SignedInfo\SignatureMethod
      */
     public function getSignatureMethod() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature\SignedInfo\SignatureMethod');
         return $this->getElementsByTagName('SignatureMethod')->item(0);
     }
 
@@ -114,6 +116,7 @@ class SignedInfo extends \DOMElement {
      * @return \Sped\Schemas\V200\Reference
      */
     public function getReference() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Reference');
         return $this->getElementsByTagName('Reference')->item(0);
     }
 
