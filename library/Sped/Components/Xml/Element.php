@@ -37,14 +37,33 @@ namespace Sped\Components\Xml;
  */
 class Element extends \DOMElement {
 
-    protected $defaultNamespace = '';
-
     /**
      *
      * @return \Sped\Components\Xml\NodeIterator 
      */
     public function getIterator() {
         return new NodeIterator($this);
+    }
+
+    /**
+     * Adds new child at the end of the children.
+     * @param \DOMNode $newNode The appended child.
+     * @param boolean $unique If sets TRUE, search if exists the same node.
+     * @return DOMNode The node added or if is unique, returns the node found.
+     */
+    public function appendChild(\DOMNode $newNode, $unique = false) {
+
+        if ($unique) {
+            $node = $this->getElementsByTagName($newNode->localName)->item(0);
+            if ($node !== null)
+                return $node;
+        }
+        return parent::appendChild($newNode);
+    }
+
+    public function __set($name, $value) {
+        var_dump($name);
+        $this->$name = $value;
     }
 
 }
