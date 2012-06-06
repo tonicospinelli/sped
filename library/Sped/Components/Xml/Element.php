@@ -58,12 +58,10 @@ class Element extends \DOMElement {
             if ($node !== null)
                 return $node;
         }
-        return parent::appendChild($newNode);
-    }
-
-    public function __set($name, $value) {
-        var_dump($name);
-        $this->$name = $value;
+        $node = parent::appendChild($newNode);
+        if (method_exists($node, 'loadDefaults'))
+            $node->loadDefaults();
+        return $node;
     }
 
 }
