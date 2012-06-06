@@ -38,7 +38,7 @@ use Sped\Schemas\V200\TNFe\InfNFe,
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class TNFe extends \DOMElement {
+class TNFe extends \Sped\Components\Xml\Element {
 
     public function __construct() {
         parent::__construct('NFe', null, 'http://www.portalfiscal.inf.br/nfe');
@@ -49,6 +49,7 @@ class TNFe extends \DOMElement {
      * @return \Sped\Schemas\V200\TNFe\InfNFe
      */
     public function getInfNFe() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe');
         return $this->getElementsByTagName('infNFe')->item(0);
     }
 
@@ -79,6 +80,7 @@ class TNFe extends \DOMElement {
      * @return \Sped\Schemas\V200\Signature
      */
     public function getSignature() {
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Signature');
         return $this->getElementsByTagName('Signature')->item(0);
     }
 
@@ -103,5 +105,4 @@ class TNFe extends \DOMElement {
     public function addSignature() {
         return $this->appendChild(new Signature());
     }
-
 }
