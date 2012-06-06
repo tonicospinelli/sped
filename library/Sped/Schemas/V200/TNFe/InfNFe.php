@@ -428,7 +428,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function setTotal($paramTotal) {
-        $this->appendChild($paramTotal);
+        $this->appendChild($paramTotal, true);
         return $this;
     }
 
@@ -473,7 +473,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      */
     public function addCobr() {
-        return $this->appendChild(new Cobr());
+        return $this->appendChild(new Cobr(), true);
     }
 
     public function setCobr($paramCobr) {
@@ -549,7 +549,7 @@ class InfNFe extends \Sped\Components\Xml\Element {
     }
 
     public function setCompra($paramCompra) {
-        $this->appendChild($paramCompra);
+        $this->appendChild($paramCompra, true);
         return $this;
     }
 

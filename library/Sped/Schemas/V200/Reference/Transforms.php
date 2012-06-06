@@ -67,7 +67,7 @@ class Transforms extends \Sped\Components\Xml\Element {
      * @return \Sped\Schemas\V200\Reference\Transform
      */
     public function insertTransform() {
-        return $this->appendChild(new Transform());
+        return $this->appendChild(new Transform(), true);
     }
 
     public function removeTransform($index) {
