@@ -67,7 +67,7 @@ class Schema extends Document {
      * @param bool $loadExternals 
      * @return boolean true on success or false on failure. If called statically, returns a DOMDocument or false on failure.
      */
-    public function loadXML($source, $options = 0, $loadExternals = false) {
+    public function loadXML($source, $options = null, $loadExternals = false) {
         $options = (($options !== null) ? LIBXML_DTDLOAD | LIBXML_DTDATTR | LIBXML_NOENT | LIBXML_XINCLUDE : $options);
         if (!parent::loadXML($source, $options))
             return false;
@@ -112,18 +112,18 @@ class Schema extends Document {
                 $namespace = $entry->getAttribute('namespace');
                 $parent = $entry->parentNode;
 
-                $xsd = new Schema($dom->version, $dom->encondig);
+                $xsd = new Schema();
 
                 $xsd->loadedImportFiles[] = $xsdFileName;
-                if ($xsd->load($xsdFileName, 0, true)) {
+                if ($xsd->load($xsdFileName, null, true)) {
                     $this->loadedImportFiles = array_merge($this->loadedImportFiles, $xsd->loadedImportFiles);
                 }
 
                 foreach ($xsd->documentElement->childNodes as $node) {
                     if (in_array($node->localname, $readTags)) {
                         $loc = realpath(dirname($xsdFileName) . DIRECTORY_SEPARATOR . $node->getAttribute('schemaLocation'));
-
-                        $docNode = new Schema($this->version, $this->enconding);
+                        
+                        $docNode = new Schema();
                         $docNode->load($loc, null, true);
 
                         $newNode = $dom->importNode($docNode->documentElement, true);
