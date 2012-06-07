@@ -13,10 +13,8 @@
 <!--  versao com alteracoes do tipo token, valida a partir de 03/11/08- PL_005b-->
 <!--  versao com atualizacao na UFCons e cPais emi - 21/12/2008-->
 <xs:schema xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.portalfiscal.inf.br/nfe" targetNamespace="http://www.portalfiscal.inf.br/nfe" elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <!--
     <xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema_v1.01.xsd"/>
     <xs:include schemaLocation="tiposBasico_v1.03.xsd"/>
-    -->
     <xs:complexType name="TNFe">
         <xs:annotation>
             <xs:documentation>Tipo Nota Fiscal Eletrônica // v2.0</xs:documentation>
