@@ -41,6 +41,7 @@ class Schema extends Document {
 
     public $loadedImportFiles = array();
     public $fileName = null;
+    protected $parseTree = null;
 
     /**
      * Load XML from a file.
@@ -122,7 +123,7 @@ class Schema extends Document {
                 foreach ($xsd->documentElement->childNodes as $node) {
                     if (in_array($node->localname, $readTags)) {
                         $loc = realpath(dirname($xsdFileName) . DIRECTORY_SEPARATOR . $node->getAttribute('schemaLocation'));
-                        
+
                         $docNode = new Schema();
                         $docNode->load($loc, null, true);
 
@@ -143,6 +144,59 @@ class Schema extends Document {
                 $parent->removeChild($entry);
             }
         }
+    }
+
+    /**
+     *
+     * @return Sped\Components\Xml\Document
+     */
+    public function parseXml() {
+        $this->parseTree = new Document();
+        $node = $this->parseTree->createElement($this->documentElement->localName);
+        $this->parseTree->appendChild($node);
+        $this->parseSchemaToXml($this->documentElement, $this->parseTree->documentElement);
+        return $this->parseTree;
+    }
+
+    protected function parseSchemaToXml(\DOMElement $xml, \DOMElement $parent) {
+        foreach ($xml->childNodes as $child) {
+//            $child = new \DOMElement($name, $value, $uri);
+            if (!$child instanceof \DOMElement)
+                continue;
+
+            if ($child->localName == 'complexType' AND $child->hasAttribute('name')) {
+                $newChild = $this->parseTree->createElement($child->getAttribute('name'));
+                if ($child->hasChildNodes())
+                    $parent->appendChild($this->parseSchemaToXml($child, $newChild));
+            }
+            elseif ($child->localName == 'complexType' AND $child->hasChildNodes()) {
+                $newParent = $this->parseSchemaToXml($child, $parent);
+                $this->parseTree->appendChild($newParent);
+            } elseif ($child->localName == 'choice' AND $child->hasChildNodes()) {
+                $newParent = $this->parseSchemaToXml($child, $parent);
+                $this->parseTree->appendChild($newParent);
+            } elseif ($child->localName == 'element' AND $child->hasAttribute('name')) {
+                $newChild = $this->parseTree->createElement($child->getAttribute('name'));
+                if ($child->getAttribute('type'))
+                    $newChild->setAttribute('type', preg_replace("/^.*\:/", '', $child->getAttribute('type')));
+                if ($child->hasChildNodes())
+                    $parent->appendChild($this->parseSchemaToXml($child, $newChild));
+            }
+            elseif ($child->localName == 'attribute' AND $child->hasChildNodes()) {
+                $parent->setAttribute($child->getAttribute('name'), $child->getAttribute('type'));
+            } elseif ($child->localName == 'sequence' AND $child->hasChildNodes()) {
+                $newParent = $this->parseSchemaToXml($child, $parent);
+                $this->parseTree->appendChild($newParent);
+            } elseif ($child->localName == 'annotation') {
+                $newParent = $this->parseSchemaToXml($child, $parent);
+                $this->parseTree->appendChild($newParent);
+            } elseif ($child->localName == 'documentation') {
+                $newChild = $this->parseTree->createElement('documentation', $child->nodeValue);
+                if ($child->hasChildNodes())
+                    $parent->appendChild($this->parseSchemaToXml($child, $newChild));
+            }
+        }
+        return $parent;
     }
 
 }
