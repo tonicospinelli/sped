@@ -42,7 +42,7 @@ class SchemaTest extends \PHPUnit_Framework_TestCase {
      */
     public function testLoad() {
         $this->object->load($this->fileName, null, true);
-        echo $this->object->saveXML();
+//        echo $this->object->saveXML();
         $this->assertTrue(true);
     }
 
@@ -64,6 +64,13 @@ class SchemaTest extends \PHPUnit_Framework_TestCase {
         $this->markTestIncomplete(
                 'This test has not been implemented yet.'
         );
+    }
+    
+    public function testParseXml() {
+        $this->object->load($this->fileName, null, true);
+        $xml = $this->object->parseXml();
+        $xml->formatOutput = true;
+        echo $xml->saveXML();
     }
 
 }

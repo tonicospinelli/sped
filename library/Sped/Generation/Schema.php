@@ -33,6 +33,38 @@ namespace Sped\Generation;
  */
 class Schema {
 
+    protected $loadedSchema = null;
+
+    /**
+     * 
+     * @return \Sped\Components\Xml\Schema
+     */
+    public function getLoadedSchema() {
+        return $this->loadedSchema;
+    }
+
+    public function loadXmlSchema($fileName) {
+        $fileName = realpath($fileName);
+
+        if (!is_file($fileName))
+            throw new \RuntimeException('This file ' . $fileName . ' not found');
+
+        $this->loadedSchema = new \Sped\Components\Xml\Schema();
+        $this->loadedSchema->load($fileName, null, true);
+    }
+
+    public function readChildren(\DOMNode $node) {
+        $nodes = array();
+        if (!$node->hasChildNodes())
+            return $nodes;
+
+        foreach ($node->childNodes as $child) {
+            if ($child instanceof \DOMText)
+                continue;
+            var_dump($child->getAttribute('name') . ') ' . $child->getNodePath());
+        }
+    }
+
     public function generate($filePath, array $param) {
         $class = new \PhpClass();
         $class->setName($param['name']);
