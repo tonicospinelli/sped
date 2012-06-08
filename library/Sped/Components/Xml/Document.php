@@ -141,6 +141,7 @@ class Document extends \DOMDocument {
         var_dump($this->namespaces);
         return $this->namespaces;
     }
+
     /**
      * Return the target namespace this document
      * @return string
