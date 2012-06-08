@@ -42,7 +42,7 @@ class SchemaTest extends \PHPUnit_Framework_TestCase {
      */
     public function testLoad() {
         $this->object->load($this->fileName, null, true);
-//        echo $this->object->saveXML();
+        echo $this->object->saveXML();
         $this->assertTrue(true);
     }
 
