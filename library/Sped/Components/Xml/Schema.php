@@ -160,7 +160,7 @@ class Schema extends Document {
 
     protected function parseSchemaToXml(\DOMElement $xml, \DOMElement $parent) {
         foreach ($xml->childNodes as $child) {
-//            $child = new \DOMElement($name, $value, $uri);
+
             if (!$child instanceof \DOMElement)
                 continue;
 
