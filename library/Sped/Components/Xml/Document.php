@@ -130,17 +130,33 @@ class Document extends \DOMDocument {
         $this->namespaces = array();
         $namespaces = $xpath->query($query);
         foreach ($namespaces as $node) {
-            $key = "";
-            if (preg_match("/:/", $node->localName)) {
-                list ($pref, $key) = explode(":", $node->localName);
+            if (preg_match("/:/", $node->nodeName)) {
+                list ($pref, $key) = explode(":", $node->nodeName);
                 if ($key === "xml") {
                     continue;
                 }
                 $this->namespaces[$key] = $node->nodeValue;
             }
         }
-
+        var_dump($this->namespaces);
         return $this->namespaces;
+    }
+    /**
+     * Return the target namespace this document
+     * @return string
+     */
+    public function getTargetNamespaces() {
+        if (is_array($this->namespaces))
+            return $this->namespaces;
+
+        $xpath = new \DOMXPath($this);
+        $query = "/*/@targetNamespace";
+        $this->namespaces = array();
+        $targetNS = $xpath->query($query);
+        foreach ($targetNS as $node) {
+            return $node->nodeValue;
+        }
+        return NULL;
     }
 
     /**
