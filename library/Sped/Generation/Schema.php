@@ -50,6 +50,7 @@ class Schema {
             throw new \RuntimeException('This file ' . $fileName . ' not found');
 
         $this->loadedSchema = new \Sped\Components\Xml\Schema();
+        
         $this->loadedSchema->load($fileName, null, true);
     }
 
