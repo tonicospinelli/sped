@@ -31,6 +31,15 @@ class SchemaTest extends \PHPUnit_Framework_TestCase {
         
     }
 
+    public function testLoadXmlSchema() {
+        $this->object->loadXmlSchema('../xmlschemas/nfe_v2.00.xsd');
+    }
+
+    public function testReadChildren() {
+        $this->object->loadXmlSchema('../xmlschemas/nfe_v2.00.xsd');
+        $this->object->readChildren($this->object->getLoadedSchema()->firstChild);
+    }
+
     /**
      * @todo Implement testGenerate().
      */
