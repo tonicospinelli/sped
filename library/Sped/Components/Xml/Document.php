@@ -146,10 +146,7 @@ class Document extends \DOMDocument {
      * Return the target namespace this document
      * @return string
      */
-    public function getTargetNamespaces() {
-        if (is_array($this->namespaces))
-            return $this->namespaces;
-
+    public function getTargetNamespace() {
         $xpath = new \DOMXPath($this);
         $query = "/*/@targetNamespace";
         $this->namespaces = array();
