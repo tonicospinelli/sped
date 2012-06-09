@@ -37,46 +37,50 @@ class SchemaTest extends \PHPUnit_Framework_TestCase {
 
     public function testReadChildren() {
         $this->object->loadXmlSchema('../xmlschemas/nfe_v2.00.xsd');
-        $this->object->readChildren($this->object->getLoadedSchema()->firstChild);
+        $this->object->createClassFromNode(null, '\Sped\Schemas\V200');
     }
 
     /**
      * @todo Implement testGenerate().
      */
     public function testGenerate() {
-        $param = array(
-            'name' => 'Ide',
-            'tagName' => 'ide',
-            'namespace' => '\Sped\Schemas\V200\TNFe\InfNFe',
-            'description' => 'TEste',
-            'value' => null,
-            'children' => array(
-                'CodigoUF',
-                'CodigoNF',
-                'natOp',
-                'indPag',
-                'mod',
-                'serie',
-                'NumeroNF',
-                'DataEmi',
-                'DataSaiEnt',
-                'HoraSaiEnt',
-                'tpNF',
-                'CodigoMunFG',
-                'NFref',
-                'tpImp',
-                'tpEmis',
-                'CodigoDV',
-                'tpAmb',
-                'finNFe',
-                'procEmi',
-                'verProc',
-                'DataHoraCont',
-                'Justificativa'
-            )
-        );
+//        $param = array(
+//            'name' => 'Ide',
+//            'tagName' => 'ide',
+//            'namespace' => '\Sped\Schemas\V200\TNFe\InfNFe',
+//            'description' => 'TEste',
+//            'value' => null,
+//            'children' => array(
+//                'CodigoUF',
+//                'CodigoNF',
+//                'natOp',
+//                'indPag',
+//                'mod',
+//                'serie',
+//                'NumeroNF',
+//                'DataEmi',
+//                'DataSaiEnt',
+//                'HoraSaiEnt',
+//                'tpNF',
+//                'CodigoMunFG',
+//                'NFref',
+//                'tpImp',
+//                'tpEmis',
+//                'CodigoDV',
+//                'tpAmb',
+//                'finNFe',
+//                'procEmi',
+//                'verProc',
+//                'DataHoraCont',
+//                'Justificativa'
+//            )
+//        );
+//
+//        $this->object->generate('../generetad', $param);
+    }
 
-        $this->object->generate('../generetad', $param);
+    public function testRead() {
+        
     }
 
 }

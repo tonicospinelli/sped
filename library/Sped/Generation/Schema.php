@@ -50,20 +50,57 @@ class Schema {
             throw new \RuntimeException('This file ' . $fileName . ' not found');
 
         $this->loadedSchema = new \Sped\Components\Xml\Schema();
-        
+
         $this->loadedSchema->load($fileName, null, true);
     }
 
-    public function readChildren(\DOMNode $node) {
-        $nodes = array();
+    public function createClassFromNode(\DOMElement $node = null, $namespace = null) {
+        if ($node === null)
+            $node = $this->getLoadedSchema()->firstChild;
+
         if (!$node->hasChildNodes())
-            return $nodes;
+            return false;
 
         foreach ($node->childNodes as $child) {
             if ($child instanceof \DOMText)
                 continue;
-            var_dump($child->getAttribute('name') . ') ' . $child->getNodePath());
+
+            $class = new \PhpClass();
+
+            if (!is_null($namespace))
+                $class->setNamespace(new \PhpClass_Namespace(array('path' => $namespace)));
+
+            if ($child->localName == 'element' AND $node->getLineNo() === 2) {
+                $class->setExtends('\Sped\Components\Xml\Document');
+                $class->setName($child->getAttribute('name') . 'Document');
+            } elseif ($child->localName == 'simpleType') {
+                $class->setName($child->getAttribute('name'));
+            } else {
+                $class->setExtends('\Sped\Components\Xml\Element');
+                $class->setName($child->getAttribute('name'));
+            }
+
+            $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'category', 'description' => 'Sped')));
+            $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'package', 'description' => 'Sped')));
+            $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'copyright', 'description' => 'Copyright (c) 2012 Antonio Spinelli')));
+            $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'license', 'description' => 'http://www.gnu.org/licenses/gpl.html GNU/GPL v.3')));
+
+            $this->createMethodsFromNode($class, $child);
+            var_dump($class->toString());
+//            var_dump($child->getAttribute('name') . ') ' . $child->getNodePath());
         }
+    }
+
+    public function createMethodsFromNode(\PhpClass &$class, \DOMElement $node) {
+        if ($node->hasAttribute('type')) {
+            $dom = new \DOMXPath($this->loadedSchema);
+            $nodes = $dom->query("//*[@name='{$node->getAttribute('type')}']");
+        }
+        else
+            $nodes = $node->childNodes;
+        var_dump($nodes->length, $node->getAttribute('type'));
+//        var_dump($node->getLineNo());
+//        var_dump($node->getNodePath());
     }
 
     public function generate($filePath, array $param) {
