@@ -38,15 +38,6 @@ namespace Sped\Schemas\V200;
 class NFeDocument extends \Sped\Components\Xml\Document {
 
     /**
-     *
-     * @param string $versao
-     * @param string $encoding 
-     */
-    function __construct() {
-        parent::__construct('1.0', 'UTF-8');
-    }
-
-    /**
      * 
      * @return \Sped\Schemas\V200\TNFe 
      */
