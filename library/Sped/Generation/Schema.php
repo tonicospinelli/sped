@@ -263,7 +263,7 @@ BODY;
         
         $body = <<<BODY
 \$this->ownerDocument->registerNodeClass('\DOMElement', '{$type}');
-return \$this->getElementsByTagName({$name}::NAME)->item({$param});
+return \$this->getElementsByTagName({$type}::NAME)->item({$param});
 BODY;
         $met->setBody($body);
         return $met;
@@ -287,7 +287,7 @@ BODY;
             $param = '$value';
         }
         $body = <<<BODY
-return \$this->appendChild(new {$name}({$param}), true);
+return \$this->appendChild(new {$type}({$param}), true);
 BODY;
         $met->setBody($body);
         return $met;
