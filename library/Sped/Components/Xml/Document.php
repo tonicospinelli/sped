@@ -126,7 +126,7 @@ class Document extends \DOMDocument {
      * </p>
      * @return boolean If the child could be removed the function returns true.
      */
-    public function removeChildrenByTagName($name) {
+    public function removeElementsByTagName($name) {
         $nodes = $this->getElementsByTagName($name);
         foreach ($nodes as $node)
             $this->removeChild($node);

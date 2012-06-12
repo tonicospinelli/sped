@@ -113,4 +113,19 @@ class Element extends \DOMElement {
         return $newNode;
     }
 
+    /**
+     * (PHP 5)<br/>
+     * Removes children by tag name from list of children
+     * @link http://php.net/manual/en/domnode.removechild.php
+     * @param string $tagName <p>
+     * The tagName to remove children.
+     * </p>
+     * @return boolean If the child could be removed the function returns true.
+     */
+    public function removeElementsByTagName($name) {
+        $nodes = $this->getElementsByTagName($name);
+        foreach ($nodes as $node)
+            $this->removeChild($node);
+        return true;
+    }
 }
