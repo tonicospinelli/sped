@@ -1,25 +1,29 @@
 <?php
 
 /**
- * Este arquivo Ã© parte do projeto SpedPHP - Nota Fiscal eletrÃ´nica em PHP.
+ * Sped
  *
- * Este programa Ã© um software livre: vocÃª pode redistribuir e/ou modificÃ¡-lo
- * sob os termos da LicenÃ§a PÃºblica Geral GNU como Ã© publicada pela FundaÃ§Ã£o 
- * para o Software Livre, na versÃ£o 3 da licenÃ§a, ou qualquer versÃ£o posterior.
+ * Copyright (c) 2012 Sped
  *
- * Este programa Ã© distribuÃ­do na esperanÃ§a que serÃ¡ Ãºtil, mas SEM NENHUMA
- * GARANTIA; sem mesmo a garantia explÃ­cita do VALOR COMERCIAL ou ADEQUAÃ‡ÃƒO PARA
- * UM PROPÃ“SITO EM PARTICULAR, veja a LicenÃ§a PÃºblica Geral GNU para mais
- * detalhes.
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
  *
- * VocÃª deve ter recebido uma cÃ³pia da LicenÃ§a Publica GNU junto com este
- * programa. Caso contrÃ¡rio consulte <http://www.fsfla.org/svnwiki/trad/GPLv3>.
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  *
  * @category   Sped
  * @package    Sped
- * @copyright  Copyright (c) 2012 Antonio Spinelli
- * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
- * @link       https://bitbucket.org.com/tonicospinelli/Sped.git
+ * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
+ * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
+ * @version    ##VERSION##, ##DATE##
  */
 
 namespace Sped\Generation;
