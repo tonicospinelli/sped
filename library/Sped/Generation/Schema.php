@@ -31,26 +31,54 @@ namespace Sped\Generation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Schema
-{
+class Schema {
 
     /**
      *
      * @var \Sped\Components\Xml\Schema
      */
     protected $loadedSchema = null;
+    protected $dirTarget = null;
+    protected $defaultNamespace = null;
+
+    public function getDefaultNamespace() {
+        return $this->defaultNamespace;
+    }
+
+    public function setDefaultNamespace($defaultNamespace) {
+        $this->defaultNamespace = $defaultNamespace;
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getDirTarget() {
+        return $this->dirTarget;
+    }
+
+    /**
+     *
+     * @param string $dirTarget
+     * @return \Sped\Generation\Schema
+     * @throws \Exception 
+     */
+    public function setDirTarget($dirTarget) {
+        if (!is_dir($dirTarget))
+            throw new \Exception('This directory ' . $dirTarget . 'is not found');
+        $this->dirTarget = realpath($dirTarget);
+        return $this;
+    }
 
     /**
      * 
      * @return \Sped\Components\Xml\Schema
      */
-    public function getLoadedSchema()
-    {
+    public function getLoadedSchema() {
         return $this->loadedSchema;
     }
 
-    public function loadXmlSchema($fileName)
-    {
+    public function loadXmlSchema($fileName) {
         $fileName = realpath($fileName);
 
         if (!is_file($fileName))
@@ -61,10 +89,12 @@ class Schema
         $this->loadedSchema->load($fileName, null, true);
     }
 
-    public function createClassFromNode(\DOMElement $node = null, $namespace = null)
-    {
+    public function createClassFromNode(\DOMElement $node = null, $namespace = null) {
         if ($node === null)
             $node = $this->getLoadedSchema()->firstChild;
+
+        if ($namespace === NULL)
+            $namespace = $this->getDefaultNamespace();
 
         if (!$node->hasChildNodes())
             return false;
@@ -80,19 +110,23 @@ class Schema
 
             if ($child->localName == 'element' AND $node->getLineNo() === 2) {
                 $class->setExtends('\Sped\Components\Xml\Document');
-                $class->setName($child->getAttribute('name') . 'Document');
-                if ($child->hasAttribute('type'))
+                $class->setName('Document' . ucfirst($child->getAttribute('name')));
+                if ($child->hasAttribute('type')) {
                     $methodName = preg_replace('/(^.*:|^T|Type$)/', '', $child->getAttribute('type'));
+                    $methodNamespace = $class->getNamespace()->getPath() . '\\' . preg_replace('/^.*:/', '', $child->getAttribute('type'));
+                } elseif ($child->hasAttribute('ref')) {
+                    $methodName = preg_replace('/(^.*:|^T|Type$)/', '', $child->getAttribute('ref'));
+                    $methodNamespace = $class->getNamespace()->getPath() . '\\' . preg_replace('/^.*:/', '', $child->getAttribute('ref'));
+                }
 
-                $methodNamespace = $class->getNamespace()->getPath() . '\\' . preg_replace('/^.*:/', '', $child->getAttribute('type'));
+
                 $class->addMethod($this->createElementGetMethod($methodName, $methodNamespace));
                 $class->addMethod($this->createElementAddMethod($methodName, $methodNamespace));
-            }
-            elseif ($child->localName == 'element') {
+                $class->addMethod($this->createElementSetMethod($methodName, $methodNamespace));
+            } elseif ($child->localName == 'element') {
                 $class->setExtends('\Sped\Components\Xml\Element');
                 $class->setName($child->getAttribute('name'));
-            }
-            elseif ($child->localName == 'simpleType') {
+            } elseif ($child->localName == 'simpleType') {
                 $class->setName($child->getAttribute('name'));
 //                $class->addConstant(new \PhpClass_Constant(array(
 //                            'name' => 'name',
@@ -100,8 +134,7 @@ class Schema
 //                $class->addMethod(
 //                        $this->createClassConstructMethod(
 //                                $this->getLoadedSchema()->lookupNamespaceUri($child->prefix), true));
-            }
-            else {
+            } else {
                 $class->addConstant(new \PhpClass_Constant(array(
                             'name' => 'name',
                             'value' => preg_replace('/Type$/', '', $child->getAttribute('name')))));
@@ -120,12 +153,11 @@ class Schema
             $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'license', 'description' => 'http://www.gnu.org/licenses/gpl.html GNU/GPL v.3')));
 
             $this->createClassMethodsFromNode($class, $child);
-            var_dump($class->toString());
+            $class->save($this->getDirTarget());
         }
     }
 
-    public function createClassConstructMethod($namespace, $isSetValue = false)
-    {
+    public function createClassConstructMethod($namespace, $isSetValue = false) {
         $met = new \PhpClass_Method(array(
                     'name' => '__construct',
                     'body' => "parent::__construct(self::NAME, null, '$namespace');",
@@ -142,10 +174,9 @@ class Schema
         return $met;
     }
 
-    public function createClassMethodsFromNode(\PhpClass &$class, \DOMElement $node)
-    {
+    public function createClassMethodsFromNode(\PhpClass &$class, \DOMElement $node) {
+        $dom = new \DOMXPath($this->loadedSchema);
         if ($node->hasAttribute('type')) {
-            $dom = new \DOMXPath($this->loadedSchema);
             $nodes = $dom->query("//*[@name='{$node->getAttribute('type')}']");
         }
         else
@@ -161,22 +192,26 @@ class Schema
                     break;
                 case 'element':
                     $type = $node->hasAttribute('type') ? $node->getAttribute('type') : $node->getAttribute('name');
+                    $type = $node->hasAttribute('ref') ? $node->getAttribute('ref') : $type;
                     $type = preg_replace('/^.*:/', '', $type);
-                    $childNamespace = $class->getNamespace()->getPath() . '\\' . $type;
                     $hasIndex = $node->hasAttribute('minOccurs');
-                    $class->addMethod(
-                            $this->createElementGetMethod(
-                                    $node->getAttribute('name'), $childNamespace, $hasIndex
-                            ));
-                    $class->addMethod(
-                            $this->createElementAddMethod(
-                                    $node->getAttribute('name'), $childNamespace));
+                    if ($node->hasAttribute('name')) {
+                        $name = $node->getAttribute('name');
+                        $childNamespace = $class->getNamespace()->getPath() . '\\' . ucfirst($type);
+                    } elseif ($node->hasAttribute('ref')) {
+                        $node = $dom->query("//*[@name='{$type}']")->item(0);
+                        $name = $node->hasAttribute('type') ? preg_replace('/^.*:/', '', $node->getAttribute('type')) : '';
+                        $childNamespace = $class->getNamespace()->getPath() . '\\' . ucfirst($name);
+                    }
+
+                    $class->addMethod($this->createElementGetMethod($name, $childNamespace, $hasIndex));
+                    $class->addMethod($this->createElementAddMethod($name, $childNamespace));
+                    $class->addMethod($this->createElementSetMethod($name, $childNamespace));
             }
         }
     }
 
-    public function createAttributeMethods(\PhpClass &$class, \DOMElement $node)
-    {
+    public function createAttributeMethods(\PhpClass &$class, \DOMElement $node) {
         $name = $node->getAttribute('name');
 
         $class->addMethod($this->createAttributeGetMethod($name));
@@ -187,8 +222,7 @@ class Schema
         }
     }
 
-    public function createAttributeGetMethod($name)
-    {
+    public function createAttributeGetMethod($name) {
         $met = new \PhpClass_Method(array(
                     'name' => 'get' . ucfirst($name),
                     'returns' => 'string'
@@ -200,8 +234,7 @@ BODY;
         return $met;
     }
 
-    public function createAttributeSetMethod($name, $type = null)
-    {
+    public function createAttributeSetMethod($name, $type = null) {
         $met = new \PhpClass_Method(array(
                     'name' => 'set' . ucfirst($name),
                     'params' => array(new \PhpClass_Parameter(array(
@@ -217,8 +250,7 @@ BODY;
         return $met;
     }
 
-    public function createAttributeIsSetMethod($name)
-    {
+    public function createAttributeIsSetMethod($name) {
         $met = new \PhpClass_Method(array(
                     'name' => 'isSet' . ucfirst($name),
                     'returns' => 'boolean'
@@ -230,8 +262,7 @@ BODY;
         return $met;
     }
 
-    public function createAttributeUnsetMethod($name)
-    {
+    public function createAttributeUnsetMethod($name) {
         $met = new \PhpClass_Method(array(
                     'name' => 'unset' . ucfirst($name),
                     'returns' => 'boolean'
@@ -244,8 +275,7 @@ BODY;
         return $met;
     }
 
-    public function createElementGetMethod($name, $type, $hasIndex = false)
-    {
+    public function createElementGetMethod($name, $type, $hasIndex = false) {
         $name = ucfirst($name);
         $param = '0';
         $met = new \PhpClass_Method(array(
@@ -260,7 +290,7 @@ BODY;
                     )));
             $param = '$index';
         }
-        
+
         $body = <<<BODY
 \$this->ownerDocument->registerNodeClass('\DOMElement', '{$type}');
 return \$this->getElementsByTagName({$type}::NAME)->item({$param});
@@ -269,8 +299,7 @@ BODY;
         return $met;
     }
 
-    public function createElementAddMethod($name, $type, $hasValue = false)
-    {
+    public function createElementAddMethod($name, $type, $hasValue = false, $isUnique = true) {
         $name = ucfirst($name);
         $param = '';
         $met = new \PhpClass_Method(array(
@@ -286,15 +315,36 @@ BODY;
             );
             $param = '$value';
         }
+        $isUnique = $isUnique ? 'true' : 'false';
         $body = <<<BODY
-return \$this->appendChild(new {$type}({$param}), true);
+return \$this->appendChild(new {$type}({$param}), {$isUnique});
 BODY;
         $met->setBody($body);
         return $met;
     }
 
-    public function generate($filePath, array $param)
-    {
+    public function createElementSetMethod($name, $type) {
+        $name = ucfirst($name);
+        $met = new \PhpClass_Method(array(
+                    'name' => 'set' . $name
+                ));
+        $param = new \PhpClass_Parameter(array(
+                    'name' => 'param' . $name,
+                    'value' => NULL,
+                    'type' => $type));
+        $met->addParam($param);
+
+        $isUnique = $isUnique ? 'true' : 'false';
+        $body = <<<BODY
+\$this->removeElementsByTagName({$type}::NAME);
+\$this->appendChild(\${$param->getName()}, {$isUnique});
+return \$this;
+BODY;
+        $met->setBody($body);
+        return $met;
+    }
+
+    public function generate($filePath, array $param) {
         $class = new \PhpClass();
         $class->setName($param['name']);
         $class->setNamespace(new \PhpClass_Namespace(array('path' => $param['namespace'])));
