@@ -93,6 +93,21 @@ class Schema {
         $this->loadedSchema->load($fileName, null, true);
     }
 
+    public function exportClasses() {
+        $xsd = $this->getLoadedSchema();
+        if (!$xsd instanceof \Sped\Components\Xml\Schema)
+            throw new \RuntimeException('Can\'t read a xsd file to export');
+
+        $schema = $this->getLoadedSchema()->firstChild;
+
+        foreach ($schema->childNodes as $node) {
+            if (!$node instanceof \DOMElement)
+                continue;
+            $this->createClassFromNode($node);
+        }
+        return true;
+    }
+
     public function createClassFromNode(\DOMElement $node = null, $namespace = null, $dirTarget = null) {
         if ($node === null)
             $node = $this->getLoadedSchema()->firstChild;
@@ -112,7 +127,7 @@ class Schema {
         $class->setExtends('\Sped\Components\Xml\Element');
         $class->setName($node->getAttribute('name'));
 
-        //verifica se o nó está apenas no segundo nível do documento
+        //verifica se o nÃ³ estÃ¡ apenas no segundo nÃ­vel do documento
         if ($node->localName == 'element' AND $node->getLineNo() === 2) {
             $class->getConstants()->clear();
             $class->getMethods()->clear();
@@ -190,6 +205,8 @@ class Schema {
                     $this->createClassMethodsFromNode($class, $node);
                     break;
                 case 'simpleType':
+                    if($node->parentNode->localName == 'element')
+                        return;
                 case 'element':
                     $type = $node->hasAttribute('type') ? $node->getAttribute('type') : $node->getAttribute('name');
                     $type = $node->hasAttribute('ref') ? $node->getAttribute('ref') : $type;
@@ -201,7 +218,6 @@ class Schema {
                         $node = $dom->query("//*[@name='{$type}']")->item(0);
                         $name = $node->hasAttribute('type') ? preg_replace('/^.*:/', '', $node->getAttribute('type')) : '';
                     }
-                    var_dump($class->getFullName() . '\\' . $name);
 
                     $class->addMethod($this->createElementGetMethod($name, $class->getFullName(), $hasIndex));
                     $class->addMethod($this->createElementAddMethod($name, $class->getFullName()));
@@ -220,23 +236,25 @@ class Schema {
     }
 
     /**
-     * Recupera a descrição adicionada para o elemento.
+     * Recupera a descriÃ§Ã£o adicionada para o elemento.
      * @param \DOMElement $node
      * @return string 
      */
     public function getDocumentation(\DOMElement $node) {
-        $description = '';
+        $description = null;
 
         if (!$node->hasChildNodes())
             return $description;
 
         foreach ($node->childNodes as $child) {
+            if ($node->localName == 'documentation')
+                $description = $node->nodeValue;
+
             if ($child->hasChildNodes())
                 $description = $this->getDocumentation($child);
-
-            if ($node->localName == 'documentation') {
-                $description = $node->nodeValue;
-            }
+            
+            if (!is_null($description))
+                break;
         }
         return $description;
     }
@@ -307,10 +325,11 @@ BODY;
 
     public function createElementGetMethod($name, $type, $hasIndex = false) {
         $name = ucfirst($name);
+        $type.= '\\' . $name;
         $param = '0';
         $met = new \PhpClass_Method(array(
                     'name' => 'get' . $name,
-                    'returns' => $type . '\\' . $name
+                    'returns' => $type
                 ));
 
         if ($hasIndex) {
@@ -331,10 +350,11 @@ BODY;
 
     public function createElementAddMethod($name, $type, $hasValue = false, $isUnique = true) {
         $name = ucfirst($name);
+        $type.= '\\' . $name;
         $param = '';
         $met = new \PhpClass_Method(array(
                     'name' => 'add' . $name,
-                    'returns' => $type . '\\' . $name
+                    'returns' => $type
                 ));
         if ($hasValue) {
             $met->addParam(new \PhpClass_Parameter(array(
@@ -355,13 +375,14 @@ BODY;
 
     public function createElementSetMethod($name, $type) {
         $name = ucfirst($name);
+        $type.= '\\' . $name;
         $met = new \PhpClass_Method(array(
                     'name' => 'set' . $name
                 ));
         $param = new \PhpClass_Parameter(array(
                     'name' => 'param' . $name,
                     'value' => NULL,
-                    'type' => $type . '\\' . $name));
+                    'type' => $type));
         $met->addParam($param);
 
         $isUnique = $isUnique ? 'true' : 'false';
