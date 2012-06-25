@@ -35,11 +35,11 @@ class SchemaTest extends \PHPUnit_Framework_TestCase {
         $this->object->loadXmlSchema('../xmlschemas/nfe_v2.00.xsd');
     }
 
-    public function testReadChildren() {
+    public function testExportClasses() {
         $this->object->loadXmlSchema('../xmlschemas/nfe_v2.00.xsd');
         $this->object->setDirTarget('generated/');
         $this->object->setDefaultNamespace('\Sped\Schemas\V200');
-        $this->object->createClassFromNode();
+        $this->object->exportClasses();
     }
 
 }
