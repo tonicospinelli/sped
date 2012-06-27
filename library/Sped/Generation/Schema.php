@@ -127,7 +127,7 @@ class Schema {
         $class->setExtends('\Sped\Components\Xml\Element');
         $class->setName($node->getAttribute('name'));
 
-        //verifica se o nÃ³ estÃ¡ apenas no segundo nÃ­vel do documento
+        //verifica se o elemento está apenas no segundo nível do documento
         if ($node->localName == 'element' AND $node->getLineNo() === 2) {
             $class->getConstants()->clear();
             $class->getMethods()->clear();
@@ -209,7 +209,7 @@ class Schema {
                         return;
                 case 'element':
                     $type = $node->hasAttribute('type') ? $node->getAttribute('type') : $node->getAttribute('name');
-                    $type = $node->hasAttribute('ref') ? $node->getAttribute('ref') : $type;
+//                    $type = $node->hasAttribute('ref') ? $node->getAttribute('ref') : $type;
                     $type = preg_replace('/^.*:/', '', $type);
                     $hasIndex = $node->hasAttribute('minOccurs');
                     if ($node->hasAttribute('name')) {
@@ -236,7 +236,7 @@ class Schema {
     }
 
     /**
-     * Recupera a descriÃ§Ã£o adicionada para o elemento.
+     * Recupera a descrição adicionada para o elemento.
      * @param \DOMElement $node
      * @return string 
      */
