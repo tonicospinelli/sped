@@ -93,6 +93,10 @@ class Schema {
         $this->loadedSchema->load($fileName, null, true);
     }
 
+    /**
+     * @return boolean
+     * @throws \RuntimeException 
+     */
     public function exportClasses() {
         $xsd = $this->getLoadedSchema();
         if (!$xsd instanceof \Sped\Components\Xml\Schema)
@@ -126,19 +130,24 @@ class Schema {
 
         $class->setExtends('\Sped\Components\Xml\Element');
         $class->setName($node->getAttribute('name'));
+        $class->setDescription($this->getDocumentation($node));
+        $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'category', 'description' => 'Sped')));
+        $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'package', 'description' => 'Sped')));
+        $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'copyright', 'description' => 'Copyright (c) 2012 Antonio Spinelli')));
+        $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'license', 'description' => 'http://www.gnu.org/licenses/gpl.html GNU/GPL v.3')));
 
         //verifica se o elemento está apenas no segundo nível do documento
-        if ($node->localName == 'element' AND $node->getLineNo() === 2) {
+        if ($node->localName == 'element' AND $this->getNodeLevel($node) === 2) {
             $class->getConstants()->clear();
             $class->getMethods()->clear();
             $class->setExtends('\Sped\Components\Xml\Document');
             $class->setName('Document' . ucfirst($node->getAttribute('name')));
             if ($node->hasAttribute('type')) {
                 $methodName = preg_replace('/(^.*:|^T|Type$)/', '', $node->getAttribute('type'));
-                $methodNamespace = $class->getFullName() . '\\' . preg_replace('/^.*:/', '', $node->getAttribute('type'));
+                $methodNamespace = $class->getNamespace()->getPath() . '\\' . preg_replace('/^.*:/', '', $node->getAttribute('type'));
             } elseif ($node->hasAttribute('ref')) {
                 $methodName = preg_replace('/(^.*:|^T|Type$)/', '', $node->getAttribute('ref'));
-                $methodNamespace = $class->getFullName() . '\\' . preg_replace('/^.*:/', '', $node->getAttribute('ref'));
+                $methodNamespace = $class->getNamespace()->getPath(). '\\' . preg_replace('/^.*:/', '', $node->getAttribute('ref'));
             }
 
             $class->addMethod($this->createElementGetMethod($methodName, $methodNamespace));
@@ -147,27 +156,90 @@ class Schema {
         } elseif ($node->localName == 'simpleType') {
             $class->addConstant(new \PhpClass_Constant(array(
                         'name' => 'name',
-                        'value' => preg_replace('/Type$/', '', $node->getAttribute('name')))));
+                        'value' => preg_replace('/(^T|Type$)/', '', $node->getAttribute('name')))));
             $class->addMethod(
                     $this->createClassConstructMethod(
                             $this->getLoadedSchema()->lookupNamespaceUri($node->prefix), true));
         } else {
             $class->addConstant(new \PhpClass_Constant(array(
                         'name' => 'name',
-                        'value' => preg_replace('/Type$/', '', $node->getAttribute('name')))));
+                        'value' => preg_replace('/(^T|Type$)/', '', $node->getAttribute('name')))));
 
             $class->addMethod(
                     $this->createClassConstructMethod(
-                            $this->getLoadedSchema()->getTargetNamespace(), true));
+                            $this->getLoadedSchema()->getTargetNamespace(), $this->isLastLevel($node)));
         }
-        $class->setDescription($this->getDocumentation($node));
-        $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'category', 'description' => 'Sped')));
-        $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'package', 'description' => 'Sped')));
-        $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'copyright', 'description' => 'Copyright (c) 2012 Antonio Spinelli')));
-        $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'license', 'description' => 'http://www.gnu.org/licenses/gpl.html GNU/GPL v.3')));
 
-        $this->createClassMethodsFromNode($class, $node);
+        if (!preg_match('/^Document/', $class->getName()))
+            $this->createClassMethodsFromNode($class, $node);
         $class->save($dirTarget);
+    }
+
+    public function createClassMethodsFromNode(\PhpClass &$class, \DOMElement $node) {
+        $dom = new \DOMXPath($this->loadedSchema);
+        if ($node->hasAttribute('type')) {
+            $nodes = $dom->query("//*[@name='{$node->getAttribute('type')}']");
+        }
+        else
+            $nodes = $node->childNodes;
+
+        foreach ($nodes as $node) {
+            switch ($node->localName) {
+                case 'attribute':
+                    $this->createAttributeMethods($class, $node);
+                    break;
+                case 'sequence':
+                case 'choice':
+                case 'complexType':
+                    $this->createClassMethodsFromNode($class, $node);
+                    break;
+                case 'simpleType':
+                    if ($node->parentNode->localName == 'element')
+                        return;
+                case 'element':
+                    $hasIndex = $node->hasAttribute('minOccurs');
+                    if ($node->hasAttribute('name')) {
+                        $name = $node->getAttribute('name');
+                        $type = $node->hasAttribute('type') ? preg_replace('/^.*:/', '', $node->getAttribute('type')) : null;
+
+                        if (!is_null($type))
+                            $type = $this->getDefaultNamespace() . '\\' . ucfirst($type);
+                        elseif ($class->getExtends() === '\Sped\Components\Xml\Document')
+                            $type = $class->getNamespace()->getPath() . '\\' . $type;
+                        else
+                            $type = $class->getFullName() . '\\' . ucfirst($name);
+                    } elseif ($node->hasAttribute('ref')) {
+                        $name = preg_replace('/^.*:/', '', $node->getAttribute('ref'));
+                        $refNode = $dom->query("//*[@name='{$name}']")->item(0);
+                        $type = $refNode->hasAttribute('type') ? preg_replace('/^.*:/', '', $refNode->getAttribute('type')) : $refNode->getAttribute('name');
+                        $type = $this->getDefaultNamespace() . '\\' . ucfirst($type);
+                    }
+
+                    $class->addMethod($this->createElementGetMethod($name, $type, $hasIndex));
+                    $class->addMethod($this->createElementAddMethod($name, $type));
+                    $class->addMethod($this->createElementSetMethod($name, $type));
+
+                    if ($node->localName != 'simpleType'
+                            AND $node->hasChildNodes()
+                            AND $class->getExtends() == '\Sped\Components\Xml\Element'
+                            AND $this->hasElementsChildren($node)) {
+                        $this->createClassFromNode($node, $class->getFullName());
+                    }
+            }
+        }
+    }
+
+    public function hasElementsChildren(\DOMElement $node) {
+        return ($node->getElementsByTagName('element')->length > 0
+                OR $node->getElementsByTagName('simpleType')->length > 0
+                OR $node->getElementsByTagName('choice')->length > 0
+                OR $node->getElementsByTagName('complexType')->length > 0);
+    }
+
+    public function isLastLevel(\DOMElement $node) {
+        return ($node->localName == 'element'
+                AND $node->getElementsByTagName('complexType')->length === 0
+                AND $node->getElementsByTagName('sequence')->length === 0);
     }
 
     public function createClassConstructMethod($namespace, $isSetValue = false) {
@@ -187,52 +259,8 @@ class Schema {
         return $met;
     }
 
-    public function createClassMethodsFromNode(\PhpClass &$class, \DOMElement $node) {
-        $dom = new \DOMXPath($this->loadedSchema);
-        if ($node->hasAttribute('type')) {
-            $nodes = $dom->query("//*[@name='{$node->getAttribute('type')}']");
-        }
-        else
-            $nodes = $node->childNodes;
-
-        foreach ($nodes as $node) {
-            switch ($node->localName) {
-                case 'attribute':
-                    $this->createAttributeMethods($class, $node);
-                    break;
-                case 'sequence':
-                case 'complexType':
-                    $this->createClassMethodsFromNode($class, $node);
-                    break;
-                case 'simpleType':
-                    if($node->parentNode->localName == 'element')
-                        return;
-                case 'element':
-                    $type = $node->hasAttribute('type') ? $node->getAttribute('type') : $node->getAttribute('name');
-//                    $type = $node->hasAttribute('ref') ? $node->getAttribute('ref') : $type;
-                    $type = preg_replace('/^.*:/', '', $type);
-                    $hasIndex = $node->hasAttribute('minOccurs');
-                    if ($node->hasAttribute('name')) {
-                        $name = $node->getAttribute('name');
-                    } elseif ($node->hasAttribute('ref')) {
-                        $node = $dom->query("//*[@name='{$type}']")->item(0);
-                        $name = $node->hasAttribute('type') ? preg_replace('/^.*:/', '', $node->getAttribute('type')) : '';
-                    }
-
-                    $class->addMethod($this->createElementGetMethod($name, $class->getFullName(), $hasIndex));
-                    $class->addMethod($this->createElementAddMethod($name, $class->getFullName()));
-                    $class->addMethod($this->createElementSetMethod($name, $class->getFullName()));
-
-                    if ($node->localName != 'simpleType'
-                            AND $node->hasChildNodes()
-                            AND $class->getExtends() == '\Sped\Components\Xml\Element'
-                            AND ($node->getElementsByTagName('element')->length > 0
-                            OR $node->getElementsByTagName('simpleType')->length > 0
-                            OR $node->getElementsByTagName('complexType')->length > 0)) {
-                        $this->createClassFromNode($node, $class->getFullName());
-                    }
-            }
-        }
+    public function getNodeLevel(\DOMElement $node) {
+        return (count(explode('/', $node->getNodePath())) - 1);
     }
 
     /**
@@ -252,7 +280,7 @@ class Schema {
 
             if ($child->hasChildNodes())
                 $description = $this->getDocumentation($child);
-            
+
             if (!is_null($description))
                 break;
         }
@@ -325,7 +353,6 @@ BODY;
 
     public function createElementGetMethod($name, $type, $hasIndex = false) {
         $name = ucfirst($name);
-        $type.= '\\' . $name;
         $param = '0';
         $met = new \PhpClass_Method(array(
                     'name' => 'get' . $name,
@@ -350,7 +377,6 @@ BODY;
 
     public function createElementAddMethod($name, $type, $hasValue = false, $isUnique = true) {
         $name = ucfirst($name);
-        $type.= '\\' . $name;
         $param = '';
         $met = new \PhpClass_Method(array(
                     'name' => 'add' . $name,
@@ -375,7 +401,6 @@ BODY;
 
     public function createElementSetMethod($name, $type) {
         $name = ucfirst($name);
-        $type.= '\\' . $name;
         $met = new \PhpClass_Method(array(
                     'name' => 'set' . $name
                 ));
