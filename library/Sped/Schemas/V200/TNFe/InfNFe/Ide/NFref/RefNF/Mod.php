@@ -1,49 +1,23 @@
 <?php
+namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF;
 
 /**
- * Sped
- *
- * Copyright (c) 2012 Sped
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category   Sped
- * @package    Sped
- * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
- * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
+ * Código do modelo do Documento Fiscal. Utilizar 01 para NF modelo 1/1A
+
+ * @name Mod
+ * @category Sped
+ * @package Sped
+ * @copyright Copyright (c) 2012 Antonio Spinelli
+ * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
-
-namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFRef\RefNF;
-
-/**
- * Modelo do Documento Fiscal.<br>
- * Informar o código do modelo do Documento fiscal: <br>
- * 01 – modelo 01
- * 
- * @category   Sped
- * @package    Sped\Schemas\V200\TNFe\InfNFe\Ide\NFRef\RefNF
- * @copyright  Copyright (c) 2012
- * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
- * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
- */
-class Mod extends \Sped\Components\Xml\Element {
-
+class Mod extends \Sped\Components\Xml\Element  {
     const NAME = 'mod';
 
-    public function __construct($value = null) {
+    /**
+
+     * @param string $value 
+     */
+    public function __construct(string $value = NULL){
         parent::__construct(self::NAME, $value, 'http://www.portalfiscal.inf.br/nfe');
     }
 

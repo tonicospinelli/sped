@@ -1,363 +1,331 @@
 <?php
-
-/**
- * Sped
- *
- * Copyright (c) 2012 Sped
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category   Sped
- * @package    Sped
- * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
- * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
- */
-
 namespace Sped\Schemas\V200\TNFe\InfNFe;
 
-use Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Cnpj,
-    Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataEmi,
-    Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataPag,
-    Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone,
-    Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matricula,
-    Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NumeroDar,
-    Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi,
-    Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Uf,
-    Sped\Schemas\V200\TNFe\InfNFe\Avulsa\ValorDar,
-    Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente,
-    Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao;
-
 /**
- * @category   Sped
- * @package    Sped\Schemas\V200\TNFe\InfNFe
- * @copyright  Copyright (c) 2012
- * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
- * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+ * Emissão de avulsa, informar os dados do Fisco emitente
+
+ * @name Avulsa
+ * @category Sped
+ * @package Sped
+ * @copyright Copyright (c) 2012 Antonio Spinelli
+ * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
-class Avulsa extends \Sped\Components\Xml\Element {
-
+class Avulsa extends \Sped\Components\Xml\Element  {
     const NAME = 'avulsa';
-
-    public function __construct() {
+    public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
-    public function loadDefaults() {
-        $this->addCnpj();
-        $this->addXOrgao();
-        $this->addMatricula();
-        $this->addXAgente();
-        $this->addUf();
-        $this->addRepEmi();
+    /**
+
+     * @return \Sped\Schemas\V200\TCnpj 
+     */
+    public function getCNPJ(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCnpj');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TCnpj::NAME)->item(0);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Cnpj
+
+     * @return \Sped\Schemas\V200\TCnpj 
      */
-    public function getCnpj() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Cnpj');
-        return $this->getElementsByTagName(Cnpj::NAME)->item(0);
+    public function addCNPJ(){
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(), true);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Cnpj
-     */
-    public function addCnpj($value = null) {
-        return $this->appendChild(new Cnpj($value), true);
-    }
 
-    /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Cnpj $paramcCnpj
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+     * @param \Sped\Schemas\V200\TCnpj $paramCNPJ 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setCnpj($paramcCnpj) {
-        $this->appendChild($paramcCnpj, true);
+    public function setCNPJ(\Sped\Schemas\V200\TCnpj $paramCNPJ){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TCnpj::NAME);
+        $this->appendChild($paramCNPJ, false);
         return $this;
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao 
      */
-    public function getXOrgao() {
+    public function getXOrgao(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao');
-        return $this->getElementsByTagName(XOrgao::NAME)->item(0);
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao::NAME)->item(0);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao 
      */
-    public function addXOrgao($value = null) {
-        return $this->appendChild(new XOrgao($value), true);
+    public function addXOrgao(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao(), true);
     }
 
     /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao $paramcXOrgao
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao $paramXOrgao 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setXOrgao($paramcXOrgao) {
-        $this->appendChild($paramcXOrgao, true);
+    public function setXOrgao(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao $paramXOrgao){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao::NAME);
+        $this->appendChild($paramXOrgao, false);
         return $this;
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matricula
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr 
      */
-    public function getMatricula() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matricula');
-        return $this->getElementsByTagName(Matricula::NAME)->item(0);
+    public function getMatr(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr::NAME)->item(0);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matricula
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr 
      */
-    public function addMatricula($value = null) {
-        return $this->appendChild(new Matricula($value), true);
+    public function addMatr(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr(), true);
     }
 
     /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matricula $paramcMatricula
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr $paramMatr 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setMatricula($paramcMatricula) {
-        $this->appendChild($paramcMatricula, true);
+    public function setMatr(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr $paramMatr){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr::NAME);
+        $this->appendChild($paramMatr, false);
         return $this;
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente 
      */
-    public function getXAgente() {
+    public function getXAgente(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente');
-        return $this->getElementsByTagName(XAgente::NAME)->item(0);
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente::NAME)->item(0);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente 
      */
-    public function addXAgente($value = null) {
-        return $this->appendChild(new XAgente($value), true);
+    public function addXAgente(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente(), true);
     }
 
     /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente $paramcXAgente
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente $paramXAgente 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setXAgente($paramcXAgente) {
-        $this->appendChild($paramcXAgente, true);
+    public function setXAgente(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente $paramXAgente){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente::NAME);
+        $this->appendChild($paramXAgente, false);
         return $this;
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
+     * @param int $index 
      */
-    public function getFone() {
+    public function getFone(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone');
-        return $this->getElementsByTagName(Fone::NAME)->item(0);
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone::NAME)->item($index);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
      */
-    public function addFone($value = null) {
-        return $this->appendChild(new Fone($value), true);
+    public function addFone(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone(), true);
     }
 
     /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone $paramFone
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone $paramFone 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setFone($paramFone) {
-        $this->appendChild($paramFone, true);
+    public function setFone(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone $paramFone){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone::NAME);
+        $this->appendChild($paramFone, false);
         return $this;
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Uf
+
+     * @return \Sped\Schemas\V200\TUfEmi 
      */
-    public function getUf() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Uf');
-        return $this->getElementsByTagName(Uf::NAME)->item(0);
+    public function getUF(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TUfEmi');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TUfEmi::NAME)->item(0);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Uf
+
+     * @return \Sped\Schemas\V200\TUfEmi 
      */
-    public function addUf($value = null) {
-        return $this->appendChild(new Uf($value), true);
+    public function addUF(){
+        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(), true);
     }
 
     /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Uf $paramUf
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+
+     * @param \Sped\Schemas\V200\TUfEmi $paramUF 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setUf($paramUf) {
-        $this->appendChild($paramUf, true);
+    public function setUF(\Sped\Schemas\V200\TUfEmi $paramUF){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TUfEmi::NAME);
+        $this->appendChild($paramUF, false);
         return $this;
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NumeroDar
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
+     * @param int $index 
      */
-    public function getNumeroDar() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NumeroDar');
-        return $this->getElementsByTagName(NumeroDar::NAME)->item(0);
+    public function getNDAR(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR::NAME)->item($index);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NumeroDar
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
      */
-    public function addNumeroDar($value = null) {
-        return $this->appendChild(new NumeroDar($value), true);
+    public function addNDAR(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR(), true);
     }
 
     /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NumeroDar $paramNumeroDar
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR $paramNDAR 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setNumeroDar($paramNumeroDar) {
-        $this->appendChild($paramNumeroDar, true);
+    public function setNDAR(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR $paramNDAR){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR::NAME);
+        $this->appendChild($paramNDAR, false);
         return $this;
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataEmi
+
+     * @return \Sped\Schemas\V200\TData 
+     * @param int $index 
      */
-    public function getDataEmi() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataEmi');
-        return $this->getElementsByTagName(DataEmi::NAME)->item(0);
+    public function getDEmi(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TData::NAME)->item($index);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataEmi
+
+     * @return \Sped\Schemas\V200\TData 
      */
-    public function addDataEmi($value = null) {
-        return $this->appendChild(new DataEmi($value), true);
+    public function addDEmi(){
+        return $this->appendChild(new \Sped\Schemas\V200\TData(), true);
     }
 
     /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataEmi $paramDataEmi
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+
+     * @param \Sped\Schemas\V200\TData $paramDEmi 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setDataEmi($paramDataEmi) {
-        $this->appendChild($paramDataEmi, true);
+    public function setDEmi(\Sped\Schemas\V200\TData $paramDEmi){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TData::NAME);
+        $this->appendChild($paramDEmi, false);
         return $this;
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\ValorDAR
+
+     * @return \Sped\Schemas\V200\TDec_1302 
+     * @param int $index 
      */
-    public function getValorDar() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\ValorDAR');
-        return $this->getElementsByTagName(ValorDar::NAME)->item(0);
+    public function getVDAR(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item($index);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\ValorDAR
+
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addValorDar($value = null) {
-        return $this->appendChild(new ValorDar($value), true);
+    public function addVDAR(){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
     }
 
     /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\ValorDAR $paramValorDar
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+
+     * @param \Sped\Schemas\V200\TDec_1302 $paramVDAR 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setValorDar($paramValorDar) {
-        $this->appendChild($paramValorDar, true);
+    public function setVDAR(\Sped\Schemas\V200\TDec_1302 $paramVDAR){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->appendChild($paramVDAR, false);
         return $this;
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi 
      */
-    public function getRepEmi() {
+    public function getRepEmi(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi');
-        return $this->getElementsByTagName(RepEmi::NAME)->item(0);
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi::NAME)->item(0);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi 
      */
-    public function addRepEmi($value = null) {
-        return $this->appendChild(new RepEmi($value), true);
+    public function addRepEmi(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi(), true);
     }
 
     /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataPag $paramRepEmi
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi $paramRepEmi 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setRepEmi($paramRepEmi) {
-        $this->appendChild($paramRepEmi, true);
+    public function setRepEmi(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi $paramRepEmi){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi::NAME);
+        $this->appendChild($paramRepEmi, false);
         return $this;
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataPag
+
+     * @return \Sped\Schemas\V200\TData 
+     * @param int $index 
      */
-    public function getDataPag() {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataPag');
-        return $this->getElementsByTagName(DataPag::NAME)->item(0);
+    public function getDPag(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TData::NAME)->item($index);
     }
 
     /**
-     *
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataPag
+
+     * @return \Sped\Schemas\V200\TData 
      */
-    public function addDataPag($value = null) {
-        return $this->appendChild(new DataPag($value), true);
+    public function addDPag(){
+        return $this->appendChild(new \Sped\Schemas\V200\TData(), true);
     }
 
     /**
-     *
-     * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\DataPag $paramDataPag
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
+
+     * @param \Sped\Schemas\V200\TData $paramDPag 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function setDataPag($paramDataPag) {
-        $this->appendChild($paramDataPag, true);
+    public function setDPag(\Sped\Schemas\V200\TData $paramDPag){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TData::NAME);
+        $this->appendChild($paramDPag, false);
         return $this;
     }
 

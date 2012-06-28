@@ -1,0 +1,138 @@
+<?php
+namespace Sped\Schemas\V200;
+
+/**
+ * 
+
+ * @name SignedInfoType
+ * @category Sped
+ * @package Sped
+ * @copyright Copyright (c) 2012 Antonio Spinelli
+ * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ */
+class SignedInfoType extends \Sped\Components\Xml\Element  {
+    const NAME = 'SignedInfo';
+    public function __construct(){
+        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
+     */
+    public function getCanonicalizationMethod(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
+     */
+    public function addCanonicalizationMethod(){
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod $paramCanonicalizationMethod 
+     * @return \Sped\Schemas\V200\SignedInfoType 
+     */
+    public function setCanonicalizationMethod(\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod $paramCanonicalizationMethod){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod::NAME);
+        $this->appendChild($paramCanonicalizationMethod, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\SignedInfoType\SignatureMethod 
+     */
+    public function getSignatureMethod(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignedInfoType\SignatureMethod');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\SignedInfoType\SignatureMethod::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\SignedInfoType\SignatureMethod 
+     */
+    public function addSignatureMethod(){
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\SignatureMethod(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\SignedInfoType\SignatureMethod $paramSignatureMethod 
+     * @return \Sped\Schemas\V200\SignedInfoType 
+     */
+    public function setSignatureMethod(\Sped\Schemas\V200\SignedInfoType\SignatureMethod $paramSignatureMethod){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\SignedInfoType\SignatureMethod::NAME);
+        $this->appendChild($paramSignatureMethod, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\ReferenceType 
+     */
+    public function getReference(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\ReferenceType');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\ReferenceType::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\ReferenceType 
+     */
+    public function addReference(){
+        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\ReferenceType $paramReference 
+     * @return \Sped\Schemas\V200\SignedInfoType 
+     */
+    public function setReference(\Sped\Schemas\V200\ReferenceType $paramReference){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\ReferenceType::NAME);
+        $this->appendChild($paramReference, false);
+        return $this;
+    }
+
+    /**
+
+     * @return string 
+     */
+    public function getId(){
+        return $this->getAttribute('Id');
+    }
+
+    /**
+
+     * @param string $value 
+     * @return \Sped\Schemas\V200\SignedInfoType 
+     */
+    public function setId(string $value){
+        $this->setAttribute('Id', $value);
+        return $this;
+    }
+
+    /**
+
+     * @return boolean 
+     */
+    public function isSetId(){
+        return $this->hasAttribute('Id');
+    }
+
+    /**
+
+     * @return boolean 
+     */
+    public function unsetId(){
+        $this->removeAttribute('Id');
+        return true;
+    }
+
+}

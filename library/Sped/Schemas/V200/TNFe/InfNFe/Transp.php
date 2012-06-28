@@ -1,46 +1,250 @@
 <?php
-
-/**
- * Sped
- *
- * Copyright (c) 2012 Sped
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category   Sped
- * @package    Sped
- * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
- * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
- */
-
 namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
- * @category   Sped
- * @package    Sped\Schemas\V200\TNFe\InfNFe
- * @copyright  Copyright (c) 2012
- * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
- * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+ * Dados dos transportes da NF-e
+
+ * @name Transp
+ * @category Sped
+ * @package Sped
+ * @copyright Copyright (c) 2012 Antonio Spinelli
+ * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
-class Transp extends \Sped\Components\Xml\Element {
-
+class Transp extends \Sped\Components\Xml\Element  {
     const NAME = 'transp';
-
-    public function __construct() {
+    public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete 
+     */
+    public function getModFrete(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete 
+     */
+    public function addModFrete(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete $paramModFrete 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
+     */
+    public function setModFrete(\Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete $paramModFrete){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete::NAME);
+        $this->appendChild($paramModFrete, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
+     * @param int $index 
+     */
+    public function getTransporta(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta::NAME)->item($index);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
+     */
+    public function addTransporta(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta $paramTransporta 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
+     */
+    public function setTransporta(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta $paramTransporta){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta::NAME);
+        $this->appendChild($paramTransporta, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
+     * @param int $index 
+     */
+    public function getRetTransp(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp::NAME)->item($index);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
+     */
+    public function addRetTransp(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp $paramRetTransp 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
+     */
+    public function setRetTransp(\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp $paramRetTransp){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp::NAME);
+        $this->appendChild($paramRetTransp, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TVeiculo 
+     * @param int $index 
+     */
+    public function getVeicTransp(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TVeiculo::NAME)->item($index);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TVeiculo 
+     */
+    public function addVeicTransp(){
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TVeiculo $paramVeicTransp 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
+     */
+    public function setVeicTransp(\Sped\Schemas\V200\TVeiculo $paramVeicTransp){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TVeiculo::NAME);
+        $this->appendChild($paramVeicTransp, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TVeiculo 
+     * @param int $index 
+     */
+    public function getReboque(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TVeiculo::NAME)->item($index);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TVeiculo 
+     */
+    public function addReboque(){
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TVeiculo $paramReboque 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
+     */
+    public function setReboque(\Sped\Schemas\V200\TVeiculo $paramReboque){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TVeiculo::NAME);
+        $this->appendChild($paramReboque, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
+     * @param int $index 
+     */
+    public function getVagao(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao::NAME)->item($index);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
+     */
+    public function addVagao(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao $paramVagao 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
+     */
+    public function setVagao(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao $paramVagao){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao::NAME);
+        $this->appendChild($paramVagao, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
+     * @param int $index 
+     */
+    public function getBalsa(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa::NAME)->item($index);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
+     */
+    public function addBalsa(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa $paramBalsa 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
+     */
+    public function setBalsa(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa $paramBalsa){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa::NAME);
+        $this->appendChild($paramBalsa, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol 
+     * @param int $index 
+     */
+    public function getVol(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol::NAME)->item($index);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol 
+     */
+    public function addVol(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol $paramVol 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
+     */
+    public function setVol(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol $paramVol){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol::NAME);
+        $this->appendChild($paramVol, false);
+        return $this;
     }
 
 }

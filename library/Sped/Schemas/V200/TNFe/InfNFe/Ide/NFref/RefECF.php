@@ -1,50 +1,103 @@
 <?php
+namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref;
 
 /**
- * Sped
- *
- * Copyright (c) 2012 Sped
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category   Sped
- * @package    Sped
- * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
- * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
+ * Grupo do Cupom Fiscal vinculado à NF-e (v2.0).
+
+ * @name RefECF
+ * @category Sped
+ * @package Sped
+ * @copyright Copyright (c) 2012 Antonio Spinelli
+ * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
-
-namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFRef\RefNF;
-
-/**
- * Chave de acesso do CT-e referenciada.<br>
- * Utilizar esta TAG para referenciar um CT-e 
- * emitido anteriormente, vinculada a NF-e atual.
- * 
- * @category   Sped
- * @package    Sped\Schemas\V200\TNFe\InfNFe\Ide
- * @copyright  Copyright (c) 2012
- * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
- * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
- */
-class RefCTe extends \Sped\Components\Xml\Element {
-
-    const NAME = 'refCTe';
-
-    public function __construct() {
+class RefECF extends \Sped\Components\Xml\Element  {
+    const NAME = 'refECF';
+    public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod 
+     */
+    public function getMod(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod 
+     */
+    public function addMod(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod $paramMod 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
+     */
+    public function setMod(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod $paramMod){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod::NAME);
+        $this->appendChild($paramMod, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF 
+     */
+    public function getNECF(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF 
+     */
+    public function addNECF(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF $paramNECF 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
+     */
+    public function setNECF(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF $paramNECF){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF::NAME);
+        $this->appendChild($paramNECF, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO 
+     */
+    public function getNCOO(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO 
+     */
+    public function addNCOO(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO $paramNCOO 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
+     */
+    public function setNCOO(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO $paramNCOO){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO::NAME);
+        $this->appendChild($paramNCOO, false);
+        return $this;
     }
 
 }

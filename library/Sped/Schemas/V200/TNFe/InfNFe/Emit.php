@@ -1,46 +1,301 @@
 <?php
-
-/**
- * Sped
- *
- * Copyright (c) 2012 Sped
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category   Sped
- * @package    Sped
- * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
- * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
- */
-
 namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
- * @category   Sped
- * @package    Sped\Schemas\V200
- * @copyright  Copyright (c) 2012
- * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
- * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+ * Identificação do emitente
+
+ * @name Emit
+ * @category Sped
+ * @package Sped
+ * @copyright Copyright (c) 2012 Antonio Spinelli
+ * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
-class Emit extends \Sped\Components\Xml\Element {
-
+class Emit extends \Sped\Components\Xml\Element  {
     const NAME = 'emit';
-
-    public function __construct() {
+    public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TCnpj 
+     */
+    public function getCNPJ(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCnpj');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TCnpj::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TCnpj 
+     */
+    public function addCNPJ(){
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TCnpj $paramCNPJ 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
+     */
+    public function setCNPJ(\Sped\Schemas\V200\TCnpj $paramCNPJ){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TCnpj::NAME);
+        $this->appendChild($paramCNPJ, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TCpf 
+     */
+    public function getCPF(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCpf');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TCpf::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TCpf 
+     */
+    public function addCPF(){
+        return $this->appendChild(new \Sped\Schemas\V200\TCpf(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TCpf $paramCPF 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
+     */
+    public function setCPF(\Sped\Schemas\V200\TCpf $paramCPF){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TCpf::NAME);
+        $this->appendChild($paramCPF, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome 
+     */
+    public function getXNome(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome 
+     */
+    public function addXNome(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome $paramXNome 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
+     */
+    public function setXNome(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome $paramXNome){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome::NAME);
+        $this->appendChild($paramXNome, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant 
+     * @param int $index 
+     */
+    public function getXFant(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant::NAME)->item($index);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant 
+     */
+    public function addXFant(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant $paramXFant 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
+     */
+    public function setXFant(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant $paramXFant){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant::NAME);
+        $this->appendChild($paramXFant, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TEnderEmi 
+     */
+    public function getEnderEmit(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TEnderEmi::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TEnderEmi 
+     */
+    public function addEnderEmit(){
+        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TEnderEmi $paramEnderEmit 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
+     */
+    public function setEnderEmit(\Sped\Schemas\V200\TEnderEmi $paramEnderEmit){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TEnderEmi::NAME);
+        $this->appendChild($paramEnderEmit, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TIe 
+     */
+    public function getIE(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIe');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TIe::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TIe 
+     */
+    public function addIE(){
+        return $this->appendChild(new \Sped\Schemas\V200\TIe(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TIe $paramIE 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
+     */
+    public function setIE(\Sped\Schemas\V200\TIe $paramIE){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TIe::NAME);
+        $this->appendChild($paramIE, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TIeST 
+     * @param int $index 
+     */
+    public function getIEST(int $index){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIeST');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TIeST::NAME)->item($index);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TIeST 
+     */
+    public function addIEST(){
+        return $this->appendChild(new \Sped\Schemas\V200\TIeST(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TIeST $paramIEST 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
+     */
+    public function setIEST(\Sped\Schemas\V200\TIeST $paramIEST){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TIeST::NAME);
+        $this->appendChild($paramIEST, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM 
+     */
+    public function getIM(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\IM');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\IM::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM 
+     */
+    public function addIM(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM $paramIM 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
+     */
+    public function setIM(\Sped\Schemas\V200\TNFe\InfNFe\Emit\IM $paramIM){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\IM::NAME);
+        $this->appendChild($paramIM, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE 
+     */
+    public function getCNAE(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE 
+     */
+    public function addCNAE(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE $paramCNAE 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
+     */
+    public function setCNAE(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE $paramCNAE){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE::NAME);
+        $this->appendChild($paramCNAE, false);
+        return $this;
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT 
+     */
+    public function getCRT(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT');
+        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT::NAME)->item(0);
+    }
+
+    /**
+
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT 
+     */
+    public function addCRT(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT(), true);
+    }
+
+    /**
+
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT $paramCRT 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
+     */
+    public function setCRT(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT $paramCRT){
+        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT::NAME);
+        $this->appendChild($paramCRT, false);
+        return $this;
     }
 
 }
