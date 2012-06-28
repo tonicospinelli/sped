@@ -37,7 +37,7 @@ class SchemaTest extends \PHPUnit_Framework_TestCase {
 
     public function testExportClasses() {
         $this->object->loadXmlSchema('../xmlschemas/nfe_v2.00.xsd');
-        $this->object->setDirTarget('generated/');
+        $this->object->setDirTarget('../library');
         $this->object->setDefaultNamespace('\Sped\Schemas\V200');
         $this->object->exportClasses();
     }
