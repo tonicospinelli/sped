@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS;
 
 /**
@@ -15,22 +16,24 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class COFINSNT extends \Sped\Components\Xml\Element  {
-    const NAME = 'COFINSNT';
+
+    const CST = 'CST';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST 
      */
     public function getCST(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST::NAME)->item(0);
+        return $this->getElementsByTagName(self::CST)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST 
      */
     public function addCST(){
@@ -38,12 +41,12 @@ class COFINSNT extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT 
      */
     public function setCST(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST $paramCST){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST::NAME);
+        $this->removeElementsByTagName(self::CST);
         $this->appendChild($paramCST, false);
         return $this;
     }

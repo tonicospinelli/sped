@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * 
-
  * @name SignedInfoType
  * @category Sped
  * @package Sped
@@ -11,22 +11,28 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class SignedInfoType extends \Sped\Components\Xml\Element  {
-    const NAME = 'SignedInfo';
+
+    const CANONICALIZATIONMETHOD = 'CanonicalizationMethod';
+
+    const SIGNATUREMETHOD = 'SignatureMethod';
+
+    const REFERENCE = 'Reference';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
      */
     public function getCanonicalizationMethod(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod::NAME)->item(0);
+        return $this->getElementsByTagName(self::CANONICALIZATIONMETHOD)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
      */
     public function addCanonicalizationMethod(){
@@ -34,27 +40,27 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod $paramCanonicalizationMethod 
      * @return \Sped\Schemas\V200\SignedInfoType 
      */
     public function setCanonicalizationMethod(\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod $paramCanonicalizationMethod){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod::NAME);
+        $this->removeElementsByTagName(self::CANONICALIZATIONMETHOD);
         $this->appendChild($paramCanonicalizationMethod, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\SignedInfoType\SignatureMethod 
      */
     public function getSignatureMethod(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignedInfoType\SignatureMethod');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\SignedInfoType\SignatureMethod::NAME)->item(0);
+        return $this->getElementsByTagName(self::SIGNATUREMETHOD)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\SignedInfoType\SignatureMethod 
      */
     public function addSignatureMethod(){
@@ -62,27 +68,27 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\SignedInfoType\SignatureMethod $paramSignatureMethod 
      * @return \Sped\Schemas\V200\SignedInfoType 
      */
     public function setSignatureMethod(\Sped\Schemas\V200\SignedInfoType\SignatureMethod $paramSignatureMethod){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\SignedInfoType\SignatureMethod::NAME);
+        $this->removeElementsByTagName(self::SIGNATUREMETHOD);
         $this->appendChild($paramSignatureMethod, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
     public function getReference(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\ReferenceType');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\ReferenceType::NAME)->item(0);
+        return $this->getElementsByTagName(self::REFERENCE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
     public function addReference(){
@@ -90,18 +96,18 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\ReferenceType $paramReference 
      * @return \Sped\Schemas\V200\SignedInfoType 
      */
     public function setReference(\Sped\Schemas\V200\ReferenceType $paramReference){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\ReferenceType::NAME);
+        $this->removeElementsByTagName(self::REFERENCE);
         $this->appendChild($paramReference, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return string 
      */
     public function getId(){
@@ -109,7 +115,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param string $value 
      * @return \Sped\Schemas\V200\SignedInfoType 
      */
@@ -119,7 +125,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @return boolean 
      */
     public function isSetId(){
@@ -127,7 +133,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @return boolean 
      */
     public function unsetId(){

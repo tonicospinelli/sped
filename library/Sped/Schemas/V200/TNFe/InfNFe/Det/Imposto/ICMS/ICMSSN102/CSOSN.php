@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102;
 
 /**
@@ -13,10 +14,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class CSOSN extends \Sped\Components\Xml\Element  {
-    const NAME = 'CSOSN';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
 
 /**
  * Serial (série)
-
  * @name NSerie
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class NSerie extends \Sped\Components\Xml\Element  {
-    const NAME = 'nSerie';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

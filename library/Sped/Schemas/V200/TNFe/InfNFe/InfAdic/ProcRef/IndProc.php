@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef;
 
 /**
@@ -15,10 +16,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class IndProc extends \Sped\Components\Xml\Element  {
-    const NAME = 'indProc';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

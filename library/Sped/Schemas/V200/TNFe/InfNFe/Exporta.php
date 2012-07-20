@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Informações de exportação
-
  * @name Exporta
  * @category Sped
  * @package Sped
@@ -11,22 +11,26 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class Exporta extends \Sped\Components\Xml\Element  {
-    const NAME = 'exporta';
+
+    const UFEMBARQ = 'UFEmbarq';
+
+    const XLOCEMBARQ = 'xLocEmbarq';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function getUFEmbarq(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TUf');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TUf::NAME)->item(0);
+        return $this->getElementsByTagName(self::UFEMBARQ)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function addUFEmbarq(){
@@ -34,27 +38,27 @@ class Exporta extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TUf $paramUFEmbarq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta 
      */
     public function setUFEmbarq(\Sped\Schemas\V200\TUf $paramUFEmbarq){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TUf::NAME);
+        $this->removeElementsByTagName(self::UFEMBARQ);
         $this->appendChild($paramUFEmbarq, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq 
      */
     public function getXLocEmbarq(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq::NAME)->item(0);
+        return $this->getElementsByTagName(self::XLOCEMBARQ)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq 
      */
     public function addXLocEmbarq(){
@@ -62,12 +66,12 @@ class Exporta extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq $paramXLocEmbarq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta 
      */
     public function setXLocEmbarq(\Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq $paramXLocEmbarq){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq::NAME);
+        $this->removeElementsByTagName(self::XLOCEMBARQ);
         $this->appendChild($paramXLocEmbarq, false);
         return $this;
     }

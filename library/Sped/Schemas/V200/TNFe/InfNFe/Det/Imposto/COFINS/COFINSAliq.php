@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS;
 
 /**
@@ -12,22 +13,30 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class COFINSAliq extends \Sped\Components\Xml\Element  {
-    const NAME = 'COFINSAliq';
+
+    const CST = 'CST';
+
+    const VBC = 'vBC';
+
+    const PCOFINS = 'pCOFINS';
+
+    const VCOFINS = 'vCOFINS';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST 
      */
     public function getCST(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST::NAME)->item(0);
+        return $this->getElementsByTagName(self::CST)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST 
      */
     public function addCST(){
@@ -35,27 +44,27 @@ class COFINSAliq extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
     public function setCST(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST $paramCST){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST::NAME);
+        $this->removeElementsByTagName(self::CST);
         $this->appendChild($paramCST, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VBC)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC(){
@@ -63,27 +72,27 @@ class COFINSAliq extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
     public function setVBC(\Sped\Schemas\V200\TDec_1302 $paramVBC){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VBC);
         $this->appendChild($paramVBC, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getPCOFINS(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_0302::NAME)->item(0);
+        return $this->getElementsByTagName(self::PCOFINS)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPCOFINS(){
@@ -91,27 +100,27 @@ class COFINSAliq extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_0302 $paramPCOFINS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
     public function setPCOFINS(\Sped\Schemas\V200\TDec_0302 $paramPCOFINS){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_0302::NAME);
+        $this->removeElementsByTagName(self::PCOFINS);
         $this->appendChild($paramPCOFINS, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVCOFINS(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VCOFINS)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCOFINS(){
@@ -119,12 +128,12 @@ class COFINSAliq extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVCOFINS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
     public function setVCOFINS(\Sped\Schemas\V200\TDec_1302 $paramVCOFINS){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VCOFINS);
         $this->appendChild($paramVCOFINS, false);
         return $this;
     }

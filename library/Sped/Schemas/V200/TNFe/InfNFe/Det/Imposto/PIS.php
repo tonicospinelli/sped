@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto;
 
 /**
  * Dados do PIS
-
  * @name PIS
  * @category Sped
  * @package Sped
@@ -11,22 +11,30 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class PIS extends \Sped\Components\Xml\Element  {
-    const NAME = 'PIS';
+
+    const PISALIQ = 'PISAliq';
+
+    const PISQTDE = 'PISQtde';
+
+    const PISNT = 'PISNT';
+
+    const PISOUTR = 'PISOutr';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq 
      */
     public function getPISAliq(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq::NAME)->item(0);
+        return $this->getElementsByTagName(self::PISALIQ)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq 
      */
     public function addPISAliq(){
@@ -34,27 +42,27 @@ class PIS extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq $paramPISAliq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
     public function setPISAliq(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq $paramPISAliq){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq::NAME);
+        $this->removeElementsByTagName(self::PISALIQ);
         $this->appendChild($paramPISAliq, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde 
      */
     public function getPISQtde(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde::NAME)->item(0);
+        return $this->getElementsByTagName(self::PISQTDE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde 
      */
     public function addPISQtde(){
@@ -62,27 +70,27 @@ class PIS extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde $paramPISQtde 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
     public function setPISQtde(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde $paramPISQtde){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde::NAME);
+        $this->removeElementsByTagName(self::PISQTDE);
         $this->appendChild($paramPISQtde, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT 
      */
     public function getPISNT(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT::NAME)->item(0);
+        return $this->getElementsByTagName(self::PISNT)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT 
      */
     public function addPISNT(){
@@ -90,27 +98,27 @@ class PIS extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT $paramPISNT 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
     public function setPISNT(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT $paramPISNT){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT::NAME);
+        $this->removeElementsByTagName(self::PISNT);
         $this->appendChild($paramPISNT, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
     public function getPISOutr(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr::NAME)->item(0);
+        return $this->getElementsByTagName(self::PISOUTR)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
     public function addPISOutr(){
@@ -118,12 +126,12 @@ class PIS extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr $paramPISOutr 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
     public function setPISOutr(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr $paramPISOutr){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr::NAME);
+        $this->removeElementsByTagName(self::PISOUTR);
         $this->appendChild($paramPISOutr, false);
         return $this;
     }

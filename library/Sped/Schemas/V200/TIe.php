@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * Tipo Inscrição Estadual do Emitente // alterado EM 24/10/08 para aceitar ISENTO
-
  * @name TIe
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TIe extends \Sped\Components\Xml\Element  {
-    const NAME = 'Ie';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
 
 /**
@@ -11,10 +12,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class CProd extends \Sped\Components\Xml\Element  {
-    const NAME = 'cProd';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

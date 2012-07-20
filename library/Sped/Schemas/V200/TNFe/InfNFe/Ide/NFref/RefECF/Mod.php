@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF;
 
 /**
@@ -11,10 +12,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class Mod extends \Sped\Components\Xml\Element  {
-    const NAME = 'mod';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * Tipo Nota Fiscal Eletrônica // v2.0
-
  * @name TNFe
  * @category Sped
  * @package Sped
@@ -11,22 +11,26 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TNFe extends \Sped\Components\Xml\Element  {
-    const NAME = 'NFe';
+
+    const INFNFE = 'infNFe';
+
+    const SIGNATURE = 'Signature';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function getInfNFe(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe::NAME)->item(0);
+        return $this->getElementsByTagName(self::INFNFE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function addInfNFe(){
@@ -34,27 +38,27 @@ class TNFe extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe $paramInfNFe 
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function setInfNFe(\Sped\Schemas\V200\TNFe\InfNFe $paramInfNFe){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe::NAME);
+        $this->removeElementsByTagName(self::INFNFE);
         $this->appendChild($paramInfNFe, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\SignatureType 
      */
     public function getSignature(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\SignatureType::NAME)->item(0);
+        return $this->getElementsByTagName(self::SIGNATURE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\SignatureType 
      */
     public function addSignature(){
@@ -62,12 +66,12 @@ class TNFe extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\SignatureType $paramSignature 
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function setSignature(\Sped\Schemas\V200\SignatureType $paramSignature){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\SignatureType::NAME);
+        $this->removeElementsByTagName(self::SIGNATURE);
         $this->appendChild($paramSignature, false);
         return $this;
     }

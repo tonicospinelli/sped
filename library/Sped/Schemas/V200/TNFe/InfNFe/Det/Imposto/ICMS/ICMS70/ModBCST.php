@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS70;
 
 /**
@@ -16,10 +17,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS70;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class ModBCST extends \Sped\Components\Xml\Element  {
-    const NAME = 'modBCST';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

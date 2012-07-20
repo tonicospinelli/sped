@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * Nota Fiscal Eletrônica
-
  * @category Sped
  * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
@@ -12,17 +12,19 @@ namespace Sped\Schemas\V200;
  */
 class DocumentNFe extends \Sped\Components\Xml\Document  {
 
-    /**
+    const NFE = 'NFe';
 
+    /**
+     * 
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function getNFe(){
-        $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe::NAME)->item(0);
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
+        return $this->getElementsByTagName(self::NFE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function addNFe(){
@@ -30,12 +32,12 @@ class DocumentNFe extends \Sped\Components\Xml\Document  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe $paramNFe 
      * @return \Sped\Schemas\V200\DocumentNFe 
      */
     public function setNFe(\Sped\Schemas\V200\TNFe $paramNFe){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe::NAME);
+        $this->removeElementsByTagName(self::NFE);
         $this->appendChild($paramNFe, false);
         return $this;
     }

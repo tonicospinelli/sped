@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Emit;
 
 /**
  * Nome fantasia
-
  * @name XFant
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Emit;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class XFant extends \Sped\Components\Xml\Element  {
-    const NAME = 'xFant';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

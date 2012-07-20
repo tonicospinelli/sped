@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10;
 
 /**
  * 10 - Tributada e com cobrança do ICMS por substituição tributária 
-
  * @name CST
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class CST extends \Sped\Components\Xml\Element  {
-    const NAME = 'CST';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

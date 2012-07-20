@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Avulsa;
 
 /**
  * Nome do agente
-
  * @name XAgente
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Avulsa;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class XAgente extends \Sped\Components\Xml\Element  {
-    const NAME = 'xAgente';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

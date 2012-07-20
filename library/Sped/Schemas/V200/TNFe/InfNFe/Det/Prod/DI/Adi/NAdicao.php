@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi;
 
 /**
  * Número da Adição
-
  * @name NAdicao
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class NAdicao extends \Sped\Components\Xml\Element  {
-    const NAME = 'nAdicao';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

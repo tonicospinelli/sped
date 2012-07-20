@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Exporta;
 
 /**
  * Local onde ocorrerá o embarque dos produtos
-
  * @name XLocEmbarq
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Exporta;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class XLocEmbarq extends \Sped\Components\Xml\Element  {
-    const NAME = 'xLocEmbarq';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

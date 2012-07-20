@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * 
-
  * @category Sped
  * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
@@ -12,17 +12,19 @@ namespace Sped\Schemas\V200;
  */
 class DocumentSignature extends \Sped\Components\Xml\Document  {
 
-    /**
+    const SIGNATURE = 'Signature';
 
+    /**
+     * 
      * @return \Sped\Schemas\V200\SignatureType 
      */
     public function getSignature(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\SignatureType::NAME)->item(0);
+        return $this->getElementsByTagName(self::SIGNATURE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\SignatureType 
      */
     public function addSignature(){
@@ -30,12 +32,12 @@ class DocumentSignature extends \Sped\Components\Xml\Document  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\SignatureType $paramSignature 
      * @return \Sped\Schemas\V200\DocumentSignature 
      */
     public function setSignature(\Sped\Schemas\V200\SignatureType $paramSignature){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\SignatureType::NAME);
+        $this->removeElementsByTagName(self::SIGNATURE);
         $this->appendChild($paramSignature, false);
         return $this;
     }

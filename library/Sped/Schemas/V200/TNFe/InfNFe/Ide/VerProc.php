@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
 
 /**
@@ -11,10 +12,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class VerProc extends \Sped\Components\Xml\Element  {
-    const NAME = 'verProc';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

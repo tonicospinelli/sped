@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TLocal;
 
 /**
  * Logradouro
-
  * @name XLgr
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TLocal;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class XLgr extends \Sped\Components\Xml\Element  {
-    const NAME = 'xLgr';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * Tipo Protocolo de status resultado do processamento da NF-e
-
  * @name TProtNFe
  * @category Sped
  * @package Sped
@@ -11,22 +11,26 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TProtNFe extends \Sped\Components\Xml\Element  {
-    const NAME = 'ProtNFe';
+
+    const INFPROT = 'infProt';
+
+    const SIGNATURE = 'Signature';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
     public function getInfProt(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TProtNFe\InfProt');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TProtNFe\InfProt::NAME)->item(0);
+        return $this->getElementsByTagName(self::INFPROT)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
     public function addInfProt(){
@@ -34,28 +38,28 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TProtNFe\InfProt $paramInfProt 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
     public function setInfProt(\Sped\Schemas\V200\TProtNFe\InfProt $paramInfProt){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TProtNFe\InfProt::NAME);
+        $this->removeElementsByTagName(self::INFPROT);
         $this->appendChild($paramInfProt, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\SignatureType 
      * @param int $index 
      */
     public function getSignature(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\SignatureType::NAME)->item($index);
+        return $this->getElementsByTagName(self::SIGNATURE)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\SignatureType 
      */
     public function addSignature(){
@@ -63,18 +67,18 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\SignatureType $paramSignature 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
     public function setSignature(\Sped\Schemas\V200\SignatureType $paramSignature){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\SignatureType::NAME);
+        $this->removeElementsByTagName(self::SIGNATURE);
         $this->appendChild($paramSignature, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return string 
      */
     public function getVersao(){
@@ -82,7 +86,7 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param string $value 
      * @return \Sped\Schemas\V200\TProtNFe 
      */

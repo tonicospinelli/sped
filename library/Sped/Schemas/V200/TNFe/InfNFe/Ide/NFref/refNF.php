@@ -1,51 +1,199 @@
 <?php
 
-/**
- * Sped
- *
- * Copyright (c) 2012 Sped
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- *
- * @category   Sped
- * @package    Sped
- * @copyright  Copyright (c) 2012 Sped (https://github.com/tonicospinelli/Sped)
- * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
- * @version    ##VERSION##, ##DATE##
- */
-
-namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFRef;
+namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref;
 
 /**
- * Chave de acesso da NF-e referenciada.<br>
- * Utilizar esta TAG para referenciar uma <br>
- * Nota Fiscal Eletrônica emitida anteriormente,<br>
- * vinculada a NF-e atual.
- * 
- * @category   Sped
- * @package    Sped\Schemas\V200\TNFe\InfNFe\Ide
- * @copyright  Copyright (c) 2012
- * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
- * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+ * Dados da NF modelo 1/1A referenciada
+ * @name RefNF
+ * @category Sped
+ * @package Sped
+ * @copyright Copyright (c) 2012 Antonio Spinelli
+ * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
-class RefNF extends \Sped\Components\Xml\Element {
+class RefNF extends \Sped\Components\Xml\Element  {
 
-    const NAME = 'refNF';
+    const CUF = 'cUF';
 
-    public function __construct() {
+    const AAMM = 'AAMM';
+
+    const CNPJ = 'CNPJ';
+
+    const MOD = 'mod';
+
+    const SERIE = 'serie';
+
+    const NNF = 'nNF';
+
+    public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TCodUfIBGE 
+     */
+    public function getCUF(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCodUfIBGE');
+        return $this->getElementsByTagName(self::CUF)->item(0);
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TCodUfIBGE 
+     */
+    public function addCUF(){
+        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(), true);
+    }
+
+    /**
+     * 
+     * @param \Sped\Schemas\V200\TCodUfIBGE $paramCUF 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
+     */
+    public function setCUF(\Sped\Schemas\V200\TCodUfIBGE $paramCUF){
+        $this->removeElementsByTagName(self::CUF);
+        $this->appendChild($paramCUF, false);
+        return $this;
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\AAMM 
+     */
+    public function getAAMM(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\AAMM');
+        return $this->getElementsByTagName(self::AAMM)->item(0);
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\AAMM 
+     */
+    public function addAAMM(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\AAMM(), true);
+    }
+
+    /**
+     * 
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\AAMM $paramAAMM 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
+     */
+    public function setAAMM(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\AAMM $paramAAMM){
+        $this->removeElementsByTagName(self::AAMM);
+        $this->appendChild($paramAAMM, false);
+        return $this;
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TCnpj 
+     */
+    public function getCNPJ(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCnpj');
+        return $this->getElementsByTagName(self::CNPJ)->item(0);
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TCnpj 
+     */
+    public function addCNPJ(){
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(), true);
+    }
+
+    /**
+     * 
+     * @param \Sped\Schemas\V200\TCnpj $paramCNPJ 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
+     */
+    public function setCNPJ(\Sped\Schemas\V200\TCnpj $paramCNPJ){
+        $this->removeElementsByTagName(self::CNPJ);
+        $this->appendChild($paramCNPJ, false);
+        return $this;
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\Mod 
+     */
+    public function getMod(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\Mod');
+        return $this->getElementsByTagName(self::MOD)->item(0);
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\Mod 
+     */
+    public function addMod(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\Mod(), true);
+    }
+
+    /**
+     * 
+     * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\Mod $paramMod 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
+     */
+    public function setMod(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\Mod $paramMod){
+        $this->removeElementsByTagName(self::MOD);
+        $this->appendChild($paramMod, false);
+        return $this;
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TSerie 
+     */
+    public function getSerie(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TSerie');
+        return $this->getElementsByTagName(self::SERIE)->item(0);
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TSerie 
+     */
+    public function addSerie(){
+        return $this->appendChild(new \Sped\Schemas\V200\TSerie(), true);
+    }
+
+    /**
+     * 
+     * @param \Sped\Schemas\V200\TSerie $paramSerie 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
+     */
+    public function setSerie(\Sped\Schemas\V200\TSerie $paramSerie){
+        $this->removeElementsByTagName(self::SERIE);
+        $this->appendChild($paramSerie, false);
+        return $this;
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TNF 
+     */
+    public function getNNF(){
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNF');
+        return $this->getElementsByTagName(self::NNF)->item(0);
+    }
+
+    /**
+     * 
+     * @return \Sped\Schemas\V200\TNF 
+     */
+    public function addNNF(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNF(), true);
+    }
+
+    /**
+     * 
+     * @param \Sped\Schemas\V200\TNF $paramNNF 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
+     */
+    public function setNNF(\Sped\Schemas\V200\TNF $paramNNF){
+        $this->removeElementsByTagName(self::NNF);
+        $this->appendChild($paramNNF, false);
+        return $this;
     }
 
 }

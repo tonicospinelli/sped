@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * 
-
  * @name ReferenceType
  * @category Sped
  * @package Sped
@@ -11,22 +11,28 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class ReferenceType extends \Sped\Components\Xml\Element  {
-    const NAME = 'Reference';
+
+    const TRANSFORMS = 'Transforms';
+
+    const DIGESTMETHOD = 'DigestMethod';
+
+    const DIGESTVALUE = 'DigestValue';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TransformsType 
      */
     public function getTransforms(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TransformsType');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TransformsType::NAME)->item(0);
+        return $this->getElementsByTagName(self::TRANSFORMS)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TransformsType 
      */
     public function addTransforms(){
@@ -34,27 +40,27 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TransformsType $paramTransforms 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
     public function setTransforms(\Sped\Schemas\V200\TransformsType $paramTransforms){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TransformsType::NAME);
+        $this->removeElementsByTagName(self::TRANSFORMS);
         $this->appendChild($paramTransforms, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\ReferenceType\DigestMethod 
      */
     public function getDigestMethod(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\ReferenceType\DigestMethod');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\ReferenceType\DigestMethod::NAME)->item(0);
+        return $this->getElementsByTagName(self::DIGESTMETHOD)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\ReferenceType\DigestMethod 
      */
     public function addDigestMethod(){
@@ -62,27 +68,27 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\ReferenceType\DigestMethod $paramDigestMethod 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
     public function setDigestMethod(\Sped\Schemas\V200\ReferenceType\DigestMethod $paramDigestMethod){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\ReferenceType\DigestMethod::NAME);
+        $this->removeElementsByTagName(self::DIGESTMETHOD);
         $this->appendChild($paramDigestMethod, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\DigestValueType 
      */
     public function getDigestValue(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\DigestValueType');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\DigestValueType::NAME)->item(0);
+        return $this->getElementsByTagName(self::DIGESTVALUE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\DigestValueType 
      */
     public function addDigestValue(){
@@ -90,18 +96,18 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\DigestValueType $paramDigestValue 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
     public function setDigestValue(\Sped\Schemas\V200\DigestValueType $paramDigestValue){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\DigestValueType::NAME);
+        $this->removeElementsByTagName(self::DIGESTVALUE);
         $this->appendChild($paramDigestValue, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return string 
      */
     public function getId(){
@@ -109,7 +115,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param string $value 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
@@ -119,7 +125,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @return boolean 
      */
     public function isSetId(){
@@ -127,7 +133,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @return boolean 
      */
     public function unsetId(){
@@ -136,7 +142,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @return string 
      */
     public function getURI(){
@@ -144,7 +150,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param string $value 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
@@ -154,7 +160,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @return string 
      */
     public function getType(){
@@ -162,7 +168,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param string $value 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
@@ -172,7 +178,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @return boolean 
      */
     public function isSetType(){
@@ -180,7 +186,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @return boolean 
      */
     public function unsetType(){

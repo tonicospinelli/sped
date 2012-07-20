@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq;
 
 /**
@@ -12,10 +13,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class CST extends \Sped\Components\Xml\Element  {
-    const NAME = 'CST';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

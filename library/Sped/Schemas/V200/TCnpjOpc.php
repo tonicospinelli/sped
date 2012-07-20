@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * Tipo Número do CNPJ Opcional
-
  * @name TCnpjOpc
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TCnpjOpc extends \Sped\Components\Xml\Element  {
-    const NAME = 'CnpjOpc';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\ReferenceType;
 
 /**
  * 
-
  * @name DigestMethod
  * @category Sped
  * @package Sped
@@ -11,13 +11,13 @@ namespace Sped\Schemas\V200\ReferenceType;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class DigestMethod extends \Sped\Components\Xml\Element  {
-    const NAME = 'DigestMethod';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return string 
      */
     public function getAlgorithm(){
@@ -25,7 +25,7 @@ class DigestMethod extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param string $value 
      * @return \Sped\Schemas\V200\ReferenceType\DigestMethod 
      */

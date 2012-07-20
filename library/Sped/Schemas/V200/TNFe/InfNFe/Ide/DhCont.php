@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
 
 /**
  * Informar a data e hora de entrada em contingência contingência no formato AAAA-MM-DDTHH:MM:SS (v.2.0).
-
  * @name DhCont
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class DhCont extends \Sped\Components\Xml\Element  {
-    const NAME = 'dhCont';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

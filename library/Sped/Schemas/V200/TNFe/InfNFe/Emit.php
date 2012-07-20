@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Identificação do emitente
-
  * @name Emit
  * @category Sped
  * @package Sped
@@ -11,22 +11,42 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class Emit extends \Sped\Components\Xml\Element  {
-    const NAME = 'emit';
+
+    const CNPJ = 'CNPJ';
+
+    const CPF = 'CPF';
+
+    const XNOME = 'xNome';
+
+    const XFANT = 'xFant';
+
+    const ENDEREMIT = 'enderEmit';
+
+    const IE = 'IE';
+
+    const IEST = 'IEST';
+
+    const IM = 'IM';
+
+    const CNAE = 'CNAE';
+
+    const CRT = 'CRT';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function getCNPJ(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCnpj');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TCnpj::NAME)->item(0);
+        return $this->getElementsByTagName(self::CNPJ)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function addCNPJ(){
@@ -34,27 +54,27 @@ class Emit extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TCnpj $paramCNPJ 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function setCNPJ(\Sped\Schemas\V200\TCnpj $paramCNPJ){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TCnpj::NAME);
+        $this->removeElementsByTagName(self::CNPJ);
         $this->appendChild($paramCNPJ, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function getCPF(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCpf');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TCpf::NAME)->item(0);
+        return $this->getElementsByTagName(self::CPF)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function addCPF(){
@@ -62,27 +82,27 @@ class Emit extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TCpf $paramCPF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function setCPF(\Sped\Schemas\V200\TCpf $paramCPF){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TCpf::NAME);
+        $this->removeElementsByTagName(self::CPF);
         $this->appendChild($paramCPF, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome 
      */
     public function getXNome(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome::NAME)->item(0);
+        return $this->getElementsByTagName(self::XNOME)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome 
      */
     public function addXNome(){
@@ -90,28 +110,28 @@ class Emit extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome $paramXNome 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function setXNome(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome $paramXNome){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome::NAME);
+        $this->removeElementsByTagName(self::XNOME);
         $this->appendChild($paramXNome, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant 
      * @param int $index 
      */
     public function getXFant(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant::NAME)->item($index);
+        return $this->getElementsByTagName(self::XFANT)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant 
      */
     public function addXFant(){
@@ -119,27 +139,27 @@ class Emit extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant $paramXFant 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function setXFant(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant $paramXFant){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant::NAME);
+        $this->removeElementsByTagName(self::XFANT);
         $this->appendChild($paramXFant, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
     public function getEnderEmit(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TEnderEmi::NAME)->item(0);
+        return $this->getElementsByTagName(self::ENDEREMIT)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
     public function addEnderEmit(){
@@ -147,27 +167,27 @@ class Emit extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TEnderEmi $paramEnderEmit 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function setEnderEmit(\Sped\Schemas\V200\TEnderEmi $paramEnderEmit){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TEnderEmi::NAME);
+        $this->removeElementsByTagName(self::ENDEREMIT);
         $this->appendChild($paramEnderEmit, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TIe 
      */
     public function getIE(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIe');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TIe::NAME)->item(0);
+        return $this->getElementsByTagName(self::IE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TIe 
      */
     public function addIE(){
@@ -175,28 +195,28 @@ class Emit extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TIe $paramIE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function setIE(\Sped\Schemas\V200\TIe $paramIE){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TIe::NAME);
+        $this->removeElementsByTagName(self::IE);
         $this->appendChild($paramIE, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TIeST 
      * @param int $index 
      */
     public function getIEST(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIeST');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TIeST::NAME)->item($index);
+        return $this->getElementsByTagName(self::IEST)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TIeST 
      */
     public function addIEST(){
@@ -204,27 +224,27 @@ class Emit extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TIeST $paramIEST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function setIEST(\Sped\Schemas\V200\TIeST $paramIEST){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TIeST::NAME);
+        $this->removeElementsByTagName(self::IEST);
         $this->appendChild($paramIEST, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM 
      */
     public function getIM(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\IM');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\IM::NAME)->item(0);
+        return $this->getElementsByTagName(self::IM)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM 
      */
     public function addIM(){
@@ -232,27 +252,27 @@ class Emit extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM $paramIM 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function setIM(\Sped\Schemas\V200\TNFe\InfNFe\Emit\IM $paramIM){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\IM::NAME);
+        $this->removeElementsByTagName(self::IM);
         $this->appendChild($paramIM, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE 
      */
     public function getCNAE(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE::NAME)->item(0);
+        return $this->getElementsByTagName(self::CNAE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE 
      */
     public function addCNAE(){
@@ -260,27 +280,27 @@ class Emit extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE $paramCNAE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function setCNAE(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE $paramCNAE){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE::NAME);
+        $this->removeElementsByTagName(self::CNAE);
         $this->appendChild($paramCNAE, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT 
      */
     public function getCRT(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT::NAME)->item(0);
+        return $this->getElementsByTagName(self::CRT)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT 
      */
     public function addCRT(){
@@ -288,12 +308,12 @@ class Emit extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT $paramCRT 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function setCRT(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT $paramCRT){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT::NAME);
+        $this->removeElementsByTagName(self::CRT);
         $this->appendChild($paramCRT, false);
         return $this;
     }

@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Compra;
 
 /**
  * Informação do contrato
-
  * @name XCont
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Compra;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class XCont extends \Sped\Components\Xml\Element  {
-    const NAME = 'xCont';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

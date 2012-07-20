@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto;
 
 /**
  * ISSQN
-
  * @name ISSQN
  * @category Sped
  * @package Sped
@@ -11,22 +11,34 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class ISSQN extends \Sped\Components\Xml\Element  {
-    const NAME = 'ISSQN';
+
+    const VBC = 'vBC';
+
+    const VALIQ = 'vAliq';
+
+    const VISSQN = 'vISSQN';
+
+    const CMUNFG = 'cMunFG';
+
+    const CLISTSERV = 'cListServ';
+
+    const CSITTRIB = 'cSitTrib';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VBC)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC(){
@@ -34,27 +46,27 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
     public function setVBC(\Sped\Schemas\V200\TDec_1302 $paramVBC){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VBC);
         $this->appendChild($paramVBC, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getVAliq(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_0302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VALIQ)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addVAliq(){
@@ -62,27 +74,27 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_0302 $paramVAliq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
     public function setVAliq(\Sped\Schemas\V200\TDec_0302 $paramVAliq){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_0302::NAME);
+        $this->removeElementsByTagName(self::VALIQ);
         $this->appendChild($paramVAliq, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVISSQN(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VISSQN)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVISSQN(){
@@ -90,27 +102,27 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVISSQN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
     public function setVISSQN(\Sped\Schemas\V200\TDec_1302 $paramVISSQN){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VISSQN);
         $this->appendChild($paramVISSQN, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function getCMunFG(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCodMunIBGE');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TCodMunIBGE::NAME)->item(0);
+        return $this->getElementsByTagName(self::CMUNFG)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMunFG(){
@@ -118,27 +130,27 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TCodMunIBGE $paramCMunFG 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
     public function setCMunFG(\Sped\Schemas\V200\TCodMunIBGE $paramCMunFG){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TCodMunIBGE::NAME);
+        $this->removeElementsByTagName(self::CMUNFG);
         $this->appendChild($paramCMunFG, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TCListServ 
      */
     public function getCListServ(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCListServ');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TCListServ::NAME)->item(0);
+        return $this->getElementsByTagName(self::CLISTSERV)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TCListServ 
      */
     public function addCListServ(){
@@ -146,27 +158,27 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TCListServ $paramCListServ 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
     public function setCListServ(\Sped\Schemas\V200\TCListServ $paramCListServ){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TCListServ::NAME);
+        $this->removeElementsByTagName(self::CLISTSERV);
         $this->appendChild($paramCListServ, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib 
      */
     public function getCSitTrib(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib::NAME)->item(0);
+        return $this->getElementsByTagName(self::CSITTRIB)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib 
      */
     public function addCSitTrib(){
@@ -174,12 +186,12 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib $paramCSitTrib 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
     public function setCSitTrib(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib $paramCSitTrib){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib::NAME);
+        $this->removeElementsByTagName(self::CSITTRIB);
         $this->appendChild($paramCSitTrib, false);
         return $this;
     }

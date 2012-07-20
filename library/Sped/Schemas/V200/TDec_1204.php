@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * Tipo Decimal com 16 dígitos, sendo 12 de corpo e 4 decimais
-
  * @name TDec_1204
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TDec_1204 extends \Sped\Components\Xml\Element  {
-    const NAME = 'Dec_1204';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

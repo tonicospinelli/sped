@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
 
 /**
@@ -11,22 +12,32 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class Comb extends \Sped\Components\Xml\Element  {
-    const NAME = 'comb';
+
+    const CPRODANP = 'cProdANP';
+
+    const CODIF = 'CODIF';
+
+    const QTEMP = 'qTemp';
+
+    const UFCONS = 'UFCons';
+
+    const CIDE = 'CIDE';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP 
      */
     public function getCProdANP(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP::NAME)->item(0);
+        return $this->getElementsByTagName(self::CPRODANP)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP 
      */
     public function addCProdANP(){
@@ -34,28 +45,28 @@ class Comb extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP $paramCProdANP 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
     public function setCProdANP(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP $paramCProdANP){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP::NAME);
+        $this->removeElementsByTagName(self::CPRODANP);
         $this->appendChild($paramCProdANP, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      * @param int $index 
      */
     public function getCODIF(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF::NAME)->item($index);
+        return $this->getElementsByTagName(self::CODIF)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      */
     public function addCODIF(){
@@ -63,28 +74,28 @@ class Comb extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF $paramCODIF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
     public function setCODIF(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF $paramCODIF){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF::NAME);
+        $this->removeElementsByTagName(self::CODIF);
         $this->appendChild($paramCODIF, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      * @param int $index 
      */
     public function getQTemp(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1204Opc');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1204Opc::NAME)->item($index);
+        return $this->getElementsByTagName(self::QTEMP)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
     public function addQTemp(){
@@ -92,27 +103,27 @@ class Comb extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1204Opc $paramQTemp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
     public function setQTemp(\Sped\Schemas\V200\TDec_1204Opc $paramQTemp){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1204Opc::NAME);
+        $this->removeElementsByTagName(self::QTEMP);
         $this->appendChild($paramQTemp, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function getUFCons(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TUf');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TUf::NAME)->item(0);
+        return $this->getElementsByTagName(self::UFCONS)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function addUFCons(){
@@ -120,28 +131,28 @@ class Comb extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TUf $paramUFCons 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
     public function setUFCons(\Sped\Schemas\V200\TUf $paramUFCons){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TUf::NAME);
+        $this->removeElementsByTagName(self::UFCONS);
         $this->appendChild($paramUFCons, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      * @param int $index 
      */
     public function getCIDE(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE::NAME)->item($index);
+        return $this->getElementsByTagName(self::CIDE)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
     public function addCIDE(){
@@ -149,12 +160,12 @@ class Comb extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE $paramCIDE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
     public function setCIDE(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE $paramCIDE){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE::NAME);
+        $this->removeElementsByTagName(self::CIDE);
         $this->appendChild($paramCIDE, false);
         return $this;
     }

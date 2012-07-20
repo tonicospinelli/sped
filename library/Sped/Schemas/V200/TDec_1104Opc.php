@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * Tipo Decimal com 15 dígitos, sendo 11 de corpo e 4 decimais, utilizado em tags opcionais
-
  * @name TDec_1104Opc
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TDec_1104Opc extends \Sped\Components\Xml\Element  {
-    const NAME = 'Dec_1104Opc';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

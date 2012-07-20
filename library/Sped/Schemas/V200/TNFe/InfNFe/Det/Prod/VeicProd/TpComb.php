@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
 
 /**
@@ -17,10 +18,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TpComb extends \Sped\Components\Xml\Element  {
-    const NAME = 'tpComb';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

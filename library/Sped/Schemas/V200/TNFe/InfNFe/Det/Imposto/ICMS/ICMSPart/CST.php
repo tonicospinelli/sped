@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSPart;
 
 /**
@@ -12,10 +13,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSPart;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class CST extends \Sped\Components\Xml\Element  {
-    const NAME = 'CST';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol;
 
 /**
  * Espécie dos volumes transportados
-
  * @name Esp
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class Esp extends \Sped\Components\Xml\Element  {
-    const NAME = 'esp';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

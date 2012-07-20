@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
 
 /**
@@ -17,10 +18,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TpEmis extends \Sped\Components\Xml\Element  {
-    const NAME = 'tpEmis';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

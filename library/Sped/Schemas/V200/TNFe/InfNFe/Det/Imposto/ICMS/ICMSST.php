@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS;
 
 /**
  * Grupo de informação do ICMSST devido para a UF de destino, nas operações interestaduais de produtos que tiveram retenção antecipada de ICMS por ST na UF do remetente. Repasse via Substituto Tributário. (v2.0)
-
  * @name ICMSST
  * @category Sped
  * @package Sped
@@ -11,22 +11,34 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class ICMSST extends \Sped\Components\Xml\Element  {
-    const NAME = 'ICMSST';
+
+    const ORIG = 'orig';
+
+    const CST = 'CST';
+
+    const VBCSTRET = 'vBCSTRet';
+
+    const VICMSSTRET = 'vICMSSTRet';
+
+    const VBCSTDEST = 'vBCSTDest';
+
+    const VICMSSTDEST = 'vICMSSTDest';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function getOrig(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Torig');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\Torig::NAME)->item(0);
+        return $this->getElementsByTagName(self::ORIG)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig(){
@@ -34,27 +46,27 @@ class ICMSST extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
     public function setOrig(\Sped\Schemas\V200\Torig $paramOrig){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\Torig::NAME);
+        $this->removeElementsByTagName(self::ORIG);
         $this->appendChild($paramOrig, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST 
      */
     public function getCST(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST::NAME)->item(0);
+        return $this->getElementsByTagName(self::CST)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST 
      */
     public function addCST(){
@@ -62,27 +74,27 @@ class ICMSST extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
     public function setCST(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST $paramCST){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST::NAME);
+        $this->removeElementsByTagName(self::CST);
         $this->appendChild($paramCST, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBCSTRet(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VBCSTRET)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCSTRet(){
@@ -90,27 +102,27 @@ class ICMSST extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCSTRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
     public function setVBCSTRet(\Sped\Schemas\V200\TDec_1302 $paramVBCSTRet){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VBCSTRET);
         $this->appendChild($paramVBCSTRet, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMSSTRet(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VICMSSTRET)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSSTRet(){
@@ -118,27 +130,27 @@ class ICMSST extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMSSTRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
     public function setVICMSSTRet(\Sped\Schemas\V200\TDec_1302 $paramVICMSSTRet){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VICMSSTRET);
         $this->appendChild($paramVICMSSTRet, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBCSTDest(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VBCSTDEST)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCSTDest(){
@@ -146,27 +158,27 @@ class ICMSST extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCSTDest 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
     public function setVBCSTDest(\Sped\Schemas\V200\TDec_1302 $paramVBCSTDest){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VBCSTDEST);
         $this->appendChild($paramVBCSTDest, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMSSTDest(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VICMSSTDEST)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSSTDest(){
@@ -174,12 +186,12 @@ class ICMSST extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMSSTDest 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
     public function setVICMSSTDest(\Sped\Schemas\V200\TDec_1302 $paramVICMSSTDest){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VICMSSTDEST);
         $this->appendChild($paramVICMSSTDest, false);
         return $this;
     }

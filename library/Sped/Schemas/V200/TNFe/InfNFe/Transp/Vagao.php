@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Transp;
 
 /**
  * Identificação do vagão (v2.0)
-
  * @name Vagao
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class Vagao extends \Sped\Components\Xml\Element  {
-    const NAME = 'vagao';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

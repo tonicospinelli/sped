@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
 
 /**
@@ -11,22 +12,36 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class DI extends \Sped\Components\Xml\Element  {
-    const NAME = 'DI';
+
+    const NDI = 'nDI';
+
+    const DDI = 'dDI';
+
+    const XLOCDESEMB = 'xLocDesemb';
+
+    const UFDESEMB = 'UFDesemb';
+
+    const DDESEMB = 'dDesemb';
+
+    const CEXPORTADOR = 'cExportador';
+
+    const ADI = 'adi';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI 
      */
     public function getNDI(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI::NAME)->item(0);
+        return $this->getElementsByTagName(self::NDI)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI 
      */
     public function addNDI(){
@@ -34,27 +49,27 @@ class DI extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI $paramNDI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function setNDI(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI $paramNDI){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI::NAME);
+        $this->removeElementsByTagName(self::NDI);
         $this->appendChild($paramNDI, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TData 
      */
     public function getDDI(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TData::NAME)->item(0);
+        return $this->getElementsByTagName(self::DDI)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDDI(){
@@ -62,27 +77,27 @@ class DI extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TData $paramDDI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function setDDI(\Sped\Schemas\V200\TData $paramDDI){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TData::NAME);
+        $this->removeElementsByTagName(self::DDI);
         $this->appendChild($paramDDI, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb 
      */
     public function getXLocDesemb(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb::NAME)->item(0);
+        return $this->getElementsByTagName(self::XLOCDESEMB)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb 
      */
     public function addXLocDesemb(){
@@ -90,27 +105,27 @@ class DI extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb $paramXLocDesemb 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function setXLocDesemb(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb $paramXLocDesemb){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb::NAME);
+        $this->removeElementsByTagName(self::XLOCDESEMB);
         $this->appendChild($paramXLocDesemb, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TUfEmi 
      */
     public function getUFDesemb(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TUfEmi');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TUfEmi::NAME)->item(0);
+        return $this->getElementsByTagName(self::UFDESEMB)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TUfEmi 
      */
     public function addUFDesemb(){
@@ -118,27 +133,27 @@ class DI extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TUfEmi $paramUFDesemb 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function setUFDesemb(\Sped\Schemas\V200\TUfEmi $paramUFDesemb){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TUfEmi::NAME);
+        $this->removeElementsByTagName(self::UFDESEMB);
         $this->appendChild($paramUFDesemb, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TData 
      */
     public function getDDesemb(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TData::NAME)->item(0);
+        return $this->getElementsByTagName(self::DDESEMB)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDDesemb(){
@@ -146,27 +161,27 @@ class DI extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TData $paramDDesemb 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function setDDesemb(\Sped\Schemas\V200\TData $paramDDesemb){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TData::NAME);
+        $this->removeElementsByTagName(self::DDESEMB);
         $this->appendChild($paramDDesemb, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador 
      */
     public function getCExportador(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador::NAME)->item(0);
+        return $this->getElementsByTagName(self::CEXPORTADOR)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador 
      */
     public function addCExportador(){
@@ -174,27 +189,27 @@ class DI extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador $paramCExportador 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function setCExportador(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador $paramCExportador){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador::NAME);
+        $this->removeElementsByTagName(self::CEXPORTADOR);
         $this->appendChild($paramCExportador, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */
     public function getAdi(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi::NAME)->item(0);
+        return $this->getElementsByTagName(self::ADI)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */
     public function addAdi(){
@@ -202,12 +217,12 @@ class DI extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi $paramAdi 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function setAdi(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi $paramAdi){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi::NAME);
+        $this->removeElementsByTagName(self::ADI);
         $this->appendChild($paramAdi, false);
         return $this;
     }

@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Compra;
 
 /**
  * Informação da Nota de Empenho de compras públicas (NT2011/004)
-
  * @name XNEmp
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Compra;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class XNEmp extends \Sped\Components\Xml\Element  {
-    const NAME = 'xNEmp';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

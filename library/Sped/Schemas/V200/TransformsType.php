@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * 
-
  * @name TransformsType
  * @category Sped
  * @package Sped
@@ -11,23 +11,25 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TransformsType extends \Sped\Components\Xml\Element  {
-    const NAME = 'ransforms';
+
+    const TRANSFORM = 'Transform';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TransformType 
      * @param int $index 
      */
     public function getTransform(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TransformType');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TransformType::NAME)->item($index);
+        return $this->getElementsByTagName(self::TRANSFORM)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TransformType 
      */
     public function addTransform(){
@@ -35,12 +37,12 @@ class TransformsType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TransformType $paramTransform 
      * @return \Sped\Schemas\V200\TransformsType 
      */
     public function setTransform(\Sped\Schemas\V200\TransformType $paramTransform){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TransformType::NAME);
+        $this->removeElementsByTagName(self::TRANSFORM);
         $this->appendChild($paramTransform, false);
         return $this;
     }

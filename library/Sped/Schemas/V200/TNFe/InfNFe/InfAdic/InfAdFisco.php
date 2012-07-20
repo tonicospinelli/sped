@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
 
 /**
  * Informações adicionais de interesse do Fisco (v2.0)
-
  * @name InfAdFisco
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class InfAdFisco extends \Sped\Components\Xml\Element  {
-    const NAME = 'infAdFisco';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

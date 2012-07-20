@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  *  Tipo hora HH:MM:SS // tipo acrescentado na v2.0
-
  * @name TTime
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TTime extends \Sped\Components\Xml\Element  {
-    const NAME = 'Time';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

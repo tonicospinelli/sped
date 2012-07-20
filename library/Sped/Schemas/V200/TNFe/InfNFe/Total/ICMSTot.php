@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Total;
 
 /**
  * Totais referentes ao ICMS
-
  * @name ICMSTot
  * @category Sped
  * @package Sped
@@ -11,22 +11,50 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Total;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class ICMSTot extends \Sped\Components\Xml\Element  {
-    const NAME = 'ICMSTot';
+
+    const VBC = 'vBC';
+
+    const VICMS = 'vICMS';
+
+    const VBCST = 'vBCST';
+
+    const VST = 'vST';
+
+    const VPROD = 'vProd';
+
+    const VFRETE = 'vFrete';
+
+    const VSEG = 'vSeg';
+
+    const VDESC = 'vDesc';
+
+    const VII = 'vII';
+
+    const VIPI = 'vIPI';
+
+    const VPIS = 'vPIS';
+
+    const VCOFINS = 'vCOFINS';
+
+    const VOUTRO = 'vOutro';
+
+    const VNF = 'vNF';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VBC)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC(){
@@ -34,27 +62,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVBC(\Sped\Schemas\V200\TDec_1302 $paramVBC){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VBC);
         $this->appendChild($paramVBC, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMS(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VICMS)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMS(){
@@ -62,27 +90,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVICMS(\Sped\Schemas\V200\TDec_1302 $paramVICMS){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VICMS);
         $this->appendChild($paramVICMS, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBCST(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VBCST)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCST(){
@@ -90,27 +118,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVBCST(\Sped\Schemas\V200\TDec_1302 $paramVBCST){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VBCST);
         $this->appendChild($paramVBCST, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVST(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VST)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVST(){
@@ -118,27 +146,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVST(\Sped\Schemas\V200\TDec_1302 $paramVST){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VST);
         $this->appendChild($paramVST, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVProd(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VPROD)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVProd(){
@@ -146,27 +174,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVProd(\Sped\Schemas\V200\TDec_1302 $paramVProd){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VPROD);
         $this->appendChild($paramVProd, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVFrete(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VFRETE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVFrete(){
@@ -174,27 +202,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVFrete 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVFrete(\Sped\Schemas\V200\TDec_1302 $paramVFrete){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VFRETE);
         $this->appendChild($paramVFrete, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVSeg(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VSEG)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVSeg(){
@@ -202,27 +230,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVSeg 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVSeg(\Sped\Schemas\V200\TDec_1302 $paramVSeg){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VSEG);
         $this->appendChild($paramVSeg, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVDesc(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VDESC)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVDesc(){
@@ -230,27 +258,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVDesc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVDesc(\Sped\Schemas\V200\TDec_1302 $paramVDesc){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VDESC);
         $this->appendChild($paramVDesc, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVII(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VII)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVII(){
@@ -258,27 +286,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVII 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVII(\Sped\Schemas\V200\TDec_1302 $paramVII){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VII);
         $this->appendChild($paramVII, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVIPI(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VIPI)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVIPI(){
@@ -286,27 +314,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVIPI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVIPI(\Sped\Schemas\V200\TDec_1302 $paramVIPI){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VIPI);
         $this->appendChild($paramVIPI, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVPIS(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VPIS)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVPIS(){
@@ -314,27 +342,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVPIS(\Sped\Schemas\V200\TDec_1302 $paramVPIS){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VPIS);
         $this->appendChild($paramVPIS, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVCOFINS(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VCOFINS)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCOFINS(){
@@ -342,27 +370,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVCOFINS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVCOFINS(\Sped\Schemas\V200\TDec_1302 $paramVCOFINS){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VCOFINS);
         $this->appendChild($paramVCOFINS, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVOutro(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VOUTRO)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVOutro(){
@@ -370,27 +398,27 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVOutro 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVOutro(\Sped\Schemas\V200\TDec_1302 $paramVOutro){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VOUTRO);
         $this->appendChild($paramVOutro, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVNF(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME)->item(0);
+        return $this->getElementsByTagName(self::VNF)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVNF(){
@@ -398,12 +426,12 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVNF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function setVNF(\Sped\Schemas\V200\TDec_1302 $paramVNF){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302::NAME);
+        $this->removeElementsByTagName(self::VNF);
         $this->appendChild($paramVNF, false);
         return $this;
     }

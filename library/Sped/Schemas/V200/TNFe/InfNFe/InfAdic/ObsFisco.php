@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
 
 /**
@@ -12,22 +13,24 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class ObsFisco extends \Sped\Components\Xml\Element  {
-    const NAME = 'obsFisco';
+
+    const XTEXTO = 'xTexto';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto 
      */
     public function getXTexto(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto::NAME)->item(0);
+        return $this->getElementsByTagName(self::XTEXTO)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto 
      */
     public function addXTexto(){
@@ -35,18 +38,18 @@ class ObsFisco extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto $paramXTexto 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      */
     public function setXTexto(\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto $paramXTexto){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto::NAME);
+        $this->removeElementsByTagName(self::XTEXTO);
         $this->appendChild($paramXTexto, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return string 
      */
     public function getXCampo(){
@@ -54,7 +57,7 @@ class ObsFisco extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      */

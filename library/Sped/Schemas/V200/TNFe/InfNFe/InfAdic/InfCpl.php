@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
 
 /**
  * Informações complementares de interesse do Contribuinte
-
  * @name InfCpl
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class InfCpl extends \Sped\Components\Xml\Element  {
-    const NAME = 'infCpl';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

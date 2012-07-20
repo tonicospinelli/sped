@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Cobr;
 
 /**
  * Dados da fatura
-
  * @name Fat
  * @category Sped
  * @package Sped
@@ -11,23 +11,31 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cobr;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class Fat extends \Sped\Components\Xml\Element  {
-    const NAME = 'fat';
+
+    const NFAT = 'nFat';
+
+    const VORIG = 'vOrig';
+
+    const VDESC = 'vDesc';
+
+    const VLIQ = 'vLiq';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      * @param int $index 
      */
     public function getNFat(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat::NAME)->item($index);
+        return $this->getElementsByTagName(self::NFAT)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      */
     public function addNFat(){
@@ -35,28 +43,28 @@ class Fat extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat $paramNFat 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
     public function setNFat(\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat $paramNFat){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat::NAME);
+        $this->removeElementsByTagName(self::NFAT);
         $this->appendChild($paramNFat, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param int $index 
      */
     public function getVOrig(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302Opc::NAME)->item($index);
+        return $this->getElementsByTagName(self::VORIG)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVOrig(){
@@ -64,28 +72,28 @@ class Fat extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
     public function setVOrig(\Sped\Schemas\V200\TDec_1302Opc $paramVOrig){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302Opc::NAME);
+        $this->removeElementsByTagName(self::VORIG);
         $this->appendChild($paramVOrig, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param int $index 
      */
     public function getVDesc(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302Opc::NAME)->item($index);
+        return $this->getElementsByTagName(self::VDESC)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVDesc(){
@@ -93,28 +101,28 @@ class Fat extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVDesc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
     public function setVDesc(\Sped\Schemas\V200\TDec_1302Opc $paramVDesc){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302Opc::NAME);
+        $this->removeElementsByTagName(self::VDESC);
         $this->appendChild($paramVDesc, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param int $index 
      */
     public function getVLiq(int $index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TDec_1302Opc::NAME)->item($index);
+        return $this->getElementsByTagName(self::VLIQ)->item($index);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVLiq(){
@@ -122,12 +130,12 @@ class Fat extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVLiq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
     public function setVLiq(\Sped\Schemas\V200\TDec_1302Opc $paramVLiq){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TDec_1302Opc::NAME);
+        $this->removeElementsByTagName(self::VLIQ);
         $this->appendChild($paramVLiq, false);
         return $this;
     }

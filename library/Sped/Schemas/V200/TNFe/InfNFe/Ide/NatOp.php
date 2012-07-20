@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
 
 /**
  * Descrição da Natureza da Operação
-
  * @name NatOp
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class NatOp extends \Sped\Components\Xml\Element  {
-    const NAME = 'natOp';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

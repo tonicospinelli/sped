@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40;
 
 /**
@@ -20,10 +21,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class MotDesICMS extends \Sped\Components\Xml\Element  {
-    const NAME = 'motDesICMS';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

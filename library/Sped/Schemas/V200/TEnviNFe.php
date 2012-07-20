@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  *  Tipo Pedido de Concessão de Autorização da Nota Fiscal Eletrônica
-
  * @name TEnviNFe
  * @category Sped
  * @package Sped
@@ -11,22 +11,26 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class TEnviNFe extends \Sped\Components\Xml\Element  {
-    const NAME = 'EnviNFe';
+
+    const IDLOTE = 'idLote';
+
+    const NFE = 'NFe';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TIdLote 
      */
     public function getIdLote(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIdLote');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TIdLote::NAME)->item(0);
+        return $this->getElementsByTagName(self::IDLOTE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TIdLote 
      */
     public function addIdLote(){
@@ -34,27 +38,27 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TIdLote $paramIdLote 
      * @return \Sped\Schemas\V200\TEnviNFe 
      */
     public function setIdLote(\Sped\Schemas\V200\TIdLote $paramIdLote){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TIdLote::NAME);
+        $this->removeElementsByTagName(self::IDLOTE);
         $this->appendChild($paramIdLote, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function getNFe(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\TNFe::NAME)->item(0);
+        return $this->getElementsByTagName(self::NFE)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function addNFe(){
@@ -62,18 +66,18 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\TNFe $paramNFe 
      * @return \Sped\Schemas\V200\TEnviNFe 
      */
     public function setNFe(\Sped\Schemas\V200\TNFe $paramNFe){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\TNFe::NAME);
+        $this->removeElementsByTagName(self::NFE);
         $this->appendChild($paramNFe, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return string 
      */
     public function getVersao(){
@@ -81,7 +85,7 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param string $value 
      * @return \Sped\Schemas\V200\TEnviNFe 
      */

@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
  * 
-
  * @name KeyInfoType
  * @category Sped
  * @package Sped
@@ -11,22 +11,24 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class KeyInfoType extends \Sped\Components\Xml\Element  {
-    const NAME = 'KeyInfo';
+
+    const X509DATA = 'X509Data';
+
     public function __construct(){
         parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\X509DataType 
      */
     public function getX509Data(){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\X509DataType');
-        return $this->getElementsByTagName(\Sped\Schemas\V200\X509DataType::NAME)->item(0);
+        return $this->getElementsByTagName(self::X509DATA)->item(0);
     }
 
     /**
-
+     * 
      * @return \Sped\Schemas\V200\X509DataType 
      */
     public function addX509Data(){
@@ -34,18 +36,18 @@ class KeyInfoType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param \Sped\Schemas\V200\X509DataType $paramX509Data 
      * @return \Sped\Schemas\V200\KeyInfoType 
      */
     public function setX509Data(\Sped\Schemas\V200\X509DataType $paramX509Data){
-        $this->removeElementsByTagName(\Sped\Schemas\V200\X509DataType::NAME);
+        $this->removeElementsByTagName(self::X509DATA);
         $this->appendChild($paramX509Data, false);
         return $this;
     }
 
     /**
-
+     * 
      * @return string 
      */
     public function getId(){
@@ -53,7 +55,7 @@ class KeyInfoType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @param string $value 
      * @return \Sped\Schemas\V200\KeyInfoType 
      */
@@ -63,7 +65,7 @@ class KeyInfoType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @return boolean 
      */
     public function isSetId(){
@@ -71,7 +73,7 @@ class KeyInfoType extends \Sped\Components\Xml\Element  {
     }
 
     /**
-
+     * 
      * @return boolean 
      */
     public function unsetId(){

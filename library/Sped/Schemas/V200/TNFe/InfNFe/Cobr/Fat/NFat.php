@@ -1,9 +1,9 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat;
 
 /**
  * Número da fatura
-
  * @name NFat
  * @category Sped
  * @package Sped
@@ -11,10 +11,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class NFat extends \Sped\Components\Xml\Element  {
-    const NAME = 'nFat';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

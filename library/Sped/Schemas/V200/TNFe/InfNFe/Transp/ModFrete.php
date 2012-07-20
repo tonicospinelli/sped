@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200\TNFe\InfNFe\Transp;
 
 /**
@@ -14,10 +15,9 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class ModFrete extends \Sped\Components\Xml\Element  {
-    const NAME = 'modFrete';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){

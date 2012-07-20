@@ -1,4 +1,5 @@
 <?php
+
 namespace Sped\Schemas\V200;
 
 /**
@@ -26,10 +27,9 @@ namespace Sped\Schemas\V200;
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  */
 class Tpais extends \Sped\Components\Xml\Element  {
-    const NAME = 'pais';
 
     /**
-
+     * 
      * @param string $value 
      */
     public function __construct(string $value = NULL){
