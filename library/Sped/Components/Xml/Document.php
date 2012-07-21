@@ -154,7 +154,6 @@ class Document extends \DOMDocument {
                 $this->namespaces[$key] = $node->nodeValue;
             }
         }
-        var_dump($this->namespaces);
         return $this->namespaces;
     }
 
