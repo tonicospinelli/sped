@@ -112,6 +112,12 @@ class Schema {
         return true;
     }
 
+    /**
+     *
+     * @param \DOMElement $node
+     * @param type $namespace
+     * @param type $dirTarget 
+     */
     public function createClassFromNode(\DOMElement $node = null, $namespace = null, $dirTarget = null) {
         if ($node === null)
             $node = $this->getLoadedSchema()->firstChild;
@@ -133,8 +139,10 @@ class Schema {
         $class->setDescription($this->getDocumentation($node));
         $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'category', 'description' => 'Sped')));
         $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'package', 'description' => 'Sped')));
-        $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'copyright', 'description' => 'Copyright (c) 2012 Antonio Spinelli')));
-        $class->addCommentTag(new \PhpClass_DocBlock_Tag(array('name' => 'license', 'description' => 'http://www.gnu.org/licenses/gpl.html GNU/GPL v.3')));
+        $class->addCommentTag(new \PhpClass_DocBlock_Tag(
+                        array('name' => 'copyright', 'description' => 'Copyright (c) 2012 Antonio Spinelli')));
+        $class->addCommentTag(new \PhpClass_DocBlock_Tag(
+                        array('name' => 'license', 'description' => 'http://www.gnu.org/licenses/gpl.html GNU/GPL v.3')));
 
         $nodeName = $node->getAttribute('name');
         //verifica se o elemento está apenas no segundo nível do documento
@@ -158,7 +166,8 @@ class Schema {
                         'value' => $nodeName)));
 
             $class->addMethod($this->createElementGetMethod($methodName, $methodNamespace, false, false));
-            $class->addMethod($this->createElementAddMethod($methodName, $methodNamespace));
+            $class->addMethod($this->createElementAddMethod(array(
+                        'name' => $methodName, 'type' => $methodNamespace, 'namespaceURI' => $this->getLoadedSchema()->getTargetNamespace())));
             $class->addMethod($this->createElementSetMethod($methodName, $methodNamespace));
         } elseif ($node->localName == 'simpleType') {
 //            $class->addMethod(
@@ -211,7 +220,8 @@ class Schema {
                     } elseif ($node->hasAttribute('ref')) {
                         $name = preg_replace('/^.*:/', '', $node->getAttribute('ref'));
                         $refNode = $dom->query("//*[@name='{$name}']")->item(0);
-                        $type = $refNode->hasAttribute('type') ? preg_replace('/^.*:/', '', $refNode->getAttribute('type')) : $refNode->getAttribute('name');
+                        $type = $refNode->hasAttribute('type') ?
+                                preg_replace('/^.*:/', '', $refNode->getAttribute('type')) : $refNode->getAttribute('name');
                         $type = $this->getDefaultNamespace() . '\\' . ucfirst($type);
                     }
 
@@ -220,7 +230,8 @@ class Schema {
                                 'value' => $name)));
 
                     $class->addMethod($this->createElementGetMethod($name, $type, $hasIndex));
-                    $class->addMethod($this->createElementAddMethod($name, $type, $this->isLastLevel($node)));
+                    $class->addMethod($this->createElementAddMethod(
+                                    array('name' => $name, 'type' => $type, 'hasValue' => $this->isLastLevel($node))));
                     $class->addMethod($this->createElementSetMethod($name, $type));
 
                     if ($node->localName != 'simpleType'
@@ -380,26 +391,45 @@ BODY;
         return $met;
     }
 
-    public function createElementAddMethod($name, $type, $hasValue = false, $isUnique = true) {
-        $name = ucfirst($name);
+    /**
+     * Cria o método Add* de acordo com a configuração informada.
+     * @param array $config
+     * @return \PhpClass_Method 
+     */
+    public function createElementAddMethod($config = array()) {
+        if (is_null($config['name']) OR empty($config['name']))
+            throw new \RuntimeException("The method name can't be a null or empty");
+        if (is_null($config['type']) OR empty($config['type']))
+            throw new \RuntimeException("The method type can't be a null or empty");
+
+        $name = ucfirst($config['name']);
         $constantName = mb_strtoupper($name);
         $param = '';
         $met = new \PhpClass_Method(array(
                     'name' => 'add' . $name,
-                    'returns' => $type
+                    'returns' => $config['type']
                 ));
-        if ($hasValue) {
+        if ($config['hasValue'] || $config['namespaceURI']) {
             $met->addParam(new \PhpClass_Parameter(array(
                         'name' => 'value',
                         'value' => NULL,
                         'isOptional' => true
-                ))
+                    ))
             );
-            $param = ', $value';
+            $param .= ', $value';
         }
-        $isUnique = $isUnique ? 'true' : 'false';
+        if ($config['namespaceURI']) {
+            $met->addParam(new \PhpClass_Parameter(array(
+                        'name' => 'namespaceURI',
+                        'value' => $config['namespaceURI'],
+                        'isOptional' => true
+                    ))
+            );
+            $param .= ', $namespaceURI';
+        }
+        $isUnique = $config['isUnique'] ? 'true' : 'false';
         $body = <<<BODY
-return \$this->appendChild(new {$type}(self::{$constantName}{$param}), {$isUnique});
+return \$this->appendChild(new {$config['type']}(self::{$constantName}{$param}), {$isUnique});
 BODY;
         $met->setBody($body);
         return $met;
