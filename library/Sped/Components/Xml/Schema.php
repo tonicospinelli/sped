@@ -109,7 +109,6 @@ class Schema extends Document {
                 if (!file_exists($xsdFileName))
                     throw new \RuntimeException('File not found');
 
-                $namespace = $entry->getAttribute('namespace');
                 $parent = $entry->parentNode;
 
                 $xsd = new Schema();
@@ -118,9 +117,10 @@ class Schema extends Document {
                 if ($xsd->load($xsdFileName, null, true)) {
                     $this->loadedImportFiles = array_merge($this->loadedImportFiles, $xsd->loadedImportFiles);
                 }
-                
-                $nsPrefix = $xsd->lookupPrefix($xsd->getTargetNamespace());
-                
+
+                $targetNamespace = $xsd->getTargetNamespace();
+                $nsPrefix = $xsd->lookupPrefix($targetNamespace);
+
                 foreach ($xsd->documentElement->childNodes as $node) {
                     if (empty($node->prefix) AND !$node instanceof \DOMText)
                         $node->prefix = $nsPrefix;
