@@ -157,17 +157,17 @@ class Schema {
                         'name' => $nodeName,
                         'value' => $nodeName)));
 
-            $class->addMethod($this->createElementGetMethod($methodName, $methodNamespace));
+            $class->addMethod($this->createElementGetMethod($methodName, $methodNamespace, false, false));
             $class->addMethod($this->createElementAddMethod($methodName, $methodNamespace));
             $class->addMethod($this->createElementSetMethod($methodName, $methodNamespace));
         } elseif ($node->localName == 'simpleType') {
-            $class->addMethod(
-                    $this->createClassConstructMethod(
-                            $this->getLoadedSchema()->lookupNamespaceUri($node->prefix), true));
+//            $class->addMethod(
+//                    $this->createClassConstructMethod(
+//                            $this->getLoadedSchema()->lookupNamespaceUri($node->prefix), true));
         } else {
-            $class->addMethod(
-                    $this->createClassConstructMethod(
-                            $this->getLoadedSchema()->getTargetNamespace(), $this->isLastLevel($node)));
+//            $class->addMethod(
+//                    $this->createClassConstructMethod(
+//                            $this->getLoadedSchema()->getTargetNamespace(), $this->isLastLevel($node)));
         }
 
         if (!preg_match('/^Document/', $class->getName()))
@@ -218,9 +218,9 @@ class Schema {
                     $class->addConstant(new \PhpClass_Constant(array(
                                 'name' => $name,
                                 'value' => $name)));
-                    
+
                     $class->addMethod($this->createElementGetMethod($name, $type, $hasIndex));
-                    $class->addMethod($this->createElementAddMethod($name, $type));
+                    $class->addMethod($this->createElementAddMethod($name, $type, $this->isLastLevel($node)));
                     $class->addMethod($this->createElementSetMethod($name, $type));
 
                     if ($node->localName != 'simpleType'
@@ -255,7 +255,6 @@ class Schema {
             $met->setBody("parent::__construct(self::NAME, \$value, '$namespace');");
             $met->addParam(new \PhpClass_Parameter(array(
                         'name' => 'value',
-                        'type' => 'string',
                         'value' => null,
                         'isOptional' => true,
                     )));
@@ -355,7 +354,7 @@ BODY;
         return $met;
     }
 
-    public function createElementGetMethod($name, $type, $hasIndex = false) {
+    public function createElementGetMethod($name, $type, $hasIndex = false, $isElement = true) {
         $name = ucfirst($name);
         $constantName = mb_strtoupper($name);
         $param = '0';
@@ -367,13 +366,14 @@ BODY;
         if ($hasIndex) {
             $met->addParam(new \PhpClass_Parameter(array(
                         'name' => 'index',
-                        'type' => 'int'
                     )));
             $param = '$index';
         }
 
+        $ownerDocument = ($isElement ? 'ownerDocument->' : '');
+
         $body = <<<BODY
-\$this->ownerDocument->registerNodeClass('\DOMElement', '{$type}');
+\$this->{$ownerDocument}registerNodeClass('\DOMElement', '{$type}');
 return \$this->getElementsByTagName(self::{$constantName})->item({$param});
 BODY;
         $met->setBody($body);
@@ -382,6 +382,7 @@ BODY;
 
     public function createElementAddMethod($name, $type, $hasValue = false, $isUnique = true) {
         $name = ucfirst($name);
+        $constantName = mb_strtoupper($name);
         $param = '';
         $met = new \PhpClass_Method(array(
                     'name' => 'add' . $name,
@@ -391,14 +392,14 @@ BODY;
             $met->addParam(new \PhpClass_Parameter(array(
                         'name' => 'value',
                         'value' => NULL,
-                        'isOptional' => true,
-                        'type' => 'string'))
+                        'isOptional' => true
+                ))
             );
-            $param = '$value';
+            $param = ', $value';
         }
         $isUnique = $isUnique ? 'true' : 'false';
         $body = <<<BODY
-return \$this->appendChild(new {$type}({$param}), {$isUnique});
+return \$this->appendChild(new {$type}(self::{$constantName}{$param}), {$isUnique});
 BODY;
         $met->setBody($body);
         return $met;
