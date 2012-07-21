@@ -18,16 +18,12 @@ class Dup extends \Sped\Components\Xml\Element  {
 
     const VDUP = 'vDup';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getNDup(int $index){
+    public function getNDup($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup');
         return $this->getElementsByTagName(self::NDUP)->item($index);
     }
@@ -35,9 +31,10 @@ class Dup extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup 
+     * @param type $value 
      */
-    public function addNDup(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup(), true);
+    public function addNDup($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup(self::NDUP, $value), true);
     }
 
     /**
@@ -54,9 +51,9 @@ class Dup extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TData 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getDVenc(int $index){
+    public function getDVenc($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
         return $this->getElementsByTagName(self::DVENC)->item($index);
     }
@@ -64,9 +61,10 @@ class Dup extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TData 
+     * @param type $value 
      */
-    public function addDVenc(){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(), true);
+    public function addDVenc($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVENC, $value), true);
     }
 
     /**
@@ -83,9 +81,9 @@ class Dup extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVDup(int $index){
+    public function getVDup($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VDUP)->item($index);
     }
@@ -93,9 +91,10 @@ class Dup extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVDup(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVDup($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDUP, $value), true);
     }
 
     /**

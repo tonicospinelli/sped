@@ -30,10 +30,6 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
 
     const PROTNFE = 'protNFe';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TAmb 
@@ -46,9 +42,10 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TAmb 
+     * @param type $value 
      */
-    public function addTpAmb(){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(), true);
+    public function addTpAmb($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), true);
     }
 
     /**
@@ -74,9 +71,10 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TVerAplic 
+     * @param type $value 
      */
-    public function addVerAplic(){
-        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(), true);
+    public function addVerAplic($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value), true);
     }
 
     /**
@@ -102,9 +100,10 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TRec 
+     * @param type $value 
      */
-    public function addNRec(){
-        return $this->appendChild(new \Sped\Schemas\V200\TRec(), true);
+    public function addNRec($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value), true);
     }
 
     /**
@@ -130,9 +129,10 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TStat 
+     * @param type $value 
      */
-    public function addCStat(){
-        return $this->appendChild(new \Sped\Schemas\V200\TStat(), true);
+    public function addCStat($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value), true);
     }
 
     /**
@@ -158,9 +158,10 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TMotivo 
+     * @param type $value 
      */
-    public function addXMotivo(){
-        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(), true);
+    public function addXMotivo($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value), true);
     }
 
     /**
@@ -186,9 +187,10 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
+     * @param type $value 
      */
-    public function addCUF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(), true);
+    public function addCUF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), true);
     }
 
     /**
@@ -214,9 +216,10 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TRetConsReciNFe\CMsg 
+     * @param type $value 
      */
-    public function addCMsg(){
-        return $this->appendChild(new \Sped\Schemas\V200\TRetConsReciNFe\CMsg(), true);
+    public function addCMsg($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TRetConsReciNFe\CMsg(self::CMSG, $value), true);
     }
 
     /**
@@ -242,9 +245,10 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TRetConsReciNFe\XMsg 
+     * @param type $value 
      */
-    public function addXMsg(){
-        return $this->appendChild(new \Sped\Schemas\V200\TRetConsReciNFe\XMsg(), true);
+    public function addXMsg($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TRetConsReciNFe\XMsg(self::XMSG, $value), true);
     }
 
     /**
@@ -261,9 +265,9 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TProtNFe 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getProtNFe(int $index){
+    public function getProtNFe($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TProtNFe');
         return $this->getElementsByTagName(self::PROTNFE)->item($index);
     }
@@ -271,9 +275,10 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TProtNFe 
+     * @param type $value 
      */
-    public function addProtNFe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe(), true);
+    public function addProtNFe($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe(self::PROTNFE, $value), true);
     }
 
     /**

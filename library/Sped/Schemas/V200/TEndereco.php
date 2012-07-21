@@ -34,10 +34,6 @@ class TEndereco extends \Sped\Components\Xml\Element  {
 
     const FONE = 'fone';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\XLgr 
@@ -50,9 +46,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\XLgr 
+     * @param type $value 
      */
-    public function addXLgr(){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XLgr(), true);
+    public function addXLgr($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XLgr(self::XLGR, $value), true);
     }
 
     /**
@@ -78,9 +75,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\Nro 
+     * @param type $value 
      */
-    public function addNro(){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Nro(), true);
+    public function addNro($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Nro(self::NRO, $value), true);
     }
 
     /**
@@ -97,9 +95,9 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\XCpl 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getXCpl(int $index){
+    public function getXCpl($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XCpl');
         return $this->getElementsByTagName(self::XCPL)->item($index);
     }
@@ -107,9 +105,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\XCpl 
+     * @param type $value 
      */
-    public function addXCpl(){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XCpl(), true);
+    public function addXCpl($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XCpl(self::XCPL, $value), true);
     }
 
     /**
@@ -135,9 +134,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\XBairro 
+     * @param type $value 
      */
-    public function addXBairro(){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XBairro(), true);
+    public function addXBairro($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XBairro(self::XBAIRRO, $value), true);
     }
 
     /**
@@ -163,9 +163,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
+     * @param type $value 
      */
-    public function addCMun(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(), true);
+    public function addCMun($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUN, $value), true);
     }
 
     /**
@@ -191,9 +192,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\XMun 
+     * @param type $value 
      */
-    public function addXMun(){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XMun(), true);
+    public function addXMun($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XMun(self::XMUN, $value), true);
     }
 
     /**
@@ -219,9 +221,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TUf 
+     * @param type $value 
      */
-    public function addUF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(), true);
+    public function addUF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), true);
     }
 
     /**
@@ -238,9 +241,9 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\CEP 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getCEP(int $index){
+    public function getCEP($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\CEP');
         return $this->getElementsByTagName(self::CEP)->item($index);
     }
@@ -248,9 +251,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\CEP 
+     * @param type $value 
      */
-    public function addCEP(){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\CEP(), true);
+    public function addCEP($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\CEP(self::CEP, $value), true);
     }
 
     /**
@@ -267,9 +271,9 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\Tpais 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getCPais(int $index){
+    public function getCPais($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Tpais');
         return $this->getElementsByTagName(self::CPAIS)->item($index);
     }
@@ -277,9 +281,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\Tpais 
+     * @param type $value 
      */
-    public function addCPais(){
-        return $this->appendChild(new \Sped\Schemas\V200\Tpais(), true);
+    public function addCPais($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\Tpais(self::CPAIS, $value), true);
     }
 
     /**
@@ -296,9 +301,9 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\XPais 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getXPais(int $index){
+    public function getXPais($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XPais');
         return $this->getElementsByTagName(self::XPAIS)->item($index);
     }
@@ -306,9 +311,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\XPais 
+     * @param type $value 
      */
-    public function addXPais(){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XPais(), true);
+    public function addXPais($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XPais(self::XPAIS, $value), true);
     }
 
     /**
@@ -325,9 +331,9 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\Fone 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getFone(int $index){
+    public function getFone($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\Fone');
         return $this->getElementsByTagName(self::FONE)->item($index);
     }
@@ -335,9 +341,10 @@ class TEndereco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TEndereco\Fone 
+     * @param type $value 
      */
-    public function addFone(){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Fone(), true);
+    public function addFone($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Fone(self::FONE, $value), true);
     }
 
     /**

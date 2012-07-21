@@ -21,10 +21,6 @@ class ICMS60 extends \Sped\Components\Xml\Element  {
 
     const VICMSSTRET = 'vICMSSTRet';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\Torig 
@@ -37,9 +33,10 @@ class ICMS60 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\Torig 
+     * @param type $value 
      */
-    public function addOrig(){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(), true);
+    public function addOrig($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), true);
     }
 
     /**
@@ -65,9 +62,10 @@ class ICMS60 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60\CST 
+     * @param type $value 
      */
-    public function addCST(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60\CST(), true);
+    public function addCST($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60\CST(self::CST, $value), true);
     }
 
     /**
@@ -93,9 +91,10 @@ class ICMS60 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVBCSTRet(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVBCSTRet($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCSTRET, $value), true);
     }
 
     /**
@@ -121,9 +120,10 @@ class ICMS60 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVICMSSTRet(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVICMSSTRet($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSSTRET, $value), true);
     }
 
     /**

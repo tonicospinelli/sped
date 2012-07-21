@@ -12,12 +12,4 @@ namespace Sped\Schemas\V200;
  */
 class TMed extends \Sped\Components\Xml\Element  {
 
-    /**
-     * 
-     * @param string $value 
-     */
-    public function __construct(string $value = NULL){
-        parent::__construct(self::NAME, $value, 'http://www.w3.org/2001/XMLSchema');
-    }
-
 }

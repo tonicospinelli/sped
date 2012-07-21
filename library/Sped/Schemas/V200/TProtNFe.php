@@ -16,10 +16,6 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
 
     const SIGNATURE = 'Signature';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
@@ -34,7 +30,7 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
     public function addInfProt(){
-        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe\InfProt(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe\InfProt(self::INFPROT), true);
     }
 
     /**
@@ -51,9 +47,9 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\SignatureType 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getSignature(int $index){
+    public function getSignature($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
         return $this->getElementsByTagName(self::SIGNATURE)->item($index);
     }
@@ -61,9 +57,10 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\SignatureType 
+     * @param type $value 
      */
-    public function addSignature(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(), true);
+    public function addSignature($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value), true);
     }
 
     /**

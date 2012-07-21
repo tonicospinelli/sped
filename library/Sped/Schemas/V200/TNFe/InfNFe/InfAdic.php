@@ -22,16 +22,12 @@ class InfAdic extends \Sped\Components\Xml\Element  {
 
     const PROCREF = 'procRef';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getInfAdFisco(int $index){
+    public function getInfAdFisco($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco');
         return $this->getElementsByTagName(self::INFADFISCO)->item($index);
     }
@@ -39,9 +35,10 @@ class InfAdic extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
+     * @param type $value 
      */
-    public function addInfAdFisco(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco(), true);
+    public function addInfAdFisco($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco(self::INFADFISCO, $value), true);
     }
 
     /**
@@ -58,9 +55,9 @@ class InfAdic extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getInfCpl(int $index){
+    public function getInfCpl($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl');
         return $this->getElementsByTagName(self::INFCPL)->item($index);
     }
@@ -68,9 +65,10 @@ class InfAdic extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
+     * @param type $value 
      */
-    public function addInfCpl(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl(), true);
+    public function addInfCpl($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl(self::INFCPL, $value), true);
     }
 
     /**
@@ -87,9 +85,9 @@ class InfAdic extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getObsCont(int $index){
+    public function getObsCont($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont');
         return $this->getElementsByTagName(self::OBSCONT)->item($index);
     }
@@ -99,7 +97,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont 
      */
     public function addObsCont(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont(self::OBSCONT), true);
     }
 
     /**
@@ -116,9 +114,9 @@ class InfAdic extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getObsFisco(int $index){
+    public function getObsFisco($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco');
         return $this->getElementsByTagName(self::OBSFISCO)->item($index);
     }
@@ -128,7 +126,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      */
     public function addObsFisco(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco(self::OBSFISCO), true);
     }
 
     /**
@@ -145,9 +143,9 @@ class InfAdic extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getProcRef(int $index){
+    public function getProcRef($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef');
         return $this->getElementsByTagName(self::PROCREF)->item($index);
     }
@@ -157,7 +155,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */
     public function addProcRef(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef(self::PROCREF), true);
     }
 
     /**

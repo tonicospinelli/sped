@@ -18,10 +18,6 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
 
     const REFERENCE = 'Reference';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
@@ -36,7 +32,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
      */
     public function addCanonicalizationMethod(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod(self::CANONICALIZATIONMETHOD), true);
     }
 
     /**
@@ -64,7 +60,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\SignedInfoType\SignatureMethod 
      */
     public function addSignatureMethod(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\SignatureMethod(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\SignatureMethod(self::SIGNATUREMETHOD), true);
     }
 
     /**
@@ -90,9 +86,10 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\ReferenceType 
+     * @param type $value 
      */
-    public function addReference(){
-        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType(), true);
+    public function addReference($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType(self::REFERENCE, $value), true);
     }
 
     /**

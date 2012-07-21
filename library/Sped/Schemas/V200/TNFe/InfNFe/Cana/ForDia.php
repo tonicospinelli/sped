@@ -14,10 +14,6 @@ class ForDia extends \Sped\Components\Xml\Element  {
 
     const QTDE = 'qtde';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
@@ -30,9 +26,10 @@ class ForDia extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
+     * @param type $value 
      */
-    public function addQtde(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(), true);
+    public function addQtde($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTDE, $value), true);
     }
 
     /**

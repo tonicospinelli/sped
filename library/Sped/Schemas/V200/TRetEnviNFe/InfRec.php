@@ -16,10 +16,6 @@ class InfRec extends \Sped\Components\Xml\Element  {
 
     const TMED = 'tMed';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TRec 
@@ -32,9 +28,10 @@ class InfRec extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TRec 
+     * @param type $value 
      */
-    public function addNRec(){
-        return $this->appendChild(new \Sped\Schemas\V200\TRec(), true);
+    public function addNRec($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value), true);
     }
 
     /**
@@ -60,9 +57,10 @@ class InfRec extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TMed 
+     * @param type $value 
      */
-    public function addTMed(){
-        return $this->appendChild(new \Sped\Schemas\V200\TMed(), true);
+    public function addTMed($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TMed(self::TMED, $value), true);
     }
 
     /**

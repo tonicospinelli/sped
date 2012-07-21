@@ -18,10 +18,6 @@ class SignatureType extends \Sped\Components\Xml\Element  {
 
     const KEYINFO = 'KeyInfo';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\SignedInfoType 
@@ -34,9 +30,10 @@ class SignatureType extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\SignedInfoType 
+     * @param type $value 
      */
-    public function addSignedInfo(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType(), true);
+    public function addSignedInfo($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType(self::SIGNEDINFO, $value), true);
     }
 
     /**
@@ -62,9 +59,10 @@ class SignatureType extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\SignatureValueType 
+     * @param type $value 
      */
-    public function addSignatureValue(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureValueType(), true);
+    public function addSignatureValue($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureValueType(self::SIGNATUREVALUE, $value), true);
     }
 
     /**
@@ -90,9 +88,10 @@ class SignatureType extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\KeyInfoType 
+     * @param type $value 
      */
-    public function addKeyInfo(){
-        return $this->appendChild(new \Sped\Schemas\V200\KeyInfoType(), true);
+    public function addKeyInfo($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\KeyInfoType(self::KEYINFO, $value), true);
     }
 
     /**

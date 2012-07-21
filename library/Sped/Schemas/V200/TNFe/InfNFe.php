@@ -40,10 +40,6 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     const CANA = 'cana';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
@@ -58,7 +54,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
     public function addIde(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide(self::IDE), true);
     }
 
     /**
@@ -86,7 +82,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function addEmit(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit(self::EMIT), true);
     }
 
     /**
@@ -103,9 +99,9 @@ class InfNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getAvulsa(int $index){
+    public function getAvulsa($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa');
         return $this->getElementsByTagName(self::AVULSA)->item($index);
     }
@@ -115,7 +111,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
     public function addAvulsa(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa(self::AVULSA), true);
     }
 
     /**
@@ -143,7 +139,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest 
      */
     public function addDest(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest(self::DEST), true);
     }
 
     /**
@@ -160,9 +156,9 @@ class InfNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TLocal 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getRetirada(int $index){
+    public function getRetirada($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TLocal');
         return $this->getElementsByTagName(self::RETIRADA)->item($index);
     }
@@ -170,9 +166,10 @@ class InfNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TLocal 
+     * @param type $value 
      */
-    public function addRetirada(){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal(), true);
+    public function addRetirada($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal(self::RETIRADA, $value), true);
     }
 
     /**
@@ -189,9 +186,9 @@ class InfNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TLocal 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getEntrega(int $index){
+    public function getEntrega($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TLocal');
         return $this->getElementsByTagName(self::ENTREGA)->item($index);
     }
@@ -199,9 +196,10 @@ class InfNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TLocal 
+     * @param type $value 
      */
-    public function addEntrega(){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal(), true);
+    public function addEntrega($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal(self::ENTREGA, $value), true);
     }
 
     /**
@@ -229,7 +227,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det 
      */
     public function addDet(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det(self::DET), true);
     }
 
     /**
@@ -257,7 +255,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total 
      */
     public function addTotal(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total(self::TOTAL), true);
     }
 
     /**
@@ -285,7 +283,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
     public function addTransp(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp(self::TRANSP), true);
     }
 
     /**
@@ -302,9 +300,9 @@ class InfNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getCobr(int $index){
+    public function getCobr($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr');
         return $this->getElementsByTagName(self::COBR)->item($index);
     }
@@ -314,7 +312,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      */
     public function addCobr(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr(self::COBR), true);
     }
 
     /**
@@ -331,9 +329,9 @@ class InfNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getInfAdic(int $index){
+    public function getInfAdic($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic');
         return $this->getElementsByTagName(self::INFADIC)->item($index);
     }
@@ -343,7 +341,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
      */
     public function addInfAdic(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic(self::INFADIC), true);
     }
 
     /**
@@ -360,9 +358,9 @@ class InfNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getExporta(int $index){
+    public function getExporta($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Exporta');
         return $this->getElementsByTagName(self::EXPORTA)->item($index);
     }
@@ -372,7 +370,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta 
      */
     public function addExporta(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Exporta(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Exporta(self::EXPORTA), true);
     }
 
     /**
@@ -389,9 +387,9 @@ class InfNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getCompra(int $index){
+    public function getCompra($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra');
         return $this->getElementsByTagName(self::COMPRA)->item($index);
     }
@@ -401,7 +399,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      */
     public function addCompra(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra(self::COMPRA), true);
     }
 
     /**
@@ -418,9 +416,9 @@ class InfNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getCana(int $index){
+    public function getCana($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana');
         return $this->getElementsByTagName(self::CANA)->item($index);
     }
@@ -430,7 +428,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
     public function addCana(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana(self::CANA), true);
     }
 
     /**

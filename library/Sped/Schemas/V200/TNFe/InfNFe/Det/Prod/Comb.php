@@ -23,10 +23,6 @@ class Comb extends \Sped\Components\Xml\Element  {
 
     const CIDE = 'CIDE';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP 
@@ -39,9 +35,10 @@ class Comb extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP 
+     * @param type $value 
      */
-    public function addCProdANP(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP(), true);
+    public function addCProdANP($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP(self::CPRODANP, $value), true);
     }
 
     /**
@@ -58,9 +55,9 @@ class Comb extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getCODIF(int $index){
+    public function getCODIF($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF');
         return $this->getElementsByTagName(self::CODIF)->item($index);
     }
@@ -68,9 +65,10 @@ class Comb extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
+     * @param type $value 
      */
-    public function addCODIF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF(), true);
+    public function addCODIF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF(self::CODIF, $value), true);
     }
 
     /**
@@ -87,9 +85,9 @@ class Comb extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getQTemp(int $index){
+    public function getQTemp($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1204Opc');
         return $this->getElementsByTagName(self::QTEMP)->item($index);
     }
@@ -97,9 +95,10 @@ class Comb extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
+     * @param type $value 
      */
-    public function addQTemp(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(), true);
+    public function addQTemp($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QTEMP, $value), true);
     }
 
     /**
@@ -125,9 +124,10 @@ class Comb extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TUf 
+     * @param type $value 
      */
-    public function addUFCons(){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(), true);
+    public function addUFCons($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UFCONS, $value), true);
     }
 
     /**
@@ -144,9 +144,9 @@ class Comb extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getCIDE(int $index){
+    public function getCIDE($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE');
         return $this->getElementsByTagName(self::CIDE)->item($index);
     }
@@ -156,7 +156,7 @@ class Comb extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
     public function addCIDE(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE(self::CIDE), true);
     }
 
     /**

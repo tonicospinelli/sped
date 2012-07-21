@@ -26,16 +26,12 @@ class IPI extends \Sped\Components\Xml\Element  {
 
     const IPINT = 'IPINT';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getClEnq(int $index){
+    public function getClEnq($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq');
         return $this->getElementsByTagName(self::CLENQ)->item($index);
     }
@@ -43,9 +39,10 @@ class IPI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq 
+     * @param type $value 
      */
-    public function addClEnq(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq(), true);
+    public function addClEnq($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq(self::CLENQ, $value), true);
     }
 
     /**
@@ -62,9 +59,9 @@ class IPI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCnpj 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getCNPJProd(int $index){
+    public function getCNPJProd($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCnpj');
         return $this->getElementsByTagName(self::CNPJPROD)->item($index);
     }
@@ -72,9 +69,10 @@ class IPI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCnpj 
+     * @param type $value 
      */
-    public function addCNPJProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(), true);
+    public function addCNPJProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJPROD, $value), true);
     }
 
     /**
@@ -91,9 +89,9 @@ class IPI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getCSelo(int $index){
+    public function getCSelo($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo');
         return $this->getElementsByTagName(self::CSELO)->item($index);
     }
@@ -101,9 +99,10 @@ class IPI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo 
+     * @param type $value 
      */
-    public function addCSelo(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo(), true);
+    public function addCSelo($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo(self::CSELO, $value), true);
     }
 
     /**
@@ -120,9 +119,9 @@ class IPI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getQSelo(int $index){
+    public function getQSelo($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo');
         return $this->getElementsByTagName(self::QSELO)->item($index);
     }
@@ -130,9 +129,10 @@ class IPI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo 
+     * @param type $value 
      */
-    public function addQSelo(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo(), true);
+    public function addQSelo($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo(self::QSELO, $value), true);
     }
 
     /**
@@ -158,9 +158,10 @@ class IPI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CEnq 
+     * @param type $value 
      */
-    public function addCEnq(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CEnq(), true);
+    public function addCEnq($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CEnq(self::CENQ, $value), true);
     }
 
     /**
@@ -188,7 +189,7 @@ class IPI extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib 
      */
     public function addIPITrib(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib(self::IPITRIB), true);
     }
 
     /**
@@ -216,7 +217,7 @@ class IPI extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT 
      */
     public function addIPINT(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT(self::IPINT), true);
     }
 
     /**

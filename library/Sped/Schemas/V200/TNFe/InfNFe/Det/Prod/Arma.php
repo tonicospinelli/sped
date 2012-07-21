@@ -20,10 +20,6 @@ class Arma extends \Sped\Components\Xml\Element  {
 
     const DESCR = 'descr';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma 
@@ -36,9 +32,10 @@ class Arma extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma 
+     * @param type $value 
      */
-    public function addTpArma(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma(), true);
+    public function addTpArma($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma(self::TPARMA, $value), true);
     }
 
     /**
@@ -64,9 +61,10 @@ class Arma extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie 
+     * @param type $value 
      */
-    public function addNSerie(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie(), true);
+    public function addNSerie($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie(self::NSERIE, $value), true);
     }
 
     /**
@@ -92,9 +90,10 @@ class Arma extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano 
+     * @param type $value 
      */
-    public function addNCano(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano(), true);
+    public function addNCano($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano(self::NCANO, $value), true);
     }
 
     /**
@@ -120,9 +119,10 @@ class Arma extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr 
+     * @param type $value 
      */
-    public function addDescr(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr(), true);
+    public function addDescr($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr(self::DESCR, $value), true);
     }
 
     /**

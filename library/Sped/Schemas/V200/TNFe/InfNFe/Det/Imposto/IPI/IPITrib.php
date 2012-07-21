@@ -28,10 +28,6 @@ class IPITrib extends \Sped\Components\Xml\Element  {
 
     const VIPI = 'vIPI';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST 
@@ -44,9 +40,10 @@ class IPITrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST 
+     * @param type $value 
      */
-    public function addCST(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST(), true);
+    public function addCST($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST(self::CST, $value), true);
     }
 
     /**
@@ -72,9 +69,10 @@ class IPITrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVBC(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVBC($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
     }
 
     /**
@@ -100,9 +98,10 @@ class IPITrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0302 
+     * @param type $value 
      */
-    public function addPIPI(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(), true);
+    public function addPIPI($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PIPI, $value), true);
     }
 
     /**
@@ -128,9 +127,10 @@ class IPITrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1204 
+     * @param type $value 
      */
-    public function addQUnid(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(), true);
+    public function addQUnid($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QUNID, $value), true);
     }
 
     /**
@@ -156,9 +156,10 @@ class IPITrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1104 
+     * @param type $value 
      */
-    public function addVUnid(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(), true);
+    public function addVUnid($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VUNID, $value), true);
     }
 
     /**
@@ -184,9 +185,10 @@ class IPITrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVIPI(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVIPI($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIPI, $value), true);
     }
 
     /**

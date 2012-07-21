@@ -20,10 +20,6 @@ class II extends \Sped\Components\Xml\Element  {
 
     const VIOF = 'vIOF';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
@@ -36,9 +32,10 @@ class II extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVBC(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVBC($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
     }
 
     /**
@@ -64,9 +61,10 @@ class II extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVDespAdu(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVDespAdu($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDESPADU, $value), true);
     }
 
     /**
@@ -92,9 +90,10 @@ class II extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVII(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVII($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VII, $value), true);
     }
 
     /**
@@ -120,9 +119,10 @@ class II extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVIOF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVIOF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIOF, $value), true);
     }
 
     /**

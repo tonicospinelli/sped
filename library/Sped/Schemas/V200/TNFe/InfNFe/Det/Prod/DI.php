@@ -27,10 +27,6 @@ class DI extends \Sped\Components\Xml\Element  {
 
     const ADI = 'adi';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI 
@@ -43,9 +39,10 @@ class DI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI 
+     * @param type $value 
      */
-    public function addNDI(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI(), true);
+    public function addNDI($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI(self::NDI, $value), true);
     }
 
     /**
@@ -71,9 +68,10 @@ class DI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TData 
+     * @param type $value 
      */
-    public function addDDI(){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(), true);
+    public function addDDI($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DDI, $value), true);
     }
 
     /**
@@ -99,9 +97,10 @@ class DI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb 
+     * @param type $value 
      */
-    public function addXLocDesemb(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb(), true);
+    public function addXLocDesemb($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb(self::XLOCDESEMB, $value), true);
     }
 
     /**
@@ -127,9 +126,10 @@ class DI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TUfEmi 
+     * @param type $value 
      */
-    public function addUFDesemb(){
-        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(), true);
+    public function addUFDesemb($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(self::UFDESEMB, $value), true);
     }
 
     /**
@@ -155,9 +155,10 @@ class DI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TData 
+     * @param type $value 
      */
-    public function addDDesemb(){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(), true);
+    public function addDDesemb($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DDESEMB, $value), true);
     }
 
     /**
@@ -183,9 +184,10 @@ class DI extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador 
+     * @param type $value 
      */
-    public function addCExportador(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador(), true);
+    public function addCExportador($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador(self::CEXPORTADOR, $value), true);
     }
 
     /**
@@ -213,7 +215,7 @@ class DI extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */
     public function addAdi(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi(self::ADI), true);
     }
 
     /**

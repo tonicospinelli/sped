@@ -18,10 +18,6 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
 
     const DIGESTVALUE = 'DigestValue';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TransformsType 
@@ -34,9 +30,10 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TransformsType 
+     * @param type $value 
      */
-    public function addTransforms(){
-        return $this->appendChild(new \Sped\Schemas\V200\TransformsType(), true);
+    public function addTransforms($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TransformsType(self::TRANSFORMS, $value), true);
     }
 
     /**
@@ -64,7 +61,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\ReferenceType\DigestMethod 
      */
     public function addDigestMethod(){
-        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType\DigestMethod(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType\DigestMethod(self::DIGESTMETHOD), true);
     }
 
     /**
@@ -90,9 +87,10 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\DigestValueType 
+     * @param type $value 
      */
-    public function addDigestValue(){
-        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(), true);
+    public function addDigestValue($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGESTVALUE, $value), true);
     }
 
     /**

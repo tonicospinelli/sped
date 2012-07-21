@@ -22,10 +22,6 @@ class NFref extends \Sped\Components\Xml\Element  {
 
     const REFECF = 'refECF';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TChNFe 
@@ -38,9 +34,10 @@ class NFref extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TChNFe 
+     * @param type $value 
      */
-    public function addRefNFe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(), true);
+    public function addRefNFe($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::REFNFE, $value), true);
     }
 
     /**
@@ -68,7 +65,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */
     public function addRefNF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF(self::REFNF), true);
     }
 
     /**
@@ -96,7 +93,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
     public function addRefNFP(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP(self::REFNFP), true);
     }
 
     /**
@@ -122,9 +119,10 @@ class NFref extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TChNFe 
+     * @param type $value 
      */
-    public function addRefCTe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(), true);
+    public function addRefCTe($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::REFCTE, $value), true);
     }
 
     /**
@@ -152,7 +150,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */
     public function addRefECF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF(self::REFECF), true);
     }
 
     /**

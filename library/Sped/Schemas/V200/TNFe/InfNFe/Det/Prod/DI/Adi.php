@@ -20,10 +20,6 @@ class Adi extends \Sped\Components\Xml\Element  {
 
     const VDESCDI = 'vDescDI';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NAdicao 
@@ -36,9 +32,10 @@ class Adi extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NAdicao 
+     * @param type $value 
      */
-    public function addNAdicao(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NAdicao(), true);
+    public function addNAdicao($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NAdicao(self::NADICAO, $value), true);
     }
 
     /**
@@ -64,9 +61,10 @@ class Adi extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NSeqAdic 
+     * @param type $value 
      */
-    public function addNSeqAdic(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NSeqAdic(), true);
+    public function addNSeqAdic($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NSeqAdic(self::NSEQADIC, $value), true);
     }
 
     /**
@@ -92,9 +90,10 @@ class Adi extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\CFabricante 
+     * @param type $value 
      */
-    public function addCFabricante(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\CFabricante(), true);
+    public function addCFabricante($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\CFabricante(self::CFABRICANTE, $value), true);
     }
 
     /**
@@ -111,9 +110,9 @@ class Adi extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVDescDI(int $index){
+    public function getVDescDI($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VDESCDI)->item($index);
     }
@@ -121,9 +120,10 @@ class Adi extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVDescDI(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVDescDI($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESCDI, $value), true);
     }
 
     /**

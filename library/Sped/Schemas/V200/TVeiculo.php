@@ -18,10 +18,6 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
 
     const RNTC = 'RNTC';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TVeiculo\Placa 
@@ -34,9 +30,10 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TVeiculo\Placa 
+     * @param type $value 
      */
-    public function addPlaca(){
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\Placa(), true);
+    public function addPlaca($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\Placa(self::PLACA, $value), true);
     }
 
     /**
@@ -62,9 +59,10 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TUf 
+     * @param type $value 
      */
-    public function addUF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(), true);
+    public function addUF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), true);
     }
 
     /**
@@ -81,9 +79,9 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TVeiculo\RNTC 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getRNTC(int $index){
+    public function getRNTC($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo\RNTC');
         return $this->getElementsByTagName(self::RNTC)->item($index);
     }
@@ -91,9 +89,10 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TVeiculo\RNTC 
+     * @param type $value 
      */
-    public function addRNTC(){
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\RNTC(), true);
+    public function addRNTC($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\RNTC(self::RNTC, $value), true);
     }
 
     /**

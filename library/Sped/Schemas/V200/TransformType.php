@@ -14,10 +14,6 @@ class TransformType extends \Sped\Components\Xml\Element  {
 
     const XPATH = 'XPath';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\String 
@@ -30,9 +26,10 @@ class TransformType extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\String 
+     * @param type $value 
      */
-    public function addXPath(){
-        return $this->appendChild(new \Sped\Schemas\V200\String(), true);
+    public function addXPath($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\String(self::XPATH, $value), true);
     }
 
     /**

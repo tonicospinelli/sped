@@ -16,10 +16,6 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
 
     const NFE = 'NFe';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TIdLote 
@@ -32,9 +28,10 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TIdLote 
+     * @param type $value 
      */
-    public function addIdLote(){
-        return $this->appendChild(new \Sped\Schemas\V200\TIdLote(), true);
+    public function addIdLote($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TIdLote(self::IDLOTE, $value), true);
     }
 
     /**
@@ -60,9 +57,10 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe 
+     * @param type $value 
      */
-    public function addNFe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe(), true);
+    public function addNFe($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value), true);
     }
 
     /**

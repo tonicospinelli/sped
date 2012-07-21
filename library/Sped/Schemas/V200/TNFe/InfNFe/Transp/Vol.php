@@ -26,16 +26,12 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     const LACRES = 'lacres';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getQVol(int $index){
+    public function getQVol($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol');
         return $this->getElementsByTagName(self::QVOL)->item($index);
     }
@@ -43,9 +39,10 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol 
+     * @param type $value 
      */
-    public function addQVol(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol(), true);
+    public function addQVol($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol(self::QVOL, $value), true);
     }
 
     /**
@@ -62,9 +59,9 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getEsp(int $index){
+    public function getEsp($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp');
         return $this->getElementsByTagName(self::ESP)->item($index);
     }
@@ -72,9 +69,10 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp 
+     * @param type $value 
      */
-    public function addEsp(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp(), true);
+    public function addEsp($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp(self::ESP, $value), true);
     }
 
     /**
@@ -91,9 +89,9 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getMarca(int $index){
+    public function getMarca($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca');
         return $this->getElementsByTagName(self::MARCA)->item($index);
     }
@@ -101,9 +99,10 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca 
+     * @param type $value 
      */
-    public function addMarca(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca(), true);
+    public function addMarca($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca(self::MARCA, $value), true);
     }
 
     /**
@@ -120,9 +119,9 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getNVol(int $index){
+    public function getNVol($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol');
         return $this->getElementsByTagName(self::NVOL)->item($index);
     }
@@ -130,9 +129,10 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol 
+     * @param type $value 
      */
-    public function addNVol(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol(), true);
+    public function addNVol($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol(self::NVOL, $value), true);
     }
 
     /**
@@ -149,9 +149,9 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1203 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getPesoL(int $index){
+    public function getPesoL($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1203');
         return $this->getElementsByTagName(self::PESOL)->item($index);
     }
@@ -159,9 +159,10 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1203 
+     * @param type $value 
      */
-    public function addPesoL(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(), true);
+    public function addPesoL($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(self::PESOL, $value), true);
     }
 
     /**
@@ -178,9 +179,9 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1203 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getPesoB(int $index){
+    public function getPesoB($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1203');
         return $this->getElementsByTagName(self::PESOB)->item($index);
     }
@@ -188,9 +189,10 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1203 
+     * @param type $value 
      */
-    public function addPesoB(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(), true);
+    public function addPesoB($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(self::PESOB, $value), true);
     }
 
     /**
@@ -207,9 +209,9 @@ class Vol extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getLacres(int $index){
+    public function getLacres($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres');
         return $this->getElementsByTagName(self::LACRES)->item($index);
     }
@@ -219,7 +221,7 @@ class Vol extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres 
      */
     public function addLacres(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres(self::LACRES), true);
     }
 
     /**

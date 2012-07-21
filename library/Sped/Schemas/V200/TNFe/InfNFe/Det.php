@@ -18,10 +18,6 @@ class Det extends \Sped\Components\Xml\Element  {
 
     const INFADPROD = 'infAdProd';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
@@ -36,7 +32,7 @@ class Det extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
     public function addProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod(self::PROD), true);
     }
 
     /**
@@ -64,7 +60,7 @@ class Det extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
     public function addImposto(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto(self::IMPOSTO), true);
     }
 
     /**
@@ -81,9 +77,9 @@ class Det extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getInfAdProd(int $index){
+    public function getInfAdProd($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd');
         return $this->getElementsByTagName(self::INFADPROD)->item($index);
     }
@@ -91,9 +87,10 @@ class Det extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
+     * @param type $value 
      */
-    public function addInfAdProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd(), true);
+    public function addInfAdProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd(self::INFADPROD, $value), true);
     }
 
     /**

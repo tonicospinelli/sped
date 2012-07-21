@@ -19,7 +19,7 @@ class DocumentSignature extends \Sped\Components\Xml\Document  {
      * @return \Sped\Schemas\V200\SignatureType 
      */
     public function getSignature(){
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
+        $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
         return $this->getElementsByTagName(self::SIGNATURE)->item(0);
     }
 
@@ -28,7 +28,7 @@ class DocumentSignature extends \Sped\Components\Xml\Document  {
      * @return \Sped\Schemas\V200\SignatureType 
      */
     public function addSignature(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE), true);
     }
 
     /**

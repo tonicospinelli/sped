@@ -16,10 +16,6 @@ class TNFe extends \Sped\Components\Xml\Element  {
 
     const SIGNATURE = 'Signature';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
@@ -34,7 +30,7 @@ class TNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function addInfNFe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe(self::INFNFE), true);
     }
 
     /**
@@ -60,9 +56,10 @@ class TNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\SignatureType 
+     * @param type $value 
      */
-    public function addSignature(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(), true);
+    public function addSignature($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value), true);
     }
 
     /**

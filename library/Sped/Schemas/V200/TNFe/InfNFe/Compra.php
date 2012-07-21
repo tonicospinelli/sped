@@ -18,16 +18,12 @@ class Compra extends \Sped\Components\Xml\Element  {
 
     const XCONT = 'xCont';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getXNEmp(int $index){
+    public function getXNEmp($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp');
         return $this->getElementsByTagName(self::XNEMP)->item($index);
     }
@@ -35,9 +31,10 @@ class Compra extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
+     * @param type $value 
      */
-    public function addXNEmp(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp(), true);
+    public function addXNEmp($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp(self::XNEMP, $value), true);
     }
 
     /**
@@ -54,9 +51,9 @@ class Compra extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getXPed(int $index){
+    public function getXPed($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed');
         return $this->getElementsByTagName(self::XPED)->item($index);
     }
@@ -64,9 +61,10 @@ class Compra extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
+     * @param type $value 
      */
-    public function addXPed(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed(), true);
+    public function addXPed($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed(self::XPED, $value), true);
     }
 
     /**
@@ -83,9 +81,9 @@ class Compra extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getXCont(int $index){
+    public function getXCont($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont');
         return $this->getElementsByTagName(self::XCONT)->item($index);
     }
@@ -93,9 +91,10 @@ class Compra extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
+     * @param type $value 
      */
-    public function addXCont(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont(), true);
+    public function addXCont($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont(self::XCONT, $value), true);
     }
 
     /**

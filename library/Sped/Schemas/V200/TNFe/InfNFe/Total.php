@@ -18,10 +18,6 @@ class Total extends \Sped\Components\Xml\Element  {
 
     const RETTRIB = 'retTrib';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
@@ -36,7 +32,7 @@ class Total extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function addICMSTot(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot(self::ICMSTOT), true);
     }
 
     /**
@@ -53,9 +49,9 @@ class Total extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getISSQNtot(int $index){
+    public function getISSQNtot($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot');
         return $this->getElementsByTagName(self::ISSQNTOT)->item($index);
     }
@@ -65,7 +61,7 @@ class Total extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot 
      */
     public function addISSQNtot(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot(self::ISSQNTOT), true);
     }
 
     /**
@@ -82,9 +78,9 @@ class Total extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getRetTrib(int $index){
+    public function getRetTrib($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib');
         return $this->getElementsByTagName(self::RETTRIB)->item($index);
     }
@@ -94,7 +90,7 @@ class Total extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib 
      */
     public function addRetTrib(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib(self::RETTRIB), true);
     }
 
     /**

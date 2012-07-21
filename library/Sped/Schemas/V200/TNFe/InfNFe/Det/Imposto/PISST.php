@@ -22,10 +22,6 @@ class PISST extends \Sped\Components\Xml\Element  {
 
     const VPIS = 'vPIS';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
@@ -38,9 +34,10 @@ class PISST extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVBC(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVBC($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBC, $value), true);
     }
 
     /**
@@ -66,9 +63,10 @@ class PISST extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
+     * @param type $value 
      */
-    public function addPPIS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(), true);
+    public function addPPIS($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PPIS, $value), true);
     }
 
     /**
@@ -94,9 +92,10 @@ class PISST extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
+     * @param type $value 
      */
-    public function addQBCProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(), true);
+    public function addQBCProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QBCPROD, $value), true);
     }
 
     /**
@@ -122,9 +121,10 @@ class PISST extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1104Opc 
+     * @param type $value 
      */
-    public function addVAliqProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104Opc(), true);
+    public function addVAliqProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104Opc(self::VALIQPROD, $value), true);
     }
 
     /**
@@ -150,9 +150,10 @@ class PISST extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVPIS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVPIS($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VPIS, $value), true);
     }
 
     /**

@@ -18,10 +18,6 @@ class CIDE extends \Sped\Components\Xml\Element  {
 
     const VCIDE = 'vCIDE';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1204 
@@ -34,9 +30,10 @@ class CIDE extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1204 
+     * @param type $value 
      */
-    public function addQBCProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(), true);
+    public function addQBCProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value), true);
     }
 
     /**
@@ -62,9 +59,10 @@ class CIDE extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1104 
+     * @param type $value 
      */
-    public function addVAliqProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(), true);
+    public function addVAliqProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VALIQPROD, $value), true);
     }
 
     /**
@@ -90,9 +88,10 @@ class CIDE extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVCIDE(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVCIDE($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCIDE, $value), true);
     }
 
     /**

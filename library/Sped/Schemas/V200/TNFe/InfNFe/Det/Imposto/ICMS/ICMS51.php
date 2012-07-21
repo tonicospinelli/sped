@@ -28,10 +28,6 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
 
     const VICMS = 'vICMS';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\Torig 
@@ -44,9 +40,10 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\Torig 
+     * @param type $value 
      */
-    public function addOrig(){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(), true);
+    public function addOrig($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), true);
     }
 
     /**
@@ -72,9 +69,10 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\CST 
+     * @param type $value 
      */
-    public function addCST(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\CST(), true);
+    public function addCST($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\CST(self::CST, $value), true);
     }
 
     /**
@@ -91,9 +89,9 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getModBC(int $index){
+    public function getModBC($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC');
         return $this->getElementsByTagName(self::MODBC)->item($index);
     }
@@ -101,9 +99,10 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC 
+     * @param type $value 
      */
-    public function addModBC(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC(), true);
+    public function addModBC($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC(self::MODBC, $value), true);
     }
 
     /**
@@ -120,9 +119,9 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0302 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getPRedBC(int $index){
+    public function getPRedBC($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
         return $this->getElementsByTagName(self::PREDBC)->item($index);
     }
@@ -130,9 +129,10 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0302 
+     * @param type $value 
      */
-    public function addPRedBC(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(), true);
+    public function addPRedBC($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PREDBC, $value), true);
     }
 
     /**
@@ -149,9 +149,9 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVBC(int $index){
+    public function getVBC($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VBC)->item($index);
     }
@@ -159,9 +159,10 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVBC(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVBC($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
     }
 
     /**
@@ -178,9 +179,9 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0302 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getPICMS(int $index){
+    public function getPICMS($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
         return $this->getElementsByTagName(self::PICMS)->item($index);
     }
@@ -188,9 +189,10 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0302 
+     * @param type $value 
      */
-    public function addPICMS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(), true);
+    public function addPICMS($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMS, $value), true);
     }
 
     /**
@@ -207,9 +209,9 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVICMS(int $index){
+    public function getVICMS($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VICMS)->item($index);
     }
@@ -217,9 +219,10 @@ class ICMS51 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVICMS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVICMS($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value), true);
     }
 
     /**

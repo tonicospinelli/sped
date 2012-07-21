@@ -23,10 +23,6 @@ class COFINSST extends \Sped\Components\Xml\Element  {
 
     const VCOFINS = 'vCOFINS';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
@@ -39,9 +35,10 @@ class COFINSST extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVBC(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVBC($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBC, $value), true);
     }
 
     /**
@@ -67,9 +64,10 @@ class COFINSST extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
+     * @param type $value 
      */
-    public function addPCOFINS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(), true);
+    public function addPCOFINS($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PCOFINS, $value), true);
     }
 
     /**
@@ -95,9 +93,10 @@ class COFINSST extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
+     * @param type $value 
      */
-    public function addQBCProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(), true);
+    public function addQBCProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QBCPROD, $value), true);
     }
 
     /**
@@ -123,9 +122,10 @@ class COFINSST extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1104Opc 
+     * @param type $value 
      */
-    public function addVAliqProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104Opc(), true);
+    public function addVAliqProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104Opc(self::VALIQPROD, $value), true);
     }
 
     /**
@@ -151,9 +151,10 @@ class COFINSST extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVCOFINS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVCOFINS($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VCOFINS, $value), true);
     }
 
     /**

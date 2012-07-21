@@ -24,10 +24,6 @@ class RetTransp extends \Sped\Components\Xml\Element  {
 
     const CMUNFG = 'cMunFG';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
@@ -40,9 +36,10 @@ class RetTransp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVServ(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVServ($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VSERV, $value), true);
     }
 
     /**
@@ -68,9 +65,10 @@ class RetTransp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVBCRet(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVBCRet($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCRET, $value), true);
     }
 
     /**
@@ -96,9 +94,10 @@ class RetTransp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0302 
+     * @param type $value 
      */
-    public function addPICMSRet(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(), true);
+    public function addPICMSRet($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMSRET, $value), true);
     }
 
     /**
@@ -124,9 +123,10 @@ class RetTransp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVICMSRet(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVICMSRet($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSRET, $value), true);
     }
 
     /**
@@ -152,9 +152,10 @@ class RetTransp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCfopTransp 
+     * @param type $value 
      */
-    public function addCFOP(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCfopTransp(), true);
+    public function addCFOP($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCfopTransp(self::CFOP, $value), true);
     }
 
     /**
@@ -180,9 +181,10 @@ class RetTransp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
+     * @param type $value 
      */
-    public function addCMunFG(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(), true);
+    public function addCMunFG($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), true);
     }
 
     /**

@@ -12,8 +12,4 @@ namespace Sped\Schemas\V200;
  */
 class SignatureValueType extends \Sped\Components\Xml\Element  {
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
 }

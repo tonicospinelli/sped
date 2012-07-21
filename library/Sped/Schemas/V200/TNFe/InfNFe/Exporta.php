@@ -16,10 +16,6 @@ class Exporta extends \Sped\Components\Xml\Element  {
 
     const XLOCEMBARQ = 'xLocEmbarq';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TUf 
@@ -32,9 +28,10 @@ class Exporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TUf 
+     * @param type $value 
      */
-    public function addUFEmbarq(){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(), true);
+    public function addUFEmbarq($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UFEMBARQ, $value), true);
     }
 
     /**
@@ -60,9 +57,10 @@ class Exporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq 
+     * @param type $value 
      */
-    public function addXLocEmbarq(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq(), true);
+    public function addXLocEmbarq($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq(self::XLOCEMBARQ, $value), true);
     }
 
     /**

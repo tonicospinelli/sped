@@ -64,10 +64,6 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     const COMB = 'comb';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd 
@@ -80,9 +76,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd 
+     * @param type $value 
      */
-    public function addCProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd(), true);
+    public function addCProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd(self::CPROD, $value), true);
     }
 
     /**
@@ -108,9 +105,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN 
+     * @param type $value 
      */
-    public function addCEAN(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN(), true);
+    public function addCEAN($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN(self::CEAN, $value), true);
     }
 
     /**
@@ -136,9 +134,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd 
+     * @param type $value 
      */
-    public function addXProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd(), true);
+    public function addXProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd(self::XPROD, $value), true);
     }
 
     /**
@@ -164,9 +163,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM 
+     * @param type $value 
      */
-    public function addNCM(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM(), true);
+    public function addNCM($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM(self::NCM, $value), true);
     }
 
     /**
@@ -183,9 +183,9 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getEXTIPI(int $index){
+    public function getEXTIPI($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI');
         return $this->getElementsByTagName(self::EXTIPI)->item($index);
     }
@@ -193,9 +193,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI 
+     * @param type $value 
      */
-    public function addEXTIPI(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI(), true);
+    public function addEXTIPI($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI(self::EXTIPI, $value), true);
     }
 
     /**
@@ -221,9 +222,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCfop 
+     * @param type $value 
      */
-    public function addCFOP(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCfop(), true);
+    public function addCFOP($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCfop(self::CFOP, $value), true);
     }
 
     /**
@@ -249,9 +251,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom 
+     * @param type $value 
      */
-    public function addUCom(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom(), true);
+    public function addUCom($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom(self::UCOM, $value), true);
     }
 
     /**
@@ -277,9 +280,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1104v 
+     * @param type $value 
      */
-    public function addQCom(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(), true);
+    public function addQCom($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::QCOM, $value), true);
     }
 
     /**
@@ -305,9 +309,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
+     * @param type $value 
      */
-    public function addVUnCom(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(), true);
+    public function addVUnCom($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::VUNCOM, $value), true);
     }
 
     /**
@@ -333,9 +338,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVProd($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPROD, $value), true);
     }
 
     /**
@@ -361,9 +367,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib 
+     * @param type $value 
      */
-    public function addCEANTrib(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib(), true);
+    public function addCEANTrib($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib(self::CEANTRIB, $value), true);
     }
 
     /**
@@ -389,9 +396,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib 
+     * @param type $value 
      */
-    public function addUTrib(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib(), true);
+    public function addUTrib($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib(self::UTRIB, $value), true);
     }
 
     /**
@@ -417,9 +425,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1104v 
+     * @param type $value 
      */
-    public function addQTrib(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(), true);
+    public function addQTrib($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::QTRIB, $value), true);
     }
 
     /**
@@ -445,9 +454,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
+     * @param type $value 
      */
-    public function addVUnTrib(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(), true);
+    public function addVUnTrib($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::VUNTRIB, $value), true);
     }
 
     /**
@@ -464,9 +474,9 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVFrete(int $index){
+    public function getVFrete($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VFRETE)->item($index);
     }
@@ -474,9 +484,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVFrete(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVFrete($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VFRETE, $value), true);
     }
 
     /**
@@ -493,9 +504,9 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVSeg(int $index){
+    public function getVSeg($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VSEG)->item($index);
     }
@@ -503,9 +514,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVSeg(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVSeg($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VSEG, $value), true);
     }
 
     /**
@@ -522,9 +534,9 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVDesc(int $index){
+    public function getVDesc($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VDESC)->item($index);
     }
@@ -532,9 +544,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVDesc(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVDesc($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value), true);
     }
 
     /**
@@ -551,9 +564,9 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVOutro(int $index){
+    public function getVOutro($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VOUTRO)->item($index);
     }
@@ -561,9 +574,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVOutro(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVOutro($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VOUTRO, $value), true);
     }
 
     /**
@@ -589,9 +603,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot 
+     * @param type $value 
      */
-    public function addIndTot(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot(), true);
+    public function addIndTot($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot(self::INDTOT, $value), true);
     }
 
     /**
@@ -608,9 +623,9 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getDI(int $index){
+    public function getDI($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI');
         return $this->getElementsByTagName(self::DI)->item($index);
     }
@@ -620,7 +635,7 @@ class Prod extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function addDI(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI(self::DI), true);
     }
 
     /**
@@ -637,9 +652,9 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getXPed(int $index){
+    public function getXPed($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed');
         return $this->getElementsByTagName(self::XPED)->item($index);
     }
@@ -647,9 +662,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed 
+     * @param type $value 
      */
-    public function addXPed(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed(), true);
+    public function addXPed($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed(self::XPED, $value), true);
     }
 
     /**
@@ -666,9 +682,9 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getNItemPed(int $index){
+    public function getNItemPed($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed');
         return $this->getElementsByTagName(self::NITEMPED)->item($index);
     }
@@ -676,9 +692,10 @@ class Prod extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed 
+     * @param type $value 
      */
-    public function addNItemPed(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed(), true);
+    public function addNItemPed($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed(self::NITEMPED, $value), true);
     }
 
     /**
@@ -706,7 +723,7 @@ class Prod extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
     public function addVeicProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd(self::VEICPROD), true);
     }
 
     /**
@@ -734,7 +751,7 @@ class Prod extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
     public function addMed(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med(self::MED), true);
     }
 
     /**
@@ -762,7 +779,7 @@ class Prod extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma 
      */
     public function addArma(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma(self::ARMA), true);
     }
 
     /**
@@ -790,7 +807,7 @@ class Prod extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
     public function addComb(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb(self::COMB), true);
     }
 
     /**

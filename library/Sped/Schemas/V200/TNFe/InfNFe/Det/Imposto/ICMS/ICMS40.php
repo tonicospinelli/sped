@@ -23,10 +23,6 @@ class ICMS40 extends \Sped\Components\Xml\Element  {
 
     const MOTDESICMS = 'motDesICMS';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\Torig 
@@ -39,9 +35,10 @@ class ICMS40 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\Torig 
+     * @param type $value 
      */
-    public function addOrig(){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(), true);
+    public function addOrig($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), true);
     }
 
     /**
@@ -67,9 +64,10 @@ class ICMS40 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST 
+     * @param type $value 
      */
-    public function addCST(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST(), true);
+    public function addCST($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST(self::CST, $value), true);
     }
 
     /**
@@ -95,9 +93,10 @@ class ICMS40 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVICMS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVICMS($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value), true);
     }
 
     /**
@@ -123,9 +122,10 @@ class ICMS40 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS 
+     * @param type $value 
      */
-    public function addMotDesICMS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS(), true);
+    public function addMotDesICMS($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS(self::MOTDESICMS, $value), true);
     }
 
     /**

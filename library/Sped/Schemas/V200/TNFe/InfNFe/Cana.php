@@ -32,10 +32,6 @@ class Cana extends \Sped\Components\Xml\Element  {
 
     const VLIQFOR = 'vLiqFor';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra 
@@ -48,9 +44,10 @@ class Cana extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra 
+     * @param type $value 
      */
-    public function addSafra(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra(), true);
+    public function addSafra($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra(self::SAFRA, $value), true);
     }
 
     /**
@@ -76,9 +73,10 @@ class Cana extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref 
+     * @param type $value 
      */
-    public function addRef(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref(), true);
+    public function addRef($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref(self::REF, $value), true);
     }
 
     /**
@@ -106,7 +104,7 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia 
      */
     public function addForDia(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia(self::FORDIA), true);
     }
 
     /**
@@ -132,9 +130,10 @@ class Cana extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
+     * @param type $value 
      */
-    public function addQTotMes(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(), true);
+    public function addQTotMes($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTMES, $value), true);
     }
 
     /**
@@ -160,9 +159,10 @@ class Cana extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
+     * @param type $value 
      */
-    public function addQTotAnt(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(), true);
+    public function addQTotAnt($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTANT, $value), true);
     }
 
     /**
@@ -188,9 +188,10 @@ class Cana extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
+     * @param type $value 
      */
-    public function addQTotGer(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(), true);
+    public function addQTotGer($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTGER, $value), true);
     }
 
     /**
@@ -207,9 +208,9 @@ class Cana extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getDeduc(int $index){
+    public function getDeduc($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc');
         return $this->getElementsByTagName(self::DEDUC)->item($index);
     }
@@ -219,7 +220,7 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
     public function addDeduc(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc(self::DEDUC), true);
     }
 
     /**
@@ -245,9 +246,10 @@ class Cana extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVFor(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVFor($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VFOR, $value), true);
     }
 
     /**
@@ -273,9 +275,10 @@ class Cana extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVTotDed(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVTotDed($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VTOTDED, $value), true);
     }
 
     /**
@@ -301,9 +304,10 @@ class Cana extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVLiqFor(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVLiqFor($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VLIQFOR, $value), true);
     }
 
     /**

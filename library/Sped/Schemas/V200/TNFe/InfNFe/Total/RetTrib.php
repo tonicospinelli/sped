@@ -26,16 +26,12 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     const VRETPREV = 'vRetPrev';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVRetPIS(int $index){
+    public function getVRetPIS($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VRETPIS)->item($index);
     }
@@ -43,9 +39,10 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVRetPIS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVRetPIS($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETPIS, $value), true);
     }
 
     /**
@@ -62,9 +59,9 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVRetCOFINS(int $index){
+    public function getVRetCOFINS($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VRETCOFINS)->item($index);
     }
@@ -72,9 +69,10 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVRetCOFINS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVRetCOFINS($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETCOFINS, $value), true);
     }
 
     /**
@@ -91,9 +89,9 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVRetCSLL(int $index){
+    public function getVRetCSLL($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VRETCSLL)->item($index);
     }
@@ -101,9 +99,10 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVRetCSLL(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVRetCSLL($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETCSLL, $value), true);
     }
 
     /**
@@ -120,9 +119,9 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVBCIRRF(int $index){
+    public function getVBCIRRF($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VBCIRRF)->item($index);
     }
@@ -130,9 +129,10 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVBCIRRF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVBCIRRF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBCIRRF, $value), true);
     }
 
     /**
@@ -149,9 +149,9 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVIRRF(int $index){
+    public function getVIRRF($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VIRRF)->item($index);
     }
@@ -159,9 +159,10 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVIRRF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVIRRF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VIRRF, $value), true);
     }
 
     /**
@@ -178,9 +179,9 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVBCRetPrev(int $index){
+    public function getVBCRetPrev($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VBCRETPREV)->item($index);
     }
@@ -188,9 +189,10 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVBCRetPrev(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVBCRetPrev($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBCRETPREV, $value), true);
     }
 
     /**
@@ -207,9 +209,9 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVRetPrev(int $index){
+    public function getVRetPrev($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VRETPREV)->item($index);
     }
@@ -217,9 +219,10 @@ class RetTrib extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
+     * @param type $value 
      */
-    public function addVRetPrev(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(), true);
+    public function addVRetPrev($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETPREV, $value), true);
     }
 
     /**

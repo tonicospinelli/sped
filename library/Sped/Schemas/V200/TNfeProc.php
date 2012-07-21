@@ -16,10 +16,6 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
 
     const PROTNFE = 'protNFe';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe 
@@ -32,9 +28,10 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe 
+     * @param type $value 
      */
-    public function addNFe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe(), true);
+    public function addNFe($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value), true);
     }
 
     /**
@@ -60,9 +57,10 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TProtNFe 
+     * @param type $value 
      */
-    public function addProtNFe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe(), true);
+    public function addProtNFe($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe(self::PROTNFE, $value), true);
     }
 
     /**

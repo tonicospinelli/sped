@@ -28,10 +28,6 @@ class Transp extends \Sped\Components\Xml\Element  {
 
     const VOL = 'vol';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete 
@@ -44,9 +40,10 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete 
+     * @param type $value 
      */
-    public function addModFrete(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete(), true);
+    public function addModFrete($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete(self::MODFRETE, $value), true);
     }
 
     /**
@@ -63,9 +60,9 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getTransporta(int $index){
+    public function getTransporta($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta');
         return $this->getElementsByTagName(self::TRANSPORTA)->item($index);
     }
@@ -75,7 +72,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
     public function addTransporta(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta(self::TRANSPORTA), true);
     }
 
     /**
@@ -92,9 +89,9 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getRetTransp(int $index){
+    public function getRetTransp($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp');
         return $this->getElementsByTagName(self::RETTRANSP)->item($index);
     }
@@ -104,7 +101,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
     public function addRetTransp(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp(self::RETTRANSP), true);
     }
 
     /**
@@ -121,9 +118,9 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TVeiculo 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVeicTransp(int $index){
+    public function getVeicTransp($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
         return $this->getElementsByTagName(self::VEICTRANSP)->item($index);
     }
@@ -131,9 +128,10 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TVeiculo 
+     * @param type $value 
      */
-    public function addVeicTransp(){
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(), true);
+    public function addVeicTransp($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(self::VEICTRANSP, $value), true);
     }
 
     /**
@@ -150,9 +148,9 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TVeiculo 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getReboque(int $index){
+    public function getReboque($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
         return $this->getElementsByTagName(self::REBOQUE)->item($index);
     }
@@ -160,9 +158,10 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TVeiculo 
+     * @param type $value 
      */
-    public function addReboque(){
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(), true);
+    public function addReboque($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(self::REBOQUE, $value), true);
     }
 
     /**
@@ -179,9 +178,9 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVagao(int $index){
+    public function getVagao($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao');
         return $this->getElementsByTagName(self::VAGAO)->item($index);
     }
@@ -189,9 +188,10 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
+     * @param type $value 
      */
-    public function addVagao(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao(), true);
+    public function addVagao($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao(self::VAGAO, $value), true);
     }
 
     /**
@@ -208,9 +208,9 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getBalsa(int $index){
+    public function getBalsa($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa');
         return $this->getElementsByTagName(self::BALSA)->item($index);
     }
@@ -218,9 +218,10 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
+     * @param type $value 
      */
-    public function addBalsa(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa(), true);
+    public function addBalsa($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa(self::BALSA, $value), true);
     }
 
     /**
@@ -237,9 +238,9 @@ class Transp extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVol(int $index){
+    public function getVol($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol');
         return $this->getElementsByTagName(self::VOL)->item($index);
     }
@@ -249,7 +250,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol 
      */
     public function addVol(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol(self::VOL), true);
     }
 
     /**

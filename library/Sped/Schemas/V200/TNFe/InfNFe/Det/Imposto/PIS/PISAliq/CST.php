@@ -14,12 +14,4 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq;
  */
 class CST extends \Sped\Components\Xml\Element  {
 
-    /**
-     * 
-     * @param string $value 
-     */
-    public function __construct(string $value = NULL){
-        parent::__construct(self::NAME, $value, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
 }

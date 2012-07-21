@@ -14,10 +14,6 @@ class KeyInfoType extends \Sped\Components\Xml\Element  {
 
     const X509DATA = 'X509Data';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\X509DataType 
@@ -30,9 +26,10 @@ class KeyInfoType extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\X509DataType 
+     * @param type $value 
      */
-    public function addX509Data(){
-        return $this->appendChild(new \Sped\Schemas\V200\X509DataType(), true);
+    public function addX509Data($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\X509DataType(self::X509DATA, $value), true);
     }
 
     /**

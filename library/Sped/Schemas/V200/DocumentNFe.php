@@ -19,7 +19,7 @@ class DocumentNFe extends \Sped\Components\Xml\Document  {
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function getNFe(){
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
+        $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
         return $this->getElementsByTagName(self::NFE)->item(0);
     }
 
@@ -28,7 +28,7 @@ class DocumentNFe extends \Sped\Components\Xml\Document  {
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function addNFe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE), true);
     }
 
     /**

@@ -26,10 +26,6 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     const UF = 'UF';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TCnpj 
@@ -42,9 +38,10 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCnpj 
+     * @param type $value 
      */
-    public function addCNPJ(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(), true);
+    public function addCNPJ($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), true);
     }
 
     /**
@@ -70,9 +67,10 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCpf 
+     * @param type $value 
      */
-    public function addCPF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCpf(), true);
+    public function addCPF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), true);
     }
 
     /**
@@ -89,9 +87,9 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getXNome(int $index){
+    public function getXNome($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome');
         return $this->getElementsByTagName(self::XNOME)->item($index);
     }
@@ -99,9 +97,10 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome 
+     * @param type $value 
      */
-    public function addXNome(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome(), true);
+    public function addXNome($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome(self::XNOME, $value), true);
     }
 
     /**
@@ -118,9 +117,9 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TIeDest 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getIE(int $index){
+    public function getIE($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIeDest');
         return $this->getElementsByTagName(self::IE)->item($index);
     }
@@ -128,9 +127,10 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TIeDest 
+     * @param type $value 
      */
-    public function addIE(){
-        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(), true);
+    public function addIE($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value), true);
     }
 
     /**
@@ -147,9 +147,9 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getXEnder(int $index){
+    public function getXEnder($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder');
         return $this->getElementsByTagName(self::XENDER)->item($index);
     }
@@ -157,9 +157,10 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder 
+     * @param type $value 
      */
-    public function addXEnder(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder(), true);
+    public function addXEnder($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder(self::XENDER, $value), true);
     }
 
     /**
@@ -176,9 +177,9 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getXMun(int $index){
+    public function getXMun($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun');
         return $this->getElementsByTagName(self::XMUN)->item($index);
     }
@@ -186,9 +187,10 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun 
+     * @param type $value 
      */
-    public function addXMun(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun(), true);
+    public function addXMun($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun(self::XMUN, $value), true);
     }
 
     /**
@@ -205,9 +207,9 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TUf 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getUF(int $index){
+    public function getUF($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TUf');
         return $this->getElementsByTagName(self::UF)->item($index);
     }
@@ -215,9 +217,10 @@ class Transporta extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TUf 
+     * @param type $value 
      */
-    public function addUF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(), true);
+    public function addUF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), true);
     }
 
     /**

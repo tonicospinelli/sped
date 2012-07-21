@@ -20,10 +20,6 @@ class ICMSSN101 extends \Sped\Components\Xml\Element  {
 
     const VCREDICMSSN = 'vCredICMSSN';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\Torig 
@@ -36,9 +32,10 @@ class ICMSSN101 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\Torig 
+     * @param type $value 
      */
-    public function addOrig(){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(), true);
+    public function addOrig($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), true);
     }
 
     /**
@@ -64,9 +61,10 @@ class ICMSSN101 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN 
+     * @param type $value 
      */
-    public function addCSOSN(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN(), true);
+    public function addCSOSN($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN(self::CSOSN, $value), true);
     }
 
     /**
@@ -92,9 +90,10 @@ class ICMSSN101 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0302 
+     * @param type $value 
      */
-    public function addPCredSN(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(), true);
+    public function addPCredSN($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PCREDSN, $value), true);
     }
 
     /**
@@ -120,9 +119,10 @@ class ICMSSN101 extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVCredICMSSN(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVCredICMSSN($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCREDICMSSN, $value), true);
     }
 
     /**

@@ -34,10 +34,6 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     const DPAG = 'dPag';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TCnpj 
@@ -50,9 +46,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCnpj 
+     * @param type $value 
      */
-    public function addCNPJ(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(), true);
+    public function addCNPJ($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), true);
     }
 
     /**
@@ -78,9 +75,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao 
+     * @param type $value 
      */
-    public function addXOrgao(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao(), true);
+    public function addXOrgao($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao(self::XORGAO, $value), true);
     }
 
     /**
@@ -106,9 +104,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr 
+     * @param type $value 
      */
-    public function addMatr(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr(), true);
+    public function addMatr($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr(self::MATR, $value), true);
     }
 
     /**
@@ -134,9 +133,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente 
+     * @param type $value 
      */
-    public function addXAgente(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente(), true);
+    public function addXAgente($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente(self::XAGENTE, $value), true);
     }
 
     /**
@@ -153,9 +153,9 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getFone(int $index){
+    public function getFone($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone');
         return $this->getElementsByTagName(self::FONE)->item($index);
     }
@@ -163,9 +163,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
+     * @param type $value 
      */
-    public function addFone(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone(), true);
+    public function addFone($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone(self::FONE, $value), true);
     }
 
     /**
@@ -191,9 +192,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TUfEmi 
+     * @param type $value 
      */
-    public function addUF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(), true);
+    public function addUF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(self::UF, $value), true);
     }
 
     /**
@@ -210,9 +212,9 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getNDAR(int $index){
+    public function getNDAR($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR');
         return $this->getElementsByTagName(self::NDAR)->item($index);
     }
@@ -220,9 +222,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
+     * @param type $value 
      */
-    public function addNDAR(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR(), true);
+    public function addNDAR($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR(self::NDAR, $value), true);
     }
 
     /**
@@ -239,9 +242,9 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TData 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getDEmi(int $index){
+    public function getDEmi($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
         return $this->getElementsByTagName(self::DEMI)->item($index);
     }
@@ -249,9 +252,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TData 
+     * @param type $value 
      */
-    public function addDEmi(){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(), true);
+    public function addDEmi($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value), true);
     }
 
     /**
@@ -268,9 +272,9 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getVDAR(int $index){
+    public function getVDAR($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VDAR)->item($index);
     }
@@ -278,9 +282,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVDAR(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVDAR($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDAR, $value), true);
     }
 
     /**
@@ -306,9 +311,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi 
+     * @param type $value 
      */
-    public function addRepEmi(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi(), true);
+    public function addRepEmi($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi(self::REPEMI, $value), true);
     }
 
     /**
@@ -325,9 +331,9 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TData 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getDPag(int $index){
+    public function getDPag($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
         return $this->getElementsByTagName(self::DPAG)->item($index);
     }
@@ -335,9 +341,10 @@ class Avulsa extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TData 
+     * @param type $value 
      */
-    public function addDPag(){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(), true);
+    public function addDPag($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DPAG, $value), true);
     }
 
     /**

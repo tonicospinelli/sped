@@ -14,10 +14,6 @@ class X509DataType extends \Sped\Components\Xml\Element  {
 
     const X509CERTIFICATE = 'X509Certificate';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\Base64Binary 
@@ -30,9 +26,10 @@ class X509DataType extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\Base64Binary 
+     * @param type $value 
      */
-    public function addX509Certificate(){
-        return $this->appendChild(new \Sped\Schemas\V200\Base64Binary(), true);
+    public function addX509Certificate($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\Base64Binary(self::X509CERTIFICATE, $value), true);
     }
 
     /**

@@ -24,10 +24,6 @@ class ISSQN extends \Sped\Components\Xml\Element  {
 
     const CSITTRIB = 'cSitTrib';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
@@ -40,9 +36,10 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVBC(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVBC($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
     }
 
     /**
@@ -68,9 +65,10 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0302 
+     * @param type $value 
      */
-    public function addVAliq(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(), true);
+    public function addVAliq($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::VALIQ, $value), true);
     }
 
     /**
@@ -96,9 +94,10 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVISSQN(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVISSQN($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VISSQN, $value), true);
     }
 
     /**
@@ -124,9 +123,10 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
+     * @param type $value 
      */
-    public function addCMunFG(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(), true);
+    public function addCMunFG($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), true);
     }
 
     /**
@@ -152,9 +152,10 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCListServ 
+     * @param type $value 
      */
-    public function addCListServ(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCListServ(), true);
+    public function addCListServ($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCListServ(self::CLISTSERV, $value), true);
     }
 
     /**
@@ -180,9 +181,10 @@ class ISSQN extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib 
+     * @param type $value 
      */
-    public function addCSitTrib(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib(), true);
+    public function addCSitTrib($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib(self::CSITTRIB, $value), true);
     }
 
     /**

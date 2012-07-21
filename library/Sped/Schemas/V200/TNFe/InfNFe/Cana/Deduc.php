@@ -16,10 +16,6 @@ class Deduc extends \Sped\Components\Xml\Element  {
 
     const VDED = 'vDed';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed 
@@ -32,9 +28,10 @@ class Deduc extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed 
+     * @param type $value 
      */
-    public function addXDed(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed(), true);
+    public function addXDed($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed(self::XDED, $value), true);
     }
 
     /**
@@ -60,9 +57,10 @@ class Deduc extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVDed(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVDed($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDED, $value), true);
     }
 
     /**

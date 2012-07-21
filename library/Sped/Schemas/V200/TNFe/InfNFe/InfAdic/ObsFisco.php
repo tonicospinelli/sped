@@ -16,10 +16,6 @@ class ObsFisco extends \Sped\Components\Xml\Element  {
 
     const XTEXTO = 'xTexto';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto 
@@ -32,9 +28,10 @@ class ObsFisco extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto 
+     * @param type $value 
      */
-    public function addXTexto(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto(), true);
+    public function addXTexto($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto(self::XTEXTO, $value), true);
     }
 
     /**

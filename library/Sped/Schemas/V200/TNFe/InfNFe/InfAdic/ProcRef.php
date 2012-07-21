@@ -16,10 +16,6 @@ class ProcRef extends \Sped\Components\Xml\Element  {
 
     const INDPROC = 'indProc';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc 
@@ -32,9 +28,10 @@ class ProcRef extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc 
+     * @param type $value 
      */
-    public function addNProc(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc(), true);
+    public function addNProc($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc(self::NPROC, $value), true);
     }
 
     /**
@@ -60,9 +57,10 @@ class ProcRef extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc 
+     * @param type $value 
      */
-    public function addIndProc(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc(), true);
+    public function addIndProc($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc(self::INDPROC, $value), true);
     }
 
     /**

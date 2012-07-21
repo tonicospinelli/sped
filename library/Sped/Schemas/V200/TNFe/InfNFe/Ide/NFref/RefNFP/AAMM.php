@@ -12,12 +12,4 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP;
  */
 class AAMM extends \Sped\Components\Xml\Element  {
 
-    /**
-     * 
-     * @param string $value 
-     */
-    public function __construct(string $value = NULL){
-        parent::__construct(self::NAME, $value, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
 }

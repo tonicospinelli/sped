@@ -26,10 +26,6 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
 
     const INFREC = 'infRec';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TAmb 
@@ -42,9 +38,10 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TAmb 
+     * @param type $value 
      */
-    public function addTpAmb(){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(), true);
+    public function addTpAmb($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), true);
     }
 
     /**
@@ -70,9 +67,10 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TVerAplic 
+     * @param type $value 
      */
-    public function addVerAplic(){
-        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(), true);
+    public function addVerAplic($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value), true);
     }
 
     /**
@@ -98,9 +96,10 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TStat 
+     * @param type $value 
      */
-    public function addCStat(){
-        return $this->appendChild(new \Sped\Schemas\V200\TStat(), true);
+    public function addCStat($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value), true);
     }
 
     /**
@@ -126,9 +125,10 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TMotivo 
+     * @param type $value 
      */
-    public function addXMotivo(){
-        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(), true);
+    public function addXMotivo($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value), true);
     }
 
     /**
@@ -154,9 +154,10 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
+     * @param type $value 
      */
-    public function addCUF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(), true);
+    public function addCUF($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), true);
     }
 
     /**
@@ -182,9 +183,10 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\DateTime 
+     * @param type $value 
      */
-    public function addDhRecbto(){
-        return $this->appendChild(new \Sped\Schemas\V200\DateTime(), true);
+    public function addDhRecbto($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\DateTime(self::DHRECBTO, $value), true);
     }
 
     /**
@@ -201,9 +203,9 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getInfRec(int $index){
+    public function getInfRec($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TRetEnviNFe\InfRec');
         return $this->getElementsByTagName(self::INFREC)->item($index);
     }
@@ -213,7 +215,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
     public function addInfRec(){
-        return $this->appendChild(new \Sped\Schemas\V200\TRetEnviNFe\InfRec(), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TRetEnviNFe\InfRec(self::INFREC), true);
     }
 
     /**

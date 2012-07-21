@@ -16,10 +16,6 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
 
     const NREC = 'nRec';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TAmb 
@@ -32,9 +28,10 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TAmb 
+     * @param type $value 
      */
-    public function addTpAmb(){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(), true);
+    public function addTpAmb($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), true);
     }
 
     /**
@@ -60,9 +57,10 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TRec 
+     * @param type $value 
      */
-    public function addNRec(){
-        return $this->appendChild(new \Sped\Schemas\V200\TRec(), true);
+    public function addNRec($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value), true);
     }
 
     /**

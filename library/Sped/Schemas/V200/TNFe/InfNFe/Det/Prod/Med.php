@@ -22,10 +22,6 @@ class Med extends \Sped\Components\Xml\Element  {
 
     const VPMC = 'vPMC';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote 
@@ -38,9 +34,10 @@ class Med extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote 
+     * @param type $value 
      */
-    public function addNLote(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote(), true);
+    public function addNLote($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote(self::NLOTE, $value), true);
     }
 
     /**
@@ -66,9 +63,10 @@ class Med extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_0803 
+     * @param type $value 
      */
-    public function addQLote(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0803(), true);
+    public function addQLote($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0803(self::QLOTE, $value), true);
     }
 
     /**
@@ -94,9 +92,10 @@ class Med extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TData 
+     * @param type $value 
      */
-    public function addDFab(){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(), true);
+    public function addDFab($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DFAB, $value), true);
     }
 
     /**
@@ -122,9 +121,10 @@ class Med extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TData 
+     * @param type $value 
      */
-    public function addDVal(){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(), true);
+    public function addDVal($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVAL, $value), true);
     }
 
     /**
@@ -150,9 +150,10 @@ class Med extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
+     * @param type $value 
      */
-    public function addVPMC(){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(), true);
+    public function addVPMC($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPMC, $value), true);
     }
 
     /**

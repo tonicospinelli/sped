@@ -14,16 +14,12 @@ class TransformsType extends \Sped\Components\Xml\Element  {
 
     const TRANSFORM = 'Transform';
 
-    public function __construct(){
-        parent::__construct(self::NAME, null, 'http://www.portalfiscal.inf.br/nfe');
-    }
-
     /**
      * 
      * @return \Sped\Schemas\V200\TransformType 
-     * @param int $index 
+     * @param type $index 
      */
-    public function getTransform(int $index){
+    public function getTransform($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TransformType');
         return $this->getElementsByTagName(self::TRANSFORM)->item($index);
     }
@@ -31,9 +27,10 @@ class TransformsType extends \Sped\Components\Xml\Element  {
     /**
      * 
      * @return \Sped\Schemas\V200\TransformType 
+     * @param type $value 
      */
-    public function addTransform(){
-        return $this->appendChild(new \Sped\Schemas\V200\TransformType(), true);
+    public function addTransform($value = NULL){
+        return $this->appendChild(new \Sped\Schemas\V200\TransformType(self::TRANSFORM, $value), true);
     }
 
     /**
