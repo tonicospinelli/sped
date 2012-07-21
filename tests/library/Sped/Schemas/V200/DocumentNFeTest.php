@@ -48,7 +48,14 @@ class DocumentNFeTest extends \PHPUnit_Framework_TestCase {
         try {
             $this->object->addNFe();
             $this->object->getNFe()->addInfNFe();
+            $this->object->getNFe()->getInfNFe()->addIde();
+            $this->object->getNFe()->getInfNFe()->getIde()->addCDV('123');
+            $this->object->getNFe()->getInfNFe()->getIde()->addCMunFG('123');
+            $this->object->getNFe()->getInfNFe()->getIde()->addCNF('123');
+            $this->object->getNFe()->getInfNFe()->getIde()->addNFref();
+            $this->object->getNFe()->getInfNFe()->getIde()->getNFref(0)->addRefNF()->addAAMM(1210);
             $this->object->getNFe()->addSignature();
+            $this->object->getNFe()->getSignature()->addSignedInfo();
             $this->object->formatOutput = true;
             var_dump($this->object->saveXML());
         } catch (\DOMException $exc) {
