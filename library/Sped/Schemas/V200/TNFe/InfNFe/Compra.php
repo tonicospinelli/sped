@@ -34,7 +34,7 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXNEmp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp(self::XNEMP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp(self::XNEMP, $value), false);
     }
 
     /**
@@ -64,7 +64,7 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXPed($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed(self::XPED, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed(self::XPED, $value), false);
     }
 
     /**
@@ -94,7 +94,7 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXCont($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont(self::XCONT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont(self::XCONT, $value), false);
     }
 
     /**

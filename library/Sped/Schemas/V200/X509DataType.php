@@ -29,7 +29,7 @@ class X509DataType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addX509Certificate($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Base64Binary(self::X509CERTIFICATE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\Base64Binary(self::X509CERTIFICATE, $value), false);
     }
 
     /**

@@ -42,7 +42,7 @@ class Vol extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addQVol($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol(self::QVOL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol(self::QVOL, $value), false);
     }
 
     /**
@@ -72,7 +72,7 @@ class Vol extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addEsp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp(self::ESP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp(self::ESP, $value), false);
     }
 
     /**
@@ -102,7 +102,7 @@ class Vol extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addMarca($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca(self::MARCA, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca(self::MARCA, $value), false);
     }
 
     /**
@@ -132,7 +132,7 @@ class Vol extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNVol($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol(self::NVOL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol(self::NVOL, $value), false);
     }
 
     /**
@@ -162,7 +162,7 @@ class Vol extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPesoL($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(self::PESOL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(self::PESOL, $value), false);
     }
 
     /**
@@ -192,7 +192,7 @@ class Vol extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPesoB($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(self::PESOB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(self::PESOB, $value), false);
     }
 
     /**
@@ -221,7 +221,7 @@ class Vol extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres 
      */
     public function addLacres(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres(self::LACRES), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres(self::LACRES), false);
     }
 
     /**

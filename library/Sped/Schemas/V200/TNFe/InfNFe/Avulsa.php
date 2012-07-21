@@ -49,7 +49,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCNPJ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), false);
     }
 
     /**
@@ -78,7 +78,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXOrgao($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao(self::XORGAO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao(self::XORGAO, $value), false);
     }
 
     /**
@@ -107,7 +107,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addMatr($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr(self::MATR, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr(self::MATR, $value), false);
     }
 
     /**
@@ -136,7 +136,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXAgente($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente(self::XAGENTE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente(self::XAGENTE, $value), false);
     }
 
     /**
@@ -166,7 +166,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addFone($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone(self::FONE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone(self::FONE, $value), false);
     }
 
     /**
@@ -195,7 +195,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(self::UF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(self::UF, $value), false);
     }
 
     /**
@@ -225,7 +225,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNDAR($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR(self::NDAR, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR(self::NDAR, $value), false);
     }
 
     /**
@@ -255,7 +255,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDEmi($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value), false);
     }
 
     /**
@@ -285,7 +285,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVDAR($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDAR, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDAR, $value), false);
     }
 
     /**
@@ -314,7 +314,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addRepEmi($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi(self::REPEMI, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi(self::REPEMI, $value), false);
     }
 
     /**
@@ -344,7 +344,7 @@ class Avulsa extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDPag($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DPAG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DPAG, $value), false);
     }
 
     /**

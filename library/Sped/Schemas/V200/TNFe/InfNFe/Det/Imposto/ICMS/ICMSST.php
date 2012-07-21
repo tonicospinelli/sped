@@ -39,7 +39,7 @@ class ICMSST extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), false);
     }
 
     /**
@@ -68,7 +68,7 @@ class ICMSST extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST(self::CST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST(self::CST, $value), false);
     }
 
     /**
@@ -97,7 +97,7 @@ class ICMSST extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBCSTRet($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCSTRET, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCSTRET, $value), false);
     }
 
     /**
@@ -126,7 +126,7 @@ class ICMSST extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVICMSSTRet($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSSTRET, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSSTRET, $value), false);
     }
 
     /**
@@ -155,7 +155,7 @@ class ICMSST extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBCSTDest($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCSTDEST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCSTDEST, $value), false);
     }
 
     /**
@@ -184,7 +184,7 @@ class ICMSST extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVICMSSTDest($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSSTDEST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSSTDEST, $value), false);
     }
 
     /**

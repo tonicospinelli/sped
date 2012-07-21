@@ -32,7 +32,7 @@ class Total extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function addICMSTot(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot(self::ICMSTOT), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot(self::ICMSTOT), false);
     }
 
     /**
@@ -61,7 +61,7 @@ class Total extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot 
      */
     public function addISSQNtot(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot(self::ISSQNTOT), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot(self::ISSQNTOT), false);
     }
 
     /**
@@ -90,7 +90,7 @@ class Total extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib 
      */
     public function addRetTrib(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib(self::RETTRIB), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib(self::RETTRIB), false);
     }
 
     /**

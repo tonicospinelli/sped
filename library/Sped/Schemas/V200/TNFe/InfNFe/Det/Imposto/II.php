@@ -35,7 +35,7 @@ class II extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
     }
 
     /**
@@ -64,7 +64,7 @@ class II extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVDespAdu($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDESPADU, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDESPADU, $value), false);
     }
 
     /**
@@ -93,7 +93,7 @@ class II extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVII($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VII, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VII, $value), false);
     }
 
     /**
@@ -122,7 +122,7 @@ class II extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVIOF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIOF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIOF, $value), false);
     }
 
     /**

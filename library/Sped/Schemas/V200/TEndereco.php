@@ -49,7 +49,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXLgr($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XLgr(self::XLGR, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XLgr(self::XLGR, $value), false);
     }
 
     /**
@@ -78,7 +78,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNro($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Nro(self::NRO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Nro(self::NRO, $value), false);
     }
 
     /**
@@ -108,7 +108,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXCpl($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XCpl(self::XCPL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XCpl(self::XCPL, $value), false);
     }
 
     /**
@@ -137,7 +137,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXBairro($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XBairro(self::XBAIRRO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XBairro(self::XBAIRRO, $value), false);
     }
 
     /**
@@ -166,7 +166,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCMun($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUN, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUN, $value), false);
     }
 
     /**
@@ -195,7 +195,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXMun($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XMun(self::XMUN, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XMun(self::XMUN, $value), false);
     }
 
     /**
@@ -224,7 +224,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), false);
     }
 
     /**
@@ -254,7 +254,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCEP($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\CEP(self::CEP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\CEP(self::CEP, $value), false);
     }
 
     /**
@@ -284,7 +284,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCPais($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Tpais(self::CPAIS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\Tpais(self::CPAIS, $value), false);
     }
 
     /**
@@ -314,7 +314,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXPais($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XPais(self::XPAIS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XPais(self::XPAIS, $value), false);
     }
 
     /**
@@ -344,7 +344,7 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addFone($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Fone(self::FONE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Fone(self::FONE, $value), false);
     }
 
     /**

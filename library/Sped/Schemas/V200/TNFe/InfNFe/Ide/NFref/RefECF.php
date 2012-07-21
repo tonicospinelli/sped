@@ -33,7 +33,7 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addMod($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod(self::MOD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod(self::MOD, $value), false);
     }
 
     /**
@@ -62,7 +62,7 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNECF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF(self::NECF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF(self::NECF, $value), false);
     }
 
     /**
@@ -91,7 +91,7 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNCOO($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO(self::NCOO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO(self::NCOO, $value), false);
     }
 
     /**

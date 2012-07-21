@@ -31,7 +31,7 @@ class ProcRef extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNProc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc(self::NPROC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc(self::NPROC, $value), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class ProcRef extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addIndProc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc(self::INDPROC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc(self::INDPROC, $value), false);
     }
 
     /**

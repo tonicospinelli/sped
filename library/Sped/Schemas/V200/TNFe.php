@@ -30,7 +30,7 @@ class TNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function addInfNFe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe(self::INFNFE), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe(self::INFNFE), false);
     }
 
     /**
@@ -59,7 +59,7 @@ class TNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addSignature($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value), false);
     }
 
     /**

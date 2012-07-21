@@ -43,7 +43,7 @@ class InfProt extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpAmb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), false);
     }
 
     /**
@@ -72,7 +72,7 @@ class InfProt extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVerAplic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value), false);
     }
 
     /**
@@ -101,7 +101,7 @@ class InfProt extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addChNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::CHNFE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::CHNFE, $value), false);
     }
 
     /**
@@ -130,7 +130,7 @@ class InfProt extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDhRecbto($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\DateTime(self::DHRECBTO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\DateTime(self::DHRECBTO, $value), false);
     }
 
     /**
@@ -160,7 +160,7 @@ class InfProt extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNProt($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TProt(self::NPROT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TProt(self::NPROT, $value), false);
     }
 
     /**
@@ -190,7 +190,7 @@ class InfProt extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDigVal($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGVAL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGVAL, $value), false);
     }
 
     /**
@@ -219,7 +219,7 @@ class InfProt extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCStat($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value), false);
     }
 
     /**
@@ -248,7 +248,7 @@ class InfProt extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXMotivo($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value), false);
     }
 
     /**

@@ -33,7 +33,7 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addQBCProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value), false);
     }
 
     /**
@@ -62,7 +62,7 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVAliqProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VALIQPROD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VALIQPROD, $value), false);
     }
 
     /**
@@ -91,7 +91,7 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVCIDE($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCIDE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCIDE, $value), false);
     }
 
     /**

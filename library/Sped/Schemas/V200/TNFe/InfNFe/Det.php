@@ -32,7 +32,7 @@ class Det extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
     public function addProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod(self::PROD), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod(self::PROD), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class Det extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
     public function addImposto(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto(self::IMPOSTO), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto(self::IMPOSTO), false);
     }
 
     /**
@@ -90,7 +90,7 @@ class Det extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addInfAdProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd(self::INFADPROD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd(self::INFADPROD, $value), false);
     }
 
     /**

@@ -75,7 +75,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpOp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpOp(self::TPOP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpOp(self::TPOP, $value), false);
     }
 
     /**
@@ -104,7 +104,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addChassi($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Chassi(self::CHASSI, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Chassi(self::CHASSI, $value), false);
     }
 
     /**
@@ -133,7 +133,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCCor($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCor(self::CCOR, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCor(self::CCOR, $value), false);
     }
 
     /**
@@ -162,7 +162,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXCor($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\XCor(self::XCOR, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\XCor(self::XCOR, $value), false);
     }
 
     /**
@@ -191,7 +191,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPot($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Pot(self::POT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Pot(self::POT, $value), false);
     }
 
     /**
@@ -220,7 +220,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCilin($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Cilin(self::CILIN, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Cilin(self::CILIN, $value), false);
     }
 
     /**
@@ -249,7 +249,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPesoL($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoL(self::PESOL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoL(self::PESOL, $value), false);
     }
 
     /**
@@ -278,7 +278,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPesoB($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoB(self::PESOB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoB(self::PESOB, $value), false);
     }
 
     /**
@@ -307,7 +307,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNSerie($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NSerie(self::NSERIE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NSerie(self::NSERIE, $value), false);
     }
 
     /**
@@ -336,7 +336,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpComb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpComb(self::TPCOMB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpComb(self::TPCOMB, $value), false);
     }
 
     /**
@@ -365,7 +365,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNMotor($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NMotor(self::NMOTOR, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NMotor(self::NMOTOR, $value), false);
     }
 
     /**
@@ -394,7 +394,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCMT($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMT(self::CMT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMT(self::CMT, $value), false);
     }
 
     /**
@@ -423,7 +423,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDist($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Dist(self::DIST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Dist(self::DIST, $value), false);
     }
 
     /**
@@ -452,7 +452,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addAnoMod($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoMod(self::ANOMOD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoMod(self::ANOMOD, $value), false);
     }
 
     /**
@@ -481,7 +481,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addAnoFab($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoFab(self::ANOFAB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoFab(self::ANOFAB, $value), false);
     }
 
     /**
@@ -510,7 +510,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpPint($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpPint(self::TPPINT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpPint(self::TPPINT, $value), false);
     }
 
     /**
@@ -539,7 +539,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpVeic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpVeic(self::TPVEIC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpVeic(self::TPVEIC, $value), false);
     }
 
     /**
@@ -568,7 +568,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addEspVeic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\EspVeic(self::ESPVEIC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\EspVeic(self::ESPVEIC, $value), false);
     }
 
     /**
@@ -597,7 +597,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVIN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\VIN(self::VIN, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\VIN(self::VIN, $value), false);
     }
 
     /**
@@ -626,7 +626,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCondVeic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CondVeic(self::CONDVEIC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CondVeic(self::CONDVEIC, $value), false);
     }
 
     /**
@@ -655,7 +655,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCMod($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMod(self::CMOD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMod(self::CMOD, $value), false);
     }
 
     /**
@@ -684,7 +684,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCCorDENATRAN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCorDENATRAN(self::CCORDENATRAN, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCorDENATRAN(self::CCORDENATRAN, $value), false);
     }
 
     /**
@@ -713,7 +713,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addLota($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Lota(self::LOTA, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Lota(self::LOTA, $value), false);
     }
 
     /**
@@ -742,7 +742,7 @@ class VeicProd extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpRest($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpRest(self::TPREST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpRest(self::TPREST, $value), false);
     }
 
     /**

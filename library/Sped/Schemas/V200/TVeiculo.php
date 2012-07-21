@@ -33,7 +33,7 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPlaca($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\Placa(self::PLACA, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\Placa(self::PLACA, $value), false);
     }
 
     /**
@@ -62,7 +62,7 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), false);
     }
 
     /**
@@ -92,7 +92,7 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addRNTC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\RNTC(self::RNTC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\RNTC(self::RNTC, $value), false);
     }
 
     /**

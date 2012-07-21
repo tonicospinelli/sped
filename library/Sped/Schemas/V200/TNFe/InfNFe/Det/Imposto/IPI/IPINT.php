@@ -39,7 +39,7 @@ class IPINT extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT\CST(self::CST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT\CST(self::CST, $value), false);
     }
 
     /**

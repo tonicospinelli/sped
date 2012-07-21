@@ -33,7 +33,7 @@ class SignatureType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addSignedInfo($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType(self::SIGNEDINFO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType(self::SIGNEDINFO, $value), false);
     }
 
     /**
@@ -62,7 +62,7 @@ class SignatureType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addSignatureValue($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureValueType(self::SIGNATUREVALUE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureValueType(self::SIGNATUREVALUE, $value), false);
     }
 
     /**
@@ -91,7 +91,7 @@ class SignatureType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addKeyInfo($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\KeyInfoType(self::KEYINFO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\KeyInfoType(self::KEYINFO, $value), false);
     }
 
     /**

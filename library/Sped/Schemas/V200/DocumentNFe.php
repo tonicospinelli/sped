@@ -26,9 +26,11 @@ class DocumentNFe extends \Sped\Components\Xml\Document  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe 
+     * @param type $value 
+     * @param type $namespaceURI 
      */
-    public function addNFe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE), true);
+    public function addNFe($value = NULL, $namespaceURI = 'http://www.portalfiscal.inf.br/nfe'){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value, $namespaceURI), false);
     }
 
     /**

@@ -31,7 +31,7 @@ class Deduc extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXDed($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed(self::XDED, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed(self::XDED, $value), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class Deduc extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVDed($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDED, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDED, $value), false);
     }
 
     /**

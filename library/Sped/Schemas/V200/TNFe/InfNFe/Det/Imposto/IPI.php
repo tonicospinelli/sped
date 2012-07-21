@@ -42,7 +42,7 @@ class IPI extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addClEnq($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq(self::CLENQ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq(self::CLENQ, $value), false);
     }
 
     /**
@@ -72,7 +72,7 @@ class IPI extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCNPJProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJPROD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJPROD, $value), false);
     }
 
     /**
@@ -102,7 +102,7 @@ class IPI extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCSelo($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo(self::CSELO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo(self::CSELO, $value), false);
     }
 
     /**
@@ -132,7 +132,7 @@ class IPI extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addQSelo($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo(self::QSELO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo(self::QSELO, $value), false);
     }
 
     /**
@@ -161,7 +161,7 @@ class IPI extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCEnq($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CEnq(self::CENQ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CEnq(self::CENQ, $value), false);
     }
 
     /**
@@ -189,7 +189,7 @@ class IPI extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib 
      */
     public function addIPITrib(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib(self::IPITRIB), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib(self::IPITRIB), false);
     }
 
     /**
@@ -217,7 +217,7 @@ class IPI extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT 
      */
     public function addIPINT(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT(self::IPINT), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT(self::IPINT), false);
     }
 
     /**

@@ -36,7 +36,7 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNFat($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat(self::NFAT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat(self::NFAT, $value), false);
     }
 
     /**
@@ -66,7 +66,7 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VORIG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VORIG, $value), false);
     }
 
     /**
@@ -96,7 +96,7 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVDesc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value), false);
     }
 
     /**
@@ -126,7 +126,7 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVLiq($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VLIQ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VLIQ, $value), false);
     }
 
     /**

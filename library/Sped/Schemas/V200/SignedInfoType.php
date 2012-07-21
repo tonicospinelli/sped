@@ -32,7 +32,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
      */
     public function addCanonicalizationMethod(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod(self::CANONICALIZATIONMETHOD), true);
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod(self::CANONICALIZATIONMETHOD), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\SignedInfoType\SignatureMethod 
      */
     public function addSignatureMethod(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\SignatureMethod(self::SIGNATUREMETHOD), true);
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\SignatureMethod(self::SIGNATUREMETHOD), false);
     }
 
     /**
@@ -89,7 +89,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addReference($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType(self::REFERENCE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType(self::REFERENCE, $value), false);
     }
 
     /**

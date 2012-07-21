@@ -30,7 +30,7 @@ class TransformsType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTransform($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TransformType(self::TRANSFORM, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TransformType(self::TRANSFORM, $value), false);
     }
 
     /**

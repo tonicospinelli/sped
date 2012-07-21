@@ -43,7 +43,7 @@ class IPITrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST(self::CST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST(self::CST, $value), false);
     }
 
     /**
@@ -72,7 +72,7 @@ class IPITrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
     }
 
     /**
@@ -101,7 +101,7 @@ class IPITrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPIPI($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PIPI, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PIPI, $value), false);
     }
 
     /**
@@ -130,7 +130,7 @@ class IPITrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addQUnid($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QUNID, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QUNID, $value), false);
     }
 
     /**
@@ -159,7 +159,7 @@ class IPITrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVUnid($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VUNID, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VUNID, $value), false);
     }
 
     /**
@@ -188,7 +188,7 @@ class IPITrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVIPI($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIPI, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIPI, $value), false);
     }
 
     /**

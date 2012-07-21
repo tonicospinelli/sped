@@ -31,7 +31,7 @@ class InfRec extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNRec($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class InfRec extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTMed($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TMed(self::TMED, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TMed(self::TMED, $value), false);
     }
 
     /**

@@ -47,7 +47,7 @@ class Emit extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCNPJ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), false);
     }
 
     /**
@@ -76,7 +76,7 @@ class Emit extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCPF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), false);
     }
 
     /**
@@ -105,7 +105,7 @@ class Emit extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXNome($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome(self::XNOME, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome(self::XNOME, $value), false);
     }
 
     /**
@@ -135,7 +135,7 @@ class Emit extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXFant($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant(self::XFANT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant(self::XFANT, $value), false);
     }
 
     /**
@@ -164,7 +164,7 @@ class Emit extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addEnderEmit($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi(self::ENDEREMIT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi(self::ENDEREMIT, $value), false);
     }
 
     /**
@@ -193,7 +193,7 @@ class Emit extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addIE($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TIe(self::IE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TIe(self::IE, $value), false);
     }
 
     /**
@@ -223,7 +223,7 @@ class Emit extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addIEST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TIeST(self::IEST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TIeST(self::IEST, $value), false);
     }
 
     /**
@@ -252,7 +252,7 @@ class Emit extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addIM($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM(self::IM, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM(self::IM, $value), false);
     }
 
     /**
@@ -281,7 +281,7 @@ class Emit extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCNAE($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE(self::CNAE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE(self::CNAE, $value), false);
     }
 
     /**
@@ -310,7 +310,7 @@ class Emit extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCRT($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT(self::CRT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT(self::CRT, $value), false);
     }
 
     /**

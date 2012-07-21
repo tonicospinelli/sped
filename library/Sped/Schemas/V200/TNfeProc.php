@@ -31,7 +31,7 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addProtNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe(self::PROTNFE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe(self::PROTNFE, $value), false);
     }
 
     /**

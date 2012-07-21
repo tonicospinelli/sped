@@ -31,7 +31,7 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpAmb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNRec($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value), false);
     }
 
     /**

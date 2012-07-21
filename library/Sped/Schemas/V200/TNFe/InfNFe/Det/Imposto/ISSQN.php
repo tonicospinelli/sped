@@ -39,7 +39,7 @@ class ISSQN extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
     }
 
     /**
@@ -68,7 +68,7 @@ class ISSQN extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVAliq($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::VALIQ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::VALIQ, $value), false);
     }
 
     /**
@@ -97,7 +97,7 @@ class ISSQN extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVISSQN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VISSQN, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VISSQN, $value), false);
     }
 
     /**
@@ -126,7 +126,7 @@ class ISSQN extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCMunFG($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), false);
     }
 
     /**
@@ -155,7 +155,7 @@ class ISSQN extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCListServ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCListServ(self::CLISTSERV, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCListServ(self::CLISTSERV, $value), false);
     }
 
     /**
@@ -184,7 +184,7 @@ class ISSQN extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCSitTrib($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib(self::CSITTRIB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib(self::CSITTRIB, $value), false);
     }
 
     /**

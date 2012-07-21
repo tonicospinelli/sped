@@ -55,7 +55,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
     }
 
     /**
@@ -84,7 +84,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVICMS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value), false);
     }
 
     /**
@@ -113,7 +113,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCST, $value), false);
     }
 
     /**
@@ -142,7 +142,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VST, $value), false);
     }
 
     /**
@@ -171,7 +171,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPROD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPROD, $value), false);
     }
 
     /**
@@ -200,7 +200,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVFrete($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VFRETE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VFRETE, $value), false);
     }
 
     /**
@@ -229,7 +229,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVSeg($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VSEG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VSEG, $value), false);
     }
 
     /**
@@ -258,7 +258,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVDesc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDESC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDESC, $value), false);
     }
 
     /**
@@ -287,7 +287,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVII($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VII, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VII, $value), false);
     }
 
     /**
@@ -316,7 +316,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVIPI($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIPI, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIPI, $value), false);
     }
 
     /**
@@ -345,7 +345,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVPIS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPIS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPIS, $value), false);
     }
 
     /**
@@ -374,7 +374,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVCOFINS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCOFINS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCOFINS, $value), false);
     }
 
     /**
@@ -403,7 +403,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVOutro($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VOUTRO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VOUTRO, $value), false);
     }
 
     /**
@@ -432,7 +432,7 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVNF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VNF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VNF, $value), false);
     }
 
     /**

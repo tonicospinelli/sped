@@ -29,7 +29,7 @@ class KeyInfoType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addX509Data($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\X509DataType(self::X509DATA, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\X509DataType(self::X509DATA, $value), false);
     }
 
     /**

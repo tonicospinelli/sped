@@ -43,7 +43,7 @@ class RefNFP extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), false);
     }
 
     /**
@@ -72,7 +72,7 @@ class RefNFP extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addAAMM($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\AAMM(self::AAMM, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\AAMM(self::AAMM, $value), false);
     }
 
     /**
@@ -101,7 +101,7 @@ class RefNFP extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCNPJ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), false);
     }
 
     /**
@@ -130,7 +130,7 @@ class RefNFP extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCPF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), false);
     }
 
     /**
@@ -159,7 +159,7 @@ class RefNFP extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addIE($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value), false);
     }
 
     /**
@@ -188,7 +188,7 @@ class RefNFP extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addMod($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\Mod(self::MOD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\Mod(self::MOD, $value), false);
     }
 
     /**
@@ -217,7 +217,7 @@ class RefNFP extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addSerie($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TSerie(self::SERIE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TSerie(self::SERIE, $value), false);
     }
 
     /**
@@ -246,7 +246,7 @@ class RefNFP extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNNF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNF(self::NNF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNF(self::NNF, $value), false);
     }
 
     /**

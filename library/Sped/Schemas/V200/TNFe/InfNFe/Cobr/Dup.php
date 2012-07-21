@@ -34,7 +34,7 @@ class Dup extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNDup($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup(self::NDUP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup(self::NDUP, $value), false);
     }
 
     /**
@@ -64,7 +64,7 @@ class Dup extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDVenc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVENC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVENC, $value), false);
     }
 
     /**
@@ -94,7 +94,7 @@ class Dup extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVDup($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDUP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDUP, $value), false);
     }
 
     /**

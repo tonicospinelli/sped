@@ -40,7 +40,7 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), false);
     }
 
     /**
@@ -69,7 +69,7 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\CST(self::CST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\CST(self::CST, $value), false);
     }
 
     /**
@@ -98,7 +98,7 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addModBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\ModBC(self::MODBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\ModBC(self::MODBC, $value), false);
     }
 
     /**
@@ -127,7 +127,7 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
     }
 
     /**
@@ -156,7 +156,7 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPICMS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMS, $value), false);
     }
 
     /**
@@ -185,7 +185,7 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVICMS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value), false);
     }
 
     /**

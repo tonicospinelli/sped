@@ -37,7 +37,7 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNLote($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote(self::NLOTE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote(self::NLOTE, $value), false);
     }
 
     /**
@@ -66,7 +66,7 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addQLote($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0803(self::QLOTE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0803(self::QLOTE, $value), false);
     }
 
     /**
@@ -95,7 +95,7 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDFab($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DFAB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DFAB, $value), false);
     }
 
     /**
@@ -124,7 +124,7 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDVal($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVAL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVAL, $value), false);
     }
 
     /**
@@ -153,7 +153,7 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVPMC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPMC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPMC, $value), false);
     }
 
     /**

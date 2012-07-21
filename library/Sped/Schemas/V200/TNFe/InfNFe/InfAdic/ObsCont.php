@@ -31,7 +31,7 @@ class ObsCont extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXTexto($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont\XTexto(self::XTEXTO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont\XTexto(self::XTEXTO, $value), false);
     }
 
     /**

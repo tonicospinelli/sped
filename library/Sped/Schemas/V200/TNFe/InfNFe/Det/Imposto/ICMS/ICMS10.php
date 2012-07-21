@@ -52,7 +52,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), false);
     }
 
     /**
@@ -81,7 +81,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10\CST(self::CST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10\CST(self::CST, $value), false);
     }
 
     /**
@@ -110,7 +110,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addModBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10\ModBC(self::MODBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10\ModBC(self::MODBC, $value), false);
     }
 
     /**
@@ -139,7 +139,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
     }
 
     /**
@@ -168,7 +168,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPICMS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMS, $value), false);
     }
 
     /**
@@ -197,7 +197,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVICMS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value), false);
     }
 
     /**
@@ -226,7 +226,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addModBCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10\ModBCST(self::MODBCST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10\ModBCST(self::MODBCST, $value), false);
     }
 
     /**
@@ -256,7 +256,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPMVAST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PMVAST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PMVAST, $value), false);
     }
 
     /**
@@ -286,7 +286,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPRedBCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PREDBCST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PREDBCST, $value), false);
     }
 
     /**
@@ -315,7 +315,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCST, $value), false);
     }
 
     /**
@@ -344,7 +344,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPICMSST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMSST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMSST, $value), false);
     }
 
     /**
@@ -373,7 +373,7 @@ class ICMS10 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVICMSST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSST, $value), false);
     }
 
     /**

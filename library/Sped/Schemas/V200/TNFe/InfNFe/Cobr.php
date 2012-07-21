@@ -31,7 +31,7 @@ class Cobr extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
     public function addFat(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat(self::FAT), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat(self::FAT), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class Cobr extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup 
      */
     public function addDup(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup(self::DUP), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup(self::DUP), false);
     }
 
     /**

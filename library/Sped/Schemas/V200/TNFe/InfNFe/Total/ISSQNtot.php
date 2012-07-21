@@ -38,7 +38,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVServ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VSERV, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VSERV, $value), false);
     }
 
     /**
@@ -68,7 +68,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBC, $value), false);
     }
 
     /**
@@ -98,7 +98,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVISS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VISS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VISS, $value), false);
     }
 
     /**
@@ -128,7 +128,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVPIS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VPIS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VPIS, $value), false);
     }
 
     /**
@@ -158,7 +158,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVCOFINS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VCOFINS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VCOFINS, $value), false);
     }
 
     /**

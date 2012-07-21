@@ -30,7 +30,7 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
     public function addInfProt(){
-        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe\InfProt(self::INFPROT), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe\InfProt(self::INFPROT), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addSignature($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value), false);
     }
 
     /**

@@ -41,7 +41,7 @@ class Transporta extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCNPJ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), false);
     }
 
     /**
@@ -70,7 +70,7 @@ class Transporta extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCPF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), false);
     }
 
     /**
@@ -100,7 +100,7 @@ class Transporta extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXNome($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome(self::XNOME, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome(self::XNOME, $value), false);
     }
 
     /**
@@ -130,7 +130,7 @@ class Transporta extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addIE($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value), false);
     }
 
     /**
@@ -160,7 +160,7 @@ class Transporta extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXEnder($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder(self::XENDER, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder(self::XENDER, $value), false);
     }
 
     /**
@@ -190,7 +190,7 @@ class Transporta extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXMun($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun(self::XMUN, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun(self::XMUN, $value), false);
     }
 
     /**
@@ -220,7 +220,7 @@ class Transporta extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), false);
     }
 
     /**

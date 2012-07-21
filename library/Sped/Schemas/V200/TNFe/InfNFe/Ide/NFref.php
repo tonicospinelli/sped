@@ -37,7 +37,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addRefNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::REFNFE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::REFNFE, $value), false);
     }
 
     /**
@@ -65,7 +65,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */
     public function addRefNF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF(self::REFNF), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF(self::REFNF), false);
     }
 
     /**
@@ -93,7 +93,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
     public function addRefNFP(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP(self::REFNFP), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP(self::REFNFP), false);
     }
 
     /**
@@ -122,7 +122,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addRefCTe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::REFCTE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::REFCTE, $value), false);
     }
 
     /**
@@ -150,7 +150,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */
     public function addRefECF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF(self::REFECF), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF(self::REFECF), false);
     }
 
     /**

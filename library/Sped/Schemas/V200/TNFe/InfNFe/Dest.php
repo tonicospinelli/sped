@@ -41,7 +41,7 @@ class Dest extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCNPJ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpjOpc(self::CNPJ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpjOpc(self::CNPJ, $value), false);
     }
 
     /**
@@ -70,7 +70,7 @@ class Dest extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCPF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), false);
     }
 
     /**
@@ -99,7 +99,7 @@ class Dest extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXNome($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\XNome(self::XNOME, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\XNome(self::XNOME, $value), false);
     }
 
     /**
@@ -128,7 +128,7 @@ class Dest extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addEnderDest($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco(self::ENDERDEST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco(self::ENDERDEST, $value), false);
     }
 
     /**
@@ -157,7 +157,7 @@ class Dest extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addIE($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value), false);
     }
 
     /**
@@ -187,7 +187,7 @@ class Dest extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addISUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF(self::ISUF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF(self::ISUF, $value), false);
     }
 
     /**
@@ -217,7 +217,7 @@ class Dest extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addEmail($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email(self::EMAIL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email(self::EMAIL, $value), false);
     }
 
     /**

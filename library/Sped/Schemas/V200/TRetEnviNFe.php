@@ -41,7 +41,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpAmb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), false);
     }
 
     /**
@@ -70,7 +70,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVerAplic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value), false);
     }
 
     /**
@@ -99,7 +99,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCStat($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value), false);
     }
 
     /**
@@ -128,7 +128,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXMotivo($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value), false);
     }
 
     /**
@@ -157,7 +157,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), false);
     }
 
     /**
@@ -186,7 +186,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDhRecbto($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\DateTime(self::DHRECBTO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\DateTime(self::DHRECBTO, $value), false);
     }
 
     /**
@@ -215,7 +215,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
     public function addInfRec(){
-        return $this->appendChild(new \Sped\Schemas\V200\TRetEnviNFe\InfRec(self::INFREC), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TRetEnviNFe\InfRec(self::INFREC), false);
     }
 
     /**

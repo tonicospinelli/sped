@@ -38,7 +38,7 @@ class Comb extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCProdANP($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP(self::CPRODANP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP(self::CPRODANP, $value), false);
     }
 
     /**
@@ -68,7 +68,7 @@ class Comb extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCODIF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF(self::CODIF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF(self::CODIF, $value), false);
     }
 
     /**
@@ -98,7 +98,7 @@ class Comb extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addQTemp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QTEMP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QTEMP, $value), false);
     }
 
     /**
@@ -127,7 +127,7 @@ class Comb extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addUFCons($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UFCONS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UFCONS, $value), false);
     }
 
     /**
@@ -156,7 +156,7 @@ class Comb extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
     public function addCIDE(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE(self::CIDE), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE(self::CIDE), false);
     }
 
     /**

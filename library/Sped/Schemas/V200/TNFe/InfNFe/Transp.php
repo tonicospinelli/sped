@@ -43,7 +43,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addModFrete($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete(self::MODFRETE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete(self::MODFRETE, $value), false);
     }
 
     /**
@@ -72,7 +72,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
     public function addTransporta(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta(self::TRANSPORTA), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta(self::TRANSPORTA), false);
     }
 
     /**
@@ -101,7 +101,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
     public function addRetTransp(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp(self::RETTRANSP), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp(self::RETTRANSP), false);
     }
 
     /**
@@ -131,7 +131,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVeicTransp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(self::VEICTRANSP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(self::VEICTRANSP, $value), false);
     }
 
     /**
@@ -161,7 +161,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addReboque($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(self::REBOQUE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(self::REBOQUE, $value), false);
     }
 
     /**
@@ -191,7 +191,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVagao($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao(self::VAGAO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao(self::VAGAO, $value), false);
     }
 
     /**
@@ -221,7 +221,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addBalsa($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa(self::BALSA, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa(self::BALSA, $value), false);
     }
 
     /**
@@ -250,7 +250,7 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol 
      */
     public function addVol(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol(self::VOL), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol(self::VOL), false);
     }
 
     /**

@@ -31,7 +31,7 @@ class Exporta extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addUFEmbarq($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UFEMBARQ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UFEMBARQ, $value), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class Exporta extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXLocEmbarq($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq(self::XLOCEMBARQ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq(self::XLOCEMBARQ, $value), false);
     }
 
     /**

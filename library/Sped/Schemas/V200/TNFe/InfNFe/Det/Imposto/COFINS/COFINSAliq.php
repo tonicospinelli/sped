@@ -37,7 +37,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST(self::CST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST(self::CST, $value), false);
     }
 
     /**
@@ -66,7 +66,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
     }
 
     /**
@@ -95,7 +95,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPCOFINS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PCOFINS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PCOFINS, $value), false);
     }
 
     /**
@@ -124,7 +124,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVCOFINS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCOFINS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCOFINS, $value), false);
     }
 
     /**

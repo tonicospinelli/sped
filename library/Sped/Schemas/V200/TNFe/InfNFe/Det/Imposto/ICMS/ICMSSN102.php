@@ -31,7 +31,7 @@ class ICMSSN102 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class ICMSSN102 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCSOSN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN(self::CSOSN, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN(self::CSOSN, $value), false);
     }
 
     /**

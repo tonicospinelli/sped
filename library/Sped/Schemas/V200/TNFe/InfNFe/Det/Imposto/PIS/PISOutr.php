@@ -40,7 +40,7 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST(self::CST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST(self::CST, $value), false);
     }
 
     /**
@@ -69,7 +69,7 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
     }
 
     /**
@@ -98,7 +98,7 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPPIS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PPIS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PPIS, $value), false);
     }
 
     /**
@@ -127,7 +127,7 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addQBCProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value), false);
     }
 
     /**
@@ -156,7 +156,7 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVAliqProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::VALIQPROD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::VALIQPROD, $value), false);
     }
 
     /**
@@ -185,7 +185,7 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVPIS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPIS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPIS, $value), false);
     }
 
     /**

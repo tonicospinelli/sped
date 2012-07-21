@@ -29,7 +29,7 @@ class Lacres extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNLacre($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre(self::NLACRE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre(self::NLACRE, $value), false);
     }
 
     /**

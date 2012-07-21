@@ -42,7 +42,7 @@ class RetTrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVRetPIS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETPIS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETPIS, $value), false);
     }
 
     /**
@@ -72,7 +72,7 @@ class RetTrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVRetCOFINS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETCOFINS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETCOFINS, $value), false);
     }
 
     /**
@@ -102,7 +102,7 @@ class RetTrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVRetCSLL($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETCSLL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETCSLL, $value), false);
     }
 
     /**
@@ -132,7 +132,7 @@ class RetTrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBCIRRF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBCIRRF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBCIRRF, $value), false);
     }
 
     /**
@@ -162,7 +162,7 @@ class RetTrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVIRRF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VIRRF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VIRRF, $value), false);
     }
 
     /**
@@ -192,7 +192,7 @@ class RetTrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBCRetPrev($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBCRETPREV, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBCRETPREV, $value), false);
     }
 
     /**
@@ -222,7 +222,7 @@ class RetTrib extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVRetPrev($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETPREV, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETPREV, $value), false);
     }
 
     /**

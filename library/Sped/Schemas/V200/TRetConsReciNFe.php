@@ -45,7 +45,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpAmb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), false);
     }
 
     /**
@@ -74,7 +74,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVerAplic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value), false);
     }
 
     /**
@@ -103,7 +103,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNRec($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value), false);
     }
 
     /**
@@ -132,7 +132,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCStat($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value), false);
     }
 
     /**
@@ -161,7 +161,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXMotivo($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value), false);
     }
 
     /**
@@ -190,7 +190,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), false);
     }
 
     /**
@@ -219,7 +219,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCMsg($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TRetConsReciNFe\CMsg(self::CMSG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TRetConsReciNFe\CMsg(self::CMSG, $value), false);
     }
 
     /**
@@ -248,7 +248,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXMsg($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TRetConsReciNFe\XMsg(self::XMSG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TRetConsReciNFe\XMsg(self::XMSG, $value), false);
     }
 
     /**
@@ -278,7 +278,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addProtNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe(self::PROTNFE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe(self::PROTNFE, $value), false);
     }
 
     /**

@@ -39,7 +39,7 @@ class RetTransp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVServ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VSERV, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VSERV, $value), false);
     }
 
     /**
@@ -68,7 +68,7 @@ class RetTransp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBCRet($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCRET, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCRET, $value), false);
     }
 
     /**
@@ -97,7 +97,7 @@ class RetTransp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addPICMSRet($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMSRET, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMSRET, $value), false);
     }
 
     /**
@@ -126,7 +126,7 @@ class RetTransp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVICMSRet($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSRET, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSRET, $value), false);
     }
 
     /**
@@ -155,7 +155,7 @@ class RetTransp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCFOP($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCfopTransp(self::CFOP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCfopTransp(self::CFOP, $value), false);
     }
 
     /**
@@ -184,7 +184,7 @@ class RetTransp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCMunFG($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), false);
     }
 
     /**

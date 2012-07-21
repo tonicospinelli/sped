@@ -33,7 +33,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTransforms($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TransformsType(self::TRANSFORMS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TransformsType(self::TRANSFORMS, $value), false);
     }
 
     /**
@@ -61,7 +61,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\ReferenceType\DigestMethod 
      */
     public function addDigestMethod(){
-        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType\DigestMethod(self::DIGESTMETHOD), true);
+        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType\DigestMethod(self::DIGESTMETHOD), false);
     }
 
     /**
@@ -90,7 +90,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDigestValue($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGESTVALUE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGESTVALUE, $value), false);
     }
 
     /**

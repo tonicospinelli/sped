@@ -26,9 +26,11 @@ class DocumentSignature extends \Sped\Components\Xml\Document  {
     /**
      * 
      * @return \Sped\Schemas\V200\SignatureType 
+     * @param type $value 
+     * @param type $namespaceURI 
      */
-    public function addSignature(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE), true);
+    public function addSignature($value = NULL, $namespaceURI = 'http://www.portalfiscal.inf.br/nfe'){
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value, $namespaceURI), false);
     }
 
     /**

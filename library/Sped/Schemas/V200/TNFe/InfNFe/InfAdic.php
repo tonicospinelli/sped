@@ -38,7 +38,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addInfAdFisco($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco(self::INFADFISCO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco(self::INFADFISCO, $value), false);
     }
 
     /**
@@ -68,7 +68,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addInfCpl($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl(self::INFCPL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl(self::INFCPL, $value), false);
     }
 
     /**
@@ -97,7 +97,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont 
      */
     public function addObsCont(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont(self::OBSCONT), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont(self::OBSCONT), false);
     }
 
     /**
@@ -126,7 +126,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      */
     public function addObsFisco(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco(self::OBSFISCO), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco(self::OBSFISCO), false);
     }
 
     /**
@@ -155,7 +155,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */
     public function addProcRef(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef(self::PROCREF), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef(self::PROCREF), false);
     }
 
     /**

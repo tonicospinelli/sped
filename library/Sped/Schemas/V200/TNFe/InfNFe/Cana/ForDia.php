@@ -29,7 +29,7 @@ class ForDia extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addQtde($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTDE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTDE, $value), false);
     }
 
     /**

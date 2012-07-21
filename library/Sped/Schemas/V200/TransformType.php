@@ -29,7 +29,7 @@ class TransformType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXPath($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\String(self::XPATH, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\String(self::XPATH, $value), false);
     }
 
     /**

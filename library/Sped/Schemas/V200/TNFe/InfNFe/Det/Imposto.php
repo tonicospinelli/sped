@@ -42,7 +42,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
     public function addICMS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS(self::ICMS), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS(self::ICMS), false);
     }
 
     /**
@@ -71,7 +71,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI 
      */
     public function addIPI(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI(self::IPI), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI(self::IPI), false);
     }
 
     /**
@@ -100,7 +100,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */
     public function addII(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II(self::II), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II(self::II), false);
     }
 
     /**
@@ -128,7 +128,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
     public function addISSQN(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN(self::ISSQN), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN(self::ISSQN), false);
     }
 
     /**
@@ -156,7 +156,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
     public function addPIS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS(self::PIS), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS(self::PIS), false);
     }
 
     /**
@@ -185,7 +185,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
     public function addPISST(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST(self::PISST), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST(self::PISST), false);
     }
 
     /**
@@ -213,7 +213,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
     public function addCOFINS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS(self::COFINS), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS(self::COFINS), false);
     }
 
     /**
@@ -242,7 +242,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
     public function addCOFINSST(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST(self::COFINSST), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST(self::COFINSST), false);
     }
 
     /**

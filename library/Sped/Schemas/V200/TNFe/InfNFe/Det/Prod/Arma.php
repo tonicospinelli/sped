@@ -35,7 +35,7 @@ class Arma extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpArma($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma(self::TPARMA, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma(self::TPARMA, $value), false);
     }
 
     /**
@@ -64,7 +64,7 @@ class Arma extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNSerie($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie(self::NSERIE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie(self::NSERIE, $value), false);
     }
 
     /**
@@ -93,7 +93,7 @@ class Arma extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNCano($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano(self::NCANO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano(self::NCANO, $value), false);
     }
 
     /**
@@ -122,7 +122,7 @@ class Arma extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDescr($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr(self::DESCR, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr(self::DESCR, $value), false);
     }
 
     /**

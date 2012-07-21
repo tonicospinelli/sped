@@ -45,7 +45,7 @@ class TLocal extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCNPJ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpjOpc(self::CNPJ, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpjOpc(self::CNPJ, $value), false);
     }
 
     /**
@@ -74,7 +74,7 @@ class TLocal extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCPF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), false);
     }
 
     /**
@@ -103,7 +103,7 @@ class TLocal extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXLgr($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XLgr(self::XLGR, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XLgr(self::XLGR, $value), false);
     }
 
     /**
@@ -132,7 +132,7 @@ class TLocal extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNro($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\Nro(self::NRO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\Nro(self::NRO, $value), false);
     }
 
     /**
@@ -162,7 +162,7 @@ class TLocal extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXCpl($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XCpl(self::XCPL, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XCpl(self::XCPL, $value), false);
     }
 
     /**
@@ -191,7 +191,7 @@ class TLocal extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXBairro($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XBairro(self::XBAIRRO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XBairro(self::XBAIRRO, $value), false);
     }
 
     /**
@@ -220,7 +220,7 @@ class TLocal extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCMun($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUN, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUN, $value), false);
     }
 
     /**
@@ -249,7 +249,7 @@ class TLocal extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXMun($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XMun(self::XMUN, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XMun(self::XMUN, $value), false);
     }
 
     /**
@@ -278,7 +278,7 @@ class TLocal extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), false);
     }
 
     /**

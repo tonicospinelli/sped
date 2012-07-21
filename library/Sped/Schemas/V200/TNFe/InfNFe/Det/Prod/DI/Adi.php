@@ -35,7 +35,7 @@ class Adi extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNAdicao($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NAdicao(self::NADICAO, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NAdicao(self::NADICAO, $value), false);
     }
 
     /**
@@ -64,7 +64,7 @@ class Adi extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNSeqAdic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NSeqAdic(self::NSEQADIC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NSeqAdic(self::NSEQADIC, $value), false);
     }
 
     /**
@@ -93,7 +93,7 @@ class Adi extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCFabricante($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\CFabricante(self::CFABRICANTE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\CFabricante(self::CFABRICANTE, $value), false);
     }
 
     /**
@@ -123,7 +123,7 @@ class Adi extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVDescDI($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESCDI, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESCDI, $value), false);
     }
 
     /**

@@ -31,7 +31,7 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addIdLote($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TIdLote(self::IDLOTE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TIdLote(self::IDLOTE, $value), false);
     }
 
     /**
@@ -60,7 +60,7 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value), false);
     }
 
     /**

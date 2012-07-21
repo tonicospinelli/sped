@@ -71,7 +71,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), false);
     }
 
     /**
@@ -100,7 +100,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCNF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\CNF(self::CNF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\CNF(self::CNF, $value), false);
     }
 
     /**
@@ -129,7 +129,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNatOp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp(self::NATOP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp(self::NATOP, $value), false);
     }
 
     /**
@@ -158,7 +158,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addIndPag($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag(self::INDPAG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag(self::INDPAG, $value), false);
     }
 
     /**
@@ -187,7 +187,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addMod($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TMod(self::MOD, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TMod(self::MOD, $value), false);
     }
 
     /**
@@ -216,7 +216,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addSerie($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TSerie(self::SERIE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TSerie(self::SERIE, $value), false);
     }
 
     /**
@@ -245,7 +245,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addNNF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNF(self::NNF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNF(self::NNF, $value), false);
     }
 
     /**
@@ -274,7 +274,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDEmi($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value), false);
     }
 
     /**
@@ -303,7 +303,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDSaiEnt($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DSAIENT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DSAIENT, $value), false);
     }
 
     /**
@@ -333,7 +333,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addHSaiEnt($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TTime(self::HSAIENT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TTime(self::HSAIENT, $value), false);
     }
 
     /**
@@ -362,7 +362,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpNF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNF(self::TPNF, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNF(self::TPNF, $value), false);
     }
 
     /**
@@ -391,7 +391,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCMunFG($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), false);
     }
 
     /**
@@ -420,7 +420,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */
     public function addNFref(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref(self::NFREF), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref(self::NFREF), false);
     }
 
     /**
@@ -449,7 +449,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpImp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp(self::TPIMP, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp(self::TPIMP, $value), false);
     }
 
     /**
@@ -478,7 +478,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpEmis($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis(self::TPEMIS, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis(self::TPEMIS, $value), false);
     }
 
     /**
@@ -507,7 +507,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCDV($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\CDV(self::CDV, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\CDV(self::CDV, $value), false);
     }
 
     /**
@@ -536,7 +536,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addTpAmb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), false);
     }
 
     /**
@@ -565,7 +565,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addFinNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TFinNFe(self::FINNFE, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TFinNFe(self::FINNFE, $value), false);
     }
 
     /**
@@ -594,7 +594,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addProcEmi($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TProcEmi(self::PROCEMI, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TProcEmi(self::PROCEMI, $value), false);
     }
 
     /**
@@ -623,7 +623,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVerProc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc(self::VERPROC, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc(self::VERPROC, $value), false);
     }
 
     /**
@@ -652,7 +652,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addDhCont($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\DhCont(self::DHCONT, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\DhCont(self::DHCONT, $value), false);
     }
 
     /**
@@ -681,7 +681,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addXJust($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\XJust(self::XJUST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\XJust(self::XJUST, $value), false);
     }
 
     /**

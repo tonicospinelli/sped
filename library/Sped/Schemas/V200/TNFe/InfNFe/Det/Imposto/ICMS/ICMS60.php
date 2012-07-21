@@ -36,7 +36,7 @@ class ICMS60 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), false);
     }
 
     /**
@@ -65,7 +65,7 @@ class ICMS60 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60\CST(self::CST, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60\CST(self::CST, $value), false);
     }
 
     /**
@@ -94,7 +94,7 @@ class ICMS60 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVBCSTRet($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCSTRET, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCSTRET, $value), false);
     }
 
     /**
@@ -123,7 +123,7 @@ class ICMS60 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      */
     public function addVICMSSTRet($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSSTRET, $value), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSSTRET, $value), false);
     }
 
     /**
