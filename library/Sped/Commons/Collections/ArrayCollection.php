@@ -419,4 +419,20 @@ class ArrayCollection implements InterfaceCollection {
         return array_slice($this->_elements, $offset, $length, true);
     }
 
+    static protected function comparison($a, $b) {
+        if ($a == $b) {
+            return 0;
+        }
+        return ($a < $b) ? -1 : 1;
+    }
+
+    /**
+     *
+     * @return void
+     */
+    public function sort() {
+        usort($this->_elements, array('PhpClass_Collections_ArrayCollection', 'comparison'));
+        return;
+    }
+
 }
