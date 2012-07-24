@@ -55,7 +55,7 @@ class Document extends \DOMDocument {
      * Adds new child at the end of the children.
      * @param \DOMNode $newNode The appended child.
      * @param boolean $unique If sets TRUE, search if exists the same node.
-     * @return DOMNode The node added or if is unique, returns the node found.
+     * @return \DOMNode The node added or if is unique, returns the node found.
      */
     public function appendChild(\DOMNode $newNode, $unique = false) {
         if ($unique)
@@ -65,54 +65,6 @@ class Document extends \DOMDocument {
             $newNode = parent::replaceChild($newNode, $node);
         else
             $newNode = parent::appendChild($newNode);
-
-        if (method_exists($newNode, 'loadDefaults'))
-            $newNode->loadDefaults();
-
-        return $newNode;
-    }
-
-    /**
-     * (PHP 5)<br/>
-     * Adds a new child before a reference node
-     * @link http://php.net/manual/en/domnode.insertbefore.php
-     * @param DOMNode $newnode <p>
-     * The new node.
-     * </p>
-     * @param DOMNode $refnode [optional] <p>
-     * The reference node. If not supplied, <i>newnode</i> is
-     * appended to the children.
-     * </p>
-     * @return DOMNode The inserted node.
-     */
-    public function insertBefore(DOMNode $newnode, DOMNode $refnode = null) {
-        $newNode = parent::insertBefore($newnode, $refnode);
-
-        if (method_exists($newNode, 'loadDefaults'))
-            $newNode->loadDefaults();
-
-        return $newNode;
-    }
-
-    /**
-     * (PHP 5)<br/>
-     * Replaces a child
-     * @link http://php.net/manual/en/domnode.replacechild.php
-     * @param DOMNode $newnode <p>
-     * The new node. It must be a member of the target document, i.e.
-     * created by one of the DOMDocument->createXXX() methods or imported in
-     * the document by .
-     * </p>
-     * @param DOMNode $oldnode <p>
-     * The old node.
-     * </p>
-     * @return DOMNode The old node or false if an error occur.
-     */
-    public function replaceChild(\DOMNode $newnode, \DOMNode $oldnode) {
-        $newNode = parent::replaceChild($newnode, $oldnode);
-
-        if (method_exists($newNode, 'loadDefaults'))
-            $newNode->loadDefaults();
 
         return $newNode;
     }
@@ -224,7 +176,7 @@ class Document extends \DOMDocument {
 
         $this->namespaces[$longNs] = 'ns' . $this->lastNsKey;
         if ($rt === false) {
-            $nsAttr = $this->createAttributeNS($longNs, $this->namespaces[$longNs] . ":" . $this->rootTagName);
+            $this->createAttributeNS($longNs, $this->namespaces[$longNs] . ":" . $this->rootTagName);
         }
         $this->lastNsKey++;
         return $this->namespaces[$longNs];
@@ -282,10 +234,10 @@ class Document extends \DOMDocument {
      * </root>
      * </code>
      * @param string $rootTagName   
-     * @return XmlDocument
+     * @return Document
      */
     public static function arrayToXml(array $source, $rootTagName = null) {
-        $document = new XmlDocument();
+        $document = new Document();
         $document->appendChild(self::createDOMElement($source, $document, $rootTagName));
         return $document;
     }
@@ -315,7 +267,7 @@ class Document extends \DOMDocument {
      * @return array
      */
     public static function xmlSourceToArray($xmlSource) {
-        $document = new XmlDocument();
+        $document = new Document();
         return $document->loadXML($xmlSource) ? self::domDocumentToArray($document) : array();
     }
 
