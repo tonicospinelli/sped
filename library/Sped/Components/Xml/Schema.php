@@ -122,7 +122,10 @@ class Schema extends Document {
                 $nsPrefix = $xsd->lookupPrefix($targetNamespace);
 
                 foreach ($xsd->documentElement->childNodes as $node) {
-                    if (empty($node->prefix) AND !$node instanceof \DOMText)
+                    if (!$node instanceof \DOMElement)
+                        continue;
+                    
+                    if (empty($node->prefix))
                         $node->prefix = $nsPrefix;
                     $newNode = $dom->importNode($node, true);
                     $parent->insertBefore($newNode, $entry);
