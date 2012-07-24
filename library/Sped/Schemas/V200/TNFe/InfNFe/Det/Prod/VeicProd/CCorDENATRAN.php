@@ -20,11 +20,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * 14-VERDE <br />
  * 15-VERMELHA <br />
  * 16-FANTASIA
- * @name CCorDENATRAN
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name CCorDENATRAN
+ * @package Sped
  */
 class CCorDENATRAN extends \Sped\Components\Xml\Element  {
 

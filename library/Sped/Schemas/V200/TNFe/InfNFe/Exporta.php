@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Informações de exportação
- * @name Exporta
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Exporta
+ * @package Sped
  */
 class Exporta extends \Sped\Components\Xml\Element  {
 
@@ -27,11 +27,11 @@ class Exporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TUf 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TUf 
      */
     public function addUFEmbarq($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UFEMBARQ, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UFEMBARQ, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -56,11 +56,11 @@ class Exporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq 
      */
     public function addXLocEmbarq($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq(self::XLOCEMBARQ, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq(self::XLOCEMBARQ, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

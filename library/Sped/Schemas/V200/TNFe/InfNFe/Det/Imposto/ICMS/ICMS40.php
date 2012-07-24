@@ -7,11 +7,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS;
  * 40 - Isenta <br />
  * 41 - Não tributada <br />
  * 50 - Suspensão  
- * @name ICMS40
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name ICMS40
+ * @package Sped
  */
 class ICMS40 extends \Sped\Components\Xml\Element  {
 
@@ -34,11 +34,11 @@ class ICMS40 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\Torig 
      * @param type $value 
+     * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -63,11 +63,11 @@ class ICMS40 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST(self::CST, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST(self::CST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -92,11 +92,11 @@ class ICMS40 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -121,11 +121,11 @@ class ICMS40 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS 
      */
     public function addMotDesICMS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS(self::MOTDESICMS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS(self::MOTDESICMS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

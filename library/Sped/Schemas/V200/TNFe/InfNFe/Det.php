@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Dados dos detalhes da NF-e
- * @name Det
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Det
+ * @package Sped
  */
 class Det extends \Sped\Components\Xml\Element  {
 
@@ -32,7 +32,7 @@ class Det extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
     public function addProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod(self::PROD), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod(self::PROD, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -60,7 +60,7 @@ class Det extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
     public function addImposto(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto(self::IMPOSTO), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto(self::IMPOSTO, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -76,8 +76,8 @@ class Det extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
      */
     public function getInfAdProd($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd');
@@ -86,11 +86,11 @@ class Det extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
      */
     public function addInfAdProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd(self::INFADPROD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd(self::INFADPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -114,10 +114,9 @@ class Det extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det 
+     * @param type $value 
      */
-    public function setNItem(string $value){
+    public function setNItem($value){
         $this->setAttribute('nItem', $value);
         return $this;
     }

@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp;
 
 /**
  * Dados da retenção  ICMS do Transporte
- * @name RetTransp
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name RetTransp
+ * @package Sped
  */
 class RetTransp extends \Sped\Components\Xml\Element  {
 
@@ -35,11 +35,11 @@ class RetTransp extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVServ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VSERV, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VSERV, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -64,11 +64,11 @@ class RetTransp extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCRet($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCRET, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCRET, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -93,11 +93,11 @@ class RetTransp extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_0302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPICMSRet($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMSRET, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMSRET, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -122,11 +122,11 @@ class RetTransp extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSRet($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSRET, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSRET, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -151,11 +151,11 @@ class RetTransp extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCfopTransp 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCfopTransp 
      */
     public function addCFOP($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCfopTransp(self::CFOP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCfopTransp(self::CFOP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -180,11 +180,11 @@ class RetTransp extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCodMunIBGE 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMunFG($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

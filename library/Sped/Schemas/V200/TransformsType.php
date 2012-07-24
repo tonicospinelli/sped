@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * 
- * @name TransformsType
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name TransformsType
+ * @package Sped
  */
 class TransformsType extends \Sped\Components\Xml\Element  {
 
@@ -16,8 +16,8 @@ class TransformsType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TransformType 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TransformType 
      */
     public function getTransform($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TransformType');
@@ -26,11 +26,11 @@ class TransformsType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TransformType 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TransformType 
      */
     public function addTransform($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TransformType(self::TRANSFORM, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TransformType(self::TRANSFORM, $value, 'http://www.w3.org/2000/09/xmldsig#'), false);
     }
 
     /**

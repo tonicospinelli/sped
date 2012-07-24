@@ -5,11 +5,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS;
 /**
  * Tributação pelo ICMS<br />
  * 00 - Tributada integralmente
- * @name ICMS00
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name ICMS00
+ * @package Sped
  */
 class ICMS00 extends \Sped\Components\Xml\Element  {
 
@@ -36,11 +36,11 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\Torig 
      * @param type $value 
+     * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -65,11 +65,11 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\CST 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\CST 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\CST(self::CST, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\CST(self::CST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -94,11 +94,11 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\ModBC 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\ModBC 
      */
     public function addModBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\ModBC(self::MODBC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00\ModBC(self::MODBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -123,11 +123,11 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -152,11 +152,11 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_0302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPICMS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -181,11 +181,11 @@ class ICMS00 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

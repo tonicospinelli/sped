@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Emissão de avulsa, informar os dados do Fisco emitente
- * @name Avulsa
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Avulsa
+ * @package Sped
  */
 class Avulsa extends \Sped\Components\Xml\Element  {
 
@@ -45,11 +45,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCnpj 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCnpj 
      */
     public function addCNPJ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -74,11 +74,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao 
      */
     public function addXOrgao($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao(self::XORGAO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao(self::XORGAO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -103,11 +103,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr 
      */
     public function addMatr($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr(self::MATR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr(self::MATR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -132,11 +132,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente 
      */
     public function addXAgente($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente(self::XAGENTE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente(self::XAGENTE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -152,8 +152,8 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
      */
     public function getFone($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone');
@@ -162,11 +162,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
      */
     public function addFone($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone(self::FONE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone(self::FONE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -191,11 +191,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TUfEmi 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TUfEmi 
      */
     public function addUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(self::UF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(self::UF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -211,8 +211,8 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
      */
     public function getNDAR($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR');
@@ -221,11 +221,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
      */
     public function addNDAR($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR(self::NDAR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR(self::NDAR, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -241,8 +241,8 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function getDEmi($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
@@ -251,11 +251,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function addDEmi($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -271,8 +271,8 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVDAR($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
@@ -281,11 +281,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVDAR($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDAR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDAR, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -310,11 +310,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi 
      */
     public function addRepEmi($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi(self::REPEMI, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi(self::REPEMI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -330,8 +330,8 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function getDPag($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
@@ -340,11 +340,11 @@ class Avulsa extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function addDPag($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DPAG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DPAG, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

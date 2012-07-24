@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS;
 
 /**
  * Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=101 (v.2.0)
- * @name ICMSSN101
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name ICMSSN101
+ * @package Sped
  */
 class ICMSSN101 extends \Sped\Components\Xml\Element  {
 
@@ -31,11 +31,11 @@ class ICMSSN101 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\Torig 
      * @param type $value 
+     * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -60,11 +60,11 @@ class ICMSSN101 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN 
      */
     public function addCSOSN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN(self::CSOSN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN(self::CSOSN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -89,11 +89,11 @@ class ICMSSN101 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_0302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPCredSN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PCREDSN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PCREDSN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -118,11 +118,11 @@ class ICMSSN101 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCredICMSSN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCREDICMSSN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCREDICMSSN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

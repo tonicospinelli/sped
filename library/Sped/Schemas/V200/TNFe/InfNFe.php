@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe;
 
 /**
  * Informações da Nota Fiscal eletrônica
- * @name InfNFe
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name InfNFe
+ * @package Sped
  */
 class InfNFe extends \Sped\Components\Xml\Element  {
 
@@ -54,7 +54,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
     public function addIde(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide(self::IDE), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide(self::IDE, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -82,7 +82,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
     public function addEmit(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit(self::EMIT), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit(self::EMIT, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -98,8 +98,8 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
     public function getAvulsa($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa');
@@ -111,7 +111,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
     public function addAvulsa(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa(self::AVULSA), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa(self::AVULSA, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -139,7 +139,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest 
      */
     public function addDest(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest(self::DEST), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest(self::DEST, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -155,8 +155,8 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TLocal 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TLocal 
      */
     public function getRetirada($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TLocal');
@@ -165,11 +165,11 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TLocal 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TLocal 
      */
     public function addRetirada($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal(self::RETIRADA, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal(self::RETIRADA, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -185,8 +185,8 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TLocal 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TLocal 
      */
     public function getEntrega($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TLocal');
@@ -195,11 +195,11 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TLocal 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TLocal 
      */
     public function addEntrega($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal(self::ENTREGA, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal(self::ENTREGA, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -227,7 +227,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det 
      */
     public function addDet(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det(self::DET), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det(self::DET, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -255,7 +255,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total 
      */
     public function addTotal(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total(self::TOTAL), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total(self::TOTAL, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -283,7 +283,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
     public function addTransp(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp(self::TRANSP), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp(self::TRANSP, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -299,8 +299,8 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      */
     public function getCobr($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr');
@@ -312,7 +312,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      */
     public function addCobr(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr(self::COBR), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr(self::COBR, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -328,8 +328,8 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
      */
     public function getInfAdic($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic');
@@ -341,7 +341,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
      */
     public function addInfAdic(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic(self::INFADIC), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic(self::INFADIC, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -357,8 +357,8 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta 
      */
     public function getExporta($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Exporta');
@@ -370,7 +370,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta 
      */
     public function addExporta(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Exporta(self::EXPORTA), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Exporta(self::EXPORTA, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -386,8 +386,8 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      */
     public function getCompra($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra');
@@ -399,7 +399,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      */
     public function addCompra(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra(self::COMPRA), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra(self::COMPRA, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -415,8 +415,8 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
     public function getCana($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana');
@@ -428,7 +428,7 @@ class InfNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
     public function addCana(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana(self::CANA), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana(self::CANA, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -452,10 +452,9 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe 
+     * @param type $value 
      */
-    public function setVersao(string $value){
+    public function setVersao($value){
         $this->setAttribute('versao', $value);
         return $this;
     }
@@ -470,10 +469,9 @@ class InfNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe 
+     * @param type $value 
      */
-    public function setId(string $value){
+    public function setId($value){
         $this->setAttribute('Id', $value);
         return $this;
     }

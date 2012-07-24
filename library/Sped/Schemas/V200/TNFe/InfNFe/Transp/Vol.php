@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp;
 
 /**
  * Dados dos volumes
- * @name Vol
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Vol
+ * @package Sped
  */
 class Vol extends \Sped\Components\Xml\Element  {
 
@@ -28,8 +28,8 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol 
      */
     public function getQVol($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol');
@@ -38,11 +38,11 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol 
      */
     public function addQVol($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol(self::QVOL, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol(self::QVOL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -58,8 +58,8 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp 
      */
     public function getEsp($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp');
@@ -68,11 +68,11 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp 
      */
     public function addEsp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp(self::ESP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp(self::ESP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -88,8 +88,8 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca 
      */
     public function getMarca($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca');
@@ -98,11 +98,11 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca 
      */
     public function addMarca($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca(self::MARCA, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca(self::MARCA, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -118,8 +118,8 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol 
      */
     public function getNVol($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol');
@@ -128,11 +128,11 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol 
      */
     public function addNVol($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol(self::NVOL, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol(self::NVOL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -148,8 +148,8 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1203 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1203 
      */
     public function getPesoL($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1203');
@@ -158,11 +158,11 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1203 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1203 
      */
     public function addPesoL($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(self::PESOL, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(self::PESOL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -178,8 +178,8 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1203 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1203 
      */
     public function getPesoB($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1203');
@@ -188,11 +188,11 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1203 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1203 
      */
     public function addPesoB($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(self::PESOB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1203(self::PESOB, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -208,8 +208,8 @@ class Vol extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres 
      */
     public function getLacres($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres');
@@ -221,7 +221,7 @@ class Vol extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres 
      */
     public function addLacres(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres(self::LACRES), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres(self::LACRES, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

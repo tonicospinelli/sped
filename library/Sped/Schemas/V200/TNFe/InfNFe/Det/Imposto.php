@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det;
 
 /**
  * Tributos incidentes nos produtos ou serviços da NF-e
- * @name Imposto
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Imposto
+ * @package Sped
  */
 class Imposto extends \Sped\Components\Xml\Element  {
 
@@ -42,7 +42,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
     public function addICMS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS(self::ICMS), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS(self::ICMS, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -58,8 +58,8 @@ class Imposto extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI 
      */
     public function getIPI($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI');
@@ -71,7 +71,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI 
      */
     public function addIPI(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI(self::IPI), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI(self::IPI, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -87,8 +87,8 @@ class Imposto extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */
     public function getII($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II');
@@ -100,7 +100,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */
     public function addII(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II(self::II), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II(self::II, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -128,7 +128,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
     public function addISSQN(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN(self::ISSQN), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN(self::ISSQN, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -156,7 +156,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
     public function addPIS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS(self::PIS), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS(self::PIS, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -172,8 +172,8 @@ class Imposto extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
     public function getPISST($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST');
@@ -185,7 +185,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
     public function addPISST(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST(self::PISST), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST(self::PISST, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -213,7 +213,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
     public function addCOFINS(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS(self::COFINS), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS(self::COFINS, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -229,8 +229,8 @@ class Imposto extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
     public function getCOFINSST($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST');
@@ -242,7 +242,7 @@ class Imposto extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
     public function addCOFINSST(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST(self::COFINSST), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST(self::COFINSST, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

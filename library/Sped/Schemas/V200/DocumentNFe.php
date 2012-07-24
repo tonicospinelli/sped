@@ -4,11 +4,10 @@ namespace Sped\Schemas\V200;
 
 /**
  * Nota Fiscal Eletrônica
- * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @name DocumentNFe
+ * @package Sped
  */
 class DocumentNFe extends \Sped\Components\Xml\Document  {
 
@@ -26,11 +25,9 @@ class DocumentNFe extends \Sped\Components\Xml\Document  {
     /**
      * 
      * @return \Sped\Schemas\V200\TNFe 
-     * @param type $value 
-     * @param type $namespaceURI 
      */
-    public function addNFe($value = NULL, $namespaceURI = 'http://www.portalfiscal.inf.br/nfe'){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value, $namespaceURI), false);
+    public function addNFe(){
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

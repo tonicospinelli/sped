@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cobr;
 
 /**
  * Dados das duplicatas NT 2011/004
- * @name Dup
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Dup
+ * @package Sped
  */
 class Dup extends \Sped\Components\Xml\Element  {
 
@@ -20,8 +20,8 @@ class Dup extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup 
      */
     public function getNDup($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup');
@@ -30,11 +30,11 @@ class Dup extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup 
      */
     public function addNDup($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup(self::NDUP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup(self::NDUP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -50,8 +50,8 @@ class Dup extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function getDVenc($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
@@ -60,11 +60,11 @@ class Dup extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function addDVenc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVENC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVENC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -80,8 +80,8 @@ class Dup extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVDup($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -90,11 +90,11 @@ class Dup extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVDup($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDUP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDUP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

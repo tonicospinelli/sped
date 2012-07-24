@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * Tipo Dados do Local de Retirada ou Entrega // 24/10/08 - tamanho mínimo // v2.0
- * @name TLocal
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name TLocal
+ * @package Sped
  */
 class TLocal extends \Sped\Components\Xml\Element  {
 
@@ -41,11 +41,11 @@ class TLocal extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCnpjOpc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCnpjOpc 
      */
     public function addCNPJ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpjOpc(self::CNPJ, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpjOpc(self::CNPJ, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -70,11 +70,11 @@ class TLocal extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCpf 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCpf 
      */
     public function addCPF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -99,11 +99,11 @@ class TLocal extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TLocal\XLgr 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TLocal\XLgr 
      */
     public function addXLgr($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XLgr(self::XLGR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XLgr(self::XLGR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -128,11 +128,11 @@ class TLocal extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TLocal\Nro 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TLocal\Nro 
      */
     public function addNro($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\Nro(self::NRO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\Nro(self::NRO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -148,8 +148,8 @@ class TLocal extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TLocal\XCpl 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TLocal\XCpl 
      */
     public function getXCpl($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TLocal\XCpl');
@@ -158,11 +158,11 @@ class TLocal extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TLocal\XCpl 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TLocal\XCpl 
      */
     public function addXCpl($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XCpl(self::XCPL, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XCpl(self::XCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -187,11 +187,11 @@ class TLocal extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TLocal\XBairro 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TLocal\XBairro 
      */
     public function addXBairro($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XBairro(self::XBAIRRO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XBairro(self::XBAIRRO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -216,11 +216,11 @@ class TLocal extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCodMunIBGE 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMun($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -245,11 +245,11 @@ class TLocal extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TLocal\XMun 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TLocal\XMun 
      */
     public function addXMun($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XMun(self::XMUN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XMun(self::XMUN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -274,11 +274,11 @@ class TLocal extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TUf 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TUf 
      */
     public function addUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

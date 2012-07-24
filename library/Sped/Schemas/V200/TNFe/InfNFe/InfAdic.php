@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Informações adicionais da NF-e
- * @name InfAdic
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name InfAdic
+ * @package Sped
  */
 class InfAdic extends \Sped\Components\Xml\Element  {
 
@@ -24,8 +24,8 @@ class InfAdic extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
      */
     public function getInfAdFisco($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco');
@@ -34,11 +34,11 @@ class InfAdic extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
      */
     public function addInfAdFisco($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco(self::INFADFISCO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco(self::INFADFISCO, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -54,8 +54,8 @@ class InfAdic extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
      */
     public function getInfCpl($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl');
@@ -64,11 +64,11 @@ class InfAdic extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
      */
     public function addInfCpl($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl(self::INFCPL, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl(self::INFCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -84,8 +84,8 @@ class InfAdic extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont 
      */
     public function getObsCont($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont');
@@ -97,7 +97,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont 
      */
     public function addObsCont(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont(self::OBSCONT), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont(self::OBSCONT, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -113,8 +113,8 @@ class InfAdic extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      */
     public function getObsFisco($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco');
@@ -126,7 +126,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      */
     public function addObsFisco(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco(self::OBSFISCO), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco(self::OBSFISCO, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -142,8 +142,8 @@ class InfAdic extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */
     public function getProcRef($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef');
@@ -155,7 +155,7 @@ class InfAdic extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */
     public function addProcRef(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef(self::PROCREF), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef(self::PROCREF, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

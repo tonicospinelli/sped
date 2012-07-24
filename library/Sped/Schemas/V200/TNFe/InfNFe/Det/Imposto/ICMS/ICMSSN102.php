@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS;
 
 /**
  * Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=102, 103, 300 ou 400 (v.2.0))
- * @name ICMSSN102
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name ICMSSN102
+ * @package Sped
  */
 class ICMSSN102 extends \Sped\Components\Xml\Element  {
 
@@ -27,11 +27,11 @@ class ICMSSN102 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\Torig 
      * @param type $value 
+     * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -56,11 +56,11 @@ class ICMSSN102 extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN 
      */
     public function addCSOSN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN(self::CSOSN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN(self::CSOSN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

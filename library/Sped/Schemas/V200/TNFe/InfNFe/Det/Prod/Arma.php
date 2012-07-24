@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
 
 /**
  * Armamentos
- * @name Arma
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Arma
+ * @package Sped
  */
 class Arma extends \Sped\Components\Xml\Element  {
 
@@ -31,11 +31,11 @@ class Arma extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma 
      */
     public function addTpArma($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma(self::TPARMA, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma(self::TPARMA, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -60,11 +60,11 @@ class Arma extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie 
      */
     public function addNSerie($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie(self::NSERIE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie(self::NSERIE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -89,11 +89,11 @@ class Arma extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano 
      */
     public function addNCano($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano(self::NCANO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano(self::NCANO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -118,11 +118,11 @@ class Arma extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr 
      */
     public function addDescr($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr(self::DESCR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr(self::DESCR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

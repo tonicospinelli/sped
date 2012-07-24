@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Informações de compras  (Nota de Empenho, Pedido e Contrato)
- * @name Compra
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Compra
+ * @package Sped
  */
 class Compra extends \Sped\Components\Xml\Element  {
 
@@ -20,8 +20,8 @@ class Compra extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      */
     public function getXNEmp($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp');
@@ -30,11 +30,11 @@ class Compra extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      */
     public function addXNEmp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp(self::XNEMP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp(self::XNEMP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -50,8 +50,8 @@ class Compra extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      */
     public function getXPed($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed');
@@ -60,11 +60,11 @@ class Compra extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      */
     public function addXPed($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed(self::XPED, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed(self::XPED, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -80,8 +80,8 @@ class Compra extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      */
     public function getXCont($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont');
@@ -90,11 +90,11 @@ class Compra extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      */
     public function addXCont($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont(self::XCONT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont(self::XCONT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

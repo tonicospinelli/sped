@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp;
 
 /**
  * Dados do transportador
- * @name Transporta
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Transporta
+ * @package Sped
  */
 class Transporta extends \Sped\Components\Xml\Element  {
 
@@ -37,11 +37,11 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCnpj 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCnpj 
      */
     public function addCNPJ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJ, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -66,11 +66,11 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCpf 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCpf 
      */
     public function addCPF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -86,8 +86,8 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome 
      */
     public function getXNome($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome');
@@ -96,11 +96,11 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome 
      */
     public function addXNome($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome(self::XNOME, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome(self::XNOME, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -116,8 +116,8 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TIeDest 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TIeDest 
      */
     public function getIE($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIeDest');
@@ -126,11 +126,11 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TIeDest 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TIeDest 
      */
     public function addIE($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -146,8 +146,8 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder 
      */
     public function getXEnder($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder');
@@ -156,11 +156,11 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder 
      */
     public function addXEnder($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder(self::XENDER, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder(self::XENDER, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -176,8 +176,8 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun 
      */
     public function getXMun($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun');
@@ -186,11 +186,11 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun 
      */
     public function addXMun($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun(self::XMUN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun(self::XMUN, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -206,8 +206,8 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TUf 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TUf 
      */
     public function getUF($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TUf');
@@ -216,11 +216,11 @@ class Transporta extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TUf 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TUf 
      */
     public function addUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol;
 
 /**
  * Número dos Lacres
- * @name Lacres
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Lacres
+ * @package Sped
  */
 class Lacres extends \Sped\Components\Xml\Element  {
 
@@ -25,11 +25,11 @@ class Lacres extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre 
      */
     public function addNLacre($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre(self::NLACRE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre(self::NLACRE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

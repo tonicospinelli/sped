@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto;
 
 /**
  * ISSQN
- * @name ISSQN
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name ISSQN
+ * @package Sped
  */
 class ISSQN extends \Sped\Components\Xml\Element  {
 
@@ -35,11 +35,11 @@ class ISSQN extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -64,11 +64,11 @@ class ISSQN extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_0302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addVAliq($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::VALIQ, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::VALIQ, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -93,11 +93,11 @@ class ISSQN extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVISSQN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VISSQN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VISSQN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -122,11 +122,11 @@ class ISSQN extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCodMunIBGE 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMunFG($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -151,11 +151,11 @@ class ISSQN extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCListServ 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCListServ 
      */
     public function addCListServ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCListServ(self::CLISTSERV, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCListServ(self::CLISTSERV, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -180,11 +180,11 @@ class ISSQN extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib 
      */
     public function addCSitTrib($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib(self::CSITTRIB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib(self::CSITTRIB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

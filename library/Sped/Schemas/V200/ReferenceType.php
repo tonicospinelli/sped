@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * 
- * @name ReferenceType
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name ReferenceType
+ * @package Sped
  */
 class ReferenceType extends \Sped\Components\Xml\Element  {
 
@@ -29,11 +29,11 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TransformsType 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TransformsType 
      */
     public function addTransforms($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TransformsType(self::TRANSFORMS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TransformsType(self::TRANSFORMS, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
@@ -61,7 +61,7 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\ReferenceType\DigestMethod 
      */
     public function addDigestMethod(){
-        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType\DigestMethod(self::DIGESTMETHOD), false);
+        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType\DigestMethod(self::DIGESTMETHOD, NULL, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
@@ -86,11 +86,11 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\DigestValueType 
      * @param type $value 
+     * @return \Sped\Schemas\V200\DigestValueType 
      */
     public function addDigestValue($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGESTVALUE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGESTVALUE, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
@@ -114,10 +114,9 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\ReferenceType 
+     * @param type $value 
      */
-    public function setId(string $value){
+    public function setId($value){
         $this->setAttribute('Id', $value);
         return $this;
     }
@@ -149,10 +148,9 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\ReferenceType 
+     * @param type $value 
      */
-    public function setURI(string $value){
+    public function setURI($value){
         $this->setAttribute('URI', $value);
         return $this;
     }
@@ -167,10 +165,9 @@ class ReferenceType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\ReferenceType 
+     * @param type $value 
      */
-    public function setType(string $value){
+    public function setType($value){
         $this->setAttribute('Type', $value);
         return $this;
     }

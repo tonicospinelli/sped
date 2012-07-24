@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Informações de registro aquisições de cana // v2.0
- * @name Cana
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Cana
+ * @package Sped
  */
 class Cana extends \Sped\Components\Xml\Element  {
 
@@ -43,11 +43,11 @@ class Cana extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra 
      */
     public function addSafra($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra(self::SAFRA, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra(self::SAFRA, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -72,11 +72,11 @@ class Cana extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref 
      */
     public function addRef($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref(self::REF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref(self::REF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -104,7 +104,7 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia 
      */
     public function addForDia(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia(self::FORDIA), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia(self::FORDIA, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -129,11 +129,11 @@ class Cana extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1110 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addQTotMes($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTMES, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTMES, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -158,11 +158,11 @@ class Cana extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1110 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addQTotAnt($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTANT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTANT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -187,11 +187,11 @@ class Cana extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1110 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addQTotGer($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTGER, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTGER, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -207,8 +207,8 @@ class Cana extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
     public function getDeduc($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc');
@@ -220,7 +220,7 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
     public function addDeduc(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc(self::DEDUC), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc(self::DEDUC, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -245,11 +245,11 @@ class Cana extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVFor($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VFOR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VFOR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -274,11 +274,11 @@ class Cana extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVTotDed($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VTOTDED, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VTOTDED, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -303,11 +303,11 @@ class Cana extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVLiqFor($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VLIQFOR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VLIQFOR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

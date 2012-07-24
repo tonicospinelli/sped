@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Dados dos totais da NF-e
- * @name Total
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Total
+ * @package Sped
  */
 class Total extends \Sped\Components\Xml\Element  {
 
@@ -32,7 +32,7 @@ class Total extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function addICMSTot(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot(self::ICMSTOT), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot(self::ICMSTOT, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -48,8 +48,8 @@ class Total extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot 
      */
     public function getISSQNtot($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot');
@@ -61,7 +61,7 @@ class Total extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot 
      */
     public function addISSQNtot(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot(self::ISSQNTOT), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot(self::ISSQNTOT, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -77,8 +77,8 @@ class Total extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib 
      */
     public function getRetTrib($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib');
@@ -90,7 +90,7 @@ class Total extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib 
      */
     public function addRetTrib(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib(self::RETTRIB), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib(self::RETTRIB, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Identificação do Destinatário  
- * @name Dest
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Dest
+ * @package Sped
  */
 class Dest extends \Sped\Components\Xml\Element  {
 
@@ -37,11 +37,11 @@ class Dest extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCnpjOpc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCnpjOpc 
      */
     public function addCNPJ($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpjOpc(self::CNPJ, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpjOpc(self::CNPJ, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -66,11 +66,11 @@ class Dest extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCpf 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCpf 
      */
     public function addCPF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCpf(self::CPF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -95,11 +95,11 @@ class Dest extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\XNome 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\XNome 
      */
     public function addXNome($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\XNome(self::XNOME, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\XNome(self::XNOME, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -124,11 +124,11 @@ class Dest extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TEndereco 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TEndereco 
      */
     public function addEnderDest($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco(self::ENDERDEST, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco(self::ENDERDEST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -153,11 +153,11 @@ class Dest extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TIeDest 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TIeDest 
      */
     public function addIE($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -173,8 +173,8 @@ class Dest extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF 
      */
     public function getISUF($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF');
@@ -183,11 +183,11 @@ class Dest extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF 
      */
     public function addISUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF(self::ISUF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF(self::ISUF, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -203,8 +203,8 @@ class Dest extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email 
      */
     public function getEmail($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Dest\Email');
@@ -213,11 +213,11 @@ class Dest extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email 
      */
     public function addEmail($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email(self::EMAIL, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email(self::EMAIL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

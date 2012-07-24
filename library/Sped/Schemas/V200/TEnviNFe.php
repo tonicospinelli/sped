@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  *  Tipo Pedido de Concessão de Autorização da Nota Fiscal Eletrônica
- * @name TEnviNFe
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name TEnviNFe
+ * @package Sped
  */
 class TEnviNFe extends \Sped\Components\Xml\Element  {
 
@@ -27,11 +27,11 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TIdLote 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TIdLote 
      */
     public function addIdLote($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TIdLote(self::IDLOTE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TIdLote(self::IDLOTE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -56,11 +56,11 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe 
      */
     public function addNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -84,10 +84,9 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\TEnviNFe 
+     * @param type $value 
      */
-    public function setVersao(string $value){
+    public function setVersao($value){
         $this->setAttribute('versao', $value);
         return $this;
     }

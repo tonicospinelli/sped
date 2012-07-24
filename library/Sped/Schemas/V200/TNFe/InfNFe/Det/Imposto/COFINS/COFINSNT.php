@@ -9,11 +9,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS;
  * 07 - Operação Isenta da contribuição;<br />
  * 08 - Operação Sem Incidência da contribuição;<br />
  * 09 - Operação com suspensão da contribuição;
- * @name COFINSNT
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name COFINSNT
+ * @package Sped
  */
 class COFINSNT extends \Sped\Components\Xml\Element  {
 
@@ -30,11 +30,11 @@ class COFINSNT extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST(self::CST, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT\CST(self::CST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

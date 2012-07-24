@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
 
 /**
  * Grupo de infromações da NF referenciada
- * @name NFref
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name NFref
+ * @package Sped
  */
 class NFref extends \Sped\Components\Xml\Element  {
 
@@ -33,11 +33,11 @@ class NFref extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TChNFe 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TChNFe 
      */
     public function addRefNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::REFNFE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::REFNFE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -65,7 +65,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */
     public function addRefNF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF(self::REFNF), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF(self::REFNF, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -93,7 +93,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
     public function addRefNFP(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP(self::REFNFP), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP(self::REFNFP, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -118,11 +118,11 @@ class NFref extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TChNFe 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TChNFe 
      */
     public function addRefCTe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::REFCTE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::REFCTE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -150,7 +150,7 @@ class NFref extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */
     public function addRefECF(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF(self::REFECF), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF(self::REFECF, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

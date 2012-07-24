@@ -5,11 +5,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS;
 /**
  * Código de Situação Tributária do COFINS.<br />
  * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
- * @name COFINSQtde
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name COFINSQtde
+ * @package Sped
  */
 class COFINSQtde extends \Sped\Components\Xml\Element  {
 
@@ -32,11 +32,11 @@ class COFINSQtde extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde\CST 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde\CST 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde\CST(self::CST, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde\CST(self::CST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -61,11 +61,11 @@ class COFINSQtde extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1204 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function addQBCProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -90,11 +90,11 @@ class COFINSQtde extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1104v 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function addVAliqProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::VALIQPROD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::VALIQPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -119,11 +119,11 @@ class COFINSQtde extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCOFINS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCOFINS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCOFINS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

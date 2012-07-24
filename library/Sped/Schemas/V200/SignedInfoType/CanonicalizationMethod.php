@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\SignedInfoType;
 
 /**
  * 
- * @name CanonicalizationMethod
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name CanonicalizationMethod
+ * @package Sped
  */
 class CanonicalizationMethod extends \Sped\Components\Xml\Element  {
 
@@ -22,10 +22,9 @@ class CanonicalizationMethod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
+     * @param type $value 
      */
-    public function setAlgorithm(string $value){
+    public function setAlgorithm($value){
         $this->setAttribute('Algorithm', $value);
         return $this;
     }

@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * 
- * @name X509DataType
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name X509DataType
+ * @package Sped
  */
 class X509DataType extends \Sped\Components\Xml\Element  {
 
@@ -25,11 +25,11 @@ class X509DataType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\Base64Binary 
      * @param type $value 
+     * @return \Sped\Schemas\V200\Base64Binary 
      */
     public function addX509Certificate($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\Base64Binary(self::X509CERTIFICATE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\Base64Binary(self::X509CERTIFICATE, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**

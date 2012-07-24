@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * Tipo Pedido de Consulta do Recido do Lote de Notas Fiscais Eletrônicas
- * @name TConsReciNFe
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name TConsReciNFe
+ * @package Sped
  */
 class TConsReciNFe extends \Sped\Components\Xml\Element  {
 
@@ -27,11 +27,11 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TAmb 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TAmb 
      */
     public function addTpAmb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -56,11 +56,11 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TRec 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TRec 
      */
     public function addNRec($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -84,10 +84,9 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\TConsReciNFe 
+     * @param type $value 
      */
-    public function setVersao(string $value){
+    public function setVersao($value){
         $this->setAttribute('versao', $value);
         return $this;
     }

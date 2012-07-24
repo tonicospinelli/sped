@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Total;
 
 /**
  * Retenção de Tributos Federais
- * @name RetTrib
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name RetTrib
+ * @package Sped
  */
 class RetTrib extends \Sped\Components\Xml\Element  {
 
@@ -28,8 +28,8 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVRetPIS($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -38,11 +38,11 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVRetPIS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETPIS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETPIS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -58,8 +58,8 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVRetCOFINS($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -68,11 +68,11 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVRetCOFINS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETCOFINS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETCOFINS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -88,8 +88,8 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVRetCSLL($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -98,11 +98,11 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVRetCSLL($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETCSLL, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETCSLL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -118,8 +118,8 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVBCIRRF($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -128,11 +128,11 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVBCIRRF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBCIRRF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBCIRRF, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -148,8 +148,8 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVIRRF($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -158,11 +158,11 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVIRRF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VIRRF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VIRRF, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -178,8 +178,8 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVBCRetPrev($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -188,11 +188,11 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVBCRetPrev($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBCRETPREV, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBCRETPREV, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -208,8 +208,8 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVRetPrev($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -218,11 +218,11 @@ class RetTrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVRetPrev($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETPREV, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VRETPREV, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

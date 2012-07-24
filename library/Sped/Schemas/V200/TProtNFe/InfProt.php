@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TProtNFe;
 
 /**
  * Dados do protocolo de status
- * @name InfProt
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name InfProt
+ * @package Sped
  */
 class InfProt extends \Sped\Components\Xml\Element  {
 
@@ -39,11 +39,11 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TAmb 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TAmb 
      */
     public function addTpAmb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -68,11 +68,11 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TVerAplic 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TVerAplic 
      */
     public function addVerAplic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -97,11 +97,11 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TChNFe 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TChNFe 
      */
     public function addChNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::CHNFE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TChNFe(self::CHNFE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -126,11 +126,11 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\DateTime 
      * @param type $value 
+     * @return \Sped\Schemas\V200\DateTime 
      */
     public function addDhRecbto($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\DateTime(self::DHRECBTO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\DateTime(self::DHRECBTO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -146,8 +146,8 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TProt 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TProt 
      */
     public function getNProt($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TProt');
@@ -156,11 +156,11 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TProt 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TProt 
      */
     public function addNProt($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TProt(self::NPROT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TProt(self::NPROT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -176,8 +176,8 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\DigestValueType 
      * @param type $index 
+     * @return \Sped\Schemas\V200\DigestValueType 
      */
     public function getDigVal($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\DigestValueType');
@@ -186,11 +186,11 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\DigestValueType 
      * @param type $value 
+     * @return \Sped\Schemas\V200\DigestValueType 
      */
     public function addDigVal($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGVAL, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGVAL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -215,11 +215,11 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TStat 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TStat 
      */
     public function addCStat($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -244,11 +244,11 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TMotivo 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TMotivo 
      */
     public function addXMotivo($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -272,10 +272,9 @@ class InfProt extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\TProtNFe\InfProt 
+     * @param type $value 
      */
-    public function setId(string $value){
+    public function setId($value){
         $this->setAttribute('Id', $value);
         return $this;
     }

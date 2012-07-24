@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * Tipo Protocolo de status resultado do processamento da NF-e
- * @name TProtNFe
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name TProtNFe
+ * @package Sped
  */
 class TProtNFe extends \Sped\Components\Xml\Element  {
 
@@ -30,7 +30,7 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
     public function addInfProt(){
-        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe\InfProt(self::INFPROT), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TProtNFe\InfProt(self::INFPROT, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -46,8 +46,8 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\SignatureType 
      * @param type $index 
+     * @return \Sped\Schemas\V200\SignatureType 
      */
     public function getSignature($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
@@ -56,11 +56,11 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\SignatureType 
      * @param type $value 
+     * @return \Sped\Schemas\V200\SignatureType 
      */
     public function addSignature($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value, 'http://www.w3.org/2000/09/xmldsig#'), false);
     }
 
     /**
@@ -84,10 +84,9 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\TProtNFe 
+     * @param type $value 
      */
-    public function setVersao(string $value){
+    public function setVersao($value){
         $this->setAttribute('versao', $value);
         return $this;
     }

@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto;
 
 /**
  * Dados do Imposto de Importação
- * @name II
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name II
+ * @package Sped
  */
 class II extends \Sped\Components\Xml\Element  {
 
@@ -31,11 +31,11 @@ class II extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -60,11 +60,11 @@ class II extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVDespAdu($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDESPADU, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDESPADU, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -89,11 +89,11 @@ class II extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVII($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VII, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VII, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -118,11 +118,11 @@ class II extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVIOF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIOF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIOF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

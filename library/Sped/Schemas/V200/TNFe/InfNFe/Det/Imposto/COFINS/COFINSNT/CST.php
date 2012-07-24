@@ -9,11 +9,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT;
  * 07 - Operação Isenta da contribuição;<br />
  * 08 - Operação Sem Incidência da contribuição;<br />
  * 09 - Operação com suspensão da contribuição;
- * @name CST
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name CST
+ * @package Sped
  */
 class CST extends \Sped\Components\Xml\Element  {
 

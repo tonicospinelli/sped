@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * Tipo Nota Fiscal Eletrônica // v2.0
- * @name TNFe
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name TNFe
+ * @package Sped
  */
 class TNFe extends \Sped\Components\Xml\Element  {
 
@@ -30,7 +30,7 @@ class TNFe extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function addInfNFe(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe(self::INFNFE), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe(self::INFNFE, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -55,11 +55,11 @@ class TNFe extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\SignatureType 
      * @param type $value 
+     * @return \Sped\Schemas\V200\SignatureType 
      */
     public function addSignature($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**

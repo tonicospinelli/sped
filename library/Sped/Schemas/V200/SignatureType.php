@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * 
- * @name SignatureType
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name SignatureType
+ * @package Sped
  */
 class SignatureType extends \Sped\Components\Xml\Element  {
 
@@ -29,11 +29,11 @@ class SignatureType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\SignedInfoType 
      * @param type $value 
+     * @return \Sped\Schemas\V200\SignedInfoType 
      */
     public function addSignedInfo($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType(self::SIGNEDINFO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType(self::SIGNEDINFO, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
@@ -58,11 +58,11 @@ class SignatureType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\SignatureValueType 
      * @param type $value 
+     * @return \Sped\Schemas\V200\SignatureValueType 
      */
     public function addSignatureValue($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureValueType(self::SIGNATUREVALUE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureValueType(self::SIGNATUREVALUE, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
@@ -87,11 +87,11 @@ class SignatureType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\KeyInfoType 
      * @param type $value 
+     * @return \Sped\Schemas\V200\KeyInfoType 
      */
     public function addKeyInfo($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\KeyInfoType(self::KEYINFO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\KeyInfoType(self::KEYINFO, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
@@ -115,10 +115,9 @@ class SignatureType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\SignatureType 
+     * @param type $value 
      */
-    public function setId(string $value){
+    public function setId($value){
         $this->setAttribute('Id', $value);
         return $this;
     }

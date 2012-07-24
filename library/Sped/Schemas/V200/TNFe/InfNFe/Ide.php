@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * identificação da NF-e
- * @name Ide
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Ide
+ * @package Sped
  */
 class Ide extends \Sped\Components\Xml\Element  {
 
@@ -67,11 +67,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCodUfIBGE 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function addCUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -96,11 +96,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CNF 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CNF 
      */
     public function addCNF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\CNF(self::CNF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\CNF(self::CNF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -125,11 +125,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp 
      */
     public function addNatOp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp(self::NATOP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp(self::NATOP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -154,11 +154,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag 
      */
     public function addIndPag($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag(self::INDPAG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag(self::INDPAG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -183,11 +183,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TMod 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TMod 
      */
     public function addMod($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TMod(self::MOD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TMod(self::MOD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -212,11 +212,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TSerie 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TSerie 
      */
     public function addSerie($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TSerie(self::SERIE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TSerie(self::SERIE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -241,11 +241,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNF 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNF 
      */
     public function addNNF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNF(self::NNF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNF(self::NNF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -270,11 +270,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function addDEmi($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -299,11 +299,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function addDSaiEnt($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DSAIENT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DSAIENT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -319,8 +319,8 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TTime 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TTime 
      */
     public function getHSaiEnt($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TTime');
@@ -329,11 +329,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TTime 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TTime 
      */
     public function addHSaiEnt($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TTime(self::HSAIENT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TTime(self::HSAIENT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -358,11 +358,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNF 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNF 
      */
     public function addTpNF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNF(self::TPNF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNF(self::TPNF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -387,11 +387,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCodMunIBGE 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMunFG($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUNFG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -407,8 +407,8 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */
     public function getNFref($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref');
@@ -420,7 +420,7 @@ class Ide extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */
     public function addNFref(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref(self::NFREF), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref(self::NFREF, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -445,11 +445,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp 
      */
     public function addTpImp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp(self::TPIMP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp(self::TPIMP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -474,11 +474,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis 
      */
     public function addTpEmis($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis(self::TPEMIS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis(self::TPEMIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -503,11 +503,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CDV 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CDV 
      */
     public function addCDV($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\CDV(self::CDV, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\CDV(self::CDV, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -532,11 +532,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TAmb 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TAmb 
      */
     public function addTpAmb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -561,11 +561,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TFinNFe 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TFinNFe 
      */
     public function addFinNFe($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TFinNFe(self::FINNFE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TFinNFe(self::FINNFE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -590,11 +590,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TProcEmi 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TProcEmi 
      */
     public function addProcEmi($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TProcEmi(self::PROCEMI, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TProcEmi(self::PROCEMI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -619,11 +619,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc 
      */
     public function addVerProc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc(self::VERPROC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc(self::VERPROC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -648,11 +648,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\DhCont 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\DhCont 
      */
     public function addDhCont($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\DhCont(self::DHCONT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\DhCont(self::DHCONT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -677,11 +677,11 @@ class Ide extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\XJust 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\XJust 
      */
     public function addXJust($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\XJust(self::XJUST, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\XJust(self::XJUST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

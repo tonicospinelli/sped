@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto;
 
 /**
  * Dados do COFINS
- * @name COFINS
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name COFINS
+ * @package Sped
  */
 class COFINS extends \Sped\Components\Xml\Element  {
 
@@ -34,7 +34,7 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
     public function addCOFINSAliq(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq(self::COFINSALIQ), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq(self::COFINSALIQ, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -62,7 +62,7 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde 
      */
     public function addCOFINSQtde(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde(self::COFINSQTDE), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde(self::COFINSQTDE, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -90,7 +90,7 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT 
      */
     public function addCOFINSNT(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT(self::COFINSNT), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT(self::COFINSNT, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -118,7 +118,7 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr 
      */
     public function addCOFINSOutr(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr(self::COFINSOUTR), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr(self::COFINSOUTR, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

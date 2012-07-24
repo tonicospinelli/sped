@@ -9,11 +9,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS;
  * 07 - Operação Isenta da contribuição;<br />
  * 08 - Operação Sem Incidência da contribuição;<br />
  * 09 - Operação com suspensão da contribuição;
- * @name PISNT
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name PISNT
+ * @package Sped
  */
 class PISNT extends \Sped\Components\Xml\Element  {
 
@@ -30,11 +30,11 @@ class PISNT extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST(self::CST, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST(self::CST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

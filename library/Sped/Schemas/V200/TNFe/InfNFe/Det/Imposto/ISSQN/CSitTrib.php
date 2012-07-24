@@ -8,11 +8,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN;
  * R – RETIDA;<br />
  * S –SUBSTITUTA;<br />
  * I – ISENTA. (v.2.0)
- * @name CSitTrib
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name CSitTrib
+ * @package Sped
  */
 class CSitTrib extends \Sped\Components\Xml\Element  {
 

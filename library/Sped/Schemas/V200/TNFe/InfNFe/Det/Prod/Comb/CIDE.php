@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb;
 
 /**
  * CIDE Combustíveis
- * @name CIDE
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name CIDE
+ * @package Sped
  */
 class CIDE extends \Sped\Components\Xml\Element  {
 
@@ -29,11 +29,11 @@ class CIDE extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1204 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function addQBCProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -58,11 +58,11 @@ class CIDE extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1104 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1104 
      */
     public function addVAliqProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VALIQPROD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VALIQPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -87,11 +87,11 @@ class CIDE extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCIDE($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCIDE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCIDE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

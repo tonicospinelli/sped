@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * 
- * @name SignedInfoType
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name SignedInfoType
+ * @package Sped
  */
 class SignedInfoType extends \Sped\Components\Xml\Element  {
 
@@ -32,7 +32,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
      */
     public function addCanonicalizationMethod(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod(self::CANONICALIZATIONMETHOD), false);
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod(self::CANONICALIZATIONMETHOD, NULL, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
@@ -60,7 +60,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\SignedInfoType\SignatureMethod 
      */
     public function addSignatureMethod(){
-        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\SignatureMethod(self::SIGNATUREMETHOD), false);
+        return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\SignatureMethod(self::SIGNATUREMETHOD, NULL, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
@@ -85,11 +85,11 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\ReferenceType 
      * @param type $value 
+     * @return \Sped\Schemas\V200\ReferenceType 
      */
     public function addReference($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType(self::REFERENCE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\ReferenceType(self::REFERENCE, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
@@ -113,10 +113,9 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\SignedInfoType 
+     * @param type $value 
      */
-    public function setId(string $value){
+    public function setId($value){
         $this->setAttribute('Id', $value);
         return $this;
     }

@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * Tipo Dados do Veículo
- * @name TVeiculo
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name TVeiculo
+ * @package Sped
  */
 class TVeiculo extends \Sped\Components\Xml\Element  {
 
@@ -29,11 +29,11 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TVeiculo\Placa 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TVeiculo\Placa 
      */
     public function addPlaca($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\Placa(self::PLACA, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\Placa(self::PLACA, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -58,11 +58,11 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TUf 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TUf 
      */
     public function addUF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -78,8 +78,8 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TVeiculo\RNTC 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TVeiculo\RNTC 
      */
     public function getRNTC($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo\RNTC');
@@ -88,11 +88,11 @@ class TVeiculo extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TVeiculo\RNTC 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TVeiculo\RNTC 
      */
     public function addRNTC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\RNTC(self::RNTC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\RNTC(self::RNTC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

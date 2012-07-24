@@ -14,11 +14,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40;
  * 7 – SUFRAMA;<br />
  * 8 - Venda a órgão Público;<br />
  * 9 – outros. (v2.0)
- * @name MotDesICMS
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name MotDesICMS
+ * @package Sped
  */
 class MotDesICMS extends \Sped\Components\Xml\Element  {
 

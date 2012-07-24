@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cobr;
 
 /**
  * Dados da fatura
- * @name Fat
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Fat
+ * @package Sped
  */
 class Fat extends \Sped\Components\Xml\Element  {
 
@@ -22,8 +22,8 @@ class Fat extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      */
     public function getNFat($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat');
@@ -32,11 +32,11 @@ class Fat extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      */
     public function addNFat($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat(self::NFAT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat(self::NFAT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -52,8 +52,8 @@ class Fat extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVOrig($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -62,11 +62,11 @@ class Fat extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVOrig($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VORIG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VORIG, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -82,8 +82,8 @@ class Fat extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVDesc($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -92,11 +92,11 @@ class Fat extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVDesc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -112,8 +112,8 @@ class Fat extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVLiq($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -122,11 +122,11 @@ class Fat extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVLiq($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VLIQ, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VLIQ, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

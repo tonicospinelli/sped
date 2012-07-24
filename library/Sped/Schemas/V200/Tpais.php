@@ -20,11 +20,11 @@ namespace Sped\Schemas\V200;
  * 4885 - MAYOTTE (ILHAS FRANCESAS)  <br />
  * // NT2011/004<br />
  * acrescentado a tabela de paises
- * @name Tpais
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Tpais
+ * @package Sped
  */
 class Tpais extends \Sped\Components\Xml\Element  {
 

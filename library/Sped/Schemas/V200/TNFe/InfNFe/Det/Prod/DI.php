@@ -5,11 +5,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
 /**
  * Delcaração de Importação<br />
  * (NT 2011/004)
- * @name DI
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name DI
+ * @package Sped
  */
 class DI extends \Sped\Components\Xml\Element  {
 
@@ -38,11 +38,11 @@ class DI extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI 
      */
     public function addNDI($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI(self::NDI, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI(self::NDI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -67,11 +67,11 @@ class DI extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function addDDI($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DDI, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DDI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -96,11 +96,11 @@ class DI extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb 
      */
     public function addXLocDesemb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb(self::XLOCDESEMB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb(self::XLOCDESEMB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -125,11 +125,11 @@ class DI extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TUfEmi 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TUfEmi 
      */
     public function addUFDesemb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(self::UFDESEMB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TUfEmi(self::UFDESEMB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -154,11 +154,11 @@ class DI extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function addDDesemb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DDESEMB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DDESEMB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -183,11 +183,11 @@ class DI extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador 
      */
     public function addCExportador($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador(self::CEXPORTADOR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador(self::CEXPORTADOR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -215,7 +215,7 @@ class DI extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */
     public function addAdi(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi(self::ADI), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi(self::ADI, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

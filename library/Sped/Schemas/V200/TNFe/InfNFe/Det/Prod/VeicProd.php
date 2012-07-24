@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
 
 /**
  * Veículos novos
- * @name VeicProd
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name VeicProd
+ * @package Sped
  */
 class VeicProd extends \Sped\Components\Xml\Element  {
 
@@ -71,11 +71,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpOp 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpOp 
      */
     public function addTpOp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpOp(self::TPOP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpOp(self::TPOP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -100,11 +100,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Chassi 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Chassi 
      */
     public function addChassi($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Chassi(self::CHASSI, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Chassi(self::CHASSI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -129,11 +129,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCor 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCor 
      */
     public function addCCor($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCor(self::CCOR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCor(self::CCOR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -158,11 +158,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\XCor 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\XCor 
      */
     public function addXCor($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\XCor(self::XCOR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\XCor(self::XCOR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -187,11 +187,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Pot 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Pot 
      */
     public function addPot($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Pot(self::POT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Pot(self::POT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -216,11 +216,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Cilin 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Cilin 
      */
     public function addCilin($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Cilin(self::CILIN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Cilin(self::CILIN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -245,11 +245,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoL 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoL 
      */
     public function addPesoL($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoL(self::PESOL, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoL(self::PESOL, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -274,11 +274,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoB 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoB 
      */
     public function addPesoB($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoB(self::PESOB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoB(self::PESOB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -303,11 +303,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NSerie 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NSerie 
      */
     public function addNSerie($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NSerie(self::NSERIE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NSerie(self::NSERIE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -332,11 +332,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpComb 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpComb 
      */
     public function addTpComb($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpComb(self::TPCOMB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpComb(self::TPCOMB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -361,11 +361,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NMotor 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NMotor 
      */
     public function addNMotor($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NMotor(self::NMOTOR, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NMotor(self::NMOTOR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -390,11 +390,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMT 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMT 
      */
     public function addCMT($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMT(self::CMT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMT(self::CMT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -419,11 +419,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Dist 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Dist 
      */
     public function addDist($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Dist(self::DIST, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Dist(self::DIST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -448,11 +448,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoMod 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoMod 
      */
     public function addAnoMod($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoMod(self::ANOMOD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoMod(self::ANOMOD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -477,11 +477,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoFab 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoFab 
      */
     public function addAnoFab($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoFab(self::ANOFAB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoFab(self::ANOFAB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -506,11 +506,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpPint 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpPint 
      */
     public function addTpPint($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpPint(self::TPPINT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpPint(self::TPPINT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -535,11 +535,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpVeic 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpVeic 
      */
     public function addTpVeic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpVeic(self::TPVEIC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpVeic(self::TPVEIC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -564,11 +564,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\EspVeic 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\EspVeic 
      */
     public function addEspVeic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\EspVeic(self::ESPVEIC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\EspVeic(self::ESPVEIC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -593,11 +593,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\VIN 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\VIN 
      */
     public function addVIN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\VIN(self::VIN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\VIN(self::VIN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -622,11 +622,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CondVeic 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CondVeic 
      */
     public function addCondVeic($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CondVeic(self::CONDVEIC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CondVeic(self::CONDVEIC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -651,11 +651,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMod 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMod 
      */
     public function addCMod($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMod(self::CMOD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMod(self::CMOD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -680,11 +680,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCorDENATRAN 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCorDENATRAN 
      */
     public function addCCorDENATRAN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCorDENATRAN(self::CCORDENATRAN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCorDENATRAN(self::CCORDENATRAN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -709,11 +709,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Lota 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Lota 
      */
     public function addLota($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Lota(self::LOTA, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Lota(self::LOTA, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -738,11 +738,11 @@ class VeicProd extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpRest 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpRest 
      */
     public function addTpRest($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpRest(self::TPREST, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpRest(self::TPREST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

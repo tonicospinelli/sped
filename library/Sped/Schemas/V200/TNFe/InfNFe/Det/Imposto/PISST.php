@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto;
 
 /**
  * Dados do PIS Substituição Tributária
- * @name PISST
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name PISST
+ * @package Sped
  */
 class PISST extends \Sped\Components\Xml\Element  {
 
@@ -33,11 +33,11 @@ class PISST extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -62,11 +62,11 @@ class PISST extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_0302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPPIS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PPIS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PPIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -91,11 +91,11 @@ class PISST extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1204Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
     public function addQBCProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QBCPROD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QBCPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -120,11 +120,11 @@ class PISST extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1104Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1104Opc 
      */
     public function addVAliqProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104Opc(self::VALIQPROD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104Opc(self::VALIQPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -149,11 +149,11 @@ class PISST extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVPIS($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VPIS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VPIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

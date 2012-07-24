@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det;
 
 /**
  * Dados dos produtos e serviços da NF-e
- * @name Prod
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Prod
+ * @package Sped
  */
 class Prod extends \Sped\Components\Xml\Element  {
 
@@ -75,11 +75,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd 
      */
     public function addCProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd(self::CPROD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd(self::CPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -104,11 +104,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN 
      */
     public function addCEAN($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN(self::CEAN, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN(self::CEAN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -133,11 +133,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd 
      */
     public function addXProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd(self::XPROD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd(self::XPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -162,11 +162,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM 
      */
     public function addNCM($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM(self::NCM, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM(self::NCM, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -182,8 +182,8 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI 
      */
     public function getEXTIPI($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI');
@@ -192,11 +192,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI 
      */
     public function addEXTIPI($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI(self::EXTIPI, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI(self::EXTIPI, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -221,11 +221,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TCfop 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TCfop 
      */
     public function addCFOP($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TCfop(self::CFOP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCfop(self::CFOP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -250,11 +250,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom 
      */
     public function addUCom($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom(self::UCOM, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom(self::UCOM, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -279,11 +279,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1104v 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function addQCom($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::QCOM, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::QCOM, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -308,11 +308,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1110 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addVUnCom($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::VUNCOM, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::VUNCOM, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -337,11 +337,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVProd($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPROD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -366,11 +366,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib 
      */
     public function addCEANTrib($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib(self::CEANTRIB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib(self::CEANTRIB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -395,11 +395,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib 
      */
     public function addUTrib($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib(self::UTRIB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib(self::UTRIB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -424,11 +424,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1104v 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function addQTrib($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::QTRIB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::QTRIB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -453,11 +453,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1110 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addVUnTrib($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::VUNTRIB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::VUNTRIB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -473,8 +473,8 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVFrete($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -483,11 +483,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVFrete($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VFRETE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VFRETE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -503,8 +503,8 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVSeg($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -513,11 +513,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVSeg($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VSEG, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VSEG, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -533,8 +533,8 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVDesc($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -543,11 +543,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVDesc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -563,8 +563,8 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVOutro($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
@@ -573,11 +573,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVOutro($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VOUTRO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VOUTRO, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -602,11 +602,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot 
      */
     public function addIndTot($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot(self::INDTOT, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot(self::INDTOT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -622,8 +622,8 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function getDI($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI');
@@ -635,7 +635,7 @@ class Prod extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function addDI(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI(self::DI), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI(self::DI, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -651,8 +651,8 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed 
      */
     public function getXPed($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed');
@@ -661,11 +661,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed 
      */
     public function addXPed($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed(self::XPED, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed(self::XPED, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -681,8 +681,8 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed 
      */
     public function getNItemPed($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed');
@@ -691,11 +691,11 @@ class Prod extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed 
      */
     public function addNItemPed($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed(self::NITEMPED, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed(self::NITEMPED, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -723,7 +723,7 @@ class Prod extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
     public function addVeicProd(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd(self::VEICPROD), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd(self::VEICPROD, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -751,7 +751,7 @@ class Prod extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
     public function addMed(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med(self::MED), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med(self::MED, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -779,7 +779,7 @@ class Prod extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma 
      */
     public function addArma(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma(self::ARMA), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma(self::ARMA, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -807,7 +807,7 @@ class Prod extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
     public function addComb(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb(self::COMB), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb(self::COMB, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

@@ -6,11 +6,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
  * Campo de uso exclusivo do Fisco<br />
  * informar o nome do campo no atributo xCampo<br />
  * e o conteúdo do campo no xTexto
- * @name ObsFisco
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name ObsFisco
+ * @package Sped
  */
 class ObsFisco extends \Sped\Components\Xml\Element  {
 
@@ -27,11 +27,11 @@ class ObsFisco extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto 
      */
     public function addXTexto($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto(self::XTEXTO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto(self::XTEXTO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -55,10 +55,9 @@ class ObsFisco extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
+     * @param type $value 
      */
-    public function setXCampo(string $value){
+    public function setXCampo($value){
         $this->setAttribute('xCampo', $value);
         return $this;
     }

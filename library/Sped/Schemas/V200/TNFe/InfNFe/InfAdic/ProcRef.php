@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
 
 /**
  * Grupo de informações do  processo referenciado
- * @name ProcRef
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name ProcRef
+ * @package Sped
  */
 class ProcRef extends \Sped\Components\Xml\Element  {
 
@@ -27,11 +27,11 @@ class ProcRef extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc 
      */
     public function addNProc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc(self::NPROC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc(self::NPROC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -56,11 +56,11 @@ class ProcRef extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc 
      */
     public function addIndProc($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc(self::INDPROC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc(self::INDPROC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

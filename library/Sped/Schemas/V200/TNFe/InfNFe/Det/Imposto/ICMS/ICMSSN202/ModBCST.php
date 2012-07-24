@@ -10,11 +10,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202;
  * 3 - Lista Neutra (valor);<br />
  * 4 - Margem Valor Agregado (%);<br />
  * 5 - Pauta (valor). (v2.0)
- * @name ModBCST
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name ModBCST
+ * @package Sped
  */
 class ModBCST extends \Sped\Components\Xml\Element  {
 

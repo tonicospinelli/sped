@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200;
 
 /**
  * 
- * @name TransformType
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name TransformType
+ * @package Sped
  */
 class TransformType extends \Sped\Components\Xml\Element  {
 
@@ -25,11 +25,11 @@ class TransformType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\String 
      * @param type $value 
+     * @return \Sped\Schemas\V200\String 
      */
     public function addXPath($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\String(self::XPATH, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\String(self::XPATH, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
@@ -53,10 +53,9 @@ class TransformType extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\TransformType 
+     * @param type $value 
      */
-    public function setAlgorithm(string $value){
+    public function setAlgorithm($value){
         $this->setAttribute('Algorithm', $value);
         return $this;
     }

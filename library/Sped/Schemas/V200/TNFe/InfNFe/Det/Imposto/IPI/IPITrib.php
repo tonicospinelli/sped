@@ -8,11 +8,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI;
  * 49 - Outras entradas<br />
  * 50-Saída tributada<br />
  * 99-Outras saídas
- * @name IPITrib
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name IPITrib
+ * @package Sped
  */
 class IPITrib extends \Sped\Components\Xml\Element  {
 
@@ -39,11 +39,11 @@ class IPITrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST 
      */
     public function addCST($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST(self::CST, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST(self::CST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -68,11 +68,11 @@ class IPITrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -97,11 +97,11 @@ class IPITrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_0302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPIPI($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PIPI, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PIPI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -126,11 +126,11 @@ class IPITrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1204 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function addQUnid($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QUNID, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QUNID, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -155,11 +155,11 @@ class IPITrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1104 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1104 
      */
     public function addVUnid($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VUNID, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VUNID, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -184,11 +184,11 @@ class IPITrib extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVIPI($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIPI, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIPI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

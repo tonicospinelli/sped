@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
 
 /**
  * grupo do detalhamento de Medicamentos e de matérias-primas farmacêuticas
- * @name Med
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Med
+ * @package Sped
  */
 class Med extends \Sped\Components\Xml\Element  {
 
@@ -33,11 +33,11 @@ class Med extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote 
      */
     public function addNLote($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote(self::NLOTE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote(self::NLOTE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -62,11 +62,11 @@ class Med extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_0803 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_0803 
      */
     public function addQLote($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0803(self::QLOTE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0803(self::QLOTE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -91,11 +91,11 @@ class Med extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function addDFab($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DFAB, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DFAB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -120,11 +120,11 @@ class Med extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TData 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TData 
      */
     public function addDVal($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVAL, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVAL, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -149,11 +149,11 @@ class Med extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1302 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVPMC($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPMC, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPMC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

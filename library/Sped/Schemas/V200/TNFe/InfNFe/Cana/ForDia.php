@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cana;
 
 /**
  * Fornecimentos diários // v2.0
- * @name ForDia
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name ForDia
+ * @package Sped
  */
 class ForDia extends \Sped\Components\Xml\Element  {
 
@@ -25,11 +25,11 @@ class ForDia extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1110 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addQtde($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTDE, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTDE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -53,10 +53,9 @@ class ForDia extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @param string $value 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia 
+     * @param type $value 
      */
-    public function setDia(string $value){
+    public function setDia($value){
         $this->setAttribute('dia', $value);
         return $this;
     }

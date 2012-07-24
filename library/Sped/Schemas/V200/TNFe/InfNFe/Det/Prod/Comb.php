@@ -5,11 +5,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
 /**
  * Informar apenas para operações<br />
  * com combustíveis líquidos
- * @name Comb
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Comb
+ * @package Sped
  */
 class Comb extends \Sped\Components\Xml\Element  {
 
@@ -34,11 +34,11 @@ class Comb extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP 
      */
     public function addCProdANP($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP(self::CPRODANP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP(self::CPRODANP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -54,8 +54,8 @@ class Comb extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      */
     public function getCODIF($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF');
@@ -64,11 +64,11 @@ class Comb extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      */
     public function addCODIF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF(self::CODIF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF(self::CODIF, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -84,8 +84,8 @@ class Comb extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1204Opc 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
     public function getQTemp($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1204Opc');
@@ -94,11 +94,11 @@ class Comb extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TDec_1204Opc 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
     public function addQTemp($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QTEMP, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QTEMP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -123,11 +123,11 @@ class Comb extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TUf 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TUf 
      */
     public function addUFCons($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UFCONS, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UFCONS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -143,8 +143,8 @@ class Comb extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
     public function getCIDE($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE');
@@ -156,7 +156,7 @@ class Comb extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
     public function addCIDE(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE(self::CIDE), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE(self::CIDE, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

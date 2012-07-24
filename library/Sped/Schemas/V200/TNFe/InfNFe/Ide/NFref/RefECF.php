@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref;
 
 /**
  * Grupo do Cupom Fiscal vinculado à NF-e (v2.0).
- * @name RefECF
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name RefECF
+ * @package Sped
  */
 class RefECF extends \Sped\Components\Xml\Element  {
 
@@ -29,11 +29,11 @@ class RefECF extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod 
      */
     public function addMod($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod(self::MOD, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod(self::MOD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -58,11 +58,11 @@ class RefECF extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF 
      */
     public function addNECF($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF(self::NECF, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF(self::NECF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -87,11 +87,11 @@ class RefECF extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO 
      * @param type $value 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO 
      */
     public function addNCOO($value = NULL){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO(self::NCOO, $value), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO(self::NCOO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

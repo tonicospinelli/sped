@@ -10,11 +10,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * 3 - Reserva de Domínio;<br />
  * 4 - Penhor de Veículos;<br />
  * 9 - outras. (v2.0)
- * @name TpRest
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name TpRest
+ * @package Sped
  */
 class TpRest extends \Sped\Components\Xml\Element  {
 

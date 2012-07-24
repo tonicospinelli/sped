@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto;
 
 /**
  * Dados do PIS
- * @name PIS
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name PIS
+ * @package Sped
  */
 class PIS extends \Sped\Components\Xml\Element  {
 
@@ -34,7 +34,7 @@ class PIS extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq 
      */
     public function addPISAliq(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq(self::PISALIQ), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq(self::PISALIQ, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -62,7 +62,7 @@ class PIS extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde 
      */
     public function addPISQtde(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde(self::PISQTDE), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde(self::PISQTDE, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -90,7 +90,7 @@ class PIS extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT 
      */
     public function addPISNT(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT(self::PISNT), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT(self::PISNT, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -118,7 +118,7 @@ class PIS extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
     public function addPISOutr(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr(self::PISOUTR), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr(self::PISOUTR, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

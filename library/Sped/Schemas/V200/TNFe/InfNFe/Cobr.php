@@ -4,11 +4,11 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
 
 /**
  * Dados da cobrança da NF-e
- * @name Cobr
  * @category Sped
- * @package Sped
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @name Cobr
+ * @package Sped
  */
 class Cobr extends \Sped\Components\Xml\Element  {
 
@@ -18,8 +18,8 @@ class Cobr extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
     public function getFat($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat');
@@ -31,7 +31,7 @@ class Cobr extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
     public function addFat(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat(self::FAT), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat(self::FAT, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -47,8 +47,8 @@ class Cobr extends \Sped\Components\Xml\Element  {
 
     /**
      * 
-     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup 
      * @param type $index 
+     * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup 
      */
     public function getDup($index){
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup');
@@ -60,7 +60,7 @@ class Cobr extends \Sped\Components\Xml\Element  {
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup 
      */
     public function addDup(){
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup(self::DUP), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup(self::DUP, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
