@@ -282,11 +282,11 @@ class Schema {
     public function createClassConstructMethod($namespace, $isSetValue = false) {
         $met = new \PhpClass_Method(array(
                     'name' => '__construct',
-                    'body' => "parent::__construct(\$name, null, '$namespace');",
+                    'code' => "parent::__construct(\$name, null, '$namespace');",
                 ));
         if ($isSetValue) {
-            $met->setBody("parent::__construct(\$name, \$value, '$namespace');");
-            $met->addParameter(new \PhpClass_Parameter(array(
+            $met->setCode("parent::__construct(\$name, \$value, '$namespace');");
+            $met->addArgument(new \PhpClass_Argument(array(
                         'name' => 'value',
                         'value' => null,
                         'isOptional' => true,
@@ -348,10 +348,10 @@ class Schema {
                     'name' => 'get' . ucfirst($name),
                     'returns' => 'string'
                 ));
-        $body = <<<BODY
+        $code = <<<CODE
 return \$this->getAttribute('{$name}');
-BODY;
-        $met->setBody($body);
+CODE;
+        $met->setCode($code);
         return $met;
     }
 
@@ -365,15 +365,15 @@ BODY;
         $method = new \PhpClass_Method(array(
                     'name' => 'set' . ucfirst($methodName),
                     'parameters' => array(
-                        new \PhpClass_Parameter(array('name' => 'value'))),
+                        new \PhpClass_Argument(array('name' => 'value'))),
                     'returns' => $type
                 ));
 
-        $body = <<<BODY
+        $code = <<<CODE
 \$this->setAttribute('{$methodName}', \$value);
 return \$this;
-BODY;
-        $method->setBody($body);
+CODE;
+        $method->setCode($code);
         return $method;
     }
 
@@ -387,10 +387,10 @@ BODY;
                     'name' => 'isSet' . ucfirst($methodName),
                     'returns' => 'boolean'
                 ));
-        $body = <<<BODY
+        $code = <<<CODE
 return \$this->hasAttribute('{$methodName}');
-BODY;
-        $met->setBody($body);
+CODE;
+        $met->setCode($code);
         return $met;
     }
 
@@ -404,11 +404,11 @@ BODY;
                     'name' => 'unset' . ucfirst($methodName),
                     'returns' => 'boolean'
                 ));
-        $body = <<<BODY
+        $code = <<<CODE
 \$this->removeAttribute('{$methodName}');
 return true;
-BODY;
-        $met->setBody($body);
+CODE;
+        $met->setCode($code);
         return $met;
     }
 
@@ -430,17 +430,17 @@ BODY;
                 ));
 
         if ($hasIndex) {
-            $method->addParameter(new \PhpClass_Parameter(array('name' => 'index')));
+            $method->addArgument(new \PhpClass_Argument(array('name' => 'index')));
             $param = '$index';
         }
 
         $ownerDocument = ($isElement ? 'ownerDocument->' : '');
 
-        $body = <<<BODY
+        $code = <<<CODE
 \$this->{$ownerDocument}registerNodeClass('\DOMElement', '{$type}');
 return \$this->getElementsByTagName(self::{$constantName})->item({$param});
-BODY;
-        $method->setBody($body);
+CODE;
+        $method->setCode($code);
         return $method;
     }
 
@@ -466,7 +466,7 @@ BODY;
                     'returns' => $config['type']));
 
         if ($config['hasValue']) {
-            $method->addParameter(new \PhpClass_Parameter(array(
+            $method->addArgument(new \PhpClass_Argument(array(
                         'name' => 'value',
                         'value' => NULL,
                         'isOptional' => true))
@@ -480,10 +480,10 @@ BODY;
         }
 
         $isUnique = $config['isUnique'] ? 'true' : 'false';
-        $body = <<<BODY
+        $code = <<<CODE
 return \$this->appendChild(new {$config['type']}(self::{$constantName}{$param}), {$isUnique});
-BODY;
-        $method->setBody($body);
+CODE;
+        $method->setCode($code);
         return $method;
     }
 
@@ -498,19 +498,19 @@ BODY;
         $constantName = mb_strtoupper($methodName);
         $method = new \PhpClass_Method(array('name' => 'set' . $methodName));
 
-        $param = new \PhpClass_Parameter(array(
+        $param = new \PhpClass_Argument(array(
                     'name' => 'param' . $methodName,
                     'value' => NULL,
                     'type' => $type));
-        $method->addParameter($param);
+        $method->addArgument($param);
 
         $isUnique = $isUnique ? 'true' : 'false';
-        $body = <<<BODY
+        $code = <<<CODE
 \$this->removeElementsByTagName(self::{$constantName});
 \$this->appendChild(\${$param->getName()}, {$isUnique});
 return \$this;
-BODY;
-        $method->setBody($body);
+CODE;
+        $method->setCode($code);
         return $method;
     }
 
