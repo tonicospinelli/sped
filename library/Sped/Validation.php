@@ -56,7 +56,7 @@ class Validation {
             return $ruleSpec;
 
         $validatorFqn = 'Sped\\Validation\\' . ucfirst($ruleSpec);
-        $validatorClass = new ReflectionClass($validatorFqn);
+        $validatorClass = new \ReflectionClass($validatorFqn);
         $validatorInstance = $validatorClass->newInstanceArgs($arguments);
         return $validatorInstance;
     }
