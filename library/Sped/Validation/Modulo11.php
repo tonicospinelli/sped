@@ -35,7 +35,8 @@ namespace Sped\Validation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-abstract class Modulo11 extends AbstractValidate {
+abstract class Modulo11 extends AbstractValidate
+{
 
     /**
      * Número de dígitos verificadores.
@@ -58,7 +59,8 @@ abstract class Modulo11 extends AbstractValidate {
     /**
      * Validador de Código de Barras  
      */
-    function __construct($numeroDigitos, $limiteMultiplicador) {
+    function __construct($numeroDigitos, $limiteMultiplicador)
+    {
         $this->digitsCount = $numeroDigitos;
         $this->maxMultiplier = $limiteMultiplicador;
     }
@@ -67,7 +69,8 @@ abstract class Modulo11 extends AbstractValidate {
      *
      * @return int
      */
-    public function getDigitsCount() {
+    public function getDigitsCount()
+    {
         return (int) $this->digitsCount;
     }
 
@@ -75,7 +78,8 @@ abstract class Modulo11 extends AbstractValidate {
      *
      * @return int
      */
-    public function getMaxMultiplier() {
+    public function getMaxMultiplier()
+    {
         return (int) $this->maxMultiplier;
     }
 
@@ -83,7 +87,8 @@ abstract class Modulo11 extends AbstractValidate {
      * 
      * @return AbstractDocument
      */
-    public function getDocument() {
+    public function getDocument()
+    {
         return $this->document;
     }
 
@@ -91,7 +96,8 @@ abstract class Modulo11 extends AbstractValidate {
      * 
      * @param AbstractDocument $document 
      */
-    public function setDocument($document) {
+    public function setDocument($document)
+    {
         $this->document = $document;
         $this->digitsCount = $document->getDigitsCount();
         $this->maxMultiplier = $document->getMaxMultiplier();
@@ -102,9 +108,10 @@ abstract class Modulo11 extends AbstractValidate {
      * @param \Sped\Types\AbstractDocument $value Valor a ser validado.
      * @return boolean 
      */
-    public function validate($value) {
+    public function validate($value)
+    {
         if (!$value instanceof \Sped\Types\AbstractDocument)
-            throw new Exception('Não é possível validar o documento');
+            throw new \Exception('Não é possível validar o documento');
 
         $this->setDocument($value);
         $base = new \Sped\Types\StringHelper($this->getDocument()->getBaseNumber());
