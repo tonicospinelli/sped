@@ -35,22 +35,25 @@ namespace Sped\Validation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class ChaveAcesso extends Modulo11 {
+class ChaveAcesso extends Modulo11
+{
 
-  function __construct() {
-    $this->numeroDigitos = 1;
-    $this->limiteMultiplicador = 9;
-  }
+    function __construct()
+    {
+        $this->numeroDigitos = 1;
+        $this->limiteMultiplicador = 9;
+    }
 
-  /**
-   * Valida se o Chave de Acesso está correta.
-   * @param string $value
-   * @return boolean 
-   */
-  public function validate($value) {
-    if (!$value instanceof \Sped\Types\ChaveAcesso)
-      $value = new \Sped\Types\ChaveAcesso($value);
-    return parent::validate($value);
-  }
+    /**
+     * Valida se o Chave de Acesso está correta.
+     * @param string $value
+     * @return boolean 
+     */
+    public function validate($value)
+    {
+        if (!$value instanceof \Sped\Types\ChaveAcesso)
+            $value = new \Sped\Types\ChaveAcesso($value);
+        return parent::validate($value);
+    }
 
 }
