@@ -35,7 +35,7 @@ namespace Sped\Validation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-interface InterfaceValidation {
+interface InterfaceValidate {
 
   public function assert($input);
 
