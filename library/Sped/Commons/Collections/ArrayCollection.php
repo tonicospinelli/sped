@@ -35,7 +35,8 @@ namespace Sped\Commons\Collections;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class ArrayCollection implements InterfaceCollection {
+class ArrayCollection implements InterfaceCollection
+{
 
     /**
      * An array containing the entries of this collection.
@@ -49,7 +50,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @param array $elements
      */
-    public function __construct(array $elements = array()) {
+    public function __construct(array $elements = array())
+    {
         $this->_elements = $elements;
     }
 
@@ -58,7 +60,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return array The PHP array representation of this collection.
      */
-    public function toArray() {
+    public function toArray()
+    {
         return $this->_elements;
     }
 
@@ -68,7 +71,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return mixed
      */
-    public function first() {
+    public function first()
+    {
         return reset($this->_elements);
     }
 
@@ -78,7 +82,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return mixed
      */
-    public function last() {
+    public function last()
+    {
         return end($this->_elements);
     }
 
@@ -87,7 +92,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return mixed
      */
-    public function key() {
+    public function key()
+    {
         return key($this->_elements);
     }
 
@@ -96,7 +102,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return mixed
      */
-    public function next() {
+    public function next()
+    {
         return next($this->_elements);
     }
 
@@ -105,7 +112,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return mixed
      */
-    public function current() {
+    public function current()
+    {
         return current($this->_elements);
     }
 
@@ -115,7 +123,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param mixed $key
      * @return mixed The removed element or NULL, if no element exists for the given key.
      */
-    public function remove($key) {
+    public function remove($key)
+    {
         if (isset($this->_elements[$key])) {
             $removed = $this->_elements[$key];
             unset($this->_elements[$key]);
@@ -132,7 +141,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param mixed $element The element to remove.
      * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
      */
-    public function removeElement($element) {
+    public function removeElement($element)
+    {
         $key = array_search($element, $this->_elements, true);
 
         if ($key !== false) {
@@ -149,7 +159,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @see containsKey()
      */
-    public function offsetExists($offset) {
+    public function offsetExists($offset)
+    {
         return $this->containsKey($offset);
     }
 
@@ -158,7 +169,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @see get()
      */
-    public function offsetGet($offset) {
+    public function offsetGet($offset)
+    {
         return $this->get($offset);
     }
 
@@ -168,7 +180,8 @@ class ArrayCollection implements InterfaceCollection {
      * @see add()
      * @see set()
      */
-    public function offsetSet($offset, $value) {
+    public function offsetSet($offset, $value)
+    {
         if (!isset($offset)) {
             return $this->add($value);
         }
@@ -180,7 +193,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @see remove()
      */
-    public function offsetUnset($offset) {
+    public function offsetUnset($offset)
+    {
         return $this->remove($offset);
     }
 
@@ -190,7 +204,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param mixed $key The key to check for.
      * @return boolean TRUE if the given key/index exists, FALSE otherwise.
      */
-    public function containsKey($key) {
+    public function containsKey($key)
+    {
         return isset($this->_elements[$key]);
     }
 
@@ -204,7 +219,8 @@ class ArrayCollection implements InterfaceCollection {
      * @return boolean TRUE if the given element is contained in the collection,
      *          FALSE otherwise.
      */
-    public function contains($element) {
+    public function contains($element)
+    {
         foreach ($this->_elements as $collectionElement) {
             if ($element === $collectionElement) {
                 return true;
@@ -220,7 +236,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param Closure $p The predicate.
      * @return boolean TRUE if the predicate is TRUE for at least one element, FALSE otherwise.
      */
-    public function exists(Closure $p) {
+    public function exists(Closure $p)
+    {
         foreach ($this->_elements as $key => $element) {
             if ($p($key, $element)) {
                 return true;
@@ -238,7 +255,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param mixed $element The element to search for.
      * @return mixed The key/index of the element or FALSE if the element was not found.
      */
-    public function indexOf($element) {
+    public function indexOf($element)
+    {
         return array_search($element, $this->_elements, true);
     }
 
@@ -248,7 +266,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param mixed $key The key.
      * @return mixed The element or NULL, if no element exists for the given key.
      */
-    public function get($key) {
+    public function get($key)
+    {
         if (isset($this->_elements[$key])) {
             return $this->_elements[$key];
         }
@@ -260,7 +279,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return array
      */
-    public function getKeys() {
+    public function getKeys()
+    {
         return array_keys($this->_elements);
     }
 
@@ -269,7 +289,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return array
      */
-    public function getValues() {
+    public function getValues()
+    {
         return array_values($this->_elements);
     }
 
@@ -280,7 +301,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return integer The number of elements in the collection.
      */
-    public function count() {
+    public function count()
+    {
         return count($this->_elements);
     }
 
@@ -293,7 +315,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param mixed $key
      * @param mixed $value
      */
-    public function set($key, $value) {
+    public function set($key, $value)
+    {
         $this->_elements[$key] = $value;
     }
 
@@ -303,7 +326,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param mixed $value
      * @return boolean Always TRUE.
      */
-    public function add($value) {
+    public function add($value)
+    {
         $this->_elements[] = $value;
         return true;
     }
@@ -315,7 +339,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return boolean TRUE if the collection is empty, FALSE otherwise.
      */
-    public function isEmpty() {
+    public function isEmpty()
+    {
         return !$this->_elements;
     }
 
@@ -324,7 +349,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return ArrayIterator
      */
-    public function getIterator() {
+    public function getIterator()
+    {
         return new CollectionIterator($this->_elements);
     }
 
@@ -335,7 +361,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param Closure $func
      * @return Collection
      */
-    public function map(Closure $func) {
+    public function map(Closure $func)
+    {
         return new static(array_map($func, $this->_elements));
     }
 
@@ -346,7 +373,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param Closure $p The predicate used for filtering.
      * @return Collection A collection with the results of the filter operation.
      */
-    public function filter(Closure $p) {
+    public function filter(Closure $p)
+    {
         return new static(array_filter($this->_elements, $p));
     }
 
@@ -357,7 +385,8 @@ class ArrayCollection implements InterfaceCollection {
      * @param Closure $p The predicate.
      * @return boolean TRUE, if the predicate yields TRUE for all elements, FALSE otherwise.
      */
-    public function forAll(Closure $p) {
+    public function forAll(Closure $p)
+    {
         foreach ($this->_elements as $key => $element) {
             if (!$p($key, $element)) {
                 return false;
@@ -376,7 +405,8 @@ class ArrayCollection implements InterfaceCollection {
      *               of elements where the predicate returned TRUE, the second element
      *               contains the collection of elements where the predicate returned FALSE.
      */
-    public function partition(Closure $p) {
+    public function partition(Closure $p)
+    {
         $coll1 = $coll2 = array();
         foreach ($this->_elements as $key => $element) {
             if ($p($key, $element)) {
@@ -393,14 +423,16 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return string
      */
-    public function __toString() {
+    public function __toString()
+    {
         return __CLASS__ . '@' . spl_object_hash($this);
     }
 
     /**
      * Clears the collection.
      */
-    public function clear() {
+    public function clear()
+    {
         $this->_elements = array();
     }
 
@@ -415,11 +447,13 @@ class ArrayCollection implements InterfaceCollection {
      * @param int $length
      * @return array
      */
-    public function slice($offset, $length = null) {
+    public function slice($offset, $length = null)
+    {
         return array_slice($this->_elements, $offset, $length, true);
     }
 
-    static protected function comparison($a, $b) {
+    static protected function comparison($a, $b)
+    {
         if ($a == $b) {
             return 0;
         }
@@ -430,7 +464,8 @@ class ArrayCollection implements InterfaceCollection {
      *
      * @return void
      */
-    public function sort() {
+    public function sort()
+    {
         usort($this->_elements, array('PhpClass_Collections_ArrayCollection', 'comparison'));
         return;
     }

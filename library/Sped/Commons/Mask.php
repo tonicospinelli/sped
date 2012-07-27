@@ -35,7 +35,8 @@ namespace Sped\Commons;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Mask {
+class Mask
+{
 
     /**
      * Mask the string.
@@ -43,7 +44,8 @@ class Mask {
      * @param string $mask
      * @return string 
      */
-    static public function exec($input, $mask) {
+    static public function exec($input, $mask)
+    {
         if ($input instanceof Sped_Types_String)
             $input = $input->getValue();
 
@@ -73,7 +75,8 @@ class Mask {
      * @param string $mask
      * @return string 
      */
-    static public function decimal($number, $mask) {
+    static public function decimal($number, $mask)
+    {
         $pointPos = strpos($mask, '.');
         $commaPos = strpos($mask, ',');
 

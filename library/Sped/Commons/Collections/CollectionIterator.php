@@ -38,7 +38,8 @@ use \Countable,
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class CollectionIterator implements Iterator, Countable {
+class CollectionIterator implements Iterator, Countable
+{
 
     /**
      * This is our collection class, defined later in article.
@@ -60,7 +61,8 @@ class CollectionIterator implements Iterator, Countable {
      *
      * @param ArrayCollection $collection 
      */
-    public function __construct($collection) {
+    public function __construct($collection)
+    {
         if (!$collection instanceof ArrayCollection AND is_array($collection))
             $collection = new ArrayCollection($collection);
 
@@ -77,7 +79,8 @@ class CollectionIterator implements Iterator, Countable {
      *
      * This method returns current item in collection based on currentIndex.
      */
-    public function current() {
+    public function current()
+    {
         return $this->collection->get($this->key());
     }
 
@@ -86,7 +89,8 @@ class CollectionIterator implements Iterator, Countable {
      *
      * This method returns current items' key in collection based on currentIndex.
      */
-    public function key() {
+    public function key()
+    {
         return $this->keys[$this->currentIndex];
     }
 
@@ -95,7 +99,8 @@ class CollectionIterator implements Iterator, Countable {
      *
      * This method increases currentIndex by one.
      */
-    public function next() {
+    public function next()
+    {
         ++$this->currentIndex;
     }
 
@@ -104,7 +109,8 @@ class CollectionIterator implements Iterator, Countable {
      *
      * This method resets currentIndex by setting it to 0
      */
-    public function rewind() {
+    public function rewind()
+    {
         $this->currentIndex = 0;
     }
 
@@ -113,7 +119,8 @@ class CollectionIterator implements Iterator, Countable {
      *
      * This method checks if current index is valid by checking the keys array.
      */
-    public function valid() {
+    public function valid()
+    {
         return isset($this->keys[$this->currentIndex]);
     }
 
@@ -121,7 +128,8 @@ class CollectionIterator implements Iterator, Countable {
      * Get number of ocurrences.
      * @return int
      */
-    public function count() {
+    public function count()
+    {
         return $this->collection->count();
     }
 
