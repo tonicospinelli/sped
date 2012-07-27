@@ -49,7 +49,7 @@ class Cean extends AbstractValidate {
    * Validador de Código de Barras  
    */
   function __construct() {
-    $this->p = new ArrayObject($this->p);
+    $this->p = new \ArrayObject($this->p);
   }
 
   /**
