@@ -29,8 +29,8 @@
 namespace Sped;
 
 if (!defined('SPED_ROOT')) {
-  define('SPED_ROOT', dirname(realpath(__FILE__)) . '/');
-  require(SPED_ROOT . 'Sped/Autoloader.php');
+    define('SPED_ROOT', dirname(realpath(__FILE__)) . '/');
+    require(SPED_ROOT . 'Sped/Autoloader.php');
 }
 
 /**
@@ -40,6 +40,7 @@ if (!defined('SPED_ROOT')) {
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Sped {
-  //TODO: criar o código da classe Sped
+class Sped
+{
+    //TODO: criar o código da classe Sped
 }
