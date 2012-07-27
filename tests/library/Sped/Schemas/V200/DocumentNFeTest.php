@@ -67,8 +67,7 @@ class DocumentNFeTest extends \PHPUnit_Framework_TestCase
             $this->object->getNFe()->getSignature()->addSignedInfo();
             $this->object->formatOutput = true;
             var_dump($this->object->saveXML());
-        }
-        catch (\DOMException $exc) {
+        } catch (\DOMException $exc) {
             echo $exc->getTraceAsString();
         }
     }
@@ -78,10 +77,9 @@ class DocumentNFeTest extends \PHPUnit_Framework_TestCase
      */
     public function testSetNFe()
     {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $this->object->setNFe(new \Sped\Schemas\V200\TNFe(DocumentNFe::NFE));
+        var_dump($this->object->saveXML());
+        $this->assertTrue(true);
     }
 
 }
