@@ -35,7 +35,8 @@ namespace Sped\Components\Xml;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Document extends \DOMDocument {
+class Document extends \DOMDocument
+{
 
     const ATTRIBUTES = '__ATTRIBUTES__';
     const CONTENT = '__CONTENT__';
@@ -46,7 +47,8 @@ class Document extends \DOMDocument {
      */
     protected $namespaces;
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct('1.0', 'UTF-8');
         parent::registerNodeClass('\DOMElement', '\Sped\Components\Xml\Element');
     }
@@ -57,7 +59,8 @@ class Document extends \DOMDocument {
      * @param boolean $unique If sets TRUE, search if exists the same node.
      * @return \DOMNode The node added or if is unique, returns the node found.
      */
-    public function appendChild(\DOMNode $newNode, $unique = false) {
+    public function appendChild(\DOMNode $newNode, $unique = false)
+    {
         if ($unique)
             $node = parent::getElementsByTagName($newNode->localName)->item(0);
 
@@ -78,7 +81,8 @@ class Document extends \DOMDocument {
      * </p>
      * @return boolean If the child could be removed the function returns true.
      */
-    public function removeElementsByTagName($name) {
+    public function removeElementsByTagName($name)
+    {
         $nodes = $this->getElementsByTagName($name);
         foreach ($nodes as $node)
             $this->removeChild($node);
@@ -89,7 +93,8 @@ class Document extends \DOMDocument {
      * Return array of namespaces of the document
      * @return array
      */
-    public function getNamespaces() {
+    public function getNamespaces()
+    {
         if (is_array($this->namespaces))
             return $this->namespaces;
 
@@ -113,7 +118,8 @@ class Document extends \DOMDocument {
      * Return the target namespace this document
      * @return string
      */
-    public function getTargetNamespace() {
+    public function getTargetNamespace()
+    {
         $xpath = new \DOMXPath($this);
         $query = "/*/@targetNamespace";
         $this->namespaces = array();
@@ -131,7 +137,8 @@ class Document extends \DOMDocument {
      *
      * @return array($namespace, $nodeName)
      */
-    public function parseQName($qname, $resolveNamespace = false) {
+    public function parseQName($qname, $resolveNamespace = false)
+    {
 
         if (!$this->isQName($qname))
             throw new \RuntimeException("Given argument is not of QName type: " . $qname);
@@ -144,7 +151,8 @@ class Document extends \DOMDocument {
         return array($ns, $name);
     }
 
-    public function isQName($name) {
+    public function isQName($name)
+    {
         if (preg_match('/:/', $name))
             return true;
 
@@ -158,7 +166,8 @@ class Document extends \DOMDocument {
      *
      * @return string Long namespace
      */
-    public function resolveNamespace($shortNs) {
+    public function resolveNamespace($shortNs)
+    {
         $namespaces = $this->getNamespaces();
 
         if (array_key_exists($shortNs, $namespaces)) {
@@ -168,7 +177,8 @@ class Document extends \DOMDocument {
         }
     }
 
-    public function getNsCode($longNs, $rt = false) {
+    public function getNsCode($longNs, $rt = false)
+    {
         $namespaces = $this->getNamespaces();
 
         if (array_key_exists($longNs, $namespaces))
@@ -236,7 +246,8 @@ class Document extends \DOMDocument {
      * @param string $rootTagName   
      * @return Document
      */
-    public static function arrayToXml(array $source, $rootTagName = null) {
+    public static function arrayToXml(array $source, $rootTagName = null)
+    {
         $document = new Document();
         $document->appendChild(self::createDOMElement($source, $document, $rootTagName));
         return $document;
@@ -248,7 +259,8 @@ class Document extends \DOMDocument {
      * @param bool $formatOutput
      * @return string
      */
-    public static function arrayToXMLString(array $source, $rootTagName = 'root', $formatOutput = true) {
+    public static function arrayToXMLString(array $source, $rootTagName = 'root', $formatOutput = true)
+    {
         $document = self::arrayToDOMDocument($source, $rootTagName);
         $document->formatOutput = $formatOutput;
         return $document->saveXML();
@@ -258,7 +270,8 @@ class Document extends \DOMDocument {
      * @param \DOMDocument $document
      * @return array
      */
-    public static function xmlDocumentToArray(XmlDocument $document) {
+    public static function xmlDocumentToArray(XmlDocument $document)
+    {
         return self::createArray($document->documentElement);
     }
 
@@ -266,7 +279,8 @@ class Document extends \DOMDocument {
      * @param string $xmlSource
      * @return array
      */
-    public static function xmlSourceToArray($xmlSource) {
+    public static function xmlSourceToArray($xmlSource)
+    {
         $document = new Document();
         return $document->loadXML($xmlSource) ? self::domDocumentToArray($document) : array();
     }
@@ -277,7 +291,8 @@ class Document extends \DOMDocument {
      * @param string $tagName
      * @return \DOMNode
      */
-    private static function createDOMElement($source, \DOMDocument $document, $tagName = null) {
+    private static function createDOMElement($source, \DOMDocument $document, $tagName = null)
+    {
         if (!is_array($source)) {
             $element = $document->createElement($tagName);
             $element->appendChild($document->createCDATASection($source));
@@ -307,7 +322,8 @@ class Document extends \DOMDocument {
      * @param \DOMNode $domNode
      * @return array
      */
-    private static function createArray(\DOMNode $domNode) {
+    private static function createArray(\DOMNode $domNode)
+    {
         $array = array();
 
         for ($i = 0; $i < $domNode->childNodes->length; $i++) {

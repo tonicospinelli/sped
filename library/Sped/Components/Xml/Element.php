@@ -35,13 +35,15 @@ namespace Sped\Components\Xml;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Element extends \DOMElement {
+class Element extends \DOMElement
+{
 
     /**
      *
      * @return \Sped\Components\Xml\NodeIterator 
      */
-    public function getIterator() {
+    public function getIterator()
+    {
         return new NodeIterator($this);
     }
 
@@ -53,7 +55,8 @@ class Element extends \DOMElement {
      * </p>
      * @return DOMNode The node added or if is unique, returns the node found.
      */
-    public function appendChild(\DOMNode $newNode, $unique = false) {
+    public function appendChild(\DOMNode $newNode, $unique = false)
+    {
         if ($unique)
             $node = parent::getElementsByTagName($newNode->localName)->item(0);
 
@@ -81,7 +84,8 @@ class Element extends \DOMElement {
      * </p>
      * @return DOMNode The inserted node.
      */
-    public function insertBefore(\DOMNode $newnode, \DOMNode $refnode = null) {
+    public function insertBefore(\DOMNode $newnode, \DOMNode $refnode = null)
+    {
         $newNode = parent::insertBefore($newnode, $refnode);
 
         if (method_exists($newNode, 'loadDefaults'))
@@ -104,7 +108,8 @@ class Element extends \DOMElement {
      * </p>
      * @return DOMNode The old node or false if an error occur.
      */
-    public function replaceChild(\DOMNode $newnode, \DOMNode $oldnode) {
+    public function replaceChild(\DOMNode $newnode, \DOMNode $oldnode)
+    {
         $newNode = parent::replaceChild($newnode, $oldnode);
 
         if (method_exists($newNode, 'loadDefaults'))
@@ -122,10 +127,12 @@ class Element extends \DOMElement {
      * </p>
      * @return boolean If the child could be removed the function returns true.
      */
-    public function removeElementsByTagName($name) {
+    public function removeElementsByTagName($name)
+    {
         $nodes = $this->getElementsByTagName($name);
         foreach ($nodes as $node)
             $this->removeChild($node);
         return true;
     }
+
 }

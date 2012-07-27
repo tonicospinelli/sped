@@ -35,7 +35,8 @@ namespace Sped\Components\Xml;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class NodeIterator implements RecursiveIterator {
+class NodeIterator implements RecursiveIterator
+{
 
     /**
      * Current Position in DOMNodeList
@@ -53,7 +54,8 @@ class NodeIterator implements RecursiveIterator {
      * @param DOMNode $domNode
      * @return void
      */
-    public function __construct(\DOMNode $domNode) {
+    public function __construct(\DOMNode $domNode)
+    {
         $this->_position = 0;
         $this->_nodeList = $domNode->childNodes;
     }
@@ -62,7 +64,8 @@ class NodeIterator implements RecursiveIterator {
      * Returns the current DOMNode
      * @return DOMNode
      */
-    public function current() {
+    public function current()
+    {
         return $this->_nodeList->item($this->_position);
     }
 
@@ -70,7 +73,8 @@ class NodeIterator implements RecursiveIterator {
      * Returns an iterator for the current iterator entry
      * @return RecursiveDOMIterator
      */
-    public function getChildren() {
+    public function getChildren()
+    {
         return new self($this->current());
     }
 
@@ -78,7 +82,8 @@ class NodeIterator implements RecursiveIterator {
      * Returns if an iterator can be created for the current entry.
      * @return Boolean
      */
-    public function hasChildren() {
+    public function hasChildren()
+    {
         return $this->current()->hasChildNodes();
     }
 
@@ -86,7 +91,8 @@ class NodeIterator implements RecursiveIterator {
      * Returns the current position
      * @return Integer
      */
-    public function key() {
+    public function key()
+    {
         return $this->_position;
     }
 
@@ -94,7 +100,8 @@ class NodeIterator implements RecursiveIterator {
      * Moves the current position to the next element.
      * @return void
      */
-    public function next() {
+    public function next()
+    {
         $this->_position++;
     }
 
@@ -102,7 +109,8 @@ class NodeIterator implements RecursiveIterator {
      * Rewind the Iterator to the first element
      * @return void
      */
-    public function rewind() {
+    public function rewind()
+    {
         $this->_position = 0;
     }
 
@@ -110,7 +118,8 @@ class NodeIterator implements RecursiveIterator {
      * Checks if current position is valid
      * @return Boolean
      */
-    public function valid() {
+    public function valid()
+    {
         return $this->_position < $this->_nodeList->length;
     }
 

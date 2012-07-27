@@ -37,7 +37,8 @@ use Sped\Components\Xml\Document;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Schema extends Document {
+class Schema extends Document
+{
 
     public $loadedImportFiles = array();
     public $fileName = null;
@@ -50,7 +51,8 @@ class Schema extends Document {
      * @param bool $loadExternals [optional]<br>Includes or imports the file content if is TRUE.
      * @return boolean 
      */
-    public function load($filename, $options = null, $loadExternals = false) {
+    public function load($filename, $options = null, $loadExternals = false)
+    {
         $options = (($options !== null) ? LIBXML_DTDLOAD | LIBXML_DTDATTR | LIBXML_NOENT | LIBXML_XINCLUDE : $options);
         if (!parent::load($filename, $options))
             return false;
@@ -68,7 +70,8 @@ class Schema extends Document {
      * @param bool $loadExternals 
      * @return boolean true on success or false on failure. If called statically, returns a DOMDocument or false on failure.
      */
-    public function loadXML($source, $options = null, $loadExternals = false) {
+    public function loadXML($source, $options = null, $loadExternals = false)
+    {
         $options = (($options !== null) ? LIBXML_DTDLOAD | LIBXML_DTDATTR | LIBXML_NOENT | LIBXML_XINCLUDE : $options);
         if (!parent::loadXML($source, $options))
             return false;
@@ -85,7 +88,8 @@ class Schema extends Document {
      * @param \DOMDocument $dom DOM model of the schema.
      * @throws \RuntimeException 
      */
-    public function loadExternalFiles($filepath = null, $dom = null) {
+    public function loadExternalFiles($filepath = null, $dom = null)
+    {
         $dom = ($dom instanceof \DOMDocument) ? $dom : $this;
 
         $filepath = realpath(dirname(is_null($filepath) ? $this->fileName : $filepath));
@@ -124,7 +128,7 @@ class Schema extends Document {
                 foreach ($xsd->documentElement->childNodes as $node) {
                     if (!$node instanceof \DOMElement)
                         continue;
-                    
+
                     if (empty($node->prefix))
                         $node->prefix = $nsPrefix;
                     $newNode = $dom->importNode($node, true);
@@ -139,7 +143,8 @@ class Schema extends Document {
      *
      * @return Sped\Components\Xml\Document
      */
-    public function parseXml() {
+    public function parseXml()
+    {
         $this->parseTree = new Document();
         $node = $this->parseTree->createElement($this->documentElement->localName);
         $this->parseTree->appendChild($node);
@@ -147,7 +152,8 @@ class Schema extends Document {
         return $this->parseTree;
     }
 
-    protected function parseSchemaToXml(\DOMElement $xml, \DOMElement $parent) {
+    protected function parseSchemaToXml(\DOMElement $xml, \DOMElement $parent)
+    {
         foreach ($xml->childNodes as $child) {
 
             if (!$child instanceof \DOMElement)
