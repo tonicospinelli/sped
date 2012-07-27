@@ -35,25 +35,30 @@ namespace Sped\Types;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class ChaveAcesso extends AbstractDocument {
+class ChaveAcesso extends AbstractDocument
+{
 
-    public function getMaxMultiplier() {
+    public function getMaxMultiplier()
+    {
         return 9;
     }
 
-    public function getDigitsCount() {
+    public function getDigitsCount()
+    {
         return 1;
     }
 
     /**
-     * 
+     * Retorna o número da Chave de Acesso com a máscara.
      * @return string
      */
-    public function getMasked() {
+    public function getMasked()
+    {
         return 'NFe' . $this->getValue();
     }
 
-    static public function defaultDocumentLength() {
+    public function defaultDocumentLength()
+    {
         return 44;
     }
 
