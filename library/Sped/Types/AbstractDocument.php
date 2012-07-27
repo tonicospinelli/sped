@@ -35,7 +35,8 @@ namespace Sped\Types;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-abstract class AbstractDocument extends AbstractType implements InterfaceDocument {
+abstract class AbstractDocument extends AbstractType implements InterfaceDocument
+{
 
     /**
      *
@@ -56,7 +57,8 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
      * @param string $value
      * @return \Sped\Types\AbstractDocument
      */
-    public function setValue($value) {
+    public function setValue($value)
+    {
         $value = new \Sped\Types\StringHelper($value);
         return parent::setValue($value->replaceRegExp('/[^\d]/', ''));
     }
@@ -65,7 +67,8 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
      * Retorna o número do documento.
      * @return string
      */
-    public function getValue() {
+    public function getValue()
+    {
         $value = new \Sped\Types\StringHelper();
         $value->concat($this->getBaseNumber(), $this->getDv());
         return $value->getValue();
@@ -76,7 +79,8 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
      * @param \Sped\Types\AbstractDocument|string $numero
      * @return \Sped\Types\StringHelper 
      */
-    public function getUnMasked() {
+    public function getUnMasked()
+    {
         $numero = new \Sped\Types\StringHelper($this->getValue());
         return $numero->replaceRegExp('/[^\d]/', '');
     }
@@ -85,7 +89,8 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
      * Retorna as posições do Digito Verificador.
      * @return array
      */
-    public function getDvPositions() {
+    public function getDvPositions()
+    {
         $dv = array();
         $index = 0;
         while ($index < $this->getDigitsCount()) {
@@ -100,7 +105,8 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
      * @param int $index
      * @return int
      */
-    public function getDvPosition($index) {
+    public function getDvPosition($index)
+    {
         $dvPos = $this->getDvPositions();
         return (int) $dvPos[$index];
     }
@@ -109,7 +115,8 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
      * Retorna o número base.
      * @return string
      */
-    public function getBaseNumber() {
+    public function getBaseNumber()
+    {
         return $this->value->substring(0, ($this->defaultDocumentLength() - $this->getDigitsCount()))->getValue();
     }
 
@@ -117,7 +124,8 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
      * Retorna os digitos verificadores
      * @return string
      */
-    public function getDv() {
+    public function getDv()
+    {
         $base = new \Sped\Types\StringHelper($this->getBaseNumber());
 
         for ($n = 1; $n <= $this->getDigitsCount(); $n++) {
