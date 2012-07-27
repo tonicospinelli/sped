@@ -35,25 +35,28 @@ namespace Sped\Validation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Cpf extends Modulo11 {
+class Cpf extends Modulo11
+{
 
-  /**
-   * Validador de Código de Barras  
-   */
-  function __construct() {
-    $this->digitsCount = 2;
-    $this->maxMultiplier = 12;
-  }
+    /**
+     * Validador de Código de Barras  
+     */
+    function __construct()
+    {
+        $this->digitsCount = 2;
+        $this->maxMultiplier = 12;
+    }
 
-  /**
-   * Valida se o CPF está correto
-   * @param string|int|\Sped\Types\Cpf $value
-   * @return boolean 
-   */
-  public function validate($value) {
-    if (!$value instanceof \Sped\Types\Cpf)
-      $value = new \Sped\Types\Cpf($value);
-    return parent::validate($value);
-  }
+    /**
+     * Valida se o CPF está correto
+     * @param string|int|\Sped\Types\Cpf $value
+     * @return boolean 
+     */
+    public function validate($value)
+    {
+        if (!$value instanceof \Sped\Types\Cpf)
+            $value = new \Sped\Types\Cpf($value);
+        return parent::validate($value);
+    }
 
 }

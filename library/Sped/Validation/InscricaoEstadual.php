@@ -35,27 +35,30 @@ namespace Sped\Validation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class InscricaoEstadual {
+class InscricaoEstadual
+{
 
-  /**
-   * Validação do CNPJ. 
-   */
-  function __construct() {
-    $this->digitsCount = 1;
-    $this->maxMultiplier = 9;
-  }
+    /**
+     * Validação do CNPJ. 
+     */
+    function __construct()
+    {
+        $this->digitsCount = 1;
+        $this->maxMultiplier = 9;
+    }
 
-  /**
-   * Valida se o CNPJ está correto.
-   * @param string|int|\Sped\Types\InscricaoEstadual $value
-   * @return boolean 
-   */
-  public function validate($value) {
-    if (!$value instanceof \Sped\Types\InscricaoEstadual)
-      $value = new \Sped\Types\InscricaoEstadual($value);
+    /**
+     * Valida se o CNPJ está correto.
+     * @param string|int|\Sped\Types\InscricaoEstadual $value
+     * @return boolean 
+     */
+    public function validate($value)
+    {
+        if (!$value instanceof \Sped\Types\InscricaoEstadual)
+            $value = new \Sped\Types\InscricaoEstadual($value);
 
-    return parent::validate($value);
-  }
+        return parent::validate($value);
+    }
 
 //
 //  public InscricaoEstadual()

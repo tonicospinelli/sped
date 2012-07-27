@@ -35,23 +35,28 @@ namespace Sped\Validation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-abstract class AbstractValidate implements InterfaceValidate {
+abstract class AbstractValidate implements InterfaceValidate
+{
 
-  public function __construct() {
-    //a constructor is required for ReflectionClass::newInstance()
-  }
+    public function __construct()
+    {
+        //a constructor is required for ReflectionClass::newInstance()
+    }
 
-  public function __invoke($input) {
-    return $this->validate($input);
-  }
+    public function __invoke($input)
+    {
+        return $this->validate($input);
+    }
 
-  public function assert($input) {
-    return $this->validate($input);
-  }
+    public function assert($input)
+    {
+        return $this->validate($input);
+    }
 
-  public function check($input) {
-    return $this->assert($input);
-  }
+    public function check($input)
+    {
+        return $this->assert($input);
+    }
 
 }
 
