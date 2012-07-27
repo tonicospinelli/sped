@@ -35,7 +35,8 @@ namespace Sped\Types;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class StringHelper extends AbstractType {
+class StringHelper extends AbstractType
+{
 
     const _EMPTY = '';
 
@@ -55,15 +56,18 @@ class StringHelper extends AbstractType {
      * Construct the \Sped\Types\String Object.
      * @param mixed $value 
      */
-    public function __construct($value = null) {
+    public function __construct($value = null)
+    {
         $this->setValue($value);
     }
 
-    public function __toString() {
+    public function __toString()
+    {
         return $this->getValue();
     }
 
-    public function __invoke() {
+    public function __invoke()
+    {
         return $this->getValue();
     }
 
@@ -74,7 +78,8 @@ class StringHelper extends AbstractType {
      * @param string $glue The array of strings to implode.
      * @return \Sped\Types\StringHelper 
      */
-    public function setValue($value, $glue = '') {
+    public function setValue($value, $glue = '')
+    {
         if (is_array($value))
             $value = implode($glue, $value);
 
@@ -92,7 +97,8 @@ class StringHelper extends AbstractType {
      * Limpar o valor.
      * @return \Sped\Types\StringHelper 
      */
-    public function clear() {
+    public function clear()
+    {
         $this->setValue(self::_EMPTY);
         return $this;
     }
@@ -103,7 +109,8 @@ class StringHelper extends AbstractType {
      * @param int $length If the value of length is negative, less than, or equal to the length of the input string, no padding takes place.
      * @return \Sped\Types\StringHelper
      */
-    public function padLeft($char, $length) {
+    public function padLeft($char, $length)
+    {
         $this->setValue(str_pad($this->getValue(), $length, $char, STR_PAD_LEFT));
         return $this;
     }
@@ -114,7 +121,8 @@ class StringHelper extends AbstractType {
      * @param int $length If the value of length is negative, less than, or equal to the length of the input string, no padding takes place.
      * @return \Sped\Types\StringHelper
      */
-    public function padRight($char, $length) {
+    public function padRight($char, $length)
+    {
         $this->setValue(str_pad($this->getValue(), $length, $char, STR_PAD_RIGHT));
         return $this;
     }
@@ -125,7 +133,8 @@ class StringHelper extends AbstractType {
      * @param int $length If the value of length is negative, less than, or equal to the length of the input string, no padding takes place.
      * @return \Sped\Types\StringHelper
      */
-    public function padBoth($char, $length) {
+    public function padBoth($char, $length)
+    {
         $this->setValue(str_pad($this->getValue(), $length, $char, STR_PAD_BOTH));
         return $this;
     }
@@ -136,7 +145,8 @@ class StringHelper extends AbstractType {
      * @param string $out
      * @return \Sped\Types\StringHelper 
      */
-    public function normalize($in = 'UTF-8', $out = 'ASCII') {
+    public function normalize($in = 'UTF-8', $out = 'ASCII')
+    {
         setlocale(LC_CTYPE, 'en_US');
         $value = iconv($in, $out . '//TRANSLIT', $this->getValue());
         $value = preg_replace("/[^\w\s\(\)\/\"\-\+\_\[\]]/i", '', $value);
@@ -150,7 +160,8 @@ class StringHelper extends AbstractType {
      * @param int $occurrences [optional]<br/>The optional number occurrences parameter allows you to specify which character in haystack to start searching.
      * @return int|boolean the position as an integer. If needle is not found, strpos will return boolean false.
      */
-    public function getPosition($needle, $occurrences = 1) {
+    public function getPosition($needle, $occurrences = 1)
+    {
         $lastPosisition = mb_strpos($this->getValue(), $needle);
 
         while (--$occurrences > 0)
@@ -165,7 +176,8 @@ class StringHelper extends AbstractType {
      * @param mixed $replace The replacement value that replaces found search values.<br/>An array may be used to designate multiple replacements.
      * @return \Sped\Types\StringHelper
      */
-    public function replace($search, $replace) {
+    public function replace($search, $replace)
+    {
         $this->setValue(str_replace($search, $replace, $this->getValue()));
         return $this;
     }
@@ -176,7 +188,8 @@ class StringHelper extends AbstractType {
      * @param mixed $replace The replacement value that replaces found search values.<br/>An array may be used to designate multiple replacements.
      * @return \Sped\Types\StringHelper
      */
-    public function replaceRegExp($search, $replace) {
+    public function replaceRegExp($search, $replace)
+    {
         $this->setValue(preg_replace($search, $replace, $this->getValue()));
         return $this;
     }
@@ -185,7 +198,8 @@ class StringHelper extends AbstractType {
      * Strip whitespace from the beginning and end of a string.
      * @return \Sped\Types\StringHelper
      */
-    public function trim() {
+    public function trim()
+    {
         $this->setValue(trim($this->getValue()));
         return $this;
     }
@@ -194,7 +208,8 @@ class StringHelper extends AbstractType {
      * Strip whitespace from the beginning of a string.
      * @return \Sped\Types\StringHelper
      */
-    public function trimStart() {
+    public function trimStart()
+    {
         $this->setValue(preg_replace("/^[\s]+/", '', $this->getValue()));
         return $this;
     }
@@ -203,12 +218,14 @@ class StringHelper extends AbstractType {
      * Strip whitespace from the end of a string.
      * @return \Sped\Types\StringHelper
      */
-    public function trimEnd() {
+    public function trimEnd()
+    {
         $this->setValue(preg_replace("/[\s]+$/", '', $this->getValue()));
         return $this;
     }
 
-    public function trimExtraSpaces() {
+    public function trimExtraSpaces()
+    {
         $this->setValue(preg_replace("/\s[\s]+/", '', $this->getValue()));
         return $this;
     }
@@ -219,7 +236,8 @@ class StringHelper extends AbstractType {
      * @param int $length Number of time the input string should be repeated. Length has to be greater than or equal to 0. If the length is set to 0, the function will return an empty string.
      * @return \Sped\Types\StringHelper
      */
-    public function repeat($char, $length) {
+    public function repeat($char, $length)
+    {
         $this->setValue(str_repeat($char, $length));
         return $this;
     }
@@ -229,7 +247,8 @@ class StringHelper extends AbstractType {
      * @param string $toCompare \Sped\Types\String to compare.
      * @return float Returns the percent similarity for you.
      */
-    public function getSimilarity($toCompare) {
+    public function getSimilarity($toCompare)
+    {
         $percents = (float) 0;
         similar_text($this->getValue(), $toCompare, $percents);
         return $percents;
@@ -241,7 +260,8 @@ class StringHelper extends AbstractType {
      * @param int $offset [optional]<br/>Maximum number of characters to use from str.
      * @return \Sped\Types\StringHelper
      */
-    public function left($start, $offset = null) {
+    public function left($start, $offset = null)
+    {
         return $this->substring($start, $offset);
     }
 
@@ -251,7 +271,8 @@ class StringHelper extends AbstractType {
      * @param int $offset [optional]<br/>Maximum number of characters to use from str.
      * @return \Sped\Types\StringHelper
      */
-    public function right($start, $offset = null) {
+    public function right($start, $offset = null)
+    {
         return $this->substring(($start * -1), $offset);
     }
 
@@ -261,7 +282,8 @@ class StringHelper extends AbstractType {
      * @param int $offset Maximum number of characters to use from str.
      * @return \Sped\Types\StringHelper
      */
-    public function substring($start, $offset = null) {
+    public function substring($start, $offset = null)
+    {
         $value = new \Sped\Types\StringHelper(mb_substr($this->getValue(), $start, $offset));
         return $value;
     }
@@ -271,7 +293,8 @@ class StringHelper extends AbstractType {
      * @param StringHelper|boolean $delimiter If delimiter is false, split by letters.
      * @return array
      */
-    public function split($delimiter = false) {
+    public function split($delimiter = false)
+    {
         if ($delimiter !== false)
             return explode($delimiter, $this->getValue());
         return str_split($this->getValue());
@@ -281,7 +304,8 @@ class StringHelper extends AbstractType {
      * Convert a string to an words array.
      * @return array
      */
-    public function splitWords() {
+    public function splitWords()
+    {
         return $this->split(' ');
     }
 
@@ -291,7 +315,8 @@ class StringHelper extends AbstractType {
      * @param string $glue The array of strings to implode.
      * @return \Sped\Types\StringHelper
      */
-    public function join(array $pieces, $glue = '') {
+    public function join(array $pieces, $glue = '')
+    {
         $this->setValue($pieces, $glue);
         return $this;
     }
@@ -301,7 +326,8 @@ class StringHelper extends AbstractType {
      * @param string $value The variable being evaluated.
      * @return boolean true if var is null or empty, false otherwise.
      */
-    static public function isNullOrEmpty($value = null) {
+    static public function isNullOrEmpty($value = null)
+    {
         if ($value instanceof \Sped\Types\StringHelper)
             $value = $value->getValue();
         return is_null($value) OR empty($value);
@@ -312,7 +338,8 @@ class StringHelper extends AbstractType {
      * @param mixed $args Many args to concatenate.
      * @return \Sped\Types\StringHelper
      */
-    public function concat($args) {
+    public function concat($args)
+    {
         $args = func_get_args();
 
         foreach ($args as $key => $value) {
@@ -328,7 +355,8 @@ class StringHelper extends AbstractType {
      * @param string $needle
      * @return boolean
      */
-    public function contains($needle) {
+    public function contains($needle)
+    {
         return $this->getPosition($needle) !== false;
     }
 
@@ -337,7 +365,8 @@ class StringHelper extends AbstractType {
      * @param string $needle Regular Expression
      * @return boolean
      */
-    public function containsRegExp($needle) {
+    public function containsRegExp($needle)
+    {
         return preg_match($needle, $this->getValue()) ? true : false;
     }
 
@@ -346,7 +375,8 @@ class StringHelper extends AbstractType {
      * @param string $needle
      * @return boolean 
      */
-    public function endsWith($needle) {
+    public function endsWith($needle)
+    {
         $normalize = array(
             '(' => '\(', ')' => '\)',
             '[' => '\[', ']' => '\]',
@@ -364,7 +394,8 @@ class StringHelper extends AbstractType {
      * @param string $needle
      * @return boolean 
      */
-    public function startsWith($needle) {
+    public function startsWith($needle)
+    {
         $normalize = array(
             '(' => '\(', ')' => '\)',
             '[' => '\[', ']' => '\]',
@@ -383,7 +414,8 @@ class StringHelper extends AbstractType {
      * @param mixed $secondString Second string to compare.
      * @return boolean
      */
-    static public function equals($firstString, $secondString) {
+    static public function equals($firstString, $secondString)
+    {
         if (!$firstString instanceof \Sped\Types\StringHelper)
             $firstString = new \Sped\Types\StringHelper($firstString);
         if (!$secondString instanceof \Sped\Types\StringHelper)
@@ -396,7 +428,8 @@ class StringHelper extends AbstractType {
      * @param mixed $string
      * @return boolean
      */
-    public function equalsTo($string) {
+    public function equalsTo($string)
+    {
         if (!$string instanceof \Sped\Types\StringHelper)
             $strSecond = new \Sped\Types\StringHelper($string);
         return $this->getValue() === $strSecond->getValue();
@@ -407,7 +440,8 @@ class StringHelper extends AbstractType {
      * @param string $needle
      * @return int
      */
-    public function indexOf($needle) {
+    public function indexOf($needle)
+    {
         return $this->getPosition($needle);
     }
 
@@ -415,7 +449,8 @@ class StringHelper extends AbstractType {
      * Make a string lowercase.
      * @return \Sped\Types\StringHelper
      */
-    public function toLower() {
+    public function toLower()
+    {
         $this->setValue(strtolower($this->getValue()));
         return $this;
     }
@@ -424,7 +459,8 @@ class StringHelper extends AbstractType {
      * Make a string uppercase.
      * @return \Sped\Types\StringHelper
      */
-    public function toUpper() {
+    public function toUpper()
+    {
         $this->setValue(strtoupper($this->getValue()));
         return $this;
     }
@@ -433,7 +469,8 @@ class StringHelper extends AbstractType {
      * Uppercase the first character of each word in a string.
      * @return \Sped\Types\StringHelper
      */
-    public function toUpperFirstCharWords() {
+    public function toUpperFirstCharWords()
+    {
         $this->setValue(ucwords($this->getValue()));
         return $this;
     }
@@ -443,7 +480,8 @@ class StringHelper extends AbstractType {
      * string|boolean $delimiter If delimiter is false, split by letters.
      * @return array 
      */
-    public function toArray($delimiter = false) {
+    public function toArray($delimiter = false)
+    {
         return $this->split($delimiter);
     }
 
@@ -452,7 +490,8 @@ class StringHelper extends AbstractType {
      *
      * @return \Sped\Types\StringHelper
      */
-    public function reverse() {
+    public function reverse()
+    {
         return $this->setValue(strrev($this->getValue()));
     }
 
@@ -461,7 +500,8 @@ class StringHelper extends AbstractType {
      * @param mixed $var
      * @return \Sped\Types\StringHelper 
      */
-    public static function isNumeric($var) {
+    public static function isNumeric($var)
+    {
         if ($var instanceof StringHelper)
             $var = $var->getValue();
         return is_numeric($var);
@@ -472,7 +512,8 @@ class StringHelper extends AbstractType {
      * @param mixed $var
      * @return \Sped\Types\StringHelper 
      */
-    public static function isInteger($var) {
+    public static function isInteger($var)
+    {
         if ($var instanceof StringHelper)
             $var = $var->getValue();
         return is_int($var);
@@ -483,13 +524,15 @@ class StringHelper extends AbstractType {
      * @param mixed $var
      * @return \Sped\Types\StringHelper 
      */
-    public static function isFloat($var) {
+    public static function isFloat($var)
+    {
         if ($var instanceof StringHelper)
             $var = $var->getValue();
         return is_float($var);
     }
 
-    public static function splitCamel($string) {
+    public static function splitCamel($string)
+    {
         return preg_split('/(?<=\\w)(?=[A-Z])/', $string);
     }
 

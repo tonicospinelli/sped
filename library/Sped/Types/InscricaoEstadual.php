@@ -35,25 +35,31 @@ namespace Sped\Types;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class InscricaoEstadual extends AbstractType implements InterfaceDocument {
+class InscricaoEstadual extends AbstractType implements InterfaceDocument
+{
 
-    public function getBaseNumber() {
+    public function getBaseNumber()
+    {
         
     }
 
-    public function getDv() {
+    public function getDv()
+    {
         
     }
 
-    public function getDvPosition($index) {
+    public function getDvPosition($index)
+    {
         
     }
 
-    public function getDvPositions() {
+    public function getDvPositions()
+    {
         
     }
 
-    public function getUnMasked() {
+    public function getUnMasked()
+    {
         
     }
 

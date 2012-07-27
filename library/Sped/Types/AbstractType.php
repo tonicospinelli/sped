@@ -35,11 +35,13 @@ namespace Sped\Types;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-abstract class AbstractType {
+abstract class AbstractType
+{
 
     protected $value = null;
 
-    public function __construct($value = null) {
+    public function __construct($value = null)
+    {
         if (!is_null($value))
             $this->setValue($value);
     }
@@ -48,7 +50,8 @@ abstract class AbstractType {
      * Retorna o valor
      * @return mixed
      */
-    public function getValue() {
+    public function getValue()
+    {
         return $this->value;
     }
 
@@ -58,7 +61,8 @@ abstract class AbstractType {
      * @param mixed $value
      * @return \Sped\Types\AbstractType
      */
-    public function setValue($value) {
+    public function setValue($value)
+    {
         $this->value = $value;
         return $this;
     }

@@ -35,7 +35,8 @@ namespace Sped\Types;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-interface InterfaceDocument {
+interface InterfaceDocument
+{
 
     public function setValue($value);
 
