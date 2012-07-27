@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TTime
  * @package Sped
  */
-class TTime extends \Sped\Components\Xml\Element  {
+class TTime extends \Sped\Components\Xml\Element 
+{
 
 }

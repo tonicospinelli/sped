@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF;
  * @name NCOO
  * @package Sped
  */
-class NCOO extends \Sped\Components\Xml\Element  {
+class NCOO extends \Sped\Components\Xml\Element 
+{
 
 }

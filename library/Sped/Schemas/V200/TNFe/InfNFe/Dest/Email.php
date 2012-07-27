@@ -11,6 +11,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Dest;
  * @name Email
  * @package Sped
  */
-class Email extends \Sped\Components\Xml\Element  {
+class Email extends \Sped\Components\Xml\Element 
+{
 
 }

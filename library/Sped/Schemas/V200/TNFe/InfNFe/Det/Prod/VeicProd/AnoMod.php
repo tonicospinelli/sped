@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name AnoMod
  * @package Sped
  */
-class AnoMod extends \Sped\Components\Xml\Element  {
+class AnoMod extends \Sped\Components\Xml\Element 
+{
 
 }

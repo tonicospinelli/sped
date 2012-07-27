@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI;
  * @name CSelo
  * @package Sped
  */
-class CSelo extends \Sped\Components\Xml\Element  {
+class CSelo extends \Sped\Components\Xml\Element 
+{
 
 }

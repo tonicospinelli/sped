@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name CEANTrib
  * @package Sped
  */
-class CEANTrib extends \Sped\Components\Xml\Element  {
+class CEANTrib extends \Sped\Components\Xml\Element 
+{
 
 }

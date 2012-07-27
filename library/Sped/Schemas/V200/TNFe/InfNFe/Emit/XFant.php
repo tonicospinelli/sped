@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Emit;
  * @name XFant
  * @package Sped
  */
-class XFant extends \Sped\Components\Xml\Element  {
+class XFant extends \Sped\Components\Xml\Element 
+{
 
 }

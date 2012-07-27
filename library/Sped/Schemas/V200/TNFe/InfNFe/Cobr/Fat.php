@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cobr;
  * @name Fat
  * @package Sped
  */
-class Fat extends \Sped\Components\Xml\Element  {
+class Fat extends \Sped\Components\Xml\Element 
+{
 
     const NFAT = 'nFat';
 
@@ -25,7 +26,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      */
-    public function getNFat($index){
+    public function getNFat($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat');
         return $this->getElementsByTagName(self::NFAT)->item($index);
     }
@@ -35,7 +37,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      */
-    public function addNFat($value = NULL){
+    public function addNFat($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat(self::NFAT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -44,7 +47,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat $paramNFat 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
-    public function setNFat(\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat $paramNFat){
+    public function setNFat(\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat $paramNFat)
+    {
         $this->removeElementsByTagName(self::NFAT);
         $this->appendChild($paramNFat, false);
         return $this;
@@ -55,7 +59,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVOrig($index){
+    public function getVOrig($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VORIG)->item($index);
     }
@@ -65,7 +70,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function addVOrig($value = NULL){
+    public function addVOrig($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VORIG, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -74,7 +80,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
-    public function setVOrig(\Sped\Schemas\V200\TDec_1302Opc $paramVOrig){
+    public function setVOrig(\Sped\Schemas\V200\TDec_1302Opc $paramVOrig)
+    {
         $this->removeElementsByTagName(self::VORIG);
         $this->appendChild($paramVOrig, false);
         return $this;
@@ -85,7 +92,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVDesc($index){
+    public function getVDesc($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VDESC)->item($index);
     }
@@ -95,7 +103,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function addVDesc($value = NULL){
+    public function addVDesc($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -104,7 +113,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVDesc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
-    public function setVDesc(\Sped\Schemas\V200\TDec_1302Opc $paramVDesc){
+    public function setVDesc(\Sped\Schemas\V200\TDec_1302Opc $paramVDesc)
+    {
         $this->removeElementsByTagName(self::VDESC);
         $this->appendChild($paramVDesc, false);
         return $this;
@@ -115,7 +125,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVLiq($index){
+    public function getVLiq($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
         return $this->getElementsByTagName(self::VLIQ)->item($index);
     }
@@ -125,7 +136,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function addVLiq($value = NULL){
+    public function addVLiq($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VLIQ, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -134,7 +146,8 @@ class Fat extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVLiq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
-    public function setVLiq(\Sped\Schemas\V200\TDec_1302Opc $paramVLiq){
+    public function setVLiq(\Sped\Schemas\V200\TDec_1302Opc $paramVLiq)
+    {
         $this->removeElementsByTagName(self::VLIQ);
         $this->appendChild($paramVLiq, false);
         return $this;

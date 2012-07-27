@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name CondVeic
  * @package Sped
  */
-class CondVeic extends \Sped\Components\Xml\Element  {
+class CondVeic extends \Sped\Components\Xml\Element 
+{
 
 }

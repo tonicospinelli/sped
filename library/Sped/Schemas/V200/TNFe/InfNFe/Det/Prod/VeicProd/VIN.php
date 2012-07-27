@@ -12,6 +12,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name VIN
  * @package Sped
  */
-class VIN extends \Sped\Components\Xml\Element  {
+class VIN extends \Sped\Components\Xml\Element 
+{
 
 }

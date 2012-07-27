@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp;
  * @name Balsa
  * @package Sped
  */
-class Balsa extends \Sped\Components\Xml\Element  {
+class Balsa extends \Sped\Components\Xml\Element 
+{
 
 }

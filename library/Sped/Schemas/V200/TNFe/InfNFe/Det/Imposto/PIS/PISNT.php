@@ -15,7 +15,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS;
  * @name PISNT
  * @package Sped
  */
-class PISNT extends \Sped\Components\Xml\Element  {
+class PISNT extends \Sped\Components\Xml\Element 
+{
 
     const CST = 'CST';
 
@@ -23,7 +24,8 @@ class PISNT extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST 
      */
-    public function getCST(){
+    public function getCST()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST');
         return $this->getElementsByTagName(self::CST)->item(0);
     }
@@ -33,7 +35,8 @@ class PISNT extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST 
      */
-    public function addCST($value = NULL){
+    public function addCST($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST(self::CST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -42,7 +45,8 @@ class PISNT extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT 
      */
-    public function setCST(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST $paramCST){
+    public function setCST(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST $paramCST)
+    {
         $this->removeElementsByTagName(self::CST);
         $this->appendChild($paramCST, false);
         return $this;

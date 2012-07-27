@@ -16,6 +16,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name TpRest
  * @package Sped
  */
-class TpRest extends \Sped\Components\Xml\Element  {
+class TpRest extends \Sped\Components\Xml\Element 
+{
 
 }

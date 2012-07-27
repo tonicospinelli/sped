@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI;
  * @name ClEnq
  * @package Sped
  */
-class ClEnq extends \Sped\Components\Xml\Element  {
+class ClEnq extends \Sped\Components\Xml\Element 
+{
 
 }

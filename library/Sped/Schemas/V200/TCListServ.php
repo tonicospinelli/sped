@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TCListServ
  * @package Sped
  */
-class TCListServ extends \Sped\Components\Xml\Element  {
+class TCListServ extends \Sped\Components\Xml\Element 
+{
 
 }

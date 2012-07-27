@@ -12,6 +12,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq;
  * @name CST
  * @package Sped
  */
-class CST extends \Sped\Components\Xml\Element  {
+class CST extends \Sped\Components\Xml\Element 
+{
 
 }

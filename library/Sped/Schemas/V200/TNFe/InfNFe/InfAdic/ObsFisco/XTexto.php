@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco;
  * @name XTexto
  * @package Sped
  */
-class XTexto extends \Sped\Components\Xml\Element  {
+class XTexto extends \Sped\Components\Xml\Element 
+{
 
 }

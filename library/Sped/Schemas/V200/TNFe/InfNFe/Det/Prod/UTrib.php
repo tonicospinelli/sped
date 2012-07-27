@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name UTrib
  * @package Sped
  */
-class UTrib extends \Sped\Components\Xml\Element  {
+class UTrib extends \Sped\Components\Xml\Element 
+{
 
 }

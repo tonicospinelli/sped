@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200;
  * @name TConsReciNFe
  * @package Sped
  */
-class TConsReciNFe extends \Sped\Components\Xml\Element  {
+class TConsReciNFe extends \Sped\Components\Xml\Element 
+{
 
     const TPAMB = 'tpAmb';
 
@@ -20,7 +21,8 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TAmb 
      */
-    public function getTpAmb(){
+    public function getTpAmb()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TAmb');
         return $this->getElementsByTagName(self::TPAMB)->item(0);
     }
@@ -30,7 +32,8 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
-    public function addTpAmb($value = NULL){
+    public function addTpAmb($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -39,7 +42,8 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TAmb $paramTpAmb 
      * @return \Sped\Schemas\V200\TConsReciNFe 
      */
-    public function setTpAmb(\Sped\Schemas\V200\TAmb $paramTpAmb){
+    public function setTpAmb(\Sped\Schemas\V200\TAmb $paramTpAmb)
+    {
         $this->removeElementsByTagName(self::TPAMB);
         $this->appendChild($paramTpAmb, false);
         return $this;
@@ -49,7 +53,8 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TRec 
      */
-    public function getNRec(){
+    public function getNRec()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TRec');
         return $this->getElementsByTagName(self::NREC)->item(0);
     }
@@ -59,7 +64,8 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TRec 
      */
-    public function addNRec($value = NULL){
+    public function addNRec($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -68,7 +74,8 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TRec $paramNRec 
      * @return \Sped\Schemas\V200\TConsReciNFe 
      */
-    public function setNRec(\Sped\Schemas\V200\TRec $paramNRec){
+    public function setNRec(\Sped\Schemas\V200\TRec $paramNRec)
+    {
         $this->removeElementsByTagName(self::NREC);
         $this->appendChild($paramNRec, false);
         return $this;
@@ -78,15 +85,16 @@ class TConsReciNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return string 
      */
-    public function getVersao(){
+    public function getVersao()
+    {
         return $this->getAttribute('versao');
     }
 
     /**
      * 
-     * @param type $value 
      */
-    public function setVersao($value){
+    public function setVersao()
+    {
         $this->setAttribute('versao', $value);
         return $this;
     }

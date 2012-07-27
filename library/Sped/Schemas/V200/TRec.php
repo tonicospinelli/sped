@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TRec
  * @package Sped
  */
-class TRec extends \Sped\Components\Xml\Element  {
+class TRec extends \Sped\Components\Xml\Element 
+{
 
 }

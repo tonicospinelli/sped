@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name Med
  * @package Sped
  */
-class Med extends \Sped\Components\Xml\Element  {
+class Med extends \Sped\Components\Xml\Element 
+{
 
     const NLOTE = 'nLote';
 
@@ -26,7 +27,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote 
      */
-    public function getNLote(){
+    public function getNLote()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote');
         return $this->getElementsByTagName(self::NLOTE)->item(0);
     }
@@ -36,7 +38,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote 
      */
-    public function addNLote($value = NULL){
+    public function addNLote($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote(self::NLOTE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -45,7 +48,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote $paramNLote 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
-    public function setNLote(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote $paramNLote){
+    public function setNLote(\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote $paramNLote)
+    {
         $this->removeElementsByTagName(self::NLOTE);
         $this->appendChild($paramNLote, false);
         return $this;
@@ -55,7 +59,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_0803 
      */
-    public function getQLote(){
+    public function getQLote()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0803');
         return $this->getElementsByTagName(self::QLOTE)->item(0);
     }
@@ -65,7 +70,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0803 
      */
-    public function addQLote($value = NULL){
+    public function addQLote($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_0803(self::QLOTE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -74,7 +80,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_0803 $paramQLote 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
-    public function setQLote(\Sped\Schemas\V200\TDec_0803 $paramQLote){
+    public function setQLote(\Sped\Schemas\V200\TDec_0803 $paramQLote)
+    {
         $this->removeElementsByTagName(self::QLOTE);
         $this->appendChild($paramQLote, false);
         return $this;
@@ -84,7 +91,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TData 
      */
-    public function getDFab(){
+    public function getDFab()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
         return $this->getElementsByTagName(self::DFAB)->item(0);
     }
@@ -94,7 +102,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TData 
      */
-    public function addDFab($value = NULL){
+    public function addDFab($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TData(self::DFAB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -103,7 +112,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TData $paramDFab 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
-    public function setDFab(\Sped\Schemas\V200\TData $paramDFab){
+    public function setDFab(\Sped\Schemas\V200\TData $paramDFab)
+    {
         $this->removeElementsByTagName(self::DFAB);
         $this->appendChild($paramDFab, false);
         return $this;
@@ -113,7 +123,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TData 
      */
-    public function getDVal(){
+    public function getDVal()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
         return $this->getElementsByTagName(self::DVAL)->item(0);
     }
@@ -123,7 +134,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TData 
      */
-    public function addDVal($value = NULL){
+    public function addDVal($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVAL, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -132,7 +144,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TData $paramDVal 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
-    public function setDVal(\Sped\Schemas\V200\TData $paramDVal){
+    public function setDVal(\Sped\Schemas\V200\TData $paramDVal)
+    {
         $this->removeElementsByTagName(self::DVAL);
         $this->appendChild($paramDVal, false);
         return $this;
@@ -142,7 +155,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVPMC(){
+    public function getVPMC()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VPMC)->item(0);
     }
@@ -152,7 +166,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVPMC($value = NULL){
+    public function addVPMC($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPMC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -161,7 +176,8 @@ class Med extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVPMC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
-    public function setVPMC(\Sped\Schemas\V200\TDec_1302 $paramVPMC){
+    public function setVPMC(\Sped\Schemas\V200\TDec_1302 $paramVPMC)
+    {
         $this->removeElementsByTagName(self::VPMC);
         $this->appendChild($paramVPMC, false);
         return $this;

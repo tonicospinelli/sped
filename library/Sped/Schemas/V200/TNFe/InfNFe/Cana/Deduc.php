@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cana;
  * @name Deduc
  * @package Sped
  */
-class Deduc extends \Sped\Components\Xml\Element  {
+class Deduc extends \Sped\Components\Xml\Element 
+{
 
     const XDED = 'xDed';
 
@@ -20,7 +21,8 @@ class Deduc extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed 
      */
-    public function getXDed(){
+    public function getXDed()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed');
         return $this->getElementsByTagName(self::XDED)->item(0);
     }
@@ -30,7 +32,8 @@ class Deduc extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed 
      */
-    public function addXDed($value = NULL){
+    public function addXDed($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed(self::XDED, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -39,7 +42,8 @@ class Deduc extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed $paramXDed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
-    public function setXDed(\Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed $paramXDed){
+    public function setXDed(\Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed $paramXDed)
+    {
         $this->removeElementsByTagName(self::XDED);
         $this->appendChild($paramXDed, false);
         return $this;
@@ -49,7 +53,8 @@ class Deduc extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVDed(){
+    public function getVDed()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VDED)->item(0);
     }
@@ -59,7 +64,8 @@ class Deduc extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVDed($value = NULL){
+    public function addVDed($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDED, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -68,7 +74,8 @@ class Deduc extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVDed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
-    public function setVDed(\Sped\Schemas\V200\TDec_1302 $paramVDed){
+    public function setVDed(\Sped\Schemas\V200\TDec_1302 $paramVDed)
+    {
         $this->removeElementsByTagName(self::VDED);
         $this->appendChild($paramVDed, false);
         return $this;

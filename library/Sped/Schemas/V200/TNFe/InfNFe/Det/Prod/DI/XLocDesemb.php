@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI;
  * @name XLocDesemb
  * @package Sped
  */
-class XLocDesemb extends \Sped\Components\Xml\Element  {
+class XLocDesemb extends \Sped\Components\Xml\Element 
+{
 
 }

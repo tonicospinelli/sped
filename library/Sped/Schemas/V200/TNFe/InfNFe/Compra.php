@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
  * @name Compra
  * @package Sped
  */
-class Compra extends \Sped\Components\Xml\Element  {
+class Compra extends \Sped\Components\Xml\Element 
+{
 
     const XNEMP = 'xNEmp';
 
@@ -23,7 +24,8 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      */
-    public function getXNEmp($index){
+    public function getXNEmp($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp');
         return $this->getElementsByTagName(self::XNEMP)->item($index);
     }
@@ -33,7 +35,8 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      */
-    public function addXNEmp($value = NULL){
+    public function addXNEmp($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp(self::XNEMP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -42,7 +45,8 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp $paramXNEmp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      */
-    public function setXNEmp(\Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp $paramXNEmp){
+    public function setXNEmp(\Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp $paramXNEmp)
+    {
         $this->removeElementsByTagName(self::XNEMP);
         $this->appendChild($paramXNEmp, false);
         return $this;
@@ -53,7 +57,8 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      */
-    public function getXPed($index){
+    public function getXPed($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed');
         return $this->getElementsByTagName(self::XPED)->item($index);
     }
@@ -63,7 +68,8 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      */
-    public function addXPed($value = NULL){
+    public function addXPed($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed(self::XPED, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -72,7 +78,8 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed $paramXPed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      */
-    public function setXPed(\Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed $paramXPed){
+    public function setXPed(\Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed $paramXPed)
+    {
         $this->removeElementsByTagName(self::XPED);
         $this->appendChild($paramXPed, false);
         return $this;
@@ -83,7 +90,8 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      */
-    public function getXCont($index){
+    public function getXCont($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont');
         return $this->getElementsByTagName(self::XCONT)->item($index);
     }
@@ -93,7 +101,8 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      */
-    public function addXCont($value = NULL){
+    public function addXCont($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont(self::XCONT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -102,7 +111,8 @@ class Compra extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont $paramXCont 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      */
-    public function setXCont(\Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont $paramXCont){
+    public function setXCont(\Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont $paramXCont)
+    {
         $this->removeElementsByTagName(self::XCONT);
         $this->appendChild($paramXCont, false);
         return $this;

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TDec_1302
  * @package Sped
  */
-class TDec_1302 extends \Sped\Components\Xml\Element  {
+class TDec_1302 extends \Sped\Components\Xml\Element 
+{
 
 }

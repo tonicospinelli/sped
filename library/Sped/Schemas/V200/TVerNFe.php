@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TVerNFe
  * @package Sped
  */
-class TVerNFe extends \Sped\Components\Xml\Element  {
+class TVerNFe extends \Sped\Components\Xml\Element 
+{
 
 }

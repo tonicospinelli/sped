@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name Lota
  * @package Sped
  */
-class Lota extends \Sped\Components\Xml\Element  {
+class Lota extends \Sped\Components\Xml\Element 
+{
 
 }

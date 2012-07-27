@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI;
  * @name CExportador
  * @package Sped
  */
-class CExportador extends \Sped\Components\Xml\Element  {
+class CExportador extends \Sped\Components\Xml\Element 
+{
 
 }

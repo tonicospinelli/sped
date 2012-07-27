@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TCnpjOpc
  * @package Sped
  */
-class TCnpjOpc extends \Sped\Components\Xml\Element  {
+class TCnpjOpc extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name CMod
  * @package Sped
  */
-class CMod extends \Sped\Components\Xml\Element  {
+class CMod extends \Sped\Components\Xml\Element 
+{
 
 }

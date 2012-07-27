@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cana;
  * @name Safra
  * @package Sped
  */
-class Safra extends \Sped\Components\Xml\Element  {
+class Safra extends \Sped\Components\Xml\Element 
+{
 
 }

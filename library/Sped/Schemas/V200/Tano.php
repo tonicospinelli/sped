@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name Tano
  * @package Sped
  */
-class Tano extends \Sped\Components\Xml\Element  {
+class Tano extends \Sped\Components\Xml\Element 
+{
 
 }

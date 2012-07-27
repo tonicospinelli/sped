@@ -11,7 +11,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS;
  * @name PISOutr
  * @package Sped
  */
-class PISOutr extends \Sped\Components\Xml\Element  {
+class PISOutr extends \Sped\Components\Xml\Element 
+{
 
     const CST = 'CST';
 
@@ -29,7 +30,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST 
      */
-    public function getCST(){
+    public function getCST()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST');
         return $this->getElementsByTagName(self::CST)->item(0);
     }
@@ -39,7 +41,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST 
      */
-    public function addCST($value = NULL){
+    public function addCST($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST(self::CST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -48,7 +51,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
-    public function setCST(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST $paramCST){
+    public function setCST(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST $paramCST)
+    {
         $this->removeElementsByTagName(self::CST);
         $this->appendChild($paramCST, false);
         return $this;
@@ -58,7 +62,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVBC(){
+    public function getVBC()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VBC)->item(0);
     }
@@ -68,7 +73,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVBC($value = NULL){
+    public function addVBC($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -77,7 +83,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
-    public function setVBC(\Sped\Schemas\V200\TDec_1302 $paramVBC){
+    public function setVBC(\Sped\Schemas\V200\TDec_1302 $paramVBC)
+    {
         $this->removeElementsByTagName(self::VBC);
         $this->appendChild($paramVBC, false);
         return $this;
@@ -87,7 +94,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
-    public function getPPIS(){
+    public function getPPIS()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
         return $this->getElementsByTagName(self::PPIS)->item(0);
     }
@@ -97,7 +105,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
-    public function addPPIS($value = NULL){
+    public function addPPIS($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PPIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -106,7 +115,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_0302 $paramPPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
-    public function setPPIS(\Sped\Schemas\V200\TDec_0302 $paramPPIS){
+    public function setPPIS(\Sped\Schemas\V200\TDec_0302 $paramPPIS)
+    {
         $this->removeElementsByTagName(self::PPIS);
         $this->appendChild($paramPPIS, false);
         return $this;
@@ -116,7 +126,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
-    public function getQBCProd(){
+    public function getQBCProd()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1204');
         return $this->getElementsByTagName(self::QBCPROD)->item(0);
     }
@@ -126,7 +137,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
-    public function addQBCProd($value = NULL){
+    public function addQBCProd($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -135,7 +147,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1204 $paramQBCProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
-    public function setQBCProd(\Sped\Schemas\V200\TDec_1204 $paramQBCProd){
+    public function setQBCProd(\Sped\Schemas\V200\TDec_1204 $paramQBCProd)
+    {
         $this->removeElementsByTagName(self::QBCPROD);
         $this->appendChild($paramQBCProd, false);
         return $this;
@@ -145,7 +158,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
-    public function getVAliqProd(){
+    public function getVAliqProd()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1104v');
         return $this->getElementsByTagName(self::VALIQPROD)->item(0);
     }
@@ -155,7 +169,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
-    public function addVAliqProd($value = NULL){
+    public function addVAliqProd($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1104v(self::VALIQPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -164,7 +179,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1104v $paramVAliqProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
-    public function setVAliqProd(\Sped\Schemas\V200\TDec_1104v $paramVAliqProd){
+    public function setVAliqProd(\Sped\Schemas\V200\TDec_1104v $paramVAliqProd)
+    {
         $this->removeElementsByTagName(self::VALIQPROD);
         $this->appendChild($paramVAliqProd, false);
         return $this;
@@ -174,7 +190,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVPIS(){
+    public function getVPIS()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VPIS)->item(0);
     }
@@ -184,7 +201,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVPIS($value = NULL){
+    public function addVPIS($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -193,7 +211,8 @@ class PISOutr extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
-    public function setVPIS(\Sped\Schemas\V200\TDec_1302 $paramVPIS){
+    public function setVPIS(\Sped\Schemas\V200\TDec_1302 $paramVPIS)
+    {
         $this->removeElementsByTagName(self::VPIS);
         $this->appendChild($paramVPIS, false);
         return $this;

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup;
  * @name NDup
  * @package Sped
  */
-class NDup extends \Sped\Components\Xml\Element  {
+class NDup extends \Sped\Components\Xml\Element 
+{
 
 }

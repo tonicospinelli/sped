@@ -14,6 +14,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51;
  * @name ModBC
  * @package Sped
  */
-class ModBC extends \Sped\Components\Xml\Element  {
+class ModBC extends \Sped\Components\Xml\Element 
+{
 
 }

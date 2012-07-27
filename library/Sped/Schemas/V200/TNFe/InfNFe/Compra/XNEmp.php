@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Compra;
  * @name XNEmp
  * @package Sped
  */
-class XNEmp extends \Sped\Components\Xml\Element  {
+class XNEmp extends \Sped\Components\Xml\Element 
+{
 
 }

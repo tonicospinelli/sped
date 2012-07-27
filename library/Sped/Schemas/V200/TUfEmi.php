@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TUfEmi
  * @package Sped
  */
-class TUfEmi extends \Sped\Components\Xml\Element  {
+class TUfEmi extends \Sped\Components\Xml\Element 
+{
 
 }

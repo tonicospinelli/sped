@@ -10,21 +10,23 @@ namespace Sped\Schemas\V200\SignedInfoType;
  * @name SignatureMethod
  * @package Sped
  */
-class SignatureMethod extends \Sped\Components\Xml\Element  {
+class SignatureMethod extends \Sped\Components\Xml\Element 
+{
 
     /**
      * 
      * @return string 
      */
-    public function getAlgorithm(){
+    public function getAlgorithm()
+    {
         return $this->getAttribute('Algorithm');
     }
 
     /**
      * 
-     * @param type $value 
      */
-    public function setAlgorithm($value){
+    public function setAlgorithm()
+    {
         $this->setAttribute('Algorithm', $value);
         return $this;
     }

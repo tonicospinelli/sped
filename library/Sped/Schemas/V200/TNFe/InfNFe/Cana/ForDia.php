@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cana;
  * @name ForDia
  * @package Sped
  */
-class ForDia extends \Sped\Components\Xml\Element  {
+class ForDia extends \Sped\Components\Xml\Element 
+{
 
     const QTDE = 'qtde';
 
@@ -18,7 +19,8 @@ class ForDia extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
-    public function getQtde(){
+    public function getQtde()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1110');
         return $this->getElementsByTagName(self::QTDE)->item(0);
     }
@@ -28,7 +30,8 @@ class ForDia extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
-    public function addQtde($value = NULL){
+    public function addQtde($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTDE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -37,7 +40,8 @@ class ForDia extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1110 $paramQtde 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia 
      */
-    public function setQtde(\Sped\Schemas\V200\TDec_1110 $paramQtde){
+    public function setQtde(\Sped\Schemas\V200\TDec_1110 $paramQtde)
+    {
         $this->removeElementsByTagName(self::QTDE);
         $this->appendChild($paramQtde, false);
         return $this;
@@ -47,15 +51,16 @@ class ForDia extends \Sped\Components\Xml\Element  {
      * 
      * @return string 
      */
-    public function getDia(){
+    public function getDia()
+    {
         return $this->getAttribute('dia');
     }
 
     /**
      * 
-     * @param type $value 
      */
-    public function setDia($value){
+    public function setDia()
+    {
         $this->setAttribute('dia', $value);
         return $this;
     }

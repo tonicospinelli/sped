@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI;
  * @name CEnq
  * @package Sped
  */
-class CEnq extends \Sped\Components\Xml\Element  {
+class CEnq extends \Sped\Components\Xml\Element 
+{
 
 }

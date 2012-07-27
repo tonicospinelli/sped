@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Compra;
  * @name XCont
  * @package Sped
  */
-class XCont extends \Sped\Components\Xml\Element  {
+class XCont extends \Sped\Components\Xml\Element 
+{
 
 }

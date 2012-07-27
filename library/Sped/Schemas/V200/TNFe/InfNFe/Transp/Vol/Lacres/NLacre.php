@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres;
  * @name NLacre
  * @package Sped
  */
-class NLacre extends \Sped\Components\Xml\Element  {
+class NLacre extends \Sped\Components\Xml\Element 
+{
 
 }

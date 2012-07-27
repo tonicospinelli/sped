@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp;
  * @name Vagao
  * @package Sped
  */
-class Vagao extends \Sped\Components\Xml\Element  {
+class Vagao extends \Sped\Components\Xml\Element 
+{
 
 }

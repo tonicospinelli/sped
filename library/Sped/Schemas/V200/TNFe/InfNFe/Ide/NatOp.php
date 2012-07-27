@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @name NatOp
  * @package Sped
  */
-class NatOp extends \Sped\Components\Xml\Element  {
+class NatOp extends \Sped\Components\Xml\Element 
+{
 
 }

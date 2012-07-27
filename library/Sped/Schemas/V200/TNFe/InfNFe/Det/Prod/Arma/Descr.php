@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma;
  * @name Descr
  * @package Sped
  */
-class Descr extends \Sped\Components\Xml\Element  {
+class Descr extends \Sped\Components\Xml\Element 
+{
 
 }

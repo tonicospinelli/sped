@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TCpfVar
  * @package Sped
  */
-class TCpfVar extends \Sped\Components\Xml\Element  {
+class TCpfVar extends \Sped\Components\Xml\Element 
+{
 
 }

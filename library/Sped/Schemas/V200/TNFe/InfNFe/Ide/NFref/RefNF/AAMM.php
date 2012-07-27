@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF;
  * @name AAMM
  * @package Sped
  */
-class AAMM extends \Sped\Components\Xml\Element  {
+class AAMM extends \Sped\Components\Xml\Element 
+{
 
 }

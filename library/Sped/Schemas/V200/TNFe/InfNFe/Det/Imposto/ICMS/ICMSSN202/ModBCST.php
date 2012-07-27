@@ -16,6 +16,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202;
  * @name ModBCST
  * @package Sped
  */
-class ModBCST extends \Sped\Components\Xml\Element  {
+class ModBCST extends \Sped\Components\Xml\Element 
+{
 
 }

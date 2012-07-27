@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta;
  * @name XEnder
  * @package Sped
  */
-class XEnder extends \Sped\Components\Xml\Element  {
+class XEnder extends \Sped\Components\Xml\Element 
+{
 
 }

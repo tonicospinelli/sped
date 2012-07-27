@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TString
  * @package Sped
  */
-class TString extends \Sped\Components\Xml\Element  {
+class TString extends \Sped\Components\Xml\Element 
+{
 
 }

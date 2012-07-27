@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Avulsa;
  * @name NDAR
  * @package Sped
  */
-class NDAR extends \Sped\Components\Xml\Element  {
+class NDAR extends \Sped\Components\Xml\Element 
+{
 
 }

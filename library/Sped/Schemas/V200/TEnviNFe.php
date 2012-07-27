@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200;
  * @name TEnviNFe
  * @package Sped
  */
-class TEnviNFe extends \Sped\Components\Xml\Element  {
+class TEnviNFe extends \Sped\Components\Xml\Element 
+{
 
     const IDLOTE = 'idLote';
 
@@ -20,7 +21,8 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TIdLote 
      */
-    public function getIdLote(){
+    public function getIdLote()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIdLote');
         return $this->getElementsByTagName(self::IDLOTE)->item(0);
     }
@@ -30,7 +32,8 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TIdLote 
      */
-    public function addIdLote($value = NULL){
+    public function addIdLote($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TIdLote(self::IDLOTE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -39,7 +42,8 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TIdLote $paramIdLote 
      * @return \Sped\Schemas\V200\TEnviNFe 
      */
-    public function setIdLote(\Sped\Schemas\V200\TIdLote $paramIdLote){
+    public function setIdLote(\Sped\Schemas\V200\TIdLote $paramIdLote)
+    {
         $this->removeElementsByTagName(self::IDLOTE);
         $this->appendChild($paramIdLote, false);
         return $this;
@@ -49,7 +53,8 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe 
      */
-    public function getNFe(){
+    public function getNFe()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
         return $this->getElementsByTagName(self::NFE)->item(0);
     }
@@ -59,7 +64,8 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe 
      */
-    public function addNFe($value = NULL){
+    public function addNFe($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -68,7 +74,8 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe $paramNFe 
      * @return \Sped\Schemas\V200\TEnviNFe 
      */
-    public function setNFe(\Sped\Schemas\V200\TNFe $paramNFe){
+    public function setNFe(\Sped\Schemas\V200\TNFe $paramNFe)
+    {
         $this->removeElementsByTagName(self::NFE);
         $this->appendChild($paramNFe, false);
         return $this;
@@ -78,15 +85,16 @@ class TEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return string 
      */
-    public function getVersao(){
+    public function getVersao()
+    {
         return $this->getAttribute('versao');
     }
 
     /**
      * 
-     * @param type $value 
      */
-    public function setVersao($value){
+    public function setVersao()
+    {
         $this->setAttribute('versao', $value);
         return $this;
     }

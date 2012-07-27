@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TVeiculo;
  * @name RNTC
  * @package Sped
  */
-class RNTC extends \Sped\Components\Xml\Element  {
+class RNTC extends \Sped\Components\Xml\Element 
+{
 
 }

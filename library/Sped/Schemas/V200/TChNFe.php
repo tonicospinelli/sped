@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TChNFe
  * @package Sped
  */
-class TChNFe extends \Sped\Components\Xml\Element  {
+class TChNFe extends \Sped\Components\Xml\Element 
+{
 
 }

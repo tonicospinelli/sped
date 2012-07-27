@@ -14,6 +14,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp;
  * @name ModFrete
  * @package Sped
  */
-class ModFrete extends \Sped\Components\Xml\Element  {
+class ModFrete extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name Pot
  * @package Sped
  */
-class Pot extends \Sped\Components\Xml\Element  {
+class Pot extends \Sped\Components\Xml\Element 
+{
 
 }

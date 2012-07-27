@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma;
  * @name NSerie
  * @package Sped
  */
-class NSerie extends \Sped\Components\Xml\Element  {
+class NSerie extends \Sped\Components\Xml\Element 
+{
 
 }

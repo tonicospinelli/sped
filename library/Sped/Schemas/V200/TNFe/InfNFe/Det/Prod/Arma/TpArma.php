@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma;
  * @name TpArma
  * @package Sped
  */
-class TpArma extends \Sped\Components\Xml\Element  {
+class TpArma extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name EXTIPI
  * @package Sped
  */
-class EXTIPI extends \Sped\Components\Xml\Element  {
+class EXTIPI extends \Sped\Components\Xml\Element 
+{
 
 }

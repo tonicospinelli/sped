@@ -11,6 +11,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name CProd
  * @package Sped
  */
-class CProd extends \Sped\Components\Xml\Element  {
+class CProd extends \Sped\Components\Xml\Element 
+{
 
 }

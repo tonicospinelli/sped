@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta;
  * @name XMun
  * @package Sped
  */
-class XMun extends \Sped\Components\Xml\Element  {
+class XMun extends \Sped\Components\Xml\Element 
+{
 
 }

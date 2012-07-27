@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TCodMunIBGE
  * @package Sped
  */
-class TCodMunIBGE extends \Sped\Components\Xml\Element  {
+class TCodMunIBGE extends \Sped\Components\Xml\Element 
+{
 
 }

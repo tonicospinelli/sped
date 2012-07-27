@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TUf
  * @package Sped
  */
-class TUf extends \Sped\Components\Xml\Element  {
+class TUf extends \Sped\Components\Xml\Element 
+{
 
 }

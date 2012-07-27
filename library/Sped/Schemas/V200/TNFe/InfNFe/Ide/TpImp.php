@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @name TpImp
  * @package Sped
  */
-class TpImp extends \Sped\Components\Xml\Element  {
+class TpImp extends \Sped\Components\Xml\Element 
+{
 
 }

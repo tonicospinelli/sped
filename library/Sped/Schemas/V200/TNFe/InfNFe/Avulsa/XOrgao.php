@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Avulsa;
  * @name XOrgao
  * @package Sped
  */
-class XOrgao extends \Sped\Components\Xml\Element  {
+class XOrgao extends \Sped\Components\Xml\Element 
+{
 
 }

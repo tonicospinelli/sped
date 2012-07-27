@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc;
  * @name XDed
  * @package Sped
  */
-class XDed extends \Sped\Components\Xml\Element  {
+class XDed extends \Sped\Components\Xml\Element 
+{
 
 }

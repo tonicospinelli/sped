@@ -26,6 +26,7 @@ namespace Sped\Schemas\V200;
  * @name Tpais
  * @package Sped
  */
-class Tpais extends \Sped\Components\Xml\Element  {
+class Tpais extends \Sped\Components\Xml\Element 
+{
 
 }

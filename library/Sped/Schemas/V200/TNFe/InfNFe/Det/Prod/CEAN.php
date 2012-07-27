@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name CEAN
  * @package Sped
  */
-class CEAN extends \Sped\Components\Xml\Element  {
+class CEAN extends \Sped\Components\Xml\Element 
+{
 
 }

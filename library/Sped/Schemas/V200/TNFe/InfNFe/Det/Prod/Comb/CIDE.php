@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb;
  * @name CIDE
  * @package Sped
  */
-class CIDE extends \Sped\Components\Xml\Element  {
+class CIDE extends \Sped\Components\Xml\Element 
+{
 
     const QBCPROD = 'qBCProd';
 
@@ -22,7 +23,8 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
-    public function getQBCProd(){
+    public function getQBCProd()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1204');
         return $this->getElementsByTagName(self::QBCPROD)->item(0);
     }
@@ -32,7 +34,8 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
-    public function addQBCProd($value = NULL){
+    public function addQBCProd($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1204(self::QBCPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -41,7 +44,8 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1204 $paramQBCProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
-    public function setQBCProd(\Sped\Schemas\V200\TDec_1204 $paramQBCProd){
+    public function setQBCProd(\Sped\Schemas\V200\TDec_1204 $paramQBCProd)
+    {
         $this->removeElementsByTagName(self::QBCPROD);
         $this->appendChild($paramQBCProd, false);
         return $this;
@@ -51,7 +55,8 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1104 
      */
-    public function getVAliqProd(){
+    public function getVAliqProd()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1104');
         return $this->getElementsByTagName(self::VALIQPROD)->item(0);
     }
@@ -61,7 +66,8 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1104 
      */
-    public function addVAliqProd($value = NULL){
+    public function addVAliqProd($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1104(self::VALIQPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -70,7 +76,8 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1104 $paramVAliqProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
-    public function setVAliqProd(\Sped\Schemas\V200\TDec_1104 $paramVAliqProd){
+    public function setVAliqProd(\Sped\Schemas\V200\TDec_1104 $paramVAliqProd)
+    {
         $this->removeElementsByTagName(self::VALIQPROD);
         $this->appendChild($paramVAliqProd, false);
         return $this;
@@ -80,7 +87,8 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVCIDE(){
+    public function getVCIDE()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VCIDE)->item(0);
     }
@@ -90,7 +98,8 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVCIDE($value = NULL){
+    public function addVCIDE($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCIDE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -99,7 +108,8 @@ class CIDE extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVCIDE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
-    public function setVCIDE(\Sped\Schemas\V200\TDec_1302 $paramVCIDE){
+    public function setVCIDE(\Sped\Schemas\V200\TDec_1302 $paramVCIDE)
+    {
         $this->removeElementsByTagName(self::VCIDE);
         $this->appendChild($paramVCIDE, false);
         return $this;

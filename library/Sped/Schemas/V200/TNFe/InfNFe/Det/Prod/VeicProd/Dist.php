@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name Dist
  * @package Sped
  */
-class Dist extends \Sped\Components\Xml\Element  {
+class Dist extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TAmb
  * @package Sped
  */
-class TAmb extends \Sped\Components\Xml\Element  {
+class TAmb extends \Sped\Components\Xml\Element 
+{
 
 }

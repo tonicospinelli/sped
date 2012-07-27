@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200;
  * @name TProtNFe
  * @package Sped
  */
-class TProtNFe extends \Sped\Components\Xml\Element  {
+class TProtNFe extends \Sped\Components\Xml\Element 
+{
 
     const INFPROT = 'infProt';
 
@@ -20,7 +21,8 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
-    public function getInfProt(){
+    public function getInfProt()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TProtNFe\InfProt');
         return $this->getElementsByTagName(self::INFPROT)->item(0);
     }
@@ -29,7 +31,8 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
-    public function addInfProt(){
+    public function addInfProt()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TProtNFe\InfProt(self::INFPROT, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -38,7 +41,8 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TProtNFe\InfProt $paramInfProt 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
-    public function setInfProt(\Sped\Schemas\V200\TProtNFe\InfProt $paramInfProt){
+    public function setInfProt(\Sped\Schemas\V200\TProtNFe\InfProt $paramInfProt)
+    {
         $this->removeElementsByTagName(self::INFPROT);
         $this->appendChild($paramInfProt, false);
         return $this;
@@ -49,7 +53,8 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\SignatureType 
      */
-    public function getSignature($index){
+    public function getSignature($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
         return $this->getElementsByTagName(self::SIGNATURE)->item($index);
     }
@@ -59,7 +64,8 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\SignatureType 
      */
-    public function addSignature($value = NULL){
+    public function addSignature($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value, 'http://www.w3.org/2000/09/xmldsig#'), false);
     }
 
@@ -68,7 +74,8 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\SignatureType $paramSignature 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
-    public function setSignature(\Sped\Schemas\V200\SignatureType $paramSignature){
+    public function setSignature(\Sped\Schemas\V200\SignatureType $paramSignature)
+    {
         $this->removeElementsByTagName(self::SIGNATURE);
         $this->appendChild($paramSignature, false);
         return $this;
@@ -78,15 +85,16 @@ class TProtNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return string 
      */
-    public function getVersao(){
+    public function getVersao()
+    {
         return $this->getAttribute('versao');
     }
 
     /**
      * 
-     * @param type $value 
      */
-    public function setVersao($value){
+    public function setVersao()
+    {
         $this->setAttribute('versao', $value);
         return $this;
     }

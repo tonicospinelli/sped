@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name DigestValueType
  * @package Sped
  */
-class DigestValueType extends \Sped\Components\Xml\Element  {
+class DigestValueType extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Dest;
  * @name ISUF
  * @package Sped
  */
-class ISUF extends \Sped\Components\Xml\Element  {
+class ISUF extends \Sped\Components\Xml\Element 
+{
 
 }

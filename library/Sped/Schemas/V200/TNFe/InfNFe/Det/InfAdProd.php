@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det;
  * @name InfAdProd
  * @package Sped
  */
-class InfAdProd extends \Sped\Components\Xml\Element  {
+class InfAdProd extends \Sped\Components\Xml\Element 
+{
 
 }

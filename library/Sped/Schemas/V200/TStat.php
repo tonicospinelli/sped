@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TStat
  * @package Sped
  */
-class TStat extends \Sped\Components\Xml\Element  {
+class TStat extends \Sped\Components\Xml\Element 
+{
 
 }

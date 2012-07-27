@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TNF
  * @package Sped
  */
-class TNF extends \Sped\Components\Xml\Element  {
+class TNF extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto;
  * @name COFINS
  * @package Sped
  */
-class COFINS extends \Sped\Components\Xml\Element  {
+class COFINS extends \Sped\Components\Xml\Element 
+{
 
     const COFINSALIQ = 'COFINSAliq';
 
@@ -24,7 +25,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
-    public function getCOFINSAliq(){
+    public function getCOFINSAliq()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq');
         return $this->getElementsByTagName(self::COFINSALIQ)->item(0);
     }
@@ -33,7 +35,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
-    public function addCOFINSAliq(){
+    public function addCOFINSAliq()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq(self::COFINSALIQ, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -42,7 +45,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq $paramCOFINSAliq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
-    public function setCOFINSAliq(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq $paramCOFINSAliq){
+    public function setCOFINSAliq(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq $paramCOFINSAliq)
+    {
         $this->removeElementsByTagName(self::COFINSALIQ);
         $this->appendChild($paramCOFINSAliq, false);
         return $this;
@@ -52,7 +56,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde 
      */
-    public function getCOFINSQtde(){
+    public function getCOFINSQtde()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde');
         return $this->getElementsByTagName(self::COFINSQTDE)->item(0);
     }
@@ -61,7 +66,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde 
      */
-    public function addCOFINSQtde(){
+    public function addCOFINSQtde()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde(self::COFINSQTDE, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -70,7 +76,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde $paramCOFINSQtde 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
-    public function setCOFINSQtde(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde $paramCOFINSQtde){
+    public function setCOFINSQtde(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde $paramCOFINSQtde)
+    {
         $this->removeElementsByTagName(self::COFINSQTDE);
         $this->appendChild($paramCOFINSQtde, false);
         return $this;
@@ -80,7 +87,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT 
      */
-    public function getCOFINSNT(){
+    public function getCOFINSNT()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT');
         return $this->getElementsByTagName(self::COFINSNT)->item(0);
     }
@@ -89,7 +97,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT 
      */
-    public function addCOFINSNT(){
+    public function addCOFINSNT()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT(self::COFINSNT, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -98,7 +107,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT $paramCOFINSNT 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
-    public function setCOFINSNT(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT $paramCOFINSNT){
+    public function setCOFINSNT(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT $paramCOFINSNT)
+    {
         $this->removeElementsByTagName(self::COFINSNT);
         $this->appendChild($paramCOFINSNT, false);
         return $this;
@@ -108,7 +118,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr 
      */
-    public function getCOFINSOutr(){
+    public function getCOFINSOutr()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr');
         return $this->getElementsByTagName(self::COFINSOUTR)->item(0);
     }
@@ -117,7 +128,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr 
      */
-    public function addCOFINSOutr(){
+    public function addCOFINSOutr()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr(self::COFINSOUTR, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -126,7 +138,8 @@ class COFINS extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr $paramCOFINSOutr 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
-    public function setCOFINSOutr(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr $paramCOFINSOutr){
+    public function setCOFINSOutr(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr $paramCOFINSOutr)
+    {
         $this->removeElementsByTagName(self::COFINSOUTR);
         $this->appendChild($paramCOFINSOutr, false);
         return $this;

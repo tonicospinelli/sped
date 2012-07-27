@@ -11,6 +11,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @name VerProc
  * @package Sped
  */
-class VerProc extends \Sped\Components\Xml\Element  {
+class VerProc extends \Sped\Components\Xml\Element 
+{
 
 }

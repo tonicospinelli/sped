@@ -11,6 +11,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF;
  * @name Mod
  * @package Sped
  */
-class Mod extends \Sped\Components\Xml\Element  {
+class Mod extends \Sped\Components\Xml\Element 
+{
 
 }

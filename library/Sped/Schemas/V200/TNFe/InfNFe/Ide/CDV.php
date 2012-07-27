@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @name CDV
  * @package Sped
  */
-class CDV extends \Sped\Components\Xml\Element  {
+class CDV extends \Sped\Components\Xml\Element 
+{
 
 }

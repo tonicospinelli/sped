@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Avulsa;
  * @name Matr
  * @package Sped
  */
-class Matr extends \Sped\Components\Xml\Element  {
+class Matr extends \Sped\Components\Xml\Element 
+{
 
 }

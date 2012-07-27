@@ -14,6 +14,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN;
  * @name CSitTrib
  * @package Sped
  */
-class CSitTrib extends \Sped\Components\Xml\Element  {
+class CSitTrib extends \Sped\Components\Xml\Element 
+{
 
 }

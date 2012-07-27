@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TVeiculo;
  * @name Placa
  * @package Sped
  */
-class Placa extends \Sped\Components\Xml\Element  {
+class Placa extends \Sped\Components\Xml\Element 
+{
 
 }

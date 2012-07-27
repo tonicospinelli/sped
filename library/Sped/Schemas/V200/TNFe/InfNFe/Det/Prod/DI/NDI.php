@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI;
  * @name NDI
  * @package Sped
  */
-class NDI extends \Sped\Components\Xml\Element  {
+class NDI extends \Sped\Components\Xml\Element 
+{
 
 }

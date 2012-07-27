@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat;
  * @name NFat
  * @package Sped
  */
-class NFat extends \Sped\Components\Xml\Element  {
+class NFat extends \Sped\Components\Xml\Element 
+{
 
 }

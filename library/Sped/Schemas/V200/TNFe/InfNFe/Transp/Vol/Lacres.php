@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol;
  * @name Lacres
  * @package Sped
  */
-class Lacres extends \Sped\Components\Xml\Element  {
+class Lacres extends \Sped\Components\Xml\Element 
+{
 
     const NLACRE = 'nLacre';
 
@@ -18,7 +19,8 @@ class Lacres extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre 
      */
-    public function getNLacre(){
+    public function getNLacre()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre');
         return $this->getElementsByTagName(self::NLACRE)->item(0);
     }
@@ -28,7 +30,8 @@ class Lacres extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre 
      */
-    public function addNLacre($value = NULL){
+    public function addNLacre($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre(self::NLACRE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -37,7 +40,8 @@ class Lacres extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre $paramNLacre 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres 
      */
-    public function setNLacre(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre $paramNLacre){
+    public function setNLacre(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre $paramNLacre)
+    {
         $this->removeElementsByTagName(self::NLACRE);
         $this->appendChild($paramNLacre, false);
         return $this;

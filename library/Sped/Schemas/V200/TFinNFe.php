@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TFinNFe
  * @package Sped
  */
-class TFinNFe extends \Sped\Components\Xml\Element  {
+class TFinNFe extends \Sped\Components\Xml\Element 
+{
 
 }

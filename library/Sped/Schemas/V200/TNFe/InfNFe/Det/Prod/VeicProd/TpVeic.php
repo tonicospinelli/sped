@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name TpVeic
  * @package Sped
  */
-class TpVeic extends \Sped\Components\Xml\Element  {
+class TpVeic extends \Sped\Components\Xml\Element 
+{
 
 }

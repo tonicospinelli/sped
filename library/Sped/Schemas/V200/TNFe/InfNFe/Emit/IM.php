@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Emit;
  * @name IM
  * @package Sped
  */
-class IM extends \Sped\Components\Xml\Element  {
+class IM extends \Sped\Components\Xml\Element 
+{
 
 }

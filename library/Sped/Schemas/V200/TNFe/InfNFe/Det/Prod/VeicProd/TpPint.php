@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name TpPint
  * @package Sped
  */
-class TpPint extends \Sped\Components\Xml\Element  {
+class TpPint extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -12,6 +12,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb;
  * @name CProdANP
  * @package Sped
  */
-class CProdANP extends \Sped\Components\Xml\Element  {
+class CProdANP extends \Sped\Components\Xml\Element 
+{
 
 }

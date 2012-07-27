@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200;
  * @name TEndereco
  * @package Sped
  */
-class TEndereco extends \Sped\Components\Xml\Element  {
+class TEndereco extends \Sped\Components\Xml\Element 
+{
 
     const XLGR = 'xLgr';
 
@@ -38,7 +39,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TEndereco\XLgr 
      */
-    public function getXLgr(){
+    public function getXLgr()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XLgr');
         return $this->getElementsByTagName(self::XLGR)->item(0);
     }
@@ -48,7 +50,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\XLgr 
      */
-    public function addXLgr($value = NULL){
+    public function addXLgr($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XLgr(self::XLGR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -57,7 +60,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TEndereco\XLgr $paramXLgr 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setXLgr(\Sped\Schemas\V200\TEndereco\XLgr $paramXLgr){
+    public function setXLgr(\Sped\Schemas\V200\TEndereco\XLgr $paramXLgr)
+    {
         $this->removeElementsByTagName(self::XLGR);
         $this->appendChild($paramXLgr, false);
         return $this;
@@ -67,7 +71,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TEndereco\Nro 
      */
-    public function getNro(){
+    public function getNro()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\Nro');
         return $this->getElementsByTagName(self::NRO)->item(0);
     }
@@ -77,7 +82,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\Nro 
      */
-    public function addNro($value = NULL){
+    public function addNro($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Nro(self::NRO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -86,7 +92,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TEndereco\Nro $paramNro 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setNro(\Sped\Schemas\V200\TEndereco\Nro $paramNro){
+    public function setNro(\Sped\Schemas\V200\TEndereco\Nro $paramNro)
+    {
         $this->removeElementsByTagName(self::NRO);
         $this->appendChild($paramNro, false);
         return $this;
@@ -97,7 +104,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TEndereco\XCpl 
      */
-    public function getXCpl($index){
+    public function getXCpl($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XCpl');
         return $this->getElementsByTagName(self::XCPL)->item($index);
     }
@@ -107,7 +115,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\XCpl 
      */
-    public function addXCpl($value = NULL){
+    public function addXCpl($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XCpl(self::XCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -116,7 +125,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TEndereco\XCpl $paramXCpl 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setXCpl(\Sped\Schemas\V200\TEndereco\XCpl $paramXCpl){
+    public function setXCpl(\Sped\Schemas\V200\TEndereco\XCpl $paramXCpl)
+    {
         $this->removeElementsByTagName(self::XCPL);
         $this->appendChild($paramXCpl, false);
         return $this;
@@ -126,7 +136,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TEndereco\XBairro 
      */
-    public function getXBairro(){
+    public function getXBairro()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XBairro');
         return $this->getElementsByTagName(self::XBAIRRO)->item(0);
     }
@@ -136,7 +147,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\XBairro 
      */
-    public function addXBairro($value = NULL){
+    public function addXBairro($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XBairro(self::XBAIRRO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -145,7 +157,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TEndereco\XBairro $paramXBairro 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setXBairro(\Sped\Schemas\V200\TEndereco\XBairro $paramXBairro){
+    public function setXBairro(\Sped\Schemas\V200\TEndereco\XBairro $paramXBairro)
+    {
         $this->removeElementsByTagName(self::XBAIRRO);
         $this->appendChild($paramXBairro, false);
         return $this;
@@ -155,7 +168,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
-    public function getCMun(){
+    public function getCMun()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCodMunIBGE');
         return $this->getElementsByTagName(self::CMUN)->item(0);
     }
@@ -165,7 +179,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
-    public function addCMun($value = NULL){
+    public function addCMun($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TCodMunIBGE(self::CMUN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -174,7 +189,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TCodMunIBGE $paramCMun 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setCMun(\Sped\Schemas\V200\TCodMunIBGE $paramCMun){
+    public function setCMun(\Sped\Schemas\V200\TCodMunIBGE $paramCMun)
+    {
         $this->removeElementsByTagName(self::CMUN);
         $this->appendChild($paramCMun, false);
         return $this;
@@ -184,7 +200,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TEndereco\XMun 
      */
-    public function getXMun(){
+    public function getXMun()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XMun');
         return $this->getElementsByTagName(self::XMUN)->item(0);
     }
@@ -194,7 +211,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\XMun 
      */
-    public function addXMun($value = NULL){
+    public function addXMun($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XMun(self::XMUN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -203,7 +221,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TEndereco\XMun $paramXMun 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setXMun(\Sped\Schemas\V200\TEndereco\XMun $paramXMun){
+    public function setXMun(\Sped\Schemas\V200\TEndereco\XMun $paramXMun)
+    {
         $this->removeElementsByTagName(self::XMUN);
         $this->appendChild($paramXMun, false);
         return $this;
@@ -213,7 +232,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TUf 
      */
-    public function getUF(){
+    public function getUF()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TUf');
         return $this->getElementsByTagName(self::UF)->item(0);
     }
@@ -223,7 +243,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TUf 
      */
-    public function addUF($value = NULL){
+    public function addUF($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -232,7 +253,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TUf $paramUF 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setUF(\Sped\Schemas\V200\TUf $paramUF){
+    public function setUF(\Sped\Schemas\V200\TUf $paramUF)
+    {
         $this->removeElementsByTagName(self::UF);
         $this->appendChild($paramUF, false);
         return $this;
@@ -243,7 +265,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TEndereco\CEP 
      */
-    public function getCEP($index){
+    public function getCEP($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\CEP');
         return $this->getElementsByTagName(self::CEP)->item($index);
     }
@@ -253,7 +276,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\CEP 
      */
-    public function addCEP($value = NULL){
+    public function addCEP($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TEndereco\CEP(self::CEP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -262,7 +286,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TEndereco\CEP $paramCEP 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setCEP(\Sped\Schemas\V200\TEndereco\CEP $paramCEP){
+    public function setCEP(\Sped\Schemas\V200\TEndereco\CEP $paramCEP)
+    {
         $this->removeElementsByTagName(self::CEP);
         $this->appendChild($paramCEP, false);
         return $this;
@@ -273,7 +298,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\Tpais 
      */
-    public function getCPais($index){
+    public function getCPais($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Tpais');
         return $this->getElementsByTagName(self::CPAIS)->item($index);
     }
@@ -283,7 +309,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\Tpais 
      */
-    public function addCPais($value = NULL){
+    public function addCPais($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\Tpais(self::CPAIS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -292,7 +319,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\Tpais $paramCPais 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setCPais(\Sped\Schemas\V200\Tpais $paramCPais){
+    public function setCPais(\Sped\Schemas\V200\Tpais $paramCPais)
+    {
         $this->removeElementsByTagName(self::CPAIS);
         $this->appendChild($paramCPais, false);
         return $this;
@@ -303,7 +331,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TEndereco\XPais 
      */
-    public function getXPais($index){
+    public function getXPais($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XPais');
         return $this->getElementsByTagName(self::XPAIS)->item($index);
     }
@@ -313,7 +342,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\XPais 
      */
-    public function addXPais($value = NULL){
+    public function addXPais($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XPais(self::XPAIS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -322,7 +352,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TEndereco\XPais $paramXPais 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setXPais(\Sped\Schemas\V200\TEndereco\XPais $paramXPais){
+    public function setXPais(\Sped\Schemas\V200\TEndereco\XPais $paramXPais)
+    {
         $this->removeElementsByTagName(self::XPAIS);
         $this->appendChild($paramXPais, false);
         return $this;
@@ -333,7 +364,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TEndereco\Fone 
      */
-    public function getFone($index){
+    public function getFone($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\Fone');
         return $this->getElementsByTagName(self::FONE)->item($index);
     }
@@ -343,7 +375,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\Fone 
      */
-    public function addFone($value = NULL){
+    public function addFone($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Fone(self::FONE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -352,7 +385,8 @@ class TEndereco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TEndereco\Fone $paramFone 
      * @return \Sped\Schemas\V200\TEndereco 
      */
-    public function setFone(\Sped\Schemas\V200\TEndereco\Fone $paramFone){
+    public function setFone(\Sped\Schemas\V200\TEndereco\Fone $paramFone)
+    {
         $this->removeElementsByTagName(self::FONE);
         $this->appendChild($paramFone, false);
         return $this;

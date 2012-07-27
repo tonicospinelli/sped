@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta;
  * @name XNome
  * @package Sped
  */
-class XNome extends \Sped\Components\Xml\Element  {
+class XNome extends \Sped\Components\Xml\Element 
+{
 
 }

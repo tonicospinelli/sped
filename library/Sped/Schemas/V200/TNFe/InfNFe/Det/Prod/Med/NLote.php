@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med;
  * @name NLote
  * @package Sped
  */
-class NLote extends \Sped\Components\Xml\Element  {
+class NLote extends \Sped\Components\Xml\Element 
+{
 
 }

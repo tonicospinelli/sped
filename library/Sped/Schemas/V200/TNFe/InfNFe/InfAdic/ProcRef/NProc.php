@@ -11,6 +11,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef;
  * @name NProc
  * @package Sped
  */
-class NProc extends \Sped\Components\Xml\Element  {
+class NProc extends \Sped\Components\Xml\Element 
+{
 
 }

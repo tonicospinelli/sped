@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol;
  * @name QVol
  * @package Sped
  */
-class QVol extends \Sped\Components\Xml\Element  {
+class QVol extends \Sped\Components\Xml\Element 
+{
 
 }

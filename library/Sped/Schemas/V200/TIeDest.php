@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TIeDest
  * @package Sped
  */
-class TIeDest extends \Sped\Components\Xml\Element  {
+class TIeDest extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Total;
  * @name ICMSTot
  * @package Sped
  */
-class ICMSTot extends \Sped\Components\Xml\Element  {
+class ICMSTot extends \Sped\Components\Xml\Element 
+{
 
     const VBC = 'vBC';
 
@@ -44,7 +45,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVBC(){
+    public function getVBC()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VBC)->item(0);
     }
@@ -54,7 +56,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVBC($value = NULL){
+    public function addVBC($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -63,7 +66,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVBC(\Sped\Schemas\V200\TDec_1302 $paramVBC){
+    public function setVBC(\Sped\Schemas\V200\TDec_1302 $paramVBC)
+    {
         $this->removeElementsByTagName(self::VBC);
         $this->appendChild($paramVBC, false);
         return $this;
@@ -73,7 +77,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVICMS(){
+    public function getVICMS()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VICMS)->item(0);
     }
@@ -83,7 +88,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVICMS($value = NULL){
+    public function addVICMS($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -92,7 +98,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVICMS(\Sped\Schemas\V200\TDec_1302 $paramVICMS){
+    public function setVICMS(\Sped\Schemas\V200\TDec_1302 $paramVICMS)
+    {
         $this->removeElementsByTagName(self::VICMS);
         $this->appendChild($paramVICMS, false);
         return $this;
@@ -102,7 +109,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVBCST(){
+    public function getVBCST()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VBCST)->item(0);
     }
@@ -112,7 +120,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVBCST($value = NULL){
+    public function addVBCST($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -121,7 +130,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVBCST(\Sped\Schemas\V200\TDec_1302 $paramVBCST){
+    public function setVBCST(\Sped\Schemas\V200\TDec_1302 $paramVBCST)
+    {
         $this->removeElementsByTagName(self::VBCST);
         $this->appendChild($paramVBCST, false);
         return $this;
@@ -131,7 +141,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVST(){
+    public function getVST()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VST)->item(0);
     }
@@ -141,7 +152,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVST($value = NULL){
+    public function addVST($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -150,7 +162,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVST(\Sped\Schemas\V200\TDec_1302 $paramVST){
+    public function setVST(\Sped\Schemas\V200\TDec_1302 $paramVST)
+    {
         $this->removeElementsByTagName(self::VST);
         $this->appendChild($paramVST, false);
         return $this;
@@ -160,7 +173,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVProd(){
+    public function getVProd()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VPROD)->item(0);
     }
@@ -170,7 +184,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVProd($value = NULL){
+    public function addVProd($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -179,7 +194,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVProd(\Sped\Schemas\V200\TDec_1302 $paramVProd){
+    public function setVProd(\Sped\Schemas\V200\TDec_1302 $paramVProd)
+    {
         $this->removeElementsByTagName(self::VPROD);
         $this->appendChild($paramVProd, false);
         return $this;
@@ -189,7 +205,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVFrete(){
+    public function getVFrete()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VFRETE)->item(0);
     }
@@ -199,7 +216,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVFrete($value = NULL){
+    public function addVFrete($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VFRETE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -208,7 +226,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVFrete 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVFrete(\Sped\Schemas\V200\TDec_1302 $paramVFrete){
+    public function setVFrete(\Sped\Schemas\V200\TDec_1302 $paramVFrete)
+    {
         $this->removeElementsByTagName(self::VFRETE);
         $this->appendChild($paramVFrete, false);
         return $this;
@@ -218,7 +237,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVSeg(){
+    public function getVSeg()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VSEG)->item(0);
     }
@@ -228,7 +248,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVSeg($value = NULL){
+    public function addVSeg($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VSEG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -237,7 +258,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVSeg 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVSeg(\Sped\Schemas\V200\TDec_1302 $paramVSeg){
+    public function setVSeg(\Sped\Schemas\V200\TDec_1302 $paramVSeg)
+    {
         $this->removeElementsByTagName(self::VSEG);
         $this->appendChild($paramVSeg, false);
         return $this;
@@ -247,7 +269,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVDesc(){
+    public function getVDesc()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VDESC)->item(0);
     }
@@ -257,7 +280,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVDesc($value = NULL){
+    public function addVDesc($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDESC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -266,7 +290,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVDesc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVDesc(\Sped\Schemas\V200\TDec_1302 $paramVDesc){
+    public function setVDesc(\Sped\Schemas\V200\TDec_1302 $paramVDesc)
+    {
         $this->removeElementsByTagName(self::VDESC);
         $this->appendChild($paramVDesc, false);
         return $this;
@@ -276,7 +301,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVII(){
+    public function getVII()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VII)->item(0);
     }
@@ -286,7 +312,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVII($value = NULL){
+    public function addVII($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VII, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -295,7 +322,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVII 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVII(\Sped\Schemas\V200\TDec_1302 $paramVII){
+    public function setVII(\Sped\Schemas\V200\TDec_1302 $paramVII)
+    {
         $this->removeElementsByTagName(self::VII);
         $this->appendChild($paramVII, false);
         return $this;
@@ -305,7 +333,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVIPI(){
+    public function getVIPI()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VIPI)->item(0);
     }
@@ -315,7 +344,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVIPI($value = NULL){
+    public function addVIPI($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VIPI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -324,7 +354,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVIPI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVIPI(\Sped\Schemas\V200\TDec_1302 $paramVIPI){
+    public function setVIPI(\Sped\Schemas\V200\TDec_1302 $paramVIPI)
+    {
         $this->removeElementsByTagName(self::VIPI);
         $this->appendChild($paramVIPI, false);
         return $this;
@@ -334,7 +365,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVPIS(){
+    public function getVPIS()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VPIS)->item(0);
     }
@@ -344,7 +376,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVPIS($value = NULL){
+    public function addVPIS($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VPIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -353,7 +386,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVPIS(\Sped\Schemas\V200\TDec_1302 $paramVPIS){
+    public function setVPIS(\Sped\Schemas\V200\TDec_1302 $paramVPIS)
+    {
         $this->removeElementsByTagName(self::VPIS);
         $this->appendChild($paramVPIS, false);
         return $this;
@@ -363,7 +397,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVCOFINS(){
+    public function getVCOFINS()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VCOFINS)->item(0);
     }
@@ -373,7 +408,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVCOFINS($value = NULL){
+    public function addVCOFINS($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VCOFINS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -382,7 +418,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVCOFINS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVCOFINS(\Sped\Schemas\V200\TDec_1302 $paramVCOFINS){
+    public function setVCOFINS(\Sped\Schemas\V200\TDec_1302 $paramVCOFINS)
+    {
         $this->removeElementsByTagName(self::VCOFINS);
         $this->appendChild($paramVCOFINS, false);
         return $this;
@@ -392,7 +429,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVOutro(){
+    public function getVOutro()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VOUTRO)->item(0);
     }
@@ -402,7 +440,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVOutro($value = NULL){
+    public function addVOutro($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VOUTRO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -411,7 +450,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVOutro 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVOutro(\Sped\Schemas\V200\TDec_1302 $paramVOutro){
+    public function setVOutro(\Sped\Schemas\V200\TDec_1302 $paramVOutro)
+    {
         $this->removeElementsByTagName(self::VOUTRO);
         $this->appendChild($paramVOutro, false);
         return $this;
@@ -421,7 +461,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVNF(){
+    public function getVNF()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VNF)->item(0);
     }
@@ -431,7 +472,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVNF($value = NULL){
+    public function addVNF($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VNF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -440,7 +482,8 @@ class ICMSTot extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVNF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
-    public function setVNF(\Sped\Schemas\V200\TDec_1302 $paramVNF){
+    public function setVNF(\Sped\Schemas\V200\TDec_1302 $paramVNF)
+    {
         $this->removeElementsByTagName(self::VNF);
         $this->appendChild($paramVNF, false);
         return $this;

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Avulsa;
  * @name XAgente
  * @package Sped
  */
-class XAgente extends \Sped\Components\Xml\Element  {
+class XAgente extends \Sped\Components\Xml\Element 
+{
 
 }

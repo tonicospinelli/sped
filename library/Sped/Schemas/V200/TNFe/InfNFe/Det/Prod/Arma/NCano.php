@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma;
  * @name NCano
  * @package Sped
  */
-class NCano extends \Sped\Components\Xml\Element  {
+class NCano extends \Sped\Components\Xml\Element 
+{
 
 }

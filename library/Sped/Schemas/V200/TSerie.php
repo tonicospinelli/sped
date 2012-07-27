@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TSerie
  * @package Sped
  */
-class TSerie extends \Sped\Components\Xml\Element  {
+class TSerie extends \Sped\Components\Xml\Element 
+{
 
 }

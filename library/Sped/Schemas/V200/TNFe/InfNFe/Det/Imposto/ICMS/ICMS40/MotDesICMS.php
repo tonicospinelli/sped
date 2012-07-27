@@ -20,6 +20,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40;
  * @name MotDesICMS
  * @package Sped
  */
-class MotDesICMS extends \Sped\Components\Xml\Element  {
+class MotDesICMS extends \Sped\Components\Xml\Element 
+{
 
 }

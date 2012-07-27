@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi;
  * @name NAdicao
  * @package Sped
  */
-class NAdicao extends \Sped\Components\Xml\Element  {
+class NAdicao extends \Sped\Components\Xml\Element 
+{
 
 }

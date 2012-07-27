@@ -17,6 +17,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name TpComb
  * @package Sped
  */
-class TpComb extends \Sped\Components\Xml\Element  {
+class TpComb extends \Sped\Components\Xml\Element 
+{
 
 }

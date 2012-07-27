@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
  * @name Cobr
  * @package Sped
  */
-class Cobr extends \Sped\Components\Xml\Element  {
+class Cobr extends \Sped\Components\Xml\Element 
+{
 
     const FAT = 'fat';
 
@@ -21,7 +22,8 @@ class Cobr extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
-    public function getFat($index){
+    public function getFat($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat');
         return $this->getElementsByTagName(self::FAT)->item($index);
     }
@@ -30,7 +32,8 @@ class Cobr extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
-    public function addFat(){
+    public function addFat()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat(self::FAT, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -39,7 +42,8 @@ class Cobr extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat $paramFat 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      */
-    public function setFat(\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat $paramFat){
+    public function setFat(\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat $paramFat)
+    {
         $this->removeElementsByTagName(self::FAT);
         $this->appendChild($paramFat, false);
         return $this;
@@ -50,7 +54,8 @@ class Cobr extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup 
      */
-    public function getDup($index){
+    public function getDup($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup');
         return $this->getElementsByTagName(self::DUP)->item($index);
     }
@@ -59,7 +64,8 @@ class Cobr extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup 
      */
-    public function addDup(){
+    public function addDup()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup(self::DUP, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -68,7 +74,8 @@ class Cobr extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup $paramDup 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      */
-    public function setDup(\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup $paramDup){
+    public function setDup(\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup $paramDup)
+    {
         $this->removeElementsByTagName(self::DUP);
         $this->appendChild($paramDup, false);
         return $this;

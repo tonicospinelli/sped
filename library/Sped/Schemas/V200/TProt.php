@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TProt
  * @package Sped
  */
-class TProt extends \Sped\Components\Xml\Element  {
+class TProt extends \Sped\Components\Xml\Element 
+{
 
 }

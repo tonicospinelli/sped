@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name UCom
  * @package Sped
  */
-class UCom extends \Sped\Components\Xml\Element  {
+class UCom extends \Sped\Components\Xml\Element 
+{
 
 }

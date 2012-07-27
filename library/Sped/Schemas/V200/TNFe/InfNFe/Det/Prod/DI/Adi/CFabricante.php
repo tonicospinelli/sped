@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi;
  * @name CFabricante
  * @package Sped
  */
-class CFabricante extends \Sped\Components\Xml\Element  {
+class CFabricante extends \Sped\Components\Xml\Element 
+{
 
 }

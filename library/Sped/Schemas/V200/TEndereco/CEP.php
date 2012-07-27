@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TEndereco;
  * @name CEP
  * @package Sped
  */
-class CEP extends \Sped\Components\Xml\Element  {
+class CEP extends \Sped\Components\Xml\Element 
+{
 
 }

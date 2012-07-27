@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name NItemPed
  * @package Sped
  */
-class NItemPed extends \Sped\Components\Xml\Element  {
+class NItemPed extends \Sped\Components\Xml\Element 
+{
 
 }

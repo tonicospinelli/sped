@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name Torig
  * @package Sped
  */
-class Torig extends \Sped\Components\Xml\Element  {
+class Torig extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name NMotor
  * @package Sped
  */
-class NMotor extends \Sped\Components\Xml\Element  {
+class NMotor extends \Sped\Components\Xml\Element 
+{
 
 }

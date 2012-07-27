@@ -13,6 +13,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name IndTot
  * @package Sped
  */
-class IndTot extends \Sped\Components\Xml\Element  {
+class IndTot extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TVerAplic
  * @package Sped
  */
-class TVerAplic extends \Sped\Components\Xml\Element  {
+class TVerAplic extends \Sped\Components\Xml\Element 
+{
 
 }

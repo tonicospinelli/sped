@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @name DhCont
  * @package Sped
  */
-class DhCont extends \Sped\Components\Xml\Element  {
+class DhCont extends \Sped\Components\Xml\Element 
+{
 
 }

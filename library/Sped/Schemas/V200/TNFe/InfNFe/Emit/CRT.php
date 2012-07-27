@@ -14,6 +14,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Emit;
  * @name CRT
  * @package Sped
  */
-class CRT extends \Sped\Components\Xml\Element  {
+class CRT extends \Sped\Components\Xml\Element 
+{
 
 }

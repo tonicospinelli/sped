@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS;
  * @name ICMSSN102
  * @package Sped
  */
-class ICMSSN102 extends \Sped\Components\Xml\Element  {
+class ICMSSN102 extends \Sped\Components\Xml\Element 
+{
 
     const ORIG = 'orig';
 
@@ -20,7 +21,8 @@ class ICMSSN102 extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\Torig 
      */
-    public function getOrig(){
+    public function getOrig()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Torig');
         return $this->getElementsByTagName(self::ORIG)->item(0);
     }
@@ -30,7 +32,8 @@ class ICMSSN102 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
-    public function addOrig($value = NULL){
+    public function addOrig($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -39,7 +42,8 @@ class ICMSSN102 extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102 
      */
-    public function setOrig(\Sped\Schemas\V200\Torig $paramOrig){
+    public function setOrig(\Sped\Schemas\V200\Torig $paramOrig)
+    {
         $this->removeElementsByTagName(self::ORIG);
         $this->appendChild($paramOrig, false);
         return $this;
@@ -49,7 +53,8 @@ class ICMSSN102 extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN 
      */
-    public function getCSOSN(){
+    public function getCSOSN()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN');
         return $this->getElementsByTagName(self::CSOSN)->item(0);
     }
@@ -59,7 +64,8 @@ class ICMSSN102 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN 
      */
-    public function addCSOSN($value = NULL){
+    public function addCSOSN($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN(self::CSOSN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -68,7 +74,8 @@ class ICMSSN102 extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN $paramCSOSN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102 
      */
-    public function setCSOSN(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN $paramCSOSN){
+    public function setCSOSN(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN $paramCSOSN)
+    {
         $this->removeElementsByTagName(self::CSOSN);
         $this->appendChild($paramCSOSN, false);
         return $this;

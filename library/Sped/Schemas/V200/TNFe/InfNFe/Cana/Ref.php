@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Cana;
  * @name Ref
  * @package Sped
  */
-class Ref extends \Sped\Components\Xml\Element  {
+class Ref extends \Sped\Components\Xml\Element 
+{
 
 }

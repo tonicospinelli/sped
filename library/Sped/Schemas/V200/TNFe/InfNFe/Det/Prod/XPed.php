@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name XPed
  * @package Sped
  */
-class XPed extends \Sped\Components\Xml\Element  {
+class XPed extends \Sped\Components\Xml\Element 
+{
 
 }

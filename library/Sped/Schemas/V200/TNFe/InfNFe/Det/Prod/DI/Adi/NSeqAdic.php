@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi;
  * @name NSeqAdic
  * @package Sped
  */
-class NSeqAdic extends \Sped\Components\Xml\Element  {
+class NSeqAdic extends \Sped\Components\Xml\Element 
+{
 
 }

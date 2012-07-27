@@ -26,6 +26,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name CCorDENATRAN
  * @package Sped
  */
-class CCorDENATRAN extends \Sped\Components\Xml\Element  {
+class CCorDENATRAN extends \Sped\Components\Xml\Element 
+{
 
 }

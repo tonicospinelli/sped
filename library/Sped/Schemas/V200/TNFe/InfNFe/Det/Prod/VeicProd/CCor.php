@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name CCor
  * @package Sped
  */
-class CCor extends \Sped\Components\Xml\Element  {
+class CCor extends \Sped\Components\Xml\Element 
+{
 
 }

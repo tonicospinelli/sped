@@ -17,6 +17,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @name TpEmis
  * @package Sped
  */
-class TpEmis extends \Sped\Components\Xml\Element  {
+class TpEmis extends \Sped\Components\Xml\Element 
+{
 
 }

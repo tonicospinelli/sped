@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF;
  * @name NECF
  * @package Sped
  */
-class NECF extends \Sped\Components\Xml\Element  {
+class NECF extends \Sped\Components\Xml\Element 
+{
 
 }

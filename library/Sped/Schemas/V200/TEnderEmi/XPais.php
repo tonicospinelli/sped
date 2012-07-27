@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TEnderEmi;
  * @name XPais
  * @package Sped
  */
-class XPais extends \Sped\Components\Xml\Element  {
+class XPais extends \Sped\Components\Xml\Element 
+{
 
 }

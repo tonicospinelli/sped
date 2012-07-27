@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TServ
  * @package Sped
  */
-class TServ extends \Sped\Components\Xml\Element  {
+class TServ extends \Sped\Components\Xml\Element 
+{
 
 }

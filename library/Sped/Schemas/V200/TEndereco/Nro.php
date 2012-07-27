@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TEndereco;
  * @name Nro
  * @package Sped
  */
-class Nro extends \Sped\Components\Xml\Element  {
+class Nro extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @name CNF
  * @package Sped
  */
-class CNF extends \Sped\Components\Xml\Element  {
+class CNF extends \Sped\Components\Xml\Element 
+{
 
 }

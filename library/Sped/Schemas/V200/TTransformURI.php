@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TTransformURI
  * @package Sped
  */
-class TTransformURI extends \Sped\Components\Xml\Element  {
+class TTransformURI extends \Sped\Components\Xml\Element 
+{
 
 }

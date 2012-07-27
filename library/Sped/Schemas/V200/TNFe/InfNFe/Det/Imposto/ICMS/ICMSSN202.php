@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS;
  * @name ICMSSN202
  * @package Sped
  */
-class ICMSSN202 extends \Sped\Components\Xml\Element  {
+class ICMSSN202 extends \Sped\Components\Xml\Element 
+{
 
     const ORIG = 'orig';
 
@@ -32,7 +33,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\Torig 
      */
-    public function getOrig(){
+    public function getOrig()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Torig');
         return $this->getElementsByTagName(self::ORIG)->item(0);
     }
@@ -42,7 +44,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
-    public function addOrig($value = NULL){
+    public function addOrig($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\Torig(self::ORIG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -51,7 +54,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
-    public function setOrig(\Sped\Schemas\V200\Torig $paramOrig){
+    public function setOrig(\Sped\Schemas\V200\Torig $paramOrig)
+    {
         $this->removeElementsByTagName(self::ORIG);
         $this->appendChild($paramOrig, false);
         return $this;
@@ -61,7 +65,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\CSOSN 
      */
-    public function getCSOSN(){
+    public function getCSOSN()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\CSOSN');
         return $this->getElementsByTagName(self::CSOSN)->item(0);
     }
@@ -71,7 +76,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\CSOSN 
      */
-    public function addCSOSN($value = NULL){
+    public function addCSOSN($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\CSOSN(self::CSOSN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -80,7 +86,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\CSOSN $paramCSOSN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
-    public function setCSOSN(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\CSOSN $paramCSOSN){
+    public function setCSOSN(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\CSOSN $paramCSOSN)
+    {
         $this->removeElementsByTagName(self::CSOSN);
         $this->appendChild($paramCSOSN, false);
         return $this;
@@ -90,7 +97,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\ModBCST 
      */
-    public function getModBCST(){
+    public function getModBCST()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\ModBCST');
         return $this->getElementsByTagName(self::MODBCST)->item(0);
     }
@@ -100,7 +108,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\ModBCST 
      */
-    public function addModBCST($value = NULL){
+    public function addModBCST($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\ModBCST(self::MODBCST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -109,7 +118,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\ModBCST $paramModBCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
-    public function setModBCST(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\ModBCST $paramModBCST){
+    public function setModBCST(\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\ModBCST $paramModBCST)
+    {
         $this->removeElementsByTagName(self::MODBCST);
         $this->appendChild($paramModBCST, false);
         return $this;
@@ -120,7 +130,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function getPMVAST($index){
+    public function getPMVAST($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302Opc');
         return $this->getElementsByTagName(self::PMVAST)->item($index);
     }
@@ -130,7 +141,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function addPMVAST($value = NULL){
+    public function addPMVAST($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PMVAST, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -139,7 +151,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_0302Opc $paramPMVAST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
-    public function setPMVAST(\Sped\Schemas\V200\TDec_0302Opc $paramPMVAST){
+    public function setPMVAST(\Sped\Schemas\V200\TDec_0302Opc $paramPMVAST)
+    {
         $this->removeElementsByTagName(self::PMVAST);
         $this->appendChild($paramPMVAST, false);
         return $this;
@@ -150,7 +163,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function getPRedBCST($index){
+    public function getPRedBCST($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302Opc');
         return $this->getElementsByTagName(self::PREDBCST)->item($index);
     }
@@ -160,7 +174,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function addPRedBCST($value = NULL){
+    public function addPRedBCST($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PREDBCST, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -169,7 +184,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_0302Opc $paramPRedBCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
-    public function setPRedBCST(\Sped\Schemas\V200\TDec_0302Opc $paramPRedBCST){
+    public function setPRedBCST(\Sped\Schemas\V200\TDec_0302Opc $paramPRedBCST)
+    {
         $this->removeElementsByTagName(self::PREDBCST);
         $this->appendChild($paramPRedBCST, false);
         return $this;
@@ -179,7 +195,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVBCST(){
+    public function getVBCST()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VBCST)->item(0);
     }
@@ -189,7 +206,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVBCST($value = NULL){
+    public function addVBCST($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBCST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -198,7 +216,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
-    public function setVBCST(\Sped\Schemas\V200\TDec_1302 $paramVBCST){
+    public function setVBCST(\Sped\Schemas\V200\TDec_1302 $paramVBCST)
+    {
         $this->removeElementsByTagName(self::VBCST);
         $this->appendChild($paramVBCST, false);
         return $this;
@@ -208,7 +227,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
-    public function getPICMSST(){
+    public function getPICMSST()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
         return $this->getElementsByTagName(self::PICMSST)->item(0);
     }
@@ -218,7 +238,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
-    public function addPICMSST($value = NULL){
+    public function addPICMSST($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMSST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -227,7 +248,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_0302 $paramPICMSST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
-    public function setPICMSST(\Sped\Schemas\V200\TDec_0302 $paramPICMSST){
+    public function setPICMSST(\Sped\Schemas\V200\TDec_0302 $paramPICMSST)
+    {
         $this->removeElementsByTagName(self::PICMSST);
         $this->appendChild($paramPICMSST, false);
         return $this;
@@ -237,7 +259,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVICMSST(){
+    public function getVICMSST()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VICMSST)->item(0);
     }
@@ -247,7 +270,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVICMSST($value = NULL){
+    public function addVICMSST($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMSST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -256,7 +280,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMSST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
-    public function setVICMSST(\Sped\Schemas\V200\TDec_1302 $paramVICMSST){
+    public function setVICMSST(\Sped\Schemas\V200\TDec_1302 $paramVICMSST)
+    {
         $this->removeElementsByTagName(self::VICMSST);
         $this->appendChild($paramVICMSST, false);
         return $this;

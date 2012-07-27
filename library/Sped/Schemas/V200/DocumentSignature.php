@@ -9,7 +9,8 @@ namespace Sped\Schemas\V200;
  * @name DocumentSignature
  * @package Sped
  */
-class DocumentSignature extends \Sped\Components\Xml\Document  {
+class DocumentSignature extends \Sped\Components\Xml\Document 
+{
 
     const SIGNATURE = 'Signature';
 
@@ -17,7 +18,8 @@ class DocumentSignature extends \Sped\Components\Xml\Document  {
      * 
      * @return \Sped\Schemas\V200\SignatureType 
      */
-    public function getSignature(){
+    public function getSignature()
+    {
         $this->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
         return $this->getElementsByTagName(self::SIGNATURE)->item(0);
     }
@@ -26,7 +28,8 @@ class DocumentSignature extends \Sped\Components\Xml\Document  {
      * 
      * @return \Sped\Schemas\V200\SignatureType 
      */
-    public function addSignature(){
+    public function addSignature()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, NULL, 'http://www.w3.org/2000/09/xmldsig#'), false);
     }
 
@@ -35,7 +38,8 @@ class DocumentSignature extends \Sped\Components\Xml\Document  {
      * @param \Sped\Schemas\V200\SignatureType $paramSignature 
      * @return \Sped\Schemas\V200\DocumentSignature 
      */
-    public function setSignature(\Sped\Schemas\V200\SignatureType $paramSignature){
+    public function setSignature(\Sped\Schemas\V200\SignatureType $paramSignature)
+    {
         $this->removeElementsByTagName(self::SIGNATURE);
         $this->appendChild($paramSignature, false);
         return $this;

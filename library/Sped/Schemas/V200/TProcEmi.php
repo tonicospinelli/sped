@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TProcEmi
  * @package Sped
  */
-class TProcEmi extends \Sped\Components\Xml\Element  {
+class TProcEmi extends \Sped\Components\Xml\Element 
+{
 
 }

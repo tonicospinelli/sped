@@ -11,6 +11,7 @@ namespace Sped\Schemas\V200\TRetConsReciNFe;
  * @name CMsg
  * @package Sped
  */
-class CMsg extends \Sped\Components\Xml\Element  {
+class CMsg extends \Sped\Components\Xml\Element 
+{
 
 }

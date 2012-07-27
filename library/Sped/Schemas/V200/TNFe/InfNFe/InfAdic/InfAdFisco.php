@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
  * @name InfAdFisco
  * @package Sped
  */
-class InfAdFisco extends \Sped\Components\Xml\Element  {
+class InfAdFisco extends \Sped\Components\Xml\Element 
+{
 
 }

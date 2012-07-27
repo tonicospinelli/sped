@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name SignatureValueType
  * @package Sped
  */
-class SignatureValueType extends \Sped\Components\Xml\Element  {
+class SignatureValueType extends \Sped\Components\Xml\Element 
+{
 
 }

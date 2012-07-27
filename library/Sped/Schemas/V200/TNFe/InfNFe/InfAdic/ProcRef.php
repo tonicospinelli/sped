@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
  * @name ProcRef
  * @package Sped
  */
-class ProcRef extends \Sped\Components\Xml\Element  {
+class ProcRef extends \Sped\Components\Xml\Element 
+{
 
     const NPROC = 'nProc';
 
@@ -20,7 +21,8 @@ class ProcRef extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc 
      */
-    public function getNProc(){
+    public function getNProc()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc');
         return $this->getElementsByTagName(self::NPROC)->item(0);
     }
@@ -30,7 +32,8 @@ class ProcRef extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc 
      */
-    public function addNProc($value = NULL){
+    public function addNProc($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc(self::NPROC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -39,7 +42,8 @@ class ProcRef extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc $paramNProc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */
-    public function setNProc(\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc $paramNProc){
+    public function setNProc(\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc $paramNProc)
+    {
         $this->removeElementsByTagName(self::NPROC);
         $this->appendChild($paramNProc, false);
         return $this;
@@ -49,7 +53,8 @@ class ProcRef extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc 
      */
-    public function getIndProc(){
+    public function getIndProc()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc');
         return $this->getElementsByTagName(self::INDPROC)->item(0);
     }
@@ -59,7 +64,8 @@ class ProcRef extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc 
      */
-    public function addIndProc($value = NULL){
+    public function addIndProc($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc(self::INDPROC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -68,7 +74,8 @@ class ProcRef extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc $paramIndProc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */
-    public function setIndProc(\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc $paramIndProc){
+    public function setIndProc(\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc $paramIndProc)
+    {
         $this->removeElementsByTagName(self::INDPROC);
         $this->appendChild($paramIndProc, false);
         return $this;

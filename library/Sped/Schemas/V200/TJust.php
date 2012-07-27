@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TJust
  * @package Sped
  */
-class TJust extends \Sped\Components\Xml\Element  {
+class TJust extends \Sped\Components\Xml\Element 
+{
 
 }

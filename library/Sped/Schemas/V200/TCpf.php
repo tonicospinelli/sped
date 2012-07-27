@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TCpf
  * @package Sped
  */
-class TCpf extends \Sped\Components\Xml\Element  {
+class TCpf extends \Sped\Components\Xml\Element 
+{
 
 }

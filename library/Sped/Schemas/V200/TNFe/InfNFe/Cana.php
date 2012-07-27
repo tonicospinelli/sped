@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
  * @name Cana
  * @package Sped
  */
-class Cana extends \Sped\Components\Xml\Element  {
+class Cana extends \Sped\Components\Xml\Element 
+{
 
     const SAFRA = 'safra';
 
@@ -36,7 +37,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra 
      */
-    public function getSafra(){
+    public function getSafra()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra');
         return $this->getElementsByTagName(self::SAFRA)->item(0);
     }
@@ -46,7 +48,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra 
      */
-    public function addSafra($value = NULL){
+    public function addSafra($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra(self::SAFRA, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -55,7 +58,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra $paramSafra 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function setSafra(\Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra $paramSafra){
+    public function setSafra(\Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra $paramSafra)
+    {
         $this->removeElementsByTagName(self::SAFRA);
         $this->appendChild($paramSafra, false);
         return $this;
@@ -65,7 +69,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref 
      */
-    public function getRef(){
+    public function getRef()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref');
         return $this->getElementsByTagName(self::REF)->item(0);
     }
@@ -75,7 +80,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref 
      */
-    public function addRef($value = NULL){
+    public function addRef($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref(self::REF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -84,7 +90,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref $paramRef 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function setRef(\Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref $paramRef){
+    public function setRef(\Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref $paramRef)
+    {
         $this->removeElementsByTagName(self::REF);
         $this->appendChild($paramRef, false);
         return $this;
@@ -94,7 +101,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia 
      */
-    public function getForDia(){
+    public function getForDia()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia');
         return $this->getElementsByTagName(self::FORDIA)->item(0);
     }
@@ -103,7 +111,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia 
      */
-    public function addForDia(){
+    public function addForDia()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia(self::FORDIA, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -112,7 +121,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia $paramForDia 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function setForDia(\Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia $paramForDia){
+    public function setForDia(\Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia $paramForDia)
+    {
         $this->removeElementsByTagName(self::FORDIA);
         $this->appendChild($paramForDia, false);
         return $this;
@@ -122,7 +132,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
-    public function getQTotMes(){
+    public function getQTotMes()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1110');
         return $this->getElementsByTagName(self::QTOTMES)->item(0);
     }
@@ -132,7 +143,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
-    public function addQTotMes($value = NULL){
+    public function addQTotMes($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTMES, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -141,7 +153,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1110 $paramQTotMes 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function setQTotMes(\Sped\Schemas\V200\TDec_1110 $paramQTotMes){
+    public function setQTotMes(\Sped\Schemas\V200\TDec_1110 $paramQTotMes)
+    {
         $this->removeElementsByTagName(self::QTOTMES);
         $this->appendChild($paramQTotMes, false);
         return $this;
@@ -151,7 +164,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
-    public function getQTotAnt(){
+    public function getQTotAnt()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1110');
         return $this->getElementsByTagName(self::QTOTANT)->item(0);
     }
@@ -161,7 +175,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
-    public function addQTotAnt($value = NULL){
+    public function addQTotAnt($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTANT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -170,7 +185,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1110 $paramQTotAnt 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function setQTotAnt(\Sped\Schemas\V200\TDec_1110 $paramQTotAnt){
+    public function setQTotAnt(\Sped\Schemas\V200\TDec_1110 $paramQTotAnt)
+    {
         $this->removeElementsByTagName(self::QTOTANT);
         $this->appendChild($paramQTotAnt, false);
         return $this;
@@ -180,7 +196,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
-    public function getQTotGer(){
+    public function getQTotGer()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1110');
         return $this->getElementsByTagName(self::QTOTGER)->item(0);
     }
@@ -190,7 +207,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
-    public function addQTotGer($value = NULL){
+    public function addQTotGer($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1110(self::QTOTGER, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -199,7 +217,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1110 $paramQTotGer 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function setQTotGer(\Sped\Schemas\V200\TDec_1110 $paramQTotGer){
+    public function setQTotGer(\Sped\Schemas\V200\TDec_1110 $paramQTotGer)
+    {
         $this->removeElementsByTagName(self::QTOTGER);
         $this->appendChild($paramQTotGer, false);
         return $this;
@@ -210,7 +229,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
-    public function getDeduc($index){
+    public function getDeduc($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc');
         return $this->getElementsByTagName(self::DEDUC)->item($index);
     }
@@ -219,7 +239,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
-    public function addDeduc(){
+    public function addDeduc()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc(self::DEDUC, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -228,7 +249,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc $paramDeduc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function setDeduc(\Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc $paramDeduc){
+    public function setDeduc(\Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc $paramDeduc)
+    {
         $this->removeElementsByTagName(self::DEDUC);
         $this->appendChild($paramDeduc, false);
         return $this;
@@ -238,7 +260,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVFor(){
+    public function getVFor()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VFOR)->item(0);
     }
@@ -248,7 +271,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVFor($value = NULL){
+    public function addVFor($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VFOR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -257,7 +281,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVFor 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function setVFor(\Sped\Schemas\V200\TDec_1302 $paramVFor){
+    public function setVFor(\Sped\Schemas\V200\TDec_1302 $paramVFor)
+    {
         $this->removeElementsByTagName(self::VFOR);
         $this->appendChild($paramVFor, false);
         return $this;
@@ -267,7 +292,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVTotDed(){
+    public function getVTotDed()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VTOTDED)->item(0);
     }
@@ -277,7 +303,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVTotDed($value = NULL){
+    public function addVTotDed($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VTOTDED, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -286,7 +313,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVTotDed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function setVTotDed(\Sped\Schemas\V200\TDec_1302 $paramVTotDed){
+    public function setVTotDed(\Sped\Schemas\V200\TDec_1302 $paramVTotDed)
+    {
         $this->removeElementsByTagName(self::VTOTDED);
         $this->appendChild($paramVTotDed, false);
         return $this;
@@ -296,7 +324,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVLiqFor(){
+    public function getVLiqFor()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
         return $this->getElementsByTagName(self::VLIQFOR)->item(0);
     }
@@ -306,7 +335,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function addVLiqFor($value = NULL){
+    public function addVLiqFor($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VLIQFOR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -315,7 +345,8 @@ class Cana extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TDec_1302 $paramVLiqFor 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function setVLiqFor(\Sped\Schemas\V200\TDec_1302 $paramVLiqFor){
+    public function setVLiqFor(\Sped\Schemas\V200\TDec_1302 $paramVLiqFor)
+    {
         $this->removeElementsByTagName(self::VLIQFOR);
         $this->appendChild($paramVLiqFor, false);
         return $this;

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Avulsa;
  * @name RepEmi
  * @package Sped
  */
-class RepEmi extends \Sped\Components\Xml\Element  {
+class RepEmi extends \Sped\Components\Xml\Element 
+{
 
 }

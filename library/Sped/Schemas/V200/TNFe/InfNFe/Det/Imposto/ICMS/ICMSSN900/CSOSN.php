@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN900;
  * @name CSOSN
  * @package Sped
  */
-class CSOSN extends \Sped\Components\Xml\Element  {
+class CSOSN extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200;
  * @name TNfeProc
  * @package Sped
  */
-class TNfeProc extends \Sped\Components\Xml\Element  {
+class TNfeProc extends \Sped\Components\Xml\Element 
+{
 
     const NFE = 'NFe';
 
@@ -20,7 +21,8 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe 
      */
-    public function getNFe(){
+    public function getNFe()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
         return $this->getElementsByTagName(self::NFE)->item(0);
     }
@@ -30,7 +32,8 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe 
      */
-    public function addNFe($value = NULL){
+    public function addNFe($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -39,7 +42,8 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe $paramNFe 
      * @return \Sped\Schemas\V200\TNfeProc 
      */
-    public function setNFe(\Sped\Schemas\V200\TNFe $paramNFe){
+    public function setNFe(\Sped\Schemas\V200\TNFe $paramNFe)
+    {
         $this->removeElementsByTagName(self::NFE);
         $this->appendChild($paramNFe, false);
         return $this;
@@ -49,7 +53,8 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
-    public function getProtNFe(){
+    public function getProtNFe()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TProtNFe');
         return $this->getElementsByTagName(self::PROTNFE)->item(0);
     }
@@ -59,7 +64,8 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
-    public function addProtNFe($value = NULL){
+    public function addProtNFe($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TProtNFe(self::PROTNFE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -68,7 +74,8 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TProtNFe $paramProtNFe 
      * @return \Sped\Schemas\V200\TNfeProc 
      */
-    public function setProtNFe(\Sped\Schemas\V200\TProtNFe $paramProtNFe){
+    public function setProtNFe(\Sped\Schemas\V200\TProtNFe $paramProtNFe)
+    {
         $this->removeElementsByTagName(self::PROTNFE);
         $this->appendChild($paramProtNFe, false);
         return $this;
@@ -78,15 +85,16 @@ class TNfeProc extends \Sped\Components\Xml\Element  {
      * 
      * @return string 
      */
-    public function getVersao(){
+    public function getVersao()
+    {
         return $this->getAttribute('versao');
     }
 
     /**
      * 
-     * @param type $value 
      */
-    public function setVersao($value){
+    public function setVersao()
+    {
         $this->setAttribute('versao', $value);
         return $this;
     }

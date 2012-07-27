@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref;
  * @name RefECF
  * @package Sped
  */
-class RefECF extends \Sped\Components\Xml\Element  {
+class RefECF extends \Sped\Components\Xml\Element 
+{
 
     const MOD = 'mod';
 
@@ -22,7 +23,8 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod 
      */
-    public function getMod(){
+    public function getMod()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod');
         return $this->getElementsByTagName(self::MOD)->item(0);
     }
@@ -32,7 +34,8 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod 
      */
-    public function addMod($value = NULL){
+    public function addMod($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod(self::MOD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -41,7 +44,8 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod $paramMod 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */
-    public function setMod(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod $paramMod){
+    public function setMod(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod $paramMod)
+    {
         $this->removeElementsByTagName(self::MOD);
         $this->appendChild($paramMod, false);
         return $this;
@@ -51,7 +55,8 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF 
      */
-    public function getNECF(){
+    public function getNECF()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF');
         return $this->getElementsByTagName(self::NECF)->item(0);
     }
@@ -61,7 +66,8 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF 
      */
-    public function addNECF($value = NULL){
+    public function addNECF($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF(self::NECF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -70,7 +76,8 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF $paramNECF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */
-    public function setNECF(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF $paramNECF){
+    public function setNECF(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF $paramNECF)
+    {
         $this->removeElementsByTagName(self::NECF);
         $this->appendChild($paramNECF, false);
         return $this;
@@ -80,7 +87,8 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO 
      */
-    public function getNCOO(){
+    public function getNCOO()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO');
         return $this->getElementsByTagName(self::NCOO)->item(0);
     }
@@ -90,7 +98,8 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO 
      */
-    public function addNCOO($value = NULL){
+    public function addNCOO($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO(self::NCOO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -99,7 +108,8 @@ class RefECF extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO $paramNCOO 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */
-    public function setNCOO(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO $paramNCOO){
+    public function setNCOO(\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO $paramNCOO)
+    {
         $this->removeElementsByTagName(self::NCOO);
         $this->appendChild($paramNCOO, false);
         return $this;

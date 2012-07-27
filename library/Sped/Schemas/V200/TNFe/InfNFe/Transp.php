@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe;
  * @name Transp
  * @package Sped
  */
-class Transp extends \Sped\Components\Xml\Element  {
+class Transp extends \Sped\Components\Xml\Element 
+{
 
     const MODFRETE = 'modFrete';
 
@@ -32,7 +33,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete 
      */
-    public function getModFrete(){
+    public function getModFrete()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete');
         return $this->getElementsByTagName(self::MODFRETE)->item(0);
     }
@@ -42,7 +44,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete 
      */
-    public function addModFrete($value = NULL){
+    public function addModFrete($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete(self::MODFRETE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -51,7 +54,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete $paramModFrete 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
-    public function setModFrete(\Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete $paramModFrete){
+    public function setModFrete(\Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete $paramModFrete)
+    {
         $this->removeElementsByTagName(self::MODFRETE);
         $this->appendChild($paramModFrete, false);
         return $this;
@@ -62,7 +66,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
-    public function getTransporta($index){
+    public function getTransporta($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta');
         return $this->getElementsByTagName(self::TRANSPORTA)->item($index);
     }
@@ -71,7 +76,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
-    public function addTransporta(){
+    public function addTransporta()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta(self::TRANSPORTA, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -80,7 +86,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta $paramTransporta 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
-    public function setTransporta(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta $paramTransporta){
+    public function setTransporta(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta $paramTransporta)
+    {
         $this->removeElementsByTagName(self::TRANSPORTA);
         $this->appendChild($paramTransporta, false);
         return $this;
@@ -91,7 +98,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
-    public function getRetTransp($index){
+    public function getRetTransp($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp');
         return $this->getElementsByTagName(self::RETTRANSP)->item($index);
     }
@@ -100,7 +108,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
-    public function addRetTransp(){
+    public function addRetTransp()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp(self::RETTRANSP, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -109,7 +118,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp $paramRetTransp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
-    public function setRetTransp(\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp $paramRetTransp){
+    public function setRetTransp(\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp $paramRetTransp)
+    {
         $this->removeElementsByTagName(self::RETTRANSP);
         $this->appendChild($paramRetTransp, false);
         return $this;
@@ -120,7 +130,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
-    public function getVeicTransp($index){
+    public function getVeicTransp($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
         return $this->getElementsByTagName(self::VEICTRANSP)->item($index);
     }
@@ -130,7 +141,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
-    public function addVeicTransp($value = NULL){
+    public function addVeicTransp($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(self::VEICTRANSP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -139,7 +151,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TVeiculo $paramVeicTransp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
-    public function setVeicTransp(\Sped\Schemas\V200\TVeiculo $paramVeicTransp){
+    public function setVeicTransp(\Sped\Schemas\V200\TVeiculo $paramVeicTransp)
+    {
         $this->removeElementsByTagName(self::VEICTRANSP);
         $this->appendChild($paramVeicTransp, false);
         return $this;
@@ -150,7 +163,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
-    public function getReboque($index){
+    public function getReboque($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
         return $this->getElementsByTagName(self::REBOQUE)->item($index);
     }
@@ -160,7 +174,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
-    public function addReboque($value = NULL){
+    public function addReboque($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(self::REBOQUE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -169,7 +184,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TVeiculo $paramReboque 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
-    public function setReboque(\Sped\Schemas\V200\TVeiculo $paramReboque){
+    public function setReboque(\Sped\Schemas\V200\TVeiculo $paramReboque)
+    {
         $this->removeElementsByTagName(self::REBOQUE);
         $this->appendChild($paramReboque, false);
         return $this;
@@ -180,7 +196,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
      */
-    public function getVagao($index){
+    public function getVagao($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao');
         return $this->getElementsByTagName(self::VAGAO)->item($index);
     }
@@ -190,7 +207,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
      */
-    public function addVagao($value = NULL){
+    public function addVagao($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao(self::VAGAO, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -199,7 +217,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao $paramVagao 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
-    public function setVagao(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao $paramVagao){
+    public function setVagao(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao $paramVagao)
+    {
         $this->removeElementsByTagName(self::VAGAO);
         $this->appendChild($paramVagao, false);
         return $this;
@@ -210,7 +229,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
      */
-    public function getBalsa($index){
+    public function getBalsa($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa');
         return $this->getElementsByTagName(self::BALSA)->item($index);
     }
@@ -220,7 +240,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
      */
-    public function addBalsa($value = NULL){
+    public function addBalsa($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa(self::BALSA, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -229,7 +250,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa $paramBalsa 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
-    public function setBalsa(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa $paramBalsa){
+    public function setBalsa(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa $paramBalsa)
+    {
         $this->removeElementsByTagName(self::BALSA);
         $this->appendChild($paramBalsa, false);
         return $this;
@@ -240,7 +262,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol 
      */
-    public function getVol($index){
+    public function getVol($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol');
         return $this->getElementsByTagName(self::VOL)->item($index);
     }
@@ -249,7 +272,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol 
      */
-    public function addVol(){
+    public function addVol()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol(self::VOL, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -258,7 +282,8 @@ class Transp extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol $paramVol 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
-    public function setVol(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol $paramVol){
+    public function setVol(\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol $paramVol)
+    {
         $this->removeElementsByTagName(self::VOL);
         $this->appendChild($paramVol, false);
         return $this;

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TEndereco;
  * @name XLgr
  * @package Sped
  */
-class XLgr extends \Sped\Components\Xml\Element  {
+class XLgr extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -13,6 +13,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @name IndPag
  * @package Sped
  */
-class IndPag extends \Sped\Components\Xml\Element  {
+class IndPag extends \Sped\Components\Xml\Element 
+{
 
 }

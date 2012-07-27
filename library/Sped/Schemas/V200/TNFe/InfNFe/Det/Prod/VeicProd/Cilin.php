@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name Cilin
  * @package Sped
  */
-class Cilin extends \Sped\Components\Xml\Element  {
+class Cilin extends \Sped\Components\Xml\Element 
+{
 
 }

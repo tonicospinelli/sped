@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TRetConsReciNFe;
  * @name XMsg
  * @package Sped
  */
-class XMsg extends \Sped\Components\Xml\Element  {
+class XMsg extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name XCor
  * @package Sped
  */
-class XCor extends \Sped\Components\Xml\Element  {
+class XCor extends \Sped\Components\Xml\Element 
+{
 
 }

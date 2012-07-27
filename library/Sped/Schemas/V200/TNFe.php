@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200;
  * @name TNFe
  * @package Sped
  */
-class TNFe extends \Sped\Components\Xml\Element  {
+class TNFe extends \Sped\Components\Xml\Element 
+{
 
     const INFNFE = 'infNFe';
 
@@ -20,7 +21,8 @@ class TNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
-    public function getInfNFe(){
+    public function getInfNFe()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe');
         return $this->getElementsByTagName(self::INFNFE)->item(0);
     }
@@ -29,7 +31,8 @@ class TNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
-    public function addInfNFe(){
+    public function addInfNFe()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe(self::INFNFE, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -38,7 +41,8 @@ class TNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe $paramInfNFe 
      * @return \Sped\Schemas\V200\TNFe 
      */
-    public function setInfNFe(\Sped\Schemas\V200\TNFe\InfNFe $paramInfNFe){
+    public function setInfNFe(\Sped\Schemas\V200\TNFe\InfNFe $paramInfNFe)
+    {
         $this->removeElementsByTagName(self::INFNFE);
         $this->appendChild($paramInfNFe, false);
         return $this;
@@ -48,7 +52,8 @@ class TNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\SignatureType 
      */
-    public function getSignature(){
+    public function getSignature()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
         return $this->getElementsByTagName(self::SIGNATURE)->item(0);
     }
@@ -58,7 +63,8 @@ class TNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\SignatureType 
      */
-    public function addSignature($value = NULL){
+    public function addSignature($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
@@ -67,7 +73,8 @@ class TNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\SignatureType $paramSignature 
      * @return \Sped\Schemas\V200\TNFe 
      */
-    public function setSignature(\Sped\Schemas\V200\SignatureType $paramSignature){
+    public function setSignature(\Sped\Schemas\V200\SignatureType $paramSignature)
+    {
         $this->removeElementsByTagName(self::SIGNATURE);
         $this->appendChild($paramSignature, false);
         return $this;

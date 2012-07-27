@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TIdLote
  * @package Sped
  */
-class TIdLote extends \Sped\Components\Xml\Element  {
+class TIdLote extends \Sped\Components\Xml\Element 
+{
 
 }

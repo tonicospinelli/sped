@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol;
  * @name NVol
  * @package Sped
  */
-class NVol extends \Sped\Components\Xml\Element  {
+class NVol extends \Sped\Components\Xml\Element 
+{
 
 }

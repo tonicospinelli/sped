@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TEnderEmi;
  * @name XMun
  * @package Sped
  */
-class XMun extends \Sped\Components\Xml\Element  {
+class XMun extends \Sped\Components\Xml\Element 
+{
 
 }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Exporta;
  * @name XLocEmbarq
  * @package Sped
  */
-class XLocEmbarq extends \Sped\Components\Xml\Element  {
+class XLocEmbarq extends \Sped\Components\Xml\Element 
+{
 
 }

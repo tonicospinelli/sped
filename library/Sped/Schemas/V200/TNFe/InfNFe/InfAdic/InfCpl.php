@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
  * @name InfCpl
  * @package Sped
  */
-class InfCpl extends \Sped\Components\Xml\Element  {
+class InfCpl extends \Sped\Components\Xml\Element 
+{
 
 }

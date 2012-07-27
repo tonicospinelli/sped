@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TMod
  * @package Sped
  */
-class TMod extends \Sped\Components\Xml\Element  {
+class TMod extends \Sped\Components\Xml\Element 
+{
 
 }

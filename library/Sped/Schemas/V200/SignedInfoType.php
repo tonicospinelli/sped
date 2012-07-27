@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200;
  * @name SignedInfoType
  * @package Sped
  */
-class SignedInfoType extends \Sped\Components\Xml\Element  {
+class SignedInfoType extends \Sped\Components\Xml\Element 
+{
 
     const CANONICALIZATIONMETHOD = 'CanonicalizationMethod';
 
@@ -22,7 +23,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
      */
-    public function getCanonicalizationMethod(){
+    public function getCanonicalizationMethod()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod');
         return $this->getElementsByTagName(self::CANONICALIZATIONMETHOD)->item(0);
     }
@@ -31,7 +33,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod 
      */
-    public function addCanonicalizationMethod(){
+    public function addCanonicalizationMethod()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod(self::CANONICALIZATIONMETHOD, NULL, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
@@ -40,7 +43,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod $paramCanonicalizationMethod 
      * @return \Sped\Schemas\V200\SignedInfoType 
      */
-    public function setCanonicalizationMethod(\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod $paramCanonicalizationMethod){
+    public function setCanonicalizationMethod(\Sped\Schemas\V200\SignedInfoType\CanonicalizationMethod $paramCanonicalizationMethod)
+    {
         $this->removeElementsByTagName(self::CANONICALIZATIONMETHOD);
         $this->appendChild($paramCanonicalizationMethod, false);
         return $this;
@@ -50,7 +54,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\SignedInfoType\SignatureMethod 
      */
-    public function getSignatureMethod(){
+    public function getSignatureMethod()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignedInfoType\SignatureMethod');
         return $this->getElementsByTagName(self::SIGNATUREMETHOD)->item(0);
     }
@@ -59,7 +64,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\SignedInfoType\SignatureMethod 
      */
-    public function addSignatureMethod(){
+    public function addSignatureMethod()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\SignedInfoType\SignatureMethod(self::SIGNATUREMETHOD, NULL, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
@@ -68,7 +74,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\SignedInfoType\SignatureMethod $paramSignatureMethod 
      * @return \Sped\Schemas\V200\SignedInfoType 
      */
-    public function setSignatureMethod(\Sped\Schemas\V200\SignedInfoType\SignatureMethod $paramSignatureMethod){
+    public function setSignatureMethod(\Sped\Schemas\V200\SignedInfoType\SignatureMethod $paramSignatureMethod)
+    {
         $this->removeElementsByTagName(self::SIGNATUREMETHOD);
         $this->appendChild($paramSignatureMethod, false);
         return $this;
@@ -78,7 +85,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
-    public function getReference(){
+    public function getReference()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\ReferenceType');
         return $this->getElementsByTagName(self::REFERENCE)->item(0);
     }
@@ -88,7 +96,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
-    public function addReference($value = NULL){
+    public function addReference($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\ReferenceType(self::REFERENCE, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
@@ -97,7 +106,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\ReferenceType $paramReference 
      * @return \Sped\Schemas\V200\SignedInfoType 
      */
-    public function setReference(\Sped\Schemas\V200\ReferenceType $paramReference){
+    public function setReference(\Sped\Schemas\V200\ReferenceType $paramReference)
+    {
         $this->removeElementsByTagName(self::REFERENCE);
         $this->appendChild($paramReference, false);
         return $this;
@@ -107,15 +117,16 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * 
      * @return string 
      */
-    public function getId(){
+    public function getId()
+    {
         return $this->getAttribute('Id');
     }
 
     /**
      * 
-     * @param type $value 
      */
-    public function setId($value){
+    public function setId()
+    {
         $this->setAttribute('Id', $value);
         return $this;
     }
@@ -124,7 +135,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * 
      * @return boolean 
      */
-    public function isSetId(){
+    public function isSetId()
+    {
         return $this->hasAttribute('Id');
     }
 
@@ -132,7 +144,8 @@ class SignedInfoType extends \Sped\Components\Xml\Element  {
      * 
      * @return boolean 
      */
-    public function unsetId(){
+    public function unsetId()
+    {
         $this->removeAttribute('Id');
         return true;
     }

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd;
  * @name PesoB
  * @package Sped
  */
-class PesoB extends \Sped\Components\Xml\Element  {
+class PesoB extends \Sped\Components\Xml\Element 
+{
 
 }

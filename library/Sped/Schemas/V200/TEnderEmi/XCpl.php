@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TEnderEmi;
  * @name XCpl
  * @package Sped
  */
-class XCpl extends \Sped\Components\Xml\Element  {
+class XCpl extends \Sped\Components\Xml\Element 
+{
 
 }

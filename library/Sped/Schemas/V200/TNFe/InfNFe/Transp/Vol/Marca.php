@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol;
  * @name Marca
  * @package Sped
  */
-class Marca extends \Sped\Components\Xml\Element  {
+class Marca extends \Sped\Components\Xml\Element 
+{
 
 }

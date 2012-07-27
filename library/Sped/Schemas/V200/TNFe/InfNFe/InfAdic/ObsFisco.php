@@ -12,7 +12,8 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\InfAdic;
  * @name ObsFisco
  * @package Sped
  */
-class ObsFisco extends \Sped\Components\Xml\Element  {
+class ObsFisco extends \Sped\Components\Xml\Element 
+{
 
     const XTEXTO = 'xTexto';
 
@@ -20,7 +21,8 @@ class ObsFisco extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto 
      */
-    public function getXTexto(){
+    public function getXTexto()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto');
         return $this->getElementsByTagName(self::XTEXTO)->item(0);
     }
@@ -30,7 +32,8 @@ class ObsFisco extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto 
      */
-    public function addXTexto($value = NULL){
+    public function addXTexto($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto(self::XTEXTO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -39,7 +42,8 @@ class ObsFisco extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto $paramXTexto 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      */
-    public function setXTexto(\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto $paramXTexto){
+    public function setXTexto(\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto $paramXTexto)
+    {
         $this->removeElementsByTagName(self::XTEXTO);
         $this->appendChild($paramXTexto, false);
         return $this;
@@ -49,15 +53,16 @@ class ObsFisco extends \Sped\Components\Xml\Element  {
      * 
      * @return string 
      */
-    public function getXCampo(){
+    public function getXCampo()
+    {
         return $this->getAttribute('xCampo');
     }
 
     /**
      * 
-     * @param type $value 
      */
-    public function setXCampo($value){
+    public function setXCampo()
+    {
         $this->setAttribute('xCampo', $value);
         return $this;
     }

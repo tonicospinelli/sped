@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TEndereco;
  * @name Fone
  * @package Sped
  */
-class Fone extends \Sped\Components\Xml\Element  {
+class Fone extends \Sped\Components\Xml\Element 
+{
 
 }

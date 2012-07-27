@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200;
  * @name TRetEnviNFe
  * @package Sped
  */
-class TRetEnviNFe extends \Sped\Components\Xml\Element  {
+class TRetEnviNFe extends \Sped\Components\Xml\Element 
+{
 
     const TPAMB = 'tpAmb';
 
@@ -30,7 +31,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TAmb 
      */
-    public function getTpAmb(){
+    public function getTpAmb()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TAmb');
         return $this->getElementsByTagName(self::TPAMB)->item(0);
     }
@@ -40,7 +42,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
-    public function addTpAmb($value = NULL){
+    public function addTpAmb($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TAmb(self::TPAMB, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -49,7 +52,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TAmb $paramTpAmb 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
-    public function setTpAmb(\Sped\Schemas\V200\TAmb $paramTpAmb){
+    public function setTpAmb(\Sped\Schemas\V200\TAmb $paramTpAmb)
+    {
         $this->removeElementsByTagName(self::TPAMB);
         $this->appendChild($paramTpAmb, false);
         return $this;
@@ -59,7 +63,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TVerAplic 
      */
-    public function getVerAplic(){
+    public function getVerAplic()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVerAplic');
         return $this->getElementsByTagName(self::VERAPLIC)->item(0);
     }
@@ -69,7 +74,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TVerAplic 
      */
-    public function addVerAplic($value = NULL){
+    public function addVerAplic($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TVerAplic(self::VERAPLIC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -78,7 +84,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TVerAplic $paramVerAplic 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
-    public function setVerAplic(\Sped\Schemas\V200\TVerAplic $paramVerAplic){
+    public function setVerAplic(\Sped\Schemas\V200\TVerAplic $paramVerAplic)
+    {
         $this->removeElementsByTagName(self::VERAPLIC);
         $this->appendChild($paramVerAplic, false);
         return $this;
@@ -88,7 +95,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TStat 
      */
-    public function getCStat(){
+    public function getCStat()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TStat');
         return $this->getElementsByTagName(self::CSTAT)->item(0);
     }
@@ -98,7 +106,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TStat 
      */
-    public function addCStat($value = NULL){
+    public function addCStat($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TStat(self::CSTAT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -107,7 +116,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TStat $paramCStat 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
-    public function setCStat(\Sped\Schemas\V200\TStat $paramCStat){
+    public function setCStat(\Sped\Schemas\V200\TStat $paramCStat)
+    {
         $this->removeElementsByTagName(self::CSTAT);
         $this->appendChild($paramCStat, false);
         return $this;
@@ -117,7 +127,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TMotivo 
      */
-    public function getXMotivo(){
+    public function getXMotivo()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TMotivo');
         return $this->getElementsByTagName(self::XMOTIVO)->item(0);
     }
@@ -127,7 +138,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TMotivo 
      */
-    public function addXMotivo($value = NULL){
+    public function addXMotivo($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TMotivo(self::XMOTIVO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -136,7 +148,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TMotivo $paramXMotivo 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
-    public function setXMotivo(\Sped\Schemas\V200\TMotivo $paramXMotivo){
+    public function setXMotivo(\Sped\Schemas\V200\TMotivo $paramXMotivo)
+    {
         $this->removeElementsByTagName(self::XMOTIVO);
         $this->appendChild($paramXMotivo, false);
         return $this;
@@ -146,7 +159,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
-    public function getCUF(){
+    public function getCUF()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCodUfIBGE');
         return $this->getElementsByTagName(self::CUF)->item(0);
     }
@@ -156,7 +170,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
-    public function addCUF($value = NULL){
+    public function addCUF($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TCodUfIBGE(self::CUF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -165,7 +180,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TCodUfIBGE $paramCUF 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
-    public function setCUF(\Sped\Schemas\V200\TCodUfIBGE $paramCUF){
+    public function setCUF(\Sped\Schemas\V200\TCodUfIBGE $paramCUF)
+    {
         $this->removeElementsByTagName(self::CUF);
         $this->appendChild($paramCUF, false);
         return $this;
@@ -175,7 +191,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\DateTime 
      */
-    public function getDhRecbto(){
+    public function getDhRecbto()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\DateTime');
         return $this->getElementsByTagName(self::DHRECBTO)->item(0);
     }
@@ -185,7 +202,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\DateTime 
      */
-    public function addDhRecbto($value = NULL){
+    public function addDhRecbto($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\DateTime(self::DHRECBTO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -194,7 +212,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\DateTime $paramDhRecbto 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
-    public function setDhRecbto(\Sped\Schemas\V200\DateTime $paramDhRecbto){
+    public function setDhRecbto(\Sped\Schemas\V200\DateTime $paramDhRecbto)
+    {
         $this->removeElementsByTagName(self::DHRECBTO);
         $this->appendChild($paramDhRecbto, false);
         return $this;
@@ -205,7 +224,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param type $index 
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
-    public function getInfRec($index){
+    public function getInfRec($index)
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TRetEnviNFe\InfRec');
         return $this->getElementsByTagName(self::INFREC)->item($index);
     }
@@ -214,7 +234,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
-    public function addInfRec(){
+    public function addInfRec()
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TRetEnviNFe\InfRec(self::INFREC, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
@@ -223,7 +244,8 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TRetEnviNFe\InfRec $paramInfRec 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
-    public function setInfRec(\Sped\Schemas\V200\TRetEnviNFe\InfRec $paramInfRec){
+    public function setInfRec(\Sped\Schemas\V200\TRetEnviNFe\InfRec $paramInfRec)
+    {
         $this->removeElementsByTagName(self::INFREC);
         $this->appendChild($paramInfRec, false);
         return $this;
@@ -233,15 +255,16 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element  {
      * 
      * @return string 
      */
-    public function getVersao(){
+    public function getVersao()
+    {
         return $this->getAttribute('versao');
     }
 
     /**
      * 
-     * @param type $value 
      */
-    public function setVersao($value){
+    public function setVersao()
+    {
         $this->setAttribute('versao', $value);
         return $this;
     }

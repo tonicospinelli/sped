@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200;
  * @name TransformType
  * @package Sped
  */
-class TransformType extends \Sped\Components\Xml\Element  {
+class TransformType extends \Sped\Components\Xml\Element 
+{
 
     const XPATH = 'XPath';
 
@@ -18,7 +19,8 @@ class TransformType extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\String 
      */
-    public function getXPath(){
+    public function getXPath()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\String');
         return $this->getElementsByTagName(self::XPATH)->item(0);
     }
@@ -28,7 +30,8 @@ class TransformType extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\String 
      */
-    public function addXPath($value = NULL){
+    public function addXPath($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\String(self::XPATH, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
@@ -37,7 +40,8 @@ class TransformType extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\String $paramXPath 
      * @return \Sped\Schemas\V200\TransformType 
      */
-    public function setXPath(\Sped\Schemas\V200\String $paramXPath){
+    public function setXPath(\Sped\Schemas\V200\String $paramXPath)
+    {
         $this->removeElementsByTagName(self::XPATH);
         $this->appendChild($paramXPath, false);
         return $this;
@@ -47,15 +51,16 @@ class TransformType extends \Sped\Components\Xml\Element  {
      * 
      * @return string 
      */
-    public function getAlgorithm(){
+    public function getAlgorithm()
+    {
         return $this->getAttribute('Algorithm');
     }
 
     /**
      * 
-     * @param type $value 
      */
-    public function setAlgorithm($value){
+    public function setAlgorithm()
+    {
         $this->setAttribute('Algorithm', $value);
         return $this;
     }

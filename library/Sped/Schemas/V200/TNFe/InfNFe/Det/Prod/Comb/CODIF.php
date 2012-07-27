@@ -16,6 +16,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb;
  * @name CODIF
  * @package Sped
  */
-class CODIF extends \Sped\Components\Xml\Element  {
+class CODIF extends \Sped\Components\Xml\Element 
+{
 
 }

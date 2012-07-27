@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TEnderEmi;
  * @name XBairro
  * @package Sped
  */
-class XBairro extends \Sped\Components\Xml\Element  {
+class XBairro extends \Sped\Components\Xml\Element 
+{
 
 }

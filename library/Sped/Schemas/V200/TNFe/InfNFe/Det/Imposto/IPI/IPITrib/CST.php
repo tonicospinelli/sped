@@ -14,6 +14,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib;
  * @name CST
  * @package Sped
  */
-class CST extends \Sped\Components\Xml\Element  {
+class CST extends \Sped\Components\Xml\Element 
+{
 
 }

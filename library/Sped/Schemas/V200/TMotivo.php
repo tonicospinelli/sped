@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200;
  * @name TMotivo
  * @package Sped
  */
-class TMotivo extends \Sped\Components\Xml\Element  {
+class TMotivo extends \Sped\Components\Xml\Element 
+{
 
 }

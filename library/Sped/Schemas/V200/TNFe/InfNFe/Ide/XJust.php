@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Ide;
  * @name XJust
  * @package Sped
  */
-class XJust extends \Sped\Components\Xml\Element  {
+class XJust extends \Sped\Components\Xml\Element 
+{
 
 }

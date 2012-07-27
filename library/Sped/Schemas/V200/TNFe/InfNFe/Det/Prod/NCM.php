@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Det\Prod;
  * @name NCM
  * @package Sped
  */
-class NCM extends \Sped\Components\Xml\Element  {
+class NCM extends \Sped\Components\Xml\Element 
+{
 
 }

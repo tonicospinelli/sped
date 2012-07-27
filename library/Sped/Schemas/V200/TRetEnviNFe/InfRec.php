@@ -10,7 +10,8 @@ namespace Sped\Schemas\V200\TRetEnviNFe;
  * @name InfRec
  * @package Sped
  */
-class InfRec extends \Sped\Components\Xml\Element  {
+class InfRec extends \Sped\Components\Xml\Element 
+{
 
     const NREC = 'nRec';
 
@@ -20,7 +21,8 @@ class InfRec extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TRec 
      */
-    public function getNRec(){
+    public function getNRec()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TRec');
         return $this->getElementsByTagName(self::NREC)->item(0);
     }
@@ -30,7 +32,8 @@ class InfRec extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TRec 
      */
-    public function addNRec($value = NULL){
+    public function addNRec($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TRec(self::NREC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -39,7 +42,8 @@ class InfRec extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TRec $paramNRec 
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
-    public function setNRec(\Sped\Schemas\V200\TRec $paramNRec){
+    public function setNRec(\Sped\Schemas\V200\TRec $paramNRec)
+    {
         $this->removeElementsByTagName(self::NREC);
         $this->appendChild($paramNRec, false);
         return $this;
@@ -49,7 +53,8 @@ class InfRec extends \Sped\Components\Xml\Element  {
      * 
      * @return \Sped\Schemas\V200\TMed 
      */
-    public function getTMed(){
+    public function getTMed()
+    {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TMed');
         return $this->getElementsByTagName(self::TMED)->item(0);
     }
@@ -59,7 +64,8 @@ class InfRec extends \Sped\Components\Xml\Element  {
      * @param type $value 
      * @return \Sped\Schemas\V200\TMed 
      */
-    public function addTMed($value = NULL){
+    public function addTMed($value = NULL)
+    {
         return $this->appendChild(new \Sped\Schemas\V200\TMed(self::TMED, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
@@ -68,7 +74,8 @@ class InfRec extends \Sped\Components\Xml\Element  {
      * @param \Sped\Schemas\V200\TMed $paramTMed 
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
-    public function setTMed(\Sped\Schemas\V200\TMed $paramTMed){
+    public function setTMed(\Sped\Schemas\V200\TMed $paramTMed)
+    {
         $this->removeElementsByTagName(self::TMED);
         $this->appendChild($paramTMed, false);
         return $this;

@@ -10,6 +10,7 @@ namespace Sped\Schemas\V200\TNFe\InfNFe\Emit;
  * @name CNAE
  * @package Sped
  */
-class CNAE extends \Sped\Components\Xml\Element  {
+class CNAE extends \Sped\Components\Xml\Element 
+{
 
 }

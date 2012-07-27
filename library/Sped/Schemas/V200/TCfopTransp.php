@@ -11,6 +11,7 @@ namespace Sped\Schemas\V200;
  * @name TCfopTransp
  * @package Sped
  */
-class TCfopTransp extends \Sped\Components\Xml\Element  {
+class TCfopTransp extends \Sped\Components\Xml\Element 
+{
 
 }
