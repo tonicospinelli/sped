@@ -37,57 +37,60 @@ use Sped\Types\StringHelper;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Cean extends AbstractValidate {
+class Cean extends AbstractValidate
+{
 
-  /**
-   * Números multiplicadores.
-   * @var \ArrayObject
-   */
-  protected $p = array(3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3);
+    /**
+     * Números multiplicadores.
+     * @var \ArrayObject
+     */
+    protected $p = array(3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3, 1, 3);
 
-  /**
-   * Validador de Código de Barras  
-   */
-  function __construct() {
-    $this->p = new \ArrayObject($this->p);
-  }
-
-  /**
-   * Valida o código de barras.
-   * @param mixed $value
-   * @return boolean
-   */
-  public function validate($input) {
-    $input = new StringHelper($input);
-
-    $digitoCean = 0;
-    $indiceInicial = 0;
-    $digitoCalculo = 0;
-    $digitoCalculado = 0;
-    $tamCean = $input->length;
-    $ceanSemDigito = new StringHelper();
-
-    if (!in_array($tamCean, array(8, 12, 13, 14, 18)))
-      return false;
-
-    $digitoCean = (int) $input->right(1, 1)->getValue();
-    $ceanSemDigito->setValue($input->left(0, $input->length - 1)->getValue());
-    $indiceInicial = $this->p->count() - $ceanSemDigito->length;
-
-    for ($i = 0; $i < $ceanSemDigito->length; $i++)
-      $digitoCalculo += ((int) $ceanSemDigito->substring($i, 1)->getValue()) * $this->p->offsetGet($indiceInicial++);
-
-    if ($digitoCalculo % 10 == 0) {
-      $digitoCalculado = 0;
-    } else {
-      $divTemp = (int) ceil($digitoCalculo / 10.0) * 10;
-      $digitoCalculado = $divTemp - $digitoCalculo;
+    /**
+     * Validador de Código de Barras  
+     */
+    function __construct()
+    {
+        $this->p = new \ArrayObject($this->p);
     }
 
-    if ($digitoCalculado === $digitoCean)
-      return true;
+    /**
+     * Valida o código de barras.
+     * @param mixed $value
+     * @return boolean
+     */
+    public function validate($input)
+    {
+        $input = new StringHelper($input);
 
-    return false;
-  }
+        $digitoCean = 0;
+        $indiceInicial = 0;
+        $digitoCalculo = 0;
+        $digitoCalculado = 0;
+        $tamCean = $input->length;
+        $ceanSemDigito = new StringHelper();
+
+        if (!in_array($tamCean, array(8, 12, 13, 14, 18)))
+            return false;
+
+        $digitoCean = (int) $input->right(1, 1)->getValue();
+        $ceanSemDigito->setValue($input->left(0, $input->length - 1)->getValue());
+        $indiceInicial = $this->p->count() - $ceanSemDigito->length;
+
+        for ($i = 0; $i < $ceanSemDigito->length; $i++)
+            $digitoCalculo += ((int) $ceanSemDigito->substring($i, 1)->getValue()) * $this->p->offsetGet($indiceInicial++);
+
+        if ($digitoCalculo % 10 == 0) {
+            $digitoCalculado = 0;
+        } else {
+            $divTemp = (int) ceil($digitoCalculo / 10.0) * 10;
+            $digitoCalculado = $divTemp - $digitoCalculo;
+        }
+
+        if ($digitoCalculado === $digitoCean)
+            return true;
+
+        return false;
+    }
 
 }
