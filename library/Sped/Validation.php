@@ -40,18 +40,22 @@ namespace Sped;
  * @method \Sped\Validation\Cnpj cnpj()
  * @method \Sped\Validation\Modulo11 modulo11(int numeroDigitos, int limiteMultiplicador)
  */
-class Validation {
+class Validation
+{
 
-    public static function __callStatic($ruleName, $arguments) {
+    public static function __callStatic($ruleName, $arguments)
+    {
         $validator = new self;
         return $validator->__call($ruleName, $arguments);
     }
 
-    public function __call($method, $arguments) {
+    public function __call($method, $arguments)
+    {
         return self::buildRule($method, $arguments);
     }
 
-    public static function buildRule($ruleSpec, $arguments = array()) {
+    public static function buildRule($ruleSpec, $arguments = array())
+    {
         if ($ruleSpec instanceof \Sped\Validation\IValidador)
             return $ruleSpec;
 
