@@ -37,13 +37,15 @@ namespace Sped;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Autoloader {
+class Autoloader
+{
 
     /**
      * Register the Autoloader with SPL
      *
      */
-    public static function register() {
+    public static function register()
+    {
         if (function_exists('__autoload'))
             spl_autoload_register('__autoload');
 
@@ -55,7 +57,8 @@ class Autoloader {
      *
      * @param string $className Name of the object to load
      */
-    public static function load($className) {
+    public static function load($className)
+    {
         if ((class_exists($className)) || (strpos($className, 'Sped') !== 0))
             return FALSE;
 
