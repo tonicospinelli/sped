@@ -107,7 +107,7 @@ abstract class Modulo11 extends AbstractValidate {
             throw new Exception('Não é possível validar o documento');
 
         $this->setDocument($value);
-        $base = new String($this->getDocument()->getBaseNumber());
+        $base = new \Sped\Types\StringHelper($this->getDocument()->getBaseNumber());
 
         for ($n = 1; $n <= $this->document->getDigitsCount(); $n++) {
             $soma = 0;
