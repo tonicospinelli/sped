@@ -48,13 +48,9 @@ class ChaveAcesso extends Modulo11 {
    * @return boolean 
    */
   public function validate($value) {
-    if ($value instanceof \Sped\Types\ChaveAcesso)
+    if (!$value instanceof \Sped\Types\ChaveAcesso)
       $value = new \Sped\Types\ChaveAcesso($value);
     return parent::validate($value);
-  }
-
-  public function defaultDigitCount() {
-    return 44;
   }
 
 }
