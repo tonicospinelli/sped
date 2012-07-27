@@ -48,8 +48,8 @@ class ChaveAcesso extends Modulo11 {
    * @return boolean 
    */
   public function validate($value) {
-    if ($value instanceof ChaveAcesso)
-      $value = new ChaveAcesso($value);
+    if ($value instanceof \Sped\Types\ChaveAcesso)
+      $value = new \Sped\Types\ChaveAcesso($value);
     return parent::validate($value);
   }
 
