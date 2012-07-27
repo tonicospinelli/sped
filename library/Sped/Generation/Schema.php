@@ -35,7 +35,8 @@ namespace Sped\Generation;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class Schema {
+class Schema
+{
 
     /**
      *
@@ -45,11 +46,13 @@ class Schema {
     protected $dirTarget = null;
     protected $defaultNamespace = null;
 
-    public function getDefaultNamespace() {
+    public function getDefaultNamespace()
+    {
         return $this->defaultNamespace;
     }
 
-    public function setDefaultNamespace($defaultNamespace) {
+    public function setDefaultNamespace($defaultNamespace)
+    {
         $this->defaultNamespace = $defaultNamespace;
     }
 
@@ -57,7 +60,8 @@ class Schema {
      *
      * @return string
      */
-    public function getDirTarget() {
+    public function getDirTarget()
+    {
         return $this->dirTarget;
     }
 
@@ -67,7 +71,8 @@ class Schema {
      * @return \Sped\Generation\Schema
      * @throws \Exception 
      */
-    public function setDirTarget($dirTarget) {
+    public function setDirTarget($dirTarget)
+    {
         if (!is_dir($dirTarget))
             throw new \Exception('This directory ' . $dirTarget . 'is not found');
         $this->dirTarget = realpath($dirTarget);
@@ -78,7 +83,8 @@ class Schema {
      * 
      * @return \Sped\Components\Xml\Schema
      */
-    public function getLoadedSchema() {
+    public function getLoadedSchema()
+    {
         return $this->loadedSchema;
     }
 
@@ -88,7 +94,8 @@ class Schema {
      * @return \Sped\Generation\Schema
      * @throws \RuntimeException 
      */
-    public function loadXmlSchema($fileName) {
+    public function loadXmlSchema($fileName)
+    {
         $fileName = realpath($fileName);
 
         if (!is_file($fileName))
@@ -104,7 +111,8 @@ class Schema {
      * @return boolean
      * @throws \RuntimeException 
      */
-    public function exportClasses() {
+    public function exportClasses()
+    {
         $xsd = $this->getLoadedSchema();
         if (!$xsd instanceof \Sped\Components\Xml\Schema)
             throw new \RuntimeException('Can\'t read a xsd file to export classes');
@@ -127,7 +135,8 @@ class Schema {
      * @param string $namespace
      * @param string $dirTarget 
      */
-    public function createClassFromNode(\DOMElement $node = null, $namespace = null, $dirTarget = null) {
+    public function createClassFromNode(\DOMElement $node = null, $namespace = null, $dirTarget = null)
+    {
         if ($node === null)
             $node = $this->getLoadedSchema()->documentElement;
 
@@ -196,7 +205,8 @@ class Schema {
         $class->save($dirTarget);
     }
 
-    public function createClassMethodsFromNode(\PhpClass &$class, \DOMElement $node) {
+    public function createClassMethodsFromNode(\PhpClass &$class, \DOMElement $node)
+    {
         $dom = new \DOMXPath($this->loadedSchema);
         if ($node->hasAttribute('type')) {
             $nodes = $dom->query("//*[@name='{$node->getAttribute('type')}']");
@@ -266,20 +276,23 @@ class Schema {
         }
     }
 
-    public function hasChildrenElements(\DOMElement $node) {
+    public function hasChildrenElements(\DOMElement $node)
+    {
         return ($node->getElementsByTagName('element')->length > 0
                 OR $node->getElementsByTagName('simpleType')->length > 0
                 OR $node->getElementsByTagName('choice')->length > 0
                 OR $node->getElementsByTagName('complexType')->length > 0);
     }
 
-    public function isLastLevel(\DOMElement $node) {
+    public function isLastLevel(\DOMElement $node)
+    {
         return ($node->localName == 'element'
                 AND $node->getElementsByTagName('complexType')->length === 0
                 AND $node->getElementsByTagName('sequence')->length === 0);
     }
 
-    public function createClassConstructMethod($namespace, $isSetValue = false) {
+    public function createClassConstructMethod($namespace, $isSetValue = false)
+    {
         $met = new \PhpClass_Method(array(
                     'name' => '__construct',
                     'code' => "parent::__construct(\$name, null, '$namespace');",
@@ -295,15 +308,18 @@ class Schema {
         return $met;
     }
 
-    public function getNodeLevel(\DOMElement $node) {
+    public function getNodeLevel(\DOMElement $node)
+    {
         return (count(explode('/', $node->getNodePath())) - 1);
     }
 
-    public function getPrefixName($name) {
+    public function getPrefixName($name)
+    {
         return preg_replace('/:.*$/', '', $name);
     }
 
-    public function getSufixName($name) {
+    public function getSufixName($name)
+    {
         return preg_replace('/^.*:/', '', $name);
     }
 
@@ -312,7 +328,8 @@ class Schema {
      * @param \DOMElement $node
      * @return string 
      */
-    public function getDocumentation(\DOMElement $node) {
+    public function getDocumentation(\DOMElement $node)
+    {
         $description = null;
 
         if (!$node->hasChildNodes())
@@ -331,7 +348,8 @@ class Schema {
         return $description;
     }
 
-    public function createAttributeMethods(\PhpClass &$class, \DOMElement $node) {
+    public function createAttributeMethods(\PhpClass &$class, \DOMElement $node)
+    {
         $methodName = $node->getAttribute('name');
         $returnType = in_array($node->getAttribute('type'), array('string')) ? null : $class->getFullName();
 
@@ -343,7 +361,8 @@ class Schema {
         }
     }
 
-    public function createAttributeGetMethod($name) {
+    public function createAttributeGetMethod($name)
+    {
         $met = new \PhpClass_Method(array(
                     'name' => 'get' . ucfirst($name),
                     'returns' => 'string'
@@ -361,7 +380,8 @@ CODE;
      * @param string $type
      * @return \PhpClass_Method 
      */
-    public function createAttributeSetMethod($methodName, $type = null) {
+    public function createAttributeSetMethod($methodName, $type = null)
+    {
         $method = new \PhpClass_Method(array(
                     'name' => 'set' . ucfirst($methodName),
                     'parameters' => array(
@@ -382,7 +402,8 @@ CODE;
      * @param string $$methodName
      * @return \PhpClass_Method 
      */
-    public function createAttributeIsSetMethod($methodName) {
+    public function createAttributeIsSetMethod($methodName)
+    {
         $met = new \PhpClass_Method(array(
                     'name' => 'isSet' . ucfirst($methodName),
                     'returns' => 'boolean'
@@ -399,7 +420,8 @@ CODE;
      * @param string $methodName
      * @return \PhpClass_Method 
      */
-    public function createAttributeUnsetMethod($methodName) {
+    public function createAttributeUnsetMethod($methodName)
+    {
         $met = new \PhpClass_Method(array(
                     'name' => 'unset' . ucfirst($methodName),
                     'returns' => 'boolean'
@@ -420,7 +442,8 @@ CODE;
      * @param type $isElement
      * @return \PhpClass_Method 
      */
-    public function createElementGetMethod($methodName, $type, $hasIndex = false, $isElement = true) {
+    public function createElementGetMethod($methodName, $type, $hasIndex = false, $isElement = true)
+    {
         $methodName = ucfirst($methodName);
         $constantName = mb_strtoupper($methodName);
         $param = '0';
@@ -449,7 +472,8 @@ CODE;
      * @param array $config
      * @return \PhpClass_Method 
      */
-    public function createElementAddMethod($config = array()) {
+    public function createElementAddMethod($config = array())
+    {
 
         if (is_null($config['name']) OR empty($config['name']))
             throw new \RuntimeException("The method name can't be a null or empty");
@@ -493,7 +517,8 @@ CODE;
      * @param string $type
      * @return \PhpClass_Method 
      */
-    public function createElementSetMethod($methodName, $type) {
+    public function createElementSetMethod($methodName, $type)
+    {
         $methodName = ucfirst($methodName);
         $constantName = mb_strtoupper($methodName);
         $method = new \PhpClass_Method(array('name' => 'set' . $methodName));
