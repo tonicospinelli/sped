@@ -54,19 +54,19 @@ class Mask
             $mask = strrev($mask);
         }
 
-        $maskared = '';
+        $masked = '';
         $k = 0;
         $i = -1;
         $length = mb_strlen($mask);
         while (++$i < $length) {
             if ($mask[$i] == '#' && isset($input[$k]))
-                $maskared .= $input[$k++];
+                $masked .= $input[$k++];
             else if ($mask[$i] == '0')
-                $maskared .= (isset($input[$k]) ? $input[$k++] : $mask[$i]);
+                $masked .= (isset($input[$k]) ? $input[$k++] : $mask[$i]);
             else if (isset($mask[$i]))
-                $maskared .= $mask[$i];
+                $masked .= $mask[$i] == '#' ? '' : $mask[$i];
         }
-        return is_numeric($input) ? strrev($maskared) : $maskared;
+        return is_numeric($input) ? strrev($masked) : $masked;
     }
 
     /**
