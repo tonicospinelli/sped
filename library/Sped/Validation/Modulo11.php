@@ -110,11 +110,11 @@ abstract class Modulo11 extends AbstractValidate
      */
     public function validate($value)
     {
-        if (!$value instanceof \Sped\Types\AbstractDocument)
+        if (!$value instanceof \Sped\Commons\Documents\AbstractDocument)
             throw new \Exception('O documento não é do tipo \Sped\Types\AbstractDocument');
 
         $this->setDocument($value);
-        $base = new \Sped\Types\StringHelper($this->getDocument()->getBaseNumber());
+        $base = new \Sped\Commons\StringHelper($this->getDocument()->getBaseNumber());
 
         for ($n = 1; $n <= $this->document->getDigitsCount(); $n++) {
             $soma = 0;
