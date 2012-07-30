@@ -48,18 +48,19 @@ class Cpf extends AbstractDocument
         return 2;
     }
 
-    /**
-     * 
-     * @return string
-     */
-    public function getMasked()
+    public function defaultDocumentLength()
+    {
+        return 11;
+    }
+
+    public function getValueMasked()
     {
         return \Sped\Commons\Mask::exec($this->getUnMasked(), '000.000.000-00');
     }
 
-    public function defaultDocumentLength()
+    public function isValid()
     {
-        return 11;
+        return \Sped\Validation::cpf()->validate($this);
     }
 
 }
