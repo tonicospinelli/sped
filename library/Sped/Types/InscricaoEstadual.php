@@ -58,7 +58,7 @@ class InscricaoEstadual extends AbstractType implements InterfaceDocument
         
     }
 
-    public function getUnMasked()
+    public function getValueUnmasked()
     {
         
     }
