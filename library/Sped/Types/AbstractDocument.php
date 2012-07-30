@@ -50,7 +50,9 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
 
     abstract public function getMaxMultiplier();
 
-    abstract public function getMasked();
+    abstract public function getValueMasked();
+
+    abstract public function isValid();
 
     /**
      * Define o número do documento.
@@ -75,14 +77,12 @@ abstract class AbstractDocument extends AbstractType implements InterfaceDocumen
     }
 
     /**
-     *
-     * @param \Sped\Types\AbstractDocument|string $numero
-     * @return \Sped\Types\StringHelper 
+     * Retorna apenas os números do documento.
+     * @return string
      */
-    public function getUnMasked()
+    public function getValueUnmasked()
     {
-        $numero = new \Sped\Types\StringHelper($this->getValue());
-        return $numero->replaceRegExp('/[^\d]/', '');
+        return preg_replace("/[^\d]/", '', $this->getValue());
     }
 
     /**
