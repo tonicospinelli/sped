@@ -28,7 +28,7 @@
 
 namespace Sped\Validation;
 
-use Sped\Types\StringHelper;
+use Sped\Commons\StringHelper;
 
 /**
  * @category   Sped
