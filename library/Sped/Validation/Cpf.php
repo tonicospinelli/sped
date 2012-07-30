@@ -49,13 +49,13 @@ class Cpf extends Modulo11
 
     /**
      * Valida se o CPF está correto
-     * @param string|int|\Sped\Types\Cpf $value
+     * @param string|int|\Sped\Commons\Documents\Cpf $value
      * @return boolean 
      */
     public function validate($value)
     {
-        if (!$value instanceof \Sped\Types\Cpf)
-            $value = new \Sped\Types\Cpf($value);
+        if (!$value instanceof \Sped\Commons\Documents\Cpf)
+            $value = new \Sped\Commons\Documents\Cpf($value);
         return parent::validate($value);
     }
 
