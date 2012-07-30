@@ -49,13 +49,13 @@ class Cnpj extends Modulo11
 
     /**
      * Valida se o CNPJ está correto.
-     * @param string|int|\Sped\Types\Cnpj $value
+     * @param string|int|\Sped\Commons\Documents\Cnpj $value
      * @return boolean 
      */
     public function validate($value)
     {
-        if (!$value instanceof \Sped\Types\Cnpj)
-            $value = new \Sped\Types\Cnpj($value);
+        if (!$value instanceof \Sped\Commons\Documents\Cnpj)
+            $value = new \Sped\Commons\Documents\Cnpj($value);
         return parent::validate($value);
     }
 
