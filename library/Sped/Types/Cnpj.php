@@ -49,10 +49,10 @@ class Cnpj extends AbstractDocument
     }
 
     /**
-     * 
+     * Retorna o documento com pontuação.
      * @return string
      */
-    public function getMasked()
+    public function getValueMasked()
     {
         return \Sped\Commons\Mask::exec($this->getUnMasked(), '00.000.000/0000-00');
     }
@@ -60,6 +60,11 @@ class Cnpj extends AbstractDocument
     public function defaultDocumentLength()
     {
         return 14;
+    }
+
+    public function isValid()
+    {
+        return \Sped\Validation::cnpj()->validate($this);
     }
 
 }
