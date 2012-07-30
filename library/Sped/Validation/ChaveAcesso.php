@@ -46,13 +46,13 @@ class ChaveAcesso extends Modulo11
 
     /**
      * Valida se o Chave de Acesso está correta.
-     * @param string $value
+     * @param string|int|\Sped\Commons\Documents\ChaveAcesso $value
      * @return boolean 
      */
     public function validate($value)
     {
-        if (!$value instanceof \Sped\Types\ChaveAcesso)
-            $value = new \Sped\Types\ChaveAcesso($value);
+        if (!$value instanceof \Sped\Commons\Documents\ChaveAcesso)
+            $value = new \Sped\Commons\Documents\ChaveAcesso($value);
         return parent::validate($value);
     }
 
