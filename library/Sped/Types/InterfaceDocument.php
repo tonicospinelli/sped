@@ -42,7 +42,7 @@ interface InterfaceDocument
 
     public function getValue();
 
-    public function getUnMasked();
+    public function getValueUnmasked();
 
     public function getDvPositions();
 
