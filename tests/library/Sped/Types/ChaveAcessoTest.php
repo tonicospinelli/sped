@@ -34,42 +34,9 @@ class ChaveAcessoTest extends \PHPUnit_Framework_TestCase
         
     }
 
-    /**
-     * @todo Implement testGetMaxMultiplier().
-     */
-    public function testGetMaxMultiplier()
-    {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
-
-    /**
-     * @todo Implement testGetDigitsCount().
-     */
-    public function testGetDigitsCount()
-    {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
-
     public function testGetValueMasked()
     {
         $this->assertEquals('NFe11101284613439000180550010000004881093997017', $this->object->getValueMasked());
-    }
-
-    /**
-     * @todo Implement testDefaultDocumentLength().
-     */
-    public function testDefaultDocumentLength()
-    {
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
     }
 
     public function testIsValid()
