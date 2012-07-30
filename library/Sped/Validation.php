@@ -35,7 +35,7 @@ namespace Sped;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  * @method \Sped\Validation\Cean cean()
- * @method \Sped\Validation\ChaveAcesso chaveAcesso(string $input)
+ * @method \Sped\Validation\ChaveAcesso chaveAcesso()
  * @method \Sped\Validation\Cpf cpf()
  * @method \Sped\Validation\Cnpj cnpj()
  * @method \Sped\Validation\Modulo11 modulo11(int numeroDigitos, int limiteMultiplicador)
