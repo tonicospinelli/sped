@@ -52,14 +52,19 @@ class ChaveAcesso extends AbstractDocument
      * Retorna o número da Chave de Acesso com a máscara.
      * @return string
      */
-    public function getMasked()
+    public function getValueMasked()
     {
-        return 'NFe' . $this->getValue();
+        return \Sped\Commons\Mask::exec($this->getValueUnmasked(), 'NFe' . str_repeat('0', 44));
     }
 
     public function defaultDocumentLength()
     {
         return 44;
+    }
+
+    public function isValid()
+    {
+        return \Sped\Validation::chaveAcesso()->validate($this);
     }
 
 }
