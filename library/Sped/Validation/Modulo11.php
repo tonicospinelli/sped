@@ -85,7 +85,7 @@ abstract class Modulo11 extends AbstractValidate
 
     /**
      * 
-     * @return AbstractDocument
+     * @return \Sped\Commons\Documents\AbstractDocument
      */
     public function getDocument()
     {
@@ -94,7 +94,7 @@ abstract class Modulo11 extends AbstractValidate
 
     /**
      * 
-     * @param AbstractDocument $document 
+     * @param \Sped\Commons\Documents\AbstractDocument $document 
      */
     public function setDocument($document)
     {
@@ -105,7 +105,7 @@ abstract class Modulo11 extends AbstractValidate
 
     /**
      * Validação genérica de vários tipos de números. Dentre eles: CPF, CNPJ, PIS.
-     * @param \Sped\Types\AbstractDocument $value Valor a ser validado.
+     * @param \Sped\Commons\Documents\AbstractDocument $value Valor a ser validado.
      * @return boolean 
      */
     public function validate($value)
@@ -114,19 +114,19 @@ abstract class Modulo11 extends AbstractValidate
             throw new \Exception('O documento não é do tipo \Sped\Types\AbstractDocument');
 
         $this->setDocument($value);
-        $base = new \Sped\Commons\StringHelper($this->getDocument()->getBaseNumber());
+        $base = new \Sped\Commons\StringHelper($value->getBaseNumber());
 
-        for ($n = 1; $n <= $this->document->getDigitsCount(); $n++) {
+        for ($n = 1; $n <= $value->getDigitsCount(); $n++) {
             $soma = 0;
             $mult = 2;
             for ($i = $base->length - 1; $i > -1; $i--) {
-                $soma += $mult * intval($base->left($i, 1)->getValue());
-                if (++$mult > $this->document->getMaxMultiplier())
+                $soma += $mult * intval($base->left($i, 1)->toString());
+                if (++$mult > $value->getMaxMultiplier())
                     $mult = 2;
             }
             $base->concat((($soma * 10) % 11) % 10);
         }
-        return $value->getValue() === $base->getValue();
+        return ($value->toString() === $base->toString());
     }
 
 }
