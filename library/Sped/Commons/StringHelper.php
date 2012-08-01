@@ -61,24 +61,44 @@ class StringHelper
         $this->setValue($value);
     }
 
+    /**
+     * Convert a string para um tipo inteiro.
+     * @return integer
+     */
+    public function toInteger()
+    {
+        return (int) $this->toString();
+    }
+
+    /**
+     * 
+     * @return string
+     */
+    public function toString()
+    {
+        return $this->__toString();
+    }
+
+    /**
+     *
+     * @return string
+     */
     public function __toString()
     {
         return $this->getValue();
     }
 
+    /**
+     *
+     * @return string
+     */
     public function getValue()
     {
         return $this->value;
     }
 
-    public function __invoke()
-    {
-        return $this->getValue();
-    }
-
     /**
-     * Set the new string value.
-     *
+     * Define um novo valor.
      * @param mixed $value
      * @param string $glue The array of strings to implode.
      * @return \Sped\Commons\StringHelper 
@@ -87,7 +107,6 @@ class StringHelper
     {
         if (is_array($value))
             $value = implode($glue, $value);
-
         elseif (is_bool($value))
             $value = $value ? 'true' : 'false';
         elseif ($value instanceof \Sped\Commons\StringHelper)
