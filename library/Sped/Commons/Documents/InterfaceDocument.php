@@ -26,31 +26,29 @@
  * @version    ##VERSION##, ##DATE##
  */
 
-namespace Sped\Commons\Documents {
+namespace Sped\Commons\Documents;
 
-    /**
-     * @category   Sped
-     * @package    Sped\Commons\Documents
-     * @copyright  Copyright (c) 2012
-     * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
-     * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
-     */
-    interface InterfaceDocument
-    {
+/**
+ * @category   Sped
+ * @package    Sped\Commons\Documents
+ * @copyright  Copyright (c) 2012
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+ */
+interface InterfaceDocument
+{
 
-        public function setValue($value);
+    public function setValue($value);
 
-        public function getValue();
+    public function getValue();
 
-        public function getValueUnmasked();
+    public function getValueUnmasked();
 
-        public function getDigitVerifierPositions();
+    public function getDigitVerifierPositions();
 
-        public function getDigitVerifierPosition($index);
+    public function getDigitVerifierPosition($index);
 
-        public function getBaseNumber();
+    public function getBaseNumber();
 
-        public function getDigitVerifier();
-    }
-
+    public function getDigitVerifier();
 }
