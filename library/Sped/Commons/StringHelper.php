@@ -280,24 +280,22 @@ class StringHelper
 
     /**
      * Get left part of string
-     * @param int $start Position of first character to use from string.
-     * @param int $offset [optional]<br/>Maximum number of characters to use from str.
+     * @param int $length Maximum number of characters to use from string.
      * @return \Sped\Commons\StringHelper
      */
-    public function left($start, $offset = null)
+    public function left($length)
     {
-        return $this->substring($start, $offset);
+        return $this->substring(0, $length);
     }
 
     /**
      * Get right part of a string
-     * @param int $start Position of first character to use from string.
-     * @param int $offset [optional]<br/>Maximum number of characters to use from str.
+     * @param int $length Maximum number of characters to use from string.
      * @return \Sped\Commons\StringHelper
      */
-    public function right($start, $offset = null)
+    public function right($length)
     {
-        return $this->substring(($start * -1), $offset);
+        return $this->substring(($length * -1));
     }
 
     /**
@@ -558,6 +556,43 @@ class StringHelper
     public static function splitCamel($string)
     {
         return preg_split('/(?<=\\w)(?=[A-Z])/', $string);
+    }
+
+    /**
+     * Append the new value.
+     * @param mixed $var
+     * @return \Sped\Commons\StringHelper 
+     */
+    public function append($var)
+    {
+        if (!$var instanceof StringHelper)
+            $var = new StringHelper($var);
+        $this->setValue($var->toString() . $this->toString());
+        return $this;
+    }
+
+    /**
+     * Prepend the new value.
+     * @param mixed $var
+     * @return \Sped\Commons\StringHelper 
+     */
+    public function prepend($var)
+    {
+        if (!$var instanceof StringHelper)
+            $var = new StringHelper($var);
+        $this->setValue($var->toString() . $this->toString());
+        return $this;
+    }
+
+    public function insert($position, $var)
+    {
+        if (!$var instanceof StringHelper)
+            $var = new StringHelper($var);
+
+        $first = $position === 0 ? new StringHelper() : $this->left($position);
+        $last = $position === $this->length ? new StringHelper() : $this->substring($position);
+        $this->setValue($first->toString() . $var->toString() . $last->toString());
+        return $this;
     }
 
 }
