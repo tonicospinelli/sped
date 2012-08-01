@@ -38,7 +38,7 @@ namespace Sped\Commons\Documents;
 class InscricaoEstadual extends AbstractDocument implements InterfaceDocument
 {
 
-    public function defaultDocumentLength()
+    public function getLength()
     {
         
     }

@@ -48,7 +48,7 @@ class Cpf extends AbstractDocument
         return 2;
     }
 
-    public function defaultDocumentLength()
+    public function getLength()
     {
         return 11;
     }

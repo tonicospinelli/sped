@@ -69,7 +69,7 @@ class ChaveAcesso extends AbstractDocument
      * Retorna o tamanho máximo do documento.
      * @return int 
      */
-    public function defaultDocumentLength()
+    public function getLength()
     {
         return 44;
     }

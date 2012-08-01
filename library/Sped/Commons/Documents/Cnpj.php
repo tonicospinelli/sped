@@ -57,7 +57,7 @@ class Cnpj extends AbstractDocument
         return \Sped\Commons\Mask::exec($this->getUnMasked(), '00.000.000/0000-00');
     }
 
-    public function defaultDocumentLength()
+    public function getLength()
     {
         return 14;
     }
