@@ -44,7 +44,7 @@ class Mask
      * @param string $mask
      * @return string 
      */
-    static public function exec($input, $mask)
+    public static function exec($input, $mask)
     {
         if ($input instanceof Sped_Types_String)
             $input = $input->getValue();
@@ -75,7 +75,7 @@ class Mask
      * @param string $mask
      * @return string 
      */
-    static public function decimal($number, $mask)
+    public static function decimal($number, $mask)
     {
         $pointPos = strpos($mask, '.');
         $commaPos = strpos($mask, ',');
