@@ -26,63 +26,61 @@
  * @version    ##VERSION##, ##DATE##
  */
 
-namespace Sped\Commons\Documents {
+namespace Sped\Commons\Documents;
+
+/**
+ * @category   Sped
+ * @package    Sped\Commons\Documents
+ * @copyright  Copyright (c) 2012
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+ */
+class ChaveAcesso extends AbstractDocument
+{
 
     /**
-     * @category   Sped
-     * @package    Sped\Commons\Documents
-     * @copyright  Copyright (c) 2012
-     * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
-     * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+     * Retorna o maior multiplicador.
+     * @return int 
      */
-    class ChaveAcesso extends AbstractDocument
+    public function getMaxMultiplier()
     {
+        return 9;
+    }
 
-        /**
-         * Retorna o maior multiplicador.
-         * @return int 
-         */
-        public function getMaxMultiplier()
-        {
-            return 9;
-        }
+    /**
+     * Retorna o número de Digitos Verificadores.
+     * @return int 
+     */
+    public function getDigitsCount()
+    {
+        return 1;
+    }
 
-        /**
-         * Retorna o número de Digitos Verificadores.
-         * @return int 
-         */
-        public function getDigitsCount()
-        {
-            return 1;
-        }
+    /**
+     * Retorna o número da Chave de Acesso com a máscara.
+     * @return string
+     */
+    public function getValueMasked()
+    {
+        return \Sped\Commons\Mask::exec($this->getValueUnmasked(), 'NFe' . str_repeat('0', 44));
+    }
 
-        /**
-         * Retorna o número da Chave de Acesso com a máscara.
-         * @return string
-         */
-        public function getValueMasked()
-        {
-            return \Sped\Commons\Mask::exec($this->getValueUnmasked(), 'NFe' . str_repeat('0', 44));
-        }
+    /**
+     * Retorna o tamanho máximo do documento.
+     * @return int 
+     */
+    public function defaultDocumentLength()
+    {
+        return 44;
+    }
 
-        /**
-         * Retorna o tamanho máximo do documento.
-         * @return int 
-         */
-        public function defaultDocumentLength()
-        {
-            return 44;
-        }
-
-        /**
-         * Verifica se o número do documento informado é válido.
-         * @return bool
-         */
-        public function isValid()
-        {
-            return \Sped\Validation::chaveAcesso()->validate($this);
-        }
-
+    /**
+     * Verifica se o número do documento informado é válido.
+     * @return bool
+     */
+    public function isValid()
+    {
+        return \Sped\Validation::chaveAcesso()->validate($this);
     }
 
 }
