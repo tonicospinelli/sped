@@ -34,11 +34,13 @@ namespace Sped;
  * @copyright  Copyright (c) 2012
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
- * @method \Sped\Validation\Cean cean()
- * @method \Sped\Validation\ChaveAcesso chaveAcesso()
- * @method \Sped\Validation\Cpf cpf()
- * @method \Sped\Validation\Cnpj cnpj()
- * @method \Sped\Validation\Modulo11 modulo11(int numeroDigitos, int limiteMultiplicador)
+ * @method \Sped\Validation\Cean cean() Valida se o Código de Barras está correto.
+ * @method \Sped\Validation\ChaveAcesso chaveAcesso() Valida se o Chave de Acesso da NFe está correta.
+ * @method \Sped\Validation\Cpf cpf() Valida se o CPF está correto.
+ * @method \Sped\Validation\Cnpj cnpj() Valida se o CNPJ está correto.
+ * @method \Sped\Validation\PisPasep pisPasep() Valida o número do PIS-PASEP.
+ * @method \Sped\Validation\Modulo11 modulo11(int numeroDigitos, int limiteMultiplicador) Módulo para validação de documentos.
+ * @method \Sped\Validation\TituloEleitoral tituloEleitoral() Valida o Título de eleitor.
  */
 class Validation
 {
