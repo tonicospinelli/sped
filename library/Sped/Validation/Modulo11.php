@@ -114,12 +114,12 @@ abstract class Modulo11 extends AbstractValidate
             throw new \Exception('O documento não é do tipo \Sped\Types\AbstractDocument');
 
         $this->setDocument($value);
-        $base = new \Sped\Commons\StringHelper($value->getBaseNumber());
+        $base = new \Sped\Commons\StringHelper($value->getBaseNumber());        
         for ($n = 1; $n <= $value->getDigitsCount(); $n++) {
             $soma = 0;
             $mult = 2;
             for ($i = $base->length - 1; $i > -1; $i--) {
-                $soma += $mult * intval($base->left($i, 1)->toString());
+                $soma += $mult * intval($base->substring($i, 1)->toString());
                 if (++$mult > $value->getMaxMultiplier())
                     $mult = 2;
             }
