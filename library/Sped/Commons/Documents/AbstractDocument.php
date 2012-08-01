@@ -26,127 +26,125 @@
  * @version    ##VERSION##, ##DATE##
  */
 
-namespace Sped\Commons\Documents {
+namespace Sped\Commons\Documents;
+
+/**
+ * @category   Sped
+ * @package    Sped\Commons\Documents
+ * @copyright  Copyright (c) 2012
+ * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
+ * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+ */
+abstract class AbstractDocument implements InterfaceDocument
+{
 
     /**
-     * @category   Sped
-     * @package    Sped\Commons\Documents
-     * @copyright  Copyright (c) 2012
-     * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
-     * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
+     *
+     * @var \Sped\Commons\StringHelper
      */
-    abstract class AbstractDocument implements InterfaceDocument
+    protected $value;
+
+    abstract public function defaultDocumentLength();
+
+    abstract public function getDigitsCount();
+
+    abstract public function getMaxMultiplier();
+
+    abstract public function getValueMasked();
+
+    abstract public function isValid();
+
+    public function __construct($value = null)
     {
+        $this->setValue($value);
+    }
 
-        /**
-         *
-         * @var \Sped\Commons\StringHelper
-         */
-        protected $value;
+    /**
+     * Define o número do documento.
+     * @param string $value
+     * @return \Sped\Commons\Documents\AbstractDocument
+     */
+    public function setValue($value)
+    {
+        $value = new \Sped\Commons\StringHelper($value);
+        $this->value = $value;
+    }
 
-        abstract public function defaultDocumentLength();
+    /**
+     * Retorna o número do documento.
+     * @return string
+     */
+    public function getValue()
+    {
+        $value = new \Sped\Commons\StringHelper();
+        $value->concat($this->getBaseNumber(), $this->getDigitVerifier());
+        return $value->getValue();
+    }
 
-        abstract public function getDigitsCount();
+    /**
+     * Retorna apenas os números do documento.
+     * @return string
+     */
+    public function getValueUnmasked()
+    {
+        return preg_replace("/[^\d]/", '', $this->getValue());
+    }
 
-        abstract public function getMaxMultiplier();
-
-        abstract public function getValueMasked();
-
-        abstract public function isValid();
-
-        public function __construct($value = null)
-        {
-            $this->setValue($value);
+    /**
+     * Retorna as posições do Digito Verificador.
+     * @return array
+     */
+    public function getDigitVerifierPositions()
+    {
+        $dv = array();
+        $index = 0;
+        while ($index < $this->getDigitsCount()) {
+            $dv[$index + 1] = $this->defaultDocumentLength() - ($this->getDigitsCount() - $index);
+            $index++;
         }
+        return $dv;
+    }
 
-        /**
-         * Define o número do documento.
-         * @param string $value
-         * @return \Sped\Commons\Documents\AbstractDocument
-         */
-        public function setValue($value)
-        {
-            $value = new \Sped\Commons\StringHelper($value);
-            $this->value = $value;
-        }
+    /**
+     * Retorna a posição do Dígito Verificador.
+     * @param int $index
+     * @return int
+     */
+    public function getDigitVerifierPosition($index)
+    {
+        $dvPos = $this->getDigitVerifierPositions();
+        return (int) $dvPos[$index];
+    }
 
-        /**
-         * Retorna o número do documento.
-         * @return string
-         */
-        public function getValue()
-        {
-            $value = new \Sped\Commons\StringHelper();
-            $value->concat($this->getBaseNumber(), $this->getDigitVerifier());
-            return $value->getValue();
-        }
+    /**
+     * Retorna o número base.
+     * @return string
+     */
+    public function getBaseNumber()
+    {
+        $length = ($this->defaultDocumentLength() - $this->getDigitsCount());
+        return $this->value->substring(0, $length)->getValue();
+    }
 
-        /**
-         * Retorna apenas os números do documento.
-         * @return string
-         */
-        public function getValueUnmasked()
-        {
-            return preg_replace("/[^\d]/", '', $this->getValue());
-        }
+    /**
+     * Retorna os digitos verificadores
+     * @return string
+     */
+    public function getDigitVerifier()
+    {
+        $base = new \Sped\Commons\StringHelper($this->getBaseNumber());
 
-        /**
-         * Retorna as posições do Digito Verificador.
-         * @return array
-         */
-        public function getDigitVerifierPositions()
-        {
-            $dv = array();
-            $index = 0;
-            while ($index < $this->getDigitsCount()) {
-                $dv[$index + 1] = $this->defaultDocumentLength() - ($this->getDigitsCount() - $index);
-                $index++;
+        for ($n = 1; $n <= $this->getDigitsCount(); $n++) {
+            $soma = 0;
+            $mult = 2;
+            for ($i = $base->length - 1; $i > -1; $i--) {
+                $soma += $mult * intval($base->left($i, 1)->getValue());
+                if (++$mult > $this->getMaxMultiplier())
+                    $mult = 2;
             }
-            return $dv;
+            $base->concat((($soma * 10) % 11) % 10);
         }
-
-        /**
-         * Retorna a posição do Dígito Verificador.
-         * @param int $index
-         * @return int
-         */
-        public function getDigitVerifierPosition($index)
-        {
-            $dvPos = $this->getDigitVerifierPositions();
-            return (int) $dvPos[$index];
-        }
-
-        /**
-         * Retorna o número base.
-         * @return string
-         */
-        public function getBaseNumber()
-        {
-            $length = ($this->defaultDocumentLength() - $this->getDigitsCount());
-            return $this->value->substring(0, $length)->getValue();
-        }
-
-        /**
-         * Retorna os digitos verificadores
-         * @return string
-         */
-        public function getDigitVerifier()
-        {
-            $base = new \Sped\Commons\StringHelper($this->getBaseNumber());
-
-            for ($n = 1; $n <= $this->getDigitsCount(); $n++) {
-                $soma = 0;
-                $mult = 2;
-                for ($i = $base->length - 1; $i > -1; $i--) {
-                    $soma += $mult * intval($base->left($i, 1)->getValue());
-                    if (++$mult > $this->getMaxMultiplier())
-                        $mult = 2;
-                }
-                $base->concat((($soma * 10) % 11) % 10);
-            }
-            return $base->right($this->getDigitsCount(), $this->getDigitsCount())->getValue();
-        }
-
+        return $base->right($this->getDigitsCount(), $this->getDigitsCount())->getValue();
     }
 
 }
