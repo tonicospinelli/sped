@@ -35,30 +35,30 @@ namespace Sped\Commons\Documents;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class InscricaoEstadual extends AbstractType implements InterfaceDocument
+class InscricaoEstadual extends AbstractDocument implements InterfaceDocument
 {
 
-    public function getBaseNumber()
+    public function defaultDocumentLength()
     {
         
     }
 
-    public function getDigitVerifier()
+    public function getDigitsCount()
     {
         
     }
 
-    public function getDigitVerifierPosition($index)
+    public function getMaxMultiplier()
     {
         
     }
 
-    public function getDigitVerifierPositions()
+    public function getValueMasked()
     {
         
     }
 
-    public function getValueUnmasked()
+    public function isValid()
     {
         
     }
