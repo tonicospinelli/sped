@@ -452,7 +452,7 @@ class ArrayCollection implements InterfaceCollection
         return array_slice($this->_elements, $offset, $length, true);
     }
 
-    static protected function comparison($a, $b)
+    protected static function comparison($a, $b)
     {
         if ($a == $b) {
             return 0;
