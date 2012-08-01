@@ -132,7 +132,7 @@ abstract class AbstractDocument implements InterfaceDocument
     public function getBaseNumber()
     {
         $length = ($this->getLength() - $this->getDigitsCount());
-        return $this->getValue()->substring(0, $length)->getValue();
+        return $this->getValue()->left($length)->getValue();
     }
 
     /**
