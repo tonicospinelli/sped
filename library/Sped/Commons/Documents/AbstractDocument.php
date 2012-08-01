@@ -44,7 +44,7 @@ abstract class AbstractDocument implements InterfaceDocument
      */
     protected $value;
 
-    abstract public function defaultDocumentLength();
+    abstract public function getLength();
 
     abstract public function getDigitsCount();
 
@@ -59,6 +59,16 @@ abstract class AbstractDocument implements InterfaceDocument
         $this->setValue($value);
     }
 
+    public function toString($formatted = false)
+    {
+        return $formatted ? $this->getValueMasked() : $this->getValueUnmasked();
+    }
+
+    public function ___toString($formatted = false)
+    {
+        return $this->toString($formatted);
+    }
+
     /**
      * Define o número do documento.
      * @param string $value
@@ -66,28 +76,27 @@ abstract class AbstractDocument implements InterfaceDocument
      */
     public function setValue($value)
     {
-        $value = new \Sped\Commons\StringHelper($value);
-        $this->value = $value;
+        $this->value = new \Sped\Commons\StringHelper($value);
+        $this->value = new \Sped\Commons\StringHelper($this->getValueUnmasked());
+        return $this;
     }
 
     /**
      * Retorna o número do documento.
-     * @return string
+     * @return \Sped\Commons\StringHelper
      */
     public function getValue()
     {
-        $value = new \Sped\Commons\StringHelper();
-        $value->concat($this->getBaseNumber(), $this->getDigitVerifier());
-        return $value->getValue();
+        return $this->value;
     }
 
     /**
-     * Retorna apenas os números do documento.
+     * Retorna o documento sem pontuação.
      * @return string
      */
     public function getValueUnmasked()
     {
-        return preg_replace("/[^\d]/", '', $this->getValue());
+        return preg_replace("/[\.\-\/]/", '', $this->getValue()->toString());
     }
 
     /**
@@ -99,7 +108,7 @@ abstract class AbstractDocument implements InterfaceDocument
         $dv = array();
         $index = 0;
         while ($index < $this->getDigitsCount()) {
-            $dv[$index + 1] = $this->defaultDocumentLength() - ($this->getDigitsCount() - $index);
+            $dv[$index + 1] = $this->getLength() - ($this->getDigitsCount() - $index);
             $index++;
         }
         return $dv;
@@ -122,8 +131,8 @@ abstract class AbstractDocument implements InterfaceDocument
      */
     public function getBaseNumber()
     {
-        $length = ($this->defaultDocumentLength() - $this->getDigitsCount());
-        return $this->value->substring(0, $length)->getValue();
+        $length = ($this->getLength() - $this->getDigitsCount());
+        return $this->getValue()->substring(0, $length)->getValue();
     }
 
     /**
