@@ -331,7 +331,7 @@ class StringHelper
      * @param string $value The variable being evaluated.
      * @return boolean true if var is null or empty, false otherwise.
      */
-    static public function isNullOrEmpty($value = null)
+    public static function isNullOrEmpty($value = null)
     {
         if ($value instanceof \Sped\Commons\StringHelper)
             $value = $value->getValue();
@@ -419,7 +419,7 @@ class StringHelper
      * @param mixed $secondString Second string to compare.
      * @return boolean
      */
-    static public function equals($firstString, $secondString)
+    public static function equals($firstString, $secondString)
     {
         if (!$firstString instanceof \Sped\Commons\StringHelper)
             $firstString = new \Sped\Commons\StringHelper($firstString);
