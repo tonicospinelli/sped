@@ -115,7 +115,6 @@ abstract class Modulo11 extends AbstractValidate
 
         $this->setDocument($value);
         $base = new \Sped\Commons\StringHelper($value->getBaseNumber());
-
         for ($n = 1; $n <= $value->getDigitsCount(); $n++) {
             $soma = 0;
             $mult = 2;
@@ -126,7 +125,7 @@ abstract class Modulo11 extends AbstractValidate
             }
             $base->concat((($soma * 10) % 11) % 10);
         }
-        return ($value->toString() === $base->toString());
+        return ($value->getValueUnmasked() === $base->toString());
     }
 
 }
