@@ -37,7 +37,7 @@ use \Sped\Commons\Collections\ArrayCollection;
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class CurrencyInWords
+class CurrencyToWords
 {
 
     const OPERATOR_POSITIVE = '+';
@@ -112,7 +112,7 @@ class CurrencyInWords
                     '', 'mil ', 'milhões ', 'bilhões ', 'trilhões ', 'quatrilhões '
                 ));
         $this->hundred = new ArrayCollection(array(
-                    'cem ', '', 'cento e ', 'duzentos ', 'trezentos ', 'quatrocentos ',
+                    'cem ', '', 'cento ', 'duzentos ', 'trezentos ', 'quatrocentos ',
                     'quinhentos ', 'seiscentos ', 'setecentos ', 'oitocentos ',
                     'novecentos '
                 ));
@@ -184,6 +184,11 @@ class CurrencyInWords
         return $this;
     }
 
+    /**
+     * Separa o número com decimal em um array.
+     * @param float $currency
+     * @return array 
+     */
     protected function explodeNumber($currency)
     {
         $currency = explode('.', (string) $currency);
@@ -191,6 +196,11 @@ class CurrencyInWords
         return $currency;
     }
 
+    /**
+     * Transforma o número inteiro em texto.
+     * @param int $number
+     * @return \Sped\Commons\StringHelper 
+     */
     public function integerToWord($number)
     {
         $number = (int) $number;
@@ -210,12 +220,17 @@ class CurrencyInWords
 
         $intToWords = $this->wordsFromThousands($number);
 
-        if ($this->isEndsWithOne($intToWords))
+        if ($this->isThousands($intToWords))
             $moeda->prepend('de ');
 
         return $intToWords->append($moeda);
     }
 
+    /**
+     * Transforma o número decimal em texto.
+     * @param int $decimal
+     * @return \Sped\Commons\StringHelper 
+     */
     public function decimalToWord($decimal)
     {
         $decimal = (int) $decimal;
@@ -230,12 +245,17 @@ class CurrencyInWords
         return $centsToWords->append($this->thousandthWord);
     }
 
+    /**
+     * Transforma um valor fracionado em texto.
+     * @return type
+     * @throws \Exception 
+     */
     public function toWords()
     {
         $currency = $this->getValue();
 
         list($integer, $decimal) = $this->explodeNumber($currency);
-        
+
         $scale = mb_strlen($decimal);
 
         if (!$this->allowScales->contains($scale))
@@ -250,7 +270,7 @@ class CurrencyInWords
         if (($inteiroToWords->length === 0) || ($decimalToWords->length === 0))
             $valueToWords->append($inteiroToWords)->append($decimalToWords);
         else
-            $valueToWords->append($inteiroToWords)->append(" e ")->append($decimalToWords);
+            $valueToWords->append($inteiroToWords)->append(' e ')->append($decimalToWords);
 
         if ($this->isPositive)
             return $valueToWords->insert(0, $this->getPositivePrefix())->append($this->getPositiveSufix())->toString();
@@ -259,7 +279,7 @@ class CurrencyInWords
     }
 
     /**
-     * 
+     * Transforma o número inteiro em texto.
      * @param int $number
      * @return \Sped\Commons\StringHelper
      * @throws \Exception 
@@ -276,7 +296,7 @@ class CurrencyInWords
         else if ($number === 100)
             return $numToWords->append($this->hundred->offsetGet(0));
 
-        $n = $number % 100;
+        $n = (int) $number % 100;
 
         if ($n < 20) {
             $numToWords->append($this->unit->offsetGet($n));
@@ -290,21 +310,25 @@ class CurrencyInWords
 
             $number /= 10;
 
-            $n = $number % 10;
+            $n = (int) $number % 10;
             $numToWords->insert(0, $this->dozen->offsetGet($n));
 
             $number /= 10;
         }
 
-        $number++;
-
-        if ((int) $number > 1)
+        if ($n > 0 && $number > 1)
             $numToWords->insert(0, 'e ');
 
-        return $numToWords->insert(0, $this->hundred->offsetGet($number));
+        return $numToWords->insert(0, $this->hundred->offsetGet(++$number));
     }
 
-    public function wordsFromThousands($number)
+    /**
+     * Retorna o texto a partir de um número.
+     * @param int $number
+     * @return \Sped\Commons\StringHelper
+     * @throws \Exception 
+     */
+    protected function wordsFromThousands($number)
     {
         $number = (int) $number;
         if ($number < 0)
@@ -331,7 +355,12 @@ class CurrencyInWords
         return $numToWords;
     }
 
-    public function isEndsWithOne($number)
+    /**
+     * Verifica se o número termina com o número 1 (um).
+     * @param int $number
+     * @return boolean 
+     */
+    protected function isEndsWithOne($number)
     {
         $number = (int) $number;
         $num = new \Sped\Commons\StringHelper($number);
@@ -348,11 +377,11 @@ class CurrencyInWords
     }
 
     /**
-     * 
+     * Verifica se a descrição de milhar deve estar no singular ou no plural.
      * @param string $words
      * @return boolean 
      */
-    public function isAThousands($words)
+    protected function isThousands($words)
     {
         $numToWords = new \Sped\Commons\StringHelper($words);
 
@@ -368,12 +397,12 @@ class CurrencyInWords
     }
 
     /**
-     * 
+     * Define se é centavos ou milésimos de real
      * @param int $decimal
      * @param int $scale
      * @return void 
      */
-    public function setThousanth($decimal, $scale)
+    protected function setThousanth($decimal, $scale)
     {
         $decimal = (int) $decimal;
         if ($scale === 3) {
