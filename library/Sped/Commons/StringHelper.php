@@ -110,7 +110,7 @@ class StringHelper
         elseif (is_bool($value))
             $value = $value ? 'true' : 'false';
         elseif ($value instanceof \Sped\Commons\StringHelper)
-            $value = $value->getValue();
+            $value = $value->toString();
 
         $this->value = (string) $value;
         $this->length = mb_strlen($value);
@@ -279,8 +279,8 @@ class StringHelper
     }
 
     /**
-     * Get left part of string
-     * @param int $length Maximum number of characters to use from string.
+     * Get left part of string.
+     * @param int $length Maximum number of characters to get from string.
      * @return \Sped\Commons\StringHelper
      */
     public function left($length)
@@ -289,17 +289,17 @@ class StringHelper
     }
 
     /**
-     * Get right part of a string
-     * @param int $length Maximum number of characters to use from string.
+     * Get right part of a string.
+     * @param int $length Maximum number of characters to get from string.
      * @return \Sped\Commons\StringHelper
      */
     public function right($length)
     {
-        return $this->substring(($length * -1));
+        return $this->substring(($this->length - $length), $length);
     }
 
     /**
-     * Get middle part of a string
+     * Get part of a string.
      * @param int $start Position of first character to use from string.
      * @param int $offset Maximum number of characters to use from str.
      * @return \Sped\Commons\StringHelper
@@ -567,7 +567,7 @@ class StringHelper
     {
         if (!$var instanceof StringHelper)
             $var = new StringHelper($var);
-        $this->setValue($var->toString() . $this->toString());
+        $this->setValue($this->toString() . $var->toString());
         return $this;
     }
 
@@ -589,8 +589,8 @@ class StringHelper
         if (!$var instanceof StringHelper)
             $var = new StringHelper($var);
 
-        $first = $position === 0 ? new StringHelper() : $this->left($position);
-        $last = $position === $this->length ? new StringHelper() : $this->substring($position);
+        $first = $this->left($position);
+        $last = $this->right($this->length - $position);
         $this->setValue($first->toString() . $var->toString() . $last->toString());
         return $this;
     }
