@@ -20,7 +20,7 @@ class CurrencyToWordsTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new CurrencyInWords;
+        $this->object = new CurrencyToWords;
     }
 
     /**
@@ -35,9 +35,14 @@ class CurrencyToWordsTest extends \PHPUnit_Framework_TestCase
     /**
      * @todo Implement testToWords().
      */
-    public function testToWords5321()
+    public function testToWordsBy1000()
     {
-        var_dump($this->object->setValue(200)->toWords());
+        $i = 1;
+        $coeficiente = 10;
+        while ($i < 10000000) {
+            var_dump($i . ' = ' . $this->object->setValue($i)->toWords());
+            $i = $i * $coeficiente;
+        }
     }
 
     /**
@@ -50,7 +55,7 @@ class CurrencyToWordsTest extends \PHPUnit_Framework_TestCase
             if (++$j > 9)
                 $j = 0;
             $i = $i + ($j * 0.001);
-            $toWords = new CurrencyInWords($i);
+            $toWords = new CurrencyToWords($i);
             var_dump($i . ' = ' . $toWords->toWords());
         }
     }
