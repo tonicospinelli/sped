@@ -40,8 +40,6 @@ use \Sped\Commons\Collections\ArrayCollection;
 class CurrencyToWords
 {
 
-    const OPERATOR_POSITIVE = '+';
-    const OPERATOR_NEGATIVE = '-';
     const CURRENCY_INTEGER = 'real';
     const CURRENCY_INTEGER_PLURAL = 'reais';
     const CURRENCY_DECIMAL = 'centavo';
@@ -90,11 +88,6 @@ class CurrencyToWords
      * @var \Sped\Commons\Collections\ArrayCollection 
      */
     protected $allowScales;
-    protected $negativePrefix;
-    protected $negativeSufix;
-    protected $positivePrefix;
-    protected $positiveSufix;
-    protected $isPositive = true;
 
     /**
      *
@@ -129,58 +122,23 @@ class CurrencyToWords
         $this->setValue($numero);
     }
 
+    /**
+     * Retorna o valor informado.
+     * @return float
+     */
     public function getValue()
     {
         return $this->value;
     }
 
+    /**
+     * Define o valor a ser convertido.
+     * @param float $value
+     * @return \Sped\Commons\Convertions\CurrencyToWords 
+     */
     public function setValue($value)
     {
         $this->value = $value;
-        return $this;
-    }
-
-    public function getNegativePrefix()
-    {
-        return $this->negativePrefix;
-    }
-
-    public function setNegativePrefix($negativePrefix)
-    {
-        $this->negativePrefix = $negativePrefix;
-        return $this;
-    }
-
-    public function getNegativeSufix()
-    {
-        return $this->negativeSufix;
-    }
-
-    public function setNegativeSufix($negativeSufix)
-    {
-        $this->negativeSufix = $negativeSufix;
-        return $this;
-    }
-
-    public function getPositivePrefix()
-    {
-        return $this->positivePrefix;
-    }
-
-    public function setPositivePrefix($positivePrefix)
-    {
-        $this->positivePrefix = $positivePrefix;
-        return $this;
-    }
-
-    public function getPositiveSufix()
-    {
-        return $this->positiveSufix;
-    }
-
-    public function setPositiveSufix($positiveSufix)
-    {
-        $this->positiveSufix = $positiveSufix;
         return $this;
     }
 
@@ -207,11 +165,9 @@ class CurrencyToWords
         if ($number === 0)
             return new \Sped\Commons\StringHelper();
 
-        if ($number < 0) {
+        if ($number < 0)
             $number = -$number;
-            $this->isPositive = false;
-        } else
-            $this->isPositive = true;
+
         $moeda = new \Sped\Commons\StringHelper();
         $moeda->setValue(
                 $number === 0 ?
@@ -263,7 +219,7 @@ class CurrencyToWords
 
         $valueToWords = new \Sped\Commons\StringHelper();
 
-        $this->setThousanth($decimal, $scale);
+        $this->setThousandth($decimal, $scale);
         $inteiroToWords = $this->integerToWord($integer);
         $decimalToWords = $this->decimalToWord($decimal);
 
@@ -272,10 +228,7 @@ class CurrencyToWords
         else
             $valueToWords->append($inteiroToWords)->append(' e ')->append($decimalToWords);
 
-        if ($this->isPositive)
-            return $valueToWords->insert(0, $this->getPositivePrefix())->append($this->getPositiveSufix())->toString();
-
-        return $valueToWords->insert(0, $this->getNegativePrefix())->append($this->getNegativeSufix())->toString();
+        return $valueToWords->toString();
     }
 
     /**
@@ -339,10 +292,10 @@ class CurrencyToWords
         do {
             $n = $number % 1000;
 
-            if ($n != 0) {
+            if ($n !== 0) {
                 $s = $this->wordsFromHundredOrUnit($n);
 
-                if ($this->isEndsWithOne($n))
+                if ($this->isSingle($n))
                     $numToWords = $s->append($this->thousands->offsetGet($thousandthPosition))->append($numToWords);
                 else
                     $numToWords = $s->append($this->thousandsPlural->offsetGet($thousandthPosition))->append($numToWords);
@@ -360,18 +313,15 @@ class CurrencyToWords
      * @param int $number
      * @return boolean 
      */
-    protected function isEndsWithOne($number)
+    protected function isSingle($number)
     {
         $number = (int) $number;
         $num = new \Sped\Commons\StringHelper($number);
 
-        if ($number / 1000 > 0) {
+        if ($number / 1000 > 0)
             return $num->endsWith('001');
-        }
-
-        if ($number < 11) {
+        else if ($number < 11)
             return $num->endsWith('1');
-        }
 
         return false;
     }
@@ -384,13 +334,14 @@ class CurrencyToWords
     protected function isThousands($words)
     {
         $numToWords = new \Sped\Commons\StringHelper($words);
+        $tamanho = $this->thousands->count();
 
-        for ($a = 1; $a < $this->thousands->count(); $a++)
+        for ($a = 2; $a < $tamanho; $a++)
             if ($numToWords->endsWith($this->thousands->offsetGet($a)))
                 return true;
 
-        for ($b = 1; $b < $this->thousandsPlural->count(); $b++)
-            if ($numToWords->endsWith($this->thousandsPlural->offsetGet($b)))
+        for ($a = 2; $a < $tamanho; $a++)
+            if ($numToWords->endsWith($this->thousandsPlural->offsetGet($a)))
                 return true;
 
         return false;
@@ -402,7 +353,7 @@ class CurrencyToWords
      * @param int $scale
      * @return void 
      */
-    protected function setThousanth($decimal, $scale)
+    protected function setThousandth($decimal, $scale)
     {
         $decimal = (int) $decimal;
         if ($scale === 3) {
