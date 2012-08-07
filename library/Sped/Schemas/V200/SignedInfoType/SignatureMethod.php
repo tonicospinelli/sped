@@ -24,8 +24,9 @@ class SignatureMethod extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param type $value 
      */
-    public function setAlgorithm()
+    public function setAlgorithm($value)
     {
         $this->setAttribute('Algorithm', $value);
         return $this;

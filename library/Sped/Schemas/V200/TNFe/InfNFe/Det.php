@@ -125,8 +125,9 @@ class Det extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param type $value 
      */
-    public function setNItem()
+    public function setNItem($value)
     {
         $this->setAttribute('nItem', $value);
         return $this;

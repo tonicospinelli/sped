@@ -92,8 +92,9 @@ class TConsReciNFe extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param type $value 
      */
-    public function setVersao()
+    public function setVersao($value)
     {
         $this->setAttribute('versao', $value);
         return $this;

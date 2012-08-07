@@ -124,8 +124,9 @@ class SignedInfoType extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param type $value 
      */
-    public function setId()
+    public function setId($value)
     {
         $this->setAttribute('Id', $value);
         return $this;

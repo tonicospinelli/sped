@@ -125,8 +125,9 @@ class ReferenceType extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param type $value 
      */
-    public function setId()
+    public function setId($value)
     {
         $this->setAttribute('Id', $value);
         return $this;
@@ -162,8 +163,9 @@ class ReferenceType extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param type $value 
      */
-    public function setURI()
+    public function setURI($value)
     {
         $this->setAttribute('URI', $value);
         return $this;
@@ -180,8 +182,9 @@ class ReferenceType extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param type $value 
      */
-    public function setType()
+    public function setType($value)
     {
         $this->setAttribute('Type', $value);
         return $this;

@@ -58,8 +58,9 @@ class ForDia extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param type $value 
      */
-    public function setDia()
+    public function setDia($value)
     {
         $this->setAttribute('dia', $value);
         return $this;

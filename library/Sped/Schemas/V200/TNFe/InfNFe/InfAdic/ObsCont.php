@@ -60,8 +60,9 @@ class ObsCont extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param type $value 
      */
-    public function setXCampo()
+    public function setXCampo($value)
     {
         $this->setAttribute('xCampo', $value);
         return $this;
