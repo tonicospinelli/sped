@@ -75,37 +75,68 @@ class X509Certified extends \Sped\Commons\Objeto
     protected $serialNumber;
 
     /**
-     *
-     * @var string
+     * Data Inicial da validade do certificado.
+     * @var \DateTime
      */
     protected $validFrom;
 
     /**
-     * 
-     * @var string
+     * Data Final da validade do certificado.
+     * @var \DateTime
      */
     protected $validTo;
+
+    /**
+     *
+     * @var X509Certified\Purposes
+     */
     protected $purposes;
+
+    /**
+     *
+     * @var X509Certified\Extensions
+     */
     protected $extensions;
+
+    /**
+     *
+     * @var string
+     */
     protected $fileName;
+
+    /**
+     *
+     * @var string
+     */
     protected $privateKey;
+
+    /**
+     *
+     * @var string
+     */
     protected $publicKey;
 
     /**
      * Load a file.
-     * @param string $$fileName
+     * @param string $fileName
      * @throws Exception 
      */
-    public function load($fileName)
+    public function load($fileName, $pass = '')
     {
         $this->setFileName($fileName);
         $content = file_get_contents($this->getFileName());
 
         $X509Certified = array();
-        if (!openssl_pkcs12_read($content, $X509Certified, 'associacao'))
-            throw new Exception('The certified is not loaded');
 
-        $this->setOptions(openssl_x509_parse($X509Certified['cert'], false));
+        if (!openssl_pkcs12_read($content, $X509Certified, $pass))
+            throw new \Exception('The certified is not loaded');
+
+        $parsedX509 = openssl_x509_parse($X509Certified['cert'], false);
+        unset($parsedX509['validTo'],$parsedX509['validFrom']);
+        
+        $this->setOptions($parsedX509);
+        $this->setValidTo(new \DateTime(date('Y-m-d H:i:s', $parsedX509['validTo_time_t'])));
+        $this->setValidFrom(new \DateTime(date('Y-m-d H:i:s', $parsedX509['validFrom_time_t'])));
         $this->setPrivateKey($X509Certified['pkey']);
         $this->setPublicKey($X509Certified['cert']);
     }
@@ -152,6 +183,9 @@ class X509Certified extends \Sped\Commons\Objeto
 
     public function setIssuer($issuer)
     {
+        if (!$issuer instanceof X509Certified\Issuer)
+            $issuer = new X509Certified\Issuer($issuer);
+
         $this->issuer = $issuer;
         return $this;
     }
@@ -178,55 +212,114 @@ class X509Certified extends \Sped\Commons\Objeto
         return $this;
     }
 
+    /**
+     * Retorna a data inicial de validade do certificado.
+     * @return \DateTime
+     */
     public function getValidFrom()
     {
         return $this->validFrom;
     }
 
+    /**
+     * Define a data inicial de validade do certificado.
+     * @param \DateTime $validFrom
+     * @return \Sped\Certification\X509Certified 
+     */
     public function setValidFrom($validFrom)
     {
+        if (!$validFrom instanceof \DateTime)
+            $validFrom = new \DateTime($validFrom);
         $this->validFrom = $validFrom;
         return $this;
     }
 
+    /**
+     * Retorna a data final da validade.
+     * @return \DateTime
+     */
     public function getValidTo()
     {
         return $this->validTo;
     }
 
+    /**
+     * Define a data final da validade do certificado.
+     * @param \DateTime $validTo
+     * @return \Sped\Certification\X509Certified 
+     */
     public function setValidTo($validTo)
     {
+        if (!$validTo instanceof \DateTime)
+            $validTo = new \DateTime($validTo);
         $this->validTo = $validTo;
         return $this;
     }
 
+    /**
+     * Retorna o propósito.
+     * @return X509Certified\Purposes
+     */
     public function getPurposes()
     {
         return $this->purposes;
     }
 
+    /**
+     * Define o propésito.
+     * @param array|X509Certified\Purposes $purposes
+     * @return \Sped\Certification\X509Certified
+     * @throws Exception If not array or \Sped\X509Certified\Purposes
+     */
     public function setPurposes($purposes)
     {
+        if (!is_array($purposes))
+            throw new Exception('The purpose is not array or \Sped\X509Certified\Purposes');
+
+        if (!$purposes instanceof X509Certified\Purposes)
+            $purposes = new X509Certified\Purposes($purposes);
+
         $this->purposes = $purposes;
         return $this;
     }
 
+    /**
+     * Retorna a extensão do certificado.
+     * @return X509Certified\Extensions
+     */
     public function getExtensions()
     {
         return $this->extensions;
     }
 
+    /**
+     * Define a extensão do certificado.
+     * @param X509Certified\Extensions $extensions
+     * @return \Sped\Certification\X509Certified 
+     */
     public function setExtensions($extensions)
     {
+        if (!$extensions instanceof X509Certified\Extensions)
+            $extensions = new X509Certified\Extensions($extensions);
         $this->extensions = $extensions;
         return $this;
     }
 
+    /**
+     * Retorna o arquivo do certificado.
+     * @return string
+     */
     public function getFileName()
     {
         return $this->fileName;
     }
 
+    /**
+     * Define o arquivo do certificado.
+     * @param string $fileName
+     * @return \Sped\Certification\X509Certified
+     * @throws Exception 
+     */
     public function setFileName($fileName)
     {
         if (!is_file($fileName))
@@ -236,26 +329,71 @@ class X509Certified extends \Sped\Commons\Objeto
         return $this;
     }
 
-    public function getPrivateKey()
+    /**
+     * Retorna a chave privada
+     * @param boolean $onlyKey returns only key value.
+     * @return string
+     */
+    public function getPrivateKey($onlyKey = false)
     {
+        if ($onlyKey)
+            return preg_replace("/(^--.*\n|\n.*--$|[\r\n])/", '', $this->privateKey);
+
         return $this->privateKey;
     }
 
+    /**
+     * Define a chave privada
+     * @param string $publicKey
+     * @return \Sped\Certification\X509Certified 
+     */
     public function setPrivateKey($privateKey)
     {
         $this->privateKey = $privateKey;
         return $this;
     }
 
-    public function getPublicKey()
+    /**
+     * Define a chave pública.
+     * @param boolean $onlyKey returns only key value.
+     * @return string 
+     */
+    public function getPublicKey($onlyKey = false)
     {
+        if ($onlyKey)
+            return preg_replace("/(^--.*\n|\n.*--$|[\r\n])/", '', $this->publicKey);
+
         return $this->publicKey;
     }
 
+    /**
+     * Define a chave pública
+     * @param string $publicKey
+     * @return \Sped\Certification\X509Certified 
+     */
     public function setPublicKey($publicKey)
     {
         $this->publicKey = $publicKey;
         return $this;
+    }
+
+    /**
+     *
+     * @return boolean
+     */
+    public function isExpired()
+    {
+        return new \DateTime() > $this->getValidTo();
+    }
+
+    /**
+     *
+     * @return boolean
+     */
+    public function isValid()
+    {
+        return (new \DateTime() >= $this->getValidFrom()) &&
+                (new \DateTime() <= $this->getValidTo());
     }
 
 }
