@@ -202,7 +202,7 @@ class Schema
 
         if (!preg_match('/^Document/', $class->getName()))
             $this->createClassMethodsFromNode($class, $node);
-        $class->save($dirTarget);
+        $class->save($dirTarget, null, true);
     }
 
     public function createClassMethodsFromNode(\PhpClass &$class, \DOMElement $node)
@@ -382,15 +382,16 @@ CODE;
      */
     public function createAttributeSetMethod($methodName, $type = null)
     {
+        $param = new \PhpClass_Argument(array('name' => 'value'));
+
         $method = new \PhpClass_Method(array(
                     'name' => 'set' . ucfirst($methodName),
-                    'parameters' => array(
-                        new \PhpClass_Argument(array('name' => 'value'))),
+                    'arguments' => array($param),
                     'returns' => $type
                 ));
 
         $code = <<<CODE
-\$this->setAttribute('{$methodName}', \$value);
+\$this->setAttribute('{$methodName}', {$param->getName(true)});
 return \$this;
 CODE;
         $method->setCode($code);
