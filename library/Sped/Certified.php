@@ -41,16 +41,68 @@ class Certified
     /**
      * Load the X509 Certified
      * @param string $filename
+     * @param string $password
      * @return \Sped\Certification\X509Certified 
      */
-    public static function loadPfx($filename)
+    public static function loadPfx($filename, $password = '')
     {
         $x509 = new \Sped\Certification\X509Certified();
-        $x509->load($filename);
+        $x509->load($filename, $password);
         return $x509;
     }
 
-    public function createSignature() {
-        
-}
+    public static function createXmlSignature(Schemas\V200\DocumentNFe &$domNFe, Certification\X509Certified $certified)
+    {
+        if ((!$domNFe->getNFe() instanceof Schemas\V200\TNFe) ||
+                (!$domNFe->getNFe()->getInfNFe() instanceof Schemas\V200\TNFe\InfNFe))
+            throw new Exception('O arquivo xml está vazio, não é possível assiná-lo.');
+
+        if ($domNFe->getNFe()->getSignature() instanceof Schemas\V200\SignatureType)
+            throw new Exception('O arquivo xml já está assinado, não é possível assiná-lo.');
+
+        $idNFe = preg_replace('/[^\d]/', '', $domNFe->getNFe()->getInfNFe()->getId());
+
+        //extrai os dados da tag para uma string
+        $dados = $domNFe->getNFe()->getInfNFe()->C14N(FALSE, FALSE, NULL, NULL);
+
+        $digestValue = base64_encode(hash('sha1', $dados, TRUE));
+
+        $signature = $domNFe->getNFe()->addSignature();
+
+        $signedInfo = $signature->addSignedInfo();
+
+        $node = $signedInfo->addCanonicalizationMethod();
+        $node->setAlgorithm('http://www.w3.org/TR/2001/REC-xml-c14n-20010315');
+
+        $node = $signedInfo->addSignatureMethod();
+        $node->setAlgorithm('http://www.w3.org/2000/09/xmldsig#rsa-sha1');
+
+        $reference = $signedInfo->addReference();
+        $node->setURI('#' . $idNFe);
+
+        $node = $reference->addTransforms();
+        $node->addTransform()->setAlgorithm('http://www.w3.org/2000/09/xmldsig#enveloped-signature');
+        $node->addTransform()->setAlgorithm('http://www.w3.org/TR/2001/REC-xml-c14n-20010315');
+
+        $reference->addDigestMethod()->setAlgorithm('http://www.w3.org/2000/09/xmldsig#sha1');
+        $reference->addDigestValue($digestValue);
+
+        $dataSignedInfo = $signedInfo->C14N(FALSE, FALSE, NULL, NULL);
+
+        //inicializa a variavel que vai receber a assinatura
+        //executa a assinatura digital usando o resource da chave privada
+        $certifiedSignature = '';
+        $privateKey = openssl_pkey_get_private($certified->getPrivateKey());
+
+        if (!openssl_sign($dataSignedInfo, $certifiedSignature, $privateKey))
+            throw new Exception('Não foi possível recuperar a assinatura do certificado.');
+
+        $signatureValue = base64_encode($certifiedSignature);
+
+        $signature->addSignatureValue($signatureValue);
+        $keyInfo = $signature->addKeyInfo();
+        $keyInfo->addX509Data();
+        $keyInfo->getX509Data()->addX509Certificate($certified->getPublicKey(true));
+    }
+
 }
