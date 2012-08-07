@@ -60,7 +60,7 @@ class Certified
         if ($domNFe->getNFe()->getSignature() instanceof Schemas\V200\SignatureType)
             throw new Exception('O arquivo xml já está assinado, não é possível assiná-lo.');
 
-        $idNFe = preg_replace('/[^\d]/', '', $domNFe->getNFe()->getInfNFe()->getId());
+        $idNFe = $domNFe->getNFe()->getInfNFe()->getId();
 
         //extrai os dados da tag para uma string
         $dados = $domNFe->getNFe()->getInfNFe()->C14N(FALSE, FALSE, NULL, NULL);
@@ -78,7 +78,7 @@ class Certified
         $node->setAlgorithm('http://www.w3.org/2000/09/xmldsig#rsa-sha1');
 
         $reference = $signedInfo->addReference();
-        $node->setURI('#' . $idNFe);
+        $reference->setURI('#' . $idNFe);
 
         $node = $reference->addTransforms();
         $node->addTransform()->setAlgorithm('http://www.w3.org/2000/09/xmldsig#enveloped-signature');
