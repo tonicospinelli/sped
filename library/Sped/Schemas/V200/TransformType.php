@@ -17,30 +17,30 @@ class TransformType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @return \Sped\Schemas\V200\String 
+     * @return \Sped\Components\Xml\Element 
      */
     public function getXPath()
     {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\String');
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Components\Xml\Element');
         return $this->getElementsByTagName(self::XPATH)->item(0);
     }
 
     /**
      * 
      * @param type $value 
-     * @return \Sped\Schemas\V200\String 
+     * @return \Sped\Components\Xml\Element 
      */
     public function addXPath($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\String(self::XPATH, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
+        return $this->appendChild(new \Sped\Components\Xml\Element(self::XPATH, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
      * 
-     * @param \Sped\Schemas\V200\String $paramXPath 
+     * @param \Sped\Components\Xml\Element $paramXPath 
      * @return \Sped\Schemas\V200\TransformType 
      */
-    public function setXPath(\Sped\Schemas\V200\String $paramXPath)
+    public function setXPath(\Sped\Components\Xml\Element $paramXPath)
     {
         $this->removeElementsByTagName(self::XPATH);
         $this->appendChild($paramXPath, false);

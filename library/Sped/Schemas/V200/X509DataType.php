@@ -17,30 +17,30 @@ class X509DataType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @return \Sped\Schemas\V200\Base64Binary 
+     * @return \Sped\Components\Xml\Element 
      */
     public function getX509Certificate()
     {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Base64Binary');
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Components\Xml\Element');
         return $this->getElementsByTagName(self::X509CERTIFICATE)->item(0);
     }
 
     /**
      * 
      * @param type $value 
-     * @return \Sped\Schemas\V200\Base64Binary 
+     * @return \Sped\Components\Xml\Element 
      */
     public function addX509Certificate($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\Base64Binary(self::X509CERTIFICATE, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
+        return $this->appendChild(new \Sped\Components\Xml\Element(self::X509CERTIFICATE, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**
      * 
-     * @param \Sped\Schemas\V200\Base64Binary $paramX509Certificate 
+     * @param \Sped\Components\Xml\Element $paramX509Certificate 
      * @return \Sped\Schemas\V200\X509DataType 
      */
-    public function setX509Certificate(\Sped\Schemas\V200\Base64Binary $paramX509Certificate)
+    public function setX509Certificate(\Sped\Components\Xml\Element $paramX509Certificate)
     {
         $this->removeElementsByTagName(self::X509CERTIFICATE);
         $this->appendChild($paramX509Certificate, false);

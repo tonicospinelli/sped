@@ -127,30 +127,30 @@ class InfProt extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @return \Sped\Schemas\V200\DateTime 
+     * @return \Sped\Components\Xml\Element 
      */
     public function getDhRecbto()
     {
-        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\DateTime');
+        $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Components\Xml\Element');
         return $this->getElementsByTagName(self::DHRECBTO)->item(0);
     }
 
     /**
      * 
      * @param type $value 
-     * @return \Sped\Schemas\V200\DateTime 
+     * @return \Sped\Components\Xml\Element 
      */
     public function addDhRecbto($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\DateTime(self::DHRECBTO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
+        return $this->appendChild(new \Sped\Components\Xml\Element(self::DHRECBTO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
      * 
-     * @param \Sped\Schemas\V200\DateTime $paramDhRecbto 
+     * @param \Sped\Components\Xml\Element $paramDhRecbto 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
-    public function setDhRecbto(\Sped\Schemas\V200\DateTime $paramDhRecbto)
+    public function setDhRecbto(\Sped\Components\Xml\Element $paramDhRecbto)
     {
         $this->removeElementsByTagName(self::DHRECBTO);
         $this->appendChild($paramDhRecbto, false);
