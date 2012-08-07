@@ -1,8 +1,6 @@
 <?php
 
-namespace Sped\Commons;
-
-require_once dirname(__FILE__) . '/../../../../library/Sped/Commons/Certified.php';
+namespace Sped;
 
 /**
  * Test class for Certified.
@@ -36,7 +34,9 @@ class CertifiedTest extends \PHPUnit_Framework_TestCase
 
     public function testLoadCertified()
     {
-        $cert = new Certified('samples/certificado_teste.pfx');
+        $cert = Certified::loadPfx('samples/certificado_teste.pfx');
+        var_dump($cert);
+        var_dump(openssl_pkey_get_private($cert->getPrivateKey()));
     }
 
 }
