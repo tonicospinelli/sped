@@ -13,6 +13,7 @@ class CertifiedTest extends \PHPUnit_Framework_TestCase
      * @var Certified
      */
     protected $object;
+    protected $file = 'samples/certificado_teste.pfx';
 
     /**
      * Sets up the fixture, for example, opens a network connection.
@@ -34,9 +35,32 @@ class CertifiedTest extends \PHPUnit_Framework_TestCase
 
     public function testLoadCertified()
     {
-        $cert = Certified::loadPfx('samples/certificado_teste.pfx');
-        var_dump($cert);
-        var_dump(openssl_pkey_get_private($cert->getPrivateKey()));
+        $cert = Certified::loadPfx($this->file, 'associacao');
+        $this->assertTrue(true);
+    }
+
+    public function testIsExpired()
+    {
+        $cert = Certified::loadPfx($this->file, 'associacao');
+        $this->assertTrue(!$cert->isExpired(), 'Certificado expirado');
+    }
+
+    public function testIsValid()
+    {
+        $cert = Certified::loadPfx($this->file, 'associacao');
+        $this->assertTrue($cert->isValid(), 'O certificado está fora da validade.');
+    }
+
+    public function testCreateXmlSignature()
+    {
+        $nfe = new Schemas\V200\DocumentNFe();
+        $nfe->load('samples/35101158716523000119550010000000011003000000-nfe.xml');
+        
+        $cert = Certified::loadPfx($this->file, 'associacao');
+        Certified::createXmlSignature($nfe, $cert);
+
+        $nfe->formatOutput = true;
+        var_dump($nfe->saveXML());
     }
 
 }
