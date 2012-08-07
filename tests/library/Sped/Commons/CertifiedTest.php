@@ -59,8 +59,7 @@ class CertifiedTest extends \PHPUnit_Framework_TestCase
         $cert = Certified::loadPfx($this->file, 'associacao');
         Certified::createXmlSignature($nfe, $cert);
 
-        $nfe->formatOutput = true;
-        var_dump($nfe->saveXML());
+        $nfe->save('samples/35101158716523000119550010000000011003000000-nfe-sign.xml');
     }
 
 }
