@@ -237,8 +237,13 @@ class Schema
                             $namespaceURI = $this->getLoadedSchema()->lookupNamespaceUri($prefix);
                         else
                             $namespaceURI = $this->getLoadedSchema()->getTargetNamespace();
-                        if (!is_null($type))
+
+                        $typeElementsLength = $dom->query("//*[@name='{$type}']")->length;
+
+                        if (!is_null($type) && $typeElementsLength > 0) 
                             $type = $this->getDefaultNamespace() . '\\' . ucfirst($type);
+                        elseif (!is_null($type) && $typeElementsLength < 1)
+                            $type = '\Sped\Components\Xml\Element';
                         elseif ($class->getExtends() === '\Sped\Components\Xml\Document')
                             $type = $class->getNamespace()->getPath() . '\\' . $type;
                         else
