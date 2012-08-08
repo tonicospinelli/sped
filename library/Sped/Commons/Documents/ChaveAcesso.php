@@ -40,7 +40,7 @@ use \Sped\Commons\Math;
 class ChaveAcesso extends AbstractDocument
 {
 
-    const MASK = '00-00/00-00.000.000/0000-00-00-000-000.000.000-0-00000000-0';
+    protected $mask = '00-00/00-00.000.000/0000-00-00-000-000.000.000-0-00000000-0';
 
     protected $codigoUfEmitente;
     protected $ano;
@@ -167,15 +167,6 @@ class ChaveAcesso extends AbstractDocument
     public function getDigitsCount()
     {
         return 1;
-    }
-
-    /**
-     * Retorna o número da Chave de Acesso com a máscara.
-     * @return string
-     */
-    public function getValueMasked()
-    {
-        return \Sped\Commons\Mask::exec($this->getValueUnmasked(), self::MASK);
     }
 
     /**

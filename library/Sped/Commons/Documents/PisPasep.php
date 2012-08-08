@@ -38,7 +38,7 @@ namespace Sped\Commons\Documents;
 class PisPasep extends AbstractDocument
 {
 
-    const MASK = '000.00000.00-0';
+    protected $mask = '000.00000.00-0';
 
     public function getDigitsCount()
     {

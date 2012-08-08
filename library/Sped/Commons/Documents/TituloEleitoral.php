@@ -38,8 +38,7 @@ namespace Sped\Commons\Documents;
 class TituloEleitoral extends AbstractDocument
 {
 
-    const MASK = '0000000000000';
-
+    protected $mask = '0000000000000';
     protected $secao;
     protected $zona;
 

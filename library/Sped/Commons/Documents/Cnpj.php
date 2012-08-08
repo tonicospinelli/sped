@@ -38,7 +38,7 @@ namespace Sped\Commons\Documents;
 class Cnpj extends AbstractDocument
 {
 
-    const MASK = '00.000.000/0000-00';
+    protected $mask = '00.000.000/0000-00';
 
     public function getMaxMultiplier()
     {

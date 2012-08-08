@@ -38,7 +38,7 @@ namespace Sped\Commons\Documents;
 class Cpf extends AbstractDocument
 {
 
-    const MASK = '000.000.000-00';
+    protected $mask = '000.000.000-00';
 
     public function getMaxMultiplier()
     {

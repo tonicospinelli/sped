@@ -37,7 +37,7 @@ namespace Sped\Commons\Documents;
  */
 class InscricaoEstadual extends AbstractDocument implements InterfaceDocument
 {
-
+protected $mask;
     public function getLength()
     {
         

@@ -43,6 +43,7 @@ abstract class AbstractDocument implements InterfaceDocument
      * @var \Sped\Commons\StringHelper
      */
     protected $value;
+    protected $mask;
 
     abstract public function getLength();
 
@@ -65,6 +66,11 @@ abstract class AbstractDocument implements InterfaceDocument
     public function ___toString($formatted = false)
     {
         return $this->toString($formatted);
+    }
+
+    public function getMask()
+    {
+        return $this->mask;
     }
 
     /**
@@ -94,7 +100,7 @@ abstract class AbstractDocument implements InterfaceDocument
      */
     public function getValueMasked()
     {
-        return \Sped\Commons\Mask::exec($this->getUnMasked(), self::MASK);
+        return \Sped\Commons\Mask::exec($this->getValueUnmasked(), $this->getMask());
     }
 
     /**
