@@ -38,6 +38,8 @@ namespace Sped\Commons\Documents;
 class Cpf extends AbstractDocument
 {
 
+    const MASK = '000.000.000-00';
+
     public function getMaxMultiplier()
     {
         return 12;
@@ -51,11 +53,6 @@ class Cpf extends AbstractDocument
     public function getLength()
     {
         return 11;
-    }
-
-    public function getValueMasked()
-    {
-        return \Sped\Commons\Mask::exec($this->getUnMasked(), '000.000.000-00');
     }
 
     public function isValid()

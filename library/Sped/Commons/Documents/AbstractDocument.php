@@ -50,8 +50,6 @@ abstract class AbstractDocument implements InterfaceDocument
 
     abstract public function getMaxMultiplier();
 
-    abstract public function getValueMasked();
-
     abstract public function isValid();
 
     public function __construct($value = null)
@@ -88,6 +86,15 @@ abstract class AbstractDocument implements InterfaceDocument
     public function getValue()
     {
         return $this->value;
+    }
+
+    /**
+     * Retorna o documento com pontuação.
+     * @return string
+     */
+    public function getValueMasked()
+    {
+        return \Sped\Commons\Mask::exec($this->getUnMasked(), self::MASK);
     }
 
     /**

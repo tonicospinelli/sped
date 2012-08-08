@@ -53,11 +53,6 @@ class InscricaoEstadual extends AbstractDocument implements InterfaceDocument
         
     }
 
-    public function getValueMasked()
-    {
-        
-    }
-
     public function isValid()
     {
         

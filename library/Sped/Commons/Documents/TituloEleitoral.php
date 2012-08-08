@@ -38,6 +38,8 @@ namespace Sped\Commons\Documents;
 class TituloEleitoral extends AbstractDocument
 {
 
+    const MASK = '0000000000000';
+
     protected $secao;
     protected $zona;
 
@@ -98,14 +100,6 @@ class TituloEleitoral extends AbstractDocument
         return 9;
     }
 
-    /**
-     * Retorna o número do Título Eleitoral com a máscara.
-     * @return string
-     */
-    public function getValueMasked()
-    {
-        return \Sped\Commons\Mask::exec($this->getValueUnmasked(), str_repeat('0', $this->getLength()));
-    }
     /**
      * Retorna o número do Título Eleitoral sem a máscara.
      * @return string

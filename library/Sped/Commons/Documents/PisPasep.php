@@ -38,6 +38,8 @@ namespace Sped\Commons\Documents;
 class PisPasep extends AbstractDocument
 {
 
+    const MASK = '000.00000.00-0';
+
     public function getDigitsCount()
     {
         return 1;
@@ -51,11 +53,6 @@ class PisPasep extends AbstractDocument
     public function getMaxMultiplier()
     {
         return 9;
-    }
-
-    public function getValueMasked()
-    {
-        return \Sped\Commons\Mask::exec($this->getValueUnmasked(), '000.00000.00-0');
     }
 
     public function isValid()

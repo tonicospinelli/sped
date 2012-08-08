@@ -28,6 +28,8 @@
 
 namespace Sped\Commons\Documents;
 
+use \Sped\Commons\Math;
+
 /**
  * @category   Sped
  * @package    Sped\Commons\Documents
@@ -37,6 +39,117 @@ namespace Sped\Commons\Documents;
  */
 class ChaveAcesso extends AbstractDocument
 {
+
+    const MASK = '00-00/00-00.000.000/0000-00-00-000-000.000.000-0-00000000-0';
+
+    protected $codigoUfEmitente;
+    protected $ano;
+    protected $mes;
+    protected $cnpjEmitente;
+    protected $modelo;
+    protected $serie;
+    protected $numeroNFe;
+    protected $tipoEmissao;
+    protected $codigoNumerico;
+
+    public function getCodigoUfEmitente()
+    {
+        return $this->codigoUfEmitente;
+    }
+
+    public function setCodigoUfEmitente($codigoUfEmitente)
+    {
+        $this->codigoUfEmitente = $codigoUfEmitente;
+        return $this;
+    }
+
+    public function getAno()
+    {
+        return $this->ano;
+    }
+
+    public function setAno($ano)
+    {
+        $this->ano = $ano;
+        return $this;
+    }
+
+    public function getMes()
+    {
+        return $this->mes;
+    }
+
+    public function setMes($mes)
+    {
+        $this->mes = $mes;
+        return $this;
+    }
+
+    public function getCnpjEmitente()
+    {
+        return $this->cnpjEmitente;
+    }
+
+    public function setCnpjEmitente($cnpjEmitente)
+    {
+        $this->cnpjEmitente = $cnpjEmitente;
+        return $this;
+    }
+
+    public function getModelo()
+    {
+        return $this->modelo;
+    }
+
+    public function setModelo($modelo)
+    {
+        $this->modelo = $modelo;
+        return $this;
+    }
+
+    public function getSerie()
+    {
+        return $this->serie;
+    }
+
+    public function setSerie($serie)
+    {
+        $this->serie = $serie;
+        return $this;
+    }
+
+    public function getNumeroNFe()
+    {
+        return $this->numeroNFe;
+    }
+
+    public function setNumeroNFe($numeroNFe)
+    {
+        $this->numeroNFe = $numeroNFe;
+        return $this;
+    }
+
+    public function getTipoEmissao()
+    {
+        return $this->tipoEmissao;
+    }
+
+    public function setTipoEmissao($tipoEmissao)
+    {
+        $this->tipoEmissao = $tipoEmissao;
+        return $this;
+    }
+
+    public function getCodigoNumerico()
+    {
+        return $this->codigoNumerico;
+    }
+
+    public function setCodigoNumerico($codigoNumerico)
+    {
+        $this->codigoNumerico = $codigoNumerico;
+        return $this;
+    }
 
     /**
      * Retorna o maior multiplicador.
@@ -62,7 +175,7 @@ class ChaveAcesso extends AbstractDocument
      */
     public function getValueMasked()
     {
-        return \Sped\Commons\Mask::exec($this->getValueUnmasked(), 'NFe' . str_repeat('0', 44));
+        return \Sped\Commons\Mask::exec($this->getValueUnmasked(), self::MASK);
     }
 
     /**
@@ -81,6 +194,63 @@ class ChaveAcesso extends AbstractDocument
     public function isValid()
     {
         return \Sped\Validation::chaveAcesso()->validate($this);
+    }
+
+    /**
+     * Gera o código número aleatório com base nas informações do XML.
+     * @param \Sped\Schemas\V200\DocumentNFe $domNFe Objeto do XML.
+     * @return float Código Númerico gerado aleatoriamente.
+     */
+    public function gerarCodigoNumerico(\Sped\Schemas\V200\DocumentNFe $domNFe)
+    {
+        $codigoNumerico = 0;
+        $hasIndex = 0;
+        $nfeHash = sha1($domNFe->getNFe()->C14N(FALSE, FALSE, NULL, NULL));
+        $coeficientes = new \Sped\Commons\Collections\ArrayCollection(array(3, 2, 2, 2, 2, 2, 2, 3));
+        $iterator = $coeficientes->getIterator();
+        foreach ($iterator as $index => $element) {
+            $algarismoBytes = substr($nfeHash, $hasIndex, $hasIndex + $element);
+            $somaBytes = self::somaBytes($algarismoBytes);
+            $algarismo = self::somaInteiro($somaBytes);
+            $codigoNumerico = ($codigoNumerico + $algarismo * Math::pow(10.0, $index));
+            $hasIndex += $element;
+        }
+        return $codigoNumerico;
+    }
+
+    /**
+     * Retorna a soma dos valores ASCII dos caractéres.
+     * @param string $bytes Caracters que serão convertidos para ASCII.
+     * @return int Soma dos valores ASCII.
+     */
+    private static function somaBytes($bytes)
+    {
+        $soma = 0;
+        $bytes = str_split($bytes);
+        foreach ($bytes as $byte)
+            $soma += ord($byte);
+
+        return (int) $soma;
+    }
+
+    /**
+     * Retorna soma os restos da divisão do número até este ser menor que zero.
+     * @param int $numero Número que gera a soma.
+     * @return int Soma dos restos da divisão enquanto o número é suprior a zero.
+     */
+    private static function somaInteiro($numero)
+    {
+        $somaAtual = 0;
+        while ($numero > 0) {
+            $somaAtual += $numero % 10;
+            $numero /= 10;
+            if (strpos($numero, 'E-') !== false)
+                break;
+        }
+        if (($somaAtual / 10 > 0) && (strpos($somaAtual / 10, 'E-') !== false))
+            return self::somaInteiro($somaAtual);
+
+        return (int) $somaAtual;
     }
 
 }

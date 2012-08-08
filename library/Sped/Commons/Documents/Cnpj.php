@@ -38,6 +38,8 @@ namespace Sped\Commons\Documents;
 class Cnpj extends AbstractDocument
 {
 
+    const MASK = '00.000.000/0000-00';
+
     public function getMaxMultiplier()
     {
         return 9;
@@ -46,15 +48,6 @@ class Cnpj extends AbstractDocument
     public function getDigitsCount()
     {
         return 2;
-    }
-
-    /**
-     * Retorna o documento com pontuação.
-     * @return string
-     */
-    public function getValueMasked()
-    {
-        return \Sped\Commons\Mask::exec($this->getUnMasked(), '00.000.000/0000-00');
     }
 
     public function getLength()
