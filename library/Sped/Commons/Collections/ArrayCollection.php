@@ -347,7 +347,7 @@ class ArrayCollection implements InterfaceCollection
     /**
      * Gets an iterator for iterating over the elements in the collection.
      *
-     * @return ArrayIterator
+     * @return CollectionIterator
      */
     public function getIterator()
     {
