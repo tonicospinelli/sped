@@ -61,8 +61,11 @@ class DocumentNFeTest extends \PHPUnit_Framework_TestCase
             $this->object->getNFe()->getInfNFe()->getIde()->addCNF('123');
             $this->object->getNFe()->getInfNFe()->getIde()->addNFref();
             $this->object->getNFe()->getInfNFe()->getIde()->getNFref(0)->addRefNF()->addAAMM(1210);
-            $this->object->getNFe()->addSignature();
-            $this->object->getNFe()->getSignature()->addSignedInfo();
+            
+            $cert = \Sped\Certified::loadPfx('./samples/certificado_teste.pfx', 'associacao');
+            
+            \Sped\Certified::createXmlSignature($this->object, $cert);
+            
             $this->object->formatOutput = true;
             var_dump($this->object->saveXML());
         } catch (\DOMException $exc) {
