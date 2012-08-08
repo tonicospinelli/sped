@@ -28,9 +28,6 @@
 
 namespace Sped\Commons\Collections;
 
-use \Countable,
-    \IteratorAggregate;
-
 /**
  * @category   Sped
  * @package    Sped\Commons\Collections
@@ -38,7 +35,7 @@ use \Countable,
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-class CollectionIterator implements Iterator, Countable
+class CollectionIterator implements \Iterator, \Countable
 {
 
     /**
