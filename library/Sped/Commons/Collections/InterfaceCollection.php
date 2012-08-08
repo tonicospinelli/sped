@@ -28,10 +28,6 @@
 
 namespace Sped\Commons\Collections;
 
-use \Countable,
-    \IteratorAggregate,
-    \ArrayAccess;
-
 /**
  * @category   Sped
  * @package    Sped\Commons\Collections
@@ -39,7 +35,7 @@ use \Countable,
  * @license    http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @author     Antonio Spinelli <tonicospinelli85@gmail.com>
  */
-interface InterfaceCollection extends Countable, IteratorAggregate, ArrayAccess
+interface InterfaceCollection extends \Countable, \IteratorAggregate, \ArrayAccess
 {
 
     /**
