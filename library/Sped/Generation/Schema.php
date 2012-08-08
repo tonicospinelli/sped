@@ -171,6 +171,7 @@ class Schema
             $class->getConstants()->clear();
             $class->getMethods()->clear();
             $class->setExtends('\Sped\Components\Xml\Document');
+            $class->setDescription('Documento ' . $class->getDocBlock()->getDescription());
             $class->setName('Document' . ucfirst($nodeName));
             if ($node->hasAttribute('type')) {
                 $prefix = $node->prefix;
@@ -191,18 +192,30 @@ class Schema
             $class->addConstant(new \PhpClass_Constant(array(
                         'name' => $nodeName, 'value' => $nodeName)));
 
-            $class->addMethod($this->createElementGetMethod($methodName, $methodNamespace, false, false));
+            $class->addMethod($this->createElementGetMethod(array(
+                        'name' => $methodName,
+                        'description' => $this->getDocumentation($node),
+                        'type' => $methodNamespace,
+                        'hasValue' => false,
+                        'isElement' => false)));
+
             $class->addMethod($this->createElementAddMethod(array(
                         'name' => $methodName,
+                        'description' => $this->getDocumentation($node),
                         'type' => $methodNamespace,
                         'namespaceURI' => $namespaceURI)));
 
-            $class->addMethod($this->createElementSetMethod($methodName, $methodNamespace));
+            $class->addMethod($this->createElementSetMethod(array(
+                        'name' => $methodName,
+                        'description' => $this->getDocumentation($node),
+                        'type' => $methodNamespace)));
         }
 
         if (!preg_match('/^Document/', $class->getName()))
             $this->createClassMethodsFromNode($class, $node);
+
         $class->save($dirTarget, null, true);
+        var_dump($class->getFullName() . ' is generated.');
     }
 
     public function createClassMethodsFromNode(\PhpClass &$class, \DOMElement $node)
@@ -240,7 +253,7 @@ class Schema
 
                         $typeElementsLength = $dom->query("//*[@name='{$type}']")->length;
 
-                        if (!is_null($type) && $typeElementsLength > 0) 
+                        if (!is_null($type) && $typeElementsLength > 0)
                             $type = $this->getDefaultNamespace() . '\\' . ucfirst($type);
                         elseif (!is_null($type) && $typeElementsLength < 1)
                             $type = '\Sped\Components\Xml\Element';
@@ -262,14 +275,25 @@ class Schema
                                 'name' => $name,
                                 'value' => $name)));
 
-                    $class->addMethod($this->createElementGetMethod($name, $type, $hasIndex));
+                    $class->addMethod($this->createElementGetMethod(array(
+                                'name' => $name,
+                                'description' => $this->getDocumentation($node),
+                                'type' => $type,
+                                'hasValue' => $hasIndex,
+                                'isElement' => true)));
+
                     $class->addMethod($this->createElementAddMethod(array(
                                 'name' => $name,
+                                'description' => $this->getDocumentation($node),
                                 'type' => $type,
                                 'hasValue' => $this->isLastLevel($node),
                                 'isUnique' => ($hasIndex == 0),
                                 'namespaceURI' => $namespaceURI)));
-                    $class->addMethod($this->createElementSetMethod($name, $type));
+
+                    $class->addMethod($this->createElementSetMethod(array(
+                                'name' => $name,
+                                'description' => $this->getDocumentation($node),
+                                'type' => $type)));
 
                     if ($node->localName != 'simpleType'
                             AND $node->hasChildNodes()
@@ -442,31 +466,43 @@ CODE;
 
     /**
      * Cria o método Add* de acordo com a configuração informada.
-     * @param type $methodName
-     * @param type $type
-     * @param type $hasIndex
-     * @param type $isElement
+     * @param array $config Parametros de configuração.<br/>
+     * <code>
+     * $config = array(
+     *  'name' => 'teste',
+     *  'type' => 'DateTime',
+     *  'description' => 'Metodo teste',
+     *  'isElement' => true,
+     * );
+     * </code>
      * @return \PhpClass_Method 
      */
-    public function createElementGetMethod($methodName, $type, $hasIndex = false, $isElement = true)
+    public function createElementGetMethod($config = array())
     {
-        $methodName = ucfirst($methodName);
-        $constantName = mb_strtoupper($methodName);
-        $param = '0';
+        $this->validateParameters($config);
+
+        $methodName = ucfirst($config['name']);
+        $constantName = mb_strtoupper($config['name']);
+
         $method = new \PhpClass_Method(array(
                     'name' => 'get' . $methodName,
-                    'returns' => $type
+                    'description' => is_null($config['description']) ? '' : 'Retorna ' . $config['description'],
+                    'returns' => $config['type']
                 ));
 
-        if ($hasIndex) {
-            $method->addArgument(new \PhpClass_Argument(array('name' => 'index')));
+        if ($config['hasIndex']) {
+            $method->addArgument(new \PhpClass_Argument(array(
+                        'name' => 'index',
+                        'type' => 'int')));
             $param = '$index';
         }
+        else
+            $param = '0';
 
-        $ownerDocument = ($isElement ? 'ownerDocument->' : '');
+        $ownerDocument = ($config['isElement'] ? 'ownerDocument->' : '');
 
         $code = <<<CODE
-\$this->{$ownerDocument}registerNodeClass('\DOMElement', '{$type}');
+\$this->{$ownerDocument}registerNodeClass('\DOMElement', '{$config['type']}');
 return \$this->getElementsByTagName(self::{$constantName})->item({$param});
 CODE;
         $method->setCode($code);
@@ -475,17 +511,22 @@ CODE;
 
     /**
      * Cria o método Add* de acordo com a configuração informada.
-     * @param array $config
+     * @param array $config Parametros de configuração.<br/>
+     * <code>
+     * $config = array(
+     *  'name' => 'teste',
+     *  'type' => 'DateTime',
+     *  'description' => 'Metodo teste',
+     *  'hasValue' => true,
+     *  'namespaceURI' => '',
+     *  'isUnique' => false,
+     * );
+     * </code>
      * @return \PhpClass_Method 
      */
     public function createElementAddMethod($config = array())
     {
-
-        if (is_null($config['name']) OR empty($config['name']))
-            throw new \RuntimeException("The method name can't be a null or empty");
-
-        if (is_null($config['type']) OR empty($config['type']))
-            throw new \RuntimeException("The method type can't be a null or empty");
+        $this->validateParameters($config);
 
         $methodName = ucfirst($config['name']);
         $constantName = mb_strtoupper($methodName);
@@ -493,11 +534,13 @@ CODE;
 
         $method = new \PhpClass_Method(array(
                     'name' => 'add' . $methodName,
+                    'description' => is_null($config['description']) ? '' : 'Adiciona ' . $config['description'],
                     'returns' => $config['type']));
 
         if ($config['hasValue']) {
             $method->addArgument(new \PhpClass_Argument(array(
                         'name' => 'value',
+                        'type' => 'string',
                         'value' => NULL,
                         'isOptional' => true))
             );
@@ -519,23 +562,34 @@ CODE;
 
     /**
      * Cria o método Set* de acordo com a configuração informada.
-     * @param string $methodName
-     * @param string $type
+     * @param array $config Parametros de configuração.<br/>
+     * <code>
+     * $config = array(
+     *  'name' => 'teste',
+     *  'type' => 'DateTime',
+     *  'description' => 'Metodo teste',
+     * );
+     * </code>
      * @return \PhpClass_Method 
      */
-    public function createElementSetMethod($methodName, $type)
+    public function createElementSetMethod($config)
     {
-        $methodName = ucfirst($methodName);
+        $this->validateParameters($config);
+        
+        $methodName = ucfirst($config['name']);
         $constantName = mb_strtoupper($methodName);
-        $method = new \PhpClass_Method(array('name' => 'set' . $methodName));
+        $method = new \PhpClass_Method(array(
+                    'name' => 'set' . $methodName,
+                    'description' => is_null($config['description']) ? '' : 'Define ' . $config['description'],
+                ));
 
         $param = new \PhpClass_Argument(array(
                     'name' => 'param' . $methodName,
                     'value' => NULL,
-                    'type' => $type));
+                    'type' => $config['type']));
         $method->addArgument($param);
 
-        $isUnique = $isUnique ? 'true' : 'false';
+        $isUnique = $config['isUnique'] ? 'true' : 'false';
         $code = <<<CODE
 \$this->removeElementsByTagName(self::{$constantName});
 \$this->appendChild(\${$param->getName()}, {$isUnique});
@@ -543,6 +597,15 @@ return \$this;
 CODE;
         $method->setCode($code);
         return $method;
+    }
+
+    protected function validateParameters($parameters = array())
+    {
+        if (\Sped\Commons\StringHelper::isNullOrEmpty($parameters['name']))
+            throw new \RuntimeException("The method name can't be a null or empty");
+
+        if (\Sped\Commons\StringHelper::isNullOrEmpty($parameters['type']))
+            throw new \RuntimeException("The method type can't be a null or empty");
     }
 
 }
