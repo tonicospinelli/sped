@@ -26,7 +26,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     const CSITTRIB = 'cSitTrib';
 
     /**
-     * 
+     * Retorna Valor da BC do ISSQN
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC()
@@ -36,7 +36,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do ISSQN
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -46,7 +46,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do ISSQN
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
@@ -58,7 +58,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do ISSQN
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getVAliq()
@@ -68,7 +68,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do ISSQN
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -78,7 +78,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do ISSQN
      * @param \Sped\Schemas\V200\TDec_0302 $paramVAliq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
@@ -90,7 +90,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor da do ISSQN
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVISSQN()
@@ -100,7 +100,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da do ISSQN
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -110,7 +110,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da do ISSQN
      * @param \Sped\Schemas\V200\TDec_1302 $paramVISSQN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
@@ -122,7 +122,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informar o município de ocorrência do fato gerador do ISSQN. Utilizar a Tabela do IBGE (Anexo VII - Tabela de UF, Município e País). “Atenção, não vincular com os campos B12, C10 ou E10” v2.0
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function getCMunFG()
@@ -132,7 +132,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informar o município de ocorrência do fato gerador do ISSQN. Utilizar a Tabela do IBGE (Anexo VII - Tabela de UF, Município e País). “Atenção, não vincular com os campos B12, C10 ou E10” v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
@@ -142,7 +142,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar o município de ocorrência do fato gerador do ISSQN. Utilizar a Tabela do IBGE (Anexo VII - Tabela de UF, Município e País). “Atenção, não vincular com os campos B12, C10 ou E10” v2.0
      * @param \Sped\Schemas\V200\TCodMunIBGE $paramCMunFG 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
@@ -154,7 +154,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informar o Item da lista de serviços da LC 116/03 em que se classifica o serviço.
      * @return \Sped\Schemas\V200\TCListServ 
      */
     public function getCListServ()
@@ -164,7 +164,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informar o Item da lista de serviços da LC 116/03 em que se classifica o serviço.
      * @param type $value 
      * @return \Sped\Schemas\V200\TCListServ 
      */
@@ -174,7 +174,7 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar o Item da lista de serviços da LC 116/03 em que se classifica o serviço.
      * @param \Sped\Schemas\V200\TCListServ $paramCListServ 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
@@ -186,7 +186,11 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informar o código da tributação do ISSQN:<br />
+     * N – NORMAL;<br />
+     * R – RETIDA;<br />
+     * S –SUBSTITUTA;<br />
+     * I – ISENTA. (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib 
      */
     public function getCSitTrib()
@@ -196,7 +200,11 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informar o código da tributação do ISSQN:<br />
+     * N – NORMAL;<br />
+     * R – RETIDA;<br />
+     * S –SUBSTITUTA;<br />
+     * I – ISENTA. (v.2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib 
      */
@@ -206,7 +214,11 @@ class ISSQN extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar o código da tributação do ISSQN:<br />
+     * N – NORMAL;<br />
+     * R – RETIDA;<br />
+     * S –SUBSTITUTA;<br />
+     * I – ISENTA. (v.2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib $paramCSitTrib 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */

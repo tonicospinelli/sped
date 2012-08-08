@@ -22,18 +22,17 @@ class Fat extends \Sped\Components\Xml\Element
     const VLIQ = 'vLiq';
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Número da fatura
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      */
-    public function getNFat($index)
+    public function getNFat()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat');
-        return $this->getElementsByTagName(self::NFAT)->item($index);
+        return $this->getElementsByTagName(self::NFAT)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Número da fatura
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      */
@@ -43,7 +42,7 @@ class Fat extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número da fatura
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat $paramNFat 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
@@ -55,18 +54,17 @@ class Fat extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Valor original da fatura
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVOrig($index)
+    public function getVOrig()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VORIG)->item($index);
+        return $this->getElementsByTagName(self::VORIG)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Valor original da fatura
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -76,7 +74,7 @@ class Fat extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor original da fatura
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
@@ -88,18 +86,17 @@ class Fat extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Valor do desconto da fatura
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVDesc($index)
+    public function getVDesc()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VDESC)->item($index);
+        return $this->getElementsByTagName(self::VDESC)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Valor do desconto da fatura
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -109,7 +106,7 @@ class Fat extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do desconto da fatura
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVDesc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
@@ -121,18 +118,17 @@ class Fat extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Valor líquido da fatura
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVLiq($index)
+    public function getVLiq()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VLIQ)->item($index);
+        return $this->getElementsByTagName(self::VLIQ)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Valor líquido da fatura
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -142,7 +138,7 @@ class Fat extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor líquido da fatura
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVLiq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */

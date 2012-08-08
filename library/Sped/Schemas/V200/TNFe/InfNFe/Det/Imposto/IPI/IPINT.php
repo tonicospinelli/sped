@@ -26,7 +26,17 @@ class IPINT extends \Sped\Components\Xml\Element
     const CST = 'CST';
 
     /**
-     * 
+     * Retorna Código da Situação Tributária do IPI:<br />
+     * 01-Entrada tributada com alíquota zero<br />
+     * 02-Entrada isenta<br />
+     * 03-Entrada não-tributada<br />
+     * 04-Entrada imune<br />
+     * 05-Entrada com suspensão<br />
+     * 51-Saída tributada com alíquota zero<br />
+     * 52-Saída isenta<br />
+     * 53-Saída não-tributada<br />
+     * 54-Saída imune<br />
+     * 55-Saída com suspensão
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT\CST 
      */
     public function getCST()
@@ -36,7 +46,17 @@ class IPINT extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código da Situação Tributária do IPI:<br />
+     * 01-Entrada tributada com alíquota zero<br />
+     * 02-Entrada isenta<br />
+     * 03-Entrada não-tributada<br />
+     * 04-Entrada imune<br />
+     * 05-Entrada com suspensão<br />
+     * 51-Saída tributada com alíquota zero<br />
+     * 52-Saída isenta<br />
+     * 53-Saída não-tributada<br />
+     * 54-Saída imune<br />
+     * 55-Saída com suspensão
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT\CST 
      */
@@ -46,7 +66,17 @@ class IPINT extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código da Situação Tributária do IPI:<br />
+     * 01-Entrada tributada com alíquota zero<br />
+     * 02-Entrada isenta<br />
+     * 03-Entrada não-tributada<br />
+     * 04-Entrada imune<br />
+     * 05-Entrada com suspensão<br />
+     * 51-Saída tributada com alíquota zero<br />
+     * 52-Saída isenta<br />
+     * 53-Saída não-tributada<br />
+     * 54-Saída imune<br />
+     * 55-Saída com suspensão
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT 
      */

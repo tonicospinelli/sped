@@ -16,7 +16,7 @@ class ForDia extends \Sped\Components\Xml\Element
     const QTDE = 'qtde';
 
     /**
-     * 
+     * Retorna Quantidade em quilogramas - peso líquido // v2.0
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function getQtde()
@@ -26,7 +26,7 @@ class ForDia extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Quantidade em quilogramas - peso líquido // v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
@@ -36,7 +36,7 @@ class ForDia extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade em quilogramas - peso líquido // v2.0
      * @param \Sped\Schemas\V200\TDec_1110 $paramQtde 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia 
      */

@@ -22,7 +22,9 @@ class COFINS extends \Sped\Components\Xml\Element
     const COFINSOUTR = 'COFINSOutr';
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do COFINS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
     public function getCOFINSAliq()
@@ -32,7 +34,9 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do COFINS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
     public function addCOFINSAliq()
@@ -41,7 +45,9 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do COFINS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq $paramCOFINSAliq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
@@ -53,7 +59,8 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do COFINS.<br />
+     * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde 
      */
     public function getCOFINSQtde()
@@ -63,7 +70,8 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do COFINS.<br />
+     * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde 
      */
     public function addCOFINSQtde()
@@ -72,7 +80,8 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do COFINS.<br />
+     * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde $paramCOFINSQtde 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
@@ -84,7 +93,12 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do COFINS:<br />
+     * 04 - Operação Tributável - Tributação Monofásica - (Alíquota Zero);<br />
+     * 06 - Operação Tributável - Alíquota Zero;<br />
+     * 07 - Operação Isenta da contribuição;<br />
+     * 08 - Operação Sem Incidência da contribuição;<br />
+     * 09 - Operação com suspensão da contribuição;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT 
      */
     public function getCOFINSNT()
@@ -94,7 +108,12 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do COFINS:<br />
+     * 04 - Operação Tributável - Tributação Monofásica - (Alíquota Zero);<br />
+     * 06 - Operação Tributável - Alíquota Zero;<br />
+     * 07 - Operação Isenta da contribuição;<br />
+     * 08 - Operação Sem Incidência da contribuição;<br />
+     * 09 - Operação com suspensão da contribuição;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT 
      */
     public function addCOFINSNT()
@@ -103,7 +122,12 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do COFINS:<br />
+     * 04 - Operação Tributável - Tributação Monofásica - (Alíquota Zero);<br />
+     * 06 - Operação Tributável - Alíquota Zero;<br />
+     * 07 - Operação Isenta da contribuição;<br />
+     * 08 - Operação Sem Incidência da contribuição;<br />
+     * 09 - Operação com suspensão da contribuição;
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSNT $paramCOFINSNT 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
@@ -115,7 +139,31 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do COFINS:<br />
+     * 49 - Outras Operações de Saída<br />
+     * 50 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Tributada no Mercado Interno<br />
+     * 51 - Operação com Direito a Crédito – Vinculada Exclusivamente a Receita Não Tributada no Mercado Interno<br />
+     * 52 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita de Exportação<br />
+     * 53 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno<br />
+     * 54 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas no Mercado Interno e de Exportação<br />
+     * 55 - Operação com Direito a Crédito - Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação<br />
+     * 56 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação<br />
+     * 60 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Tributada no Mercado Interno<br />
+     * 61 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno<br />
+     * 62 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita de Exportação<br />
+     * 63 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno<br />
+     * 64 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas no Mercado Interno e de Exportação<br />
+     * 65 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação<br />
+     * 66 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação<br />
+     * 67 - Crédito Presumido - Outras Operações<br />
+     * 70 - Operação de Aquisição sem Direito a Crédito<br />
+     * 71 - Operação de Aquisição com Isenção<br />
+     * 72 - Operação de Aquisição com Suspensão<br />
+     * 73 - Operação de Aquisição a Alíquota Zero<br />
+     * 74 - Operação de Aquisição sem Incidência da Contribuição<br />
+     * 75 - Operação de Aquisição por Substituição Tributária<br />
+     * 98 - Outras Operações de Entrada<br />
+     * 99 - Outras Operações.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr 
      */
     public function getCOFINSOutr()
@@ -125,7 +173,31 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do COFINS:<br />
+     * 49 - Outras Operações de Saída<br />
+     * 50 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Tributada no Mercado Interno<br />
+     * 51 - Operação com Direito a Crédito – Vinculada Exclusivamente a Receita Não Tributada no Mercado Interno<br />
+     * 52 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita de Exportação<br />
+     * 53 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno<br />
+     * 54 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas no Mercado Interno e de Exportação<br />
+     * 55 - Operação com Direito a Crédito - Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação<br />
+     * 56 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação<br />
+     * 60 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Tributada no Mercado Interno<br />
+     * 61 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno<br />
+     * 62 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita de Exportação<br />
+     * 63 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno<br />
+     * 64 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas no Mercado Interno e de Exportação<br />
+     * 65 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação<br />
+     * 66 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação<br />
+     * 67 - Crédito Presumido - Outras Operações<br />
+     * 70 - Operação de Aquisição sem Direito a Crédito<br />
+     * 71 - Operação de Aquisição com Isenção<br />
+     * 72 - Operação de Aquisição com Suspensão<br />
+     * 73 - Operação de Aquisição a Alíquota Zero<br />
+     * 74 - Operação de Aquisição sem Incidência da Contribuição<br />
+     * 75 - Operação de Aquisição por Substituição Tributária<br />
+     * 98 - Outras Operações de Entrada<br />
+     * 99 - Outras Operações.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr 
      */
     public function addCOFINSOutr()
@@ -134,7 +206,31 @@ class COFINS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do COFINS:<br />
+     * 49 - Outras Operações de Saída<br />
+     * 50 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Tributada no Mercado Interno<br />
+     * 51 - Operação com Direito a Crédito – Vinculada Exclusivamente a Receita Não Tributada no Mercado Interno<br />
+     * 52 - Operação com Direito a Crédito - Vinculada Exclusivamente a Receita de Exportação<br />
+     * 53 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno<br />
+     * 54 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas no Mercado Interno e de Exportação<br />
+     * 55 - Operação com Direito a Crédito - Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação<br />
+     * 56 - Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação<br />
+     * 60 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Tributada no Mercado Interno<br />
+     * 61 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno<br />
+     * 62 - Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita de Exportação<br />
+     * 63 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno<br />
+     * 64 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas no Mercado Interno e de Exportação<br />
+     * 65 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação<br />
+     * 66 - Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação<br />
+     * 67 - Crédito Presumido - Outras Operações<br />
+     * 70 - Operação de Aquisição sem Direito a Crédito<br />
+     * 71 - Operação de Aquisição com Isenção<br />
+     * 72 - Operação de Aquisição com Suspensão<br />
+     * 73 - Operação de Aquisição a Alíquota Zero<br />
+     * 74 - Operação de Aquisição sem Incidência da Contribuição<br />
+     * 75 - Operação de Aquisição por Substituição Tributária<br />
+     * 98 - Outras Operações de Entrada<br />
+     * 99 - Outras Operações.
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr $paramCOFINSOutr 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */

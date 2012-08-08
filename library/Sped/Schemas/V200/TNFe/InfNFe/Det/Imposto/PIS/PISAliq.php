@@ -24,7 +24,9 @@ class PISAliq extends \Sped\Components\Xml\Element
     const VPIS = 'vPIS';
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do PIS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq\CST 
      */
     public function getCST()
@@ -34,7 +36,9 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do PIS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq\CST 
      */
@@ -44,7 +48,9 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do PIS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq 
      */
@@ -56,7 +62,7 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor da BC do PIS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC()
@@ -66,7 +72,7 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do PIS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -76,7 +82,7 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do PIS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq 
      */
@@ -88,7 +94,7 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do PIS (em percentual)
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getPPIS()
@@ -98,7 +104,7 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do PIS (em percentual)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -108,7 +114,7 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do PIS (em percentual)
      * @param \Sped\Schemas\V200\TDec_0302 $paramPPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq 
      */
@@ -120,7 +126,7 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do PIS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVPIS()
@@ -130,7 +136,7 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do PIS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -140,7 +146,7 @@ class PISAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do PIS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq 
      */

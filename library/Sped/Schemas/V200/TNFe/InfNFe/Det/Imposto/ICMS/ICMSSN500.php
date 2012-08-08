@@ -22,7 +22,9 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     const VICMSSTRET = 'vICMSSTRet';
 
     /**
-     * 
+     * Retorna origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function getOrig()
@@ -32,7 +34,9 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
@@ -42,7 +46,9 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500 
      */
@@ -54,7 +60,8 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna 500 – ICMS cobrado anterirmente por substituição tributária (substituído) ou por antecipação<br />
+     * (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500\CSOSN 
      */
     public function getCSOSN()
@@ -64,7 +71,8 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona 500 – ICMS cobrado anterirmente por substituição tributária (substituído) ou por antecipação<br />
+     * (v.2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500\CSOSN 
      */
@@ -74,7 +82,8 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define 500 – ICMS cobrado anterirmente por substituição tributária (substituído) ou por antecipação<br />
+     * (v.2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500\CSOSN $paramCSOSN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500 
      */
@@ -86,7 +95,7 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor da BC do ICMS ST retido anteriormente (v2.0) 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBCSTRet()
@@ -96,7 +105,7 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do ICMS ST retido anteriormente (v2.0) 
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -106,7 +115,7 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do ICMS ST retido anteriormente (v2.0) 
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCSTRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500 
      */
@@ -118,7 +127,7 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do ICMS ST retido anteriormente  (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMSSTRet()
@@ -128,7 +137,7 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do ICMS ST retido anteriormente  (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -138,7 +147,7 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do ICMS ST retido anteriormente  (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMSSTRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500 
      */

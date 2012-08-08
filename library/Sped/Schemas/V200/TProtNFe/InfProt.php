@@ -30,7 +30,9 @@ class InfProt extends \Sped\Components\Xml\Element
     const XMOTIVO = 'xMotivo';
 
     /**
-     * 
+     * Retorna Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @return \Sped\Schemas\V200\TAmb 
      */
     public function getTpAmb()
@@ -40,7 +42,9 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @param type $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
@@ -50,7 +54,9 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @param \Sped\Schemas\V200\TAmb $paramTpAmb 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
@@ -62,7 +68,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Versão do Aplicativo que processou a NF-e
      * @return \Sped\Schemas\V200\TVerAplic 
      */
     public function getVerAplic()
@@ -72,7 +78,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Versão do Aplicativo que processou a NF-e
      * @param type $value 
      * @return \Sped\Schemas\V200\TVerAplic 
      */
@@ -82,7 +88,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Versão do Aplicativo que processou a NF-e
      * @param \Sped\Schemas\V200\TVerAplic $paramVerAplic 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
@@ -94,7 +100,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Chaves de acesso da NF-e, compostas por: UF do emitente, AAMM da emissão da NFe, CNPJ do emitente, modelo, série e número da NF-e e código numérico+DV.
      * @return \Sped\Schemas\V200\TChNFe 
      */
     public function getChNFe()
@@ -104,7 +110,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Chaves de acesso da NF-e, compostas por: UF do emitente, AAMM da emissão da NFe, CNPJ do emitente, modelo, série e número da NF-e e código numérico+DV.
      * @param type $value 
      * @return \Sped\Schemas\V200\TChNFe 
      */
@@ -114,7 +120,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Chaves de acesso da NF-e, compostas por: UF do emitente, AAMM da emissão da NFe, CNPJ do emitente, modelo, série e número da NF-e e código numérico+DV.
      * @param \Sped\Schemas\V200\TChNFe $paramChNFe 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
@@ -126,7 +132,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Data e hora de processamento, no formato AAAA-MM-DDTHH:MM:SS. Deve ser preenchida com data e hora da gravação no Banco em caso de Confirmação. Em caso de Rejeição, com data e hora do recebimento do Lote de NF-e enviado.
      * @return \Sped\Components\Xml\Element 
      */
     public function getDhRecbto()
@@ -136,7 +142,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Data e hora de processamento, no formato AAAA-MM-DDTHH:MM:SS. Deve ser preenchida com data e hora da gravação no Banco em caso de Confirmação. Em caso de Rejeição, com data e hora do recebimento do Lote de NF-e enviado.
      * @param type $value 
      * @return \Sped\Components\Xml\Element 
      */
@@ -146,7 +152,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Data e hora de processamento, no formato AAAA-MM-DDTHH:MM:SS. Deve ser preenchida com data e hora da gravação no Banco em caso de Confirmação. Em caso de Rejeição, com data e hora do recebimento do Lote de NF-e enviado.
      * @param \Sped\Components\Xml\Element $paramDhRecbto 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
@@ -158,18 +164,17 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Número do Protocolo de Status da NF-e. 1 posição (1 – Secretaria de Fazenda Estadual 2 – Receita Federal); 2 - códiga da UF - 2 posições ano; 10 seqüencial no ano.
      * @return \Sped\Schemas\V200\TProt 
      */
-    public function getNProt($index)
+    public function getNProt()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TProt');
-        return $this->getElementsByTagName(self::NPROT)->item($index);
+        return $this->getElementsByTagName(self::NPROT)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Número do Protocolo de Status da NF-e. 1 posição (1 – Secretaria de Fazenda Estadual 2 – Receita Federal); 2 - códiga da UF - 2 posições ano; 10 seqüencial no ano.
      * @param type $value 
      * @return \Sped\Schemas\V200\TProt 
      */
@@ -179,7 +184,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do Protocolo de Status da NF-e. 1 posição (1 – Secretaria de Fazenda Estadual 2 – Receita Federal); 2 - códiga da UF - 2 posições ano; 10 seqüencial no ano.
      * @param \Sped\Schemas\V200\TProt $paramNProt 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
@@ -191,18 +196,17 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Digest Value da NF-e processada. Utilizado para conferir a integridade da NF-e original.
      * @return \Sped\Schemas\V200\DigestValueType 
      */
-    public function getDigVal($index)
+    public function getDigVal()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\DigestValueType');
-        return $this->getElementsByTagName(self::DIGVAL)->item($index);
+        return $this->getElementsByTagName(self::DIGVAL)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Digest Value da NF-e processada. Utilizado para conferir a integridade da NF-e original.
      * @param type $value 
      * @return \Sped\Schemas\V200\DigestValueType 
      */
@@ -212,7 +216,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Digest Value da NF-e processada. Utilizado para conferir a integridade da NF-e original.
      * @param \Sped\Schemas\V200\DigestValueType $paramDigVal 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
@@ -224,7 +228,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do status da mensagem enviada.
      * @return \Sped\Schemas\V200\TStat 
      */
     public function getCStat()
@@ -234,7 +238,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do status da mensagem enviada.
      * @param type $value 
      * @return \Sped\Schemas\V200\TStat 
      */
@@ -244,7 +248,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do status da mensagem enviada.
      * @param \Sped\Schemas\V200\TStat $paramCStat 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
@@ -256,7 +260,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Descrição literal do status do serviço solicitado.
      * @return \Sped\Schemas\V200\TMotivo 
      */
     public function getXMotivo()
@@ -266,7 +270,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Descrição literal do status do serviço solicitado.
      * @param type $value 
      * @return \Sped\Schemas\V200\TMotivo 
      */
@@ -276,7 +280,7 @@ class InfProt extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Descrição literal do status do serviço solicitado.
      * @param \Sped\Schemas\V200\TMotivo $paramXMotivo 
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */

@@ -24,7 +24,7 @@ class NFref extends \Sped\Components\Xml\Element
     const REFECF = 'refECF';
 
     /**
-     * 
+     * Retorna Chave de acesso das NF-e referenciadas. Chave de acesso compostas por Código da UF (tabela do IBGE) + AAMM da emissão + CNPJ do Emitente + modelo, série e número da NF-e Referenciada + Código Numérico + DV.
      * @return \Sped\Schemas\V200\TChNFe 
      */
     public function getRefNFe()
@@ -34,7 +34,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Chave de acesso das NF-e referenciadas. Chave de acesso compostas por Código da UF (tabela do IBGE) + AAMM da emissão + CNPJ do Emitente + modelo, série e número da NF-e Referenciada + Código Numérico + DV.
      * @param type $value 
      * @return \Sped\Schemas\V200\TChNFe 
      */
@@ -44,7 +44,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Chave de acesso das NF-e referenciadas. Chave de acesso compostas por Código da UF (tabela do IBGE) + AAMM da emissão + CNPJ do Emitente + modelo, série e número da NF-e Referenciada + Código Numérico + DV.
      * @param \Sped\Schemas\V200\TChNFe $paramRefNFe 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */
@@ -56,7 +56,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Dados da NF modelo 1/1A referenciada
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */
     public function getRefNF()
@@ -66,7 +66,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Dados da NF modelo 1/1A referenciada
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */
     public function addRefNF()
@@ -75,7 +75,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados da NF modelo 1/1A referenciada
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF $paramRefNF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */
@@ -87,7 +87,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Grupo com as informações NF de produtor referenciada (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
     public function getRefNFP()
@@ -97,7 +97,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Grupo com as informações NF de produtor referenciada (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
     public function addRefNFP()
@@ -106,7 +106,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Grupo com as informações NF de produtor referenciada (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP $paramRefNFP 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */
@@ -118,7 +118,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Utilizar esta TAG para referenciar um CT-e emitido anteriormente, vinculada a NF-e atual - (v2.0).
      * @return \Sped\Schemas\V200\TChNFe 
      */
     public function getRefCTe()
@@ -128,7 +128,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Utilizar esta TAG para referenciar um CT-e emitido anteriormente, vinculada a NF-e atual - (v2.0).
      * @param type $value 
      * @return \Sped\Schemas\V200\TChNFe 
      */
@@ -138,7 +138,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Utilizar esta TAG para referenciar um CT-e emitido anteriormente, vinculada a NF-e atual - (v2.0).
      * @param \Sped\Schemas\V200\TChNFe $paramRefCTe 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */
@@ -150,7 +150,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Grupo do Cupom Fiscal vinculado à NF-e (v2.0).
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */
     public function getRefECF()
@@ -160,7 +160,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Grupo do Cupom Fiscal vinculado à NF-e (v2.0).
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */
     public function addRefECF()
@@ -169,7 +169,7 @@ class NFref extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Grupo do Cupom Fiscal vinculado à NF-e (v2.0).
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF $paramRefECF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */

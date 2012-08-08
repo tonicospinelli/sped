@@ -48,7 +48,8 @@ class ICMS extends \Sped\Components\Xml\Element
     const ICMSSN900 = 'ICMSSN900';
 
     /**
-     * 
+     * Retorna Tributação pelo ICMS<br />
+     * 00 - Tributada integralmente
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00 
      */
     public function getICMS00()
@@ -58,7 +59,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação pelo ICMS<br />
+     * 00 - Tributada integralmente
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00 
      */
     public function addICMS00()
@@ -67,7 +69,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação pelo ICMS<br />
+     * 00 - Tributada integralmente
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS00 $paramICMS00 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -79,7 +82,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação pelo ICMS<br />
+     * 10 - Tributada e com cobrança do ICMS por substituição tributária 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10 
      */
     public function getICMS10()
@@ -89,7 +93,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação pelo ICMS<br />
+     * 10 - Tributada e com cobrança do ICMS por substituição tributária 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10 
      */
     public function addICMS10()
@@ -98,7 +103,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação pelo ICMS<br />
+     * 10 - Tributada e com cobrança do ICMS por substituição tributária 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS10 $paramICMS10 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -110,7 +116,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributção pelo ICMS<br />
+     * 20 - Com redução de base de cálculo 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20 
      */
     public function getICMS20()
@@ -120,7 +127,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributção pelo ICMS<br />
+     * 20 - Com redução de base de cálculo 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20 
      */
     public function addICMS20()
@@ -129,7 +137,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributção pelo ICMS<br />
+     * 20 - Com redução de base de cálculo 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20 $paramICMS20 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -141,7 +150,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação pelo ICMS<br />
+     * 30 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS30 
      */
     public function getICMS30()
@@ -151,7 +161,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação pelo ICMS<br />
+     * 30 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS30 
      */
     public function addICMS30()
@@ -160,7 +171,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação pelo ICMS<br />
+     * 30 - Isenta ou não tributada e com cobrança do ICMS por substituição tributária
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS30 $paramICMS30 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -172,7 +184,10 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação pelo ICMS<br />
+     * 40 - Isenta <br />
+     * 41 - Não tributada <br />
+     * 50 - Suspensão  
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40 
      */
     public function getICMS40()
@@ -182,7 +197,10 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação pelo ICMS<br />
+     * 40 - Isenta <br />
+     * 41 - Não tributada <br />
+     * 50 - Suspensão  
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40 
      */
     public function addICMS40()
@@ -191,7 +209,10 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação pelo ICMS<br />
+     * 40 - Isenta <br />
+     * 41 - Não tributada <br />
+     * 50 - Suspensão  
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40 $paramICMS40 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -203,7 +224,9 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributção pelo ICMS<br />
+     * 51 - Diferimento<br />
+     * A exigência do preenchimento das informações do ICMS diferido fica à critério de cada UF.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51 
      */
     public function getICMS51()
@@ -213,7 +236,9 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributção pelo ICMS<br />
+     * 51 - Diferimento<br />
+     * A exigência do preenchimento das informações do ICMS diferido fica à critério de cada UF.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51 
      */
     public function addICMS51()
@@ -222,7 +247,9 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributção pelo ICMS<br />
+     * 51 - Diferimento<br />
+     * A exigência do preenchimento das informações do ICMS diferido fica à critério de cada UF.
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51 $paramICMS51 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -234,7 +261,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação pelo ICMS<br />
+     * 60 - ICMS cobrado anteriormente por substituição tributária 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60 
      */
     public function getICMS60()
@@ -244,7 +272,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação pelo ICMS<br />
+     * 60 - ICMS cobrado anteriormente por substituição tributária 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60 
      */
     public function addICMS60()
@@ -253,7 +282,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação pelo ICMS<br />
+     * 60 - ICMS cobrado anteriormente por substituição tributária 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60 $paramICMS60 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -265,7 +295,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação pelo ICMS <br />
+     * 70 - Com redução de base de cálculo e cobrança do ICMS por substituição tributária 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS70 
      */
     public function getICMS70()
@@ -275,7 +306,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação pelo ICMS <br />
+     * 70 - Com redução de base de cálculo e cobrança do ICMS por substituição tributária 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS70 
      */
     public function addICMS70()
@@ -284,7 +316,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação pelo ICMS <br />
+     * 70 - Com redução de base de cálculo e cobrança do ICMS por substituição tributária 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS70 $paramICMS70 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -296,7 +329,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação pelo ICMS<br />
+     * 90 - Outras
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS90 
      */
     public function getICMS90()
@@ -306,7 +340,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação pelo ICMS<br />
+     * 90 - Outras
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS90 
      */
     public function addICMS90()
@@ -315,7 +350,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação pelo ICMS<br />
+     * 90 - Outras
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS90 $paramICMS90 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -327,7 +363,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Partilha do ICMS entre a UF de origem e UF de destino ou a UF definida na legislação<br />
+     * Operação interestadual para consumidor final com partilha do ICMS  devido na operação entre a UF de origem e a UF do destinatário ou ou a UF definida na legislação. (Ex. UF da concessionária de entrega do  veículos) (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSPart 
      */
     public function getICMSPart()
@@ -337,7 +374,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Partilha do ICMS entre a UF de origem e UF de destino ou a UF definida na legislação<br />
+     * Operação interestadual para consumidor final com partilha do ICMS  devido na operação entre a UF de origem e a UF do destinatário ou ou a UF definida na legislação. (Ex. UF da concessionária de entrega do  veículos) (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSPart 
      */
     public function addICMSPart()
@@ -346,7 +384,8 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Partilha do ICMS entre a UF de origem e UF de destino ou a UF definida na legislação<br />
+     * Operação interestadual para consumidor final com partilha do ICMS  devido na operação entre a UF de origem e a UF do destinatário ou ou a UF definida na legislação. (Ex. UF da concessionária de entrega do  veículos) (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSPart $paramICMSPart 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -358,7 +397,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Grupo de informação do ICMSST devido para a UF de destino, nas operações interestaduais de produtos que tiveram retenção antecipada de ICMS por ST na UF do remetente. Repasse via Substituto Tributário. (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
     public function getICMSST()
@@ -368,7 +407,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Grupo de informação do ICMSST devido para a UF de destino, nas operações interestaduais de produtos que tiveram retenção antecipada de ICMS por ST na UF do remetente. Repasse via Substituto Tributário. (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
     public function addICMSST()
@@ -377,7 +416,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Grupo de informação do ICMSST devido para a UF de destino, nas operações interestaduais de produtos que tiveram retenção antecipada de ICMS por ST na UF do remetente. Repasse via Substituto Tributário. (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST $paramICMSST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -389,7 +428,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=101 (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101 
      */
     public function getICMSSN101()
@@ -399,7 +438,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=101 (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101 
      */
     public function addICMSSN101()
@@ -408,7 +447,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=101 (v.2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101 $paramICMSSN101 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -420,7 +459,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=102, 103, 300 ou 400 (v.2.0))
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102 
      */
     public function getICMSSN102()
@@ -430,7 +469,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=102, 103, 300 ou 400 (v.2.0))
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102 
      */
     public function addICMSSN102()
@@ -439,7 +478,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=102, 103, 300 ou 400 (v.2.0))
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102 $paramICMSSN102 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -451,7 +490,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=201 (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN201 
      */
     public function getICMSSN201()
@@ -461,7 +500,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=201 (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN201 
      */
     public function addICMSSN201()
@@ -470,7 +509,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=201 (v.2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN201 $paramICMSSN201 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -482,7 +521,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=202 ou 203 (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
     public function getICMSSN202()
@@ -492,7 +531,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=202 ou 203 (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
     public function addICMSSN202()
@@ -501,7 +540,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação do ICMS pelo SIMPLES NACIONAL e CSOSN=202 ou 203 (v.2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 $paramICMSSN202 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -513,7 +552,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação do ICMS pelo SIMPLES NACIONAL,CRT=1 – Simples Nacional e CSOSN=500 (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500 
      */
     public function getICMSSN500()
@@ -523,7 +562,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação do ICMS pelo SIMPLES NACIONAL,CRT=1 – Simples Nacional e CSOSN=500 (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500 
      */
     public function addICMSSN500()
@@ -532,7 +571,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação do ICMS pelo SIMPLES NACIONAL,CRT=1 – Simples Nacional e CSOSN=500 (v.2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500 $paramICMSSN500 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
@@ -544,7 +583,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação do ICMS pelo SIMPLES NACIONAL, CRT=1 – Simples Nacional e CSOSN=900 (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN900 
      */
     public function getICMSSN900()
@@ -554,7 +593,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação do ICMS pelo SIMPLES NACIONAL, CRT=1 – Simples Nacional e CSOSN=900 (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN900 
      */
     public function addICMSSN900()
@@ -563,7 +602,7 @@ class ICMS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação do ICMS pelo SIMPLES NACIONAL, CRT=1 – Simples Nacional e CSOSN=900 (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN900 $paramICMSSN900 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */

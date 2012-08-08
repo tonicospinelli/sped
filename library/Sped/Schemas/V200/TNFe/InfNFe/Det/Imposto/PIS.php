@@ -22,7 +22,9 @@ class PIS extends \Sped\Components\Xml\Element
     const PISOUTR = 'PISOutr';
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do PIS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq 
      */
     public function getPISAliq()
@@ -32,7 +34,9 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do PIS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq 
      */
     public function addPISAliq()
@@ -41,7 +45,9 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do PIS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq $paramPISAliq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
@@ -53,7 +59,8 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do PIS.<br />
+     * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde 
      */
     public function getPISQtde()
@@ -63,7 +70,8 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do PIS.<br />
+     * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde 
      */
     public function addPISQtde()
@@ -72,7 +80,8 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do PIS.<br />
+     * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde $paramPISQtde 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
@@ -84,7 +93,12 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do PIS.<br />
+     * 04 - Operação Tributável - Tributação Monofásica - (Alíquota Zero);<br />
+     * 06 - Operação Tributável - Alíquota Zero;<br />
+     * 07 - Operação Isenta da contribuição;<br />
+     * 08 - Operação Sem Incidência da contribuição;<br />
+     * 09 - Operação com suspensão da contribuição;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT 
      */
     public function getPISNT()
@@ -94,7 +108,12 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do PIS.<br />
+     * 04 - Operação Tributável - Tributação Monofásica - (Alíquota Zero);<br />
+     * 06 - Operação Tributável - Alíquota Zero;<br />
+     * 07 - Operação Isenta da contribuição;<br />
+     * 08 - Operação Sem Incidência da contribuição;<br />
+     * 09 - Operação com suspensão da contribuição;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT 
      */
     public function addPISNT()
@@ -103,7 +122,12 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do PIS.<br />
+     * 04 - Operação Tributável - Tributação Monofásica - (Alíquota Zero);<br />
+     * 06 - Operação Tributável - Alíquota Zero;<br />
+     * 07 - Operação Isenta da contribuição;<br />
+     * 08 - Operação Sem Incidência da contribuição;<br />
+     * 09 - Operação com suspensão da contribuição;
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT $paramPISNT 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
@@ -115,7 +139,8 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do PIS.<br />
+     * 99 - Outras Operações.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
     public function getPISOutr()
@@ -125,7 +150,8 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do PIS.<br />
+     * 99 - Outras Operações.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
     public function addPISOutr()
@@ -134,7 +160,8 @@ class PIS extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do PIS.<br />
+     * 99 - Outras Operações.
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr $paramPISOutr 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */

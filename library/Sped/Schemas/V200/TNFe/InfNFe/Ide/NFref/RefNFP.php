@@ -30,7 +30,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     const NNF = 'nNF';
 
     /**
-     * 
+     * Retorna Código da UF do emitente do Documento FiscalUtilizar a Tabela do IBGE (Anexo IV - Tabela de UF, Município e País) (v2.0)
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function getCUF()
@@ -40,7 +40,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código da UF do emitente do Documento FiscalUtilizar a Tabela do IBGE (Anexo IV - Tabela de UF, Município e País) (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
@@ -50,7 +50,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código da UF do emitente do Documento FiscalUtilizar a Tabela do IBGE (Anexo IV - Tabela de UF, Município e País) (v2.0)
      * @param \Sped\Schemas\V200\TCodUfIBGE $paramCUF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
@@ -62,7 +62,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna AAMM da emissão da NF de produtor (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\AAMM 
      */
     public function getAAMM()
@@ -72,7 +72,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona AAMM da emissão da NF de produtor (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\AAMM 
      */
@@ -82,7 +82,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define AAMM da emissão da NF de produtor (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\AAMM $paramAAMM 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
@@ -94,7 +94,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna CNPJ do emitente da NF de produtor (v2.0)
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function getCNPJ()
@@ -104,7 +104,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CNPJ do emitente da NF de produtor (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
@@ -114,7 +114,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CNPJ do emitente da NF de produtor (v2.0)
      * @param \Sped\Schemas\V200\TCnpj $paramCNPJ 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
@@ -126,7 +126,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna CPF do emitente da NF de produtor (v2.0)
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function getCPF()
@@ -136,7 +136,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CPF do emitente da NF de produtor (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TCpf 
      */
@@ -146,7 +146,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CPF do emitente da NF de produtor (v2.0)
      * @param \Sped\Schemas\V200\TCpf $paramCPF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
@@ -158,7 +158,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna IE do emitente da NF de Produtor (v2.0))
      * @return \Sped\Schemas\V200\TIeDest 
      */
     public function getIE()
@@ -168,7 +168,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona IE do emitente da NF de Produtor (v2.0))
      * @param type $value 
      * @return \Sped\Schemas\V200\TIeDest 
      */
@@ -178,7 +178,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define IE do emitente da NF de Produtor (v2.0))
      * @param \Sped\Schemas\V200\TIeDest $paramIE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
@@ -190,7 +190,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do modelo do Documento Fiscal - utilizar 04 para NF de produtor  ou 01 para NF Avulsa(v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\Mod 
      */
     public function getMod()
@@ -200,7 +200,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do modelo do Documento Fiscal - utilizar 04 para NF de produtor  ou 01 para NF Avulsa(v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\Mod 
      */
@@ -210,7 +210,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do modelo do Documento Fiscal - utilizar 04 para NF de produtor  ou 01 para NF Avulsa(v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\Mod $paramMod 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
@@ -222,7 +222,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Série do Documento Fiscal, informar zero se inexistentesérie (v2.0).
      * @return \Sped\Schemas\V200\TSerie 
      */
     public function getSerie()
@@ -232,7 +232,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Série do Documento Fiscal, informar zero se inexistentesérie (v2.0).
      * @param type $value 
      * @return \Sped\Schemas\V200\TSerie 
      */
@@ -242,7 +242,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Série do Documento Fiscal, informar zero se inexistentesérie (v2.0).
      * @param \Sped\Schemas\V200\TSerie $paramSerie 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */
@@ -254,7 +254,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número do Documento Fiscal - 1 – 999999999 - (v2.0)
      * @return \Sped\Schemas\V200\TNF 
      */
     public function getNNF()
@@ -264,7 +264,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do Documento Fiscal - 1 – 999999999 - (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNF 
      */
@@ -274,7 +274,7 @@ class RefNFP extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do Documento Fiscal - 1 – 999999999 - (v2.0)
      * @param \Sped\Schemas\V200\TNF $paramNNF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP 
      */

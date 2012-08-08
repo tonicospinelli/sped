@@ -20,7 +20,7 @@ class Det extends \Sped\Components\Xml\Element
     const INFADPROD = 'infAdProd';
 
     /**
-     * 
+     * Retorna Dados dos produtos e serviços da NF-e
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
     public function getProd()
@@ -30,7 +30,7 @@ class Det extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Dados dos produtos e serviços da NF-e
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
     public function addProd()
@@ -39,7 +39,7 @@ class Det extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados dos produtos e serviços da NF-e
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod $paramProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det 
      */
@@ -51,7 +51,7 @@ class Det extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributos incidentes nos produtos ou serviços da NF-e
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
     public function getImposto()
@@ -61,7 +61,7 @@ class Det extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributos incidentes nos produtos ou serviços da NF-e
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
     public function addImposto()
@@ -70,7 +70,7 @@ class Det extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributos incidentes nos produtos ou serviços da NF-e
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto $paramImposto 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det 
      */
@@ -82,18 +82,17 @@ class Det extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Informações adicionais do produto (norma referenciada, informações complementares, etc)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
      */
-    public function getInfAdProd($index)
+    public function getInfAdProd()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd');
-        return $this->getElementsByTagName(self::INFADPROD)->item($index);
+        return $this->getElementsByTagName(self::INFADPROD)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Informações adicionais do produto (norma referenciada, informações complementares, etc)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
      */
@@ -103,7 +102,7 @@ class Det extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informações adicionais do produto (norma referenciada, informações complementares, etc)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd $paramInfAdProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det 
      */

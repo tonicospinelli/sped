@@ -30,7 +30,9 @@ class ICMS51 extends \Sped\Components\Xml\Element
     const VICMS = 'vICMS';
 
     /**
-     * 
+     * Retorna origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function getOrig()
@@ -40,7 +42,9 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
@@ -50,7 +54,9 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51 
      */
@@ -62,7 +68,8 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributção pelo ICMS<br />
+     * 20 - Com redução de base de cálculo
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\CST 
      */
     public function getCST()
@@ -72,7 +79,8 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributção pelo ICMS<br />
+     * 20 - Com redução de base de cálculo
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\CST 
      */
@@ -82,7 +90,8 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributção pelo ICMS<br />
+     * 20 - Com redução de base de cálculo
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51 
      */
@@ -94,18 +103,25 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Modalidade de determinação da BC do ICMS:<br />
+     * 0 - Margem Valor Agregado (%);<br />
+     * 1 - Pauta (valor);<br />
+     * 2 - Preço Tabelado Máximo (valor);<br />
+     * 3 - Valor da Operação.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC 
      */
-    public function getModBC($index)
+    public function getModBC()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC');
-        return $this->getElementsByTagName(self::MODBC)->item($index);
+        return $this->getElementsByTagName(self::MODBC)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Modalidade de determinação da BC do ICMS:<br />
+     * 0 - Margem Valor Agregado (%);<br />
+     * 1 - Pauta (valor);<br />
+     * 2 - Preço Tabelado Máximo (valor);<br />
+     * 3 - Valor da Operação.
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC 
      */
@@ -115,7 +131,11 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Modalidade de determinação da BC do ICMS:<br />
+     * 0 - Margem Valor Agregado (%);<br />
+     * 1 - Pauta (valor);<br />
+     * 2 - Preço Tabelado Máximo (valor);<br />
+     * 3 - Valor da Operação.
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC $paramModBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51 
      */
@@ -127,18 +147,17 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Percentual de redução da BC
      * @return \Sped\Schemas\V200\TDec_0302 
      */
-    public function getPRedBC($index)
+    public function getPRedBC()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
-        return $this->getElementsByTagName(self::PREDBC)->item($index);
+        return $this->getElementsByTagName(self::PREDBC)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Percentual de redução da BC
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -148,7 +167,7 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Percentual de redução da BC
      * @param \Sped\Schemas\V200\TDec_0302 $paramPRedBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51 
      */
@@ -160,18 +179,17 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Valor da BC do ICMS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVBC($index)
+    public function getVBC()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(self::VBC)->item($index);
+        return $this->getElementsByTagName(self::VBC)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do ICMS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -181,7 +199,7 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do ICMS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51 
      */
@@ -193,18 +211,17 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Alíquota do ICMS
      * @return \Sped\Schemas\V200\TDec_0302 
      */
-    public function getPICMS($index)
+    public function getPICMS()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
-        return $this->getElementsByTagName(self::PICMS)->item($index);
+        return $this->getElementsByTagName(self::PICMS)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Alíquota do ICMS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -214,7 +231,7 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do ICMS
      * @param \Sped\Schemas\V200\TDec_0302 $paramPICMS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51 
      */
@@ -226,18 +243,17 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Valor do ICMS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVICMS($index)
+    public function getVICMS()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(self::VICMS)->item($index);
+        return $this->getElementsByTagName(self::VICMS)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Valor do ICMS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -247,7 +263,7 @@ class ICMS51 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do ICMS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51 
      */

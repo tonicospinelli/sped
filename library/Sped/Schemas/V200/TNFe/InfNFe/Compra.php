@@ -20,18 +20,17 @@ class Compra extends \Sped\Components\Xml\Element
     const XCONT = 'xCont';
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Informação da Nota de Empenho de compras públicas (NT2011/004)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      */
-    public function getXNEmp($index)
+    public function getXNEmp()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp');
-        return $this->getElementsByTagName(self::XNEMP)->item($index);
+        return $this->getElementsByTagName(self::XNEMP)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Informação da Nota de Empenho de compras públicas (NT2011/004)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      */
@@ -41,7 +40,7 @@ class Compra extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informação da Nota de Empenho de compras públicas (NT2011/004)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp $paramXNEmp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      */
@@ -53,18 +52,17 @@ class Compra extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Informação do pedido
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      */
-    public function getXPed($index)
+    public function getXPed()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed');
-        return $this->getElementsByTagName(self::XPED)->item($index);
+        return $this->getElementsByTagName(self::XPED)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Informação do pedido
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      */
@@ -74,7 +72,7 @@ class Compra extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informação do pedido
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed $paramXPed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      */
@@ -86,18 +84,17 @@ class Compra extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Informação do contrato
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      */
-    public function getXCont($index)
+    public function getXCont()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont');
-        return $this->getElementsByTagName(self::XCONT)->item($index);
+        return $this->getElementsByTagName(self::XCONT)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Informação do contrato
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      */
@@ -107,7 +104,7 @@ class Compra extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informação do contrato
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont $paramXCont 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      */

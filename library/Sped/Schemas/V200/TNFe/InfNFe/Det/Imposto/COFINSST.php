@@ -25,7 +25,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     const VCOFINS = 'vCOFINS';
 
     /**
-     * 
+     * Retorna Valor da BC do COFINS ST
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVBC()
@@ -35,7 +35,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do COFINS ST
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -45,7 +45,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do COFINS ST
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
@@ -57,7 +57,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do COFINS ST(em percentual)
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function getPCOFINS()
@@ -67,7 +67,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do COFINS ST(em percentual)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
@@ -77,7 +77,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do COFINS ST(em percentual)
      * @param \Sped\Schemas\V200\TDec_0302Opc $paramPCOFINS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
@@ -89,7 +89,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Quantidade Vendida 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
     public function getQBCProd()
@@ -99,7 +99,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Quantidade Vendida 
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
@@ -109,7 +109,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade Vendida 
      * @param \Sped\Schemas\V200\TDec_1204Opc $paramQBCProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
@@ -121,7 +121,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do COFINS ST(em reais)
      * @return \Sped\Schemas\V200\TDec_1104Opc 
      */
     public function getVAliqProd()
@@ -131,7 +131,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do COFINS ST(em reais)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1104Opc 
      */
@@ -141,7 +141,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do COFINS ST(em reais)
      * @param \Sped\Schemas\V200\TDec_1104Opc $paramVAliqProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
@@ -153,7 +153,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do COFINS ST
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVCOFINS()
@@ -163,7 +163,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do COFINS ST
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -173,7 +173,7 @@ class COFINSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do COFINS ST
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVCOFINS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */

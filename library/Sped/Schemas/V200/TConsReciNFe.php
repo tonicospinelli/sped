@@ -18,7 +18,9 @@ class TConsReciNFe extends \Sped\Components\Xml\Element
     const NREC = 'nRec';
 
     /**
-     * 
+     * Retorna Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @return \Sped\Schemas\V200\TAmb 
      */
     public function getTpAmb()
@@ -28,7 +30,9 @@ class TConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @param type $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
@@ -38,7 +42,9 @@ class TConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @param \Sped\Schemas\V200\TAmb $paramTpAmb 
      * @return \Sped\Schemas\V200\TConsReciNFe 
      */
@@ -50,7 +56,7 @@ class TConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número do Recibo
      * @return \Sped\Schemas\V200\TRec 
      */
     public function getNRec()
@@ -60,7 +66,7 @@ class TConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do Recibo
      * @param type $value 
      * @return \Sped\Schemas\V200\TRec 
      */
@@ -70,7 +76,7 @@ class TConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do Recibo
      * @param \Sped\Schemas\V200\TRec $paramNRec 
      * @return \Sped\Schemas\V200\TConsReciNFe 
      */

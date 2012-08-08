@@ -18,7 +18,10 @@ class ICMSSN102 extends \Sped\Components\Xml\Element
     const CSOSN = 'CSOSN';
 
     /**
-     * 
+     * Retorna origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno <br />
+     * (v2.0)
      * @return \Sped\Schemas\V200\Torig 
      */
     public function getOrig()
@@ -28,7 +31,10 @@ class ICMSSN102 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno <br />
+     * (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
@@ -38,7 +44,10 @@ class ICMSSN102 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno <br />
+     * (v2.0)
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102 
      */
@@ -50,7 +59,10 @@ class ICMSSN102 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna 102- Tributada pelo Simples Nacional sem permissão de crédito. <br />
+     * 103 – Isenção do ICMS  no Simples Nacional para faixa de receita bruta.<br />
+     * 300 – Imune.<br />
+     * 400 – Não tributda pelo Simples Nacional (v.2.0) (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN 
      */
     public function getCSOSN()
@@ -60,7 +72,10 @@ class ICMSSN102 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona 102- Tributada pelo Simples Nacional sem permissão de crédito. <br />
+     * 103 – Isenção do ICMS  no Simples Nacional para faixa de receita bruta.<br />
+     * 300 – Imune.<br />
+     * 400 – Não tributda pelo Simples Nacional (v.2.0) (v.2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN 
      */
@@ -70,7 +85,10 @@ class ICMSSN102 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define 102- Tributada pelo Simples Nacional sem permissão de crédito. <br />
+     * 103 – Isenção do ICMS  no Simples Nacional para faixa de receita bruta.<br />
+     * 300 – Imune.<br />
+     * 400 – Não tributda pelo Simples Nacional (v.2.0) (v.2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN $paramCSOSN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102 
      */

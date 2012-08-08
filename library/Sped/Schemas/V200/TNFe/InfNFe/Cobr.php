@@ -18,18 +18,17 @@ class Cobr extends \Sped\Components\Xml\Element
     const DUP = 'dup';
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados da fatura
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
-    public function getFat($index)
+    public function getFat()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat');
-        return $this->getElementsByTagName(self::FAT)->item($index);
+        return $this->getElementsByTagName(self::FAT)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados da fatura
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
     public function addFat()
@@ -38,7 +37,7 @@ class Cobr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados da fatura
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat $paramFat 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      */
@@ -50,18 +49,17 @@ class Cobr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados das duplicatas NT 2011/004
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup 
      */
-    public function getDup($index)
+    public function getDup()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup');
-        return $this->getElementsByTagName(self::DUP)->item($index);
+        return $this->getElementsByTagName(self::DUP)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados das duplicatas NT 2011/004
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup 
      */
     public function addDup()
@@ -70,7 +68,7 @@ class Cobr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados das duplicatas NT 2011/004
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup $paramDup 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      */

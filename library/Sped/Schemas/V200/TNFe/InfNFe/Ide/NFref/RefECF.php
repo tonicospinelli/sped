@@ -20,7 +20,8 @@ class RefECF extends \Sped\Components\Xml\Element
     const NCOO = 'nCOO';
 
     /**
-     * 
+     * Retorna Código do modelo do Documento Fiscal <br />
+     * Preencher com "2B", quando se tratar de Cupom Fiscal emitido por máquina registradora (não ECF), com "2C", quando se tratar de Cupom Fiscal PDV, ou "2D", quando se tratar de Cupom Fiscal (emitido por ECF) (v2.0).
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod 
      */
     public function getMod()
@@ -30,7 +31,8 @@ class RefECF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do modelo do Documento Fiscal <br />
+     * Preencher com "2B", quando se tratar de Cupom Fiscal emitido por máquina registradora (não ECF), com "2C", quando se tratar de Cupom Fiscal PDV, ou "2D", quando se tratar de Cupom Fiscal (emitido por ECF) (v2.0).
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod 
      */
@@ -40,7 +42,8 @@ class RefECF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do modelo do Documento Fiscal <br />
+     * Preencher com "2B", quando se tratar de Cupom Fiscal emitido por máquina registradora (não ECF), com "2C", quando se tratar de Cupom Fiscal PDV, ou "2D", quando se tratar de Cupom Fiscal (emitido por ECF) (v2.0).
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod $paramMod 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */
@@ -52,7 +55,7 @@ class RefECF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informar o número de ordem seqüencial do ECF que emitiu o Cupom Fiscal vinculado à NF-e (v2.0).
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF 
      */
     public function getNECF()
@@ -62,7 +65,7 @@ class RefECF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informar o número de ordem seqüencial do ECF que emitiu o Cupom Fiscal vinculado à NF-e (v2.0).
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF 
      */
@@ -72,7 +75,7 @@ class RefECF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar o número de ordem seqüencial do ECF que emitiu o Cupom Fiscal vinculado à NF-e (v2.0).
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF $paramNECF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */
@@ -84,7 +87,7 @@ class RefECF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informar o Número do Contador de Ordem de Operação - COO vinculado à NF-e (v2.0).
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO 
      */
     public function getNCOO()
@@ -94,7 +97,7 @@ class RefECF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informar o Número do Contador de Ordem de Operação - COO vinculado à NF-e (v2.0).
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO 
      */
@@ -104,7 +107,7 @@ class RefECF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar o Número do Contador de Ordem de Operação - COO vinculado à NF-e (v2.0).
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO $paramNCOO 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF 
      */

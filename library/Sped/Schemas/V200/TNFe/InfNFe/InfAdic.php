@@ -24,18 +24,17 @@ class InfAdic extends \Sped\Components\Xml\Element
     const PROCREF = 'procRef';
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Informações adicionais de interesse do Fisco (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
      */
-    public function getInfAdFisco($index)
+    public function getInfAdFisco()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco');
-        return $this->getElementsByTagName(self::INFADFISCO)->item($index);
+        return $this->getElementsByTagName(self::INFADFISCO)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Informações adicionais de interesse do Fisco (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
      */
@@ -45,7 +44,7 @@ class InfAdic extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informações adicionais de interesse do Fisco (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco $paramInfAdFisco 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
      */
@@ -57,18 +56,17 @@ class InfAdic extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Informações complementares de interesse do Contribuinte
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
      */
-    public function getInfCpl($index)
+    public function getInfCpl()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl');
-        return $this->getElementsByTagName(self::INFCPL)->item($index);
+        return $this->getElementsByTagName(self::INFCPL)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Informações complementares de interesse do Contribuinte
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
      */
@@ -78,7 +76,7 @@ class InfAdic extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informações complementares de interesse do Contribuinte
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl $paramInfCpl 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
      */
@@ -90,18 +88,21 @@ class InfAdic extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Campo de uso livre do contribuinte<br />
+     * informar o nome do campo no atributo xCampo<br />
+     * e o conteúdo do campo no xTexto
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont 
      */
-    public function getObsCont($index)
+    public function getObsCont()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont');
-        return $this->getElementsByTagName(self::OBSCONT)->item($index);
+        return $this->getElementsByTagName(self::OBSCONT)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Campo de uso livre do contribuinte<br />
+     * informar o nome do campo no atributo xCampo<br />
+     * e o conteúdo do campo no xTexto
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont 
      */
     public function addObsCont()
@@ -110,7 +111,9 @@ class InfAdic extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Campo de uso livre do contribuinte<br />
+     * informar o nome do campo no atributo xCampo<br />
+     * e o conteúdo do campo no xTexto
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont $paramObsCont 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
      */
@@ -122,18 +125,21 @@ class InfAdic extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Campo de uso exclusivo do Fisco<br />
+     * informar o nome do campo no atributo xCampo<br />
+     * e o conteúdo do campo no xTexto
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      */
-    public function getObsFisco($index)
+    public function getObsFisco()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco');
-        return $this->getElementsByTagName(self::OBSFISCO)->item($index);
+        return $this->getElementsByTagName(self::OBSFISCO)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Campo de uso exclusivo do Fisco<br />
+     * informar o nome do campo no atributo xCampo<br />
+     * e o conteúdo do campo no xTexto
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      */
     public function addObsFisco()
@@ -142,7 +148,9 @@ class InfAdic extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Campo de uso exclusivo do Fisco<br />
+     * informar o nome do campo no atributo xCampo<br />
+     * e o conteúdo do campo no xTexto
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco $paramObsFisco 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
      */
@@ -154,18 +162,17 @@ class InfAdic extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Grupo de informações do  processo referenciado
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */
-    public function getProcRef($index)
+    public function getProcRef()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef');
-        return $this->getElementsByTagName(self::PROCREF)->item($index);
+        return $this->getElementsByTagName(self::PROCREF)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Grupo de informações do  processo referenciado
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */
     public function addProcRef()
@@ -174,7 +181,7 @@ class InfAdic extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Grupo de informações do  processo referenciado
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef $paramProcRef 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
      */

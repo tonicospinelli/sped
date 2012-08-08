@@ -30,7 +30,11 @@ class IPITrib extends \Sped\Components\Xml\Element
     const VIPI = 'vIPI';
 
     /**
-     * 
+     * Retorna Código da Situação Tributária do IPI:<br />
+     * 00-Entrada com recuperação de crédito<br />
+     * 49 - Outras entradas<br />
+     * 50-Saída tributada<br />
+     * 99-Outras saídas
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST 
      */
     public function getCST()
@@ -40,7 +44,11 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código da Situação Tributária do IPI:<br />
+     * 00-Entrada com recuperação de crédito<br />
+     * 49 - Outras entradas<br />
+     * 50-Saída tributada<br />
+     * 99-Outras saídas
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST 
      */
@@ -50,7 +58,11 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código da Situação Tributária do IPI:<br />
+     * 00-Entrada com recuperação de crédito<br />
+     * 49 - Outras entradas<br />
+     * 50-Saída tributada<br />
+     * 99-Outras saídas
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib 
      */
@@ -62,7 +74,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor da BC do IPI
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC()
@@ -72,7 +84,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do IPI
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -82,7 +94,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do IPI
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib 
      */
@@ -94,7 +106,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do IPI
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getPIPI()
@@ -104,7 +116,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do IPI
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -114,7 +126,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do IPI
      * @param \Sped\Schemas\V200\TDec_0302 $paramPIPI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib 
      */
@@ -126,7 +138,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Quantidade total na unidade padrão para tributação 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function getQUnid()
@@ -136,7 +148,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Quantidade total na unidade padrão para tributação 
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
@@ -146,7 +158,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade total na unidade padrão para tributação 
      * @param \Sped\Schemas\V200\TDec_1204 $paramQUnid 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib 
      */
@@ -158,7 +170,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor por Unidade Tributável. Informar o valor do imposto Pauta por unidade de medida.
      * @return \Sped\Schemas\V200\TDec_1104 
      */
     public function getVUnid()
@@ -168,7 +180,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor por Unidade Tributável. Informar o valor do imposto Pauta por unidade de medida.
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1104 
      */
@@ -178,7 +190,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor por Unidade Tributável. Informar o valor do imposto Pauta por unidade de medida.
      * @param \Sped\Schemas\V200\TDec_1104 $paramVUnid 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib 
      */
@@ -190,7 +202,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do IPI
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVIPI()
@@ -200,7 +212,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do IPI
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -210,7 +222,7 @@ class IPITrib extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do IPI
      * @param \Sped\Schemas\V200\TDec_1302 $paramVIPI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib 
      */

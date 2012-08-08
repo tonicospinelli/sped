@@ -22,7 +22,7 @@ class Adi extends \Sped\Components\Xml\Element
     const VDESCDI = 'vDescDI';
 
     /**
-     * 
+     * Retorna Número da Adição
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NAdicao 
      */
     public function getNAdicao()
@@ -32,7 +32,7 @@ class Adi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número da Adição
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NAdicao 
      */
@@ -42,7 +42,7 @@ class Adi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número da Adição
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NAdicao $paramNAdicao 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */
@@ -54,7 +54,7 @@ class Adi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número seqüencial do item dentro da Adição
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NSeqAdic 
      */
     public function getNSeqAdic()
@@ -64,7 +64,7 @@ class Adi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número seqüencial do item dentro da Adição
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NSeqAdic 
      */
@@ -74,7 +74,7 @@ class Adi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número seqüencial do item dentro da Adição
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NSeqAdic $paramNSeqAdic 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */
@@ -86,7 +86,7 @@ class Adi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do fabricante estrangeiro (usado nos sistemas internos de informação do emitente da NF-e)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\CFabricante 
      */
     public function getCFabricante()
@@ -96,7 +96,7 @@ class Adi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do fabricante estrangeiro (usado nos sistemas internos de informação do emitente da NF-e)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\CFabricante 
      */
@@ -106,7 +106,7 @@ class Adi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do fabricante estrangeiro (usado nos sistemas internos de informação do emitente da NF-e)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\CFabricante $paramCFabricante 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */
@@ -118,18 +118,17 @@ class Adi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Valor do desconto do item da DI – adição
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVDescDI($index)
+    public function getVDescDI()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VDESCDI)->item($index);
+        return $this->getElementsByTagName(self::VDESCDI)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Valor do desconto do item da DI – adição
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -139,7 +138,7 @@ class Adi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do desconto do item da DI – adição
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVDescDI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */

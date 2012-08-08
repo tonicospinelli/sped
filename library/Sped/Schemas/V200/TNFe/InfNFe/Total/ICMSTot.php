@@ -42,7 +42,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     const VNF = 'vNF';
 
     /**
-     * 
+     * Retorna BC do ICMS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC()
@@ -52,7 +52,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona BC do ICMS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -62,7 +62,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define BC do ICMS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -74,7 +74,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Total do ICMS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMS()
@@ -84,7 +84,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Total do ICMS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -94,7 +94,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total do ICMS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -106,7 +106,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna BC do ICMS ST
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBCST()
@@ -116,7 +116,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona BC do ICMS ST
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -126,7 +126,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define BC do ICMS ST
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -138,7 +138,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Total do ICMS ST
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVST()
@@ -148,7 +148,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Total do ICMS ST
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -158,7 +158,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total do ICMS ST
      * @param \Sped\Schemas\V200\TDec_1302 $paramVST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -170,7 +170,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Total dos produtos e serviços
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVProd()
@@ -180,7 +180,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Total dos produtos e serviços
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -190,7 +190,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total dos produtos e serviços
      * @param \Sped\Schemas\V200\TDec_1302 $paramVProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -202,7 +202,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Total do Frete
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVFrete()
@@ -212,7 +212,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Total do Frete
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -222,7 +222,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total do Frete
      * @param \Sped\Schemas\V200\TDec_1302 $paramVFrete 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -234,7 +234,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Total do Seguro
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVSeg()
@@ -244,7 +244,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Total do Seguro
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -254,7 +254,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total do Seguro
      * @param \Sped\Schemas\V200\TDec_1302 $paramVSeg 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -266,7 +266,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Total do Desconto
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVDesc()
@@ -276,7 +276,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Total do Desconto
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -286,7 +286,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total do Desconto
      * @param \Sped\Schemas\V200\TDec_1302 $paramVDesc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -298,7 +298,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Total do II
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVII()
@@ -308,7 +308,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Total do II
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -318,7 +318,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total do II
      * @param \Sped\Schemas\V200\TDec_1302 $paramVII 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -330,7 +330,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Total do IPI
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVIPI()
@@ -340,7 +340,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Total do IPI
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -350,7 +350,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total do IPI
      * @param \Sped\Schemas\V200\TDec_1302 $paramVIPI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -362,7 +362,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do PIS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVPIS()
@@ -372,7 +372,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do PIS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -382,7 +382,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do PIS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -394,7 +394,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do COFINS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVCOFINS()
@@ -404,7 +404,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do COFINS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -414,7 +414,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do COFINS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVCOFINS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -426,7 +426,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Outras Despesas acessórias
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVOutro()
@@ -436,7 +436,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Outras Despesas acessórias
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -446,7 +446,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Outras Despesas acessórias
      * @param \Sped\Schemas\V200\TDec_1302 $paramVOutro 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
@@ -458,7 +458,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Total da NF-e
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVNF()
@@ -468,7 +468,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Total da NF-e
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -478,7 +478,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total da NF-e
      * @param \Sped\Schemas\V200\TDec_1302 $paramVNF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */

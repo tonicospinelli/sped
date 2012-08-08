@@ -34,7 +34,7 @@ class Cana extends \Sped\Components\Xml\Element
     const VLIQFOR = 'vLiqFor';
 
     /**
-     * 
+     * Retorna Identificação da safra // v2.0
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra 
      */
     public function getSafra()
@@ -44,7 +44,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Identificação da safra // v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra 
      */
@@ -54,7 +54,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Identificação da safra // v2.0
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra $paramSafra 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
@@ -66,7 +66,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Mês e Ano de Referência, formato: MM/AAAA // 2.0
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref 
      */
     public function getRef()
@@ -76,7 +76,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Mês e Ano de Referência, formato: MM/AAAA // 2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref 
      */
@@ -86,7 +86,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Mês e Ano de Referência, formato: MM/AAAA // 2.0
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref $paramRef 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
@@ -98,7 +98,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Fornecimentos diários // v2.0
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia 
      */
     public function getForDia()
@@ -108,7 +108,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Fornecimentos diários // v2.0
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia 
      */
     public function addForDia()
@@ -117,7 +117,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Fornecimentos diários // v2.0
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia $paramForDia 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
@@ -129,7 +129,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Total do mês // v2.0
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function getQTotMes()
@@ -139,7 +139,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Total do mês // v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
@@ -149,7 +149,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Total do mês // v2.0
      * @param \Sped\Schemas\V200\TDec_1110 $paramQTotMes 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
@@ -161,7 +161,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Total Anterior // v2.0
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function getQTotAnt()
@@ -171,7 +171,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Total Anterior // v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
@@ -181,7 +181,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Total Anterior // v2.0
      * @param \Sped\Schemas\V200\TDec_1110 $paramQTotAnt 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
@@ -193,7 +193,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Total Geral // v2.0
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function getQTotGer()
@@ -203,7 +203,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Total Geral // v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
@@ -213,7 +213,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Total Geral // v2.0
      * @param \Sped\Schemas\V200\TDec_1110 $paramQTotGer 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
@@ -225,18 +225,17 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Deduções - Taxas e Contribuições // v2.0
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
-    public function getDeduc($index)
+    public function getDeduc()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc');
-        return $this->getElementsByTagName(self::DEDUC)->item($index);
+        return $this->getElementsByTagName(self::DEDUC)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Deduções - Taxas e Contribuições // v2.0
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
     public function addDeduc()
@@ -245,7 +244,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Deduções - Taxas e Contribuições // v2.0
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc $paramDeduc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
@@ -257,7 +256,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor  dos fornecimentos // v2.0
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVFor()
@@ -267,7 +266,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor  dos fornecimentos // v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -277,7 +276,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor  dos fornecimentos // v2.0
      * @param \Sped\Schemas\V200\TDec_1302 $paramVFor 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
@@ -289,7 +288,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Total das Deduções // v2.0
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVTotDed()
@@ -299,7 +298,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Total das Deduções // v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -309,7 +308,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total das Deduções // v2.0
      * @param \Sped\Schemas\V200\TDec_1302 $paramVTotDed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
@@ -321,7 +320,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor Líquido dos fornecimentos // v2.0
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVLiqFor()
@@ -331,7 +330,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor Líquido dos fornecimentos // v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -341,7 +340,7 @@ class Cana extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Líquido dos fornecimentos // v2.0
      * @param \Sped\Schemas\V200\TDec_1302 $paramVLiqFor 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */

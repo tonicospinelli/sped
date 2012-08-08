@@ -20,7 +20,7 @@ class Total extends \Sped\Components\Xml\Element
     const RETTRIB = 'retTrib';
 
     /**
-     * 
+     * Retorna Totais referentes ao ICMS
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function getICMSTot()
@@ -30,7 +30,7 @@ class Total extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Totais referentes ao ICMS
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot 
      */
     public function addICMSTot()
@@ -39,7 +39,7 @@ class Total extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Totais referentes ao ICMS
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Total\ICMSTot $paramICMSTot 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total 
      */
@@ -51,18 +51,17 @@ class Total extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Totais referentes ao ISSQN
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot 
      */
-    public function getISSQNtot($index)
+    public function getISSQNtot()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot');
-        return $this->getElementsByTagName(self::ISSQNTOT)->item($index);
+        return $this->getElementsByTagName(self::ISSQNTOT)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Totais referentes ao ISSQN
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot 
      */
     public function addISSQNtot()
@@ -71,7 +70,7 @@ class Total extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Totais referentes ao ISSQN
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot $paramISSQNtot 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total 
      */
@@ -83,18 +82,17 @@ class Total extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Retenção de Tributos Federais
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib 
      */
-    public function getRetTrib($index)
+    public function getRetTrib()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib');
-        return $this->getElementsByTagName(self::RETTRIB)->item($index);
+        return $this->getElementsByTagName(self::RETTRIB)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Retenção de Tributos Federais
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib 
      */
     public function addRetTrib()
@@ -103,7 +101,7 @@ class Total extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Retenção de Tributos Federais
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib $paramRetTrib 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total 
      */

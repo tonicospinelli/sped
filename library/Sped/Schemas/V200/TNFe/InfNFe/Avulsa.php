@@ -36,7 +36,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     const DPAG = 'dPag';
 
     /**
-     * 
+     * Retorna CNPJ do Órgão emissor
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function getCNPJ()
@@ -46,7 +46,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CNPJ do Órgão emissor
      * @param type $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
@@ -56,7 +56,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CNPJ do Órgão emissor
      * @param \Sped\Schemas\V200\TCnpj $paramCNPJ 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
@@ -68,7 +68,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Órgão emitente
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao 
      */
     public function getXOrgao()
@@ -78,7 +78,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Órgão emitente
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao 
      */
@@ -88,7 +88,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Órgão emitente
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao $paramXOrgao 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
@@ -100,7 +100,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Matrícula do agente
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr 
      */
     public function getMatr()
@@ -110,7 +110,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Matrícula do agente
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr 
      */
@@ -120,7 +120,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Matrícula do agente
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr $paramMatr 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
@@ -132,7 +132,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Nome do agente
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente 
      */
     public function getXAgente()
@@ -142,7 +142,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Nome do agente
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente 
      */
@@ -152,7 +152,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Nome do agente
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente $paramXAgente 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
@@ -164,18 +164,17 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Telefone
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
      */
-    public function getFone($index)
+    public function getFone()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone');
-        return $this->getElementsByTagName(self::FONE)->item($index);
+        return $this->getElementsByTagName(self::FONE)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Telefone
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
      */
@@ -185,7 +184,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Telefone
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone $paramFone 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
@@ -197,7 +196,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Sigla da Unidade da Federação
      * @return \Sped\Schemas\V200\TUfEmi 
      */
     public function getUF()
@@ -207,7 +206,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Sigla da Unidade da Federação
      * @param type $value 
      * @return \Sped\Schemas\V200\TUfEmi 
      */
@@ -217,7 +216,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Sigla da Unidade da Federação
      * @param \Sped\Schemas\V200\TUfEmi $paramUF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
@@ -229,18 +228,17 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Número do Documento de Arrecadação de Receita
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
      */
-    public function getNDAR($index)
+    public function getNDAR()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR');
-        return $this->getElementsByTagName(self::NDAR)->item($index);
+        return $this->getElementsByTagName(self::NDAR)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Número do Documento de Arrecadação de Receita
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
      */
@@ -250,7 +248,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do Documento de Arrecadação de Receita
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR $paramNDAR 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
@@ -262,18 +260,17 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Data de emissão do DAR (AAAA-MM-DD)
      * @return \Sped\Schemas\V200\TData 
      */
-    public function getDEmi($index)
+    public function getDEmi()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
-        return $this->getElementsByTagName(self::DEMI)->item($index);
+        return $this->getElementsByTagName(self::DEMI)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Data de emissão do DAR (AAAA-MM-DD)
      * @param type $value 
      * @return \Sped\Schemas\V200\TData 
      */
@@ -283,7 +280,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Data de emissão do DAR (AAAA-MM-DD)
      * @param \Sped\Schemas\V200\TData $paramDEmi 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
@@ -295,18 +292,17 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Valor Total constante no DAR
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVDAR($index)
+    public function getVDAR()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(self::VDAR)->item($index);
+        return $this->getElementsByTagName(self::VDAR)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Valor Total constante no DAR
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -316,7 +312,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total constante no DAR
      * @param \Sped\Schemas\V200\TDec_1302 $paramVDAR 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
@@ -328,7 +324,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Repartição Fiscal emitente
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi 
      */
     public function getRepEmi()
@@ -338,7 +334,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Repartição Fiscal emitente
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi 
      */
@@ -348,7 +344,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Repartição Fiscal emitente
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi $paramRepEmi 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
@@ -360,18 +356,17 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Data de pagamento do DAR (AAAA-MM-DD)
      * @return \Sped\Schemas\V200\TData 
      */
-    public function getDPag($index)
+    public function getDPag()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
-        return $this->getElementsByTagName(self::DPAG)->item($index);
+        return $this->getElementsByTagName(self::DPAG)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Data de pagamento do DAR (AAAA-MM-DD)
      * @param type $value 
      * @return \Sped\Schemas\V200\TData 
      */
@@ -381,7 +376,7 @@ class Avulsa extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Data de pagamento do DAR (AAAA-MM-DD)
      * @param \Sped\Schemas\V200\TData $paramDPag 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */

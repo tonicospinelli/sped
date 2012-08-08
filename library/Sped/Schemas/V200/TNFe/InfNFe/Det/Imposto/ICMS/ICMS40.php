@@ -25,7 +25,9 @@ class ICMS40 extends \Sped\Components\Xml\Element
     const MOTDESICMS = 'motDesICMS';
 
     /**
-     * 
+     * Retorna origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function getOrig()
@@ -35,7 +37,9 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
@@ -45,7 +49,9 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40 
      */
@@ -57,7 +63,11 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação pelo ICMS <br />
+     * 40 - Isenta <br />
+     * 41 - Não tributada <br />
+     * 50 - Suspensão <br />
+     * 51 - Diferimento 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST 
      */
     public function getCST()
@@ -67,7 +77,11 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação pelo ICMS <br />
+     * 40 - Isenta <br />
+     * 41 - Não tributada <br />
+     * 50 - Suspensão <br />
+     * 51 - Diferimento 
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST 
      */
@@ -77,7 +91,11 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação pelo ICMS <br />
+     * 40 - Isenta <br />
+     * 41 - Não tributada <br />
+     * 50 - Suspensão <br />
+     * 51 - Diferimento 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40 
      */
@@ -89,7 +107,7 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna O valor do ICMS será informado apenas nas operações com veículos beneficiados com a desoneração condicional do ICMS. (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMS()
@@ -99,7 +117,7 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona O valor do ICMS será informado apenas nas operações com veículos beneficiados com a desoneração condicional do ICMS. (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -109,7 +127,7 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define O valor do ICMS será informado apenas nas operações com veículos beneficiados com a desoneração condicional do ICMS. (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40 
      */
@@ -121,7 +139,17 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Este campo será preenchido quando o campo anterior estiver preenchido.<br />
+     * Informar o motivo da desoneração:<br />
+     * 1 – Táxi;<br />
+     * 2 – Deficiente Físico;<br />
+     * 3 – Produtor Agropecuário;<br />
+     * 4 – Frotista/Locadora;<br />
+     * 5 – Diplomático/Consular;<br />
+     * 6 – Utilitários e Motocicletas da Amazônia Ocidental e Áreas de Livre Comércio (Resolução 714/88 e 790/94 – CONTRAN e suas alterações);<br />
+     * 7 – SUFRAMA;<br />
+     * 8 - Venda a órgão Público;<br />
+     * 9 – outros. (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS 
      */
     public function getMotDesICMS()
@@ -131,7 +159,17 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Este campo será preenchido quando o campo anterior estiver preenchido.<br />
+     * Informar o motivo da desoneração:<br />
+     * 1 – Táxi;<br />
+     * 2 – Deficiente Físico;<br />
+     * 3 – Produtor Agropecuário;<br />
+     * 4 – Frotista/Locadora;<br />
+     * 5 – Diplomático/Consular;<br />
+     * 6 – Utilitários e Motocicletas da Amazônia Ocidental e Áreas de Livre Comércio (Resolução 714/88 e 790/94 – CONTRAN e suas alterações);<br />
+     * 7 – SUFRAMA;<br />
+     * 8 - Venda a órgão Público;<br />
+     * 9 – outros. (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS 
      */
@@ -141,7 +179,17 @@ class ICMS40 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Este campo será preenchido quando o campo anterior estiver preenchido.<br />
+     * Informar o motivo da desoneração:<br />
+     * 1 – Táxi;<br />
+     * 2 – Deficiente Físico;<br />
+     * 3 – Produtor Agropecuário;<br />
+     * 4 – Frotista/Locadora;<br />
+     * 5 – Diplomático/Consular;<br />
+     * 6 – Utilitários e Motocicletas da Amazônia Ocidental e Áreas de Livre Comércio (Resolução 714/88 e 790/94 – CONTRAN e suas alterações);<br />
+     * 7 – SUFRAMA;<br />
+     * 8 - Venda a órgão Público;<br />
+     * 9 – outros. (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS $paramMotDesICMS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40 
      */

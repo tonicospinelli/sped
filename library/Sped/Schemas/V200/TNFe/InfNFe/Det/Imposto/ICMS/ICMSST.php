@@ -26,7 +26,10 @@ class ICMSST extends \Sped\Components\Xml\Element
     const VICMSSTDEST = 'vICMSSTDest';
 
     /**
-     * 
+     * Retorna origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno <br />
+     * (v2.0)
      * @return \Sped\Schemas\V200\Torig 
      */
     public function getOrig()
@@ -36,7 +39,10 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno <br />
+     * (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
@@ -46,7 +52,10 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno <br />
+     * (v2.0)
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
@@ -58,7 +67,8 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributção pelo ICMS<br />
+     * 41-Não Tributado (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST 
      */
     public function getCST()
@@ -68,7 +78,8 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributção pelo ICMS<br />
+     * 41-Não Tributado (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST 
      */
@@ -78,7 +89,8 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributção pelo ICMS<br />
+     * 41-Não Tributado (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
@@ -90,7 +102,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informar o valor da BC do ICMS ST retido na UF remetente (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBCSTRet()
@@ -100,7 +112,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informar o valor da BC do ICMS ST retido na UF remetente (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -110,7 +122,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar o valor da BC do ICMS ST retido na UF remetente (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCSTRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
@@ -122,7 +134,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna  Informar o valor do ICMS ST retido na UF remetente (iv2.0))
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMSSTRet()
@@ -132,7 +144,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona  Informar o valor do ICMS ST retido na UF remetente (iv2.0))
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -142,7 +154,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define  Informar o valor do ICMS ST retido na UF remetente (iv2.0))
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMSSTRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
@@ -154,7 +166,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna  Informar o valor da BC do ICMS ST da UF destino (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBCSTDest()
@@ -164,7 +176,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona  Informar o valor da BC do ICMS ST da UF destino (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -174,7 +186,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define  Informar o valor da BC do ICMS ST da UF destino (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCSTDest 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */
@@ -186,7 +198,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informar o valor da BC do ICMS ST da UF destino (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMSSTDest()
@@ -196,7 +208,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informar o valor da BC do ICMS ST da UF destino (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -206,7 +218,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar o valor da BC do ICMS ST da UF destino (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMSSTDest 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST 
      */

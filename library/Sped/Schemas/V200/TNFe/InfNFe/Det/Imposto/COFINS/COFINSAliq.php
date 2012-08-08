@@ -24,7 +24,9 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     const VCOFINS = 'vCOFINS';
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do COFINS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST 
      */
     public function getCST()
@@ -34,7 +36,9 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do COFINS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST 
      */
@@ -44,7 +48,9 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do COFINS.<br />
+     * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
+     * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
@@ -56,7 +62,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor da BC do COFINS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC()
@@ -66,7 +72,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do COFINS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -76,7 +82,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do COFINS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
@@ -88,7 +94,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do COFINS (em percentual)
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getPCOFINS()
@@ -98,7 +104,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do COFINS (em percentual)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -108,7 +114,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do COFINS (em percentual)
      * @param \Sped\Schemas\V200\TDec_0302 $paramPCOFINS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */
@@ -120,7 +126,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do COFINS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVCOFINS()
@@ -130,7 +136,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do COFINS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -140,7 +146,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do COFINS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVCOFINS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq 
      */

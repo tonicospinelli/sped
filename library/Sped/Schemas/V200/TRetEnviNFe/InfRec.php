@@ -18,7 +18,7 @@ class InfRec extends \Sped\Components\Xml\Element
     const TMED = 'tMed';
 
     /**
-     * 
+     * Retorna Número do Recibo
      * @return \Sped\Schemas\V200\TRec 
      */
     public function getNRec()
@@ -28,7 +28,7 @@ class InfRec extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do Recibo
      * @param type $value 
      * @return \Sped\Schemas\V200\TRec 
      */
@@ -38,7 +38,7 @@ class InfRec extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do Recibo
      * @param \Sped\Schemas\V200\TRec $paramNRec 
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
@@ -50,7 +50,7 @@ class InfRec extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tempo médio de resposta do serviço (em segundos) dos últimos 5 minutos
      * @return \Sped\Schemas\V200\TMed 
      */
     public function getTMed()
@@ -60,7 +60,7 @@ class InfRec extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tempo médio de resposta do serviço (em segundos) dos últimos 5 minutos
      * @param type $value 
      * @return \Sped\Schemas\V200\TMed 
      */
@@ -70,7 +70,7 @@ class InfRec extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tempo médio de resposta do serviço (em segundos) dos últimos 5 minutos
      * @param \Sped\Schemas\V200\TMed $paramTMed 
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */

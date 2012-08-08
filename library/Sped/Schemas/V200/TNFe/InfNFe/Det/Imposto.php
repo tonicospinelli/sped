@@ -30,7 +30,7 @@ class Imposto extends \Sped\Components\Xml\Element
     const COFINSST = 'COFINSST';
 
     /**
-     * 
+     * Retorna Dados do ICMS Normal e ST
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
     public function getICMS()
@@ -40,7 +40,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Dados do ICMS Normal e ST
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS 
      */
     public function addICMS()
@@ -49,7 +49,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do ICMS Normal e ST
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS $paramICMS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
@@ -61,18 +61,17 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados do IPI
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI 
      */
-    public function getIPI($index)
+    public function getIPI()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI');
-        return $this->getElementsByTagName(self::IPI)->item($index);
+        return $this->getElementsByTagName(self::IPI)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados do IPI
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI 
      */
     public function addIPI()
@@ -81,7 +80,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do IPI
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI $paramIPI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
@@ -93,18 +92,17 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados do Imposto de Importação
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */
-    public function getII($index)
+    public function getII()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II');
-        return $this->getElementsByTagName(self::II)->item($index);
+        return $this->getElementsByTagName(self::II)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados do Imposto de Importação
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */
     public function addII()
@@ -113,7 +111,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do Imposto de Importação
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II $paramII 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
@@ -125,7 +123,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna ISSQN
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
     public function getISSQN()
@@ -135,7 +133,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona ISSQN
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN 
      */
     public function addISSQN()
@@ -144,7 +142,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define ISSQN
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN $paramISSQN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
@@ -156,7 +154,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Dados do PIS
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
     public function getPIS()
@@ -166,7 +164,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Dados do PIS
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS 
      */
     public function addPIS()
@@ -175,7 +173,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do PIS
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS $paramPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
@@ -187,18 +185,17 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados do PIS Substituição Tributária
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
-    public function getPISST($index)
+    public function getPISST()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST');
-        return $this->getElementsByTagName(self::PISST)->item($index);
+        return $this->getElementsByTagName(self::PISST)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados do PIS Substituição Tributária
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
     public function addPISST()
@@ -207,7 +204,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do PIS Substituição Tributária
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST $paramPISST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
@@ -219,7 +216,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Dados do COFINS
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
     public function getCOFINS()
@@ -229,7 +226,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Dados do COFINS
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS 
      */
     public function addCOFINS()
@@ -238,7 +235,7 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do COFINS
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS $paramCOFINS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */
@@ -250,18 +247,19 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados do COFINS da<br />
+     * Substituição Tributaria;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
-    public function getCOFINSST($index)
+    public function getCOFINSST()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST');
-        return $this->getElementsByTagName(self::COFINSST)->item($index);
+        return $this->getElementsByTagName(self::COFINSST)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados do COFINS da<br />
+     * Substituição Tributaria;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
     public function addCOFINSST()
@@ -270,7 +268,8 @@ class Imposto extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do COFINS da<br />
+     * Substituição Tributaria;
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST $paramCOFINSST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto 
      */

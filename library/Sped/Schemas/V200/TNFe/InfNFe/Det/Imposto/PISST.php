@@ -24,7 +24,7 @@ class PISST extends \Sped\Components\Xml\Element
     const VPIS = 'vPIS';
 
     /**
-     * 
+     * Retorna Valor da BC do PIS ST
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVBC()
@@ -34,7 +34,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do PIS ST
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -44,7 +44,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do PIS ST
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
@@ -56,7 +56,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do PIS ST (em percentual)
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function getPPIS()
@@ -66,7 +66,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do PIS ST (em percentual)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
@@ -76,7 +76,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do PIS ST (em percentual)
      * @param \Sped\Schemas\V200\TDec_0302Opc $paramPPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
@@ -88,7 +88,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Quantidade Vendida 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
     public function getQBCProd()
@@ -98,7 +98,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Quantidade Vendida 
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
@@ -108,7 +108,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade Vendida 
      * @param \Sped\Schemas\V200\TDec_1204Opc $paramQBCProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
@@ -120,7 +120,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do PIS ST (em reais)
      * @return \Sped\Schemas\V200\TDec_1104Opc 
      */
     public function getVAliqProd()
@@ -130,7 +130,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do PIS ST (em reais)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1104Opc 
      */
@@ -140,7 +140,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do PIS ST (em reais)
      * @param \Sped\Schemas\V200\TDec_1104Opc $paramVAliqProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
@@ -152,7 +152,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do PIS ST
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function getVPIS()
@@ -162,7 +162,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do PIS ST
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -172,7 +172,7 @@ class PISST extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do PIS ST
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */

@@ -29,7 +29,9 @@ class ICMS20 extends \Sped\Components\Xml\Element
     const VICMS = 'vICMS';
 
     /**
-     * 
+     * Retorna origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function getOrig()
@@ -39,7 +41,9 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
@@ -49,7 +53,9 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20 
      */
@@ -61,7 +67,8 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributção pelo ICMS<br />
+     * 20 - Com redução de base de cálculo
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20\CST 
      */
     public function getCST()
@@ -71,7 +78,8 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributção pelo ICMS<br />
+     * 20 - Com redução de base de cálculo
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20\CST 
      */
@@ -81,7 +89,8 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributção pelo ICMS<br />
+     * 20 - Com redução de base de cálculo
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20 
      */
@@ -93,7 +102,11 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Modalidade de determinação da BC do ICMS:<br />
+     * 0 - Margem Valor Agregado (%);<br />
+     * 1 - Pauta (valor);<br />
+     * 2 - Preço Tabelado Máximo (valor);<br />
+     * 3 - Valor da Operação.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20\ModBC 
      */
     public function getModBC()
@@ -103,7 +116,11 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Modalidade de determinação da BC do ICMS:<br />
+     * 0 - Margem Valor Agregado (%);<br />
+     * 1 - Pauta (valor);<br />
+     * 2 - Preço Tabelado Máximo (valor);<br />
+     * 3 - Valor da Operação.
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20\ModBC 
      */
@@ -113,7 +130,11 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Modalidade de determinação da BC do ICMS:<br />
+     * 0 - Margem Valor Agregado (%);<br />
+     * 1 - Pauta (valor);<br />
+     * 2 - Preço Tabelado Máximo (valor);<br />
+     * 3 - Valor da Operação.
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20\ModBC $paramModBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20 
      */
@@ -125,7 +146,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Percentual de redução da BC
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getPRedBC()
@@ -135,7 +156,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Percentual de redução da BC
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -145,7 +166,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Percentual de redução da BC
      * @param \Sped\Schemas\V200\TDec_0302 $paramPRedBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20 
      */
@@ -157,7 +178,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor da BC do ICMS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC()
@@ -167,7 +188,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do ICMS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -177,7 +198,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do ICMS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20 
      */
@@ -189,7 +210,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do ICMS
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getPICMS()
@@ -199,7 +220,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do ICMS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -209,7 +230,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do ICMS
      * @param \Sped\Schemas\V200\TDec_0302 $paramPICMS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20 
      */
@@ -221,7 +242,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do ICMS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMS()
@@ -231,7 +252,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do ICMS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -241,7 +262,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do ICMS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20 
      */

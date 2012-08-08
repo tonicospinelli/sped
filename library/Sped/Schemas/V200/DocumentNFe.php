@@ -3,7 +3,7 @@
 namespace Sped\Schemas\V200;
 
 /**
- * Nota Fiscal Eletrônica
+ * Documento Nota Fiscal Eletrônica
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @name DocumentNFe
@@ -15,7 +15,7 @@ class DocumentNFe extends \Sped\Components\Xml\Document
     const NFE = 'NFe';
 
     /**
-     * 
+     * Retorna Nota Fiscal Eletrônica
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function getNFe()
@@ -25,7 +25,7 @@ class DocumentNFe extends \Sped\Components\Xml\Document
     }
 
     /**
-     * 
+     * Adiciona Nota Fiscal Eletrônica
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function addNFe()
@@ -34,7 +34,7 @@ class DocumentNFe extends \Sped\Components\Xml\Document
     }
 
     /**
-     * 
+     * Define Nota Fiscal Eletrônica
      * @param \Sped\Schemas\V200\TNFe $paramNFe 
      * @return \Sped\Schemas\V200\DocumentNFe 
      */

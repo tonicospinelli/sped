@@ -18,7 +18,8 @@ class ProcRef extends \Sped\Components\Xml\Element
     const INDPROC = 'indProc';
 
     /**
-     * 
+     * Retorna Indentificador do processo ou ato<br />
+     * concessório
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc 
      */
     public function getNProc()
@@ -28,7 +29,8 @@ class ProcRef extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Indentificador do processo ou ato<br />
+     * concessório
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc 
      */
@@ -38,7 +40,8 @@ class ProcRef extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Indentificador do processo ou ato<br />
+     * concessório
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc $paramNProc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */
@@ -50,7 +53,12 @@ class ProcRef extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Origem do processo, informar com:<br />
+     * 0 - SEFAZ;<br />
+     * 1 - Justiça Federal;<br />
+     * 2 - Justiça Estadual;<br />
+     * 3 - Secex/RFB;<br />
+     * 9 - Outros
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc 
      */
     public function getIndProc()
@@ -60,7 +68,12 @@ class ProcRef extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Origem do processo, informar com:<br />
+     * 0 - SEFAZ;<br />
+     * 1 - Justiça Federal;<br />
+     * 2 - Justiça Estadual;<br />
+     * 3 - Secex/RFB;<br />
+     * 9 - Outros
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc 
      */
@@ -70,7 +83,12 @@ class ProcRef extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Origem do processo, informar com:<br />
+     * 0 - SEFAZ;<br />
+     * 1 - Justiça Federal;<br />
+     * 2 - Justiça Estadual;<br />
+     * 3 - Secex/RFB;<br />
+     * 9 - Outros
      * @param \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc $paramIndProc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */

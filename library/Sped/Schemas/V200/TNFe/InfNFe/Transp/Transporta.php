@@ -28,7 +28,7 @@ class Transporta extends \Sped\Components\Xml\Element
     const UF = 'UF';
 
     /**
-     * 
+     * Retorna CNPJ do transportador
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function getCNPJ()
@@ -38,7 +38,7 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CNPJ do transportador
      * @param type $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
@@ -48,7 +48,7 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CNPJ do transportador
      * @param \Sped\Schemas\V200\TCnpj $paramCNPJ 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
@@ -60,7 +60,7 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna CPF do transportador
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function getCPF()
@@ -70,7 +70,7 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CPF do transportador
      * @param type $value 
      * @return \Sped\Schemas\V200\TCpf 
      */
@@ -80,7 +80,7 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CPF do transportador
      * @param \Sped\Schemas\V200\TCpf $paramCPF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
@@ -92,18 +92,17 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Razão Social ou nome
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome 
      */
-    public function getXNome($index)
+    public function getXNome()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome');
-        return $this->getElementsByTagName(self::XNOME)->item($index);
+        return $this->getElementsByTagName(self::XNOME)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Razão Social ou nome
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome 
      */
@@ -113,7 +112,7 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Razão Social ou nome
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome $paramXNome 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
@@ -125,18 +124,17 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Inscrição Estadual (v2.0)
      * @return \Sped\Schemas\V200\TIeDest 
      */
-    public function getIE($index)
+    public function getIE()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIeDest');
-        return $this->getElementsByTagName(self::IE)->item($index);
+        return $this->getElementsByTagName(self::IE)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Inscrição Estadual (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TIeDest 
      */
@@ -146,7 +144,7 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Inscrição Estadual (v2.0)
      * @param \Sped\Schemas\V200\TIeDest $paramIE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
@@ -158,18 +156,17 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Endereço completo
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder 
      */
-    public function getXEnder($index)
+    public function getXEnder()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder');
-        return $this->getElementsByTagName(self::XENDER)->item($index);
+        return $this->getElementsByTagName(self::XENDER)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Endereço completo
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder 
      */
@@ -179,7 +176,7 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Endereço completo
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder $paramXEnder 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
@@ -191,18 +188,17 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Nome do munícipio
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun 
      */
-    public function getXMun($index)
+    public function getXMun()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun');
-        return $this->getElementsByTagName(self::XMUN)->item($index);
+        return $this->getElementsByTagName(self::XMUN)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Nome do munícipio
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun 
      */
@@ -212,7 +208,7 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Nome do munícipio
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun $paramXMun 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
@@ -224,18 +220,17 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Sigla da UF
      * @return \Sped\Schemas\V200\TUf 
      */
-    public function getUF($index)
+    public function getUF()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TUf');
-        return $this->getElementsByTagName(self::UF)->item($index);
+        return $this->getElementsByTagName(self::UF)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Sigla da UF
      * @param type $value 
      * @return \Sped\Schemas\V200\TUf 
      */
@@ -245,7 +240,7 @@ class Transporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Sigla da UF
      * @param \Sped\Schemas\V200\TUf $paramUF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */

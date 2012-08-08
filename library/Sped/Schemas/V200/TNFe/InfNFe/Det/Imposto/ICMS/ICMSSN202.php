@@ -30,7 +30,10 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     const VICMSST = 'vICMSST';
 
     /**
-     * 
+     * Retorna Origem da mercadoria:<br />
+     * 0 – Nacional;<br />
+     * 1 – Estrangeira – Importação direta;<br />
+     * 2 – Estrangeira – Adquirida no mercado interno. (v2.0)
      * @return \Sped\Schemas\V200\Torig 
      */
     public function getOrig()
@@ -40,7 +43,10 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Origem da mercadoria:<br />
+     * 0 – Nacional;<br />
+     * 1 – Estrangeira – Importação direta;<br />
+     * 2 – Estrangeira – Adquirida no mercado interno. (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
@@ -50,7 +56,10 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Origem da mercadoria:<br />
+     * 0 – Nacional;<br />
+     * 1 – Estrangeira – Importação direta;<br />
+     * 2 – Estrangeira – Adquirida no mercado interno. (v2.0)
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
@@ -62,7 +71,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna 202- Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por Substituição Tributária;<br />
+     * 203-  Isenção do ICMS nos Simples Nacional para faixa de receita bruta e com cobrança do ICMS por Substituição Tributária (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\CSOSN 
      */
     public function getCSOSN()
@@ -72,7 +82,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona 202- Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por Substituição Tributária;<br />
+     * 203-  Isenção do ICMS nos Simples Nacional para faixa de receita bruta e com cobrança do ICMS por Substituição Tributária (v.2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\CSOSN 
      */
@@ -82,7 +93,8 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define 202- Tributada pelo Simples Nacional sem permissão de crédito e com cobrança do ICMS por Substituição Tributária;<br />
+     * 203-  Isenção do ICMS nos Simples Nacional para faixa de receita bruta e com cobrança do ICMS por Substituição Tributária (v.2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\CSOSN $paramCSOSN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
@@ -94,7 +106,13 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Modalidade de determinação da BC do ICMS ST:<br />
+     * 0 – Preço tabelado ou máximo  sugerido;<br />
+     * 1 - Lista Negativa (valor);<br />
+     * 2 - Lista Positiva (valor);<br />
+     * 3 - Lista Neutra (valor);<br />
+     * 4 - Margem Valor Agregado (%);<br />
+     * 5 - Pauta (valor). (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\ModBCST 
      */
     public function getModBCST()
@@ -104,7 +122,13 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Modalidade de determinação da BC do ICMS ST:<br />
+     * 0 – Preço tabelado ou máximo  sugerido;<br />
+     * 1 - Lista Negativa (valor);<br />
+     * 2 - Lista Positiva (valor);<br />
+     * 3 - Lista Neutra (valor);<br />
+     * 4 - Margem Valor Agregado (%);<br />
+     * 5 - Pauta (valor). (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\ModBCST 
      */
@@ -114,7 +138,13 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Modalidade de determinação da BC do ICMS ST:<br />
+     * 0 – Preço tabelado ou máximo  sugerido;<br />
+     * 1 - Lista Negativa (valor);<br />
+     * 2 - Lista Positiva (valor);<br />
+     * 3 - Lista Neutra (valor);<br />
+     * 4 - Margem Valor Agregado (%);<br />
+     * 5 - Pauta (valor). (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202\ModBCST $paramModBCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
@@ -126,18 +156,17 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Percentual da Margem de Valor Adicionado ICMS ST (v2.0)
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function getPMVAST($index)
+    public function getPMVAST()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302Opc');
-        return $this->getElementsByTagName(self::PMVAST)->item($index);
+        return $this->getElementsByTagName(self::PMVAST)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Percentual da Margem de Valor Adicionado ICMS ST (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
@@ -147,7 +176,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Percentual da Margem de Valor Adicionado ICMS ST (v2.0)
      * @param \Sped\Schemas\V200\TDec_0302Opc $paramPMVAST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
@@ -159,18 +188,17 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Percentual de redução da BC ICMS ST  (v2.0)
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function getPRedBCST($index)
+    public function getPRedBCST()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302Opc');
-        return $this->getElementsByTagName(self::PREDBCST)->item($index);
+        return $this->getElementsByTagName(self::PREDBCST)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Percentual de redução da BC ICMS ST  (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
@@ -180,7 +208,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Percentual de redução da BC ICMS ST  (v2.0)
      * @param \Sped\Schemas\V200\TDec_0302Opc $paramPRedBCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
@@ -192,7 +220,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor da BC do ICMS ST (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBCST()
@@ -202,7 +230,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do ICMS ST (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -212,7 +240,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do ICMS ST (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
@@ -224,7 +252,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do ICMS ST (v2.0)
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getPICMSST()
@@ -234,7 +262,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do ICMS ST (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -244,7 +272,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do ICMS ST (v2.0)
      * @param \Sped\Schemas\V200\TDec_0302 $paramPICMSST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */
@@ -256,7 +284,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do ICMS ST (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMSST()
@@ -266,7 +294,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do ICMS ST (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -276,7 +304,7 @@ class ICMSSN202 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do ICMS ST (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMSST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN202 
      */

@@ -3,7 +3,7 @@
 namespace Sped\Schemas\V200;
 
 /**
- * 
+ * Documento 
  * @copyright Copyright (c) 2012 Antonio Spinelli
  * @license http://www.gnu.org/licenses/gpl.html GNU/GPL v.3
  * @name DocumentSignature

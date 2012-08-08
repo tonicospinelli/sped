@@ -58,7 +58,7 @@ class Ide extends \Sped\Components\Xml\Element
     const XJUST = 'xJust';
 
     /**
-     * 
+     * Retorna Código da UF do emitente do Documento Fiscal. Utilizar a Tabela do IBGE.
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function getCUF()
@@ -68,7 +68,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código da UF do emitente do Documento Fiscal. Utilizar a Tabela do IBGE.
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
@@ -78,7 +78,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código da UF do emitente do Documento Fiscal. Utilizar a Tabela do IBGE.
      * @param \Sped\Schemas\V200\TCodUfIBGE $paramCUF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -90,7 +90,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código numérico que compõe a Chave de Acesso. Número aleatório gerado pelo emitente para cada NF-e. (tamanho reduzido para 8 dígitos v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CNF 
      */
     public function getCNF()
@@ -100,7 +100,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código numérico que compõe a Chave de Acesso. Número aleatório gerado pelo emitente para cada NF-e. (tamanho reduzido para 8 dígitos v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CNF 
      */
@@ -110,7 +110,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código numérico que compõe a Chave de Acesso. Número aleatório gerado pelo emitente para cada NF-e. (tamanho reduzido para 8 dígitos v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\CNF $paramCNF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -122,7 +122,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Descrição da Natureza da Operação
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp 
      */
     public function getNatOp()
@@ -132,7 +132,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Descrição da Natureza da Operação
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp 
      */
@@ -142,7 +142,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Descrição da Natureza da Operação
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp $paramNatOp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -154,7 +154,10 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Indicador da forma de pagamento:<br />
+     * 0 – pagamento à vista;<br />
+     * 1 – pagamento à prazo;<br />
+     * 2 – outros.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag 
      */
     public function getIndPag()
@@ -164,7 +167,10 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Indicador da forma de pagamento:<br />
+     * 0 – pagamento à vista;<br />
+     * 1 – pagamento à prazo;<br />
+     * 2 – outros.
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag 
      */
@@ -174,7 +180,10 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Indicador da forma de pagamento:<br />
+     * 0 – pagamento à vista;<br />
+     * 1 – pagamento à prazo;<br />
+     * 2 – outros.
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag $paramIndPag 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -186,7 +195,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do modelo do Documento Fiscal. Utilizar 55 para identificação da NF-e, emitida em substituição ao modelo 1 e 1A.
      * @return \Sped\Schemas\V200\TMod 
      */
     public function getMod()
@@ -196,7 +205,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do modelo do Documento Fiscal. Utilizar 55 para identificação da NF-e, emitida em substituição ao modelo 1 e 1A.
      * @param type $value 
      * @return \Sped\Schemas\V200\TMod 
      */
@@ -206,7 +215,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do modelo do Documento Fiscal. Utilizar 55 para identificação da NF-e, emitida em substituição ao modelo 1 e 1A.
      * @param \Sped\Schemas\V200\TMod $paramMod 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -218,7 +227,10 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Série do Documento Fiscal<br />
+     * série normal 0-889<br />
+     * Avulsa Fisco 890-899<br />
+     * SCAN 900-999
      * @return \Sped\Schemas\V200\TSerie 
      */
     public function getSerie()
@@ -228,7 +240,10 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Série do Documento Fiscal<br />
+     * série normal 0-889<br />
+     * Avulsa Fisco 890-899<br />
+     * SCAN 900-999
      * @param type $value 
      * @return \Sped\Schemas\V200\TSerie 
      */
@@ -238,7 +253,10 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Série do Documento Fiscal<br />
+     * série normal 0-889<br />
+     * Avulsa Fisco 890-899<br />
+     * SCAN 900-999
      * @param \Sped\Schemas\V200\TSerie $paramSerie 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -250,7 +268,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número do Documento Fiscal
      * @return \Sped\Schemas\V200\TNF 
      */
     public function getNNF()
@@ -260,7 +278,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do Documento Fiscal
      * @param type $value 
      * @return \Sped\Schemas\V200\TNF 
      */
@@ -270,7 +288,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do Documento Fiscal
      * @param \Sped\Schemas\V200\TNF $paramNNF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -282,7 +300,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Data de emissão do Documento Fiscal (AAAA-MM-DD)
      * @return \Sped\Schemas\V200\TData 
      */
     public function getDEmi()
@@ -292,7 +310,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Data de emissão do Documento Fiscal (AAAA-MM-DD)
      * @param type $value 
      * @return \Sped\Schemas\V200\TData 
      */
@@ -302,7 +320,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Data de emissão do Documento Fiscal (AAAA-MM-DD)
      * @param \Sped\Schemas\V200\TData $paramDEmi 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -314,7 +332,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Data de saída ou de entrada da mercadoria / produto (AAAA-MM-DD)
      * @return \Sped\Schemas\V200\TData 
      */
     public function getDSaiEnt()
@@ -324,7 +342,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Data de saída ou de entrada da mercadoria / produto (AAAA-MM-DD)
      * @param type $value 
      * @return \Sped\Schemas\V200\TData 
      */
@@ -334,7 +352,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Data de saída ou de entrada da mercadoria / produto (AAAA-MM-DD)
      * @param \Sped\Schemas\V200\TData $paramDSaiEnt 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -346,18 +364,17 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Hora de saída ou de entrada da mercadoria / produto (HH:MM:SS) (v2.0)
      * @return \Sped\Schemas\V200\TTime 
      */
-    public function getHSaiEnt($index)
+    public function getHSaiEnt()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TTime');
-        return $this->getElementsByTagName(self::HSAIENT)->item($index);
+        return $this->getElementsByTagName(self::HSAIENT)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Hora de saída ou de entrada da mercadoria / produto (HH:MM:SS) (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TTime 
      */
@@ -367,7 +384,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Hora de saída ou de entrada da mercadoria / produto (HH:MM:SS) (v2.0)
      * @param \Sped\Schemas\V200\TTime $paramHSaiEnt 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -379,7 +396,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tipo do Documento Fiscal (0 - entrada; 1 - saída)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNF 
      */
     public function getTpNF()
@@ -389,7 +406,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tipo do Documento Fiscal (0 - entrada; 1 - saída)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNF 
      */
@@ -399,7 +416,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tipo do Documento Fiscal (0 - entrada; 1 - saída)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNF $paramTpNF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -411,7 +428,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do Município de Ocorrência do Fato Gerador (utilizar a tabela do IBGE)
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function getCMunFG()
@@ -421,7 +438,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do Município de Ocorrência do Fato Gerador (utilizar a tabela do IBGE)
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
@@ -431,7 +448,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do Município de Ocorrência do Fato Gerador (utilizar a tabela do IBGE)
      * @param \Sped\Schemas\V200\TCodMunIBGE $paramCMunFG 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -443,18 +460,17 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Grupo de infromações da NF referenciada
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */
-    public function getNFref($index)
+    public function getNFref()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref');
-        return $this->getElementsByTagName(self::NFREF)->item($index);
+        return $this->getElementsByTagName(self::NFREF)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Grupo de infromações da NF referenciada
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */
     public function addNFref()
@@ -463,7 +479,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Grupo de infromações da NF referenciada
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref $paramNFref 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -475,7 +491,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Formato de impressão do DANFE (1 - Retrato; 2 - Paisagem)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp 
      */
     public function getTpImp()
@@ -485,7 +501,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Formato de impressão do DANFE (1 - Retrato; 2 - Paisagem)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp 
      */
@@ -495,7 +511,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Formato de impressão do DANFE (1 - Retrato; 2 - Paisagem)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp $paramTpImp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -507,7 +523,14 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Forma de emissão da NF-e<br />
+     * 1 - Normal;<br />
+     * 2 - Contingência FS<br />
+     * 3 - Contingência SCAN<br />
+     * 4 - Contingência DPEC<br />
+     * 5 - Contingência FSDA<br />
+     * 6 - Contingência SVC - AN<br />
+     * 7 - Contingência SVC - RS
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis 
      */
     public function getTpEmis()
@@ -517,7 +540,14 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Forma de emissão da NF-e<br />
+     * 1 - Normal;<br />
+     * 2 - Contingência FS<br />
+     * 3 - Contingência SCAN<br />
+     * 4 - Contingência DPEC<br />
+     * 5 - Contingência FSDA<br />
+     * 6 - Contingência SVC - AN<br />
+     * 7 - Contingência SVC - RS
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis 
      */
@@ -527,7 +557,14 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Forma de emissão da NF-e<br />
+     * 1 - Normal;<br />
+     * 2 - Contingência FS<br />
+     * 3 - Contingência SCAN<br />
+     * 4 - Contingência DPEC<br />
+     * 5 - Contingência FSDA<br />
+     * 6 - Contingência SVC - AN<br />
+     * 7 - Contingência SVC - RS
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis $paramTpEmis 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -539,7 +576,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Digito Verificador da Chave de Acesso da NF-e
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CDV 
      */
     public function getCDV()
@@ -549,7 +586,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Digito Verificador da Chave de Acesso da NF-e
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CDV 
      */
@@ -559,7 +596,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Digito Verificador da Chave de Acesso da NF-e
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\CDV $paramCDV 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -571,7 +608,9 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @return \Sped\Schemas\V200\TAmb 
      */
     public function getTpAmb()
@@ -581,7 +620,9 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @param type $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
@@ -591,7 +632,9 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @param \Sped\Schemas\V200\TAmb $paramTpAmb 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -603,7 +646,10 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Finalidade da emissão da NF-e:<br />
+     * 1 - NFe normal<br />
+     * 2 - NFe complementar<br />
+     * 3 - NFe de ajuste
      * @return \Sped\Schemas\V200\TFinNFe 
      */
     public function getFinNFe()
@@ -613,7 +659,10 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Finalidade da emissão da NF-e:<br />
+     * 1 - NFe normal<br />
+     * 2 - NFe complementar<br />
+     * 3 - NFe de ajuste
      * @param type $value 
      * @return \Sped\Schemas\V200\TFinNFe 
      */
@@ -623,7 +672,10 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Finalidade da emissão da NF-e:<br />
+     * 1 - NFe normal<br />
+     * 2 - NFe complementar<br />
+     * 3 - NFe de ajuste
      * @param \Sped\Schemas\V200\TFinNFe $paramFinNFe 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -635,7 +687,12 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Processo de emissão utilizado com a seguinte codificação:<br />
+     * 0 - emissão de NF-e com aplicativo do contribuinte;<br />
+     * 1 - emissão de NF-e avulsa pelo Fisco;<br />
+     * 2 - emissão de NF-e avulsa, pelo contribuinte com seu certificado digital, através do site<br />
+     * do Fisco;<br />
+     * 3- emissão de NF-e pelo contribuinte com aplicativo fornecido pelo Fisco.
      * @return \Sped\Schemas\V200\TProcEmi 
      */
     public function getProcEmi()
@@ -645,7 +702,12 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Processo de emissão utilizado com a seguinte codificação:<br />
+     * 0 - emissão de NF-e com aplicativo do contribuinte;<br />
+     * 1 - emissão de NF-e avulsa pelo Fisco;<br />
+     * 2 - emissão de NF-e avulsa, pelo contribuinte com seu certificado digital, através do site<br />
+     * do Fisco;<br />
+     * 3- emissão de NF-e pelo contribuinte com aplicativo fornecido pelo Fisco.
      * @param type $value 
      * @return \Sped\Schemas\V200\TProcEmi 
      */
@@ -655,7 +717,12 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Processo de emissão utilizado com a seguinte codificação:<br />
+     * 0 - emissão de NF-e com aplicativo do contribuinte;<br />
+     * 1 - emissão de NF-e avulsa pelo Fisco;<br />
+     * 2 - emissão de NF-e avulsa, pelo contribuinte com seu certificado digital, através do site<br />
+     * do Fisco;<br />
+     * 3- emissão de NF-e pelo contribuinte com aplicativo fornecido pelo Fisco.
      * @param \Sped\Schemas\V200\TProcEmi $paramProcEmi 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -667,7 +734,8 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna versão do aplicativo utilizado no processo de<br />
+     * emissão
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc 
      */
     public function getVerProc()
@@ -677,7 +745,8 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona versão do aplicativo utilizado no processo de<br />
+     * emissão
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc 
      */
@@ -687,7 +756,8 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define versão do aplicativo utilizado no processo de<br />
+     * emissão
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc $paramVerProc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -699,7 +769,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informar a data e hora de entrada em contingência contingência no formato AAAA-MM-DDTHH:MM:SS (v.2.0).
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\DhCont 
      */
     public function getDhCont()
@@ -709,7 +779,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informar a data e hora de entrada em contingência contingência no formato AAAA-MM-DDTHH:MM:SS (v.2.0).
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\DhCont 
      */
@@ -719,7 +789,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar a data e hora de entrada em contingência contingência no formato AAAA-MM-DDTHH:MM:SS (v.2.0).
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\DhCont $paramDhCont 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */
@@ -731,7 +801,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informar a Justificativa da entrada em (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\XJust 
      */
     public function getXJust()
@@ -741,7 +811,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informar a Justificativa da entrada em (v.2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\XJust 
      */
@@ -751,7 +821,7 @@ class Ide extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar a Justificativa da entrada em (v.2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\XJust $paramXJust 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide 
      */

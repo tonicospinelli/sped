@@ -26,7 +26,7 @@ class RefNF extends \Sped\Components\Xml\Element
     const NNF = 'nNF';
 
     /**
-     * 
+     * Retorna Código da UF do emitente do Documento Fiscal. Utilizar a Tabela do IBGE.
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function getCUF()
@@ -36,7 +36,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código da UF do emitente do Documento Fiscal. Utilizar a Tabela do IBGE.
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
@@ -46,7 +46,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código da UF do emitente do Documento Fiscal. Utilizar a Tabela do IBGE.
      * @param \Sped\Schemas\V200\TCodUfIBGE $paramCUF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */
@@ -58,7 +58,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna AAMM da emissão
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\AAMM 
      */
     public function getAAMM()
@@ -68,7 +68,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona AAMM da emissão
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\AAMM 
      */
@@ -78,7 +78,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define AAMM da emissão
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\AAMM $paramAAMM 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */
@@ -90,7 +90,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna CNPJ do emitente do documento fiscal referenciado
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function getCNPJ()
@@ -100,7 +100,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CNPJ do emitente do documento fiscal referenciado
      * @param type $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
@@ -110,7 +110,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CNPJ do emitente do documento fiscal referenciado
      * @param \Sped\Schemas\V200\TCnpj $paramCNPJ 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */
@@ -122,7 +122,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do modelo do Documento Fiscal. Utilizar 01 para NF modelo 1/1A
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\Mod 
      */
     public function getMod()
@@ -132,7 +132,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do modelo do Documento Fiscal. Utilizar 01 para NF modelo 1/1A
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\Mod 
      */
@@ -142,7 +142,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do modelo do Documento Fiscal. Utilizar 01 para NF modelo 1/1A
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\Mod $paramMod 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */
@@ -154,7 +154,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Série do Documento Fiscal, informar zero se inexistente
      * @return \Sped\Schemas\V200\TSerie 
      */
     public function getSerie()
@@ -164,7 +164,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Série do Documento Fiscal, informar zero se inexistente
      * @param type $value 
      * @return \Sped\Schemas\V200\TSerie 
      */
@@ -174,7 +174,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Série do Documento Fiscal, informar zero se inexistente
      * @param \Sped\Schemas\V200\TSerie $paramSerie 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */
@@ -186,7 +186,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número do Documento Fiscal
      * @return \Sped\Schemas\V200\TNF 
      */
     public function getNNF()
@@ -196,7 +196,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do Documento Fiscal
      * @param type $value 
      * @return \Sped\Schemas\V200\TNF 
      */
@@ -206,7 +206,7 @@ class RefNF extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do Documento Fiscal
      * @param \Sped\Schemas\V200\TNF $paramNNF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF 
      */

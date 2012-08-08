@@ -18,7 +18,7 @@ class TNFe extends \Sped\Components\Xml\Element
     const SIGNATURE = 'Signature';
 
     /**
-     * 
+     * Retorna Informações da Nota Fiscal eletrônica
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function getInfNFe()
@@ -28,7 +28,7 @@ class TNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informações da Nota Fiscal eletrônica
      * @return \Sped\Schemas\V200\TNFe\InfNFe 
      */
     public function addInfNFe()
@@ -37,7 +37,7 @@ class TNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informações da Nota Fiscal eletrônica
      * @param \Sped\Schemas\V200\TNFe\InfNFe $paramInfNFe 
      * @return \Sped\Schemas\V200\TNFe 
      */

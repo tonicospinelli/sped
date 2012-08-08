@@ -18,7 +18,7 @@ class Exporta extends \Sped\Components\Xml\Element
     const XLOCEMBARQ = 'xLocEmbarq';
 
     /**
-     * 
+     * Retorna Sigla da UF onde ocorrerá o embarque dos produtos
      * @return \Sped\Schemas\V200\TUf 
      */
     public function getUFEmbarq()
@@ -28,7 +28,7 @@ class Exporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Sigla da UF onde ocorrerá o embarque dos produtos
      * @param type $value 
      * @return \Sped\Schemas\V200\TUf 
      */
@@ -38,7 +38,7 @@ class Exporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Sigla da UF onde ocorrerá o embarque dos produtos
      * @param \Sped\Schemas\V200\TUf $paramUFEmbarq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta 
      */
@@ -50,7 +50,7 @@ class Exporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Local onde ocorrerá o embarque dos produtos
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq 
      */
     public function getXLocEmbarq()
@@ -60,7 +60,7 @@ class Exporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Local onde ocorrerá o embarque dos produtos
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq 
      */
@@ -70,7 +70,7 @@ class Exporta extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Local onde ocorrerá o embarque dos produtos
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq $paramXLocEmbarq 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta 
      */

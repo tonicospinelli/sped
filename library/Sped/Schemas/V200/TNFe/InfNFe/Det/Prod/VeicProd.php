@@ -62,7 +62,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     const TPREST = 'tpRest';
 
     /**
-     * 
+     * Retorna Tipo da Operação (1 - Venda concessionária; 2 - Faturamento direto; 3 - Venda direta; 0 - Outros)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpOp 
      */
     public function getTpOp()
@@ -72,7 +72,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tipo da Operação (1 - Venda concessionária; 2 - Faturamento direto; 3 - Venda direta; 0 - Outros)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpOp 
      */
@@ -82,7 +82,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tipo da Operação (1 - Venda concessionária; 2 - Faturamento direto; 3 - Venda direta; 0 - Outros)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpOp $paramTpOp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -94,7 +94,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Chassi do veículo - VIN (código-identificação-veículo)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Chassi 
      */
     public function getChassi()
@@ -104,7 +104,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Chassi do veículo - VIN (código-identificação-veículo)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Chassi 
      */
@@ -114,7 +114,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Chassi do veículo - VIN (código-identificação-veículo)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Chassi $paramChassi 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -126,7 +126,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Cor do veículo (código de cada montadora)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCor 
      */
     public function getCCor()
@@ -136,7 +136,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Cor do veículo (código de cada montadora)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCor 
      */
@@ -146,7 +146,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Cor do veículo (código de cada montadora)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCor $paramCCor 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -158,7 +158,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Descrição da cor
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\XCor 
      */
     public function getXCor()
@@ -168,7 +168,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Descrição da cor
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\XCor 
      */
@@ -178,7 +178,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Descrição da cor
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\XCor $paramXCor 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -190,7 +190,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Potência máxima do motor do veículo em cavalo vapor (CV). (potência-veículo)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Pot 
      */
     public function getPot()
@@ -200,7 +200,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Potência máxima do motor do veículo em cavalo vapor (CV). (potência-veículo)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Pot 
      */
@@ -210,7 +210,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Potência máxima do motor do veículo em cavalo vapor (CV). (potência-veículo)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Pot $paramPot 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -222,7 +222,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Capacidade voluntária do motor expressa em centímetros cúbicos (CC). (cilindradas) (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Cilin 
      */
     public function getCilin()
@@ -232,7 +232,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Capacidade voluntária do motor expressa em centímetros cúbicos (CC). (cilindradas) (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Cilin 
      */
@@ -242,7 +242,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Capacidade voluntária do motor expressa em centímetros cúbicos (CC). (cilindradas) (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Cilin $paramCilin 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -254,7 +254,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Peso líquido
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoL 
      */
     public function getPesoL()
@@ -264,7 +264,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Peso líquido
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoL 
      */
@@ -274,7 +274,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Peso líquido
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoL $paramPesoL 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -286,7 +286,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Peso bruto
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoB 
      */
     public function getPesoB()
@@ -296,7 +296,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Peso bruto
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoB 
      */
@@ -306,7 +306,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Peso bruto
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\PesoB $paramPesoB 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -318,7 +318,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Serial (série)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NSerie 
      */
     public function getNSerie()
@@ -328,7 +328,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Serial (série)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NSerie 
      */
@@ -338,7 +338,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Serial (série)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NSerie $paramNSerie 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -350,7 +350,14 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tipo de combustível - Utilizar Tabela RENAVAM (v2.0)<br />
+     * 01-Álcool<br />
+     * 02-Gasolina<br />
+     * 03-Diesel<br />
+     * (...)<br />
+     * 16-Álcool/Gasolina<br />
+     * 17-Gasolina/Álcool/GNV<br />
+     * 18-Gasolina/Elétrico
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpComb 
      */
     public function getTpComb()
@@ -360,7 +367,14 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tipo de combustível - Utilizar Tabela RENAVAM (v2.0)<br />
+     * 01-Álcool<br />
+     * 02-Gasolina<br />
+     * 03-Diesel<br />
+     * (...)<br />
+     * 16-Álcool/Gasolina<br />
+     * 17-Gasolina/Álcool/GNV<br />
+     * 18-Gasolina/Elétrico
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpComb 
      */
@@ -370,7 +384,14 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tipo de combustível - Utilizar Tabela RENAVAM (v2.0)<br />
+     * 01-Álcool<br />
+     * 02-Gasolina<br />
+     * 03-Diesel<br />
+     * (...)<br />
+     * 16-Álcool/Gasolina<br />
+     * 17-Gasolina/Álcool/GNV<br />
+     * 18-Gasolina/Elétrico
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpComb $paramTpComb 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -382,7 +403,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número do motor
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NMotor 
      */
     public function getNMotor()
@@ -392,7 +413,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do motor
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NMotor 
      */
@@ -402,7 +423,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do motor
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\NMotor $paramNMotor 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -414,7 +435,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna CMT-Capacidade Máxima de Tração - em Toneladas 4 casas decimais (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMT 
      */
     public function getCMT()
@@ -424,7 +445,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CMT-Capacidade Máxima de Tração - em Toneladas 4 casas decimais (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMT 
      */
@@ -434,7 +455,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CMT-Capacidade Máxima de Tração - em Toneladas 4 casas decimais (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMT $paramCMT 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -446,7 +467,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Distância entre eixos
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Dist 
      */
     public function getDist()
@@ -456,7 +477,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Distância entre eixos
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Dist 
      */
@@ -466,7 +487,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Distância entre eixos
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Dist $paramDist 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -478,7 +499,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Ano Modelo de Fabricação
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoMod 
      */
     public function getAnoMod()
@@ -488,7 +509,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Ano Modelo de Fabricação
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoMod 
      */
@@ -498,7 +519,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Ano Modelo de Fabricação
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoMod $paramAnoMod 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -510,7 +531,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Ano de Fabricação
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoFab 
      */
     public function getAnoFab()
@@ -520,7 +541,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Ano de Fabricação
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoFab 
      */
@@ -530,7 +551,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Ano de Fabricação
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\AnoFab $paramAnoFab 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -542,7 +563,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tipo de pintura
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpPint 
      */
     public function getTpPint()
@@ -552,7 +573,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tipo de pintura
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpPint 
      */
@@ -562,7 +583,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tipo de pintura
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpPint $paramTpPint 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -574,7 +595,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tipo de veículo (utilizar tabela RENAVAM)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpVeic 
      */
     public function getTpVeic()
@@ -584,7 +605,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tipo de veículo (utilizar tabela RENAVAM)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpVeic 
      */
@@ -594,7 +615,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tipo de veículo (utilizar tabela RENAVAM)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpVeic $paramTpVeic 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -606,7 +627,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Espécie de veículo (utilizar tabela RENAVAM)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\EspVeic 
      */
     public function getEspVeic()
@@ -616,7 +637,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Espécie de veículo (utilizar tabela RENAVAM)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\EspVeic 
      */
@@ -626,7 +647,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Espécie de veículo (utilizar tabela RENAVAM)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\EspVeic $paramEspVeic 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -638,7 +659,9 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informa-se o veículo tem VIN (chassi) remarcado.<br />
+     * R-Remarcado<br />
+     * N-NormalVIN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\VIN 
      */
     public function getVIN()
@@ -648,7 +671,9 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informa-se o veículo tem VIN (chassi) remarcado.<br />
+     * R-Remarcado<br />
+     * N-NormalVIN 
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\VIN 
      */
@@ -658,7 +683,9 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informa-se o veículo tem VIN (chassi) remarcado.<br />
+     * R-Remarcado<br />
+     * N-NormalVIN 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\VIN $paramVIN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -670,7 +697,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Condição do veículo (1 - acabado; 2 - inacabado; 3 - semi-acabado)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CondVeic 
      */
     public function getCondVeic()
@@ -680,7 +707,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Condição do veículo (1 - acabado; 2 - inacabado; 3 - semi-acabado)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CondVeic 
      */
@@ -690,7 +717,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Condição do veículo (1 - acabado; 2 - inacabado; 3 - semi-acabado)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CondVeic $paramCondVeic 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -702,7 +729,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código Marca Modelo (utilizar tabela RENAVAM)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMod 
      */
     public function getCMod()
@@ -712,7 +739,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código Marca Modelo (utilizar tabela RENAVAM)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMod 
      */
@@ -722,7 +749,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código Marca Modelo (utilizar tabela RENAVAM)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CMod $paramCMod 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -734,7 +761,23 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código da Cor Segundo as regras de pré-cadastro do DENATRAN (v2.0)<br />
+     * 01-AMARELO <br />
+     * 02-AZUL <br />
+     * 03-BEGE <br />
+     * 04-BRANCA <br />
+     * 05-CINZA <br />
+     * 06-DOURADA <br />
+     * 07-GRENA <br />
+     * 08-LARANJA <br />
+     * 09-MARROM <br />
+     * 10-PRATA <br />
+     * 11-PRETA <br />
+     * 12-ROSA <br />
+     * 13-ROXA <br />
+     * 14-VERDE <br />
+     * 15-VERMELHA <br />
+     * 16-FANTASIA
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCorDENATRAN 
      */
     public function getCCorDENATRAN()
@@ -744,7 +787,23 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código da Cor Segundo as regras de pré-cadastro do DENATRAN (v2.0)<br />
+     * 01-AMARELO <br />
+     * 02-AZUL <br />
+     * 03-BEGE <br />
+     * 04-BRANCA <br />
+     * 05-CINZA <br />
+     * 06-DOURADA <br />
+     * 07-GRENA <br />
+     * 08-LARANJA <br />
+     * 09-MARROM <br />
+     * 10-PRATA <br />
+     * 11-PRETA <br />
+     * 12-ROSA <br />
+     * 13-ROXA <br />
+     * 14-VERDE <br />
+     * 15-VERMELHA <br />
+     * 16-FANTASIA
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCorDENATRAN 
      */
@@ -754,7 +813,23 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código da Cor Segundo as regras de pré-cadastro do DENATRAN (v2.0)<br />
+     * 01-AMARELO <br />
+     * 02-AZUL <br />
+     * 03-BEGE <br />
+     * 04-BRANCA <br />
+     * 05-CINZA <br />
+     * 06-DOURADA <br />
+     * 07-GRENA <br />
+     * 08-LARANJA <br />
+     * 09-MARROM <br />
+     * 10-PRATA <br />
+     * 11-PRETA <br />
+     * 12-ROSA <br />
+     * 13-ROXA <br />
+     * 14-VERDE <br />
+     * 15-VERMELHA <br />
+     * 16-FANTASIA
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\CCorDENATRAN $paramCCorDENATRAN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -766,7 +841,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Quantidade máxima de permitida de passageiros sentados, inclusive motorista. (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Lota 
      */
     public function getLota()
@@ -776,7 +851,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Quantidade máxima de permitida de passageiros sentados, inclusive motorista. (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Lota 
      */
@@ -786,7 +861,7 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade máxima de permitida de passageiros sentados, inclusive motorista. (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\Lota $paramLota 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
@@ -798,7 +873,13 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Restrição<br />
+     * 0 - Não há;<br />
+     * 1 - Alienação Fiduciária;<br />
+     * 2 - Arrendamento Mercantil;<br />
+     * 3 - Reserva de Domínio;<br />
+     * 4 - Penhor de Veículos;<br />
+     * 9 - outras. (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpRest 
      */
     public function getTpRest()
@@ -808,7 +889,13 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Restrição<br />
+     * 0 - Não há;<br />
+     * 1 - Alienação Fiduciária;<br />
+     * 2 - Arrendamento Mercantil;<br />
+     * 3 - Reserva de Domínio;<br />
+     * 4 - Penhor de Veículos;<br />
+     * 9 - outras. (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpRest 
      */
@@ -818,7 +905,13 @@ class VeicProd extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Restrição<br />
+     * 0 - Não há;<br />
+     * 1 - Alienação Fiduciária;<br />
+     * 2 - Arrendamento Mercantil;<br />
+     * 3 - Reserva de Domínio;<br />
+     * 4 - Penhor de Veículos;<br />
+     * 9 - outras. (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd\TpRest $paramTpRest 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */

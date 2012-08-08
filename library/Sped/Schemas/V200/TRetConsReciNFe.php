@@ -32,7 +32,9 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     const PROTNFE = 'protNFe';
 
     /**
-     * 
+     * Retorna Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @return \Sped\Schemas\V200\TAmb 
      */
     public function getTpAmb()
@@ -42,7 +44,9 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @param type $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
@@ -52,7 +56,9 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @param \Sped\Schemas\V200\TAmb $paramTpAmb 
      * @return \Sped\Schemas\V200\TRetConsReciNFe 
      */
@@ -64,7 +70,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Versão do Aplicativo que processou a NF-e
      * @return \Sped\Schemas\V200\TVerAplic 
      */
     public function getVerAplic()
@@ -74,7 +80,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Versão do Aplicativo que processou a NF-e
      * @param type $value 
      * @return \Sped\Schemas\V200\TVerAplic 
      */
@@ -84,7 +90,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Versão do Aplicativo que processou a NF-e
      * @param \Sped\Schemas\V200\TVerAplic $paramVerAplic 
      * @return \Sped\Schemas\V200\TRetConsReciNFe 
      */
@@ -96,7 +102,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número do Recibo Consultado
      * @return \Sped\Schemas\V200\TRec 
      */
     public function getNRec()
@@ -106,7 +112,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do Recibo Consultado
      * @param type $value 
      * @return \Sped\Schemas\V200\TRec 
      */
@@ -116,7 +122,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do Recibo Consultado
      * @param \Sped\Schemas\V200\TRec $paramNRec 
      * @return \Sped\Schemas\V200\TRetConsReciNFe 
      */
@@ -128,7 +134,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do status da mensagem enviada.
      * @return \Sped\Schemas\V200\TStat 
      */
     public function getCStat()
@@ -138,7 +144,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do status da mensagem enviada.
      * @param type $value 
      * @return \Sped\Schemas\V200\TStat 
      */
@@ -148,7 +154,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do status da mensagem enviada.
      * @param \Sped\Schemas\V200\TStat $paramCStat 
      * @return \Sped\Schemas\V200\TRetConsReciNFe 
      */
@@ -160,7 +166,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Descrição literal do status do serviço solicitado.
      * @return \Sped\Schemas\V200\TMotivo 
      */
     public function getXMotivo()
@@ -170,7 +176,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Descrição literal do status do serviço solicitado.
      * @param type $value 
      * @return \Sped\Schemas\V200\TMotivo 
      */
@@ -180,7 +186,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Descrição literal do status do serviço solicitado.
      * @param \Sped\Schemas\V200\TMotivo $paramXMotivo 
      * @return \Sped\Schemas\V200\TRetConsReciNFe 
      */
@@ -192,7 +198,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna código da UF de atendimento
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function getCUF()
@@ -202,7 +208,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona código da UF de atendimento
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
@@ -212,7 +218,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define código da UF de atendimento
      * @param \Sped\Schemas\V200\TCodUfIBGE $paramCUF 
      * @return \Sped\Schemas\V200\TRetConsReciNFe 
      */
@@ -224,7 +230,8 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código da Mensagem (v2.0) <br />
+     * alterado para tamanho variavel 1-4. (NT2011/004)
      * @return \Sped\Schemas\V200\TRetConsReciNFe\CMsg 
      */
     public function getCMsg()
@@ -234,7 +241,8 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código da Mensagem (v2.0) <br />
+     * alterado para tamanho variavel 1-4. (NT2011/004)
      * @param type $value 
      * @return \Sped\Schemas\V200\TRetConsReciNFe\CMsg 
      */
@@ -244,7 +252,8 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código da Mensagem (v2.0) <br />
+     * alterado para tamanho variavel 1-4. (NT2011/004)
      * @param \Sped\Schemas\V200\TRetConsReciNFe\CMsg $paramCMsg 
      * @return \Sped\Schemas\V200\TRetConsReciNFe 
      */
@@ -256,7 +265,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Mensagem da SEFAZ para o emissor. (v2.0)
      * @return \Sped\Schemas\V200\TRetConsReciNFe\XMsg 
      */
     public function getXMsg()
@@ -266,7 +275,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Mensagem da SEFAZ para o emissor. (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TRetConsReciNFe\XMsg 
      */
@@ -276,7 +285,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Mensagem da SEFAZ para o emissor. (v2.0)
      * @param \Sped\Schemas\V200\TRetConsReciNFe\XMsg $paramXMsg 
      * @return \Sped\Schemas\V200\TRetConsReciNFe 
      */
@@ -288,18 +297,17 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Protocolo de status resultado do processamento da NF-e
      * @return \Sped\Schemas\V200\TProtNFe 
      */
-    public function getProtNFe($index)
+    public function getProtNFe()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TProtNFe');
-        return $this->getElementsByTagName(self::PROTNFE)->item($index);
+        return $this->getElementsByTagName(self::PROTNFE)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Protocolo de status resultado do processamento da NF-e
      * @param type $value 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
@@ -309,7 +317,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Protocolo de status resultado do processamento da NF-e
      * @param \Sped\Schemas\V200\TProtNFe $paramProtNFe 
      * @return \Sped\Schemas\V200\TRetConsReciNFe 
      */

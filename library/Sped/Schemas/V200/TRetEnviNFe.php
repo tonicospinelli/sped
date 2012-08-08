@@ -28,7 +28,9 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     const INFREC = 'infRec';
 
     /**
-     * 
+     * Retorna Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @return \Sped\Schemas\V200\TAmb 
      */
     public function getTpAmb()
@@ -38,7 +40,9 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @param type $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
@@ -48,7 +52,9 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Identificação do Ambiente:<br />
+     * 1 - Produção<br />
+     * 2 - Homologação
      * @param \Sped\Schemas\V200\TAmb $paramTpAmb 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
@@ -60,7 +66,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Versão do Aplicativo que recebeu o Lote.
      * @return \Sped\Schemas\V200\TVerAplic 
      */
     public function getVerAplic()
@@ -70,7 +76,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Versão do Aplicativo que recebeu o Lote.
      * @param type $value 
      * @return \Sped\Schemas\V200\TVerAplic 
      */
@@ -80,7 +86,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Versão do Aplicativo que recebeu o Lote.
      * @param \Sped\Schemas\V200\TVerAplic $paramVerAplic 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
@@ -92,7 +98,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do status da mensagem enviada.
      * @return \Sped\Schemas\V200\TStat 
      */
     public function getCStat()
@@ -102,7 +108,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do status da mensagem enviada.
      * @param type $value 
      * @return \Sped\Schemas\V200\TStat 
      */
@@ -112,7 +118,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do status da mensagem enviada.
      * @param \Sped\Schemas\V200\TStat $paramCStat 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
@@ -124,7 +130,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Descrição literal do status do serviço solicitado.
      * @return \Sped\Schemas\V200\TMotivo 
      */
     public function getXMotivo()
@@ -134,7 +140,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Descrição literal do status do serviço solicitado.
      * @param type $value 
      * @return \Sped\Schemas\V200\TMotivo 
      */
@@ -144,7 +150,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Descrição literal do status do serviço solicitado.
      * @param \Sped\Schemas\V200\TMotivo $paramXMotivo 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
@@ -156,7 +162,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna código da UF de atendimento
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function getCUF()
@@ -166,7 +172,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona código da UF de atendimento
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
@@ -176,7 +182,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define código da UF de atendimento
      * @param \Sped\Schemas\V200\TCodUfIBGE $paramCUF 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
@@ -188,7 +194,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Data e hora do recebimento, no formato AAAA-MM-DDTHH:MM:SS
      * @return \Sped\Components\Xml\Element 
      */
     public function getDhRecbto()
@@ -198,7 +204,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Data e hora do recebimento, no formato AAAA-MM-DDTHH:MM:SS
      * @param type $value 
      * @return \Sped\Components\Xml\Element 
      */
@@ -208,7 +214,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Data e hora do recebimento, no formato AAAA-MM-DDTHH:MM:SS
      * @param \Sped\Components\Xml\Element $paramDhRecbto 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */
@@ -220,18 +226,17 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados do Recibo do Lote
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
-    public function getInfRec($index)
+    public function getInfRec()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TRetEnviNFe\InfRec');
-        return $this->getElementsByTagName(self::INFREC)->item($index);
+        return $this->getElementsByTagName(self::INFREC)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados do Recibo do Lote
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
     public function addInfRec()
@@ -240,7 +245,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do Recibo do Lote
      * @param \Sped\Schemas\V200\TRetEnviNFe\InfRec $paramInfRec 
      * @return \Sped\Schemas\V200\TRetEnviNFe 
      */

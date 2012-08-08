@@ -22,7 +22,10 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     const VCREDICMSSN = 'vCredICMSSN';
 
     /**
-     * 
+     * Retorna origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno <br />
+     * (v2.0)
      * @return \Sped\Schemas\V200\Torig 
      */
     public function getOrig()
@@ -32,7 +35,10 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno <br />
+     * (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
@@ -42,7 +48,10 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno <br />
+     * (v2.0)
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101 
      */
@@ -54,7 +63,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna 101- Tributada pelo Simples Nacional com permissão de crédito. (v.2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN 
      */
     public function getCSOSN()
@@ -64,7 +73,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona 101- Tributada pelo Simples Nacional com permissão de crédito. (v.2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN 
      */
@@ -74,7 +83,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define 101- Tributada pelo Simples Nacional com permissão de crédito. (v.2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN $paramCSOSN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101 
      */
@@ -86,7 +95,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota aplicável de cálculo do crédito (Simples Nacional). (v2.0)
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getPCredSN()
@@ -96,7 +105,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota aplicável de cálculo do crédito (Simples Nacional). (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -106,7 +115,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota aplicável de cálculo do crédito (Simples Nacional). (v2.0)
      * @param \Sped\Schemas\V200\TDec_0302 $paramPCredSN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101 
      */
@@ -118,7 +127,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor crédito do ICMS que pode ser aproveitado nos termos do art. 23 da LC 123 (Simples Nacional) (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVCredICMSSN()
@@ -128,7 +137,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor crédito do ICMS que pode ser aproveitado nos termos do art. 23 da LC 123 (Simples Nacional) (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -138,7 +147,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor crédito do ICMS que pode ser aproveitado nos termos do art. 23 da LC 123 (Simples Nacional) (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302 $paramVCredICMSSN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101 
      */

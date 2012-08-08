@@ -26,7 +26,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     const CMUNFG = 'cMunFG';
 
     /**
-     * 
+     * Retorna Valor do Serviço
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVServ()
@@ -36,7 +36,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do Serviço
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -46,7 +46,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do Serviço
      * @param \Sped\Schemas\V200\TDec_1302 $paramVServ 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
@@ -58,7 +58,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna BC da Retenção do ICMS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBCRet()
@@ -68,7 +68,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona BC da Retenção do ICMS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -78,7 +78,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define BC da Retenção do ICMS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
@@ -90,7 +90,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota da Retenção
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getPICMSRet()
@@ -100,7 +100,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota da Retenção
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -110,7 +110,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota da Retenção
      * @param \Sped\Schemas\V200\TDec_0302 $paramPICMSRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
@@ -122,7 +122,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do ICMS Retido
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMSRet()
@@ -132,7 +132,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do ICMS Retido
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -142,7 +142,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do ICMS Retido
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMSRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
@@ -154,7 +154,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código Fiscal de Operações e Prestações // PL_006f - alterado para permitir somente CFOP de transportes 
      * @return \Sped\Schemas\V200\TCfopTransp 
      */
     public function getCFOP()
@@ -164,7 +164,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código Fiscal de Operações e Prestações // PL_006f - alterado para permitir somente CFOP de transportes 
      * @param type $value 
      * @return \Sped\Schemas\V200\TCfopTransp 
      */
@@ -174,7 +174,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código Fiscal de Operações e Prestações // PL_006f - alterado para permitir somente CFOP de transportes 
      * @param \Sped\Schemas\V200\TCfopTransp $paramCFOP 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
@@ -186,7 +186,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do Município de Ocorrência do Fato Gerador (utilizar a tabela do IBGE)
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function getCMunFG()
@@ -196,7 +196,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do Município de Ocorrência do Fato Gerador (utilizar a tabela do IBGE)
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
@@ -206,7 +206,7 @@ class RetTransp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do Município de Ocorrência do Fato Gerador (utilizar a tabela do IBGE)
      * @param \Sped\Schemas\V200\TCodMunIBGE $paramCMunFG 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */

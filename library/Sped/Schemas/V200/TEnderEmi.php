@@ -36,7 +36,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     const FONE = 'fone';
 
     /**
-     * 
+     * Retorna Logradouro
      * @return \Sped\Schemas\V200\TEnderEmi\XLgr 
      */
     public function getXLgr()
@@ -46,7 +46,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Logradouro
      * @param type $value 
      * @return \Sped\Schemas\V200\TEnderEmi\XLgr 
      */
@@ -56,7 +56,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Logradouro
      * @param \Sped\Schemas\V200\TEnderEmi\XLgr $paramXLgr 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -68,7 +68,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número
      * @return \Sped\Schemas\V200\TEnderEmi\Nro 
      */
     public function getNro()
@@ -78,7 +78,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número
      * @param type $value 
      * @return \Sped\Schemas\V200\TEnderEmi\Nro 
      */
@@ -88,7 +88,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número
      * @param \Sped\Schemas\V200\TEnderEmi\Nro $paramNro 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -100,18 +100,17 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Complemento
      * @return \Sped\Schemas\V200\TEnderEmi\XCpl 
      */
-    public function getXCpl($index)
+    public function getXCpl()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\XCpl');
-        return $this->getElementsByTagName(self::XCPL)->item($index);
+        return $this->getElementsByTagName(self::XCPL)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Complemento
      * @param type $value 
      * @return \Sped\Schemas\V200\TEnderEmi\XCpl 
      */
@@ -121,7 +120,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Complemento
      * @param \Sped\Schemas\V200\TEnderEmi\XCpl $paramXCpl 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -133,7 +132,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Bairro
      * @return \Sped\Schemas\V200\TEnderEmi\XBairro 
      */
     public function getXBairro()
@@ -143,7 +142,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Bairro
      * @param type $value 
      * @return \Sped\Schemas\V200\TEnderEmi\XBairro 
      */
@@ -153,7 +152,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Bairro
      * @param \Sped\Schemas\V200\TEnderEmi\XBairro $paramXBairro 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -165,7 +164,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do município
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function getCMun()
@@ -175,7 +174,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do município
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
@@ -185,7 +184,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do município
      * @param \Sped\Schemas\V200\TCodMunIBGE $paramCMun 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -197,7 +196,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Nome do município
      * @return \Sped\Schemas\V200\TEnderEmi\XMun 
      */
     public function getXMun()
@@ -207,7 +206,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Nome do município
      * @param type $value 
      * @return \Sped\Schemas\V200\TEnderEmi\XMun 
      */
@@ -217,7 +216,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Nome do município
      * @param \Sped\Schemas\V200\TEnderEmi\XMun $paramXMun 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -229,7 +228,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Sigla da UF
      * @return \Sped\Schemas\V200\TUfEmi 
      */
     public function getUF()
@@ -239,7 +238,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Sigla da UF
      * @param type $value 
      * @return \Sped\Schemas\V200\TUfEmi 
      */
@@ -249,7 +248,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Sigla da UF
      * @param \Sped\Schemas\V200\TUfEmi $paramUF 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -261,7 +260,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna CEP - NT 2011/004
      * @return \Sped\Schemas\V200\TEnderEmi\CEP 
      */
     public function getCEP()
@@ -271,7 +270,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CEP - NT 2011/004
      * @param type $value 
      * @return \Sped\Schemas\V200\TEnderEmi\CEP 
      */
@@ -281,7 +280,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CEP - NT 2011/004
      * @param \Sped\Schemas\V200\TEnderEmi\CEP $paramCEP 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -293,18 +292,17 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Código do país
      * @return \Sped\Schemas\V200\TEnderEmi\CPais 
      */
-    public function getCPais($index)
+    public function getCPais()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\CPais');
-        return $this->getElementsByTagName(self::CPAIS)->item($index);
+        return $this->getElementsByTagName(self::CPAIS)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Código do país
      * @param type $value 
      * @return \Sped\Schemas\V200\TEnderEmi\CPais 
      */
@@ -314,7 +312,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do país
      * @param \Sped\Schemas\V200\TEnderEmi\CPais $paramCPais 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -326,18 +324,17 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Nome do país
      * @return \Sped\Schemas\V200\TEnderEmi\XPais 
      */
-    public function getXPais($index)
+    public function getXPais()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\XPais');
-        return $this->getElementsByTagName(self::XPAIS)->item($index);
+        return $this->getElementsByTagName(self::XPAIS)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Nome do país
      * @param type $value 
      * @return \Sped\Schemas\V200\TEnderEmi\XPais 
      */
@@ -347,7 +344,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Nome do país
      * @param \Sped\Schemas\V200\TEnderEmi\XPais $paramXPais 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -359,18 +356,17 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Preencher com Código DDD + número do telefone (v.2.0)
      * @return \Sped\Schemas\V200\TEnderEmi\Fone 
      */
-    public function getFone($index)
+    public function getFone()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\Fone');
-        return $this->getElementsByTagName(self::FONE)->item($index);
+        return $this->getElementsByTagName(self::FONE)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Preencher com Código DDD + número do telefone (v.2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TEnderEmi\Fone 
      */
@@ -380,7 +376,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Preencher com Código DDD + número do telefone (v.2.0)
      * @param \Sped\Schemas\V200\TEnderEmi\Fone $paramFone 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */

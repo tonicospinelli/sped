@@ -32,7 +32,7 @@ class TLocal extends \Sped\Components\Xml\Element
     const UF = 'UF';
 
     /**
-     * 
+     * Retorna CNPJ
      * @return \Sped\Schemas\V200\TCnpjOpc 
      */
     public function getCNPJ()
@@ -42,7 +42,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CNPJ
      * @param type $value 
      * @return \Sped\Schemas\V200\TCnpjOpc 
      */
@@ -52,7 +52,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CNPJ
      * @param \Sped\Schemas\V200\TCnpjOpc $paramCNPJ 
      * @return \Sped\Schemas\V200\TLocal 
      */
@@ -64,7 +64,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna CPF (v2.0)
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function getCPF()
@@ -74,7 +74,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CPF (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TCpf 
      */
@@ -84,7 +84,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CPF (v2.0)
      * @param \Sped\Schemas\V200\TCpf $paramCPF 
      * @return \Sped\Schemas\V200\TLocal 
      */
@@ -96,7 +96,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Logradouro
      * @return \Sped\Schemas\V200\TLocal\XLgr 
      */
     public function getXLgr()
@@ -106,7 +106,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Logradouro
      * @param type $value 
      * @return \Sped\Schemas\V200\TLocal\XLgr 
      */
@@ -116,7 +116,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Logradouro
      * @param \Sped\Schemas\V200\TLocal\XLgr $paramXLgr 
      * @return \Sped\Schemas\V200\TLocal 
      */
@@ -128,7 +128,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número
      * @return \Sped\Schemas\V200\TLocal\Nro 
      */
     public function getNro()
@@ -138,7 +138,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número
      * @param type $value 
      * @return \Sped\Schemas\V200\TLocal\Nro 
      */
@@ -148,7 +148,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número
      * @param \Sped\Schemas\V200\TLocal\Nro $paramNro 
      * @return \Sped\Schemas\V200\TLocal 
      */
@@ -160,18 +160,17 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Complemento
      * @return \Sped\Schemas\V200\TLocal\XCpl 
      */
-    public function getXCpl($index)
+    public function getXCpl()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TLocal\XCpl');
-        return $this->getElementsByTagName(self::XCPL)->item($index);
+        return $this->getElementsByTagName(self::XCPL)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Complemento
      * @param type $value 
      * @return \Sped\Schemas\V200\TLocal\XCpl 
      */
@@ -181,7 +180,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Complemento
      * @param \Sped\Schemas\V200\TLocal\XCpl $paramXCpl 
      * @return \Sped\Schemas\V200\TLocal 
      */
@@ -193,7 +192,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Bairro
      * @return \Sped\Schemas\V200\TLocal\XBairro 
      */
     public function getXBairro()
@@ -203,7 +202,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Bairro
      * @param type $value 
      * @return \Sped\Schemas\V200\TLocal\XBairro 
      */
@@ -213,7 +212,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Bairro
      * @param \Sped\Schemas\V200\TLocal\XBairro $paramXBairro 
      * @return \Sped\Schemas\V200\TLocal 
      */
@@ -225,7 +224,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do município (utilizar a tabela do IBGE)
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function getCMun()
@@ -235,7 +234,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do município (utilizar a tabela do IBGE)
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
@@ -245,7 +244,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do município (utilizar a tabela do IBGE)
      * @param \Sped\Schemas\V200\TCodMunIBGE $paramCMun 
      * @return \Sped\Schemas\V200\TLocal 
      */
@@ -257,7 +256,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Nome do município
      * @return \Sped\Schemas\V200\TLocal\XMun 
      */
     public function getXMun()
@@ -267,7 +266,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Nome do município
      * @param type $value 
      * @return \Sped\Schemas\V200\TLocal\XMun 
      */
@@ -277,7 +276,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Nome do município
      * @param \Sped\Schemas\V200\TLocal\XMun $paramXMun 
      * @return \Sped\Schemas\V200\TLocal 
      */
@@ -289,7 +288,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Sigla da UF
      * @return \Sped\Schemas\V200\TUf 
      */
     public function getUF()
@@ -299,7 +298,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Sigla da UF
      * @param type $value 
      * @return \Sped\Schemas\V200\TUf 
      */
@@ -309,7 +308,7 @@ class TLocal extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Sigla da UF
      * @param \Sped\Schemas\V200\TUf $paramUF 
      * @return \Sped\Schemas\V200\TLocal 
      */

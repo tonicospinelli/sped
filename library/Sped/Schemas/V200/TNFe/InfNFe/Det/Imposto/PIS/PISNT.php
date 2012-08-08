@@ -21,7 +21,12 @@ class PISNT extends \Sped\Components\Xml\Element
     const CST = 'CST';
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do PIS.<br />
+     * 04 - Operação Tributável - Tributação Monofásica - (Alíquota Zero);<br />
+     * 06 - Operação Tributável - Alíquota Zero;<br />
+     * 07 - Operação Isenta da contribuição;<br />
+     * 08 - Operação Sem Incidência da contribuição;<br />
+     * 09 - Operação com suspensão da contribuição;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST 
      */
     public function getCST()
@@ -31,7 +36,12 @@ class PISNT extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do PIS.<br />
+     * 04 - Operação Tributável - Tributação Monofásica - (Alíquota Zero);<br />
+     * 06 - Operação Tributável - Alíquota Zero;<br />
+     * 07 - Operação Isenta da contribuição;<br />
+     * 08 - Operação Sem Incidência da contribuição;<br />
+     * 09 - Operação com suspensão da contribuição;
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST 
      */
@@ -41,7 +51,12 @@ class PISNT extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do PIS.<br />
+     * 04 - Operação Tributável - Tributação Monofásica - (Alíquota Zero);<br />
+     * 06 - Operação Tributável - Alíquota Zero;<br />
+     * 07 - Operação Isenta da contribuição;<br />
+     * 08 - Operação Sem Incidência da contribuição;<br />
+     * 09 - Operação com suspensão da contribuição;
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT 
      */

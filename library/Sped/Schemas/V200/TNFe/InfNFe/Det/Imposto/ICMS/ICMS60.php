@@ -23,7 +23,9 @@ class ICMS60 extends \Sped\Components\Xml\Element
     const VICMSSTRET = 'vICMSSTRet';
 
     /**
-     * 
+     * Retorna origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function getOrig()
@@ -33,7 +35,9 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @param type $value 
      * @return \Sped\Schemas\V200\Torig 
      */
@@ -43,7 +47,9 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define origem da mercadoria: 0 - Nacional <br />
+     * 1 - Estrangeira - Importação direta <br />
+     * 2 - Estrangeira - Adquirida no mercado interno 
      * @param \Sped\Schemas\V200\Torig $paramOrig 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60 
      */
@@ -55,7 +61,8 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Tributação pelo ICMS <br />
+     * 60 - ICMS cobrado anteriormente por substituição tributária 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60\CST 
      */
     public function getCST()
@@ -65,7 +72,8 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Tributação pelo ICMS <br />
+     * 60 - ICMS cobrado anteriormente por substituição tributária 
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60\CST 
      */
@@ -75,7 +83,8 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Tributação pelo ICMS <br />
+     * 60 - ICMS cobrado anteriormente por substituição tributária 
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60 
      */
@@ -87,7 +96,7 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor da BC do ICMS ST retido anteriormente (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBCSTRet()
@@ -97,7 +106,7 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do ICMS ST retido anteriormente (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -107,7 +116,7 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do ICMS ST retido anteriormente (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBCSTRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60 
      */
@@ -119,7 +128,7 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do ICMS ST retido anteriormente  (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVICMSSTRet()
@@ -129,7 +138,7 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do ICMS ST retido anteriormente  (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -139,7 +148,7 @@ class ICMS60 extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do ICMS ST retido anteriormente  (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302 $paramVICMSSTRet 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60 
      */

@@ -22,7 +22,7 @@ class Arma extends \Sped\Components\Xml\Element
     const DESCR = 'descr';
 
     /**
-     * 
+     * Retorna Indicador do tipo de arma de fogo (0 - Uso permitido; 1 - Uso restrito)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma 
      */
     public function getTpArma()
@@ -32,7 +32,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Indicador do tipo de arma de fogo (0 - Uso permitido; 1 - Uso restrito)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma 
      */
@@ -42,7 +42,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Indicador do tipo de arma de fogo (0 - Uso permitido; 1 - Uso restrito)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma $paramTpArma 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma 
      */
@@ -54,7 +54,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número de série da arma
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie 
      */
     public function getNSerie()
@@ -64,7 +64,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número de série da arma
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie 
      */
@@ -74,7 +74,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número de série da arma
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie $paramNSerie 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma 
      */
@@ -86,7 +86,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número de série do cano
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano 
      */
     public function getNCano()
@@ -96,7 +96,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número de série do cano
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano 
      */
@@ -106,7 +106,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número de série do cano
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano $paramNCano 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma 
      */
@@ -118,7 +118,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Descrição completa da arma, compreendendo: calibre, marca, capacidade, tipo de funcionamento, comprimento e demais elementos que permitam a sua perfeita identificação.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr 
      */
     public function getDescr()
@@ -128,7 +128,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Descrição completa da arma, compreendendo: calibre, marca, capacidade, tipo de funcionamento, comprimento e demais elementos que permitam a sua perfeita identificação.
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr 
      */
@@ -138,7 +138,7 @@ class Arma extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Descrição completa da arma, compreendendo: calibre, marca, capacidade, tipo de funcionamento, comprimento e demais elementos que permitam a sua perfeita identificação.
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr $paramDescr 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma 
      */

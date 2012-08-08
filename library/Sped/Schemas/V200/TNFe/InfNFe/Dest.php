@@ -28,7 +28,7 @@ class Dest extends \Sped\Components\Xml\Element
     const EMAIL = 'email';
 
     /**
-     * 
+     * Retorna Número do CNPJ
      * @return \Sped\Schemas\V200\TCnpjOpc 
      */
     public function getCNPJ()
@@ -38,7 +38,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do CNPJ
      * @param type $value 
      * @return \Sped\Schemas\V200\TCnpjOpc 
      */
@@ -48,7 +48,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do CNPJ
      * @param \Sped\Schemas\V200\TCnpjOpc $paramCNPJ 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest 
      */
@@ -60,7 +60,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número do CPF
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function getCPF()
@@ -70,7 +70,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do CPF
      * @param type $value 
      * @return \Sped\Schemas\V200\TCpf 
      */
@@ -80,7 +80,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do CPF
      * @param \Sped\Schemas\V200\TCpf $paramCPF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest 
      */
@@ -92,7 +92,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Razão Social ou nome do destinatário
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\XNome 
      */
     public function getXNome()
@@ -102,7 +102,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Razão Social ou nome do destinatário
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\XNome 
      */
@@ -112,7 +112,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Razão Social ou nome do destinatário
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Dest\XNome $paramXNome 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest 
      */
@@ -124,7 +124,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Dados do endereço
      * @return \Sped\Schemas\V200\TEndereco 
      */
     public function getEnderDest()
@@ -134,7 +134,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Dados do endereço
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -144,7 +144,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do endereço
      * @param \Sped\Schemas\V200\TEndereco $paramEnderDest 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest 
      */
@@ -156,7 +156,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Inscrição Estadual (obrigatório nas operações com contribuintes do ICMS)
      * @return \Sped\Schemas\V200\TIeDest 
      */
     public function getIE()
@@ -166,7 +166,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Inscrição Estadual (obrigatório nas operações com contribuintes do ICMS)
      * @param type $value 
      * @return \Sped\Schemas\V200\TIeDest 
      */
@@ -176,7 +176,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Inscrição Estadual (obrigatório nas operações com contribuintes do ICMS)
      * @param \Sped\Schemas\V200\TIeDest $paramIE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest 
      */
@@ -188,18 +188,17 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Inscrição na SUFRAMA (Obrigatório nas operações com as áreas com benefícios de incentivos fiscais sob controle da SUFRAMA) PL_005d - 11/08/09 - alterado para aceitar 8 ou 9 dígitos
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF 
      */
-    public function getISUF($index)
+    public function getISUF()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF');
-        return $this->getElementsByTagName(self::ISUF)->item($index);
+        return $this->getElementsByTagName(self::ISUF)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Inscrição na SUFRAMA (Obrigatório nas operações com as áreas com benefícios de incentivos fiscais sob controle da SUFRAMA) PL_005d - 11/08/09 - alterado para aceitar 8 ou 9 dígitos
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF 
      */
@@ -209,7 +208,7 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Inscrição na SUFRAMA (Obrigatório nas operações com as áreas com benefícios de incentivos fiscais sob controle da SUFRAMA) PL_005d - 11/08/09 - alterado para aceitar 8 ou 9 dígitos
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF $paramISUF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest 
      */
@@ -221,18 +220,19 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Informar o e-mail do destinatário. O campo pode ser utilizado para informar o e-mail<br />
+     * de recepção da NF-e indicada pelo destinatário (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email 
      */
-    public function getEmail($index)
+    public function getEmail()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Dest\Email');
-        return $this->getElementsByTagName(self::EMAIL)->item($index);
+        return $this->getElementsByTagName(self::EMAIL)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Informar o e-mail do destinatário. O campo pode ser utilizado para informar o e-mail<br />
+     * de recepção da NF-e indicada pelo destinatário (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email 
      */
@@ -242,7 +242,8 @@ class Dest extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar o e-mail do destinatário. O campo pode ser utilizado para informar o e-mail<br />
+     * de recepção da NF-e indicada pelo destinatário (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email $paramEmail 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest 
      */

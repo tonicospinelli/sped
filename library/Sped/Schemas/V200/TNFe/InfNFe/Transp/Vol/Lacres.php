@@ -16,7 +16,7 @@ class Lacres extends \Sped\Components\Xml\Element
     const NLACRE = 'nLacre';
 
     /**
-     * 
+     * Retorna Número dos Lacres
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre 
      */
     public function getNLacre()
@@ -26,7 +26,7 @@ class Lacres extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número dos Lacres
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre 
      */
@@ -36,7 +36,7 @@ class Lacres extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número dos Lacres
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre $paramNLacre 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres 
      */

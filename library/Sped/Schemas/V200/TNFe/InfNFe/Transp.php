@@ -30,7 +30,11 @@ class Transp extends \Sped\Components\Xml\Element
     const VOL = 'vol';
 
     /**
-     * 
+     * Retorna Modalidade do frete<br />
+     * 0- Por conta do emitente;<br />
+     * 1- Por conta do destinatário/remetente;<br />
+     * 2- Por conta de terceiros;<br />
+     * 9- Sem frete (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete 
      */
     public function getModFrete()
@@ -40,7 +44,11 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Modalidade do frete<br />
+     * 0- Por conta do emitente;<br />
+     * 1- Por conta do destinatário/remetente;<br />
+     * 2- Por conta de terceiros;<br />
+     * 9- Sem frete (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete 
      */
@@ -50,7 +58,11 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Modalidade do frete<br />
+     * 0- Por conta do emitente;<br />
+     * 1- Por conta do destinatário/remetente;<br />
+     * 2- Por conta de terceiros;<br />
+     * 9- Sem frete (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete $paramModFrete 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
@@ -62,18 +74,17 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados do transportador
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
-    public function getTransporta($index)
+    public function getTransporta()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta');
-        return $this->getElementsByTagName(self::TRANSPORTA)->item($index);
+        return $this->getElementsByTagName(self::TRANSPORTA)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados do transportador
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
     public function addTransporta()
@@ -82,7 +93,7 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do transportador
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta $paramTransporta 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
@@ -94,18 +105,17 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados da retenção  ICMS do Transporte
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
-    public function getRetTransp($index)
+    public function getRetTransp()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp');
-        return $this->getElementsByTagName(self::RETTRANSP)->item($index);
+        return $this->getElementsByTagName(self::RETTRANSP)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados da retenção  ICMS do Transporte
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
     public function addRetTransp()
@@ -114,7 +124,7 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados da retenção  ICMS do Transporte
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp $paramRetTransp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
@@ -126,18 +136,17 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados do veículo
      * @return \Sped\Schemas\V200\TVeiculo 
      */
-    public function getVeicTransp($index)
+    public function getVeicTransp()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
-        return $this->getElementsByTagName(self::VEICTRANSP)->item($index);
+        return $this->getElementsByTagName(self::VEICTRANSP)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados do veículo
      * @param type $value 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
@@ -147,7 +156,7 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do veículo
      * @param \Sped\Schemas\V200\TVeiculo $paramVeicTransp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
@@ -159,18 +168,17 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados do reboque/Dolly (v2.0)
      * @return \Sped\Schemas\V200\TVeiculo 
      */
-    public function getReboque($index)
+    public function getReboque()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
-        return $this->getElementsByTagName(self::REBOQUE)->item($index);
+        return $this->getElementsByTagName(self::REBOQUE)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados do reboque/Dolly (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
@@ -180,7 +188,7 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do reboque/Dolly (v2.0)
      * @param \Sped\Schemas\V200\TVeiculo $paramReboque 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
@@ -192,18 +200,17 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Identificação do vagão (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
      */
-    public function getVagao($index)
+    public function getVagao()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao');
-        return $this->getElementsByTagName(self::VAGAO)->item($index);
+        return $this->getElementsByTagName(self::VAGAO)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Identificação do vagão (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
      */
@@ -213,7 +220,7 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Identificação do vagão (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao $paramVagao 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
@@ -225,18 +232,17 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Identificação da balsa (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
      */
-    public function getBalsa($index)
+    public function getBalsa()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa');
-        return $this->getElementsByTagName(self::BALSA)->item($index);
+        return $this->getElementsByTagName(self::BALSA)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Identificação da balsa (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
      */
@@ -246,7 +252,7 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Identificação da balsa (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa $paramBalsa 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */
@@ -258,18 +264,17 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Dados dos volumes
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol 
      */
-    public function getVol($index)
+    public function getVol()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol');
-        return $this->getElementsByTagName(self::VOL)->item($index);
+        return $this->getElementsByTagName(self::VOL)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Dados dos volumes
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol 
      */
     public function addVol()
@@ -278,7 +283,7 @@ class Transp extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados dos volumes
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol $paramVol 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp 
      */

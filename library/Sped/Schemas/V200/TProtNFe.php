@@ -18,7 +18,7 @@ class TProtNFe extends \Sped\Components\Xml\Element
     const SIGNATURE = 'Signature';
 
     /**
-     * 
+     * Retorna Dados do protocolo de status
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
     public function getInfProt()
@@ -28,7 +28,7 @@ class TProtNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Dados do protocolo de status
      * @return \Sped\Schemas\V200\TProtNFe\InfProt 
      */
     public function addInfProt()
@@ -37,7 +37,7 @@ class TProtNFe extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Dados do protocolo de status
      * @param \Sped\Schemas\V200\TProtNFe\InfProt $paramInfProt 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
@@ -50,13 +50,12 @@ class TProtNFe extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $index 
      * @return \Sped\Schemas\V200\SignatureType 
      */
-    public function getSignature($index)
+    public function getSignature()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
-        return $this->getElementsByTagName(self::SIGNATURE)->item($index);
+        return $this->getElementsByTagName(self::SIGNATURE)->item(0);
     }
 
     /**

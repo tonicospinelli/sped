@@ -23,7 +23,8 @@ class PISQtde extends \Sped\Components\Xml\Element
     const VPIS = 'vPIS';
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do PIS.<br />
+     * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde\CST 
      */
     public function getCST()
@@ -33,7 +34,8 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do PIS.<br />
+     * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde\CST 
      */
@@ -43,7 +45,8 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do PIS.<br />
+     * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde 
      */
@@ -55,7 +58,7 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Quantidade Vendida  (NT2011/004)
      * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function getQBCProd()
@@ -65,7 +68,7 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Quantidade Vendida  (NT2011/004)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
@@ -75,7 +78,7 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade Vendida  (NT2011/004)
      * @param \Sped\Schemas\V200\TDec_1204 $paramQBCProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde 
      */
@@ -87,7 +90,7 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do PIS (em reais) (NT2011/004)
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function getVAliqProd()
@@ -97,7 +100,7 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do PIS (em reais) (NT2011/004)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
@@ -107,7 +110,7 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do PIS (em reais) (NT2011/004)
      * @param \Sped\Schemas\V200\TDec_1104v $paramVAliqProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde 
      */
@@ -119,7 +122,7 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do PIS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVPIS()
@@ -129,7 +132,7 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do PIS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -139,7 +142,7 @@ class PISQtde extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do PIS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde 
      */

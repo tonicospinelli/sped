@@ -25,7 +25,9 @@ class Comb extends \Sped\Components\Xml\Element
     const CIDE = 'CIDE';
 
     /**
-     * 
+     * Retorna Código de produto da ANP. Utilizar a codificação de produtos do Sistema de Informações de Movimentação de produtos - SIMP(http://www.anp.gov.br/simp/index.h<br />
+     * tm), somente informar 999999999 quando não se tratar  de produtos não regulados pela ANP -<br />
+     * Agência Nacional do Petróleo.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP 
      */
     public function getCProdANP()
@@ -35,7 +37,9 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de produto da ANP. Utilizar a codificação de produtos do Sistema de Informações de Movimentação de produtos - SIMP(http://www.anp.gov.br/simp/index.h<br />
+     * tm), somente informar 999999999 quando não se tratar  de produtos não regulados pela ANP -<br />
+     * Agência Nacional do Petróleo.
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP 
      */
@@ -45,7 +49,9 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de produto da ANP. Utilizar a codificação de produtos do Sistema de Informações de Movimentação de produtos - SIMP(http://www.anp.gov.br/simp/index.h<br />
+     * tm), somente informar 999999999 quando não se tratar  de produtos não regulados pela ANP -<br />
+     * Agência Nacional do Petróleo.
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP $paramCProdANP 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
@@ -57,18 +63,29 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Código de autorização / registro<br />
+     * do CODIF.<br />
+     * Informar apenas quando a UF<br />
+     * utilizar o CODIF (Sistema de<br />
+     * Controle do Diferimento do Imposto<br />
+     * nas Operações com AEAC - Álcool<br />
+     * Etílico Anidro Combustível).
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      */
-    public function getCODIF($index)
+    public function getCODIF()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF');
-        return $this->getElementsByTagName(self::CODIF)->item($index);
+        return $this->getElementsByTagName(self::CODIF)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Código de autorização / registro<br />
+     * do CODIF.<br />
+     * Informar apenas quando a UF<br />
+     * utilizar o CODIF (Sistema de<br />
+     * Controle do Diferimento do Imposto<br />
+     * nas Operações com AEAC - Álcool<br />
+     * Etílico Anidro Combustível).
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      */
@@ -78,7 +95,13 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de autorização / registro<br />
+     * do CODIF.<br />
+     * Informar apenas quando a UF<br />
+     * utilizar o CODIF (Sistema de<br />
+     * Controle do Diferimento do Imposto<br />
+     * nas Operações com AEAC - Álcool<br />
+     * Etílico Anidro Combustível).
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF $paramCODIF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
@@ -90,18 +113,29 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Quantidade de combustível<br />
+     * faturada à temperatura ambiente.<br />
+     * Informar quando a quantidade<br />
+     * faturada informada no campo<br />
+     * qCom (I10) tiver sido ajustada para<br />
+     * uma temperatura diferente da<br />
+     * ambiente.
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
-    public function getQTemp($index)
+    public function getQTemp()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1204Opc');
-        return $this->getElementsByTagName(self::QTEMP)->item($index);
+        return $this->getElementsByTagName(self::QTEMP)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Quantidade de combustível<br />
+     * faturada à temperatura ambiente.<br />
+     * Informar quando a quantidade<br />
+     * faturada informada no campo<br />
+     * qCom (I10) tiver sido ajustada para<br />
+     * uma temperatura diferente da<br />
+     * ambiente.
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
@@ -111,7 +145,13 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade de combustível<br />
+     * faturada à temperatura ambiente.<br />
+     * Informar quando a quantidade<br />
+     * faturada informada no campo<br />
+     * qCom (I10) tiver sido ajustada para<br />
+     * uma temperatura diferente da<br />
+     * ambiente.
      * @param \Sped\Schemas\V200\TDec_1204Opc $paramQTemp 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
@@ -123,7 +163,7 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Sigla da UF de Consumo
      * @return \Sped\Schemas\V200\TUf 
      */
     public function getUFCons()
@@ -133,7 +173,7 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Sigla da UF de Consumo
      * @param type $value 
      * @return \Sped\Schemas\V200\TUf 
      */
@@ -143,7 +183,7 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Sigla da UF de Consumo
      * @param \Sped\Schemas\V200\TUf $paramUFCons 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
@@ -155,18 +195,17 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna CIDE Combustíveis
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
-    public function getCIDE($index)
+    public function getCIDE()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE');
-        return $this->getElementsByTagName(self::CIDE)->item($index);
+        return $this->getElementsByTagName(self::CIDE)->item(0);
     }
 
     /**
-     * 
+     * Adiciona CIDE Combustíveis
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
     public function addCIDE()
@@ -175,7 +214,7 @@ class Comb extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CIDE Combustíveis
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE $paramCIDE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */

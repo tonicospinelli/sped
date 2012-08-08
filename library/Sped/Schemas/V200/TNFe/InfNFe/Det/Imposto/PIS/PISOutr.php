@@ -27,7 +27,8 @@ class PISOutr extends \Sped\Components\Xml\Element
     const VPIS = 'vPIS';
 
     /**
-     * 
+     * Retorna Código de Situação Tributária do PIS.<br />
+     * 99 - Outras Operações.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST 
      */
     public function getCST()
@@ -37,7 +38,8 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Situação Tributária do PIS.<br />
+     * 99 - Outras Operações.
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST 
      */
@@ -47,7 +49,8 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Situação Tributária do PIS.<br />
+     * 99 - Outras Operações.
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST $paramCST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
@@ -59,7 +62,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor da BC do PIS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC()
@@ -69,7 +72,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor da BC do PIS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -79,7 +82,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor da BC do PIS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
@@ -91,7 +94,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do PIS (em percentual)
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function getPPIS()
@@ -101,7 +104,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do PIS (em percentual)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
@@ -111,7 +114,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do PIS (em percentual)
      * @param \Sped\Schemas\V200\TDec_0302 $paramPPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
@@ -123,7 +126,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Quantidade Vendida (NT2011/004) 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function getQBCProd()
@@ -133,7 +136,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Quantidade Vendida (NT2011/004) 
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
@@ -143,7 +146,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade Vendida (NT2011/004) 
      * @param \Sped\Schemas\V200\TDec_1204 $paramQBCProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
@@ -155,7 +158,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do PIS (em reais) (NT2011/004)
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function getVAliqProd()
@@ -165,7 +168,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do PIS (em reais) (NT2011/004)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
@@ -175,7 +178,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do PIS (em reais) (NT2011/004)
      * @param \Sped\Schemas\V200\TDec_1104v $paramVAliqProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */
@@ -187,7 +190,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do PIS
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVPIS()
@@ -197,7 +200,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do PIS
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -207,7 +210,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do PIS
      * @param \Sped\Schemas\V200\TDec_1302 $paramVPIS 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr 
      */

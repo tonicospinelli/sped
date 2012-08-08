@@ -36,7 +36,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     const FONE = 'fone';
 
     /**
-     * 
+     * Retorna Logradouro
      * @return \Sped\Schemas\V200\TEndereco\XLgr 
      */
     public function getXLgr()
@@ -46,7 +46,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Logradouro
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\XLgr 
      */
@@ -56,7 +56,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Logradouro
      * @param \Sped\Schemas\V200\TEndereco\XLgr $paramXLgr 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -68,7 +68,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número
      * @return \Sped\Schemas\V200\TEndereco\Nro 
      */
     public function getNro()
@@ -78,7 +78,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\Nro 
      */
@@ -88,7 +88,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número
      * @param \Sped\Schemas\V200\TEndereco\Nro $paramNro 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -100,18 +100,17 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Complemento
      * @return \Sped\Schemas\V200\TEndereco\XCpl 
      */
-    public function getXCpl($index)
+    public function getXCpl()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XCpl');
-        return $this->getElementsByTagName(self::XCPL)->item($index);
+        return $this->getElementsByTagName(self::XCPL)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Complemento
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\XCpl 
      */
@@ -121,7 +120,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Complemento
      * @param \Sped\Schemas\V200\TEndereco\XCpl $paramXCpl 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -133,7 +132,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Bairro
      * @return \Sped\Schemas\V200\TEndereco\XBairro 
      */
     public function getXBairro()
@@ -143,7 +142,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Bairro
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\XBairro 
      */
@@ -153,7 +152,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Bairro
      * @param \Sped\Schemas\V200\TEndereco\XBairro $paramXBairro 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -165,7 +164,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do município (utilizar a tabela do IBGE), informar 9999999 para operações com o exterior.
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function getCMun()
@@ -175,7 +174,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do município (utilizar a tabela do IBGE), informar 9999999 para operações com o exterior.
      * @param type $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
@@ -185,7 +184,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do município (utilizar a tabela do IBGE), informar 9999999 para operações com o exterior.
      * @param \Sped\Schemas\V200\TCodMunIBGE $paramCMun 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -197,7 +196,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Nome do município, informar EXTERIOR para operações com o exterior.
      * @return \Sped\Schemas\V200\TEndereco\XMun 
      */
     public function getXMun()
@@ -207,7 +206,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Nome do município, informar EXTERIOR para operações com o exterior.
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\XMun 
      */
@@ -217,7 +216,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Nome do município, informar EXTERIOR para operações com o exterior.
      * @param \Sped\Schemas\V200\TEndereco\XMun $paramXMun 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -229,7 +228,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Sigla da UF, informar EX para operações com o exterior.
      * @return \Sped\Schemas\V200\TUf 
      */
     public function getUF()
@@ -239,7 +238,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Sigla da UF, informar EX para operações com o exterior.
      * @param type $value 
      * @return \Sped\Schemas\V200\TUf 
      */
@@ -249,7 +248,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Sigla da UF, informar EX para operações com o exterior.
      * @param \Sped\Schemas\V200\TUf $paramUF 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -261,18 +260,17 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna CEP
      * @return \Sped\Schemas\V200\TEndereco\CEP 
      */
-    public function getCEP($index)
+    public function getCEP()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\CEP');
-        return $this->getElementsByTagName(self::CEP)->item($index);
+        return $this->getElementsByTagName(self::CEP)->item(0);
     }
 
     /**
-     * 
+     * Adiciona CEP
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\CEP 
      */
@@ -282,7 +280,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CEP
      * @param \Sped\Schemas\V200\TEndereco\CEP $paramCEP 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -294,18 +292,17 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Código do país
      * @return \Sped\Schemas\V200\Tpais 
      */
-    public function getCPais($index)
+    public function getCPais()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Tpais');
-        return $this->getElementsByTagName(self::CPAIS)->item($index);
+        return $this->getElementsByTagName(self::CPAIS)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Código do país
      * @param type $value 
      * @return \Sped\Schemas\V200\Tpais 
      */
@@ -315,7 +312,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do país
      * @param \Sped\Schemas\V200\Tpais $paramCPais 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -327,18 +324,17 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Nome do país
      * @return \Sped\Schemas\V200\TEndereco\XPais 
      */
-    public function getXPais($index)
+    public function getXPais()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XPais');
-        return $this->getElementsByTagName(self::XPAIS)->item($index);
+        return $this->getElementsByTagName(self::XPAIS)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Nome do país
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\XPais 
      */
@@ -348,7 +344,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Nome do país
      * @param \Sped\Schemas\V200\TEndereco\XPais $paramXPais 
      * @return \Sped\Schemas\V200\TEndereco 
      */
@@ -360,18 +356,17 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Telefone, preencher com Código DDD + número do telefone , nas operações com exterior é permtido informar o código do país + código da localidade + número do telefone
      * @return \Sped\Schemas\V200\TEndereco\Fone 
      */
-    public function getFone($index)
+    public function getFone()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\Fone');
-        return $this->getElementsByTagName(self::FONE)->item($index);
+        return $this->getElementsByTagName(self::FONE)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Telefone, preencher com Código DDD + número do telefone , nas operações com exterior é permtido informar o código do país + código da localidade + número do telefone
      * @param type $value 
      * @return \Sped\Schemas\V200\TEndereco\Fone 
      */
@@ -381,7 +376,7 @@ class TEndereco extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Telefone, preencher com Código DDD + número do telefone , nas operações com exterior é permtido informar o código do país + código da localidade + número do telefone
      * @param \Sped\Schemas\V200\TEndereco\Fone $paramFone 
      * @return \Sped\Schemas\V200\TEndereco 
      */

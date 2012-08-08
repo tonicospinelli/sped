@@ -66,7 +66,8 @@ class Prod extends \Sped\Components\Xml\Element
     const COMB = 'comb';
 
     /**
-     * 
+     * Retorna Código do produto ou serviço. Preencher com CFOP caso se trate de itens não relacionados com mercadorias/produto e que o contribuinte não possua codificação própria<br />
+     * Formato ”CFOP9999”.
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd 
      */
     public function getCProd()
@@ -76,7 +77,8 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do produto ou serviço. Preencher com CFOP caso se trate de itens não relacionados com mercadorias/produto e que o contribuinte não possua codificação própria<br />
+     * Formato ”CFOP9999”.
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd 
      */
@@ -86,7 +88,8 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do produto ou serviço. Preencher com CFOP caso se trate de itens não relacionados com mercadorias/produto e que o contribuinte não possua codificação própria<br />
+     * Formato ”CFOP9999”.
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd $paramCProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -98,7 +101,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna GTIN (Global Trade Item Number) do produto, antigo código EAN ou código de barras
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN 
      */
     public function getCEAN()
@@ -108,7 +111,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona GTIN (Global Trade Item Number) do produto, antigo código EAN ou código de barras
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN 
      */
@@ -118,7 +121,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define GTIN (Global Trade Item Number) do produto, antigo código EAN ou código de barras
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN $paramCEAN 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -130,7 +133,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Descrição do produto ou serviço
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd 
      */
     public function getXProd()
@@ -140,7 +143,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Descrição do produto ou serviço
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd 
      */
@@ -150,7 +153,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Descrição do produto ou serviço
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd $paramXProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -162,7 +165,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código NCM (8 posições), será permitida a informação do gênero (posição do capítulo do NCM) quando a operação não for de comércio exterior (importação/exportação) ou o produto não seja tributado pelo IPI. Em caso de item de serviço ou item que não tenham produto (Ex. transferência de crédito, crédito do ativo imobilizado, etc.), informar o código 00 (zeros) (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM 
      */
     public function getNCM()
@@ -172,7 +175,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código NCM (8 posições), será permitida a informação do gênero (posição do capítulo do NCM) quando a operação não for de comércio exterior (importação/exportação) ou o produto não seja tributado pelo IPI. Em caso de item de serviço ou item que não tenham produto (Ex. transferência de crédito, crédito do ativo imobilizado, etc.), informar o código 00 (zeros) (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM 
      */
@@ -182,7 +185,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código NCM (8 posições), será permitida a informação do gênero (posição do capítulo do NCM) quando a operação não for de comércio exterior (importação/exportação) ou o produto não seja tributado pelo IPI. Em caso de item de serviço ou item que não tenham produto (Ex. transferência de crédito, crédito do ativo imobilizado, etc.), informar o código 00 (zeros) (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM $paramNCM 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -194,18 +197,17 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Código EX TIPI (3 posições)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI 
      */
-    public function getEXTIPI($index)
+    public function getEXTIPI()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI');
-        return $this->getElementsByTagName(self::EXTIPI)->item($index);
+        return $this->getElementsByTagName(self::EXTIPI)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Código EX TIPI (3 posições)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI 
      */
@@ -215,7 +217,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código EX TIPI (3 posições)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI $paramEXTIPI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -227,7 +229,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código Fiscal de Operações e Prestações
      * @return \Sped\Schemas\V200\TCfop 
      */
     public function getCFOP()
@@ -237,7 +239,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código Fiscal de Operações e Prestações
      * @param type $value 
      * @return \Sped\Schemas\V200\TCfop 
      */
@@ -247,7 +249,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código Fiscal de Operações e Prestações
      * @param \Sped\Schemas\V200\TCfop $paramCFOP 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -259,7 +261,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Unidade comercial
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom 
      */
     public function getUCom()
@@ -269,7 +271,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Unidade comercial
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom 
      */
@@ -279,7 +281,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Unidade comercial
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom $paramUCom 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -291,7 +293,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Quantidade Comercial  do produto, alterado para aceitar de 0 a 4 casas decimais e 11 inteiros. (v2.0)
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function getQCom()
@@ -301,7 +303,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Quantidade Comercial  do produto, alterado para aceitar de 0 a 4 casas decimais e 11 inteiros. (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
@@ -311,7 +313,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade Comercial  do produto, alterado para aceitar de 0 a 4 casas decimais e 11 inteiros. (v2.0)
      * @param \Sped\Schemas\V200\TDec_1104v $paramQCom 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -323,7 +325,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor unitário de comercialização  - alterado para aceitar 0 a 10 casas decimais e 11 inteiros (v2.0)
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function getVUnCom()
@@ -333,7 +335,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor unitário de comercialização  - alterado para aceitar 0 a 10 casas decimais e 11 inteiros (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
@@ -343,7 +345,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor unitário de comercialização  - alterado para aceitar 0 a 10 casas decimais e 11 inteiros (v2.0)
      * @param \Sped\Schemas\V200\TDec_1110 $paramVUnCom 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -355,7 +357,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor bruto do produto ou serviço.
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVProd()
@@ -365,7 +367,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor bruto do produto ou serviço.
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -375,7 +377,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor bruto do produto ou serviço.
      * @param \Sped\Schemas\V200\TDec_1302 $paramVProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -387,7 +389,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna GTIN (Global Trade Item Number) da unidade tributável, antigo código EAN ou código de barras
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib 
      */
     public function getCEANTrib()
@@ -397,7 +399,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona GTIN (Global Trade Item Number) da unidade tributável, antigo código EAN ou código de barras
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib 
      */
@@ -407,7 +409,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define GTIN (Global Trade Item Number) da unidade tributável, antigo código EAN ou código de barras
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib $paramCEANTrib 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -419,7 +421,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Unidade Tributável
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib 
      */
     public function getUTrib()
@@ -429,7 +431,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Unidade Tributável
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib 
      */
@@ -439,7 +441,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Unidade Tributável
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib $paramUTrib 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -451,7 +453,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Quantidade Tributável - alterado para aceitar de 0 a 4 casas decimais e 11 inteiros (v2.0)
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function getQTrib()
@@ -461,7 +463,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Quantidade Tributável - alterado para aceitar de 0 a 4 casas decimais e 11 inteiros (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
@@ -471,7 +473,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade Tributável - alterado para aceitar de 0 a 4 casas decimais e 11 inteiros (v2.0)
      * @param \Sped\Schemas\V200\TDec_1104v $paramQTrib 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -483,7 +485,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor unitário de tributação - - alterado para aceitar 0 a 10 casas decimais e 11 inteiros (v2.0)
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function getVUnTrib()
@@ -493,7 +495,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor unitário de tributação - - alterado para aceitar 0 a 10 casas decimais e 11 inteiros (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
@@ -503,7 +505,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor unitário de tributação - - alterado para aceitar 0 a 10 casas decimais e 11 inteiros (v2.0)
      * @param \Sped\Schemas\V200\TDec_1110 $paramVUnTrib 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -515,18 +517,17 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Valor Total do Frete
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVFrete($index)
+    public function getVFrete()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VFRETE)->item($index);
+        return $this->getElementsByTagName(self::VFRETE)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Valor Total do Frete
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -536,7 +537,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total do Frete
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVFrete 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -548,18 +549,17 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Valor Total do Seguro
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVSeg($index)
+    public function getVSeg()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VSEG)->item($index);
+        return $this->getElementsByTagName(self::VSEG)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Valor Total do Seguro
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -569,7 +569,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor Total do Seguro
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVSeg 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -581,18 +581,17 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Valor do Desconto
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVDesc($index)
+    public function getVDesc()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VDESC)->item($index);
+        return $this->getElementsByTagName(self::VDESC)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Valor do Desconto
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -602,7 +601,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do Desconto
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVDesc 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -614,18 +613,17 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Outras despesas acessórias - (v2.0)
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVOutro($index)
+    public function getVOutro()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VOUTRO)->item($index);
+        return $this->getElementsByTagName(self::VOUTRO)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Outras despesas acessórias - (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
@@ -635,7 +633,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Outras despesas acessórias - (v2.0)
      * @param \Sped\Schemas\V200\TDec_1302Opc $paramVOutro 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -647,7 +645,10 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Este campo deverá ser preenchido com:<br />
+     * 0 – o valor do item (vProd) não compõe o valor total da NF-e (vProd)<br />
+     * 1  – o valor do item (vProd) compõe o valor total da NF-e (vProd)<br />
+     * (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot 
      */
     public function getIndTot()
@@ -657,7 +658,10 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Este campo deverá ser preenchido com:<br />
+     * 0 – o valor do item (vProd) não compõe o valor total da NF-e (vProd)<br />
+     * 1  – o valor do item (vProd) compõe o valor total da NF-e (vProd)<br />
+     * (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot 
      */
@@ -667,7 +671,10 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Este campo deverá ser preenchido com:<br />
+     * 0 – o valor do item (vProd) não compõe o valor total da NF-e (vProd)<br />
+     * 1  – o valor do item (vProd) compõe o valor total da NF-e (vProd)<br />
+     * (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot $paramIndTot 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -679,18 +686,19 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Delcaração de Importação<br />
+     * (NT 2011/004)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
-    public function getDI($index)
+    public function getDI()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI');
-        return $this->getElementsByTagName(self::DI)->item($index);
+        return $this->getElementsByTagName(self::DI)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Delcaração de Importação<br />
+     * (NT 2011/004)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
     public function addDI()
@@ -699,7 +707,8 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Delcaração de Importação<br />
+     * (NT 2011/004)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI $paramDI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -711,18 +720,17 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna pedido de compra - Informação de interesse do emissor para controle do B2B. (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed 
      */
-    public function getXPed($index)
+    public function getXPed()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed');
-        return $this->getElementsByTagName(self::XPED)->item($index);
+        return $this->getElementsByTagName(self::XPED)->item(0);
     }
 
     /**
-     * 
+     * Adiciona pedido de compra - Informação de interesse do emissor para controle do B2B. (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed 
      */
@@ -732,7 +740,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define pedido de compra - Informação de interesse do emissor para controle do B2B. (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed $paramXPed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -744,18 +752,17 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Número do Item do Pedido de Compra - Identificação do número do item do pedido de Compra (v2.0)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed 
      */
-    public function getNItemPed($index)
+    public function getNItemPed()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed');
-        return $this->getElementsByTagName(self::NITEMPED)->item($index);
+        return $this->getElementsByTagName(self::NITEMPED)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Número do Item do Pedido de Compra - Identificação do número do item do pedido de Compra (v2.0)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed 
      */
@@ -765,7 +772,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do Item do Pedido de Compra - Identificação do número do item do pedido de Compra (v2.0)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed $paramNItemPed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -777,7 +784,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Veículos novos
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
     public function getVeicProd()
@@ -787,7 +794,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Veículos novos
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd 
      */
     public function addVeicProd()
@@ -796,7 +803,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Veículos novos
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\VeicProd $paramVeicProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -808,7 +815,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna grupo do detalhamento de Medicamentos e de matérias-primas farmacêuticas
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
     public function getMed()
@@ -818,7 +825,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona grupo do detalhamento de Medicamentos e de matérias-primas farmacêuticas
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
     public function addMed()
@@ -827,7 +834,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define grupo do detalhamento de Medicamentos e de matérias-primas farmacêuticas
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med $paramMed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -839,7 +846,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Armamentos
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma 
      */
     public function getArma()
@@ -849,7 +856,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Armamentos
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma 
      */
     public function addArma()
@@ -858,7 +865,7 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Armamentos
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma $paramArma 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */
@@ -870,7 +877,8 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Informar apenas para operações<br />
+     * com combustíveis líquidos
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
     public function getComb()
@@ -880,7 +888,8 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Informar apenas para operações<br />
+     * com combustíveis líquidos
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb 
      */
     public function addComb()
@@ -889,7 +898,8 @@ class Prod extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Informar apenas para operações<br />
+     * com combustíveis líquidos
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb $paramComb 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod 
      */

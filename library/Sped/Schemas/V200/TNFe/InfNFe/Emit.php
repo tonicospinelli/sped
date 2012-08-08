@@ -34,7 +34,7 @@ class Emit extends \Sped\Components\Xml\Element
     const CRT = 'CRT';
 
     /**
-     * 
+     * Retorna Número do CNPJ do emitente
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function getCNPJ()
@@ -44,7 +44,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do CNPJ do emitente
      * @param type $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
@@ -54,7 +54,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do CNPJ do emitente
      * @param \Sped\Schemas\V200\TCnpj $paramCNPJ 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
@@ -66,7 +66,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Número do CPF do emitente
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function getCPF()
@@ -76,7 +76,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do CPF do emitente
      * @param type $value 
      * @return \Sped\Schemas\V200\TCpf 
      */
@@ -86,7 +86,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do CPF do emitente
      * @param \Sped\Schemas\V200\TCpf $paramCPF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
@@ -98,7 +98,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Razão Social ou Nome do emitente
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome 
      */
     public function getXNome()
@@ -108,7 +108,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Razão Social ou Nome do emitente
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome 
      */
@@ -118,7 +118,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Razão Social ou Nome do emitente
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome $paramXNome 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
@@ -130,18 +130,17 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Nome fantasia
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant 
      */
-    public function getXFant($index)
+    public function getXFant()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant');
-        return $this->getElementsByTagName(self::XFANT)->item($index);
+        return $this->getElementsByTagName(self::XFANT)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Nome fantasia
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant 
      */
@@ -151,7 +150,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Nome fantasia
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant $paramXFant 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
@@ -163,7 +162,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Endereço do emitente
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
     public function getEnderEmit()
@@ -173,7 +172,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Endereço do emitente
      * @param type $value 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
@@ -183,7 +182,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Endereço do emitente
      * @param \Sped\Schemas\V200\TEnderEmi $paramEnderEmit 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
@@ -195,7 +194,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Inscrição Estadual
      * @return \Sped\Schemas\V200\TIe 
      */
     public function getIE()
@@ -205,7 +204,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Inscrição Estadual
      * @param type $value 
      * @return \Sped\Schemas\V200\TIe 
      */
@@ -215,7 +214,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Inscrição Estadual
      * @param \Sped\Schemas\V200\TIe $paramIE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
@@ -227,18 +226,17 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Inscricao Estadual do Substituto Tributário
      * @return \Sped\Schemas\V200\TIeST 
      */
-    public function getIEST($index)
+    public function getIEST()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIeST');
-        return $this->getElementsByTagName(self::IEST)->item($index);
+        return $this->getElementsByTagName(self::IEST)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Inscricao Estadual do Substituto Tributário
      * @param type $value 
      * @return \Sped\Schemas\V200\TIeST 
      */
@@ -248,7 +246,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Inscricao Estadual do Substituto Tributário
      * @param \Sped\Schemas\V200\TIeST $paramIEST 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
@@ -260,7 +258,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Inscrição Municipal
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM 
      */
     public function getIM()
@@ -270,7 +268,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Inscrição Municipal
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM 
      */
@@ -280,7 +278,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Inscrição Municipal
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM $paramIM 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
@@ -292,7 +290,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna CNAE Fiscal
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE 
      */
     public function getCNAE()
@@ -302,7 +300,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona CNAE Fiscal
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE 
      */
@@ -312,7 +310,7 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define CNAE Fiscal
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE $paramCNAE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */
@@ -324,7 +322,11 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código de Regime Tributário. <br />
+     * Este campo será obrigatoriamente preenchido com:<br />
+     * 1 – Simples Nacional;<br />
+     * 2 – Simples Nacional – excesso de sublimite de receita bruta;<br />
+     * 3 – Regime Normal. (v2.0).
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT 
      */
     public function getCRT()
@@ -334,7 +336,11 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código de Regime Tributário. <br />
+     * Este campo será obrigatoriamente preenchido com:<br />
+     * 1 – Simples Nacional;<br />
+     * 2 – Simples Nacional – excesso de sublimite de receita bruta;<br />
+     * 3 – Regime Normal. (v2.0).
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT 
      */
@@ -344,7 +350,11 @@ class Emit extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código de Regime Tributário. <br />
+     * Este campo será obrigatoriamente preenchido com:<br />
+     * 1 – Simples Nacional;<br />
+     * 2 – Simples Nacional – excesso de sublimite de receita bruta;<br />
+     * 3 – Regime Normal. (v2.0).
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT $paramCRT 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit 
      */

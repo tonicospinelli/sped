@@ -18,7 +18,7 @@ class Deduc extends \Sped\Components\Xml\Element
     const VDED = 'vDed';
 
     /**
-     * 
+     * Retorna Descrição da Dedução // v2.0
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed 
      */
     public function getXDed()
@@ -28,7 +28,7 @@ class Deduc extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Descrição da Dedução // v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed 
      */
@@ -38,7 +38,7 @@ class Deduc extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Descrição da Dedução // v2.0
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed $paramXDed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
@@ -50,7 +50,7 @@ class Deduc extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna valor da dedução // v2.0
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVDed()
@@ -60,7 +60,7 @@ class Deduc extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona valor da dedução // v2.0
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -70,7 +70,7 @@ class Deduc extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define valor da dedução // v2.0
      * @param \Sped\Schemas\V200\TDec_1302 $paramVDed 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */

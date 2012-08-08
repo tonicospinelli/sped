@@ -20,7 +20,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
     const RNTC = 'RNTC';
 
     /**
-     * 
+     * Retorna Placa do veículo (NT2011/004)
      * @return \Sped\Schemas\V200\TVeiculo\Placa 
      */
     public function getPlaca()
@@ -30,7 +30,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Placa do veículo (NT2011/004)
      * @param type $value 
      * @return \Sped\Schemas\V200\TVeiculo\Placa 
      */
@@ -40,7 +40,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Placa do veículo (NT2011/004)
      * @param \Sped\Schemas\V200\TVeiculo\Placa $paramPlaca 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
@@ -52,7 +52,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Sigla da UF
      * @return \Sped\Schemas\V200\TUf 
      */
     public function getUF()
@@ -62,7 +62,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Sigla da UF
      * @param type $value 
      * @return \Sped\Schemas\V200\TUf 
      */
@@ -72,7 +72,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Sigla da UF
      * @param \Sped\Schemas\V200\TUf $paramUF 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
@@ -84,18 +84,17 @@ class TVeiculo extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
-     * @param type $index 
+     * Retorna Registro Nacional de Transportador de Carga (ANTT)
      * @return \Sped\Schemas\V200\TVeiculo\RNTC 
      */
-    public function getRNTC($index)
+    public function getRNTC()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo\RNTC');
-        return $this->getElementsByTagName(self::RNTC)->item($index);
+        return $this->getElementsByTagName(self::RNTC)->item(0);
     }
 
     /**
-     * 
+     * Adiciona Registro Nacional de Transportador de Carga (ANTT)
      * @param type $value 
      * @return \Sped\Schemas\V200\TVeiculo\RNTC 
      */
@@ -105,7 +104,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Registro Nacional de Transportador de Carga (ANTT)
      * @param \Sped\Schemas\V200\TVeiculo\RNTC $paramRNTC 
      * @return \Sped\Schemas\V200\TVeiculo 
      */

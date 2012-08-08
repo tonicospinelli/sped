@@ -29,7 +29,7 @@ class DI extends \Sped\Components\Xml\Element
     const ADI = 'adi';
 
     /**
-     * 
+     * Retorna Numero do Documento de Importação DI/DSI/DA/DRI-E (DI/DSI/DA/DRI-E) (NT2011/004)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI 
      */
     public function getNDI()
@@ -39,7 +39,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Numero do Documento de Importação DI/DSI/DA/DRI-E (DI/DSI/DA/DRI-E) (NT2011/004)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI 
      */
@@ -49,7 +49,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Numero do Documento de Importação DI/DSI/DA/DRI-E (DI/DSI/DA/DRI-E) (NT2011/004)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI $paramNDI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
@@ -61,7 +61,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Data de registro da DI/DSI/DA (AAAA-MM-DD)
      * @return \Sped\Schemas\V200\TData 
      */
     public function getDDI()
@@ -71,7 +71,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Data de registro da DI/DSI/DA (AAAA-MM-DD)
      * @param type $value 
      * @return \Sped\Schemas\V200\TData 
      */
@@ -81,7 +81,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Data de registro da DI/DSI/DA (AAAA-MM-DD)
      * @param \Sped\Schemas\V200\TData $paramDDI 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
@@ -93,7 +93,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Local do desembaraço aduaneiro
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb 
      */
     public function getXLocDesemb()
@@ -103,7 +103,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Local do desembaraço aduaneiro
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb 
      */
@@ -113,7 +113,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Local do desembaraço aduaneiro
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb $paramXLocDesemb 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
@@ -125,7 +125,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna UF onde ocorreu o desembaraço aduaneiro
      * @return \Sped\Schemas\V200\TUfEmi 
      */
     public function getUFDesemb()
@@ -135,7 +135,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona UF onde ocorreu o desembaraço aduaneiro
      * @param type $value 
      * @return \Sped\Schemas\V200\TUfEmi 
      */
@@ -145,7 +145,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define UF onde ocorreu o desembaraço aduaneiro
      * @param \Sped\Schemas\V200\TUfEmi $paramUFDesemb 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
@@ -157,7 +157,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Data do desembaraço aduaneiro (AAAA-MM-DD)
      * @return \Sped\Schemas\V200\TData 
      */
     public function getDDesemb()
@@ -167,7 +167,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Data do desembaraço aduaneiro (AAAA-MM-DD)
      * @param type $value 
      * @return \Sped\Schemas\V200\TData 
      */
@@ -177,7 +177,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Data do desembaraço aduaneiro (AAAA-MM-DD)
      * @param \Sped\Schemas\V200\TData $paramDDesemb 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
@@ -189,7 +189,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Código do exportador (usado nos sistemas internos de informação do emitente da NF-e)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador 
      */
     public function getCExportador()
@@ -199,7 +199,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Código do exportador (usado nos sistemas internos de informação do emitente da NF-e)
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador 
      */
@@ -209,7 +209,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Código do exportador (usado nos sistemas internos de informação do emitente da NF-e)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador $paramCExportador 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */
@@ -221,7 +221,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Adições (NT 2011/004)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */
     public function getAdi()
@@ -231,7 +231,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Adições (NT 2011/004)
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */
     public function addAdi()
@@ -240,7 +240,7 @@ class DI extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Adições (NT 2011/004)
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi $paramAdi 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI 
      */

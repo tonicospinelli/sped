@@ -20,7 +20,7 @@ class CIDE extends \Sped\Components\Xml\Element
     const VCIDE = 'vCIDE';
 
     /**
-     * 
+     * Retorna BC do CIDE ( Quantidade comercializada) 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function getQBCProd()
@@ -30,7 +30,7 @@ class CIDE extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona BC do CIDE ( Quantidade comercializada) 
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
@@ -40,7 +40,7 @@ class CIDE extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define BC do CIDE ( Quantidade comercializada) 
      * @param \Sped\Schemas\V200\TDec_1204 $paramQBCProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
@@ -52,7 +52,7 @@ class CIDE extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Alíquota do CIDE  (em reais)
      * @return \Sped\Schemas\V200\TDec_1104 
      */
     public function getVAliqProd()
@@ -62,7 +62,7 @@ class CIDE extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Alíquota do CIDE  (em reais)
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1104 
      */
@@ -72,7 +72,7 @@ class CIDE extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Alíquota do CIDE  (em reais)
      * @param \Sped\Schemas\V200\TDec_1104 $paramVAliqProd 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
@@ -84,7 +84,7 @@ class CIDE extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do CIDE
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVCIDE()
@@ -94,7 +94,7 @@ class CIDE extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do CIDE
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -104,7 +104,7 @@ class CIDE extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do CIDE
      * @param \Sped\Schemas\V200\TDec_1302 $paramVCIDE 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */

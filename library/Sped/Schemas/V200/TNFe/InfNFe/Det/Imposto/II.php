@@ -22,7 +22,7 @@ class II extends \Sped\Components\Xml\Element
     const VIOF = 'vIOF';
 
     /**
-     * 
+     * Retorna Base da BC do Imposto de Importação
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVBC()
@@ -32,7 +32,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Base da BC do Imposto de Importação
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -42,7 +42,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Base da BC do Imposto de Importação
      * @param \Sped\Schemas\V200\TDec_1302 $paramVBC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */
@@ -54,7 +54,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor das despesas aduaneiras
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVDespAdu()
@@ -64,7 +64,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor das despesas aduaneiras
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -74,7 +74,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor das despesas aduaneiras
      * @param \Sped\Schemas\V200\TDec_1302 $paramVDespAdu 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */
@@ -86,7 +86,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do Imposto de Importação
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVII()
@@ -96,7 +96,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do Imposto de Importação
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -106,7 +106,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do Imposto de Importação
      * @param \Sped\Schemas\V200\TDec_1302 $paramVII 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */
@@ -118,7 +118,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Valor do Imposto sobre Operações Financeiras
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVIOF()
@@ -128,7 +128,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Valor do Imposto sobre Operações Financeiras
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -138,7 +138,7 @@ class II extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Valor do Imposto sobre Operações Financeiras
      * @param \Sped\Schemas\V200\TDec_1302 $paramVIOF 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */

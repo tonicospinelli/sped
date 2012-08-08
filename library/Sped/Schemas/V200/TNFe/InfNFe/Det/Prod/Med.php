@@ -24,7 +24,7 @@ class Med extends \Sped\Components\Xml\Element
     const VPMC = 'vPMC';
 
     /**
-     * 
+     * Retorna Número do lote do medicamento
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote 
      */
     public function getNLote()
@@ -34,7 +34,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Número do lote do medicamento
      * @param type $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote 
      */
@@ -44,7 +44,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Número do lote do medicamento
      * @param \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote $paramNLote 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
@@ -56,7 +56,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Quantidade de produtos no lote
      * @return \Sped\Schemas\V200\TDec_0803 
      */
     public function getQLote()
@@ -66,7 +66,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Quantidade de produtos no lote
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_0803 
      */
@@ -76,7 +76,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Quantidade de produtos no lote
      * @param \Sped\Schemas\V200\TDec_0803 $paramQLote 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
@@ -88,7 +88,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Data de Fabricação do medicamento (AAAA-MM-DD)
      * @return \Sped\Schemas\V200\TData 
      */
     public function getDFab()
@@ -98,7 +98,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Data de Fabricação do medicamento (AAAA-MM-DD)
      * @param type $value 
      * @return \Sped\Schemas\V200\TData 
      */
@@ -108,7 +108,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Data de Fabricação do medicamento (AAAA-MM-DD)
      * @param \Sped\Schemas\V200\TData $paramDFab 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
@@ -120,7 +120,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Data de validade do medicamento (AAAA-MM-DD)
      * @return \Sped\Schemas\V200\TData 
      */
     public function getDVal()
@@ -130,7 +130,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Data de validade do medicamento (AAAA-MM-DD)
      * @param type $value 
      * @return \Sped\Schemas\V200\TData 
      */
@@ -140,7 +140,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Data de validade do medicamento (AAAA-MM-DD)
      * @param \Sped\Schemas\V200\TData $paramDVal 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
@@ -152,7 +152,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Retorna Preço Máximo ao Consumidor
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function getVPMC()
@@ -162,7 +162,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Adiciona Preço Máximo ao Consumidor
      * @param type $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
@@ -172,7 +172,7 @@ class Med extends \Sped\Components\Xml\Element
     }
 
     /**
-     * 
+     * Define Preço Máximo ao Consumidor
      * @param \Sped\Schemas\V200\TDec_1302 $paramVPMC 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med 
      */
