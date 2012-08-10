@@ -116,7 +116,7 @@ abstract class AbstractDocument implements InterfaceDocument
      * Retorna as posições do Digito Verificador.
      * @return array
      */
-    public function getDigitVerifierPositions()
+    public function getVerifierDigitPositions()
     {
         $dv = array();
         $index = 0;
@@ -132,9 +132,9 @@ abstract class AbstractDocument implements InterfaceDocument
      * @param int $index
      * @return int
      */
-    public function getDigitVerifierPosition($index)
+    public function getVerifierDigitPosition($index)
     {
-        $dvPos = $this->getDigitVerifierPositions();
+        $dvPos = $this->getVerifierDigitPositions();
         return (int) $dvPos[$index];
     }
 
@@ -152,7 +152,7 @@ abstract class AbstractDocument implements InterfaceDocument
      * Retorna os digitos verificadores
      * @return string
      */
-    public function getDigitVerifier()
+    public function generateVerifierDigit()
     {
         $base = new \Sped\Commons\StringHelper($this->getBaseNumber());
 
