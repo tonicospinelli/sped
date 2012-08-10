@@ -61,24 +61,15 @@ class TituloEleitoral extends Modulo11
 
         $foundDv = 0;
         $aux = $value->getValue()->substring(9, 2)->toInteger();
-        $dv = $value->getValue()->substring(11, $this->digitsCount)->toInteger();
+        $dv = $value->getValue()->substring(11, $this->getDigitsCount())->toInteger();
         $sum = 0;
-        for ($i = 0; $i <= $this->maxMultiplier; $i++) {
+        for ($i = 0; $i <= $this->getMaxMultiplier(); $i++) {
             $digit = $value->getValue()->substring($i, 1)->toInteger();
             $sum += $digit * $coeficients[$i];
             if (($i == 8) || ($i == 10)) {
                 $sum %= 11;
-                if ($sum > 1) {
-                    $sum = 11 - $sum;
-                } else if ($aux <= 2)
-                    $sum = 1 - $sum;
-                else {
-                    $sum = 0;
-                }
-                if ($i == 8)
-                    $foundDv = $sum * 10;
-                else
-                    $foundDv .= $sum;
+                $sum = ($sum > 1 ? (11 - $sum) : ($aux <= 2 ? (1 - $sum) : 0));
+                $foundDv = ($i == 8 ? ($sum * 10) : ($foundDv + $sum));
                 $sum *= 2;
             }
         }
