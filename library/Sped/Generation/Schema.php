@@ -45,6 +45,7 @@ class Schema
     protected $loadedSchema = null;
     protected $dirTarget = null;
     protected $defaultNamespace = null;
+    protected $overwrite = false;
 
     public function getDefaultNamespace()
     {
@@ -80,7 +81,27 @@ class Schema
     }
 
     /**
-     * 
+     * Verifica se deve substituir o arquivo.
+     * @return boolean
+     */
+    public function isOverwrite()
+    {
+        return $this->overwrite;
+    }
+
+    /**
+     * Define se substitui o arquivo que já existe.
+     * @param bool $overwrite
+     * @return \Sped\Generation\Schema 
+     */
+    public function setOverwrite($overwrite = true)
+    {
+        $this->overwrite = (bool) $overwrite;
+        return $this;
+    }
+
+    /**
+     * Retorna o XSD que foi carregada.
      * @return \Sped\Components\Xml\Schema
      */
     public function getLoadedSchema()
@@ -89,7 +110,7 @@ class Schema
     }
 
     /**
-     *
+     * Carrega o XSD.
      * @param string $fileName
      * @return \Sped\Generation\Schema
      * @throws \RuntimeException 
@@ -108,10 +129,11 @@ class Schema
     }
 
     /**
+     * Exportar as classes baseado nos nós do XSD.
      * @return boolean
      * @throws \RuntimeException 
      */
-    public function exportClasses()
+    public function exportClasses($overwrite = false)
     {
         $xsd = $this->getLoadedSchema();
         if (!$xsd instanceof \Sped\Components\Xml\Schema)
@@ -124,18 +146,18 @@ class Schema
             if (!$node instanceof \DOMElement)
                 continue;
 
-            $this->createClassFromNode($node);
+            $this->createClassFromNode($node, null, null, $overwrite);
         }
         return true;
     }
 
     /**
-     *
+     * Cria a classe com base no Nó do XSD.
      * @param \DOMElement $node
      * @param string $namespace
      * @param string $dirTarget 
      */
-    public function createClassFromNode(\DOMElement $node = null, $namespace = null, $dirTarget = null)
+    public function createClassFromNode(\DOMElement $node = null, $namespace = null, $dirTarget = null, $overwrite = false)
     {
         if ($node === null)
             $node = $this->getLoadedSchema()->documentElement;
@@ -214,10 +236,16 @@ class Schema
         if (!preg_match('/^Document/', $class->getName()))
             $this->createClassMethodsFromNode($class, $node);
 
-        $class->save($dirTarget, null, true);
+        $class->save($dirTarget, null, $this->isOverwrite());
         var_dump($class->getFullName() . ' is generated.');
     }
 
+    /**
+     * Cria os métodos a partir do nó informado e seus filhos.
+     * @param \PhpClass $class
+     * @param \DOMElement $node
+     * @return void
+     */
     public function createClassMethodsFromNode(\PhpClass &$class, \DOMElement $node)
     {
         $dom = new \DOMXPath($this->loadedSchema);
@@ -234,6 +262,8 @@ class Schema
                     break;
                 case 'sequence':
                 case 'choice':
+                case 'simpleContent':
+                case 'extension':
                 case 'complexType':
                     $this->createClassMethodsFromNode($class, $node);
                     break;
@@ -305,6 +335,11 @@ class Schema
         }
     }
 
+    /**
+     * Verifica se existe nós filhos para continuar a recursividade de geração das classes.
+     * @param \DOMElement $node
+     * @return boolean
+     */
     public function hasChildrenElements(\DOMElement $node)
     {
         return ($node->getElementsByTagName('element')->length > 0
@@ -313,6 +348,11 @@ class Schema
                 OR $node->getElementsByTagName('complexType')->length > 0);
     }
 
+    /**
+     * Verifica se o nó possui filhos que permitem recursividade.
+     * @param \DOMElement $node
+     * @return type 
+     */
     public function isLastLevel(\DOMElement $node)
     {
         return ($node->localName == 'element'
@@ -320,6 +360,12 @@ class Schema
                 AND $node->getElementsByTagName('sequence')->length === 0);
     }
 
+    /**
+     * Cria o método de construção da classe.
+     * @param string $namespace
+     * @param boolean $isSetValue
+     * @return \PhpClass_Method 
+     */
     public function createClassConstructMethod($namespace, $isSetValue = false)
     {
         $met = new \PhpClass_Method(array(
@@ -337,16 +383,31 @@ class Schema
         return $met;
     }
 
+    /**
+     * Retorna o nível do nó.
+     * @param \DOMElement $node
+     * @return int
+     */
     public function getNodeLevel(\DOMElement $node)
     {
         return (count(explode('/', $node->getNodePath())) - 1);
     }
 
+    /**
+     * Retorna o prefixo (short namespace) do nome do nó.
+     * @param string $name
+     * @return string
+     */
     public function getPrefixName($name)
     {
         return preg_replace('/:.*$/', '', $name);
     }
 
+    /**
+     * Retorna o nome do nó.
+     * @param string $name
+     * @return string
+     */
     public function getSufixName($name)
     {
         return preg_replace('/^.*:/', '', $name);
@@ -377,6 +438,11 @@ class Schema
         return $description;
     }
 
+    /**
+     * Cria os métodos para manipulação dos atributos do nó.
+     * @param \PhpClass $class
+     * @param \DOMElement $node 
+     */
     public function createAttributeMethods(\PhpClass &$class, \DOMElement $node)
     {
         $methodName = $node->getAttribute('name');
@@ -390,6 +456,11 @@ class Schema
         }
     }
 
+    /**
+     * Cria o método para retornar o valor do atributo.
+     * @param string $name
+     * @return \PhpClass_Method 
+     */
     public function createAttributeGetMethod($name)
     {
         $met = new \PhpClass_Method(array(
@@ -404,7 +475,7 @@ CODE;
     }
 
     /**
-     * Cria o método AttributeSet*
+     * Cria o método para definir o valor do atributo.
      * @param string $methodName
      * @param string $type
      * @return \PhpClass_Method 
@@ -428,7 +499,7 @@ CODE;
     }
 
     /**
-     * Cria método IsSet*.
+     * Cria método para verificar se o atributo foi definido.
      * @param string $$methodName
      * @return \PhpClass_Method 
      */
@@ -446,7 +517,7 @@ CODE;
     }
 
     /**
-     * Cria o método Unset*
+     * Cria o método para remover o atributo.
      * @param string $methodName
      * @return \PhpClass_Method 
      */
@@ -510,7 +581,7 @@ CODE;
     }
 
     /**
-     * Cria o método Add* de acordo com a configuração informada.
+     * Cria o método Add de acordo com a configuração informada.
      * @param array $config Parametros de configuração.<br/>
      * <code>
      * $config = array(
@@ -561,7 +632,7 @@ CODE;
     }
 
     /**
-     * Cria o método Set* de acordo com a configuração informada.
+     * Cria o método Set de acordo com a configuração informada.
      * @param array $config Parametros de configuração.<br/>
      * <code>
      * $config = array(
@@ -575,7 +646,7 @@ CODE;
     public function createElementSetMethod($config)
     {
         $this->validateParameters($config);
-        
+
         $methodName = ucfirst($config['name']);
         $constantName = mb_strtoupper($methodName);
         $method = new \PhpClass_Method(array(
@@ -599,6 +670,11 @@ CODE;
         return $method;
     }
 
+    /**
+     * Verifica se os parâmetros da configuração obrigatória estão definidos.
+     * @param array $parameters
+     * @throws \RuntimeException 
+     */
     protected function validateParameters($parameters = array())
     {
         if (\Sped\Commons\StringHelper::isNullOrEmpty($parameters['name']))
