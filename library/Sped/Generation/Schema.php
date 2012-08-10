@@ -218,7 +218,7 @@ class Schema
                         'name' => $methodName,
                         'description' => $this->getDocumentation($node),
                         'type' => $methodNamespace,
-                        'hasValue' => false,
+                        'hasIndex' => false,
                         'isElement' => false)));
 
             $class->addMethod($this->createElementAddMethod(array(
@@ -271,7 +271,7 @@ class Schema
                     if ($node->parentNode->localName == 'element')
                         return;
                 case 'element':
-                    $hasIndex = (int) $node->hasAttribute('minOccurs');
+                    $hasIndex = ($node->hasAttribute('minOccurs') || $node->hasAttribute('maxOccurs'));
                     if ($node->hasAttribute('name')) {
                         $name = $node->getAttribute('name');
                         $type = $node->hasAttribute('type') ? $this->getSufixName($node->getAttribute('type')) : null;
@@ -309,7 +309,7 @@ class Schema
                                 'name' => $name,
                                 'description' => $this->getDocumentation($node),
                                 'type' => $type,
-                                'hasValue' => $hasIndex,
+                                'hasIndex' => $hasIndex,
                                 'isElement' => true)));
 
                     $class->addMethod($this->createElementAddMethod(array(
