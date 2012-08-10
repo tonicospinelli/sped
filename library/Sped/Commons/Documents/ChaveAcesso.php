@@ -188,16 +188,17 @@ class ChaveAcesso extends AbstractDocument
     }
 
     /**
-     * Gera o código número aleatório com base nas informações do XML.
+     * Gera o código número aleatório com base nas informações do XML.<br>
+     * Este código deve ser de 8 dígitos.
      * @param \Sped\Schemas\V200\DocumentNFe $domNFe Objeto do XML.
-     * @return float Código Númerico gerado aleatoriamente.
+     * @return string Código Númerico gerado aleatoriamente.
      */
     public function gerarCodigoNumerico(\Sped\Schemas\V200\DocumentNFe $domNFe)
     {
         $codigoNumerico = 0;
         $hasIndex = 0;
         $nfeHash = sha1($domNFe->getNFe()->C14N(FALSE, FALSE, NULL, NULL));
-        $coeficientes = new \Sped\Commons\Collections\ArrayCollection(array(3, 2, 2, 2, 2, 2, 2, 3));
+        $coeficientes = new \Sped\Commons\Collections\ArrayCollection(array(3, 2, 2, 2, 2, 2, 3));
         $iterator = $coeficientes->getIterator();
         foreach ($iterator as $index => $element) {
             $algarismoBytes = substr($nfeHash, $hasIndex, $hasIndex + $element);
@@ -206,7 +207,9 @@ class ChaveAcesso extends AbstractDocument
             $codigoNumerico = ($codigoNumerico + $algarismo * Math::pow(10.0, $index));
             $hasIndex += $element;
         }
-        return $codigoNumerico;
+        $codigoNumerico = new \Sped\Commons\StringHelper($codigoNumerico);
+        
+        return $codigoNumerico->padLeft('0', 8)->toString();
     }
 
     /**
