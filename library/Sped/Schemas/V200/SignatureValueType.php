@@ -13,4 +13,42 @@ namespace Sped\Schemas\V200;
 class SignatureValueType extends \Sped\Components\Xml\Element 
 {
 
+    /**
+     * 
+     * @return string 
+     */
+    public function getId()
+    {
+        return $this->getAttribute('Id');
+    }
+
+    /**
+     * 
+     * @param type $value 
+     */
+    public function setId($value)
+    {
+        $this->setAttribute('Id', $value);
+        return $this;
+    }
+
+    /**
+     * 
+     * @return boolean 
+     */
+    public function isSetId()
+    {
+        return $this->hasAttribute('Id');
+    }
+
+    /**
+     * 
+     * @return boolean 
+     */
+    public function unsetId()
+    {
+        $this->removeAttribute('Id');
+        return true;
+    }
+
 }
