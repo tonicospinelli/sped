@@ -47,7 +47,10 @@ class ChaveAcessoTest extends \PHPUnit_Framework_TestCase
     {
         $nfe = new \Sped\Schemas\V200\DocumentNFe();
         $nfe->load('samples/35101158716523000119550010000000011003000000-nfe.xml');
+        var_dump($this->object->gerarCodigoNumerico($nfe));
         
+        $nfe = new \Sped\Schemas\V200\DocumentNFe();
+        $nfe->load('samples/11101284613439000180550010000004881093997017-nfe.xml');
         var_dump($this->object->gerarCodigoNumerico($nfe));
     }
 
