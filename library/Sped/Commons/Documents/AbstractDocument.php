@@ -113,32 +113,6 @@ abstract class AbstractDocument implements InterfaceDocument
     }
 
     /**
-     * Retorna as posições do Digito Verificador.
-     * @return array
-     */
-    public function getVerifierDigitPositions()
-    {
-        $dv = array();
-        $index = 0;
-        while ($index < $this->getDigitsCount()) {
-            $dv[$index + 1] = $this->getLength() - ($this->getDigitsCount() - $index);
-            $index++;
-        }
-        return $dv;
-    }
-
-    /**
-     * Retorna a posição do Dígito Verificador.
-     * @param int $index
-     * @return int
-     */
-    public function getVerifierDigitPosition($index)
-    {
-        $dvPos = $this->getVerifierDigitPositions();
-        return (int) $dvPos[$index];
-    }
-
-    /**
      * Retorna o número base.
      * @return string
      */
@@ -149,7 +123,7 @@ abstract class AbstractDocument implements InterfaceDocument
     }
 
     /**
-     * Retorna os digitos verificadores
+     * Retorna os digitos verificadores.
      * @return string
      */
     public function generateVerifierDigit()
@@ -166,7 +140,7 @@ abstract class AbstractDocument implements InterfaceDocument
             }
             $base->concat((($soma * 10) % 11) % 10);
         }
-        return $base->right($this->getDigitsCount(), $this->getDigitsCount())->getValue();
+        return $base->right($this->getDigitsCount())->getValue();
     }
 
 }
