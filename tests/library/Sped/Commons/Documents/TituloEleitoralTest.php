@@ -20,7 +20,12 @@ class TituloEleitoralTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new TituloEleitoral('123');
+        $this->object = new TituloEleitoral();
+        
+        for ($i = 0; $i < $this->object->getLength(); $i++)
+            $number .= '' . \Sped\Commons\Math::random(0, 9);
+        
+        $this->object->setValue($number);
     }
 
     /**
@@ -34,9 +39,14 @@ class TituloEleitoralTest extends \PHPUnit_Framework_TestCase
 
     public function testIsValid()
     {
-        var_dump($this->object->getValue()->toString());
-        var_dump($this->object->getValueMasked());
-        $this->assertTrue($this->object->isValid());
+        $novoNumero = $this->object->getBaseNumber() . $this->object->generateVerifierDigit();
+
+        var_dump('base Number = ' . $this->object->getBaseNumber());
+        var_dump('  DV Number = ' . $this->object->generateVerifierDigit());
+        var_dump(' new Number = ' . $novoNumero);
+
+        $this->object->setValue($novoNumero);
+        $this->assertTrue($this->object->isValid(), 'O Titulo Eleitoral não é válido.');
     }
 
 }
