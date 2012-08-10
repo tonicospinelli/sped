@@ -57,7 +57,7 @@ class IPINT extends \Sped\Components\Xml\Element
      * 53-Saída não-tributada<br />
      * 54-Saída imune<br />
      * 55-Saída com suspensão
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPINT\CST 
      */
     public function addCST($value = NULL)

@@ -35,7 +35,7 @@ class NFref extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Chave de acesso das NF-e referenciadas. Chave de acesso compostas por Código da UF (tabela do IBGE) + AAMM da emissão + CNPJ do Emitente + modelo, série e número da NF-e Referenciada + Código Numérico + DV.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TChNFe 
      */
     public function addRefNFe($value = NULL)
@@ -129,7 +129,7 @@ class NFref extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Utilizar esta TAG para referenciar um CT-e emitido anteriormente, vinculada a NF-e atual - (v2.0).
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TChNFe 
      */
     public function addRefCTe($value = NULL)

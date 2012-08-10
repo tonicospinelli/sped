@@ -39,7 +39,7 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CNPJ do transportador
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function addCNPJ($value = NULL)
@@ -71,7 +71,7 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CPF do transportador
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function addCPF($value = NULL)
@@ -103,7 +103,7 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Razão Social ou nome
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome 
      */
     public function addXNome($value = NULL)
@@ -135,7 +135,7 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Inscrição Estadual (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TIeDest 
      */
     public function addIE($value = NULL)
@@ -167,7 +167,7 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Endereço completo
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder 
      */
     public function addXEnder($value = NULL)
@@ -199,7 +199,7 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Nome do munícipio
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun 
      */
     public function addXMun($value = NULL)
@@ -231,7 +231,7 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Sigla da UF
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function addUF($value = NULL)

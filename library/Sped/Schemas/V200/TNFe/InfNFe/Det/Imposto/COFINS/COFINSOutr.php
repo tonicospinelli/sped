@@ -109,7 +109,7 @@ class COFINSOutr extends \Sped\Components\Xml\Element
      * 75 - Operação de Aquisição por Substituição Tributária<br />
      * 98 - Outras Operações de Entrada<br />
      * 99 - Outras Operações.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSOutr\CST 
      */
     public function addCST($value = NULL)
@@ -165,7 +165,7 @@ class COFINSOutr extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do COFINS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -197,7 +197,7 @@ class COFINSOutr extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do COFINS (em percentual)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPCOFINS($value = NULL)
@@ -229,7 +229,7 @@ class COFINSOutr extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade Vendida (NT2011/004) 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function addQBCProd($value = NULL)
@@ -261,7 +261,7 @@ class COFINSOutr extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do COFINS (em reais) (NT2011/004)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function addVAliqProd($value = NULL)
@@ -293,7 +293,7 @@ class COFINSOutr extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do COFINS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCOFINS($value = NULL)

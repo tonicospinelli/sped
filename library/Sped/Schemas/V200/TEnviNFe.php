@@ -29,7 +29,7 @@ class TEnviNFe extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TIdLote 
      */
     public function addIdLote($value = NULL)
@@ -61,7 +61,7 @@ class TEnviNFe extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function addNFe($value = NULL)

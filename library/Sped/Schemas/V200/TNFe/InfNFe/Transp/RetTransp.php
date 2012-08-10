@@ -37,7 +37,7 @@ class RetTransp extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do Serviço
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVServ($value = NULL)
@@ -69,7 +69,7 @@ class RetTransp extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona BC da Retenção do ICMS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCRet($value = NULL)
@@ -101,7 +101,7 @@ class RetTransp extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota da Retenção
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPICMSRet($value = NULL)
@@ -133,7 +133,7 @@ class RetTransp extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do ICMS Retido
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSRet($value = NULL)
@@ -165,7 +165,7 @@ class RetTransp extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código Fiscal de Operações e Prestações // PL_006f - alterado para permitir somente CFOP de transportes 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCfopTransp 
      */
     public function addCFOP($value = NULL)
@@ -197,7 +197,7 @@ class RetTransp extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do Município de Ocorrência do Fato Gerador (utilizar a tabela do IBGE)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMunFG($value = NULL)

@@ -47,7 +47,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Logradouro
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEnderEmi\XLgr 
      */
     public function addXLgr($value = NULL)
@@ -79,7 +79,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEnderEmi\Nro 
      */
     public function addNro($value = NULL)
@@ -111,7 +111,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Complemento
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEnderEmi\XCpl 
      */
     public function addXCpl($value = NULL)
@@ -143,7 +143,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Bairro
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEnderEmi\XBairro 
      */
     public function addXBairro($value = NULL)
@@ -175,7 +175,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do município
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMun($value = NULL)
@@ -207,7 +207,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Nome do município
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEnderEmi\XMun 
      */
     public function addXMun($value = NULL)
@@ -239,7 +239,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Sigla da UF
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TUfEmi 
      */
     public function addUF($value = NULL)
@@ -271,7 +271,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CEP - NT 2011/004
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEnderEmi\CEP 
      */
     public function addCEP($value = NULL)
@@ -303,7 +303,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do país
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEnderEmi\CPais 
      */
     public function addCPais($value = NULL)
@@ -335,7 +335,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Nome do país
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEnderEmi\XPais 
      */
     public function addXPais($value = NULL)
@@ -367,7 +367,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Preencher com Código DDD + número do telefone (v.2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEnderEmi\Fone 
      */
     public function addFone($value = NULL)

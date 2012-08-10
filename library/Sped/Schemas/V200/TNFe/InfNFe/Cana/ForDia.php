@@ -27,7 +27,7 @@ class ForDia extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade em quilogramas - peso líquido // v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addQtde($value = NULL)

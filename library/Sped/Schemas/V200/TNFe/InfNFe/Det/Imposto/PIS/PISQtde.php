@@ -36,7 +36,7 @@ class PISQtde extends \Sped\Components\Xml\Element
     /**
      * Adiciona Código de Situação Tributária do PIS.<br />
      * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISQtde\CST 
      */
     public function addCST($value = NULL)
@@ -69,7 +69,7 @@ class PISQtde extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade Vendida  (NT2011/004)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function addQBCProd($value = NULL)
@@ -101,7 +101,7 @@ class PISQtde extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do PIS (em reais) (NT2011/004)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function addVAliqProd($value = NULL)
@@ -133,7 +133,7 @@ class PISQtde extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do PIS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVPIS($value = NULL)

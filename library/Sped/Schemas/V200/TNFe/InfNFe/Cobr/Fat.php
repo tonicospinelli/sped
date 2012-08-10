@@ -33,7 +33,7 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número da fatura
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      */
     public function addNFat($value = NULL)
@@ -65,7 +65,7 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor original da fatura
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVOrig($value = NULL)
@@ -97,7 +97,7 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do desconto da fatura
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVDesc($value = NULL)
@@ -129,7 +129,7 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor líquido da fatura
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVLiq($value = NULL)

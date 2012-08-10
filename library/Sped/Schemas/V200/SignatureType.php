@@ -31,7 +31,7 @@ class SignatureType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\SignedInfoType 
      */
     public function addSignedInfo($value = NULL)
@@ -63,7 +63,7 @@ class SignatureType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\SignatureValueType 
      */
     public function addSignatureValue($value = NULL)
@@ -95,7 +95,7 @@ class SignatureType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\KeyInfoType 
      */
     public function addKeyInfo($value = NULL)

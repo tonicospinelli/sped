@@ -45,7 +45,7 @@ class Cana extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Identificação da safra // v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Safra 
      */
     public function addSafra($value = NULL)
@@ -77,7 +77,7 @@ class Cana extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Mês e Ano de Referência, formato: MM/AAAA // 2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Ref 
      */
     public function addRef($value = NULL)
@@ -140,7 +140,7 @@ class Cana extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Total do mês // v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addQTotMes($value = NULL)
@@ -172,7 +172,7 @@ class Cana extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Total Anterior // v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addQTotAnt($value = NULL)
@@ -204,7 +204,7 @@ class Cana extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Total Geral // v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addQTotGer($value = NULL)
@@ -267,7 +267,7 @@ class Cana extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor  dos fornecimentos // v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVFor($value = NULL)
@@ -299,7 +299,7 @@ class Cana extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total das Deduções // v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVTotDed($value = NULL)
@@ -331,7 +331,7 @@ class Cana extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Líquido dos fornecimentos // v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVLiqFor($value = NULL)

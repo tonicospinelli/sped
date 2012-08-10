@@ -40,7 +40,7 @@ class ICMS40 extends \Sped\Components\Xml\Element
      * Adiciona origem da mercadoria: 0 - Nacional <br />
      * 1 - Estrangeira - Importação direta <br />
      * 2 - Estrangeira - Adquirida no mercado interno 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL)
@@ -82,7 +82,7 @@ class ICMS40 extends \Sped\Components\Xml\Element
      * 41 - Não tributada <br />
      * 50 - Suspensão <br />
      * 51 - Diferimento 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\CST 
      */
     public function addCST($value = NULL)
@@ -118,7 +118,7 @@ class ICMS40 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona O valor do ICMS será informado apenas nas operações com veículos beneficiados com a desoneração condicional do ICMS. (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMS($value = NULL)
@@ -170,7 +170,7 @@ class ICMS40 extends \Sped\Components\Xml\Element
      * 7 – SUFRAMA;<br />
      * 8 - Venda a órgão Público;<br />
      * 9 – outros. (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS40\MotDesICMS 
      */
     public function addMotDesICMS($value = NULL)

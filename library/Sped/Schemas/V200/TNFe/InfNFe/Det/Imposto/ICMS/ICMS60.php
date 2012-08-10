@@ -38,7 +38,7 @@ class ICMS60 extends \Sped\Components\Xml\Element
      * Adiciona origem da mercadoria: 0 - Nacional <br />
      * 1 - Estrangeira - Importação direta <br />
      * 2 - Estrangeira - Adquirida no mercado interno 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL)
@@ -74,7 +74,7 @@ class ICMS60 extends \Sped\Components\Xml\Element
     /**
      * Adiciona Tributação pelo ICMS <br />
      * 60 - ICMS cobrado anteriormente por substituição tributária 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS60\CST 
      */
     public function addCST($value = NULL)
@@ -107,7 +107,7 @@ class ICMS60 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do ICMS ST retido anteriormente (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCSTRet($value = NULL)
@@ -139,7 +139,7 @@ class ICMS60 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do ICMS ST retido anteriormente  (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSSTRet($value = NULL)

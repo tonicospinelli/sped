@@ -29,7 +29,7 @@ class ObsFisco extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco\XTexto 
      */
     public function addXTexto($value = NULL)

@@ -47,7 +47,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
      * Adiciona Identificação do Ambiente:<br />
      * 1 - Produção<br />
      * 2 - Homologação
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
     public function addTpAmb($value = NULL)
@@ -81,7 +81,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Versão do Aplicativo que processou a NF-e
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TVerAplic 
      */
     public function addVerAplic($value = NULL)
@@ -113,7 +113,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do Recibo Consultado
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TRec 
      */
     public function addNRec($value = NULL)
@@ -145,7 +145,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do status da mensagem enviada.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TStat 
      */
     public function addCStat($value = NULL)
@@ -177,7 +177,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Descrição literal do status do serviço solicitado.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TMotivo 
      */
     public function addXMotivo($value = NULL)
@@ -209,7 +209,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona código da UF de atendimento
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function addCUF($value = NULL)
@@ -243,7 +243,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
     /**
      * Adiciona Código da Mensagem (v2.0) <br />
      * alterado para tamanho variavel 1-4. (NT2011/004)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TRetConsReciNFe\CMsg 
      */
     public function addCMsg($value = NULL)
@@ -276,7 +276,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Mensagem da SEFAZ para o emissor. (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TRetConsReciNFe\XMsg 
      */
     public function addXMsg($value = NULL)
@@ -308,7 +308,7 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Protocolo de status resultado do processamento da NF-e
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
     public function addProtNFe($value = NULL)

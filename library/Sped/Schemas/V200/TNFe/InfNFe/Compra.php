@@ -31,7 +31,7 @@ class Compra extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informação da Nota de Empenho de compras públicas (NT2011/004)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      */
     public function addXNEmp($value = NULL)
@@ -63,7 +63,7 @@ class Compra extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informação do pedido
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      */
     public function addXPed($value = NULL)
@@ -95,7 +95,7 @@ class Compra extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informação do contrato
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      */
     public function addXCont($value = NULL)

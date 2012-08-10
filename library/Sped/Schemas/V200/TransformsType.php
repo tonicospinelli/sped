@@ -27,7 +27,7 @@ class TransformsType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TransformType 
      */
     public function addTransform($value = NULL)

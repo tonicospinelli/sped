@@ -40,7 +40,7 @@ class PISOutr extends \Sped\Components\Xml\Element
     /**
      * Adiciona Código de Situação Tributária do PIS.<br />
      * 99 - Outras Operações.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISOutr\CST 
      */
     public function addCST($value = NULL)
@@ -73,7 +73,7 @@ class PISOutr extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do PIS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -105,7 +105,7 @@ class PISOutr extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do PIS (em percentual)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPPIS($value = NULL)
@@ -137,7 +137,7 @@ class PISOutr extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade Vendida (NT2011/004) 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function addQBCProd($value = NULL)
@@ -169,7 +169,7 @@ class PISOutr extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do PIS (em reais) (NT2011/004)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function addVAliqProd($value = NULL)
@@ -201,7 +201,7 @@ class PISOutr extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do PIS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVPIS($value = NULL)

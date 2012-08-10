@@ -29,7 +29,7 @@ class Deduc extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Descrição da Dedução // v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc\XDed 
      */
     public function addXDed($value = NULL)
@@ -61,7 +61,7 @@ class Deduc extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona valor da dedução // v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVDed($value = NULL)

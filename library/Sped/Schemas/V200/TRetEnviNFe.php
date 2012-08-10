@@ -43,7 +43,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
      * Adiciona Identificação do Ambiente:<br />
      * 1 - Produção<br />
      * 2 - Homologação
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
     public function addTpAmb($value = NULL)
@@ -77,7 +77,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Versão do Aplicativo que recebeu o Lote.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TVerAplic 
      */
     public function addVerAplic($value = NULL)
@@ -109,7 +109,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do status da mensagem enviada.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TStat 
      */
     public function addCStat($value = NULL)
@@ -141,7 +141,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Descrição literal do status do serviço solicitado.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TMotivo 
      */
     public function addXMotivo($value = NULL)
@@ -173,7 +173,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona código da UF de atendimento
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function addCUF($value = NULL)
@@ -205,7 +205,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data e hora do recebimento, no formato AAAA-MM-DDTHH:MM:SS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Components\Xml\Element 
      */
     public function addDhRecbto($value = NULL)

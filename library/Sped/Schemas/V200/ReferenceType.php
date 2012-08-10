@@ -31,7 +31,7 @@ class ReferenceType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TransformsType 
      */
     public function addTransforms($value = NULL)
@@ -94,7 +94,7 @@ class ReferenceType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\DigestValueType 
      */
     public function addDigestValue($value = NULL)

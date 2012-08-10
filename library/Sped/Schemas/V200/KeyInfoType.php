@@ -27,7 +27,7 @@ class KeyInfoType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\X509DataType 
      */
     public function addX509Data($value = NULL)

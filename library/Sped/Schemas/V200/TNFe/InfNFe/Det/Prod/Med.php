@@ -35,7 +35,7 @@ class Med extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do lote do medicamento
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Med\NLote 
      */
     public function addNLote($value = NULL)
@@ -67,7 +67,7 @@ class Med extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade de produtos no lote
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0803 
      */
     public function addQLote($value = NULL)
@@ -99,7 +99,7 @@ class Med extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data de Fabricação do medicamento (AAAA-MM-DD)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDFab($value = NULL)
@@ -131,7 +131,7 @@ class Med extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data de validade do medicamento (AAAA-MM-DD)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDVal($value = NULL)
@@ -163,7 +163,7 @@ class Med extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Preço Máximo ao Consumidor
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVPMC($value = NULL)

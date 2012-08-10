@@ -60,7 +60,7 @@ class TNFe extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\SignatureType 
      */
     public function addSignature($value = NULL)

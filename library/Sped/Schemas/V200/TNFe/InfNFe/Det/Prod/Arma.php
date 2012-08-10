@@ -33,7 +33,7 @@ class Arma extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Indicador do tipo de arma de fogo (0 - Uso permitido; 1 - Uso restrito)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\TpArma 
      */
     public function addTpArma($value = NULL)
@@ -65,7 +65,7 @@ class Arma extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número de série da arma
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NSerie 
      */
     public function addNSerie($value = NULL)
@@ -97,7 +97,7 @@ class Arma extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número de série do cano
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\NCano 
      */
     public function addNCano($value = NULL)
@@ -129,7 +129,7 @@ class Arma extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Descrição completa da arma, compreendendo: calibre, marca, capacidade, tipo de funcionamento, comprimento e demais elementos que permitam a sua perfeita identificação.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Arma\Descr 
      */
     public function addDescr($value = NULL)

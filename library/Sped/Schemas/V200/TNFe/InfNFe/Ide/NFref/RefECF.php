@@ -33,7 +33,7 @@ class RefECF extends \Sped\Components\Xml\Element
     /**
      * Adiciona Código do modelo do Documento Fiscal <br />
      * Preencher com "2B", quando se tratar de Cupom Fiscal emitido por máquina registradora (não ECF), com "2C", quando se tratar de Cupom Fiscal PDV, ou "2D", quando se tratar de Cupom Fiscal (emitido por ECF) (v2.0).
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\Mod 
      */
     public function addMod($value = NULL)
@@ -66,7 +66,7 @@ class RefECF extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informar o número de ordem seqüencial do ECF que emitiu o Cupom Fiscal vinculado à NF-e (v2.0).
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NECF 
      */
     public function addNECF($value = NULL)
@@ -98,7 +98,7 @@ class RefECF extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informar o Número do Contador de Ordem de Operação - COO vinculado à NF-e (v2.0).
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefECF\NCOO 
      */
     public function addNCOO($value = NULL)

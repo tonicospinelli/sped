@@ -47,7 +47,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CNPJ do Órgão emissor
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function addCNPJ($value = NULL)
@@ -79,7 +79,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Órgão emitente
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XOrgao 
      */
     public function addXOrgao($value = NULL)
@@ -111,7 +111,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Matrícula do agente
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Matr 
      */
     public function addMatr($value = NULL)
@@ -143,7 +143,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Nome do agente
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\XAgente 
      */
     public function addXAgente($value = NULL)
@@ -175,7 +175,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Telefone
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
      */
     public function addFone($value = NULL)
@@ -207,7 +207,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Sigla da Unidade da Federação
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TUfEmi 
      */
     public function addUF($value = NULL)
@@ -239,7 +239,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do Documento de Arrecadação de Receita
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
      */
     public function addNDAR($value = NULL)
@@ -271,7 +271,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data de emissão do DAR (AAAA-MM-DD)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDEmi($value = NULL)
@@ -303,7 +303,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total constante no DAR
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVDAR($value = NULL)
@@ -335,7 +335,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Repartição Fiscal emitente
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\RepEmi 
      */
     public function addRepEmi($value = NULL)
@@ -367,7 +367,7 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data de pagamento do DAR (AAAA-MM-DD)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDPag($value = NULL)

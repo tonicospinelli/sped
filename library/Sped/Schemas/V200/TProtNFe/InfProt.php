@@ -45,7 +45,7 @@ class InfProt extends \Sped\Components\Xml\Element
      * Adiciona Identificação do Ambiente:<br />
      * 1 - Produção<br />
      * 2 - Homologação
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
     public function addTpAmb($value = NULL)
@@ -79,7 +79,7 @@ class InfProt extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Versão do Aplicativo que processou a NF-e
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TVerAplic 
      */
     public function addVerAplic($value = NULL)
@@ -111,7 +111,7 @@ class InfProt extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Chaves de acesso da NF-e, compostas por: UF do emitente, AAMM da emissão da NFe, CNPJ do emitente, modelo, série e número da NF-e e código numérico+DV.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TChNFe 
      */
     public function addChNFe($value = NULL)
@@ -143,7 +143,7 @@ class InfProt extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data e hora de processamento, no formato AAAA-MM-DDTHH:MM:SS. Deve ser preenchida com data e hora da gravação no Banco em caso de Confirmação. Em caso de Rejeição, com data e hora do recebimento do Lote de NF-e enviado.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Components\Xml\Element 
      */
     public function addDhRecbto($value = NULL)
@@ -175,7 +175,7 @@ class InfProt extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do Protocolo de Status da NF-e. 1 posição (1 – Secretaria de Fazenda Estadual 2 – Receita Federal); 2 - códiga da UF - 2 posições ano; 10 seqüencial no ano.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TProt 
      */
     public function addNProt($value = NULL)
@@ -207,7 +207,7 @@ class InfProt extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Digest Value da NF-e processada. Utilizado para conferir a integridade da NF-e original.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\DigestValueType 
      */
     public function addDigVal($value = NULL)
@@ -239,7 +239,7 @@ class InfProt extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do status da mensagem enviada.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TStat 
      */
     public function addCStat($value = NULL)
@@ -271,7 +271,7 @@ class InfProt extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Descrição literal do status do serviço solicitado.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TMotivo 
      */
     public function addXMotivo($value = NULL)

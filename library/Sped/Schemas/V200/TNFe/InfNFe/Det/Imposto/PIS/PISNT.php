@@ -42,7 +42,7 @@ class PISNT extends \Sped\Components\Xml\Element
      * 07 - Operação Isenta da contribuição;<br />
      * 08 - Operação Sem Incidência da contribuição;<br />
      * 09 - Operação com suspensão da contribuição;
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISNT\CST 
      */
     public function addCST($value = NULL)

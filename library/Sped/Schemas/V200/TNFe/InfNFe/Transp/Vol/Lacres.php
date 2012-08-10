@@ -27,7 +27,7 @@ class Lacres extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número dos Lacres
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres\NLacre 
      */
     public function addNLacre($value = NULL)

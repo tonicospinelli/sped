@@ -31,7 +31,7 @@ class Dup extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número da duplicata
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup 
      */
     public function addNDup($value = NULL)
@@ -63,7 +63,7 @@ class Dup extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data de vencimento da duplicata (AAAA-MM-DD)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDVenc($value = NULL)
@@ -95,7 +95,7 @@ class Dup extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da duplicata
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVDup($value = NULL)

@@ -35,7 +35,7 @@ class PISST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do PIS ST
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVBC($value = NULL)
@@ -67,7 +67,7 @@ class PISST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do PIS ST (em percentual)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPPIS($value = NULL)
@@ -99,7 +99,7 @@ class PISST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade Vendida 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
     public function addQBCProd($value = NULL)
@@ -131,7 +131,7 @@ class PISST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do PIS ST (em reais)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1104Opc 
      */
     public function addVAliqProd($value = NULL)
@@ -163,7 +163,7 @@ class PISST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do PIS ST
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVPIS($value = NULL)

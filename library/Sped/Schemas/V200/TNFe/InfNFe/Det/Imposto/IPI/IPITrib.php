@@ -49,7 +49,7 @@ class IPITrib extends \Sped\Components\Xml\Element
      * 49 - Outras entradas<br />
      * 50-Saída tributada<br />
      * 99-Outras saídas
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\IPITrib\CST 
      */
     public function addCST($value = NULL)
@@ -85,7 +85,7 @@ class IPITrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do IPI
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -117,7 +117,7 @@ class IPITrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do IPI
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPIPI($value = NULL)
@@ -149,7 +149,7 @@ class IPITrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade total na unidade padrão para tributação 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function addQUnid($value = NULL)
@@ -181,7 +181,7 @@ class IPITrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor por Unidade Tributável. Informar o valor do imposto Pauta por unidade de medida.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1104 
      */
     public function addVUnid($value = NULL)
@@ -213,7 +213,7 @@ class IPITrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do IPI
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVIPI($value = NULL)

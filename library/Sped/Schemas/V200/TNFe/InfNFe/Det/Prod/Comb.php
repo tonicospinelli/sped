@@ -40,7 +40,7 @@ class Comb extends \Sped\Components\Xml\Element
      * Adiciona Código de produto da ANP. Utilizar a codificação de produtos do Sistema de Informações de Movimentação de produtos - SIMP(http://www.anp.gov.br/simp/index.h<br />
      * tm), somente informar 999999999 quando não se tratar  de produtos não regulados pela ANP -<br />
      * Agência Nacional do Petróleo.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CProdANP 
      */
     public function addCProdANP($value = NULL)
@@ -86,7 +86,7 @@ class Comb extends \Sped\Components\Xml\Element
      * Controle do Diferimento do Imposto<br />
      * nas Operações com AEAC - Álcool<br />
      * Etílico Anidro Combustível).
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      */
     public function addCODIF($value = NULL)
@@ -136,7 +136,7 @@ class Comb extends \Sped\Components\Xml\Element
      * qCom (I10) tiver sido ajustada para<br />
      * uma temperatura diferente da<br />
      * ambiente.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
     public function addQTemp($value = NULL)
@@ -174,7 +174,7 @@ class Comb extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Sigla da UF de Consumo
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function addUFCons($value = NULL)

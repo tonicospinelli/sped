@@ -31,7 +31,7 @@ class CIDE extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona BC do CIDE ( Quantidade comercializada) 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function addQBCProd($value = NULL)
@@ -63,7 +63,7 @@ class CIDE extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do CIDE  (em reais)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1104 
      */
     public function addVAliqProd($value = NULL)
@@ -95,7 +95,7 @@ class CIDE extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do CIDE
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCIDE($value = NULL)

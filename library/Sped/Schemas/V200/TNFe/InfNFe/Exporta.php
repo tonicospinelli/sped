@@ -29,7 +29,7 @@ class Exporta extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Sigla da UF onde ocorrerá o embarque dos produtos
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function addUFEmbarq($value = NULL)
@@ -61,7 +61,7 @@ class Exporta extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Local onde ocorrerá o embarque dos produtos
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta\XLocEmbarq 
      */
     public function addXLocEmbarq($value = NULL)

@@ -47,7 +47,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Logradouro
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEndereco\XLgr 
      */
     public function addXLgr($value = NULL)
@@ -79,7 +79,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEndereco\Nro 
      */
     public function addNro($value = NULL)
@@ -111,7 +111,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Complemento
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEndereco\XCpl 
      */
     public function addXCpl($value = NULL)
@@ -143,7 +143,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Bairro
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEndereco\XBairro 
      */
     public function addXBairro($value = NULL)
@@ -175,7 +175,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do município (utilizar a tabela do IBGE), informar 9999999 para operações com o exterior.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMun($value = NULL)
@@ -207,7 +207,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Nome do município, informar EXTERIOR para operações com o exterior.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEndereco\XMun 
      */
     public function addXMun($value = NULL)
@@ -239,7 +239,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Sigla da UF, informar EX para operações com o exterior.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function addUF($value = NULL)
@@ -271,7 +271,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CEP
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEndereco\CEP 
      */
     public function addCEP($value = NULL)
@@ -303,7 +303,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do país
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Tpais 
      */
     public function addCPais($value = NULL)
@@ -335,7 +335,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Nome do país
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEndereco\XPais 
      */
     public function addXPais($value = NULL)
@@ -367,7 +367,7 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Telefone, preencher com Código DDD + número do telefone , nas operações com exterior é permtido informar o código do país + código da localidade + número do telefone
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEndereco\Fone 
      */
     public function addFone($value = NULL)

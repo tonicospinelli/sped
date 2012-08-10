@@ -53,7 +53,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona BC do ICMS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -85,7 +85,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total do ICMS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMS($value = NULL)
@@ -117,7 +117,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona BC do ICMS ST
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCST($value = NULL)
@@ -149,7 +149,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total do ICMS ST
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVST($value = NULL)
@@ -181,7 +181,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total dos produtos e serviços
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVProd($value = NULL)
@@ -213,7 +213,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total do Frete
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVFrete($value = NULL)
@@ -245,7 +245,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total do Seguro
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVSeg($value = NULL)
@@ -277,7 +277,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total do Desconto
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVDesc($value = NULL)
@@ -309,7 +309,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total do II
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVII($value = NULL)
@@ -341,7 +341,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total do IPI
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVIPI($value = NULL)
@@ -373,7 +373,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do PIS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVPIS($value = NULL)
@@ -405,7 +405,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do COFINS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCOFINS($value = NULL)
@@ -437,7 +437,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Outras Despesas acessórias
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVOutro($value = NULL)
@@ -469,7 +469,7 @@ class ICMSTot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total da NF-e
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVNF($value = NULL)

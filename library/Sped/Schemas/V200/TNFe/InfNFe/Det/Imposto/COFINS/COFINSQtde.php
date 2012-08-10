@@ -36,7 +36,7 @@ class COFINSQtde extends \Sped\Components\Xml\Element
     /**
      * Adiciona Código de Situação Tributária do COFINS.<br />
      * 03 - Operação Tributável - Base de Calculo = Quantidade Vendida x Alíquota por Unidade de Produto;
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSQtde\CST 
      */
     public function addCST($value = NULL)
@@ -69,7 +69,7 @@ class COFINSQtde extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade Vendida (NT2011/004)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1204 
      */
     public function addQBCProd($value = NULL)
@@ -101,7 +101,7 @@ class COFINSQtde extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do COFINS (em reais) (NT2011/004)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function addVAliqProd($value = NULL)
@@ -133,7 +133,7 @@ class COFINSQtde extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do COFINS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCOFINS($value = NULL)

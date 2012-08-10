@@ -41,7 +41,7 @@ class RefNFP extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código da UF do emitente do Documento FiscalUtilizar a Tabela do IBGE (Anexo IV - Tabela de UF, Município e País) (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function addCUF($value = NULL)
@@ -73,7 +73,7 @@ class RefNFP extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona AAMM da emissão da NF de produtor (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\AAMM 
      */
     public function addAAMM($value = NULL)
@@ -105,7 +105,7 @@ class RefNFP extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CNPJ do emitente da NF de produtor (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function addCNPJ($value = NULL)
@@ -137,7 +137,7 @@ class RefNFP extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CPF do emitente da NF de produtor (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function addCPF($value = NULL)
@@ -169,7 +169,7 @@ class RefNFP extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona IE do emitente da NF de Produtor (v2.0))
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TIeDest 
      */
     public function addIE($value = NULL)
@@ -201,7 +201,7 @@ class RefNFP extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do modelo do Documento Fiscal - utilizar 04 para NF de produtor  ou 01 para NF Avulsa(v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNFP\Mod 
      */
     public function addMod($value = NULL)
@@ -233,7 +233,7 @@ class RefNFP extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Série do Documento Fiscal, informar zero se inexistentesérie (v2.0).
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TSerie 
      */
     public function addSerie($value = NULL)
@@ -265,7 +265,7 @@ class RefNFP extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do Documento Fiscal - 1 – 999999999 - (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNF 
      */
     public function addNNF($value = NULL)

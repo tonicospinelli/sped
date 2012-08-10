@@ -43,7 +43,7 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CNPJ
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCnpjOpc 
      */
     public function addCNPJ($value = NULL)
@@ -75,7 +75,7 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CPF (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function addCPF($value = NULL)
@@ -107,7 +107,7 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Logradouro
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TLocal\XLgr 
      */
     public function addXLgr($value = NULL)
@@ -139,7 +139,7 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TLocal\Nro 
      */
     public function addNro($value = NULL)
@@ -171,7 +171,7 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Complemento
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TLocal\XCpl 
      */
     public function addXCpl($value = NULL)
@@ -203,7 +203,7 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Bairro
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TLocal\XBairro 
      */
     public function addXBairro($value = NULL)
@@ -235,7 +235,7 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do município (utilizar a tabela do IBGE)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMun($value = NULL)
@@ -267,7 +267,7 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Nome do município
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TLocal\XMun 
      */
     public function addXMun($value = NULL)
@@ -299,7 +299,7 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Sigla da UF
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function addUF($value = NULL)

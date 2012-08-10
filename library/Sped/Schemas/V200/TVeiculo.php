@@ -31,7 +31,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Placa do veículo (NT2011/004)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TVeiculo\Placa 
      */
     public function addPlaca($value = NULL)
@@ -63,7 +63,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Sigla da UF
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function addUF($value = NULL)
@@ -95,7 +95,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Registro Nacional de Transportador de Carga (ANTT)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TVeiculo\RNTC 
      */
     public function addRNTC($value = NULL)

@@ -31,7 +31,7 @@ class ProcRef extends \Sped\Components\Xml\Element
     /**
      * Adiciona Indentificador do processo ou ato<br />
      * concessório
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\NProc 
      */
     public function addNProc($value = NULL)
@@ -74,7 +74,7 @@ class ProcRef extends \Sped\Components\Xml\Element
      * 2 - Justiça Estadual;<br />
      * 3 - Secex/RFB;<br />
      * 9 - Outros
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef\IndProc 
      */
     public function addIndProc($value = NULL)

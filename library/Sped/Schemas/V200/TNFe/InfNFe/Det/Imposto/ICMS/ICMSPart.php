@@ -62,7 +62,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
      * 1 - Estrangeira - Importação direta <br />
      * 2 - Estrangeira - Adquirida no mercado interno <br />
      * (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL)
@@ -101,7 +101,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
      * Adiciona Tributação pelo ICMS <br />
      * 10 - Tributada e com cobrança do ICMS por substituição tributária;<br />
      * 90 – Outros.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSPart\CST 
      */
     public function addCST($value = NULL)
@@ -143,7 +143,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
      * 1 - Pauta (valor);<br />
      * 2 - Preço Tabelado Máximo (valor);<br />
      * 3 - Valor da Operação. (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSPart\ModBC 
      */
     public function addModBC($value = NULL)
@@ -179,7 +179,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do ICMS (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -211,7 +211,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Percentual de redução da BC (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPRedBC($value = NULL)
@@ -243,7 +243,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do ICMS (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPICMS($value = NULL)
@@ -275,7 +275,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do ICMS (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMS($value = NULL)
@@ -319,7 +319,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
      * 3 - Lista Neutra (valor);<br />
      * 4 - Margem Valor Agregado (%);<br />
      * 5 - Pauta (valor). (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSPart\ModBCST 
      */
     public function addModBCST($value = NULL)
@@ -357,7 +357,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Percentual da Margem de Valor Adicionado ICMS ST (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPMVAST($value = NULL)
@@ -389,7 +389,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Percentual de redução da BC ICMS ST (v2.0) 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPRedBCST($value = NULL)
@@ -421,7 +421,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do ICMS ST (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCST($value = NULL)
@@ -453,7 +453,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do ICMS ST (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPICMSST($value = NULL)
@@ -485,7 +485,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do ICMS ST (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSST($value = NULL)
@@ -517,7 +517,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Percentual para determinação do valor  da Base de Cálculo da operação própria. (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPBCOp($value = NULL)
@@ -549,7 +549,7 @@ class ICMSPart extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Sigla da UF para qual é devido o ICMS ST da operação. (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TUf 
      */
     public function addUFST($value = NULL)

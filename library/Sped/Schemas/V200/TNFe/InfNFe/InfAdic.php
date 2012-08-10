@@ -35,7 +35,7 @@ class InfAdic extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informações adicionais de interesse do Fisco (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
      */
     public function addInfAdFisco($value = NULL)
@@ -67,7 +67,7 @@ class InfAdic extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informações complementares de interesse do Contribuinte
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
      */
     public function addInfCpl($value = NULL)

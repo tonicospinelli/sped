@@ -39,7 +39,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
      * 1 - Estrangeira - Importação direta <br />
      * 2 - Estrangeira - Adquirida no mercado interno <br />
      * (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL)
@@ -74,7 +74,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona 101- Tributada pelo Simples Nacional com permissão de crédito. (v.2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN101\CSOSN 
      */
     public function addCSOSN($value = NULL)
@@ -106,7 +106,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota aplicável de cálculo do crédito (Simples Nacional). (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPCredSN($value = NULL)
@@ -138,7 +138,7 @@ class ICMSSN101 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor crédito do ICMS que pode ser aproveitado nos termos do art. 23 da LC 123 (Simples Nacional) (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCredICMSSN($value = NULL)

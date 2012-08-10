@@ -177,7 +177,7 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Identificação do Local de Retirada (informar apenas quando for diferente do endereço do remetente)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TLocal 
      */
     public function addRetirada($value = NULL)
@@ -209,7 +209,7 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Identificação do Local de Entrega (informar apenas quando for diferente do endereço do destinatário)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TLocal 
      */
     public function addEntrega($value = NULL)

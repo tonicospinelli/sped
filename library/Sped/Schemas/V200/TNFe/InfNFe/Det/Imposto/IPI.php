@@ -39,7 +39,7 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Classe de Enquadramento do IPI para Cigarros e Bebidas
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq 
      */
     public function addClEnq($value = NULL)
@@ -71,7 +71,7 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CNPJ do produtor da mercadoria, quando diferente do emitente. Somente para os casos de exportação direta ou indireta.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function addCNPJProd($value = NULL)
@@ -103,7 +103,7 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do selo de controle do IPI 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo 
      */
     public function addCSelo($value = NULL)
@@ -135,7 +135,7 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade de selo de controle do IPI
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo 
      */
     public function addQSelo($value = NULL)
@@ -167,7 +167,7 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código de Enquadramento Legal do IPI (tabela a ser criada pela RFB)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CEnq 
      */
     public function addCEnq($value = NULL)

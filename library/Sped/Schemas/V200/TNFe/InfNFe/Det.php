@@ -93,7 +93,7 @@ class Det extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informações adicionais do produto (norma referenciada, informações complementares, etc)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
      */
     public function addInfAdProd($value = NULL)

@@ -27,7 +27,7 @@ class X509DataType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Components\Xml\Element 
      */
     public function addX509Certificate($value = NULL)

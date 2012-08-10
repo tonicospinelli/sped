@@ -49,7 +49,7 @@ class Transp extends \Sped\Components\Xml\Element
      * 1- Por conta do destinatário/remetente;<br />
      * 2- Por conta de terceiros;<br />
      * 9- Sem frete (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\ModFrete 
      */
     public function addModFrete($value = NULL)
@@ -147,7 +147,7 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Dados do veículo
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
     public function addVeicTransp($value = NULL)
@@ -179,7 +179,7 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Dados do reboque/Dolly (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
     public function addReboque($value = NULL)
@@ -211,7 +211,7 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Identificação do vagão (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
      */
     public function addVagao($value = NULL)
@@ -243,7 +243,7 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Identificação da balsa (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
      */
     public function addBalsa($value = NULL)

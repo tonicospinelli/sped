@@ -40,7 +40,7 @@ class DI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Numero do Documento de Importação DI/DSI/DA/DRI-E (DI/DSI/DA/DRI-E) (NT2011/004)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\NDI 
      */
     public function addNDI($value = NULL)
@@ -72,7 +72,7 @@ class DI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data de registro da DI/DSI/DA (AAAA-MM-DD)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDDI($value = NULL)
@@ -104,7 +104,7 @@ class DI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Local do desembaraço aduaneiro
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\XLocDesemb 
      */
     public function addXLocDesemb($value = NULL)
@@ -136,7 +136,7 @@ class DI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona UF onde ocorreu o desembaraço aduaneiro
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TUfEmi 
      */
     public function addUFDesemb($value = NULL)
@@ -168,7 +168,7 @@ class DI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data do desembaraço aduaneiro (AAAA-MM-DD)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDDesemb($value = NULL)
@@ -200,7 +200,7 @@ class DI extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do exportador (usado nos sistemas internos de informação do emitente da NF-e)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\CExportador 
      */
     public function addCExportador($value = NULL)

@@ -35,7 +35,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total dos Serviços sob não-incidência ou não tributados pelo ICMS 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVServ($value = NULL)
@@ -67,7 +67,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Base de Cálculo do ISS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVBC($value = NULL)
@@ -99,7 +99,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total do ISS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVISS($value = NULL)
@@ -131,7 +131,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do PIS sobre serviços
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVPIS($value = NULL)
@@ -163,7 +163,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do COFINS sobre serviços
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVCOFINS($value = NULL)

@@ -51,7 +51,7 @@ class ICMSSN201 extends \Sped\Components\Xml\Element
      * 0 – Nacional;<br />
      * 1 – Estrangeira – Importação direta;<br />
      * 2 – Estrangeira – Adquirida no mercado interno. (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL)
@@ -86,7 +86,7 @@ class ICMSSN201 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona 201- Tributada pelo Simples Nacional com permissão de crédito e com cobrança do ICMS por Substituição Tributária (v.2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN201\CSOSN 
      */
     public function addCSOSN($value = NULL)
@@ -130,7 +130,7 @@ class ICMSSN201 extends \Sped\Components\Xml\Element
      * 3 - Lista Neutra (valor);<br />
      * 4 - Margem Valor Agregado (%);<br />
      * 5 - Pauta (valor). (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN201\ModBCST 
      */
     public function addModBCST($value = NULL)
@@ -168,7 +168,7 @@ class ICMSSN201 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Percentual da Margem de Valor Adicionado ICMS ST (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPMVAST($value = NULL)
@@ -200,7 +200,7 @@ class ICMSSN201 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Percentual de redução da BC ICMS ST  (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPRedBCST($value = NULL)
@@ -232,7 +232,7 @@ class ICMSSN201 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do ICMS ST (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCST($value = NULL)
@@ -264,7 +264,7 @@ class ICMSSN201 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do ICMS ST (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPICMSST($value = NULL)
@@ -296,7 +296,7 @@ class ICMSSN201 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do ICMS ST (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSST($value = NULL)
@@ -328,7 +328,7 @@ class ICMSSN201 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota aplicável de cálculo do crédito (Simples Nacional). (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPCredSN($value = NULL)
@@ -360,7 +360,7 @@ class ICMSSN201 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor crédito do ICMS que pode ser aproveitado nos termos do art. 23 da LC 123 (Simples Nacional) (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCredICMSSN($value = NULL)

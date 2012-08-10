@@ -39,7 +39,7 @@ class PISAliq extends \Sped\Components\Xml\Element
      * Adiciona Código de Situação Tributária do PIS.<br />
      * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
      * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PIS\PISAliq\CST 
      */
     public function addCST($value = NULL)
@@ -73,7 +73,7 @@ class PISAliq extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do PIS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -105,7 +105,7 @@ class PISAliq extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do PIS (em percentual)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPPIS($value = NULL)
@@ -137,7 +137,7 @@ class PISAliq extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do PIS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVPIS($value = NULL)

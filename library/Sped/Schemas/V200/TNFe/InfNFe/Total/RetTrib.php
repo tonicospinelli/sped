@@ -39,7 +39,7 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Retido de PIS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVRetPIS($value = NULL)
@@ -71,7 +71,7 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Retido de COFINS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVRetCOFINS($value = NULL)
@@ -103,7 +103,7 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Retido de CSLL
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVRetCSLL($value = NULL)
@@ -135,7 +135,7 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Base de Cálculo do IRRF
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVBCIRRF($value = NULL)
@@ -167,7 +167,7 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Retido de IRRF
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVIRRF($value = NULL)
@@ -199,7 +199,7 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Base de Cálculo da Retenção da Previdêncica Social
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVBCRetPrev($value = NULL)
@@ -231,7 +231,7 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da Retenção da Previdêncica Social
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVRetPrev($value = NULL)

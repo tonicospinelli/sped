@@ -35,7 +35,7 @@ class ICMSSN102 extends \Sped\Components\Xml\Element
      * 1 - Estrangeira - Importação direta <br />
      * 2 - Estrangeira - Adquirida no mercado interno <br />
      * (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL)
@@ -76,7 +76,7 @@ class ICMSSN102 extends \Sped\Components\Xml\Element
      * 103 – Isenção do ICMS  no Simples Nacional para faixa de receita bruta.<br />
      * 300 – Imune.<br />
      * 400 – Não tributda pelo Simples Nacional (v.2.0) (v.2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN102\CSOSN 
      */
     public function addCSOSN($value = NULL)

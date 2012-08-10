@@ -93,7 +93,7 @@ class SignedInfoType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\ReferenceType 
      */
     public function addReference($value = NULL)

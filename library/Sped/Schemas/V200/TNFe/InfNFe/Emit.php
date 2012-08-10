@@ -45,7 +45,7 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do CNPJ do emitente
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function addCNPJ($value = NULL)
@@ -77,7 +77,7 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do CPF do emitente
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function addCPF($value = NULL)
@@ -109,7 +109,7 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Razão Social ou Nome do emitente
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XNome 
      */
     public function addXNome($value = NULL)
@@ -141,7 +141,7 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Nome fantasia
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant 
      */
     public function addXFant($value = NULL)
@@ -173,7 +173,7 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Endereço do emitente
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEnderEmi 
      */
     public function addEnderEmit($value = NULL)
@@ -205,7 +205,7 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Inscrição Estadual
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TIe 
      */
     public function addIE($value = NULL)
@@ -237,7 +237,7 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Inscricao Estadual do Substituto Tributário
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TIeST 
      */
     public function addIEST($value = NULL)
@@ -269,7 +269,7 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Inscrição Municipal
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\IM 
      */
     public function addIM($value = NULL)
@@ -301,7 +301,7 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CNAE Fiscal
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CNAE 
      */
     public function addCNAE($value = NULL)
@@ -341,7 +341,7 @@ class Emit extends \Sped\Components\Xml\Element
      * 1 – Simples Nacional;<br />
      * 2 – Simples Nacional – excesso de sublimite de receita bruta;<br />
      * 3 – Regime Normal. (v2.0).
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\CRT 
      */
     public function addCRT($value = NULL)

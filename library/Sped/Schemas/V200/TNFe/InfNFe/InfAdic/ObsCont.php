@@ -29,7 +29,7 @@ class ObsCont extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont\XTexto 
      */
     public function addXTexto($value = NULL)

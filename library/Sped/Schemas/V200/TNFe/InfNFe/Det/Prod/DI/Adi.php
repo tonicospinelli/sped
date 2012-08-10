@@ -33,7 +33,7 @@ class Adi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número da Adição
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NAdicao 
      */
     public function addNAdicao($value = NULL)
@@ -65,7 +65,7 @@ class Adi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número seqüencial do item dentro da Adição
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\NSeqAdic 
      */
     public function addNSeqAdic($value = NULL)
@@ -97,7 +97,7 @@ class Adi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do fabricante estrangeiro (usado nos sistemas internos de informação do emitente da NF-e)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi\CFabricante 
      */
     public function addCFabricante($value = NULL)
@@ -129,7 +129,7 @@ class Adi extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do desconto do item da DI – adição
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVDescDI($value = NULL)

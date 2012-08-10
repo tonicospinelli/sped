@@ -29,7 +29,7 @@ class TNfeProc extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe 
      */
     public function addNFe($value = NULL)
@@ -61,7 +61,7 @@ class TNfeProc extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
     public function addProtNFe($value = NULL)

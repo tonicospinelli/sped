@@ -36,7 +36,7 @@ class COFINSST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do COFINS ST
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVBC($value = NULL)
@@ -68,7 +68,7 @@ class COFINSST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do COFINS ST(em percentual)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPCOFINS($value = NULL)
@@ -100,7 +100,7 @@ class COFINSST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade Vendida 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
     public function addQBCProd($value = NULL)
@@ -132,7 +132,7 @@ class COFINSST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do COFINS ST(em reais)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1104Opc 
      */
     public function addVAliqProd($value = NULL)
@@ -164,7 +164,7 @@ class COFINSST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do COFINS ST
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVCOFINS($value = NULL)

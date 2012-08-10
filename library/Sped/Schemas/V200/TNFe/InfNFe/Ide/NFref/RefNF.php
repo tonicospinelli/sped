@@ -37,7 +37,7 @@ class RefNF extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código da UF do emitente do Documento Fiscal. Utilizar a Tabela do IBGE.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function addCUF($value = NULL)
@@ -69,7 +69,7 @@ class RefNF extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona AAMM da emissão
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\AAMM 
      */
     public function addAAMM($value = NULL)
@@ -101,7 +101,7 @@ class RefNF extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona CNPJ do emitente do documento fiscal referenciado
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCnpj 
      */
     public function addCNPJ($value = NULL)
@@ -133,7 +133,7 @@ class RefNF extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do modelo do Documento Fiscal. Utilizar 01 para NF modelo 1/1A
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref\RefNF\Mod 
      */
     public function addMod($value = NULL)
@@ -165,7 +165,7 @@ class RefNF extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Série do Documento Fiscal, informar zero se inexistente
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TSerie 
      */
     public function addSerie($value = NULL)
@@ -197,7 +197,7 @@ class RefNF extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do Documento Fiscal
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNF 
      */
     public function addNNF($value = NULL)

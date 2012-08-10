@@ -37,7 +37,7 @@ class ISSQN extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do ISSQN
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -69,7 +69,7 @@ class ISSQN extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do ISSQN
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addVAliq($value = NULL)
@@ -101,7 +101,7 @@ class ISSQN extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da do ISSQN
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVISSQN($value = NULL)
@@ -133,7 +133,7 @@ class ISSQN extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informar o município de ocorrência do fato gerador do ISSQN. Utilizar a Tabela do IBGE (Anexo VII - Tabela de UF, Município e País). “Atenção, não vincular com os campos B12, C10 ou E10” v2.0
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMunFG($value = NULL)
@@ -165,7 +165,7 @@ class ISSQN extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informar o Item da lista de serviços da LC 116/03 em que se classifica o serviço.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCListServ 
      */
     public function addCListServ($value = NULL)
@@ -205,7 +205,7 @@ class ISSQN extends \Sped\Components\Xml\Element
      * R – RETIDA;<br />
      * S –SUBSTITUTA;<br />
      * I – ISENTA. (v.2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ISSQN\CSitTrib 
      */
     public function addCSitTrib($value = NULL)

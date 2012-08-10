@@ -39,7 +39,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
      * Adiciona Código de Situação Tributária do COFINS.<br />
      * 01 – Operação Tributável - Base de Cálculo = Valor da Operação Alíquota Normal (Cumulativo/Não Cumulativo);<br />
      * 02 - Operação Tributável - Base de Calculo = Valor da Operação (Alíquota Diferenciada);
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINS\COFINSAliq\CST 
      */
     public function addCST($value = NULL)
@@ -73,7 +73,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do COFINS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -105,7 +105,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do COFINS (em percentual)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPCOFINS($value = NULL)
@@ -137,7 +137,7 @@ class COFINSAliq extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do COFINS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCOFINS($value = NULL)

@@ -27,7 +27,7 @@ class TransformType extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Components\Xml\Element 
      */
     public function addXPath($value = NULL)

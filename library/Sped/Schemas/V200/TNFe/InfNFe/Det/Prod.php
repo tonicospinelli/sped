@@ -79,7 +79,7 @@ class Prod extends \Sped\Components\Xml\Element
     /**
      * Adiciona Código do produto ou serviço. Preencher com CFOP caso se trate de itens não relacionados com mercadorias/produto e que o contribuinte não possua codificação própria<br />
      * Formato ”CFOP9999”.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CProd 
      */
     public function addCProd($value = NULL)
@@ -112,7 +112,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona GTIN (Global Trade Item Number) do produto, antigo código EAN ou código de barras
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEAN 
      */
     public function addCEAN($value = NULL)
@@ -144,7 +144,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Descrição do produto ou serviço
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XProd 
      */
     public function addXProd($value = NULL)
@@ -176,7 +176,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código NCM (8 posições), será permitida a informação do gênero (posição do capítulo do NCM) quando a operação não for de comércio exterior (importação/exportação) ou o produto não seja tributado pelo IPI. Em caso de item de serviço ou item que não tenham produto (Ex. transferência de crédito, crédito do ativo imobilizado, etc.), informar o código 00 (zeros) (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NCM 
      */
     public function addNCM($value = NULL)
@@ -208,7 +208,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código EX TIPI (3 posições)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI 
      */
     public function addEXTIPI($value = NULL)
@@ -240,7 +240,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código Fiscal de Operações e Prestações
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCfop 
      */
     public function addCFOP($value = NULL)
@@ -272,7 +272,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Unidade comercial
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UCom 
      */
     public function addUCom($value = NULL)
@@ -304,7 +304,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade Comercial  do produto, alterado para aceitar de 0 a 4 casas decimais e 11 inteiros. (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function addQCom($value = NULL)
@@ -336,7 +336,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor unitário de comercialização  - alterado para aceitar 0 a 10 casas decimais e 11 inteiros (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addVUnCom($value = NULL)
@@ -368,7 +368,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor bruto do produto ou serviço.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVProd($value = NULL)
@@ -400,7 +400,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona GTIN (Global Trade Item Number) da unidade tributável, antigo código EAN ou código de barras
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\CEANTrib 
      */
     public function addCEANTrib($value = NULL)
@@ -432,7 +432,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Unidade Tributável
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\UTrib 
      */
     public function addUTrib($value = NULL)
@@ -464,7 +464,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade Tributável - alterado para aceitar de 0 a 4 casas decimais e 11 inteiros (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1104v 
      */
     public function addQTrib($value = NULL)
@@ -496,7 +496,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor unitário de tributação - - alterado para aceitar 0 a 10 casas decimais e 11 inteiros (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1110 
      */
     public function addVUnTrib($value = NULL)
@@ -528,7 +528,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total do Frete
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVFrete($value = NULL)
@@ -560,7 +560,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor Total do Seguro
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVSeg($value = NULL)
@@ -592,7 +592,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do Desconto
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVDesc($value = NULL)
@@ -624,7 +624,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Outras despesas acessórias - (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
     public function addVOutro($value = NULL)
@@ -662,7 +662,7 @@ class Prod extends \Sped\Components\Xml\Element
      * 0 – o valor do item (vProd) não compõe o valor total da NF-e (vProd)<br />
      * 1  – o valor do item (vProd) compõe o valor total da NF-e (vProd)<br />
      * (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\IndTot 
      */
     public function addIndTot($value = NULL)
@@ -731,7 +731,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona pedido de compra - Informação de interesse do emissor para controle do B2B. (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed 
      */
     public function addXPed($value = NULL)
@@ -763,7 +763,7 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do Item do Pedido de Compra - Identificação do número do item do pedido de Compra (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed 
      */
     public function addNItemPed($value = NULL)

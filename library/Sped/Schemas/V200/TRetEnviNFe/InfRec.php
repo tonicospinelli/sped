@@ -29,7 +29,7 @@ class InfRec extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do Recibo
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TRec 
      */
     public function addNRec($value = NULL)
@@ -61,7 +61,7 @@ class InfRec extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Tempo médio de resposta do serviço (em segundos) dos últimos 5 minutos
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TMed 
      */
     public function addTMed($value = NULL)

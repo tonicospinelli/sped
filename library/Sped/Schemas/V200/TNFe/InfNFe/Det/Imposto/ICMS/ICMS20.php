@@ -44,7 +44,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
      * Adiciona origem da mercadoria: 0 - Nacional <br />
      * 1 - Estrangeira - Importação direta <br />
      * 2 - Estrangeira - Adquirida no mercado interno 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL)
@@ -80,7 +80,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
     /**
      * Adiciona Tributção pelo ICMS<br />
      * 20 - Com redução de base de cálculo
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20\CST 
      */
     public function addCST($value = NULL)
@@ -121,7 +121,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
      * 1 - Pauta (valor);<br />
      * 2 - Preço Tabelado Máximo (valor);<br />
      * 3 - Valor da Operação.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS20\ModBC 
      */
     public function addModBC($value = NULL)
@@ -157,7 +157,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Percentual de redução da BC
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPRedBC($value = NULL)
@@ -189,7 +189,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do ICMS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -221,7 +221,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do ICMS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPICMS($value = NULL)
@@ -253,7 +253,7 @@ class ICMS20 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do ICMS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMS($value = NULL)

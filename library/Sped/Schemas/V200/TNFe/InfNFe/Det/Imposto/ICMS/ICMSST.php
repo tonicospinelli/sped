@@ -43,7 +43,7 @@ class ICMSST extends \Sped\Components\Xml\Element
      * 1 - Estrangeira - Importação direta <br />
      * 2 - Estrangeira - Adquirida no mercado interno <br />
      * (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL)
@@ -80,7 +80,7 @@ class ICMSST extends \Sped\Components\Xml\Element
     /**
      * Adiciona Tributção pelo ICMS<br />
      * 41-Não Tributado (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSST\CST 
      */
     public function addCST($value = NULL)
@@ -113,7 +113,7 @@ class ICMSST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informar o valor da BC do ICMS ST retido na UF remetente (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCSTRet($value = NULL)
@@ -145,7 +145,7 @@ class ICMSST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona  Informar o valor do ICMS ST retido na UF remetente (iv2.0))
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSSTRet($value = NULL)
@@ -177,7 +177,7 @@ class ICMSST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona  Informar o valor da BC do ICMS ST da UF destino (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCSTDest($value = NULL)
@@ -209,7 +209,7 @@ class ICMSST extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informar o valor da BC do ICMS ST da UF destino (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSSTDest($value = NULL)

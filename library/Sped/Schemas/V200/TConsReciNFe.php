@@ -33,7 +33,7 @@ class TConsReciNFe extends \Sped\Components\Xml\Element
      * Adiciona Identificação do Ambiente:<br />
      * 1 - Produção<br />
      * 2 - Homologação
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
     public function addTpAmb($value = NULL)
@@ -67,7 +67,7 @@ class TConsReciNFe extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do Recibo
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TRec 
      */
     public function addNRec($value = NULL)

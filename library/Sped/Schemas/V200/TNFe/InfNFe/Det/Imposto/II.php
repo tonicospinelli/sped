@@ -33,7 +33,7 @@ class II extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Base da BC do Imposto de Importação
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -65,7 +65,7 @@ class II extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor das despesas aduaneiras
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVDespAdu($value = NULL)
@@ -97,7 +97,7 @@ class II extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do Imposto de Importação
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVII($value = NULL)
@@ -129,7 +129,7 @@ class II extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do Imposto sobre Operações Financeiras
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVIOF($value = NULL)

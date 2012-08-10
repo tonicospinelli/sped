@@ -39,7 +39,7 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Quantidade de volumes transportados
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol 
      */
     public function addQVol($value = NULL)
@@ -71,7 +71,7 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Espécie dos volumes transportados
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp 
      */
     public function addEsp($value = NULL)
@@ -103,7 +103,7 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Marca dos volumes transportados
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca 
      */
     public function addMarca($value = NULL)
@@ -135,7 +135,7 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Numeração dos volumes transportados
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol 
      */
     public function addNVol($value = NULL)
@@ -167,7 +167,7 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Peso líquido (em kg)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1203 
      */
     public function addPesoL($value = NULL)
@@ -199,7 +199,7 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Peso bruto (em kg)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1203 
      */
     public function addPesoB($value = NULL)

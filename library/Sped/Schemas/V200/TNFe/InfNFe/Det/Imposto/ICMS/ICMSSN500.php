@@ -37,7 +37,7 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
      * Adiciona origem da mercadoria: 0 - Nacional <br />
      * 1 - Estrangeira - Importação direta <br />
      * 2 - Estrangeira - Adquirida no mercado interno 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL)
@@ -73,7 +73,7 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
     /**
      * Adiciona 500 – ICMS cobrado anterirmente por substituição tributária (substituído) ou por antecipação<br />
      * (v.2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN500\CSOSN 
      */
     public function addCSOSN($value = NULL)
@@ -106,7 +106,7 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do ICMS ST retido anteriormente (v2.0) 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCSTRet($value = NULL)
@@ -138,7 +138,7 @@ class ICMSSN500 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do ICMS ST retido anteriormente  (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSSTRet($value = NULL)

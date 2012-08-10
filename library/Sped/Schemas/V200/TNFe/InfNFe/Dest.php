@@ -39,7 +39,7 @@ class Dest extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do CNPJ
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCnpjOpc 
      */
     public function addCNPJ($value = NULL)
@@ -71,7 +71,7 @@ class Dest extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do CPF
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCpf 
      */
     public function addCPF($value = NULL)
@@ -103,7 +103,7 @@ class Dest extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Razão Social ou nome do destinatário
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\XNome 
      */
     public function addXNome($value = NULL)
@@ -135,7 +135,7 @@ class Dest extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Dados do endereço
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TEndereco 
      */
     public function addEnderDest($value = NULL)
@@ -167,7 +167,7 @@ class Dest extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Inscrição Estadual (obrigatório nas operações com contribuintes do ICMS)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TIeDest 
      */
     public function addIE($value = NULL)
@@ -199,7 +199,7 @@ class Dest extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Inscrição na SUFRAMA (Obrigatório nas operações com as áreas com benefícios de incentivos fiscais sob controle da SUFRAMA) PL_005d - 11/08/09 - alterado para aceitar 8 ou 9 dígitos
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF 
      */
     public function addISUF($value = NULL)
@@ -233,7 +233,7 @@ class Dest extends \Sped\Components\Xml\Element
     /**
      * Adiciona Informar o e-mail do destinatário. O campo pode ser utilizado para informar o e-mail<br />
      * de recepção da NF-e indicada pelo destinatário (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email 
      */
     public function addEmail($value = NULL)

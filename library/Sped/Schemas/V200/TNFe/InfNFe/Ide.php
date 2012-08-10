@@ -69,7 +69,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código da UF do emitente do Documento Fiscal. Utilizar a Tabela do IBGE.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodUfIBGE 
      */
     public function addCUF($value = NULL)
@@ -101,7 +101,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código numérico que compõe a Chave de Acesso. Número aleatório gerado pelo emitente para cada NF-e. (tamanho reduzido para 8 dígitos v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CNF 
      */
     public function addCNF($value = NULL)
@@ -133,7 +133,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Descrição da Natureza da Operação
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NatOp 
      */
     public function addNatOp($value = NULL)
@@ -171,7 +171,7 @@ class Ide extends \Sped\Components\Xml\Element
      * 0 – pagamento à vista;<br />
      * 1 – pagamento à prazo;<br />
      * 2 – outros.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\IndPag 
      */
     public function addIndPag($value = NULL)
@@ -206,7 +206,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do modelo do Documento Fiscal. Utilizar 55 para identificação da NF-e, emitida em substituição ao modelo 1 e 1A.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TMod 
      */
     public function addMod($value = NULL)
@@ -244,7 +244,7 @@ class Ide extends \Sped\Components\Xml\Element
      * série normal 0-889<br />
      * Avulsa Fisco 890-899<br />
      * SCAN 900-999
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TSerie 
      */
     public function addSerie($value = NULL)
@@ -279,7 +279,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Número do Documento Fiscal
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNF 
      */
     public function addNNF($value = NULL)
@@ -311,7 +311,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data de emissão do Documento Fiscal (AAAA-MM-DD)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDEmi($value = NULL)
@@ -343,7 +343,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Data de saída ou de entrada da mercadoria / produto (AAAA-MM-DD)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TData 
      */
     public function addDSaiEnt($value = NULL)
@@ -375,7 +375,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Hora de saída ou de entrada da mercadoria / produto (HH:MM:SS) (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TTime 
      */
     public function addHSaiEnt($value = NULL)
@@ -407,7 +407,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Tipo do Documento Fiscal (0 - entrada; 1 - saída)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpNF 
      */
     public function addTpNF($value = NULL)
@@ -439,7 +439,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Código do Município de Ocorrência do Fato Gerador (utilizar a tabela do IBGE)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TCodMunIBGE 
      */
     public function addCMunFG($value = NULL)
@@ -502,7 +502,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Formato de impressão do DANFE (1 - Retrato; 2 - Paisagem)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpImp 
      */
     public function addTpImp($value = NULL)
@@ -548,7 +548,7 @@ class Ide extends \Sped\Components\Xml\Element
      * 5 - Contingência FSDA<br />
      * 6 - Contingência SVC - AN<br />
      * 7 - Contingência SVC - RS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\TpEmis 
      */
     public function addTpEmis($value = NULL)
@@ -587,7 +587,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Digito Verificador da Chave de Acesso da NF-e
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\CDV 
      */
     public function addCDV($value = NULL)
@@ -623,7 +623,7 @@ class Ide extends \Sped\Components\Xml\Element
      * Adiciona Identificação do Ambiente:<br />
      * 1 - Produção<br />
      * 2 - Homologação
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TAmb 
      */
     public function addTpAmb($value = NULL)
@@ -663,7 +663,7 @@ class Ide extends \Sped\Components\Xml\Element
      * 1 - NFe normal<br />
      * 2 - NFe complementar<br />
      * 3 - NFe de ajuste
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TFinNFe 
      */
     public function addFinNFe($value = NULL)
@@ -708,7 +708,7 @@ class Ide extends \Sped\Components\Xml\Element
      * 2 - emissão de NF-e avulsa, pelo contribuinte com seu certificado digital, através do site<br />
      * do Fisco;<br />
      * 3- emissão de NF-e pelo contribuinte com aplicativo fornecido pelo Fisco.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TProcEmi 
      */
     public function addProcEmi($value = NULL)
@@ -747,7 +747,7 @@ class Ide extends \Sped\Components\Xml\Element
     /**
      * Adiciona versão do aplicativo utilizado no processo de<br />
      * emissão
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\VerProc 
      */
     public function addVerProc($value = NULL)
@@ -780,7 +780,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informar a data e hora de entrada em contingência contingência no formato AAAA-MM-DDTHH:MM:SS (v.2.0).
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\DhCont 
      */
     public function addDhCont($value = NULL)
@@ -812,7 +812,7 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Informar a Justificativa da entrada em (v.2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\XJust 
      */
     public function addXJust($value = NULL)

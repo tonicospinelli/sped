@@ -59,7 +59,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
      * Adiciona origem da mercadoria: 0 - Nacional <br />
      * 1 - Estrangeira - Importação direta <br />
      * 2 - Estrangeira - Adquirida no mercado interno 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\Torig 
      */
     public function addOrig($value = NULL)
@@ -93,7 +93,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Tributação pelo ICMS 900 - Outros(v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN900\CSOSN 
      */
     public function addCSOSN($value = NULL)
@@ -133,7 +133,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
      * 1 - Pauta (valor);<br />
      * 2 - Preço Tabelado Máximo (valor);<br />
      * 3 - Valor da Operação.
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN900\ModBC 
      */
     public function addModBC($value = NULL)
@@ -169,7 +169,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do ICMS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBC($value = NULL)
@@ -201,7 +201,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Percentual de redução da BC
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPRedBC($value = NULL)
@@ -233,7 +233,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do ICMS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPICMS($value = NULL)
@@ -265,7 +265,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do ICMS
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMS($value = NULL)
@@ -309,7 +309,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
      * 3 - Lista Neutra (valor);<br />
      * 4 - Margem Valor Agregado (%);<br />
      * 5 - Pauta (valor).
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMSSN900\ModBCST 
      */
     public function addModBCST($value = NULL)
@@ -347,7 +347,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Percentual da Margem de Valor Adicionado ICMS ST
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPMVAST($value = NULL)
@@ -379,7 +379,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Percentual de redução da BC ICMS ST 
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
     public function addPRedBCST($value = NULL)
@@ -411,7 +411,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor da BC do ICMS ST
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVBCST($value = NULL)
@@ -443,7 +443,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota do ICMS ST
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPICMSST($value = NULL)
@@ -475,7 +475,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor do ICMS ST
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVICMSST($value = NULL)
@@ -507,7 +507,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Alíquota aplicável de cálculo do crédito (Simples Nacional). (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
     public function addPCredSN($value = NULL)
@@ -539,7 +539,7 @@ class ICMSSN900 extends \Sped\Components\Xml\Element
 
     /**
      * Adiciona Valor crédito do ICMS que pode ser aproveitado nos termos do art. 23 da LC 123 (Simples Nacional) (v2.0)
-     * @param type $value 
+     * @param string $value 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
     public function addVCredICMSSN($value = NULL)
