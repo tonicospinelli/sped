@@ -59,7 +59,7 @@ class TituloEleitoral extends AbstractDocument
     public function setSecao($secao)
     {
         $secao = new \Sped\Commons\StringHelper($secao);
-        $this->secao = $secao->padLeft(0, 2)->getValue();
+        $this->secao = $secao->padLeft(0, 4)->getValue();
         return $this;
     }
 
@@ -80,23 +80,35 @@ class TituloEleitoral extends AbstractDocument
     public function setZona($zona)
     {
         $zona = new \Sped\Commons\StringHelper($zona);
-        $this->secao = $zona->padLeft(0, 2)->getValue();
+        $this->secao = $zona->padLeft(0, 3)->getValue();
         return $this;
     }
 
+    /**
+     * Retorna o tamanho de dígitos para o documento.
+     * @return int 
+     */
     public function getLength()
     {
         return 13;
     }
 
+    /**
+     * Retorna o número de dígitos que este documento possui.
+     * @return int 
+     */
     public function getDigitsCount()
     {
         return 2;
     }
 
+    /**
+     * Retorna o multiplicador máximo para este documento.
+     * @return int 
+     */
     public function getMaxMultiplier()
     {
-        return 9;
+        return 10;
     }
 
     /**
@@ -109,6 +121,43 @@ class TituloEleitoral extends AbstractDocument
         return parent::getValueUnMasked();
     }
 
+    /**
+     * Gera o dígito verificador a partir do número do titulo eleitoral.
+     * @return int 
+     */
+    public function generateVerifierDigit()
+    {
+        $coeficients = array(10, 9, 8, 7, 6, 5, 4, 3, 2, 4, 3);
+
+        $foundDv = 0;
+        $aux = $this->getValue()->substring(9, 2)->toInteger();
+        $sum = 0;
+        for ($i = 0; $i <= $this->getMaxMultiplier(); $i++) {
+            $digit = $this->getValue()->substring($i, 1)->toInteger();
+            $sum += $digit * $coeficients[$i];
+            if (($i == 8) || ($i == 10)) {
+                $sum %= 11;
+                if ($sum > 1) {
+                    $sum = 11 - $sum;
+                } else if ($aux <= 2)
+                    $sum = 1 - $sum;
+                else {
+                    $sum = 0;
+                }
+                if ($i == 8)
+                    $foundDv = $sum * 10;
+                else
+                    $foundDv += $sum;
+                $sum *= 2;
+            }
+        }
+        return $foundDv;
+    }
+
+    /**
+     * Verifica se o documento é válido.
+     * @return bool
+     */
     public function isValid()
     {
         return \Sped\Validation::tituloEleitoral()->validate($this);
