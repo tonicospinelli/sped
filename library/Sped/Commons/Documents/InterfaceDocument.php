@@ -44,11 +44,11 @@ interface InterfaceDocument
 
     public function getValueUnmasked();
 
-    public function getDigitVerifierPositions();
+    public function getVerifierDigitPositions();
 
-    public function getDigitVerifierPosition($index);
+    public function getVerifierDigitPosition($index);
 
     public function getBaseNumber();
 
-    public function getDigitVerifier();
+    public function generateVerifierDigit();
 }
