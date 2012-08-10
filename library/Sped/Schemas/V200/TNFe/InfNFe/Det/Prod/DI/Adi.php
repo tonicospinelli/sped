@@ -119,12 +119,13 @@ class Adi extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor do desconto do item da DI – adição
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVDescDI()
+    public function getVDescDI($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VDESCDI)->item(0);
+        return $this->getElementsByTagName(self::VDESCDI)->item($index);
     }
 
     /**

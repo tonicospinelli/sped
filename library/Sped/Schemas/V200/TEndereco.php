@@ -101,12 +101,13 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Complemento
+     * @param int $index 
      * @return \Sped\Schemas\V200\TEndereco\XCpl 
      */
-    public function getXCpl()
+    public function getXCpl($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XCpl');
-        return $this->getElementsByTagName(self::XCPL)->item(0);
+        return $this->getElementsByTagName(self::XCPL)->item($index);
     }
 
     /**
@@ -261,12 +262,13 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Retorna CEP
+     * @param int $index 
      * @return \Sped\Schemas\V200\TEndereco\CEP 
      */
-    public function getCEP()
+    public function getCEP($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\CEP');
-        return $this->getElementsByTagName(self::CEP)->item(0);
+        return $this->getElementsByTagName(self::CEP)->item($index);
     }
 
     /**
@@ -293,12 +295,13 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Código do país
+     * @param int $index 
      * @return \Sped\Schemas\V200\Tpais 
      */
-    public function getCPais()
+    public function getCPais($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Tpais');
-        return $this->getElementsByTagName(self::CPAIS)->item(0);
+        return $this->getElementsByTagName(self::CPAIS)->item($index);
     }
 
     /**
@@ -325,12 +328,13 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Nome do país
+     * @param int $index 
      * @return \Sped\Schemas\V200\TEndereco\XPais 
      */
-    public function getXPais()
+    public function getXPais($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XPais');
-        return $this->getElementsByTagName(self::XPAIS)->item(0);
+        return $this->getElementsByTagName(self::XPAIS)->item($index);
     }
 
     /**
@@ -357,12 +361,13 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Telefone, preencher com Código DDD + número do telefone , nas operações com exterior é permtido informar o código do país + código da localidade + número do telefone
+     * @param int $index 
      * @return \Sped\Schemas\V200\TEndereco\Fone 
      */
-    public function getFone()
+    public function getFone($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\Fone');
-        return $this->getElementsByTagName(self::FONE)->item(0);
+        return $this->getElementsByTagName(self::FONE)->item($index);
     }
 
     /**

@@ -101,12 +101,13 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Complemento
+     * @param int $index 
      * @return \Sped\Schemas\V200\TEnderEmi\XCpl 
      */
-    public function getXCpl()
+    public function getXCpl($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\XCpl');
-        return $this->getElementsByTagName(self::XCPL)->item(0);
+        return $this->getElementsByTagName(self::XCPL)->item($index);
     }
 
     /**
@@ -293,12 +294,13 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Código do país
+     * @param int $index 
      * @return \Sped\Schemas\V200\TEnderEmi\CPais 
      */
-    public function getCPais()
+    public function getCPais($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\CPais');
-        return $this->getElementsByTagName(self::CPAIS)->item(0);
+        return $this->getElementsByTagName(self::CPAIS)->item($index);
     }
 
     /**
@@ -325,12 +327,13 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Nome do país
+     * @param int $index 
      * @return \Sped\Schemas\V200\TEnderEmi\XPais 
      */
-    public function getXPais()
+    public function getXPais($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\XPais');
-        return $this->getElementsByTagName(self::XPAIS)->item(0);
+        return $this->getElementsByTagName(self::XPAIS)->item($index);
     }
 
     /**
@@ -357,12 +360,13 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Preencher com Código DDD + número do telefone (v.2.0)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TEnderEmi\Fone 
      */
-    public function getFone()
+    public function getFone($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\Fone');
-        return $this->getElementsByTagName(self::FONE)->item(0);
+        return $this->getElementsByTagName(self::FONE)->item($index);
     }
 
     /**

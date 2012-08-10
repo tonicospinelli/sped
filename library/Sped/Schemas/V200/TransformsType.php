@@ -17,12 +17,13 @@ class TransformsType extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param int $index 
      * @return \Sped\Schemas\V200\TransformType 
      */
-    public function getTransform()
+    public function getTransform($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TransformType');
-        return $this->getElementsByTagName(self::TRANSFORM)->item(0);
+        return $this->getElementsByTagName(self::TRANSFORM)->item($index);
     }
 
     /**

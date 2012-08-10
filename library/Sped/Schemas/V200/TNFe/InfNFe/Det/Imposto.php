@@ -62,12 +62,13 @@ class Imposto extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do IPI
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI 
      */
-    public function getIPI()
+    public function getIPI($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI');
-        return $this->getElementsByTagName(self::IPI)->item(0);
+        return $this->getElementsByTagName(self::IPI)->item($index);
     }
 
     /**
@@ -93,12 +94,13 @@ class Imposto extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do Imposto de Importação
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */
-    public function getII()
+    public function getII($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II');
-        return $this->getElementsByTagName(self::II)->item(0);
+        return $this->getElementsByTagName(self::II)->item($index);
     }
 
     /**
@@ -186,12 +188,13 @@ class Imposto extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do PIS Substituição Tributária
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
-    public function getPISST()
+    public function getPISST($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST');
-        return $this->getElementsByTagName(self::PISST)->item(0);
+        return $this->getElementsByTagName(self::PISST)->item($index);
     }
 
     /**
@@ -249,12 +252,13 @@ class Imposto extends \Sped\Components\Xml\Element
     /**
      * Retorna Dados do COFINS da<br />
      * Substituição Tributaria;
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
-    public function getCOFINSST()
+    public function getCOFINSST($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST');
-        return $this->getElementsByTagName(self::COFINSST)->item(0);
+        return $this->getElementsByTagName(self::COFINSST)->item($index);
     }
 
     /**

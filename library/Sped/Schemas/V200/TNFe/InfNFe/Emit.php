@@ -131,12 +131,13 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Nome fantasia
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant 
      */
-    public function getXFant()
+    public function getXFant($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant');
-        return $this->getElementsByTagName(self::XFANT)->item(0);
+        return $this->getElementsByTagName(self::XFANT)->item($index);
     }
 
     /**
@@ -227,12 +228,13 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Inscricao Estadual do Substituto Tributário
+     * @param int $index 
      * @return \Sped\Schemas\V200\TIeST 
      */
-    public function getIEST()
+    public function getIEST($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIeST');
-        return $this->getElementsByTagName(self::IEST)->item(0);
+        return $this->getElementsByTagName(self::IEST)->item($index);
     }
 
     /**

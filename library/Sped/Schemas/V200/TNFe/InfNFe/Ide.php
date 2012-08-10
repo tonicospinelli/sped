@@ -365,12 +365,13 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Hora de saída ou de entrada da mercadoria / produto (HH:MM:SS) (v2.0)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TTime 
      */
-    public function getHSaiEnt()
+    public function getHSaiEnt($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TTime');
-        return $this->getElementsByTagName(self::HSAIENT)->item(0);
+        return $this->getElementsByTagName(self::HSAIENT)->item($index);
     }
 
     /**
@@ -461,12 +462,13 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Grupo de infromações da NF referenciada
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref 
      */
-    public function getNFref()
+    public function getNFref($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Ide\NFref');
-        return $this->getElementsByTagName(self::NFREF)->item(0);
+        return $this->getElementsByTagName(self::NFREF)->item($index);
     }
 
     /**

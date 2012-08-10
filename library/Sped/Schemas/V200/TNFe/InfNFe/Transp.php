@@ -75,12 +75,13 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do transportador
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
-    public function getTransporta()
+    public function getTransporta($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta');
-        return $this->getElementsByTagName(self::TRANSPORTA)->item(0);
+        return $this->getElementsByTagName(self::TRANSPORTA)->item($index);
     }
 
     /**
@@ -106,12 +107,13 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados da retenção  ICMS do Transporte
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
-    public function getRetTransp()
+    public function getRetTransp($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp');
-        return $this->getElementsByTagName(self::RETTRANSP)->item(0);
+        return $this->getElementsByTagName(self::RETTRANSP)->item($index);
     }
 
     /**
@@ -137,12 +139,13 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do veículo
+     * @param int $index 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
-    public function getVeicTransp()
+    public function getVeicTransp($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
-        return $this->getElementsByTagName(self::VEICTRANSP)->item(0);
+        return $this->getElementsByTagName(self::VEICTRANSP)->item($index);
     }
 
     /**
@@ -169,12 +172,13 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do reboque/Dolly (v2.0)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
-    public function getReboque()
+    public function getReboque($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
-        return $this->getElementsByTagName(self::REBOQUE)->item(0);
+        return $this->getElementsByTagName(self::REBOQUE)->item($index);
     }
 
     /**
@@ -201,12 +205,13 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Identificação do vagão (v2.0)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
      */
-    public function getVagao()
+    public function getVagao($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao');
-        return $this->getElementsByTagName(self::VAGAO)->item(0);
+        return $this->getElementsByTagName(self::VAGAO)->item($index);
     }
 
     /**
@@ -233,12 +238,13 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Identificação da balsa (v2.0)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
      */
-    public function getBalsa()
+    public function getBalsa($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa');
-        return $this->getElementsByTagName(self::BALSA)->item(0);
+        return $this->getElementsByTagName(self::BALSA)->item($index);
     }
 
     /**
@@ -265,12 +271,13 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados dos volumes
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol 
      */
-    public function getVol()
+    public function getVol($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol');
-        return $this->getElementsByTagName(self::VOL)->item(0);
+        return $this->getElementsByTagName(self::VOL)->item($index);
     }
 
     /**

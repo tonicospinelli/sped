@@ -108,12 +108,13 @@ class ICMS51 extends \Sped\Components\Xml\Element
      * 1 - Pauta (valor);<br />
      * 2 - Preço Tabelado Máximo (valor);<br />
      * 3 - Valor da Operação.
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC 
      */
-    public function getModBC()
+    public function getModBC($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC');
-        return $this->getElementsByTagName(self::MODBC)->item(0);
+        return $this->getElementsByTagName(self::MODBC)->item($index);
     }
 
     /**
@@ -148,12 +149,13 @@ class ICMS51 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Percentual de redução da BC
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
-    public function getPRedBC()
+    public function getPRedBC($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
-        return $this->getElementsByTagName(self::PREDBC)->item(0);
+        return $this->getElementsByTagName(self::PREDBC)->item($index);
     }
 
     /**
@@ -180,12 +182,13 @@ class ICMS51 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor da BC do ICMS
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVBC()
+    public function getVBC($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(self::VBC)->item(0);
+        return $this->getElementsByTagName(self::VBC)->item($index);
     }
 
     /**
@@ -212,12 +215,13 @@ class ICMS51 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Alíquota do ICMS
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
-    public function getPICMS()
+    public function getPICMS($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
-        return $this->getElementsByTagName(self::PICMS)->item(0);
+        return $this->getElementsByTagName(self::PICMS)->item($index);
     }
 
     /**
@@ -244,12 +248,13 @@ class ICMS51 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor do ICMS
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVICMS()
+    public function getVICMS($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(self::VICMS)->item(0);
+        return $this->getElementsByTagName(self::VICMS)->item($index);
     }
 
     /**

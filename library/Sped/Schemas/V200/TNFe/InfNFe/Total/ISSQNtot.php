@@ -25,12 +25,13 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Total dos Serviços sob não-incidência ou não tributados pelo ICMS 
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVServ()
+    public function getVServ($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VSERV)->item(0);
+        return $this->getElementsByTagName(self::VSERV)->item($index);
     }
 
     /**
@@ -57,12 +58,13 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Base de Cálculo do ISS
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVBC()
+    public function getVBC($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VBC)->item(0);
+        return $this->getElementsByTagName(self::VBC)->item($index);
     }
 
     /**
@@ -89,12 +91,13 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Total do ISS
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVISS()
+    public function getVISS($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VISS)->item(0);
+        return $this->getElementsByTagName(self::VISS)->item($index);
     }
 
     /**
@@ -121,12 +124,13 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor do PIS sobre serviços
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVPIS()
+    public function getVPIS($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VPIS)->item(0);
+        return $this->getElementsByTagName(self::VPIS)->item($index);
     }
 
     /**
@@ -153,12 +157,13 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor do COFINS sobre serviços
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVCOFINS()
+    public function getVCOFINS($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VCOFINS)->item(0);
+        return $this->getElementsByTagName(self::VCOFINS)->item($index);
     }
 
     /**

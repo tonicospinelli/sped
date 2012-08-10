@@ -85,12 +85,13 @@ class TVeiculo extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Registro Nacional de Transportador de Carga (ANTT)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TVeiculo\RNTC 
      */
-    public function getRNTC()
+    public function getRNTC($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo\RNTC');
-        return $this->getElementsByTagName(self::RNTC)->item(0);
+        return $this->getElementsByTagName(self::RNTC)->item($index);
     }
 
     /**

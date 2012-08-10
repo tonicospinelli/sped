@@ -29,12 +29,13 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Quantidade de volumes transportados
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol 
      */
-    public function getQVol()
+    public function getQVol($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\QVol');
-        return $this->getElementsByTagName(self::QVOL)->item(0);
+        return $this->getElementsByTagName(self::QVOL)->item($index);
     }
 
     /**
@@ -61,12 +62,13 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Espécie dos volumes transportados
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp 
      */
-    public function getEsp()
+    public function getEsp($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Esp');
-        return $this->getElementsByTagName(self::ESP)->item(0);
+        return $this->getElementsByTagName(self::ESP)->item($index);
     }
 
     /**
@@ -93,12 +95,13 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Marca dos volumes transportados
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca 
      */
-    public function getMarca()
+    public function getMarca($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Marca');
-        return $this->getElementsByTagName(self::MARCA)->item(0);
+        return $this->getElementsByTagName(self::MARCA)->item($index);
     }
 
     /**
@@ -125,12 +128,13 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Numeração dos volumes transportados
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol 
      */
-    public function getNVol()
+    public function getNVol($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\NVol');
-        return $this->getElementsByTagName(self::NVOL)->item(0);
+        return $this->getElementsByTagName(self::NVOL)->item($index);
     }
 
     /**
@@ -157,12 +161,13 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Peso líquido (em kg)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1203 
      */
-    public function getPesoL()
+    public function getPesoL($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1203');
-        return $this->getElementsByTagName(self::PESOL)->item(0);
+        return $this->getElementsByTagName(self::PESOL)->item($index);
     }
 
     /**
@@ -189,12 +194,13 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Peso bruto (em kg)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1203 
      */
-    public function getPesoB()
+    public function getPesoB($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1203');
-        return $this->getElementsByTagName(self::PESOB)->item(0);
+        return $this->getElementsByTagName(self::PESOB)->item($index);
     }
 
     /**
@@ -221,12 +227,13 @@ class Vol extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Número dos Lacres
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres 
      */
-    public function getLacres()
+    public function getLacres($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vol\Lacres');
-        return $this->getElementsByTagName(self::LACRES)->item(0);
+        return $this->getElementsByTagName(self::LACRES)->item($index);
     }
 
     /**

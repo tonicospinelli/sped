@@ -105,12 +105,13 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Emissão de avulsa, informar os dados do Fisco emitente
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa 
      */
-    public function getAvulsa()
+    public function getAvulsa($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa');
-        return $this->getElementsByTagName(self::AVULSA)->item(0);
+        return $this->getElementsByTagName(self::AVULSA)->item($index);
     }
 
     /**
@@ -167,12 +168,13 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Identificação do Local de Retirada (informar apenas quando for diferente do endereço do remetente)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TLocal 
      */
-    public function getRetirada()
+    public function getRetirada($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TLocal');
-        return $this->getElementsByTagName(self::RETIRADA)->item(0);
+        return $this->getElementsByTagName(self::RETIRADA)->item($index);
     }
 
     /**
@@ -199,12 +201,13 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Identificação do Local de Entrega (informar apenas quando for diferente do endereço do destinatário)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TLocal 
      */
-    public function getEntrega()
+    public function getEntrega($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TLocal');
-        return $this->getElementsByTagName(self::ENTREGA)->item(0);
+        return $this->getElementsByTagName(self::ENTREGA)->item($index);
     }
 
     /**
@@ -231,12 +234,13 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados dos detalhes da NF-e
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det 
      */
-    public function getDet()
+    public function getDet($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det');
-        return $this->getElementsByTagName(self::DET)->item(0);
+        return $this->getElementsByTagName(self::DET)->item($index);
     }
 
     /**
@@ -245,7 +249,7 @@ class InfNFe extends \Sped\Components\Xml\Element
      */
     public function addDet()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det(self::DET, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det(self::DET, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -324,12 +328,13 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados da cobrança da NF-e
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr 
      */
-    public function getCobr()
+    public function getCobr($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr');
-        return $this->getElementsByTagName(self::COBR)->item(0);
+        return $this->getElementsByTagName(self::COBR)->item($index);
     }
 
     /**
@@ -355,12 +360,13 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informações adicionais da NF-e
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic 
      */
-    public function getInfAdic()
+    public function getInfAdic($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic');
-        return $this->getElementsByTagName(self::INFADIC)->item(0);
+        return $this->getElementsByTagName(self::INFADIC)->item($index);
     }
 
     /**
@@ -386,12 +392,13 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informações de exportação
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Exporta 
      */
-    public function getExporta()
+    public function getExporta($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Exporta');
-        return $this->getElementsByTagName(self::EXPORTA)->item(0);
+        return $this->getElementsByTagName(self::EXPORTA)->item($index);
     }
 
     /**
@@ -417,12 +424,13 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informações de compras  (Nota de Empenho, Pedido e Contrato)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra 
      */
-    public function getCompra()
+    public function getCompra($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra');
-        return $this->getElementsByTagName(self::COMPRA)->item(0);
+        return $this->getElementsByTagName(self::COMPRA)->item($index);
     }
 
     /**
@@ -448,12 +456,13 @@ class InfNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informações de registro aquisições de cana // v2.0
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana 
      */
-    public function getCana()
+    public function getCana($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana');
-        return $this->getElementsByTagName(self::CANA)->item(0);
+        return $this->getElementsByTagName(self::CANA)->item($index);
     }
 
     /**

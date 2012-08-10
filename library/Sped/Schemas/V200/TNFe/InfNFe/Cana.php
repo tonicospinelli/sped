@@ -99,12 +99,13 @@ class Cana extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Fornecimentos diários // v2.0
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia 
      */
-    public function getForDia()
+    public function getForDia($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia');
-        return $this->getElementsByTagName(self::FORDIA)->item(0);
+        return $this->getElementsByTagName(self::FORDIA)->item($index);
     }
 
     /**
@@ -113,7 +114,7 @@ class Cana extends \Sped\Components\Xml\Element
      */
     public function addForDia()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia(self::FORDIA, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cana\ForDia(self::FORDIA, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**
@@ -226,12 +227,13 @@ class Cana extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Deduções - Taxas e Contribuições // v2.0
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc 
      */
-    public function getDeduc()
+    public function getDeduc($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cana\Deduc');
-        return $this->getElementsByTagName(self::DEDUC)->item(0);
+        return $this->getElementsByTagName(self::DEDUC)->item($index);
     }
 
     /**

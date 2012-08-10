@@ -165,12 +165,13 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Telefone
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
      */
-    public function getFone()
+    public function getFone($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone');
-        return $this->getElementsByTagName(self::FONE)->item(0);
+        return $this->getElementsByTagName(self::FONE)->item($index);
     }
 
     /**
@@ -229,12 +230,13 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Número do Documento de Arrecadação de Receita
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
      */
-    public function getNDAR()
+    public function getNDAR($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR');
-        return $this->getElementsByTagName(self::NDAR)->item(0);
+        return $this->getElementsByTagName(self::NDAR)->item($index);
     }
 
     /**
@@ -261,12 +263,13 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Data de emissão do DAR (AAAA-MM-DD)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TData 
      */
-    public function getDEmi()
+    public function getDEmi($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
-        return $this->getElementsByTagName(self::DEMI)->item(0);
+        return $this->getElementsByTagName(self::DEMI)->item($index);
     }
 
     /**
@@ -293,12 +296,13 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Total constante no DAR
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVDAR()
+    public function getVDAR($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(self::VDAR)->item(0);
+        return $this->getElementsByTagName(self::VDAR)->item($index);
     }
 
     /**
@@ -357,12 +361,13 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Data de pagamento do DAR (AAAA-MM-DD)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TData 
      */
-    public function getDPag()
+    public function getDPag($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
-        return $this->getElementsByTagName(self::DPAG)->item(0);
+        return $this->getElementsByTagName(self::DPAG)->item($index);
     }
 
     /**

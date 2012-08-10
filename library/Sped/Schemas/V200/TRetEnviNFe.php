@@ -227,12 +227,13 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do Recibo do Lote
+     * @param int $index 
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
-    public function getInfRec()
+    public function getInfRec($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TRetEnviNFe\InfRec');
-        return $this->getElementsByTagName(self::INFREC)->item(0);
+        return $this->getElementsByTagName(self::INFREC)->item($index);
     }
 
     /**

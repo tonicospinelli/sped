@@ -21,12 +21,13 @@ class Dup extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Número da duplicata
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup 
      */
-    public function getNDup()
+    public function getNDup($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup');
-        return $this->getElementsByTagName(self::NDUP)->item(0);
+        return $this->getElementsByTagName(self::NDUP)->item($index);
     }
 
     /**
@@ -53,12 +54,13 @@ class Dup extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Data de vencimento da duplicata (AAAA-MM-DD)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TData 
      */
-    public function getDVenc()
+    public function getDVenc($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
-        return $this->getElementsByTagName(self::DVENC)->item(0);
+        return $this->getElementsByTagName(self::DVENC)->item($index);
     }
 
     /**
@@ -85,12 +87,13 @@ class Dup extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor da duplicata
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVDup()
+    public function getVDup($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VDUP)->item(0);
+        return $this->getElementsByTagName(self::VDUP)->item($index);
     }
 
     /**

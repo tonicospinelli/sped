@@ -83,12 +83,13 @@ class Det extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informações adicionais do produto (norma referenciada, informações complementares, etc)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
      */
-    public function getInfAdProd()
+    public function getInfAdProd($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd');
-        return $this->getElementsByTagName(self::INFADPROD)->item(0);
+        return $this->getElementsByTagName(self::INFADPROD)->item($index);
     }
 
     /**

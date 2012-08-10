@@ -21,12 +21,13 @@ class Compra extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informação da Nota de Empenho de compras públicas (NT2011/004)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      */
-    public function getXNEmp()
+    public function getXNEmp($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp');
-        return $this->getElementsByTagName(self::XNEMP)->item(0);
+        return $this->getElementsByTagName(self::XNEMP)->item($index);
     }
 
     /**
@@ -53,12 +54,13 @@ class Compra extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informação do pedido
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      */
-    public function getXPed()
+    public function getXPed($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed');
-        return $this->getElementsByTagName(self::XPED)->item(0);
+        return $this->getElementsByTagName(self::XPED)->item($index);
     }
 
     /**
@@ -85,12 +87,13 @@ class Compra extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informação do contrato
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      */
-    public function getXCont()
+    public function getXCont($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont');
-        return $this->getElementsByTagName(self::XCONT)->item(0);
+        return $this->getElementsByTagName(self::XCONT)->item($index);
     }
 
     /**

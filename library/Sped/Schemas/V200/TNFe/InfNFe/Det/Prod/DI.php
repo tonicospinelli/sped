@@ -222,12 +222,13 @@ class DI extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Adições (NT 2011/004)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi 
      */
-    public function getAdi()
+    public function getAdi($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi');
-        return $this->getElementsByTagName(self::ADI)->item(0);
+        return $this->getElementsByTagName(self::ADI)->item($index);
     }
 
     /**
@@ -236,7 +237,7 @@ class DI extends \Sped\Components\Xml\Element
      */
     public function addAdi()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi(self::ADI, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\DI\Adi(self::ADI, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

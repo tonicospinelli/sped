@@ -70,12 +70,13 @@ class Comb extends \Sped\Components\Xml\Element
      * Controle do Diferimento do Imposto<br />
      * nas Operações com AEAC - Álcool<br />
      * Etílico Anidro Combustível).
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      */
-    public function getCODIF()
+    public function getCODIF($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF');
-        return $this->getElementsByTagName(self::CODIF)->item(0);
+        return $this->getElementsByTagName(self::CODIF)->item($index);
     }
 
     /**
@@ -120,12 +121,13 @@ class Comb extends \Sped\Components\Xml\Element
      * qCom (I10) tiver sido ajustada para<br />
      * uma temperatura diferente da<br />
      * ambiente.
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
-    public function getQTemp()
+    public function getQTemp($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1204Opc');
-        return $this->getElementsByTagName(self::QTEMP)->item(0);
+        return $this->getElementsByTagName(self::QTEMP)->item($index);
     }
 
     /**
@@ -196,12 +198,13 @@ class Comb extends \Sped\Components\Xml\Element
 
     /**
      * Retorna CIDE Combustíveis
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
-    public function getCIDE()
+    public function getCIDE($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE');
-        return $this->getElementsByTagName(self::CIDE)->item(0);
+        return $this->getElementsByTagName(self::CIDE)->item($index);
     }
 
     /**

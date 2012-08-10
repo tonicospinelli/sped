@@ -29,12 +29,13 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Classe de Enquadramento do IPI para Cigarros e Bebidas
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq 
      */
-    public function getClEnq()
+    public function getClEnq($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq');
-        return $this->getElementsByTagName(self::CLENQ)->item(0);
+        return $this->getElementsByTagName(self::CLENQ)->item($index);
     }
 
     /**
@@ -61,12 +62,13 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Retorna CNPJ do produtor da mercadoria, quando diferente do emitente. Somente para os casos de exportação direta ou indireta.
+     * @param int $index 
      * @return \Sped\Schemas\V200\TCnpj 
      */
-    public function getCNPJProd()
+    public function getCNPJProd($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCnpj');
-        return $this->getElementsByTagName(self::CNPJPROD)->item(0);
+        return $this->getElementsByTagName(self::CNPJPROD)->item($index);
     }
 
     /**
@@ -93,12 +95,13 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Código do selo de controle do IPI 
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo 
      */
-    public function getCSelo()
+    public function getCSelo($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo');
-        return $this->getElementsByTagName(self::CSELO)->item(0);
+        return $this->getElementsByTagName(self::CSELO)->item($index);
     }
 
     /**
@@ -125,12 +128,13 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Quantidade de selo de controle do IPI
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo 
      */
-    public function getQSelo()
+    public function getQSelo($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo');
-        return $this->getElementsByTagName(self::QSELO)->item(0);
+        return $this->getElementsByTagName(self::QSELO)->item($index);
     }
 
     /**

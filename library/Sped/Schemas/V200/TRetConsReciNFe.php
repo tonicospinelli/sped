@@ -298,12 +298,13 @@ class TRetConsReciNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Protocolo de status resultado do processamento da NF-e
+     * @param int $index 
      * @return \Sped\Schemas\V200\TProtNFe 
      */
-    public function getProtNFe()
+    public function getProtNFe($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TProtNFe');
-        return $this->getElementsByTagName(self::PROTNFE)->item(0);
+        return $this->getElementsByTagName(self::PROTNFE)->item($index);
     }
 
     /**

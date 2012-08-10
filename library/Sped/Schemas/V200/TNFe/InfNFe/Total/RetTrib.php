@@ -29,12 +29,13 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Retido de PIS
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVRetPIS()
+    public function getVRetPIS($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VRETPIS)->item(0);
+        return $this->getElementsByTagName(self::VRETPIS)->item($index);
     }
 
     /**
@@ -61,12 +62,13 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Retido de COFINS
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVRetCOFINS()
+    public function getVRetCOFINS($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VRETCOFINS)->item(0);
+        return $this->getElementsByTagName(self::VRETCOFINS)->item($index);
     }
 
     /**
@@ -93,12 +95,13 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Retido de CSLL
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVRetCSLL()
+    public function getVRetCSLL($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VRETCSLL)->item(0);
+        return $this->getElementsByTagName(self::VRETCSLL)->item($index);
     }
 
     /**
@@ -125,12 +128,13 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Base de Cálculo do IRRF
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVBCIRRF()
+    public function getVBCIRRF($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VBCIRRF)->item(0);
+        return $this->getElementsByTagName(self::VBCIRRF)->item($index);
     }
 
     /**
@@ -157,12 +161,13 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Retido de IRRF
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVIRRF()
+    public function getVIRRF($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VIRRF)->item(0);
+        return $this->getElementsByTagName(self::VIRRF)->item($index);
     }
 
     /**
@@ -189,12 +194,13 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Base de Cálculo da Retenção da Previdêncica Social
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVBCRetPrev()
+    public function getVBCRetPrev($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VBCRETPREV)->item(0);
+        return $this->getElementsByTagName(self::VBCRETPREV)->item($index);
     }
 
     /**
@@ -221,12 +227,13 @@ class RetTrib extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor da Retenção da Previdêncica Social
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVRetPrev()
+    public function getVRetPrev($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VRETPREV)->item(0);
+        return $this->getElementsByTagName(self::VRETPREV)->item($index);
     }
 
     /**

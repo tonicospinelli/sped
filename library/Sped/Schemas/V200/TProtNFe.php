@@ -50,12 +50,13 @@ class TProtNFe extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param int $index 
      * @return \Sped\Schemas\V200\SignatureType 
      */
-    public function getSignature()
+    public function getSignature($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
-        return $this->getElementsByTagName(self::SIGNATURE)->item(0);
+        return $this->getElementsByTagName(self::SIGNATURE)->item($index);
     }
 
     /**

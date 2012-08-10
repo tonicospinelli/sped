@@ -19,12 +19,13 @@ class Cobr extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados da fatura
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
-    public function getFat()
+    public function getFat($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat');
-        return $this->getElementsByTagName(self::FAT)->item(0);
+        return $this->getElementsByTagName(self::FAT)->item($index);
     }
 
     /**
@@ -50,12 +51,13 @@ class Cobr extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados das duplicatas NT 2011/004
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup 
      */
-    public function getDup()
+    public function getDup($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup');
-        return $this->getElementsByTagName(self::DUP)->item(0);
+        return $this->getElementsByTagName(self::DUP)->item($index);
     }
 
     /**

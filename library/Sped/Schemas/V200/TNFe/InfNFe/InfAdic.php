@@ -25,12 +25,13 @@ class InfAdic extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informações adicionais de interesse do Fisco (v2.0)
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
      */
-    public function getInfAdFisco()
+    public function getInfAdFisco($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco');
-        return $this->getElementsByTagName(self::INFADFISCO)->item(0);
+        return $this->getElementsByTagName(self::INFADFISCO)->item($index);
     }
 
     /**
@@ -57,12 +58,13 @@ class InfAdic extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informações complementares de interesse do Contribuinte
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
      */
-    public function getInfCpl()
+    public function getInfCpl($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl');
-        return $this->getElementsByTagName(self::INFCPL)->item(0);
+        return $this->getElementsByTagName(self::INFCPL)->item($index);
     }
 
     /**
@@ -91,12 +93,13 @@ class InfAdic extends \Sped\Components\Xml\Element
      * Retorna Campo de uso livre do contribuinte<br />
      * informar o nome do campo no atributo xCampo<br />
      * e o conteúdo do campo no xTexto
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont 
      */
-    public function getObsCont()
+    public function getObsCont($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsCont');
-        return $this->getElementsByTagName(self::OBSCONT)->item(0);
+        return $this->getElementsByTagName(self::OBSCONT)->item($index);
     }
 
     /**
@@ -128,12 +131,13 @@ class InfAdic extends \Sped\Components\Xml\Element
      * Retorna Campo de uso exclusivo do Fisco<br />
      * informar o nome do campo no atributo xCampo<br />
      * e o conteúdo do campo no xTexto
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco 
      */
-    public function getObsFisco()
+    public function getObsFisco($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ObsFisco');
-        return $this->getElementsByTagName(self::OBSFISCO)->item(0);
+        return $this->getElementsByTagName(self::OBSFISCO)->item($index);
     }
 
     /**
@@ -163,12 +167,13 @@ class InfAdic extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Grupo de informações do  processo referenciado
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef 
      */
-    public function getProcRef()
+    public function getProcRef($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\ProcRef');
-        return $this->getElementsByTagName(self::PROCREF)->item(0);
+        return $this->getElementsByTagName(self::PROCREF)->item($index);
     }
 
     /**

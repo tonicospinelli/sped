@@ -51,12 +51,13 @@ class TEnviNFe extends \Sped\Components\Xml\Element
 
     /**
      * 
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe 
      */
-    public function getNFe()
+    public function getNFe($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe');
-        return $this->getElementsByTagName(self::NFE)->item(0);
+        return $this->getElementsByTagName(self::NFE)->item($index);
     }
 
     /**
@@ -66,7 +67,7 @@ class TEnviNFe extends \Sped\Components\Xml\Element
      */
     public function addNFe($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe(self::NFE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
     }
 
     /**

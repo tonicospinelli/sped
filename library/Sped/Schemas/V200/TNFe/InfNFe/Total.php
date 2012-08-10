@@ -52,12 +52,13 @@ class Total extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Totais referentes ao ISSQN
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot 
      */
-    public function getISSQNtot()
+    public function getISSQNtot($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot');
-        return $this->getElementsByTagName(self::ISSQNTOT)->item(0);
+        return $this->getElementsByTagName(self::ISSQNTOT)->item($index);
     }
 
     /**
@@ -83,12 +84,13 @@ class Total extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Retenção de Tributos Federais
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib 
      */
-    public function getRetTrib()
+    public function getRetTrib($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib');
-        return $this->getElementsByTagName(self::RETTRIB)->item(0);
+        return $this->getElementsByTagName(self::RETTRIB)->item($index);
     }
 
     /**

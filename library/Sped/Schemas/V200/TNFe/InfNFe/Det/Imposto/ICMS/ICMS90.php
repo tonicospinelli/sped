@@ -191,12 +191,13 @@ class ICMS90 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Percentual de redução da BC
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function getPRedBC()
+    public function getPRedBC($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302Opc');
-        return $this->getElementsByTagName(self::PREDBC)->item(0);
+        return $this->getElementsByTagName(self::PREDBC)->item($index);
     }
 
     /**
@@ -337,12 +338,13 @@ class ICMS90 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Percentual da Margem de Valor Adicionado ICMS ST
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function getPMVAST()
+    public function getPMVAST($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302Opc');
-        return $this->getElementsByTagName(self::PMVAST)->item(0);
+        return $this->getElementsByTagName(self::PMVAST)->item($index);
     }
 
     /**
@@ -369,12 +371,13 @@ class ICMS90 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Percentual de redução da BC ICMS ST 
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function getPRedBCST()
+    public function getPRedBCST($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302Opc');
-        return $this->getElementsByTagName(self::PREDBCST)->item(0);
+        return $this->getElementsByTagName(self::PREDBCST)->item($index);
     }
 
     /**

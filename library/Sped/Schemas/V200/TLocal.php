@@ -161,12 +161,13 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Complemento
+     * @param int $index 
      * @return \Sped\Schemas\V200\TLocal\XCpl 
      */
-    public function getXCpl()
+    public function getXCpl($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TLocal\XCpl');
-        return $this->getElementsByTagName(self::XCPL)->item(0);
+        return $this->getElementsByTagName(self::XCPL)->item($index);
     }
 
     /**

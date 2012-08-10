@@ -23,12 +23,13 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Número da fatura
+     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      */
-    public function getNFat()
+    public function getNFat($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat');
-        return $this->getElementsByTagName(self::NFAT)->item(0);
+        return $this->getElementsByTagName(self::NFAT)->item($index);
     }
 
     /**
@@ -55,12 +56,13 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor original da fatura
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVOrig()
+    public function getVOrig($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VORIG)->item(0);
+        return $this->getElementsByTagName(self::VORIG)->item($index);
     }
 
     /**
@@ -87,12 +89,13 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor do desconto da fatura
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVDesc()
+    public function getVDesc($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VDESC)->item(0);
+        return $this->getElementsByTagName(self::VDESC)->item($index);
     }
 
     /**
@@ -119,12 +122,13 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor líquido da fatura
+     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVLiq()
+    public function getVLiq($index)
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VLIQ)->item(0);
+        return $this->getElementsByTagName(self::VLIQ)->item($index);
     }
 
     /**
