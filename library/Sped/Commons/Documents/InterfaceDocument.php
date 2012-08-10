@@ -44,10 +44,6 @@ interface InterfaceDocument
 
     public function getValueUnmasked();
 
-    public function getVerifierDigitPositions();
-
-    public function getVerifierDigitPosition($index);
-
     public function getBaseNumber();
 
     public function generateVerifierDigit();
