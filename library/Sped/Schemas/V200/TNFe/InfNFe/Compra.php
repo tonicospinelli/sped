@@ -21,13 +21,12 @@ class Compra extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informação da Nota de Empenho de compras públicas (NT2011/004)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp 
      */
-    public function getXNEmp($index)
+    public function getXNEmp()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp');
-        return $this->getElementsByTagName(self::XNEMP)->item($index);
+        return $this->getElementsByTagName(self::XNEMP)->item(0);
     }
 
     /**
@@ -37,7 +36,7 @@ class Compra extends \Sped\Components\Xml\Element
      */
     public function addXNEmp($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp(self::XNEMP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XNEmp(self::XNEMP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -54,13 +53,12 @@ class Compra extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informação do pedido
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed 
      */
-    public function getXPed($index)
+    public function getXPed()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed');
-        return $this->getElementsByTagName(self::XPED)->item($index);
+        return $this->getElementsByTagName(self::XPED)->item(0);
     }
 
     /**
@@ -70,7 +68,7 @@ class Compra extends \Sped\Components\Xml\Element
      */
     public function addXPed($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed(self::XPED, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XPed(self::XPED, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -87,13 +85,12 @@ class Compra extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informação do contrato
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont 
      */
-    public function getXCont($index)
+    public function getXCont()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont');
-        return $this->getElementsByTagName(self::XCONT)->item($index);
+        return $this->getElementsByTagName(self::XCONT)->item(0);
     }
 
     /**
@@ -103,7 +100,7 @@ class Compra extends \Sped\Components\Xml\Element
      */
     public function addXCont($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont(self::XCONT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Compra\XCont(self::XCONT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

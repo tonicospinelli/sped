@@ -21,13 +21,12 @@ class Dup extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Número da duplicata
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup 
      */
-    public function getNDup($index)
+    public function getNDup()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup');
-        return $this->getElementsByTagName(self::NDUP)->item($index);
+        return $this->getElementsByTagName(self::NDUP)->item(0);
     }
 
     /**
@@ -37,7 +36,7 @@ class Dup extends \Sped\Components\Xml\Element
      */
     public function addNDup($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup(self::NDUP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Dup\NDup(self::NDUP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -54,13 +53,12 @@ class Dup extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Data de vencimento da duplicata (AAAA-MM-DD)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TData 
      */
-    public function getDVenc($index)
+    public function getDVenc()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
-        return $this->getElementsByTagName(self::DVENC)->item($index);
+        return $this->getElementsByTagName(self::DVENC)->item(0);
     }
 
     /**
@@ -70,7 +68,7 @@ class Dup extends \Sped\Components\Xml\Element
      */
     public function addDVenc($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVENC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DVENC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -87,13 +85,12 @@ class Dup extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor da duplicata
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVDup($index)
+    public function getVDup()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VDUP)->item($index);
+        return $this->getElementsByTagName(self::VDUP)->item(0);
     }
 
     /**
@@ -103,7 +100,7 @@ class Dup extends \Sped\Components\Xml\Element
      */
     public function addVDup($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDUP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDUP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

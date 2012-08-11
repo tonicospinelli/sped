@@ -52,13 +52,12 @@ class Total extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Totais referentes ao ISSQN
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot 
      */
-    public function getISSQNtot($index)
+    public function getISSQNtot()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot');
-        return $this->getElementsByTagName(self::ISSQNTOT)->item($index);
+        return $this->getElementsByTagName(self::ISSQNTOT)->item(0);
     }
 
     /**
@@ -67,7 +66,7 @@ class Total extends \Sped\Components\Xml\Element
      */
     public function addISSQNtot()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot(self::ISSQNTOT, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\ISSQNtot(self::ISSQNTOT, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -84,13 +83,12 @@ class Total extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Retenção de Tributos Federais
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib 
      */
-    public function getRetTrib($index)
+    public function getRetTrib()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib');
-        return $this->getElementsByTagName(self::RETTRIB)->item($index);
+        return $this->getElementsByTagName(self::RETTRIB)->item(0);
     }
 
     /**
@@ -99,7 +97,7 @@ class Total extends \Sped\Components\Xml\Element
      */
     public function addRetTrib()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib(self::RETTRIB, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Total\RetTrib(self::RETTRIB, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

@@ -70,13 +70,12 @@ class Comb extends \Sped\Components\Xml\Element
      * Controle do Diferimento do Imposto<br />
      * nas Operações com AEAC - Álcool<br />
      * Etílico Anidro Combustível).
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF 
      */
-    public function getCODIF($index)
+    public function getCODIF()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF');
-        return $this->getElementsByTagName(self::CODIF)->item($index);
+        return $this->getElementsByTagName(self::CODIF)->item(0);
     }
 
     /**
@@ -92,7 +91,7 @@ class Comb extends \Sped\Components\Xml\Element
      */
     public function addCODIF($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF(self::CODIF, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CODIF(self::CODIF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -121,13 +120,12 @@ class Comb extends \Sped\Components\Xml\Element
      * qCom (I10) tiver sido ajustada para<br />
      * uma temperatura diferente da<br />
      * ambiente.
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1204Opc 
      */
-    public function getQTemp($index)
+    public function getQTemp()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1204Opc');
-        return $this->getElementsByTagName(self::QTEMP)->item($index);
+        return $this->getElementsByTagName(self::QTEMP)->item(0);
     }
 
     /**
@@ -143,7 +141,7 @@ class Comb extends \Sped\Components\Xml\Element
      */
     public function addQTemp($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QTEMP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1204Opc(self::QTEMP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -198,13 +196,12 @@ class Comb extends \Sped\Components\Xml\Element
 
     /**
      * Retorna CIDE Combustíveis
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE 
      */
-    public function getCIDE($index)
+    public function getCIDE()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE');
-        return $this->getElementsByTagName(self::CIDE)->item($index);
+        return $this->getElementsByTagName(self::CIDE)->item(0);
     }
 
     /**
@@ -213,7 +210,7 @@ class Comb extends \Sped\Components\Xml\Element
      */
     public function addCIDE()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE(self::CIDE, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\Comb\CIDE(self::CIDE, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

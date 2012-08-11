@@ -83,13 +83,12 @@ class Det extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informações adicionais do produto (norma referenciada, informações complementares, etc)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd 
      */
-    public function getInfAdProd($index)
+    public function getInfAdProd()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd');
-        return $this->getElementsByTagName(self::INFADPROD)->item($index);
+        return $this->getElementsByTagName(self::INFADPROD)->item(0);
     }
 
     /**
@@ -99,7 +98,7 @@ class Det extends \Sped\Components\Xml\Element
      */
     public function addInfAdProd($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd(self::INFADPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\InfAdProd(self::INFADPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

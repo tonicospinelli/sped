@@ -108,13 +108,12 @@ class ICMS51 extends \Sped\Components\Xml\Element
      * 1 - Pauta (valor);<br />
      * 2 - Preço Tabelado Máximo (valor);<br />
      * 3 - Valor da Operação.
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC 
      */
-    public function getModBC($index)
+    public function getModBC()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC');
-        return $this->getElementsByTagName(self::MODBC)->item($index);
+        return $this->getElementsByTagName(self::MODBC)->item(0);
     }
 
     /**
@@ -128,7 +127,7 @@ class ICMS51 extends \Sped\Components\Xml\Element
      */
     public function addModBC($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC(self::MODBC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\ICMS\ICMS51\ModBC(self::MODBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -149,13 +148,12 @@ class ICMS51 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Percentual de redução da BC
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
-    public function getPRedBC($index)
+    public function getPRedBC()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
-        return $this->getElementsByTagName(self::PREDBC)->item($index);
+        return $this->getElementsByTagName(self::PREDBC)->item(0);
     }
 
     /**
@@ -165,7 +163,7 @@ class ICMS51 extends \Sped\Components\Xml\Element
      */
     public function addPRedBC($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PREDBC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PREDBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -182,13 +180,12 @@ class ICMS51 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor da BC do ICMS
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVBC($index)
+    public function getVBC()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(self::VBC)->item($index);
+        return $this->getElementsByTagName(self::VBC)->item(0);
     }
 
     /**
@@ -198,7 +195,7 @@ class ICMS51 extends \Sped\Components\Xml\Element
      */
     public function addVBC($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -215,13 +212,12 @@ class ICMS51 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Alíquota do ICMS
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_0302 
      */
-    public function getPICMS($index)
+    public function getPICMS()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302');
-        return $this->getElementsByTagName(self::PICMS)->item($index);
+        return $this->getElementsByTagName(self::PICMS)->item(0);
     }
 
     /**
@@ -231,7 +227,7 @@ class ICMS51 extends \Sped\Components\Xml\Element
      */
     public function addPICMS($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302(self::PICMS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -248,13 +244,12 @@ class ICMS51 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor do ICMS
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVICMS($index)
+    public function getVICMS()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(self::VICMS)->item($index);
+        return $this->getElementsByTagName(self::VICMS)->item(0);
     }
 
     /**
@@ -264,7 +259,7 @@ class ICMS51 extends \Sped\Components\Xml\Element
      */
     public function addVICMS($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VICMS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

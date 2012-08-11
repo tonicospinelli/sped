@@ -189,13 +189,12 @@ class Dest extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Inscrição na SUFRAMA (Obrigatório nas operações com as áreas com benefícios de incentivos fiscais sob controle da SUFRAMA) PL_005d - 11/08/09 - alterado para aceitar 8 ou 9 dígitos
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF 
      */
-    public function getISUF($index)
+    public function getISUF()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF');
-        return $this->getElementsByTagName(self::ISUF)->item($index);
+        return $this->getElementsByTagName(self::ISUF)->item(0);
     }
 
     /**
@@ -205,7 +204,7 @@ class Dest extends \Sped\Components\Xml\Element
      */
     public function addISUF($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF(self::ISUF, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\ISUF(self::ISUF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -223,13 +222,12 @@ class Dest extends \Sped\Components\Xml\Element
     /**
      * Retorna Informar o e-mail do destinatário. O campo pode ser utilizado para informar o e-mail<br />
      * de recepção da NF-e indicada pelo destinatário (v2.0)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email 
      */
-    public function getEmail($index)
+    public function getEmail()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Dest\Email');
-        return $this->getElementsByTagName(self::EMAIL)->item($index);
+        return $this->getElementsByTagName(self::EMAIL)->item(0);
     }
 
     /**
@@ -240,7 +238,7 @@ class Dest extends \Sped\Components\Xml\Element
      */
     public function addEmail($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email(self::EMAIL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Dest\Email(self::EMAIL, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

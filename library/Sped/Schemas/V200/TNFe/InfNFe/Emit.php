@@ -131,13 +131,12 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Nome fantasia
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant 
      */
-    public function getXFant($index)
+    public function getXFant()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant');
-        return $this->getElementsByTagName(self::XFANT)->item($index);
+        return $this->getElementsByTagName(self::XFANT)->item(0);
     }
 
     /**
@@ -147,7 +146,7 @@ class Emit extends \Sped\Components\Xml\Element
      */
     public function addXFant($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant(self::XFANT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Emit\XFant(self::XFANT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -228,13 +227,12 @@ class Emit extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Inscricao Estadual do Substituto Tributário
-     * @param int $index 
      * @return \Sped\Schemas\V200\TIeST 
      */
-    public function getIEST($index)
+    public function getIEST()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIeST');
-        return $this->getElementsByTagName(self::IEST)->item($index);
+        return $this->getElementsByTagName(self::IEST)->item(0);
     }
 
     /**
@@ -244,7 +242,7 @@ class Emit extends \Sped\Components\Xml\Element
      */
     public function addIEST($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TIeST(self::IEST, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TIeST(self::IEST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

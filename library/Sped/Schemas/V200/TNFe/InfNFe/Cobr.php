@@ -19,13 +19,12 @@ class Cobr extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados da fatura
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat 
      */
-    public function getFat($index)
+    public function getFat()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat');
-        return $this->getElementsByTagName(self::FAT)->item($index);
+        return $this->getElementsByTagName(self::FAT)->item(0);
     }
 
     /**
@@ -34,7 +33,7 @@ class Cobr extends \Sped\Components\Xml\Element
      */
     public function addFat()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat(self::FAT, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat(self::FAT, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

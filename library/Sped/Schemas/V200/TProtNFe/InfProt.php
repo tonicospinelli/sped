@@ -165,13 +165,12 @@ class InfProt extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Número do Protocolo de Status da NF-e. 1 posição (1 – Secretaria de Fazenda Estadual 2 – Receita Federal); 2 - códiga da UF - 2 posições ano; 10 seqüencial no ano.
-     * @param int $index 
      * @return \Sped\Schemas\V200\TProt 
      */
-    public function getNProt($index)
+    public function getNProt()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TProt');
-        return $this->getElementsByTagName(self::NPROT)->item($index);
+        return $this->getElementsByTagName(self::NPROT)->item(0);
     }
 
     /**
@@ -181,7 +180,7 @@ class InfProt extends \Sped\Components\Xml\Element
      */
     public function addNProt($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TProt(self::NPROT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TProt(self::NPROT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -198,13 +197,12 @@ class InfProt extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Digest Value da NF-e processada. Utilizado para conferir a integridade da NF-e original.
-     * @param int $index 
      * @return \Sped\Schemas\V200\DigestValueType 
      */
-    public function getDigVal($index)
+    public function getDigVal()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\DigestValueType');
-        return $this->getElementsByTagName(self::DIGVAL)->item($index);
+        return $this->getElementsByTagName(self::DIGVAL)->item(0);
     }
 
     /**
@@ -214,7 +212,7 @@ class InfProt extends \Sped\Components\Xml\Element
      */
     public function addDigVal($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGVAL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\DigestValueType(self::DIGVAL, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

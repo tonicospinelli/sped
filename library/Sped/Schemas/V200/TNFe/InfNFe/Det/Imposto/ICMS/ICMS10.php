@@ -300,13 +300,12 @@ class ICMS10 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Percentual da Margem de Valor Adicionado ICMS ST
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function getPMVAST($index)
+    public function getPMVAST()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302Opc');
-        return $this->getElementsByTagName(self::PMVAST)->item($index);
+        return $this->getElementsByTagName(self::PMVAST)->item(0);
     }
 
     /**
@@ -316,7 +315,7 @@ class ICMS10 extends \Sped\Components\Xml\Element
      */
     public function addPMVAST($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PMVAST, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PMVAST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -333,13 +332,12 @@ class ICMS10 extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Percentual de redução da BC ICMS ST 
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_0302Opc 
      */
-    public function getPRedBCST($index)
+    public function getPRedBCST()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_0302Opc');
-        return $this->getElementsByTagName(self::PREDBCST)->item($index);
+        return $this->getElementsByTagName(self::PREDBCST)->item(0);
     }
 
     /**
@@ -349,7 +347,7 @@ class ICMS10 extends \Sped\Components\Xml\Element
      */
     public function addPRedBCST($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PREDBCST, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_0302Opc(self::PREDBCST, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

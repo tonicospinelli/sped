@@ -101,13 +101,12 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Complemento
-     * @param int $index 
      * @return \Sped\Schemas\V200\TEndereco\XCpl 
      */
-    public function getXCpl($index)
+    public function getXCpl()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XCpl');
-        return $this->getElementsByTagName(self::XCPL)->item($index);
+        return $this->getElementsByTagName(self::XCPL)->item(0);
     }
 
     /**
@@ -117,7 +116,7 @@ class TEndereco extends \Sped\Components\Xml\Element
      */
     public function addXCpl($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XCpl(self::XCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XCpl(self::XCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -262,13 +261,12 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Retorna CEP
-     * @param int $index 
      * @return \Sped\Schemas\V200\TEndereco\CEP 
      */
-    public function getCEP($index)
+    public function getCEP()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\CEP');
-        return $this->getElementsByTagName(self::CEP)->item($index);
+        return $this->getElementsByTagName(self::CEP)->item(0);
     }
 
     /**
@@ -278,7 +276,7 @@ class TEndereco extends \Sped\Components\Xml\Element
      */
     public function addCEP($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\CEP(self::CEP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\CEP(self::CEP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -295,13 +293,12 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Código do país
-     * @param int $index 
      * @return \Sped\Schemas\V200\Tpais 
      */
-    public function getCPais($index)
+    public function getCPais()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\Tpais');
-        return $this->getElementsByTagName(self::CPAIS)->item($index);
+        return $this->getElementsByTagName(self::CPAIS)->item(0);
     }
 
     /**
@@ -311,7 +308,7 @@ class TEndereco extends \Sped\Components\Xml\Element
      */
     public function addCPais($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\Tpais(self::CPAIS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\Tpais(self::CPAIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -328,13 +325,12 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Nome do país
-     * @param int $index 
      * @return \Sped\Schemas\V200\TEndereco\XPais 
      */
-    public function getXPais($index)
+    public function getXPais()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\XPais');
-        return $this->getElementsByTagName(self::XPAIS)->item($index);
+        return $this->getElementsByTagName(self::XPAIS)->item(0);
     }
 
     /**
@@ -344,7 +340,7 @@ class TEndereco extends \Sped\Components\Xml\Element
      */
     public function addXPais($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XPais(self::XPAIS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\XPais(self::XPAIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -361,13 +357,12 @@ class TEndereco extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Telefone, preencher com Código DDD + número do telefone , nas operações com exterior é permtido informar o código do país + código da localidade + número do telefone
-     * @param int $index 
      * @return \Sped\Schemas\V200\TEndereco\Fone 
      */
-    public function getFone($index)
+    public function getFone()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEndereco\Fone');
-        return $this->getElementsByTagName(self::FONE)->item($index);
+        return $this->getElementsByTagName(self::FONE)->item(0);
     }
 
     /**
@@ -377,7 +372,7 @@ class TEndereco extends \Sped\Components\Xml\Element
      */
     public function addFone($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Fone(self::FONE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TEndereco\Fone(self::FONE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

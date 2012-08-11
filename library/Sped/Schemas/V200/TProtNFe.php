@@ -50,13 +50,12 @@ class TProtNFe extends \Sped\Components\Xml\Element
 
     /**
      * 
-     * @param int $index 
      * @return \Sped\Schemas\V200\SignatureType 
      */
-    public function getSignature($index)
+    public function getSignature()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\SignatureType');
-        return $this->getElementsByTagName(self::SIGNATURE)->item($index);
+        return $this->getElementsByTagName(self::SIGNATURE)->item(0);
     }
 
     /**
@@ -66,7 +65,7 @@ class TProtNFe extends \Sped\Components\Xml\Element
      */
     public function addSignature($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value, 'http://www.w3.org/2000/09/xmldsig#'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\SignatureType(self::SIGNATURE, $value, 'http://www.w3.org/2000/09/xmldsig#'), true);
     }
 
     /**

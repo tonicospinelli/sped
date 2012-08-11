@@ -29,13 +29,12 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Classe de Enquadramento do IPI para Cigarros e Bebidas
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq 
      */
-    public function getClEnq($index)
+    public function getClEnq()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq');
-        return $this->getElementsByTagName(self::CLENQ)->item($index);
+        return $this->getElementsByTagName(self::CLENQ)->item(0);
     }
 
     /**
@@ -45,7 +44,7 @@ class IPI extends \Sped\Components\Xml\Element
      */
     public function addClEnq($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq(self::CLENQ, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\ClEnq(self::CLENQ, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -62,13 +61,12 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Retorna CNPJ do produtor da mercadoria, quando diferente do emitente. Somente para os casos de exportação direta ou indireta.
-     * @param int $index 
      * @return \Sped\Schemas\V200\TCnpj 
      */
-    public function getCNPJProd($index)
+    public function getCNPJProd()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TCnpj');
-        return $this->getElementsByTagName(self::CNPJPROD)->item($index);
+        return $this->getElementsByTagName(self::CNPJPROD)->item(0);
     }
 
     /**
@@ -78,7 +76,7 @@ class IPI extends \Sped\Components\Xml\Element
      */
     public function addCNPJProd($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TCnpj(self::CNPJPROD, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -95,13 +93,12 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Código do selo de controle do IPI 
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo 
      */
-    public function getCSelo($index)
+    public function getCSelo()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo');
-        return $this->getElementsByTagName(self::CSELO)->item($index);
+        return $this->getElementsByTagName(self::CSELO)->item(0);
     }
 
     /**
@@ -111,7 +108,7 @@ class IPI extends \Sped\Components\Xml\Element
      */
     public function addCSelo($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo(self::CSELO, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\CSelo(self::CSELO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -128,13 +125,12 @@ class IPI extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Quantidade de selo de controle do IPI
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo 
      */
-    public function getQSelo($index)
+    public function getQSelo()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo');
-        return $this->getElementsByTagName(self::QSELO)->item($index);
+        return $this->getElementsByTagName(self::QSELO)->item(0);
     }
 
     /**
@@ -144,7 +140,7 @@ class IPI extends \Sped\Components\Xml\Element
      */
     public function addQSelo($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo(self::QSELO, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI\QSelo(self::QSELO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

@@ -25,13 +25,12 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Total dos Serviços sob não-incidência ou não tributados pelo ICMS 
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVServ($index)
+    public function getVServ()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VSERV)->item($index);
+        return $this->getElementsByTagName(self::VSERV)->item(0);
     }
 
     /**
@@ -41,7 +40,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element
      */
     public function addVServ($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VSERV, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VSERV, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -58,13 +57,12 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Base de Cálculo do ISS
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVBC($index)
+    public function getVBC()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VBC)->item($index);
+        return $this->getElementsByTagName(self::VBC)->item(0);
     }
 
     /**
@@ -74,7 +72,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element
      */
     public function addVBC($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VBC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -91,13 +89,12 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Total do ISS
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVISS($index)
+    public function getVISS()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VISS)->item($index);
+        return $this->getElementsByTagName(self::VISS)->item(0);
     }
 
     /**
@@ -107,7 +104,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element
      */
     public function addVISS($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VISS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VISS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -124,13 +121,12 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor do PIS sobre serviços
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVPIS($index)
+    public function getVPIS()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VPIS)->item($index);
+        return $this->getElementsByTagName(self::VPIS)->item(0);
     }
 
     /**
@@ -140,7 +136,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element
      */
     public function addVPIS($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VPIS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VPIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -157,13 +153,12 @@ class ISSQNtot extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor do COFINS sobre serviços
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVCOFINS($index)
+    public function getVCOFINS()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VCOFINS)->item($index);
+        return $this->getElementsByTagName(self::VCOFINS)->item(0);
     }
 
     /**
@@ -173,7 +168,7 @@ class ISSQNtot extends \Sped\Components\Xml\Element
      */
     public function addVCOFINS($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VCOFINS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VCOFINS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

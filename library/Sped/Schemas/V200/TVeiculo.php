@@ -85,13 +85,12 @@ class TVeiculo extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Registro Nacional de Transportador de Carga (ANTT)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TVeiculo\RNTC 
      */
-    public function getRNTC($index)
+    public function getRNTC()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo\RNTC');
-        return $this->getElementsByTagName(self::RNTC)->item($index);
+        return $this->getElementsByTagName(self::RNTC)->item(0);
     }
 
     /**
@@ -101,7 +100,7 @@ class TVeiculo extends \Sped\Components\Xml\Element
      */
     public function addRNTC($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\RNTC(self::RNTC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo\RNTC(self::RNTC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

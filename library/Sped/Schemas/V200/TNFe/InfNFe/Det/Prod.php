@@ -198,13 +198,12 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Código EX TIPI (3 posições)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI 
      */
-    public function getEXTIPI($index)
+    public function getEXTIPI()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI');
-        return $this->getElementsByTagName(self::EXTIPI)->item($index);
+        return $this->getElementsByTagName(self::EXTIPI)->item(0);
     }
 
     /**
@@ -214,7 +213,7 @@ class Prod extends \Sped\Components\Xml\Element
      */
     public function addEXTIPI($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI(self::EXTIPI, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\EXTIPI(self::EXTIPI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -519,13 +518,12 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Total do Frete
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVFrete($index)
+    public function getVFrete()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VFRETE)->item($index);
+        return $this->getElementsByTagName(self::VFRETE)->item(0);
     }
 
     /**
@@ -535,7 +533,7 @@ class Prod extends \Sped\Components\Xml\Element
      */
     public function addVFrete($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VFRETE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VFRETE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -552,13 +550,12 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Total do Seguro
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVSeg($index)
+    public function getVSeg()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VSEG)->item($index);
+        return $this->getElementsByTagName(self::VSEG)->item(0);
     }
 
     /**
@@ -568,7 +565,7 @@ class Prod extends \Sped\Components\Xml\Element
      */
     public function addVSeg($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VSEG, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VSEG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -585,13 +582,12 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor do Desconto
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVDesc($index)
+    public function getVDesc()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VDESC)->item($index);
+        return $this->getElementsByTagName(self::VDESC)->item(0);
     }
 
     /**
@@ -601,7 +597,7 @@ class Prod extends \Sped\Components\Xml\Element
      */
     public function addVDesc($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -618,13 +614,12 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Outras despesas acessórias - (v2.0)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVOutro($index)
+    public function getVOutro()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VOUTRO)->item($index);
+        return $this->getElementsByTagName(self::VOUTRO)->item(0);
     }
 
     /**
@@ -634,7 +629,7 @@ class Prod extends \Sped\Components\Xml\Element
      */
     public function addVOutro($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VOUTRO, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VOUTRO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -727,13 +722,12 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Retorna pedido de compra - Informação de interesse do emissor para controle do B2B. (v2.0)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed 
      */
-    public function getXPed($index)
+    public function getXPed()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed');
-        return $this->getElementsByTagName(self::XPED)->item($index);
+        return $this->getElementsByTagName(self::XPED)->item(0);
     }
 
     /**
@@ -743,7 +737,7 @@ class Prod extends \Sped\Components\Xml\Element
      */
     public function addXPed($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed(self::XPED, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\XPed(self::XPED, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -760,13 +754,12 @@ class Prod extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Número do Item do Pedido de Compra - Identificação do número do item do pedido de Compra (v2.0)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed 
      */
-    public function getNItemPed($index)
+    public function getNItemPed()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed');
-        return $this->getElementsByTagName(self::NITEMPED)->item($index);
+        return $this->getElementsByTagName(self::NITEMPED)->item(0);
     }
 
     /**
@@ -776,7 +769,7 @@ class Prod extends \Sped\Components\Xml\Element
      */
     public function addNItemPed($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed(self::NITEMPED, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Prod\NItemPed(self::NITEMPED, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

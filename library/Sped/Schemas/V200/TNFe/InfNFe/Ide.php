@@ -365,13 +365,12 @@ class Ide extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Hora de saída ou de entrada da mercadoria / produto (HH:MM:SS) (v2.0)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TTime 
      */
-    public function getHSaiEnt($index)
+    public function getHSaiEnt()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TTime');
-        return $this->getElementsByTagName(self::HSAIENT)->item($index);
+        return $this->getElementsByTagName(self::HSAIENT)->item(0);
     }
 
     /**
@@ -381,7 +380,7 @@ class Ide extends \Sped\Components\Xml\Element
      */
     public function addHSaiEnt($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TTime(self::HSAIENT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TTime(self::HSAIENT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

@@ -23,13 +23,12 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Número da fatura
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat 
      */
-    public function getNFat($index)
+    public function getNFat()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat');
-        return $this->getElementsByTagName(self::NFAT)->item($index);
+        return $this->getElementsByTagName(self::NFAT)->item(0);
     }
 
     /**
@@ -39,7 +38,7 @@ class Fat extends \Sped\Components\Xml\Element
      */
     public function addNFat($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat(self::NFAT, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Cobr\Fat\NFat(self::NFAT, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -56,13 +55,12 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor original da fatura
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVOrig($index)
+    public function getVOrig()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VORIG)->item($index);
+        return $this->getElementsByTagName(self::VORIG)->item(0);
     }
 
     /**
@@ -72,7 +70,7 @@ class Fat extends \Sped\Components\Xml\Element
      */
     public function addVOrig($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VORIG, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VORIG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -89,13 +87,12 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor do desconto da fatura
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVDesc($index)
+    public function getVDesc()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VDESC)->item($index);
+        return $this->getElementsByTagName(self::VDESC)->item(0);
     }
 
     /**
@@ -105,7 +102,7 @@ class Fat extends \Sped\Components\Xml\Element
      */
     public function addVDesc($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VDESC, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -122,13 +119,12 @@ class Fat extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor líquido da fatura
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302Opc 
      */
-    public function getVLiq($index)
+    public function getVLiq()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302Opc');
-        return $this->getElementsByTagName(self::VLIQ)->item($index);
+        return $this->getElementsByTagName(self::VLIQ)->item(0);
     }
 
     /**
@@ -138,7 +134,7 @@ class Fat extends \Sped\Components\Xml\Element
      */
     public function addVLiq($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VLIQ, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302Opc(self::VLIQ, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

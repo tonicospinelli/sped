@@ -161,13 +161,12 @@ class TLocal extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Complemento
-     * @param int $index 
      * @return \Sped\Schemas\V200\TLocal\XCpl 
      */
-    public function getXCpl($index)
+    public function getXCpl()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TLocal\XCpl');
-        return $this->getElementsByTagName(self::XCPL)->item($index);
+        return $this->getElementsByTagName(self::XCPL)->item(0);
     }
 
     /**
@@ -177,7 +176,7 @@ class TLocal extends \Sped\Components\Xml\Element
      */
     public function addXCpl($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XCpl(self::XCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TLocal\XCpl(self::XCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

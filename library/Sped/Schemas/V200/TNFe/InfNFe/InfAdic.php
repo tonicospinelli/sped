@@ -25,13 +25,12 @@ class InfAdic extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informações adicionais de interesse do Fisco (v2.0)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco 
      */
-    public function getInfAdFisco($index)
+    public function getInfAdFisco()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco');
-        return $this->getElementsByTagName(self::INFADFISCO)->item($index);
+        return $this->getElementsByTagName(self::INFADFISCO)->item(0);
     }
 
     /**
@@ -41,7 +40,7 @@ class InfAdic extends \Sped\Components\Xml\Element
      */
     public function addInfAdFisco($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco(self::INFADFISCO, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfAdFisco(self::INFADFISCO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -58,13 +57,12 @@ class InfAdic extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Informações complementares de interesse do Contribuinte
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl 
      */
-    public function getInfCpl($index)
+    public function getInfCpl()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl');
-        return $this->getElementsByTagName(self::INFCPL)->item($index);
+        return $this->getElementsByTagName(self::INFCPL)->item(0);
     }
 
     /**
@@ -74,7 +72,7 @@ class InfAdic extends \Sped\Components\Xml\Element
      */
     public function addInfCpl($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl(self::INFCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\InfAdic\InfCpl(self::INFCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

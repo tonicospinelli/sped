@@ -75,13 +75,12 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do transportador
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta 
      */
-    public function getTransporta($index)
+    public function getTransporta()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta');
-        return $this->getElementsByTagName(self::TRANSPORTA)->item($index);
+        return $this->getElementsByTagName(self::TRANSPORTA)->item(0);
     }
 
     /**
@@ -90,7 +89,7 @@ class Transp extends \Sped\Components\Xml\Element
      */
     public function addTransporta()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta(self::TRANSPORTA, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta(self::TRANSPORTA, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -107,13 +106,12 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados da retenção  ICMS do Transporte
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp 
      */
-    public function getRetTransp($index)
+    public function getRetTransp()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp');
-        return $this->getElementsByTagName(self::RETTRANSP)->item($index);
+        return $this->getElementsByTagName(self::RETTRANSP)->item(0);
     }
 
     /**
@@ -122,7 +120,7 @@ class Transp extends \Sped\Components\Xml\Element
      */
     public function addRetTransp()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp(self::RETTRANSP, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\RetTransp(self::RETTRANSP, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -139,13 +137,12 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do veículo
-     * @param int $index 
      * @return \Sped\Schemas\V200\TVeiculo 
      */
-    public function getVeicTransp($index)
+    public function getVeicTransp()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TVeiculo');
-        return $this->getElementsByTagName(self::VEICTRANSP)->item($index);
+        return $this->getElementsByTagName(self::VEICTRANSP)->item(0);
     }
 
     /**
@@ -155,7 +152,7 @@ class Transp extends \Sped\Components\Xml\Element
      */
     public function addVeicTransp($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(self::VEICTRANSP, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TVeiculo(self::VEICTRANSP, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -205,13 +202,12 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Identificação do vagão (v2.0)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao 
      */
-    public function getVagao($index)
+    public function getVagao()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao');
-        return $this->getElementsByTagName(self::VAGAO)->item($index);
+        return $this->getElementsByTagName(self::VAGAO)->item(0);
     }
 
     /**
@@ -221,7 +217,7 @@ class Transp extends \Sped\Components\Xml\Element
      */
     public function addVagao($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao(self::VAGAO, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Vagao(self::VAGAO, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -238,13 +234,12 @@ class Transp extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Identificação da balsa (v2.0)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa 
      */
-    public function getBalsa($index)
+    public function getBalsa()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa');
-        return $this->getElementsByTagName(self::BALSA)->item($index);
+        return $this->getElementsByTagName(self::BALSA)->item(0);
     }
 
     /**
@@ -254,7 +249,7 @@ class Transp extends \Sped\Components\Xml\Element
      */
     public function addBalsa($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa(self::BALSA, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Balsa(self::BALSA, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

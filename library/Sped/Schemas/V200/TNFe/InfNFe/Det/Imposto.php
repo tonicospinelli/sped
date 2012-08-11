@@ -62,13 +62,12 @@ class Imposto extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do IPI
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI 
      */
-    public function getIPI($index)
+    public function getIPI()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI');
-        return $this->getElementsByTagName(self::IPI)->item($index);
+        return $this->getElementsByTagName(self::IPI)->item(0);
     }
 
     /**
@@ -77,7 +76,7 @@ class Imposto extends \Sped\Components\Xml\Element
      */
     public function addIPI()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI(self::IPI, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\IPI(self::IPI, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -94,13 +93,12 @@ class Imposto extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do Imposto de Importação
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II 
      */
-    public function getII($index)
+    public function getII()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II');
-        return $this->getElementsByTagName(self::II)->item($index);
+        return $this->getElementsByTagName(self::II)->item(0);
     }
 
     /**
@@ -109,7 +107,7 @@ class Imposto extends \Sped\Components\Xml\Element
      */
     public function addII()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II(self::II, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\II(self::II, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -188,13 +186,12 @@ class Imposto extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do PIS Substituição Tributária
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST 
      */
-    public function getPISST($index)
+    public function getPISST()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST');
-        return $this->getElementsByTagName(self::PISST)->item($index);
+        return $this->getElementsByTagName(self::PISST)->item(0);
     }
 
     /**
@@ -203,7 +200,7 @@ class Imposto extends \Sped\Components\Xml\Element
      */
     public function addPISST()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST(self::PISST, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\PISST(self::PISST, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -252,13 +249,12 @@ class Imposto extends \Sped\Components\Xml\Element
     /**
      * Retorna Dados do COFINS da<br />
      * Substituição Tributaria;
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST 
      */
-    public function getCOFINSST($index)
+    public function getCOFINSST()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST');
-        return $this->getElementsByTagName(self::COFINSST)->item($index);
+        return $this->getElementsByTagName(self::COFINSST)->item(0);
     }
 
     /**
@@ -268,7 +264,7 @@ class Imposto extends \Sped\Components\Xml\Element
      */
     public function addCOFINSST()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST(self::COFINSST, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Det\Imposto\COFINSST(self::COFINSST, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

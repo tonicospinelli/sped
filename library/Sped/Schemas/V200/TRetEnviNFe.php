@@ -227,13 +227,12 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Dados do Recibo do Lote
-     * @param int $index 
      * @return \Sped\Schemas\V200\TRetEnviNFe\InfRec 
      */
-    public function getInfRec($index)
+    public function getInfRec()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TRetEnviNFe\InfRec');
-        return $this->getElementsByTagName(self::INFREC)->item($index);
+        return $this->getElementsByTagName(self::INFREC)->item(0);
     }
 
     /**
@@ -242,7 +241,7 @@ class TRetEnviNFe extends \Sped\Components\Xml\Element
      */
     public function addInfRec()
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TRetEnviNFe\InfRec(self::INFREC, NULL, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TRetEnviNFe\InfRec(self::INFREC, NULL, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

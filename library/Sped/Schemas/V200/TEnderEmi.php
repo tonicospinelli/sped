@@ -101,13 +101,12 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Complemento
-     * @param int $index 
      * @return \Sped\Schemas\V200\TEnderEmi\XCpl 
      */
-    public function getXCpl($index)
+    public function getXCpl()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\XCpl');
-        return $this->getElementsByTagName(self::XCPL)->item($index);
+        return $this->getElementsByTagName(self::XCPL)->item(0);
     }
 
     /**
@@ -117,7 +116,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
      */
     public function addXCpl($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi\XCpl(self::XCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi\XCpl(self::XCPL, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -294,13 +293,12 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Código do país
-     * @param int $index 
      * @return \Sped\Schemas\V200\TEnderEmi\CPais 
      */
-    public function getCPais($index)
+    public function getCPais()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\CPais');
-        return $this->getElementsByTagName(self::CPAIS)->item($index);
+        return $this->getElementsByTagName(self::CPAIS)->item(0);
     }
 
     /**
@@ -310,7 +308,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
      */
     public function addCPais($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi\CPais(self::CPAIS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi\CPais(self::CPAIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -327,13 +325,12 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Nome do país
-     * @param int $index 
      * @return \Sped\Schemas\V200\TEnderEmi\XPais 
      */
-    public function getXPais($index)
+    public function getXPais()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\XPais');
-        return $this->getElementsByTagName(self::XPAIS)->item($index);
+        return $this->getElementsByTagName(self::XPAIS)->item(0);
     }
 
     /**
@@ -343,7 +340,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
      */
     public function addXPais($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi\XPais(self::XPAIS, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi\XPais(self::XPAIS, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -360,13 +357,12 @@ class TEnderEmi extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Preencher com Código DDD + número do telefone (v.2.0)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TEnderEmi\Fone 
      */
-    public function getFone($index)
+    public function getFone()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TEnderEmi\Fone');
-        return $this->getElementsByTagName(self::FONE)->item($index);
+        return $this->getElementsByTagName(self::FONE)->item(0);
     }
 
     /**
@@ -376,7 +372,7 @@ class TEnderEmi extends \Sped\Components\Xml\Element
      */
     public function addFone($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi\Fone(self::FONE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TEnderEmi\Fone(self::FONE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

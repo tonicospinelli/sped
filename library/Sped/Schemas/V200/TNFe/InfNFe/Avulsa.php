@@ -165,13 +165,12 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Telefone
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone 
      */
-    public function getFone($index)
+    public function getFone()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone');
-        return $this->getElementsByTagName(self::FONE)->item($index);
+        return $this->getElementsByTagName(self::FONE)->item(0);
     }
 
     /**
@@ -181,7 +180,7 @@ class Avulsa extends \Sped\Components\Xml\Element
      */
     public function addFone($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone(self::FONE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\Fone(self::FONE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -230,13 +229,12 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Número do Documento de Arrecadação de Receita
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR 
      */
-    public function getNDAR($index)
+    public function getNDAR()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR');
-        return $this->getElementsByTagName(self::NDAR)->item($index);
+        return $this->getElementsByTagName(self::NDAR)->item(0);
     }
 
     /**
@@ -246,7 +244,7 @@ class Avulsa extends \Sped\Components\Xml\Element
      */
     public function addNDAR($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR(self::NDAR, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Avulsa\NDAR(self::NDAR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -263,13 +261,12 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Data de emissão do DAR (AAAA-MM-DD)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TData 
      */
-    public function getDEmi($index)
+    public function getDEmi()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
-        return $this->getElementsByTagName(self::DEMI)->item($index);
+        return $this->getElementsByTagName(self::DEMI)->item(0);
     }
 
     /**
@@ -279,7 +276,7 @@ class Avulsa extends \Sped\Components\Xml\Element
      */
     public function addDEmi($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DEMI, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -296,13 +293,12 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Valor Total constante no DAR
-     * @param int $index 
      * @return \Sped\Schemas\V200\TDec_1302 
      */
-    public function getVDAR($index)
+    public function getVDAR()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TDec_1302');
-        return $this->getElementsByTagName(self::VDAR)->item($index);
+        return $this->getElementsByTagName(self::VDAR)->item(0);
     }
 
     /**
@@ -312,7 +308,7 @@ class Avulsa extends \Sped\Components\Xml\Element
      */
     public function addVDAR($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDAR, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TDec_1302(self::VDAR, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -361,13 +357,12 @@ class Avulsa extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Data de pagamento do DAR (AAAA-MM-DD)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TData 
      */
-    public function getDPag($index)
+    public function getDPag()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TData');
-        return $this->getElementsByTagName(self::DPAG)->item($index);
+        return $this->getElementsByTagName(self::DPAG)->item(0);
     }
 
     /**
@@ -377,7 +372,7 @@ class Avulsa extends \Sped\Components\Xml\Element
      */
     public function addDPag($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DPAG, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TData(self::DPAG, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**

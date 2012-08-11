@@ -93,13 +93,12 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Razão Social ou nome
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome 
      */
-    public function getXNome($index)
+    public function getXNome()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome');
-        return $this->getElementsByTagName(self::XNOME)->item($index);
+        return $this->getElementsByTagName(self::XNOME)->item(0);
     }
 
     /**
@@ -109,7 +108,7 @@ class Transporta extends \Sped\Components\Xml\Element
      */
     public function addXNome($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome(self::XNOME, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XNome(self::XNOME, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -126,13 +125,12 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Inscrição Estadual (v2.0)
-     * @param int $index 
      * @return \Sped\Schemas\V200\TIeDest 
      */
-    public function getIE($index)
+    public function getIE()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TIeDest');
-        return $this->getElementsByTagName(self::IE)->item($index);
+        return $this->getElementsByTagName(self::IE)->item(0);
     }
 
     /**
@@ -142,7 +140,7 @@ class Transporta extends \Sped\Components\Xml\Element
      */
     public function addIE($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TIeDest(self::IE, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -159,13 +157,12 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Endereço completo
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder 
      */
-    public function getXEnder($index)
+    public function getXEnder()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder');
-        return $this->getElementsByTagName(self::XENDER)->item($index);
+        return $this->getElementsByTagName(self::XENDER)->item(0);
     }
 
     /**
@@ -175,7 +172,7 @@ class Transporta extends \Sped\Components\Xml\Element
      */
     public function addXEnder($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder(self::XENDER, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XEnder(self::XENDER, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -192,13 +189,12 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Nome do munícipio
-     * @param int $index 
      * @return \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun 
      */
-    public function getXMun($index)
+    public function getXMun()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun');
-        return $this->getElementsByTagName(self::XMUN)->item($index);
+        return $this->getElementsByTagName(self::XMUN)->item(0);
     }
 
     /**
@@ -208,7 +204,7 @@ class Transporta extends \Sped\Components\Xml\Element
      */
     public function addXMun($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun(self::XMUN, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TNFe\InfNFe\Transp\Transporta\XMun(self::XMUN, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
@@ -225,13 +221,12 @@ class Transporta extends \Sped\Components\Xml\Element
 
     /**
      * Retorna Sigla da UF
-     * @param int $index 
      * @return \Sped\Schemas\V200\TUf 
      */
-    public function getUF($index)
+    public function getUF()
     {
         $this->ownerDocument->registerNodeClass('\DOMElement', '\Sped\Schemas\V200\TUf');
-        return $this->getElementsByTagName(self::UF)->item($index);
+        return $this->getElementsByTagName(self::UF)->item(0);
     }
 
     /**
@@ -241,7 +236,7 @@ class Transporta extends \Sped\Components\Xml\Element
      */
     public function addUF($value = NULL)
     {
-        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value, 'http://www.portalfiscal.inf.br/nfe'), false);
+        return $this->appendChild(new \Sped\Schemas\V200\TUf(self::UF, $value, 'http://www.portalfiscal.inf.br/nfe'), true);
     }
 
     /**
