@@ -271,7 +271,6 @@ class Schema
                     if ($node->parentNode->localName == 'element')
                         return;
                 case 'element':
-                    $hasIndex = ($node->hasAttribute('minOccurs') || $node->hasAttribute('maxOccurs'));
                     if ($node->hasAttribute('name')) {
                         $name = $node->getAttribute('name');
                         $type = $node->hasAttribute('type') ? $this->getSufixName($node->getAttribute('type')) : null;
@@ -309,7 +308,7 @@ class Schema
                                 'name' => $name,
                                 'description' => $this->getDocumentation($node),
                                 'type' => $type,
-                                'hasIndex' => $hasIndex,
+                                'hasIndex' => $node->hasAttribute('maxOccurs'),
                                 'isElement' => true)));
 
                     $class->addMethod($this->createElementAddMethod(array(
@@ -317,7 +316,7 @@ class Schema
                                 'description' => $this->getDocumentation($node),
                                 'type' => $type,
                                 'hasValue' => $this->isLastLevel($node),
-                                'isUnique' => ($hasIndex == 0),
+                                'isUnique' => !$node->hasAttribute('maxOccurs'),
                                 'namespaceURI' => $namespaceURI)));
 
                     $class->addMethod($this->createElementSetMethod(array(
