@@ -62,12 +62,8 @@ class Element extends \DOMElement
 
         if ($node !== null)
             $newNode = parent::replaceChild($newNode, $node);
-        else {
+        else 
             $newNode = parent::appendChild($newNode);
-
-            if (method_exists($newNode, 'loadDefaults'))
-                $newNode->loadDefaults();
-        }
 
         return $newNode;
     }
@@ -87,9 +83,6 @@ class Element extends \DOMElement
     public function insertBefore(\DOMNode $newnode, \DOMNode $refnode = null)
     {
         $newNode = parent::insertBefore($newnode, $refnode);
-
-        if (method_exists($newNode, 'loadDefaults'))
-            $newNode->loadDefaults();
 
         return $newNode;
     }
@@ -111,9 +104,6 @@ class Element extends \DOMElement
     public function replaceChild(\DOMNode $newnode, \DOMNode $oldnode)
     {
         $newNode = parent::replaceChild($newnode, $oldnode);
-
-        if (method_exists($newNode, 'loadDefaults'))
-            $newNode->loadDefaults();
 
         return $newNode;
     }
