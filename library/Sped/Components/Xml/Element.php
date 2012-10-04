@@ -62,7 +62,7 @@ class Element extends \DOMElement
 
         if ($node !== null)
             $newNode = parent::replaceChild($newNode, $node);
-        else 
+        else
             $newNode = parent::appendChild($newNode);
 
         return $newNode;
@@ -123,6 +123,42 @@ class Element extends \DOMElement
         foreach ($nodes as $node)
             $this->removeChild($node);
         return true;
+    }
+
+    /**
+     * (PHP 5 &gt;= 5.2.0)<br/>
+     * Get an XPath for a node
+     * @link http://php.net/manual/en/domnode.getnodepath.php
+     * @return string a string containing the XPath, or <b>NULL</b> in case of an error.
+     */
+    public function getNodeXPath()
+    {
+        $result = '';
+        $node = $this;
+        /* @var $parentNode \DOMElement */
+        while ($parentNode = $node->parentNode) {
+            $nodeIndex = -1;
+            $nodeTagIndex = 0;
+            $hasSimilarNodes = false;
+            do {
+                $nodeIndex++;
+                $testNode = $parentNode->childNodes->item($nodeIndex);
+                
+                if ($testNode->nodeName == $node->nodeName
+                AND $testNode->parentNode->isSameNode($node->parentNode)
+                AND $testNode->childNodes->length > 0) {
+                    $nodeTagIndex++;
+                }
+            } while (!$node->isSameNode($testNode));
+
+            if ($hasSimilarNodes) {
+                $result = "/{$node->nodeName}[{$nodeTagIndex}]" . $result;
+            } else {
+                $result = "/{$node->nodeName}" . $result;
+            }
+            $node = $parentNode;
+        };
+        return $result;
     }
 
 }
