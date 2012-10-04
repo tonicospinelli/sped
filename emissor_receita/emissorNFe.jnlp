@@ -1,0 +1,96 @@
+<jnlp spec="6.0+" codebase="http://www.emissornfe.fazenda.sp.gov.br/v2/aplicativo/" href="emissorNFe.jnlp">
+  <information>
+    <title>Emissor de Nota Fiscal Eletr√¥nica (NF-e) 2.0</title>
+    <vendor>Prodesp</vendor>
+    <homepage href="null"/>
+    <description>Emissor de Nota Fiscal Eletr√¥nica (NF-e) 2.0</description>
+    <description kind="short">Emissor NFe 2.0</description>
+    <icon href="logo_nfe.jpg"/>
+    <icon href="logo_nfe.jpg" kind="splash"/>
+    <shortcut online="true">
+      <desktop/>
+      <menu submenu="Programas Secretaria da Fazenda"/>
+    </shortcut>
+    <offline-allowed/>
+  </information>
+  <security>
+    <all-permissions/>
+  </security>
+  <update check="timeout" policy="prompt-update"/>
+
+  <resources os="Windows" arch="x86" download="eager">
+      <nativelib href="DSGEProvider.jar"/>
+  </resources>
+
+  <resources>
+
+    <j2se href="http://java.sun.com/products/autodl/j2se" java-vm-args="-Xmx256M -Xss4M" version="1.6.0+"/>
+
+    <jar href="DSENView2.jar" download="eager" main="true"/>
+    <jar href="lib/tinylaf.jar" download="eager" main="false"/>
+    <jar href="lib/tinycp.jar" download="eager" main="false"/>	
+    <jar href="DSGEView.jar" download="eager" main="false" />
+  
+    <jar href="DSGECommon.jar" download="eager" main="false" />
+    <jar href="DSGEModel.jar" download="eager" main="false" />
+    <jar href="DSGEUtil.jar" download="eager" main="false" />
+    <jar href="DSGEWebService.jar" download="eager" main="false" />
+    <jar href="DSGECertif.jar" download="eager" main="false"/>
+    <jar href="DSGEReport.jar" download="eager" main="false"/>
+    <jar href="DSGEBrazilUtils.jar" download="eager" main="false"/>
+    <jar href="DSGEProvider.jar" download="eager" main="false"/>
+	
+    <jar href="DSENCommon2.jar" download="eager" main="false"/>
+    <jar href="DSENHelp2.jar" download="eager" main="false"/>
+    <jar href="DSENModel2.jar" download="eager" main="false"/>
+    <jar href="DSENReport2.jar" download="eager" main="false"/>
+    <jar href="DSENUtil2.jar" download="eager" main="false"/>
+    <jar href="DSENWebService2.jar" download="eager" main="false"/>
+    
+    <jar href="lib/nfe_v2.00.jar" download="eager" main="false"/>
+    <jar href="lib/dpec_v1.01.jar" download="eager" main="false"/>
+    
+    <jar href="lib/hibernate-annotations.jar" download="eager" main="false"/>
+    <jar href="lib/hibernate-commons-annotations.jar" download="eager" main="false"/>
+    <jar href="lib/hibernate-entitymanager.jar" download="eager" main="false"/>
+    <jar href="lib/hibernate-validator.jar" download="eager" main="false"/>
+    <jar href="lib/hibernate3.jar" download="eager" main="false"/>
+    <jar href="lib/derby.jar" download="eager" main="false"/>
+    <jar href="lib/derbyclient.jar" download="eager" main="false"/>
+    <jar href="lib/derbynet.jar" download="eager" main="false"/>
+    <jar href="lib/ejb3-persistence.jar" download="eager" main="false"/>
+    <jar href="lib/jta.jar" download="eager" main="false"/>
+
+    <jar href="lib/jasperreports-1.3.3.jar" download="eager" main="false"/>
+    <jar href="lib/itext-1.02b.jar" download="eager" main="false"/>
+    <jar href="lib/barbecue-1.1.jar" download="eager" main="false"/>
+    <jar href="lib/jaxrpc.jar" download="eager" main="false"/>
+    <jar href="lib/javassist.jar"  download="eager" main="false"/>
+    <jar href="lib/jboss-archive-browsing.jar" download="eager" main="false"/>
+    <jar href="lib/jhall.jar" download="eager" main="false"/>
+    <jar href="lib/log4j-1.2.11.jar" download="eager" main="false"/>
+    <jar href="lib/persistence-xbean.jar" download="eager" main="false"/>
+    <jar href="lib/poi-2.0-final-20040126.jar" download="eager" main="false"/>
+    <jar href="lib/wsdl4j-1.5.1.jar" download="eager" main="false"/>
+    <jar href="lib/xbean.jar" download="eager" main="false"/>
+    <jar href="lib/asm.jar" download="eager" main="false"/>
+    <jar href="lib/antlr-2.7.6.jar" download="eager" main="false"/>
+    <jar href="lib/axis.jar" download="eager" main="false"/>
+    <jar href="lib/cglib-2.1.3.jar" download="eager" main="false"/>
+    <jar href="lib/commons-beanutils.jar" download="eager" main="false"/>
+    <jar href="lib/commons-codec-1.3.jar" download="eager" main="false"/>
+    <jar href="lib/commons-collections-3.1.jar" download="eager" main="false"/>
+    <jar href="lib/commons-digester-1.7.jar" download="eager" main="false"/>
+    <jar href="lib/commons-discovery-0.2.jar" download="eager" main="false"/>
+    <jar href="lib/commons-httpclient-3.1-rc1.jar" download="eager" main="false"/>
+    <jar href="lib/commons-logging.jar" download="eager" main="false"/>
+    <jar href="lib/dom4j-1.6.1.jar" download="eager" main="false"/>
+    <jar href="lib/jdc.jar" download="eager" main="false"/>
+    <jar href="lib/sistema_v1.02b.jar" download="eager" main="false"/>
+
+    <property name="jnlp.ambiente" value="producao"/>
+    <property name="sun.security.ssl.allowUnsafeRenegotiation" value="true"/>
+  </resources>
+  
+  <application-desc main-class="br.gov.sp.fazenda.dsen.view.DSENDesktop"/>
+</jnlp>
