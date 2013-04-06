@@ -3,7 +3,7 @@ Sped
 
 Sped Fiscal em PHP
 
-O intuito deste projeto é auxiliar a comunidade PHP com a dificuldade da implementação do novo formato de envio de Notas Fiscais para a Sefaz.
+O intuito deste projeto é auxiliar a comunidade PHP com a dificuldade da implementação do novo formato de envio de Notas Fiscais Eletrônicas para a Sefaz.
 
 * O que existe neste projeto é a conversão de arquivos XSLT em Classes PHP;
 * assinatura do XML;
