@@ -1,1 +1,4 @@
 /emissor_receita/aplicativo/
+.idea
+nbproject
+.DS_Store
